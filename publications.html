@@ -108,17 +108,30 @@
     <div class="container" style="margin-top: 2.5em">
         <div class="row">
             <div class="col-xl-12">
-                <h1 style="margin-top: 3em">Journals</h1>
+                <h1 style="margin-top: 3em">2022</h1>
 
                 <div style="margin-top: 1em" class="col-xl-12">
-                    <details><summary><b>J21  </b> W. Schwarting, A. Pearson, J. Alonso-Mora, S. Karaman, D. Rus; <strong>Social behavior for autonomous vehicles</strong>; Proceedings of the National Academy of Sciences USA (PNAS), Nov. 2019 </summary>
+                    <details><summary><b>J22  </b> R. Perez-Dattari, B. Brito, O. de Groot, J. Kober, and J. Alonso-Mora; <strong>Visually-Guided Motion Planning for Autonomous Driving from Interactive Demonstrations</strong>; Proceedings of IFAC Engineering Applications of Artificial Intelligence Journal, Nov. 2022 </summary>
                     	<div style="margin-top: 12px; margin-left: 24px;"><b>Links: </b> 
-                    		<a href="https://www.pnas.org/content/early/2019/11/21/1820676116" style="color: orange">[web]</a>, 
-							<a href="docs/19-schwarting-pnas.pdf"style="color: orange">[PDF]</a>, 
-							<a href="docs/19-schwarting-pnas-si.pdf" style="color: orange">[PDF-supplemental]</a>,
-							<a href="https://youtu.be/Pt8SfrUKF6I" style="color: orange">[video]</a>
+                    		<a href="https://www.sciencedirect.com/science/article/pii/S0952197622003323" style="color: orange">[web]</a>, 
+							<a href="docs/22-perezdattaria.pdf"style="color: orange">[PDF]</a>, 
+							<a href="https://github.com/rperezdattari/Social-MPCC" style="color: orange">[code]</a>,
+							<a href="https://www.youtube.com/watch?v=UmbrTs14BnU" style="color: orange">[video]</a>
                         </div>
-                        <div style="margin-top: 12px; margin-left: 24px; text-align:justify; "><b>Abstract: </b>  Deployment of autonomous vehicles on public roads promises increased efficiency and safety. It requires understanding the intent of human drivers and adapting to their driving styles. Autonomous vehicles must also behave in safe and predictable ways without requiring explicit communication. We integrate tools from social psychology into autonomous-vehicle decision making to quantify and predict the social behavior of other drivers and to behave in a socially compliant way. A key component is Social Value Orientation (SVO), which quantifies the degree of an agent’s selfishness or altruism, allowing us to better predict how the agent will interact and cooperate with others. We model interactions between agents as a best-response game wherein each agent negotiates to maximize their own utility. We solve the dynamic game by finding the Nash equilibrium, yielding an online method of predicting multiagent interactions given their SVOs. This approach allows autonomous vehicles to observe human drivers, estimate their SVOs, and generate an autonomous control policy in real time. We demonstrate the capabilities and performance of our algorithm in challenging traffic scenarios: merging lanes and unprotected left turns. We validate our results in simulation and on human driving data from the NGSIM dataset. Our results illustrate how the algorithm’s behavior adapts to social preferences of other drivers. By incorporating SVO, we improve autonomous performance and reduce errors in human trajectory predictions by 25%.</div>
+                        <div style="margin-top: 12px; margin-left: 24px; text-align:justify; "><b>Abstract: </b>  The successful integration of autonomous robots in real-world environments strongly depends on their ability
+to reason from context and take socially acceptable actions. Current autonomous navigation systems mainly
+rely on geometric information and hard-coded rules to induce safe and socially compliant behaviors. Yet, in
+unstructured urban scenarios these approaches can become costly and suboptimal. In this paper, we introduce
+a motion planning framework consisting of two components: a data-driven policy that uses visual inputs and
+human feedback to generate socially compliant driving behaviors (encoded by high-level decision variables),
+and a local trajectory optimization method that executes these behaviors (ensuring safety). In particular, we
+employ Interactive Imitation Learning to jointly train the policy with the local planner, a Model Predictive
+Controller (MPC), which results in safe and human-like driving behaviors. Our approach is validated in realistic
+simulated urban scenarios. Qualitative results show the similarity of the learned behaviors with human driving.
+Furthermore, navigation performance is substantially improved in terms of safety, i.e., number of collisions,
+as compared to prior trajectory optimization frameworks, and in terms of data-efficiency as compared to prior
+learning-based frameworks, broadening the operational domain of MPC to more realistic autonomous driving
+scenarios.</div>
                     </details> 
             	</div>
                 
