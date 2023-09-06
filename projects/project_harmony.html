@@ -190,6 +190,23 @@
         <div class="col-xl-12" style="padding-top: 50px;">
             <h3 class="text-center">Publications</h3> 
 
+	<div style="margin-top: 1em" class="col-xl-12">
+                    <details><summary><b>J04  </b> A. Botros, B. Gilhuly, N. Wilde, A. Sadeghi, J. Alonso-Mora, S. L Smith; <strong>Optimizing Task Waiting Times in Dynamic Vehicle Routing</strong>; Proceedings of IEEE Robotics and Automation Letters (RA-L), July. 2023 </summary>
+                    	<div style="margin-top: 12px; margin-left: 24px;"><b>Links: </b> 
+							<a href="docs/23-wilde-ral.pdf"style="color: orange">[PDF]</a>
+                        </div>
+                        <div style="margin-top: 12px; margin-left: 24px; text-align:justify; "><b>Abstract: </b>  We study the problem of deploying a fleet of mobile robots to service tasks that arrive stochastically over time and at
+random locations in an environment. This is known as the Dynamic Vehicle Routing Problem (DVRP) and requires robots to allocate incoming tasks among themselves and find an optimal sequence
+for each robot. State-of-the-art approaches only consider average wait times and focus on high-load scenarios where the arrival
+rate of tasks approaches the limit of what can be handled by the robots while keeping the queue of unserviced tasks bounded, i.e.,
+stable. To ensure stability, these approaches repeatedly compute minimum distance tours over a set of newly arrived tasks. This letter is aimed at addressing the missing policies for moderate-load
+scenarios, where quality of service can be improved by prioritizing long-waiting tasks. We introduce a novel DVRP policy based on a
+cost function that takes the p-norm over accumulated wait times and show it guarantees stability even in high-load scenarios. We
+demonstrate that the proposed policy outperforms the state-of-the-art in both mean and 95th percentile wait times in moderate-load
+scenarios through simulation experiments in the Euclidean plane as well as using real-world data for city scale service requests.</div>
+                    </details> 
+            	</div>
+
             <div style="margin-top: 1em" class="col-xl-12">
                 <details><summary><b>J03  </b> X. Bai, A. Fielbaum, M. Kronmuller, L. Knoedler, and J. Alonso-Mora; <strong>Group-based Distributed Auction Algorithms for Multi-Robot Task Assignment</strong>; IEEE Transactions on Automation Science and Engineering (T-ASE), May 2022 </summary>
                     <div style="margin-top: 12px; margin-left: 24px;"><b>Links: </b> 
@@ -277,8 +294,27 @@
 																												mixed multiagent scenarios.</div>
                 </details> 
             </div>
+            
             <div style="margin-top: 1em" class="col-xl-12">
-                <details><summary><b>C01  </b> N. Wilde and J. Alonso-Mora; <strong>Online Multi-Robot Task Assignment with Stochastic Blockages</strong>; IEEE Conference on Decision and Control (CDC), Dec. 2022 </summary>
+                    <details><summary><b>C03 </b> N. Wilde and J. Alonso-Mora, <strong>Do we use the Right Measure? Challenges in Evaluating Reward Learning Algorithms</strong>, in Conference on Robot Learning (CoRL), Dec 2022. </a> </summary>
+                    	<div style="margin-top: 12px; margin-left: 24px;"><b>Links: </b> 
+							<a href="docs/22-wilde-corl.pdf"style="color: orange">[PDF]</a>,
+                        </div>
+                        <div style="margin-top: 12px; margin-left: 24px; text-align:justify; "><b>Abstract: </b>  Reward learning is a highly active area of research in human-robot
+interaction (HRI), allowing a broad range of users to specify complex robot be-
+haviour. Experiments with simulated user input play a major role in the devel-
+opment and evaluation of reward learning algorithms due to the availability of a
+ground truth. In this paper, we review measures for evaluating reward learning
+algorithms used in HRI, most of which fall into two classes. In a theoretical worst
+case analysis and several examples, we show that both classes of measures can fail
+to effectively indicate how good the learned robot behaviour is. Thus, our work
+contributes to the characterization of sim-to-real gaps of reward learning in HRI.</div>
+                    </details> 
+            	</div>
+            
+            
+            <div style="margin-top: 1em" class="col-xl-12">
+                <details><summary><b>C02  </b> N. Wilde and J. Alonso-Mora; <strong>Online Multi-Robot Task Assignment with Stochastic Blockages</strong>; IEEE Conference on Decision and Control (CDC), Dec. 2022 </summary>
                     <div style="margin-top: 12px; margin-left: 24px;"><b>Links: </b> 
                         <a href="docs/22-wilde-cdc.pdf"style="color: orange">[PDF]</a>, 
                     </div>
@@ -301,6 +337,17 @@
 																												of the proposed method under various settings.</div>
                 </details> 
             </div>
+            
+            <div style="margin-top: 1em" class="col-xl-12">
+                    <details><summary><b>C01 </b> A. Botros, A. Sadeghi, N. Wilde, J. Alonso-Mora and S. L. Smith, <strong>Error-Bounded Approximation of Pareto Fronts in Robot Planning Problems</strong>, in 15th Workshop on the Algorithmic Foundations of Robotics (WAFR), Jun. 2022.   </a> </summary>
+                    	<div style="margin-top: 12px; margin-left: 24px;"><b>Links: </b>
+                    	                               <a href="https://arxiv.org/abs/2206.00663" style="color: orange">[web]</a>, 
+							<a href="docs/22-wilde-wafr.pdf"style="color: orange">[PDF]</a>,
+                        </div>
+                        <div style="margin-top: 12px; margin-left: 24px; text-align:justify; "><b>Abstract: </b>  Many problems in robotics seek to simultaneously optimize several competing objectives under constraints. A conventional approach to solving such multi-objective optimization problems is to create a single cost function comprised of the weighted sum of the individual objectives. Solutions to this scalarized optimization problem are Pareto optimal solutions to the original multi-objective problem. However, finding an accurate representation of a Pareto front remains an important challenge. Using uniformly spaced weight vectors is often inefficient and does not provide error bounds. Thus, we address the problem of computing a finite set of weight vectors such that for any other weight vector, there exists an element in the set whose error compared to optimal is minimized. To this end, we prove fundamental properties of the optimal cost as a function of the weight vector, including its continuity and concavity. Using these, we propose an algorithm that greedily adds the weight vector least-represented by the current set, and provide bounds on the error. Finally, we illustrate that the proposed approach significantly outperforms uniformly distributed weights for different robot planning problems with varying numbers of objective functions.
+</div>
+                    </details> 
+            	</div>
         </div>
 
     </div> 
