@@ -1,0 +1,73 @@
+---
+title: Master Projects
+permalink: /student-projects/
+---
+
+<p>
+    Every year we offer several MSc projects in multi-robot motion planning and control, navigation in dynamic
+    environments, human-swarm interaction and automated mobility-on-demand. Here is the overview information from the
+    <a href="{% include fix_link.html link='/assets/files/student_projects/Brochure_thesis_jam.pdf' %}">MSc Robotics booklet</a>. 
+    Below you can find the available projects.
+</p>
+
+<div class="msc-projects overflow-x-auto">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Direct Supervisor</th>
+                <th>Full Proposal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for project in site.msc_projects_available %}
+            {% if project.display %}
+            <tr>
+                <div class="msc-project">
+                    <td>{{ project.title }}</td>
+                    <td>
+                        {% for supervisor in project.direct_supervisors %}
+                        {% if supervisor.url %}
+                        <a href="{{ supervisor.url }}">{{ supervisor.name }}</a> <br>
+                        {% else %}
+                        {{ supervisor.name }} <br>
+                        {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>
+                        {% if project.proposal_document %}
+                        <a href="{% include fix_link.html link=project.proposal_document %}" target="_blank">Here</a>
+                        {% else %}
+                        <!-- link to the page -->
+                        <a href="{{ project.url  | relative_url }}">Here</a>
+                        {% endif %}
+                    </td>
+                </div>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <p>You can fins some of the finished Msc projects with their respective websites <a
+            href="{{ '/msc_projects_finished' | relative_url }}">here</a>.</p>
+</div>
+
+<div class="msc-application">
+    <h2>To Apply</h2>
+
+    <p>Students interested in a MSc project should contact the direct supervisor and provide the following information:
+    </p>
+
+    <ul>
+        <li>Why are you interested in this project? What would you like to achieve?</li>
+        <li>What is your experience relevant to this project? This could be past projects, past courses; theoretical
+            knowledge or practical experience, related to constrained optimization, planning and/or robotics.</li>
+        <li>When would you like to start and which courses will you have left by then?</li>
+        <li>Is your motivation to do algorithmic work or applied research?</li>
+        <li>Your transcript of record with past courses, including which master & track you are following.</li>
+        <li>Available day/times to meet within one/two weeks.</li>
+    </ul>
+</div>

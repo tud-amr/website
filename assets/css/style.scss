@@ -1,0 +1,72 @@
+---
+---
+
+.navbar-name {
+    color: #D107A9;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.amr-color {
+    color: #D107A9;
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+a {
+    color: #D107A9;
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #efa5e0;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #D107A9;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+.paper-body {
+    h2 {
+        margin-top: 25px;
+    }
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #D107A9;
+}
+
+::selection {
+    color: white;
+    background: #D107A9;
+}
+
+  

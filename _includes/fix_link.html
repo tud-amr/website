@@ -1,0 +1,5 @@
+{% if include.link contains '://' %} 
+{{ include.link }}
+{% else %} 
+{{ include.link | relative_url}}
+{% endif %}

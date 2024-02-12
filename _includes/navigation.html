@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-lg border-bottom border-black border-2 bg-body-tertiary ">
+  <!-- <div class="container-fluid"> -->
+  <div class="container-xl">
+
+        <a class="navbar-brand p-0 me-5" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/images/aml_icon.png' | relative_url}}" alt="logo" width="45  "
+            class="d-inline-block align-top m-0">
+          <span class="navbar-name ms-2">{{ site.title }} </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            {% for item in site.data.navigation %}
+            {% if item.subpages %}
+            <li class="nav-item dropdown">
+              {% for subpage in item.subpages %}
+              {% if page.url==subpage.link %}
+              {% assign active = true %}
+              {% endif %}
+              {% endfor %}
+              <a class="nav-link {% if active %} active {% endif %} dropdown-toggle" href="#"
+                id="navbarDropdown{{ forloop.index }}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {{ item.name }}
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown{{ forloop.index }}">
+                {% for subpage in item.subpages %}
+                <li><a class="dropdown-item" href="{{ subpage.link | relative_url }}">{{ subpage.name }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a href="{{ item.link | relative_url }}" {% if page.url==item.link %} class="nav-link active" {% else %}
+                class="nav-link" {% endif %}>{{ item.name }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+          <!-- <ul class="navbar-nav">
+        {% for social in site.data.socials %}
+        {% if social.icon == null %}
+        <li class="nav-item align-self-center"><a href="{{ social.url }}" target="_blank" class="nav-link px-2 text-muted">{{ social.name }}</a></li>
+        {% else %}
+        <li class="nav-item"><a href="{{ social.url }}" target="_blank" class="nav-link px-2 text-muted"><i class="{{ social.icon }} fs-3"></i></a></li>
+        {% endif %}
+        {% endfor %} -->
+          <span class="navbar-text">
+            <a href="https://www.tudelft.nl/en/3me/departments/cognitive-robotics-cor/"><img
+                src="{{ '/assets/images/delft_logos/CoR-Logo-small.png' | relative_url}}" class="me-2" alt="logo"
+                height="45"></a>
+            <a href="https://www.tudelft.nl/en"><img
+                src="{{ '/assets/images/delft_logos/TUDelft_logo_rgb.svg' | relative_url}}" class="" alt="logo"
+                height="40"></a>
+          </span>
+        </div>
+
+  </div>
+
+</nav>

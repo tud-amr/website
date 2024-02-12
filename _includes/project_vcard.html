@@ -1,0 +1,16 @@
+<div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+    <div class="col-md-auto d-flex justify-content-center">
+        <img src="{% include fix_link.html link=include.project.image %}" class="object-fit-contain" width="267 " height="230" alt="project image">
+    </div>
+    <div class="col p-4 d-flex flex-column position-static">
+        <!-- <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong> -->
+        <h3 class="mb-1 fs-5">{{ include.project.title }}</h3>
+        <div class="mb-1 text-body-secondary small">
+            {{ include.project.date | date: "%B %Y" }} {% if include.project.end_date %} - {{ include.project.end_date | date: "%B %Y" }} {% endif %}
+        </div>
+        <p class="mb-auto">{{ include.project.description }}</p>
+        <a href="{{ include.project.url | relative_url }}" class="icon-link gap-1 icon-link-hover stretched-link text-decoration-none">
+            Continue reading <i class="bi bi-arrow-right"></i>
+        </a>
+    </div>
+</div>

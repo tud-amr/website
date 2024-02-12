@@ -1,0 +1,63 @@
+---
+title: Our Robots and Installations
+permalink: /robots/
+images_carousel:
+- image_path: /assets/images/robots/new_lab_pic_3.png
+- image_path: /assets/images/robots/new_lab_pic_1.png
+- image_path: /assets/images/robots/new_lab_pic_4.png
+---
+
+<h2>The Lab</h2>
+<p>
+    The new lab at CoR is located at the ground floor of the Mechanical Engineering building at TU Delft. The lab is
+    equipped with a Vicon motion capture system, a MxN m aerial and terrestrial robot arena, and a lot of robots.
+</p>
+
+<div class="lab-div mb-3 d-flex justify-content-center bg-dark rounded">
+    <div class="col-lg-8">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                {% for image in page.images_carousel %}
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ forloop.index0 }}" {% if forloop.first %}class="active"{% endif %}></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                {% for image in page.images_carousel %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img src="{% include fix_link.html link=image.image_path %}" class="d-block w-100" alt="Image of the lab">
+                </div>
+                {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<p>
+    Any other information about the lab.
+</p>
+
+<h2>Robots</h2>
+{% assign robots_sorted = site.robots | sort: 'type' %}
+<div class="robots-div mb-3">
+    {% for robot in robots_sorted %}
+
+    <!-- We create dividers for each type of robot -->
+    {% if robot.type != type %}
+    {% assign type = robot.type %}
+    <h3 class="text-capitalize">{{ type }}s</h3>
+    {% endif %}
+
+    <div class="robot-item">
+        {% include robot_vcard.html robot=robot %}
+    </div>
+    {% endfor %}
+</div>
+</div>

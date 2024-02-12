@@ -1,0 +1,12 @@
+<strong>{{ include.person.name }} ({{ include.person.joined_date | date: "%Y" }} - {{ include.person.left_date | date: "%Y" }}),
+</strong>
+<span class="strong"> {{ person.title }}: </span>
+<span class="me-lg-2">{{ include.person.content | markdownify | remove: '<p>' | remove: '</p>' }} </span>
+{% if include.person.links %}
+<div class="d-inline-flex gap-2">
+    {% for link in include.person.links %}
+    <a href="{{ link.url }}" target="_blank">{{ link.name }},</a>
+    {% endfor %}
+</div>
+{% endif %}
+<br>

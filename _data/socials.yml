@@ -1,0 +1,14 @@
+# Icons can be found here: https://icons.getbootstrap.com/
+
+
+- name: Youtube
+  url: https://www.youtube.com/@amrlab
+  icon: bi bi-youtube
+- name: Github
+  url: /
+  icon: bi bi-github
+- name: Contact
+  url: "mailto:J.AlonsoMora@tudelft.nl"
+  icon: bi bi-envelope
+# - name: Robotics Institute
+#   url: https://tudelftroboticsinstitute.nl/

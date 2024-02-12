@@ -1,0 +1,39 @@
+---
+title: "Master's Thesis Projects"
+permalink: /msc_projects_finished/
+---
+
+<div>
+    <p>
+        This page contains a list of the Master's Thesis Projects that have been finished in the group. The list is
+        sorted by year. Note that the list is not complete, as it is up to the student to create a website for their project.
+    </p>
+    <p>
+        If you are interested in doing a Master's Thesis Project with us, please check <a
+            href="{{ '/student-projects' | relative_url }}">Master's Thesis Proposals</a>.
+    </p>
+</div>
+
+{% assign projects_sorted = site.msc_projects_finished | sort: 'end_date' | reverse %}
+
+<div class="msc_project-container" id="msc_project-container">
+
+    <!-- Create year titles for each distinct year of the master projects -->
+    {% for msc_project in projects_sorted %}
+    {% assign currDate = msc_project.end_date | date: "%Y" %} 
+    {% if currDate != date %}
+    <h3 class="archive-year border-bottom">{{ currDate }}</h3>
+    {% assign date = currDate %} 
+    {% endif %}
+
+    <!-- Creating a counter in case you need to create unique dropdowns or buttons -->
+    {% assign counter = counter | minus: 1 %}
+
+    <!-- Add the msc_project item. id is unique -->
+    <div class="msc_project-item">
+        {% include msc_project_item.html project=msc_project id=counter %}
+    </div>
+
+    {% endfor %}
+
+</div>

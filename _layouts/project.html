@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="project">
+  <h1 class="project-title">{{ page.title }}</h1>
+  {% if page.subtitle %}
+  <span class="fs-4 text-muted">{{ page.subtitle }}</span>
+  {% endif %}
+
+  <div class="mt-4">
+    <div class="row g-0 overflow-hidden mb-3 position-relative">
+      <div class="col-md-auto p-0 d-flex justify-content-center">
+        <img src="{% include fix_link.html link=page.image %}" class="object-fit-contain img-fluid" width="500"
+          height="300" alt="project image">
+      </div>
+      <div class="col-md ps-md-3 d-flex flex-column position-static">
+        <!-- <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong> -->
+        <div class="project-info d-flex flex-column flex-grow-1 border border-3 border-dark-subtle rounded-3 bg-body-tertiary p-3 mt-3 mt-md-0">
+          {% if page.people %}
+          <h3 class="mb-1 fs-5 fw-semibold">People</h3>
+          {% for person in page.people %}
+          <div class="person-project">
+            <span>{{ person.name }} 
+              {% if person.extra_info %} - <span class="text-body-secondary small">{{ person.extra_info }}</span> {% endif %}
+            </span>
+          </div>
+          {% endfor %}
+          {% endif %}
+  
+          {% if page.fundings %}
+          <h3 class="mb-1 mt-2 fs-5 fw-semibold">Funding</h3>
+          <p class="mb-1">{{ page.fundings }}</p>
+          {% endif %}
+  
+          {% if page.links %}
+          <span class="mb-1 mt-auto  fs-5 fw-semibold">More Links</span>
+          <div class="d-flex justify-content-start gap-2">
+            {% for link in page.links %}
+            <!-- <a href="{{ link.url }}" target="_blank" class="btn btn-sm btn-primary">{{ link.name }}</a> -->
+            <a href="{{ link.url }}" target="_blank" class="btn btn-sm btn-dark rounded-pill">{{ link.name }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="project-content mt-4">
+  {{ content }}
+</div>
+
+<hr>
+
+<div class="publication-of-project mt-4">
+  <h2>Related Publications</h2>
+  {% assign publications_sorted = site.data.publications | sort: 'year' %}
+  {% assign counter = 1 %}
+  {% for publication in publications_sorted %}
+
+  {% if publication.belongs_to_projects %}
+  {% for projects in publication.belongs_to_projects %}
+  {% for project in projects %}
+
+  {% if project == page.project_id %}
+  <div class="publication-item">
+      {% include publication_item.html publication=publication id=counter %}
+  </div>
+  {% endif %}
+
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% assign counter = counter | plus: 1 %}
+  {% endfor %}
+
+</div>

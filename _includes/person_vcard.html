@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="row g-0">
+        <div class="col-sm-4 align-self-center justify-content-center">
+            <img src="{% include fix_link.html link=include.person.image %}" class="img-fluid object-fit-contain"
+                alt="{{ include.person.name }}">
+        </div>
+        <div class="col-sm-8">
+            <div class="card-body p-2">
+                <span class="card-title">{{ include.person.name }}</span>
+                <br> <span class="card-text"><small class="text-body-secondary">{{ include.person.title }} | Since {{ include.person.joined_date | date: "%Y"}}</small></span>
+                <div class="card-text mt-2 p-0">
+                    {{ include.person.content | markdownify | remove: '<p>' | remove: '</p>'}}
+                </div>
+
+            </div>
+        </div>
+        <div class="card-footer bg-transparent">
+            {% if include.person.links %}
+            <div class="d-flex justify-content-end gap-2">
+                {% for link in include.person.links %}
+                <a href="{{ link.url }}" target="_blank" class="btn btn-sm btn-light">{{ link.name }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
