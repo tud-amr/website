@@ -28,18 +28,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: 3.0
+
+      - name: Build with Jekyll
+        run: |
+          gem install bundler jekyll
+          bundle install
+          bundle exec jekyll build
+
       - name: Push to deployment branch
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'github-actions@github.com'
           git checkout -b deployment
-          git add -f ./_site/*
+          git add -f _site/*
           git commit -m "Deploy to GitHub Pages"
           git push -f origin deployment
