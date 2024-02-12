@@ -31,8 +31,8 @@ author: Javier Alonso-Mora
 # (http://yourusername.github.io/repository-name)
 # and NOT your User repository (http://yourusername.github.io)
 # then add in the baseurl here, like this: "/repository-name"
-baseurl: "/amr-website-new" # the subpath of your site, e.g. /blog
-url: "http://andreumatoses.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/website" # the subpath of your site, e.g. /blog
+url: "http://tud-amr.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
