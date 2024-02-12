@@ -333,4 +333,5 @@ Images are the same (put the html in the markdown file as is), just append the `
 - [ ] Reduce white space between publication entries in the publication page. Make buttons smaller.
 - [ ] Make the old lonk /education_projects redirect to the education page (as students have this old link)
 - [ ] Table for available projects: Filed: Title, Direct supervisor, 
-- [ ] Move the link to brochure of master student porjects tot he masther thessis 
+- [ ] Move the link to brochure of master student porjects tot he masther thessis
+- [ ] 
