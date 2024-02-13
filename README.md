@@ -242,7 +242,23 @@ Hi! I am Jackal...
 ```
 
 ## Adding a New MSc project
-TO DO: Explain
+
+A new master thesis proposal can be added in the folder `/_msc_projects_finished`. The file should start with a YAML frontmatter block that looks like this:
+
+```yaml
+title: MSc Project Example about the development of a new algorithm for the planning and control 
+direct_supervisors: 
+    - name: John Doe
+      url: "/" #Optional, remove if not
+# If you want to use this webiste as the proposal document, comment the proposal_document, just write in the body of the document with markdown
+proposal_document: /assets/files/student_projects/Brochure_thesis_jam.pdf
+display: true # Do you want to display this project in the table? (true/false)
+---
+```
+
+You may add more than one supervisor, and optionally a link so your name is clickable. The boolean `display` is to decide if the project is displayed in the available master thesis table.
+
+The proposal document can be a path to a pdf, or you can comment the variable and can write the proposal in the body of the document with markdown. You may use latex style math in the body if the document , such as $ \alpha = \beta $.
 
 ### Finished MSc projects (template for students) 
 When a student finishes, they can create a small website for the project, which will also help prospect students to see what their colleagues have done, and for us to keep track. The template is modeled after the typical website you would see for papers nowadays. The html/.md file can be added in `/_msc_projects_finished`.
