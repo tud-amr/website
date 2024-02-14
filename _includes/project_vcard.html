@@ -5,8 +5,11 @@
     <div class="col p-4 d-flex flex-column position-static">
         <!-- <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong> -->
         <h3 class="mb-1 fs-5">{{ include.project.title }}</h3>
-        <div class="mb-1 text-body-secondary small">
-            {{ include.project.date | date: "%B %Y" }} {% if include.project.end_date %} - {{ include.project.end_date | date: "%B %Y" }} {% endif %}
+        <div class="mb-1 text-body-secondary small emph">
+            {{ include.project.date | date: "%B %Y" }} {% if include.project.end_date %} - {{ include.project.end_date | date: "%B %Y" }} | Finished {% endif %}
+        </div>
+        <div class="mb-2 text-body-secondary small">
+            <span style="font-weight: 600;">Funding:</span> {{ include.project.fundings }}
         </div>
         <p class="mb-auto">{{ include.project.description }}</p>
         <a href="{{ include.project.url | relative_url }}" class="icon-link gap-1 icon-link-hover stretched-link text-decoration-none">

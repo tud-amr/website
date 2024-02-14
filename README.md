@@ -338,12 +338,12 @@ Images are the same (put the html in the markdown file as is), just append the `
 
 ## TO DO
 
-- [ ] Add new MSc projects in the table. Additionally, maybe create a better layout to find the table. Ask if for each new proposal, we should have a .md file or just add it to the table and link a pdf.
-- [ ] Fix the pictures of the robots in group/robots page to the newer ones. Also, make them centered when they are in phone mode. 
+- [x] Add new MSc projects in the table. Additionally, maybe create a better layout to find the table. Ask if for each new proposal, we should have a .md file or just add it to the table and link a pdf.
+- [x] Fix the pictures of the robots in group/robots page to the newer ones. Also, make them centered when they are in phone mode. 
 - [ ] Add images to the news items.
 - [ ] Maybe add a way to create websites for the papers easily, similar to the ones for finished master thesis
-- [ ] Add images of the lab on the robot page, probably a carousel of images would be better 
-- [ ] Add a small menue in the research page to go direclty to each area. IN the index, link the areas to the proper area place in the page.
+- [x] Add images of the lab on the robot page, probably a carousel of images would be better 
+- [x] Add a small menu in the research page to go direclty to each area. IN the index, link the areas to the proper area place in the page.
 - [ ] Add link in the index for github, and maybe a github page for repos
 - [ ] Add funding source , title, date, for each project entry.
 - [ ] Make javier entry in people like the other, with callapse long bio.
@@ -351,8 +351,8 @@ Images are the same (put the html in the markdown file as is), just append the `
 - [ ] order the publications, within the same year, first the journal, then the conferences, then the workshops, then the thesis, then the others.
 - [ ] Add a way to filter by project tags in the publications page.
 - [ ] IN the publications: Journals says: In.., For conferences: In Proc of...
-- [ ] Reduce white space between publication entries in the publication page. Make buttons smaller.
-- [ ] Make the old lonk /education_projects redirect to the education page (as students have this old link)
-- [ ] Table for available projects: Filed: Title, Direct supervisor, 
-- [ ] Move the link to brochure of master student porjects tot he masther thessis
+- [x] Reduce white space between publication entries in the publication page. Make buttons smaller.
+- [ ] Make the old link /education_projects redirect to the education page (as students have this old link) jekyll-redirect-from plugin
+- [x] Table for available projects: Filed: Title, Direct supervisor, 
+- [x] Move the link to brochure of master student projects tot he master thesis
 - [ ] 
