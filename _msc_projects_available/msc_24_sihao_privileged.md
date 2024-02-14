@@ -1,10 +1,10 @@
 ---
-title: Yet another MSc Project Example about the development of a new algorithm for the planning and control 
+title: Privileged learning for distributed aerial robot control for collaborative object manipulations
 direct_supervisors: 
-    - name: Javier Alonso-Mora
-      # url: "/"
+    - name: Dr. Sihao Sun 
+      url: "https://sihaosun.github.io/"
 # If you want to use this webiste as the proposal document, comment the proposal_document, just write in the body of the document with markdown
-# proposal_document: /assets/files/student_projects/Brochure_thesis_jam.pdf
+proposal_document: /assets/files/student_projects/msc_24_sihao_privileged.pdf
 display: true # Do you want to display this project in the table? (true/false)
 ---
 
