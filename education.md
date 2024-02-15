@@ -1,6 +1,9 @@
 ---
 title: Education and Teaching
 permalink: /education/
+redirect_from:
+  - /education_projects.html
+
 ---
 
 Here you can find an overview of the courses that we teach at TU Delft. We also supervise BSc and MSc projects. If you are interested in joining our group, please see the information below.
