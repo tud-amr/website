@@ -7,12 +7,10 @@ Here you can find an overview of the courses that we teach at TU Delft. We also 
 
 <hr>
 
-# Courses
-
-## Courses Currently Taught
+### Courses Currently Taught
 - *Planning and Decision Making* (RO47005) at M.Sc. Robotics, TU Delft (Q2).
 
-## Past Courses
+### Past Courses
 - *Robot Motion Planning and Control* (SC42090/ME47035) at TU Delft in Q3.
 - Invited lecture in the course *Introduction to Artificial Intelligence* at TU Delft.
 - Invited lecture in the course *Intelligent Vehicles* at TU Delft

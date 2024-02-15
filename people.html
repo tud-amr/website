@@ -7,21 +7,30 @@ permalink: /people/
 
 <h2>Professors</h2>
 
-<div class="div professors pt-2 pb-3">
+<div class="div professors pt-2">
     {% for person in people_sorted %}
     {% if person.type == "professor" and person.left_date == null %}
-    <div class="row p-0 mb-3 justify-content-center">
-        <div class="col-md-4 p-0 align-self-center">
-            <img src="{% include fix_link.html link=person.image %}" class="object-fit-contain img-fluid" alt="{{ person.title }}">
+
+    <div class="row g-0">
+        <div class="col-sm-auto d-flex justify-content-center">
+            <img src="{% include fix_link.html link=person.image %}" class=" object-fit-contain"
+                alt="{{ person.name }}" height="250px">
         </div>
-        <div class="col-md-8 align-self-center mt-2 mt-md-0">
-            <span class="fs-4"> {{ person.name }} </span>
-            <br><span class="card-text"><small class="text-body-secondary">{{ person.title }} | Since {{ person.joined_date | date: "%Y"}}</small></span>
-            <div class="div">
-                {{ person.content }}
+        <div class="col-sm d-flex flex-column">
+            <div class="d-felx px-3 mb-auto py-sm-1 py-2">
+                <span>{{ person.name }}</span>
+                <br> <small class="text-body-secondary">{{ person.title }} | Since {{ person.joined_date
+                    | date: "%Y"}}</small>
+                <div class="d-block mt-2 p-0">
+                    {{ person.short_bio | markdownify | remove: '<p>' | remove: '</p>'}}
+                </div>
+                
             </div>
             {% if person.links %}
-            <div class="d-inline-flex gap-2">
+            <div class="d-flex px-3 justify-content-start gap-2 mt-2 mb-1">
+                <a class="btn btn-sm btn-light" data-bs-toggle="collapse" href="#collapseBio{{ person.name | slugify }}"
+                role="button" aria-expanded="false" aria-controls="collapseBio{{ person.name | slugify }}"><i
+                    class="bi bi-chevron-right"></i> Bio </a>
                 {% for link in person.links %}
                 <a href="{{ link.url }}" target="_blank" class="btn btn-sm btn-light">{{ link.name }}</a>
                 {% endfor %}
@@ -29,7 +38,11 @@ permalink: /people/
             {% endif %}
         </div>
     </div>
-    <!-- {% include person_vcard.html person=person %} -->
+    <div class="collapse mt-2" id="collapseBio{{ person.name | slugify }}">
+        <div class="card card-body text-bg-light">
+            {{ person.content }}
+        </div>
+    </div>
 
     {% endif %}
     {% endfor %}
