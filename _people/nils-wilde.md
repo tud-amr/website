@@ -9,9 +9,9 @@ links: # Optional, links to other stuff
     - name: Website
       url: "https://sites.google.com/view/nwilde/home"
     - name: Google Scholar
-      url: "https://scholar.google.cl/citations?user=-mz2xcsAAAAJ&hl=en"
+      url: "https://scholar.google.com/citations?user=lkAmFEEAAAAJ&hl=en"
     - name: Contact
-      url: "https://www.tudelft.nl/staff/j.alonsomora/"
+      url: "https://sites.google.com/view/nwilde/home"
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief -->

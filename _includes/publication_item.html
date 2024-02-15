@@ -45,7 +45,7 @@
         {% endif %}
         {% endif %}
     </div>
-    {% if include.publication.image %}
+    {% if include.publication.image and false %}
     <div class="flex-shrink-0">
         {% if include.publication.image contains '.mp4' %}
         <video src="{% include fix_link.html link=include.publication.image %}" class="object-fit-contain" width="100%" height="100" alt="robot video" muted autoplay loop></video>
