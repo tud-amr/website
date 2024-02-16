@@ -6,7 +6,7 @@ is_past_member: false
 joined_date: 2001-06-01
 # left_date: 2023-09-30 # Optional, if you add a left date the member will be moved to the past members section
 # now_at: Assistant Professor at Cool Uni # Add this for extra info for past members
-image: "/assets/images/people/javier_sitting.jpg" # link or path in /assets/...
+image: "/assets/images/people/javier_formal.jpg" # link or path in /assets/...
 links: # Optional, links to other stuff
     - name: Google Scholar
       url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en&inst=6173373803492361994&oi=ao"
