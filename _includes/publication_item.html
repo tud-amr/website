@@ -1,5 +1,5 @@
-<div class="d-flex mb-2">
-    <div class="flex-grow-1 {% if include.publication.image %} me-2 {% endif %} pb-0">
+<div class="row mb-2">
+    <div class="col {% if include.publication.image %} me-2 {% endif %} pb-0">
         <p class="mb-1">
             {% if include.show_id %}
             <span class="fw-bold amr-color publication-id">{{ include.show_id }}. </span>
@@ -45,12 +45,12 @@
         {% endif %}
         {% endif %}
     </div>
-    {% if include.publication.image and false %}
-    <div class="flex-shrink-0">
+    {% if include.publication.image %}
+    <div class="col-auto">
         {% if include.publication.image contains '.mp4' %}
-        <video src="{% include fix_link.html link=include.publication.image %}" class="object-fit-contain" width="100%" height="100" alt="robot video" muted autoplay loop></video>
+        <video src="{% include fix_link.html link=include.publication.image %}" class="object-fit-contain" height="100" alt="paper video" muted autoplay loop></video>
         {% else %}
-        <img class="object-fit-contain" width="100%" height="100" src="{% include fix_link.html link=include.publication.image %}" alt="paper image">
+        <img class="object-fit-contain" height="100" src="{% include fix_link.html link=include.publication.image %}" alt="paper image">
         {% endif %}
     </div>
     {% endif %}
