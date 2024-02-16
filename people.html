@@ -21,7 +21,7 @@ permalink: /people/
                 <span>{{ person.name }}</span>
                 <br> <small class="text-body-secondary">{{ person.title }} | Since {{ person.joined_date
                     | date: "%Y"}}</small>
-                <div class="d-block mt-2 p-0">
+                <div class="mt-2 p-0">
                     {{ person.short_bio | markdownify | remove: '<p>' | remove: '</p>'}}
                 </div>
                 

@@ -24,7 +24,7 @@ images_carousel:
             <div class="carousel-inner">
                 {% for image in page.images_carousel %}
                 <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                    <img src="{% include fix_link.html link=image.image_path %}" class="d-block w-100" alt="Image of the lab">
+                    <img src="{% include fix_link.html link=image.image_path %}" class="w-100" alt="Image of the lab">
                 </div>
                 {% endfor %}
             </div>

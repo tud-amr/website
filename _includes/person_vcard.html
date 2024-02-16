@@ -9,7 +9,7 @@
                 <span>{{ include.person.name }}</span>
                 <br> <small class="text-body-secondary">{{ include.person.title }} | Since {{ include.person.joined_date
                     | date: "%Y"}}</small>
-                <div class="d-block mt-2 p-0">
+                <div class="mt-2 p-0">
                     {{ include.person.content | markdownify | remove: '<p>' | remove: '</p>'}}
                 </div>
                 
