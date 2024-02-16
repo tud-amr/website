@@ -46,11 +46,11 @@
         {% endif %}
     </div>
     {% if include.publication.image %}
-    <div class="col-auto">
+    <div class="col-auto d-none d-sm-block">
         {% if include.publication.image contains '.mp4' %}
-        <video src="{% include fix_link.html link=include.publication.image %}" class="object-fit-contain" height="100" alt="paper video" muted autoplay loop></video>
+        <video src="{% include fix_link.html link=include.publication.image %}" class="object-fit-contain" height="110" alt="paper video" muted autoplay loop></video>
         {% else %}
-        <img class="object-fit-contain" height="100" src="{% include fix_link.html link=include.publication.image %}" alt="paper image">
+        <img class="object-fit-contain" height="110" src="{% include fix_link.html link=include.publication.image %}" alt="paper image">
         {% endif %}
     </div>
     {% endif %}
