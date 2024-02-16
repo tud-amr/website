@@ -5,8 +5,7 @@ permalink: /readme/
 
 # AMR Website Readme
 
-> [!WARNING]  
-> We still need to fix an issue with the custom domain, so for now the website is accessible from here https://tud-amr.github.io/website/. NEVERTHELESS, use the new website template already. The domain https://www.autonomousrobots.nl/ will still show the old website until this is fixed.  
+The website: https://autonomousrobots.nl/
 
 A new website for our Autonomous Multi-Robot Lab (AMR) at TU Delft. The webiste is built using Jekyll, [Boostrap 5 css](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and hosted on GitHub Pages. It builds automatically when a commit is pushed to the `main` branch. **It takes some minutes** to build and for the changes to be reflected on the website. Check the build progress in actions (github repo).
 
