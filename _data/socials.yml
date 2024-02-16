@@ -5,7 +5,7 @@
   url: https://www.youtube.com/@amrlab
   icon: bi bi-youtube
 - name: Github
-  url: /
+  url: https://github.com/tud-amr
   icon: bi bi-github
 - name: Contact
   url: "mailto:J.AlonsoMora@tudelft.nl"
