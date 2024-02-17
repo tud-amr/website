@@ -344,10 +344,10 @@ Images are the same (put the html in the markdown file as is), just append the `
 - [x] Add images of the lab on the robot page, probably a carousel of images would be better 
 - [x] Add a small menu in the research page to go direclty to each area. IN the index, link the areas to the proper area place in the page.
 - [ ] Add link in the index for github, and maybe a github page for repos
-- [ ] Add funding source , title, date, for each project entry.
-- [x] Make javier entry in people like the other, with callapse long bio.
+- [x] Add funding source , title, date, for each project entry.
+- [x] Make javier entry in people like the other, with collapse long bio.
 - [ ] add visitor tab in people page
-- [ ] order the publications, within the same year, first the journal, then the conferences, then the workshops, then the thesis, then the others.
+- [x] order the publications, within the same year, first the journal, then the conferences, then the workshops, then the thesis, then the others.
 - [ ] Add a way to filter by project tags in the publications page.
 - [ ] IN the publications: Journals says: In.., For conferences: In Proc of...
 - [x] Reduce white space between publication entries in the publication page. Make buttons smaller.
