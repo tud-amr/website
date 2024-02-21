@@ -62,6 +62,9 @@ collections:
   msc_projects_available:
     output: true
     permalink: /:collection/:name
+  paper_websites:
+    output: true
+    permalink: /:collection/:name
 
 # defaults
 defaults:
@@ -87,7 +90,7 @@ defaults:
       path: ""
       type: "msc_projects_finished" # a collection in your site, in plural form
     values:
-      layout: "paper"
+      layout: "paper_msc"
       usemathjax: true
   -
     scope:
@@ -96,7 +99,13 @@ defaults:
     values:
       layout: "page"
       usemathjax: true
-
+  -
+    scope:
+      path: ""
+      type: "paper_websites" # a collection in your site, in plural form
+    values:
+      layout: "paper"
+      usemathjax: true
 
 # Build settings (theme is null as we use our own theme)
 

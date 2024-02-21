@@ -23,10 +23,7 @@ affiliations:
       url: "https://tudelft.nl"
     # - name: "Wien Opera House"
     #   superscript: "†"
-end_date: 2023-12-04 # end date if ended, approximated if not sure. Just for display purposes and ordering.
-# This is the short project description, displayed in the project's card"
-description: "Motion planning for autonomous robots in tight, interaction-rich, and mixed human-robot environments is challenging. State-of-the-art methods typically separate prediction and planning, predicting other agents’ trajectories first and then planning the ego agent’s motion in the remaining free space. However, agents’ lack of awareness of their influence on others can lead to the freezing robot problem. We build upon Interaction-Aware Model Predictive Path Integral (IAMPPI) control and combine it with learning-based trajectory predictions, thereby relaxing its reliance on communicated short-term goals for other agents. We apply this framework to Autonomous Surface Vessels (ASVs) navigating urban canals. By generating an artificial dataset in real sections of Amsterdam’s canals, adapting and training a prediction model for our domain, and proposing heuristics to extract local goals, we enable effective cooperation in planning. Our approach improves autonomous robot navigation in complex, crowded environments, with potential implications for multi-agent systems and human-robot interaction."
-cover_image: /assets/images/msc_projects/msc_project_template/jackal.jpg # Image displayed in the project's card, make it aspect ratio 1x1 (square) for best results, and keep it a reasonable size (like 1-2MB). Can also be a gif
+release_date: 2023-12-04 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
     - name: Paper
       icon: bi-file-earmark-pdf

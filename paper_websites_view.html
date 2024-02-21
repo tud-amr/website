@@ -1,0 +1,46 @@
+---
+title: "Paper Websites"
+permalink: /paper_websites/
+---
+
+<div>
+    <p>
+        This page contains a list of some of the websites of the papers published by the group. The list is sorted by year, and only contains the 
+        papers that have a website using the group's website template. Note that the list is not complete, as it is up to the authors to create a 
+        website for their paper adn they may choose to host it themselves. For a more complete list, check directly the <a href="{% link publications.html %}">Publications</a>.
+    </p>
+</div>
+
+{% assign papers_sorted = site.paper_websites | sort: 'release_date' | reverse %}
+
+<div class="msc_project-container" id="msc_project-container">
+
+    <!-- Create year titles for each distinct year of the master projects -->
+    {% for paper in papers_sorted %}
+    {% assign currDate = paper.release_date | date: "%Y" %} 
+    {% if currDate != date %}
+    <h3 class="archive-year border-bottom">{{ currDate }}</h3>
+    {% assign date = currDate %} 
+    {% endif %}
+
+    <!-- Creating a counter in case you need to create unique dropdowns or buttons -->
+    {% assign counter = counter | minus: 1 %}
+
+    <!-- Add the msc_project item. id is unique -->
+    <div class="paper_website-item">
+            <!-- <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong> -->
+            <h3 class="mb-1 fs-5">
+                <a href="{{ paper.url | relative_url }}">{{ paper.title }}</a>
+            </h3>
+            <div class="mb-1 text-body-secondary small">
+                <!-- add names of authors -->
+                {% for person in paper.authors %}
+                {{ person.name }}  {% if forloop.last == false %} , {% endif %}
+                {% endfor %}
+                | {{ paper.release_date | date: "%B %Y" }}
+            </div>
+    </div>
+
+    {% endfor %}
+
+</div>
