@@ -1,6 +1,10 @@
 <div class="row g-0 border overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
     <div class="col-md-auto d-flex justify-content-center align-items-center">
-        <img src="{% include fix_link.html link=include.project.cover_image %}" class="object-fit-contain" width="250 " height="250" alt="project image">
+        {% if include.project.cover_image contains '.mp4' %}
+        <video src="{% include fix_link.html link=include.robot.image %}" class="object-fit-contain" width="250" alt="paper cover" muted autoplay loop></video>
+        {% else %}
+        <img src="{% include fix_link.html link=include.project.cover_image %}" class="object-fit-contain" width="250 " height="250" alt="paper cover">
+        {% endif %}
     </div>
     <div class="col-md p-2 ps-md-3 d-flex flex-column position-static">
         <!-- <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong> -->
@@ -10,7 +14,7 @@
             {% for person in include.project.authors %}
             {{ person.name }}  {% if forloop.last == false %} , {% endif %}
             {% endfor %}
-            | {{ include.project.end_date | date: "%B %Y" }}
+            | {{ include.project.end_date | date: "%B %Y" }} {{ include.project.release_date | date: "%B %Y" }}
         </div>
         <p class="mb-auto">{{ include.project.description }}</p>
         <a href="{{ include.project.url | relative_url }}" class="icon-link gap-1 icon-link-hover stretched-link text-decoration-none">
