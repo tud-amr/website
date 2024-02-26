@@ -11,4 +11,4 @@ left_date: 2023-07-31 # Optional, if you add a left date the member will be move
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief. Also for past members, put here e.g Now at..., [supervised by...] -->
-Navigation in Crowded Environments [U. Zaragoza, advisor: Prof. Luis Montano]
+Navigation in Crowded Environments [U. Zaragoza, advisor: Prof. Luis Montano and Prof. Luis Riazuelo]
