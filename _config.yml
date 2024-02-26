@@ -50,6 +50,9 @@ collections:
   news:
     output: false
     permalink: /:collection/:name
+  talks:
+    output: false
+    permalink: /:collection/:name
   research_areas:
     output: false
     permalink: /:collection/:name

@@ -68,4 +68,20 @@ The motivation letter should state:
 
 # Recorded Talks
 
-Coming soon...
+<div class="row">
+    <div class="col">
+        <ul class="timeline">
+            {% assign talks = site.talks | sort: 'date' | reverse %}
+            {% for talk in talks %}
+            <li>
+                <span class="fw-bold"> {{ talk.date | date: "%B %d, %Y" }}, {{ talk.speaker }}: <a href="{{ talk.recording }}"> {{ talk.title }}</a></span>
+                <br>
+                <!-- render abstract if we have it -->
+                {% if talk.abstract %}
+                <span class="fw-bold">Abstract:</span> {{ talk.abstract }}
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
