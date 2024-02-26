@@ -35,7 +35,7 @@ author: Javier Alonso-Mora
 url: "https://autonomousrobots.nl" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics:
+google_analytics: G-FG7RQ0Y2D0
 
 permalink: /:year/:month/:day/:title/
 
