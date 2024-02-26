@@ -4,7 +4,5 @@ services:
     image: jekyll/jekyll
     volumes:
       - .:/srv/jekyll
-    ports:
-      - "4000:4000"
-      - "35729:35729"
+    network_mode: host
     command: jekyll serve --livereload
