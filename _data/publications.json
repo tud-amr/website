@@ -494,7 +494,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "probabilistic-planning",
         "abstract": "Abstract: Balancing safety and efficiency when planning in crowded scenarios with uncertain dynamics is challenging where it is imperative to accomplish the robot\u2019s mission without incurring any safety violations. Typically, chance constraints are incorporated into the planning problem to provide probabilistic safety guarantees by imposing an upper bound on the collision probability of the planned trajectory. Yet, this results in overly conservative behavior on the grounds that the gap between the obtained risk and the specified upper limit is not explicitly restricted. To address this issue, we propose a real-time capable approach to quantify the risk associated with planned trajec- tories obtained from multiple probabilistic planners, running in parallel, with different upper bounds of the acceptable risk level. Based on the evaluated risk, the least conservative plan is selected provided that its associated risk is below a specified threshold. In such a way, the proposed approach provides probabilistic safety guarantees by attaining a closer bound to the specified risk, while being applicable to generic uncertainties of moving obstacles. We demonstrate the efficiency of our proposed approach, by improving the performance of a state- of-the-art probabilistic planner, in simulations and experiments using a mobile robot in an environment shared with humans."
     },
     {
@@ -517,7 +517,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "probabilistic-planning",
         "abstract": "Abstract: Navigating mobile robots through environments shared with humans is challenging. From the perspective of the robot, humans are dynamic obstacles that must be avoided. These obstacles make the collision-free space nonconvex, which leads to two distinct passing behaviors per obstacle (passing left or right). For local planners, such as receding-horizon trajectory optimization, each behavior presents a local optimum in which the planner can get stuck. This may result in slow or unsafe motion even when a better plan exists. In this work, we identify trajectories for multiple locally optimal driving behaviors, by considering their topology. This identification is made consistent over successive iterations by propagating the topology information. The most suitable high-level trajectory guides a local optimization-based planner, resulting in fast and safe motion plans. We validate the proposed planner on a mobile robot in simulation and real-world experiments."
     },
     {
@@ -1234,7 +1234,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "safevru"
+            "probabilistic-planning"
         ],
         "abstract": "Abstract: We present an optimization-based method to plan the motion of an autonomous robot under the uncertainties associated with dynamic obstacles, such as humans. Our method bounds the marginal risk of collisions at each point in time by incorporating chance constraints into the planning problem. This problem is not suitable for online optimization outright for arbitrary probability distributions. Hence, we sample from these chance constraints using an uncertainty model, to generate \"scenarios\", which translate the probabilistic constraints into deterministic ones. In practice, each scenario represents the collision constraint for a dynamic obstacle at the location of the sample. The number of theoretically required scenarios can be very large. Nevertheless, by exploiting the geometry of the workspace, we show how to prune most scenarios before optimization and we demonstrate how the reduced scenarios can still provide probabilistic guarantees on the safety of the motion plan. Since our approach is scenario based, we are able to handle arbitrary uncertainty distributions. We apply our method in a Model Predictive Contouring Control framework and demonstrate its benefits in simulations and experiments with a moving robot platform navigating among pedestrians, running in real-time."
     },

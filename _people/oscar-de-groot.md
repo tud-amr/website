@@ -7,8 +7,11 @@ joined_date: 2020-03-01
 # now_at: Assistant Professor at Cool Uni # Add this for extra info for past members
 image: /assets/images/people/o_de_groot.jpg # link or path in /assets/...
 links: # Optional, links to other stuff
+    - name: Google Scholar
+      url: "https://scholar.google.com/citations?user=msn1ZWoAAAAJ&hl=en"
     - name: Contact
       url: "https://www.tudelft.nl/staff/o.m.degroot/"
+      
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief -->
