@@ -114,7 +114,7 @@
         ],
         "date": "2023-09-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Transactions on Robotics (TRO)",
+        "venue": " IEEE Transactions on Robotics (TRO)",
         "links": [
             {
                 "PDF": "https://arxiv.org/pdf/2202.06273.pdf"
@@ -136,7 +136,7 @@
         ],
         "date": "2023-07-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "PDF": "/assets/files/publications/23-wilde-ral.pdf"
@@ -161,7 +161,7 @@
         ],
         "date": "2023-06-01",
         "type": "journal",
-        "venue": " Proceedings of The International Journal of Robotics Research (IJRR)",
+        "venue": " The International Journal of Robotics Research (IJRR)",
         "links": [
             {
                 "PDF": "/assets/files/publications/peters2023ijrr.pdf"
@@ -185,7 +185,7 @@
         ],
         "date": "2023-05-01",
         "type": "journal",
-        "venue": " Proceedings of Economics of Transportation",
+        "venue": " Economics of Transportation",
         "links": [
             {
                 "PDF": "/assets/files/publications/23-fielbaum-eco.pdf"
@@ -205,7 +205,7 @@
         ],
         "date": "2023-04-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "PDF": "/assets/files/publications/23-serra-ral.pdf"
@@ -227,7 +227,7 @@
         ],
         "date": "2023-04-01",
         "type": "journal",
-        "venue": " Proceedings of Transportation Planning and Technology",
+        "venue": " Transportation Planning and Technology",
         "links": [
             {
                 "PDF": "/assets/files/publications/23_deRuijter.pdf"
@@ -246,7 +246,7 @@
         ],
         "date": "2023-04-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://xinjie-liu.github.io/projects/game/"
@@ -273,7 +273,7 @@
         ],
         "date": "2023-03-01",
         "type": "journal",
-        "venue": " Proceedings of IIEEE Transactions on Robotics (T-RO)",
+        "venue": " IIEEE Transactions on Robotics (T-RO)",
         "links": [
             {
                 "PDF": "/assets/files/publications/23_spahn_tro.pdf"
@@ -300,7 +300,7 @@
         ],
         "date": "2023-02-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "PDF": "/assets/files/publications/24-clarence-ral-2023.pdf"
@@ -602,7 +602,7 @@
         ],
         "date": "2022-11-01",
         "type": "journal",
-        "venue": " Proceedings of IFAC Engineering Applications of Artificial Intelligence Journal",
+        "venue": " IFAC Engineering Applications of Artificial Intelligence Journal",
         "links": [
             {
                 "web": "https://www.sciencedirect.com/science/article/pii/S0952197622003323"
@@ -632,7 +632,7 @@
         ],
         "date": "2022-10-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Transactions on Control Systems Technology (T-CST)",
+        "venue": " IEEE Transactions on Control Systems Technology (T-CST)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/9920538"
@@ -659,7 +659,7 @@
         ],
         "date": "2022-05-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Transactions on Automation Science and Engineering (T-ASE)",
+        "venue": " IEEE Transactions on Automation Science and Engineering (T-ASE)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/9781631"
@@ -684,7 +684,7 @@
         ],
         "date": "2022-04-01",
         "type": "journal",
-        "venue": " Proceedings of IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
+        "venue": " IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
         "links": [
             {
                 "web": "https://arxiv.org/abs/2107.04538"
@@ -709,7 +709,7 @@
         ],
         "date": "2022-04-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
+        "venue": ", IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/9751230"
@@ -732,7 +732,7 @@
         ],
         "date": "2022-03-01",
         "type": "journal",
-        "venue": ", Proceedings of Transportation Research Part C: Emerging Technologies",
+        "venue": ", Transportation Research Part C: Emerging Technologies",
         "links": [
             {
                 "web": "https://www.sciencedirect.com/science/article/pii/S0968090X21005027"
@@ -756,7 +756,7 @@
         ],
         "date": "2022-02-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/9705542"
@@ -786,7 +786,7 @@
         ],
         "date": "2022-01-01",
         "type": "journal",
-        "venue": ", Proceedings of Autonomous Robots (AURO)",
+        "venue": ", Autonomous Robots (AURO)",
         "links": [
             {
                 "web": "https://link.springer.com/article/10.1007/s10514-021-10029-2"
@@ -1064,7 +1064,7 @@
         ],
         "date": "2021-11-01",
         "type": "journal",
-        "venue": ", Proceedings of European Journal of Operational Research",
+        "venue": ", European Journal of Operational Research",
         "links": [
             {
                 "web": "https://www.sciencedirect.com/science/article/pii/S0377221721009930"
@@ -1088,7 +1088,7 @@
         ],
         "date": "2021-09-01",
         "type": "journal",
-        "venue": ", Proceedings of Transportation",
+        "venue": ", Transportation",
         "links": [
             {
                 "web": "https://link.springer.com/article/10.1007/s11116-021-10232-1"
@@ -1113,7 +1113,7 @@
         ],
         "date": "2021-05-01",
         "type": "journal",
-        "venue": ", Proceedings of Transportation Research Part C: Emerging Technologies",
+        "venue": ", Transportation Research Part C: Emerging Technologies",
         "links": [
             {
                 "web": "https://www.sciencedirect.com/science/article/pii/S0968090X21000887"
@@ -1137,7 +1137,7 @@
         ],
         "date": "2021-03-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/abstract/document/9410352"
@@ -1165,7 +1165,7 @@
         ],
         "date": "2021-03-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/9385847"
@@ -1193,7 +1193,7 @@
         ],
         "date": "2021-03-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://www.semanticscholar.org/paper/Learning-Interaction-Aware-Trajectory-Predictions-Zhu-Claramunt/69ed87322418a7501765b66573840c5d1fa29f3d"
@@ -1220,7 +1220,7 @@
         ],
         "date": "2021-03-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://arxiv.org/abs/2103.12517"
@@ -1404,7 +1404,7 @@
         ],
         "date": "2020-12-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Transactions on Robotics (T-RO)",
+        "venue": ", IEEE Transactions on Robotics (T-RO)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/9244597"
@@ -1425,7 +1425,7 @@
         ],
         "date": "2020-12-01",
         "type": "journal",
-        "venue": ", Proceedings of Transportation Research Part C: Emerging Technologies",
+        "venue": ", Transportation Research Part C: Emerging Technologies",
         "links": [
             {
                 "web": "https://www.sciencedirect.com/science/article/pii/S0968090X2030735X"
@@ -1450,7 +1450,7 @@
         ],
         "date": "2020-10-01",
         "type": "journal",
-        "venue": "Proceedings of Transportmetrica A: Transport Science",
+        "venue": "Transportmetrica A: Transport Science",
         "links": [
             {
                 "web": "https://www.tandfonline.com/doi/full/10.1080/23249935.2020.1829170"
@@ -1475,7 +1475,7 @@
         ],
         "date": "2020-09-01",
         "type": "journal",
-        "venue": "Proceedings of Transportation Research Board Annual Meeting",
+        "venue": "Transportation Research Board Annual Meeting",
         "links": [
             {
                 "PDF": "/assets/files/publications/20-deRuijter-trb.pdf"
@@ -1496,7 +1496,7 @@
         ],
         "date": "2020-06-01",
         "type": "journal",
-        "venue": "Proceedings of Springer Autonomous Robots",
+        "venue": "Springer Autonomous Robots",
         "links": [
             {
                 "web": "https://link.springer.com/article/10.1007/s10514-020-09919-8"
@@ -1523,7 +1523,7 @@
         ],
         "date": "2020-03-01",
         "type": "journal",
-        "venue": "Proceedings of IEEE Transactions on Intelligent Vehicles (T-IV)",
+        "venue": "IEEE Transactions on Intelligent Vehicles (T-IV)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/8911227"
@@ -1714,7 +1714,7 @@
         ],
         "date": "2019-07-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://arxiv.org/abs/2010.10190"
@@ -1741,7 +1741,7 @@
         ],
         "date": "2019-01-01",
         "type": "journal",
-        "venue": ", Proceedings of IEEE Robotics and Automation Letters (RA-L)",
+        "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
                 "web": "https://ieeexplore.ieee.org/document/8613928"
@@ -1900,7 +1900,7 @@
         ],
         "date": "2018-12-01",
         "type": "journal",
-        "venue": ", Proceedings of ACM Transactions on Graphics (SIGGRAPH Asia)",
+        "venue": ", ACM Transactions on Graphics (SIGGRAPH Asia)",
         "links": [
             {
                 "web": "https://dl.acm.org/doi/10.1145/3272127.3275022"
@@ -1928,7 +1928,7 @@
         ],
         "date": "2018-01-01",
         "type": "journal",
-        "venue": ", Proceedings of Autonomous Robots",
+        "venue": ", Autonomous Robots",
         "links": [
             {
                 "web": "https://link.springer.com/article/10.1007/s10514-018-9783-9"
