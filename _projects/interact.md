@@ -11,7 +11,7 @@ links: # If you have a website for the project, repos, etc. put it here.
       url: "/"
     - name: "Github: multi-agent fabrics"
       url: "https://github.com/tud-amr/multi-robot-fabrics"
-fundings: This project is founded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
+fundings: This project is funded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Saray Bakker 
       # extra_info: PhD candidate

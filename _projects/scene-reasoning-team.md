@@ -9,7 +9,7 @@ image: /assets/images/projects/MC_tracking_class.png
 links: # If you have a website for the project, repos, etc. put it here.
     - name: Project Website
       url: "/"
-fundings: This project is founded by the Office of Naval Research Global (ONRG) of the US.
+fundings: This project is funded by the Office of Naval Research Global (ONRG) of the US.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Alvaro Serra-Gomez
     - name: Hai Zhu
