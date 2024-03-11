@@ -13,7 +13,8 @@
         "venue": "arxiv preprint arxiv:2402.08902",
         "links": [
             {
-                "pdf": "/assets/files/publications/24-liu-arxiv.pdf"
+                "pdf": "/assets/files/publications/24-liu-arxiv.pdf",
+                "web": "https://xinjie-liu.github.io/projects/bayesian-inverse-games/"
             }
         ],
         "belongs_to_projects": [
@@ -37,7 +38,7 @@
         "venue": "Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "PDF": "/assets/files/publications/24-peters-ral.pdf"
+                "pdf": "/assets/files/publications/24-peters-ral.pdf"
             },
             {
                 "web": "https://lasse-peters.net/pub/contingency-games/"
@@ -70,7 +71,7 @@
                 "web": "https://link.springer.com/article/10.1007/s10514-023-10127-3"
             },
             {
-                "PDF": "/assets/files/publications/23-serra-auro.pdf"
+                "pdf": "/assets/files/publications/23-serra-auro.pdf"
             }
         ],
         "note": null,
@@ -94,7 +95,7 @@
                 "web": "https://www.tandfonline.com/doi/full/10.1080/19427867.2023.2278859"
             },
             {
-                "PDF": "https://www.tandfonline.com/doi/epdf/10.1080/19427867.2023.2278859?needAccess=true"
+                "pdf": "https://www.tandfonline.com/doi/epdf/10.1080/19427867.2023.2278859?needAccess=true"
             }
         ],
         "note": null,
@@ -117,7 +118,7 @@
         "venue": " IEEE Transactions on Robotics (TRO)",
         "links": [
             {
-                "PDF": "https://arxiv.org/pdf/2202.06273.pdf"
+                "pdf": "https://arxiv.org/pdf/2202.06273.pdf"
             }
         ],
         "note": null,
@@ -139,7 +140,7 @@
         "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-wilde-ral.pdf"
+                "pdf": "/assets/files/publications/23-wilde-ral.pdf"
             }
         ],
         "note": null,
@@ -164,7 +165,7 @@
         "venue": " The International Journal of Robotics Research (IJRR)",
         "links": [
             {
-                "PDF": "/assets/files/publications/peters2023ijrr.pdf"
+                "pdf": "/assets/files/publications/peters2023ijrr.pdf"
             },
             {
                 "web": "https://lasse-peters.net/pub/online-inverse-games/"
@@ -188,7 +189,7 @@
         "venue": " Economics of Transportation",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-fielbaum-eco.pdf"
+                "pdf": "/assets/files/publications/23-fielbaum-eco.pdf"
             }
         ],
         "note": null,
@@ -208,7 +209,7 @@
         "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-serra-ral.pdf"
+                "pdf": "/assets/files/publications/23-serra-ral.pdf"
             }
         ],
         "note": null,
@@ -230,7 +231,7 @@
         "venue": " Transportation Planning and Technology",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_deRuijter.pdf"
+                "pdf": "/assets/files/publications/23_deRuijter.pdf"
             }
         ],
         "note": null,
@@ -252,7 +253,7 @@
                 "web": "https://xinjie-liu.github.io/projects/game/"
             },
             {
-                "PDF": "/assets/files/publications/liu2022ral.pdf"
+                "pdf": "/assets/files/publications/liu2022ral.pdf"
             },
             {
                 "video": "https://www.youtube.com/watch?v=f0KJuCC1Xyo"
@@ -276,7 +277,7 @@
         "venue": " IIEEE Transactions on Robotics (T-RO)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_spahn_tro.pdf"
+                "pdf": "/assets/files/publications/23_spahn_tro.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/fabrics"
@@ -303,7 +304,7 @@
         "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "PDF": "/assets/files/publications/24-clarence-ral-2023.pdf"
+                "pdf": "/assets/files/publications/24-clarence-ral-2023.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/RAST_corridor_planning"
@@ -326,13 +327,13 @@
         "venue": "Proc. IEEE International Symposium on Multi-Robot and Multi-Agent Systems",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_trevisan_mrs.pdf"
+                "pdf": "/assets/files/publications/23_trevisan_mrs.pdf"
             },
             {
-                "website": "/paper_websites/ia-mppi"
+                "web": "/paper_websites/ia-mppi"
             },
             {
-                "Data, Model, Code and Video": "https://www.autonomousrobots.nl/paper_websites/ia-mppi"
+                "Data, Model, Code and video": "https://www.autonomousrobots.nl/paper_webs/ia-mppi"
             }
         ],
         "note": null,
@@ -353,7 +354,7 @@
         "venue": "Proc. IEEE International Symposium on Multi-Robot and Multi-Agent Systems",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_wilde_mrs.pdf"
+                "pdf": "/assets/files/publications/23_wilde_mrs.pdf"
             }
         ],
         "note": null,
@@ -374,7 +375,7 @@
         "venue": "Proc. IEEE International Symposium on Multi-Robot and Multi-Agent Systems",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_bakker_mrs.pdf"
+                "pdf": "/assets/files/publications/23_bakker_mrs.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/multi-robot-fabrics/"
@@ -403,7 +404,7 @@
         "venue": "IFAC World Congress",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-voogd-ifac.pdf"
+                "pdf": "/assets/files/publications/23-voogd-ifac.pdf"
             }
         ],
         "note": null,
@@ -425,7 +426,7 @@
         "venue": ", in IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-casao-icra.pdf"
+                "pdf": "/assets/files/publications/23-casao-icra.pdf"
             }
         ],
         "note": null,
@@ -446,7 +447,7 @@
         "venue": "IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/wang_23_icra.pdf"
+                "pdf": "/assets/files/publications/wang_23_icra.pdf"
             }
         ],
         "note": null,
@@ -464,7 +465,7 @@
         "venue": "IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_spahn_icra.pdf"
+                "pdf": "/assets/files/publications/23_spahn_icra.pdf"
             },
             {
                 "code": "https://github.com/maxspahn/optuna_fabrics"
@@ -490,7 +491,7 @@
         "venue": ", in IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-mustafa-icra.pdf"
+                "pdf": "/assets/files/publications/23-mustafa-icra.pdf"
             }
         ],
         "note": null,
@@ -510,7 +511,7 @@
         "venue": "IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23-degroot-icra.pdf"
+                "pdf": "/assets/files/publications/23-degroot-icra.pdf"
             },
             {
                 "video": "https://www.youtube.com/watch?v=tkRbsAuSTrA"
@@ -534,7 +535,7 @@
         "venue": ", in IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_trevisan_icra.pdf"
+                "pdf": "/assets/files/publications/23_trevisan_icra.pdf"
             }
         ],
         "note": null,
@@ -557,7 +558,7 @@
         "venue": "Embracing Contacts Workshop at IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_trevisan_embrace_contacts_workshop.pdf"
+                "pdf": "/assets/files/publications/23_trevisan_embrace_contacts_workshop.pdf"
             },
             {
                 "Code": "https://github.com/tud-airlab/mppi-isaac"
@@ -584,7 +585,7 @@
         "venue": "5th Workshop on Long-term Human Motion Prediction at IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "PDF": "/assets/files/publications/23_meszaros_icra.pdf"
+                "pdf": "/assets/files/publications/23_meszaros_icra.pdf"
             }
         ],
         "note": null,
@@ -608,7 +609,7 @@
                 "web": "https://www.sciencedirect.com/science/article/pii/S0952197622003323"
             },
             {
-                "PDF": "/assets/files/publications/22-perezdattaria.pdf"
+                "pdf": "/assets/files/publications/22-perezdattaria.pdf"
             },
             {
                 "code": "https://github.com/rperezdattari/Social-MPCC"
@@ -638,7 +639,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9920538"
             },
             {
-                "PDF": "/assets/files/publications/22-ferranti-tcst.pdf"
+                "pdf": "/assets/files/publications/22-ferranti-tcst.pdf"
             },
             {
                 "video": "https://youtu.be/MirWcuRsr68"
@@ -665,7 +666,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9781631"
             },
             {
-                "PDF": "/assets/files/publications/22_Bai_TASE.pdf"
+                "pdf": "/assets/files/publications/22_Bai_TASE.pdf"
             }
         ],
         "note": null,
@@ -690,7 +691,7 @@
                 "web": "https://arxiv.org/abs/2107.04538"
             },
             {
-                "PDF": "/assets/files/publications/22-brito-tits.pdf"
+                "pdf": "/assets/files/publications/22-brito-tits.pdf"
             },
             {
                 "video": "https://youtu.be/xPomLRHs-II"
@@ -715,7 +716,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9751230"
             },
             {
-                "PDF": "/assets/files/publications/22-xinwei-ITST.pdf"
+                "pdf": "/assets/files/publications/22-xinwei-ITST.pdf"
             }
         ],
         "note": null,
@@ -738,7 +739,7 @@
                 "web": "https://www.sciencedirect.com/science/article/pii/S0968090X21005027"
             },
             {
-                "PDF": "/assets/files/publications/22-beirigo-trc.pdf"
+                "pdf": "/assets/files/publications/22-beirigo-trc.pdf"
             }
         ],
         "note": null,
@@ -762,7 +763,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9705542"
             },
             {
-                "PDF": "/assets/files/publications/22-knoedler-ral.pdf"
+                "pdf": "/assets/files/publications/22-knoedler-ral.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/scl"
@@ -792,7 +793,7 @@
                 "web": "https://link.springer.com/article/10.1007/s10514-021-10029-2"
             },
             {
-                "PDF": "/assets/files/publications/22_zhu_auro.pdf"
+                "pdf": "/assets/files/publications/22_zhu_auro.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/mrca_vc"
@@ -816,7 +817,7 @@
         "venue": "Conference on Robot Learning (CoRL)",
         "links": [
             {
-                "PDF": "/assets/files/publications/22-wilde-corl.pdf"
+                "pdf": "/assets/files/publications/22-wilde-corl.pdf"
             }
         ],
         "note": null,
@@ -838,7 +839,7 @@
         "venue": "4th Symposium on Management of Future motorway and urban Traffic Systems (MFTS), Dresden, Germany",
         "links": [
             {
-                "PDF": "/assets/files/publications/22-Wang-tfms-s.pdf"
+                "pdf": "/assets/files/publications/22-Wang-tfms-s.pdf"
             },
             {
                 "slides": "/assets/files/publications/22-Wang-tfms.pdf"
@@ -846,7 +847,7 @@
         ],
         "note": null,
         "belongs_to_projects": null,
-        "abstract": "Links: [PDF], [slides],"
+        "abstract": "Links: [pdf], [slides],"
     },
     {
         "title": "Online Multi-Robot Task Assignment with Stochastic Blockages",
@@ -859,7 +860,7 @@
         "venue": "IEEE Conference on Decision and Control (CDC)",
         "links": [
             {
-                "PDF": "/assets/files/publications/22-wilde-cdc.pdf"
+                "pdf": "/assets/files/publications/22-wilde-cdc.pdf"
             }
         ],
         "note": null,
@@ -883,7 +884,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9922062"
             },
             {
-                "PDF": "/assets/files/publications/22_kronmueller_ITSC.pdf"
+                "pdf": "/assets/files/publications/22_kronmueller_ITSC.pdf"
             }
         ],
         "note": null,
@@ -909,7 +910,7 @@
                 "web": "https://arxiv.org/abs/2206.00663"
             },
             {
-                "PDF": "/assets/files/publications/22-wilde-wafr.pdf"
+                "pdf": "/assets/files/publications/22-wilde-wafr.pdf"
             }
         ],
         "note": null,
@@ -934,7 +935,7 @@
                 "web": "https://arxiv.org/abs/2205.01357"
             },
             {
-                "PDF": "/assets/files/publications/22-wang-iv.pdf"
+                "pdf": "/assets/files/publications/22-wang-iv.pdf"
             }
         ],
         "note": null,
@@ -959,7 +960,7 @@
                 "web": "https://doi.org/10.1109/ICRA46639.2022.9811608"
             },
             {
-                "PDF": "/assets/files/publications/22_trevisan_icra.pdf"
+                "pdf": "/assets/files/publications/22_trevisan_icra.pdf"
             },
             {
                 "video": "https://youtu.be/Yq0XDarHX18"
@@ -989,7 +990,7 @@
                 "web": "https://arxiv.org/abs/2203.02381"
             },
             {
-                "PDF": "/assets/files/publications/22-lodel-icra.pdf"
+                "pdf": "/assets/files/publications/22-lodel-icra.pdf"
             },
             {
                 "video": "https://youtu.be/qxabfC9I66k"
@@ -1018,7 +1019,7 @@
                 "web": "https://lasse-peters.net/pub/lifted-games"
             },
             {
-                "PDF": "https://arxiv.org/abs/2106.03611"
+                "pdf": "https://arxiv.org/abs/2106.03611"
             },
             {
                 "video": "https://www.youtube.com/watch?v=gT52cKH9pvg"
@@ -1047,7 +1048,7 @@
                 "web": "https://harmony-eu.org/wp-content/uploads/2022/06/knoedler2022icra_ws.pdf"
             },
             {
-                "PDF": "/assets/files/publications/22_icra_seanavbench_knoedler.pdf"
+                "pdf": "/assets/files/publications/22_icra_seanavbench_knoedler.pdf"
             }
         ],
         "note": null,
@@ -1070,7 +1071,7 @@
                 "web": "https://www.sciencedirect.com/science/article/pii/S0377221721009930"
             },
             {
-                "PDF": "/assets/files/publications/2021_Fielbaum_Costsharing.pdf"
+                "pdf": "/assets/files/publications/2021_Fielbaum_Costsharing.pdf"
             }
         ],
         "note": null,
@@ -1094,7 +1095,7 @@
                 "web": "https://link.springer.com/article/10.1007/s11116-021-10232-1"
             },
             {
-                "PDF": "/assets/files/publications/2021_Fielbaum_Anticipatory.pdf"
+                "pdf": "/assets/files/publications/2021_Fielbaum_Anticipatory.pdf"
             }
         ],
         "note": null,
@@ -1119,7 +1120,7 @@
                 "web": "https://www.sciencedirect.com/science/article/pii/S0968090X21000887"
             },
             {
-                "PDF": "/assets/files/publications/21-Fielbaum-TRC.pdf"
+                "pdf": "/assets/files/publications/21-Fielbaum-TRC.pdf"
             }
         ],
         "note": null,
@@ -1143,7 +1144,7 @@
                 "web": "https://ieeexplore.ieee.org/abstract/document/9410352"
             },
             {
-                "PDF": "/assets/files/publications/21-chen-ral.pdf"
+                "pdf": "/assets/files/publications/21-chen-ral.pdf"
             },
             {
                 "code": "https://github.com/nobodyczcz/MCA-RMCA"
@@ -1171,7 +1172,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9385847"
             },
             {
-                "PDF": "/assets/files/publications/21-brito-ral.pdf"
+                "pdf": "/assets/files/publications/21-brito-ral.pdf"
             },
             {
                 "video": "https://youtu.be/sZBbWMnwle8"
@@ -1199,7 +1200,7 @@
                 "web": "https://www.semanticscholar.org/paper/Learning-Interaction-Aware-Trajectory-Predictions-Zhu-Claramunt/69ed87322418a7501765b66573840c5d1fa29f3d"
             },
             {
-                "PDF": "/assets/files/publications/21-zhu-ral.pdf"
+                "pdf": "/assets/files/publications/21-zhu-ral.pdf"
             },
             {
                 "video": "https://youtu.be/i8HRGeOmcH4"
@@ -1226,7 +1227,7 @@
                 "web": "https://arxiv.org/abs/2103.12517"
             },
             {
-                "PDF": "/assets/files/publications/21-degroot-ral.pdf"
+                "pdf": "/assets/files/publications/21-degroot-ral.pdf"
             },
             {
                 "video": "https://www.youtube.com/watch?v=YONmA4EGmtI"
@@ -1253,7 +1254,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9620599"
             },
             {
-                "PDF": "/assets/files/publications/21_Kronmueller_MRS.pdf"
+                "pdf": "/assets/files/publications/21_Kronmueller_MRS.pdf"
             },
             {
                 "video": "https://www.youtube.com/watch?v=fNu-LFNYqJ8&t=2611s"
@@ -1282,7 +1283,7 @@
                 "web": "https://arxiv.org/abs/2205.15483"
             },
             {
-                "PDF": "/assets/files/publications/21-ray-iros.pdf"
+                "pdf": "/assets/files/publications/21-ray-iros.pdf"
             }
         ],
         "note": null,
@@ -1304,7 +1305,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9564910"
             },
             {
-                "PDF": "/assets/files/publications/21-Fielbaum-ITSC.pdf"
+                "pdf": "/assets/files/publications/21-Fielbaum-ITSC.pdf"
             }
         ],
         "note": null,
@@ -1330,7 +1331,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9561963"
             },
             {
-                "PDF": "/assets/files/publications/21_zhu_icra.pdf"
+                "pdf": "/assets/files/publications/21_zhu_icra.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/mGP_planner"
@@ -1355,7 +1356,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9561821"
             },
             {
-                "PDF": "/assets/files/publications/21-spahn-icra.pdf"
+                "pdf": "/assets/files/publications/21-spahn-icra.pdf"
             },
             {
                 "video": "https://youtu.be/7kcWaBtXvwc"
@@ -1383,7 +1384,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9575193"
             },
             {
-                "PDF": "/assets/files/publications/21-berg-iv.pdf"
+                "pdf": "/assets/files/publications/21-berg-iv.pdf"
             },
             {
                 "video": "https://youtu.be/3j9w5FzWwSo"
@@ -1410,7 +1411,7 @@
                 "web": "https://ieeexplore.ieee.org/document/9244597"
             },
             {
-                "PDF": "/assets/files/publications/20-park-TRO.pdf"
+                "pdf": "/assets/files/publications/20-park-TRO.pdf"
             }
         ],
         "note": null,
@@ -1431,7 +1432,7 @@
                 "web": "https://www.sciencedirect.com/science/article/pii/S0968090X2030735X"
             },
             {
-                "PDF": "/assets/files/publications/20-Fielbaum-TRC.pdf"
+                "pdf": "/assets/files/publications/20-Fielbaum-TRC.pdf"
             }
         ],
         "note": null,
@@ -1456,7 +1457,7 @@
                 "web": "https://www.tandfonline.com/doi/full/10.1080/23249935.2020.1829170"
             },
             {
-                "PDF": "/assets/files/publications/20-Fielbaum-Transportmetrica.pdf"
+                "pdf": "/assets/files/publications/20-Fielbaum-Transportmetrica.pdf"
             }
         ],
         "note": null,
@@ -1478,7 +1479,7 @@
         "venue": "Transportation Research Board Annual Meeting",
         "links": [
             {
-                "PDF": "/assets/files/publications/20-deRuijter-trb.pdf"
+                "pdf": "/assets/files/publications/20-deRuijter-trb.pdf"
             }
         ],
         "note": null,
@@ -1502,7 +1503,7 @@
                 "web": "https://link.springer.com/article/10.1007/s10514-020-09919-8"
             },
             {
-                "PDF": "/assets/files/publications/20-potdar.pdf"
+                "pdf": "/assets/files/publications/20-potdar.pdf"
             },
             {
                 "video": "https://youtu.be/9C7O34W1w8Y"
@@ -1529,7 +1530,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8911227"
             },
             {
-                "PDF": "/assets/files/publications/19-andersen-t-iv.pdf"
+                "pdf": "/assets/files/publications/19-andersen-t-iv.pdf"
             },
             {
                 "video": "https://youtu.be/qCcrjBfSKOU"
@@ -1555,7 +1556,7 @@
                 "web": "https://arxiv.org/abs/2010.09056"
             },
             {
-                "PDF": "/assets/files/publications/20-Brito-CoRL.pdf"
+                "pdf": "/assets/files/publications/20-Brito-CoRL.pdf"
             },
             {
                 "video": "https://youtu.be/tBr5v7TXyG0"
@@ -1582,7 +1583,7 @@
                 "web": "https://arxiv.org/abs/2009.12106"
             },
             {
-                "PDF": "/assets/files/publications/20-serra-iros.pdf"
+                "pdf": "/assets/files/publications/20-serra-iros.pdf"
             },
             {
                 "video": "https://youtu.be/5emyHVOwHd4"
@@ -1610,7 +1611,7 @@
                 "web": "https://ieeexplore.ieee.org/abstract/document/9294424"
             },
             {
-                "PDF": "/assets/files/publications/20-vanLochem-ITSC.pdf"
+                "pdf": "/assets/files/publications/20-vanLochem-ITSC.pdf"
             },
             {
                 "video": "https://youtu.be/WJ5i-X34idk"
@@ -1637,7 +1638,7 @@
                 "web": "https://arxiv.org/abs/2002.04920"
             },
             {
-                "PDF": "/assets/files/publications/20-zhu-icra.pdf"
+                "pdf": "/assets/files/publications/20-zhu-icra.pdf"
             },
             {
                 "video": "https://youtu.be/nZaR-8Z515s"
@@ -1663,7 +1664,7 @@
                 "web": "https://www.semanticscholar.org/paper/Ride-Sharing-Efficiency-and-Level-of-Service-under-Ruijter-Alonso-Mora/3c0d6b22b0bbed27d508150eaf6bce4ec511b2fe"
             },
             {
-                "PDF": "/assets/files/publications/20-deRuijter-trb.pdf"
+                "pdf": "/assets/files/publications/20-deRuijter-trb.pdf"
             }
         ],
         "note": null,
@@ -1689,10 +1690,10 @@
                 "web": "https://www.pnas.org/content/early/2019/11/21/1820676116"
             },
             {
-                "PDF": "/assets/files/publications/19-schwarting-pnas.pdf"
+                "pdf": "/assets/files/publications/19-schwarting-pnas.pdf"
             },
             {
-                "PDF-supplemental": "/assets/files/publications/19-schwarting-pnas-si.pdf"
+                "pdf-supplemental": "/assets/files/publications/19-schwarting-pnas-si.pdf"
             },
             {
                 "video": "https://youtu.be/Pt8SfrUKF6I"
@@ -1720,7 +1721,7 @@
                 "web": "https://arxiv.org/abs/2010.10190"
             },
             {
-                "PDF": "/assets/files/publications/19-brito-ral.pdf"
+                "pdf": "/assets/files/publications/19-brito-ral.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/amr-lmpcc"
@@ -1747,7 +1748,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8613928"
             },
             {
-                "PDF": "/assets/files/publications/19-zhu-RAL.pdf"
+                "pdf": "/assets/files/publications/19-zhu-RAL.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/mrca-mav"
@@ -1776,7 +1777,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8916904"
             },
             {
-                "PDF": "/assets/files/publications/19-wallar-itsc.pdf"
+                "pdf": "/assets/files/publications/19-wallar-itsc.pdf"
             }
         ],
         "note": null,
@@ -1797,7 +1798,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8901092"
             },
             {
-                "PDF": "/assets/files/publications/19-zhu-mrs.pdf"
+                "pdf": "/assets/files/publications/19-zhu-mrs.pdf"
             },
             {
                 "video": "https://youtu.be/vVEiaKDqCU0"
@@ -1822,7 +1823,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8793685"
             },
             {
-                "PDF": "/assets/files/publications/19-wallar-icra.pdf"
+                "pdf": "/assets/files/publications/19-wallar-icra.pdf"
             }
         ],
         "note": null,
@@ -1847,7 +1848,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8793765"
             },
             {
-                "PDF": "/assets/files/publications/19-zhu-icra.pdf"
+                "pdf": "/assets/files/publications/19-zhu-icra.pdf"
             },
             {
                 "video": "https://youtu.be/Kx14E98Iqng"
@@ -1879,7 +1880,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8813899"
             },
             {
-                "PDF": "/assets/files/publications/19-ferranti-iv.pdf"
+                "pdf": "/assets/files/publications/19-ferranti-iv.pdf"
             },
             {
                 "video": "https://youtu.be/OOMZn5TQ00Q"
@@ -1906,7 +1907,7 @@
                 "web": "https://dl.acm.org/doi/10.1145/3272127.3275022"
             },
             {
-                "PDF": "/assets/files/publications/18_naegelit_siggraph.pdf"
+                "pdf": "/assets/files/publications/18_naegelit_siggraph.pdf"
             },
             {
                 "video": "https://youtu.be/iSJY-vHDmHQ"
@@ -1934,7 +1935,7 @@
                 "web": "https://link.springer.com/article/10.1007/s10514-018-9783-9"
             },
             {
-                "PDF": "/assets/files/publications/18-alonsomora-AURO.pdf"
+                "pdf": "/assets/files/publications/18-alonsomora-AURO.pdf"
             },
             {
                 "video": "https://youtu.be/khzM54Qk1QQ"
@@ -1960,7 +1961,7 @@
                 "web": "https://arxiv.org/abs/1906.12082"
             },
             {
-                "PDF": "/assets/files/publications/18-stevsic.pdf"
+                "pdf": "/assets/files/publications/18-stevsic.pdf"
             },
             {
                 "video": "https://youtu.be/eEqzhglPjNE"
@@ -1985,7 +1986,7 @@
                 "web": "https://ieeexplore.ieee.org/abstract/document/8322444"
             },
             {
-                "PDF": "/assets/files/publications/18-alonsomora-TRO.pdf"
+                "pdf": "/assets/files/publications/18-alonsomora-TRO.pdf"
             },
             {
                 "video": "https://youtu.be/WqSW3Soi0vM"
@@ -2010,7 +2011,7 @@
                 "web": "http://www.annualreviews.org/eprint/d7k8kgZyfaxixxyjrtdq/full/10.1146/annurev-control-060117-105157"
             },
             {
-                "PDF": "/assets/files/publications/18-schwarting-AR.pdf"
+                "pdf": "/assets/files/publications/18-schwarting-AR.pdf"
             }
         ],
         "note": null,
@@ -2034,7 +2035,7 @@
                 "web": "https://link.springer.com/article/10.1007/s10514-017-9665-6"
             },
             {
-                "PDF": "/assets/files/publications/17-alonsomora-AURO-mission.pdf"
+                "pdf": "/assets/files/publications/17-alonsomora-AURO-mission.pdf"
             },
             {
                 "video": "https://youtu.be/oF8T6ZRQng8"
@@ -2060,7 +2061,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8569451"
             },
             {
-                "PDF": "/assets/files/publications/18-fiedler-itsc.pdf"
+                "pdf": "/assets/files/publications/18-fiedler-itsc.pdf"
             }
         ],
         "note": null,
@@ -2085,7 +2086,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8593743"
             },
             {
-                "PDF": "/assets/files/publications/18-wallar-iros.pdf"
+                "pdf": "/assets/files/publications/18-wallar-iros.pdf"
             }
         ],
         "note": null,
@@ -2108,7 +2109,7 @@
                 "web": "http://www.roboticsproceedings.org/rss14/p39.pdf"
             },
             {
-                "PDF": "/assets/files/publications/18-cap-RSS.pdf"
+                "pdf": "/assets/files/publications/18-cap-RSS.pdf"
             }
         ],
         "note": null,
@@ -2133,7 +2134,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8550178"
             },
             {
-                "PDF": "/assets/files/publications/18-ferranti-ECC.pdf"
+                "pdf": "/assets/files/publications/18-ferranti-ECC.pdf"
             },
             {
                 "video": "https://youtu.be/draP8lQMxmc"
@@ -2159,7 +2160,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8461138"
             },
             {
-                "PDF": "/assets/files/publications/18-zhou-ICRA.pdf"
+                "pdf": "/assets/files/publications/18-zhou-ICRA.pdf"
             },
             {
                 "video spotlight": "https://youtu.be/zaD-vCEOU9M"
@@ -2189,7 +2190,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8207782"
             },
             {
-                "PDF": "/assets/files/publications/17-schwarting-t-its.pdf"
+                "pdf": "/assets/files/publications/17-schwarting-t-its.pdf"
             },
             {
                 "video": "https://youtu.be/jPzQjusSy7o"
@@ -2214,7 +2215,7 @@
                 "web": "https://journals.sagepub.com/doi/10.1177/0278364917719333"
             },
             {
-                "PDF": "/assets/files/publications/17-alonsomora-IJRR.pdf"
+                "pdf": "/assets/files/publications/17-alonsomora-IJRR.pdf"
             },
             {
                 "video": "https://youtu.be/sDNqdEPA7pE"
@@ -2241,7 +2242,7 @@
                 "web": "https://dl.acm.org/doi/10.1145/3072959.3073712"
             },
             {
-                "PDF": "/assets/files/publications/17-naegeli-siggraph.pdf"
+                "pdf": "/assets/files/publications/17-naegeli-siggraph.pdf"
             },
             {
                 "video": "https://youtu.be/_yei6Zh3f20"
@@ -2252,7 +2253,7 @@
         "abstract": "Abstract: We propose a method for automated aerial videography in dynamic and cluttered environments. An online receding horizon optimization formulation facilitates the planning process for novices and experts alike. The algorithm takes high-level plans as input, which we dub virtual rails, alongside interactively defined aesthetic framing objectives and jointly solves for 3D quadcopter motion plans and associated velocities. The method generates control inputs subject to constraints of a non-linear quadrotor model and dynamic constraints imposed by actors moving in an a priori unknown way. The output plans are physically feasible, for the horizon length, and we apply the resulting control inputs directly at each time-step, without requiring a separate trajectory tracking algorithm. The online nature of the method enables incorporation of feedback into the planning and control loop, makes the algorithm robust to disturbances. Furthermore, we extend the method to include coordination between multiple drones to enable dynamic multi-view shots, typical for action sequences and live TV coverage. The algorithm runs in real-time on standard hardware and computes motion plans for several drones in the order of milliseconds. Finally, we evaluate the approach qualitatively with a number of challenging shots, involving multiple drones and actors and qualitatively characterize the computational performance experimentally."
     },
     {
-        "title": "Real-time Motion Planning for Aerial Videography with Dynamic Obstacle Avoidance and Viewpoint Optimization",
+        "title": "Real-time Motion Planning for Aerial videography with Dynamic Obstacle Avoidance and Viewpoint Optimization",
         "authors": [
             "T. Naegeli",
             "J. Alonso-Mora",
@@ -2268,7 +2269,7 @@
                 "web": "https://ieeexplore.ieee.org/document/7847361"
             },
             {
-                "PDF": "/assets/files/publications/17-naegeli-RAL.pdf"
+                "pdf": "/assets/files/publications/17-naegeli-RAL.pdf"
             },
             {
                 "video": "https://youtu.be/dh7yOEHBc_w"
@@ -2295,10 +2296,10 @@
                 "web": "http://www.pnas.org/cgi/doi/10.1073/pnas.1611675114"
             },
             {
-                "PDF": "/assets/files/publications/17-alonsomora-ridesharing-pnas.pdf"
+                "pdf": "/assets/files/publications/17-alonsomora-ridesharing-pnas.pdf"
             },
             {
-                "PDF-supplemental-method": "/assets/files/publications/17-alonsomora-ridesharing-pnas-supplemental-method.pdf"
+                "pdf-supplemental-method": "/assets/files/publications/17-alonsomora-ridesharing-pnas-supplemental-method.pdf"
             },
             {
                 "video": "https://youtu.be/xHWrRci0H54"
@@ -2327,7 +2328,7 @@
                 "web": "https://people.csail.mit.edu/lucasl/files/slides/isrr18_safety_standards_slides.pdf"
             },
             {
-                "PDF": "/assets/files/publications/17-Liebenwein.pdf"
+                "pdf": "/assets/files/publications/17-Liebenwein.pdf"
             },
             {
                 "video": "https://www.youtube.com/watch?v=gYcIK4oVtVM"
@@ -2352,7 +2353,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8206203"
             },
             {
-                "PDF": "/assets/files/publications/17-alonsomora-IROS.pdf"
+                "pdf": "/assets/files/publications/17-alonsomora-IROS.pdf"
             },
             {
                 "video": "https://youtu.be/xHWrRci0H54"
@@ -2380,7 +2381,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8202163"
             },
             {
-                "PDF": "/assets/files/publications/17-kamel-IROS.pdf"
+                "pdf": "/assets/files/publications/17-kamel-IROS.pdf"
             },
             {
                 "video": "https://youtu.be/TVAcPJ8tYho"
@@ -2409,7 +2410,7 @@
                 "web": "https://ieeexplore.ieee.org/document/8317853"
             },
             {
-                "PDF": "/assets/files/publications/17-andersen-ITSC.pdf"
+                "pdf": "/assets/files/publications/17-andersen-ITSC.pdf"
             },
             {
                 "video": "https://youtu.be/mHye5V1iC70"
@@ -2436,7 +2437,7 @@
                 "web": "https://www.semanticscholar.org/paper/Foresight%3A-Remote-Sensing-for-Autonomous-Vehicles-a-Wallar-Araki/4a0c1ee0a0e321ce2f8cd63b5a40c2138cf8cff7"
             },
             {
-                "PDF": "/assets/files/publications/17-wallar-FSR.pdf"
+                "pdf": "/assets/files/publications/17-wallar-FSR.pdf"
             },
             {
                 "video": "https://youtu.be/gmpjYLksUx8"
@@ -2471,7 +2472,7 @@
                 "web": "https://ieeexplore.ieee.org/document/7995835"
             },
             {
-                "PDF": "/assets/files/publications/17-naser-car-iv.pdf"
+                "pdf": "/assets/files/publications/17-naser-car-iv.pdf"
             },
             {
                 "video": "https://youtu.be/GMZallctwAU"
@@ -2498,7 +2499,7 @@
                 "web": "https://ieeexplore.ieee.org/abstract/document/7989224"
             },
             {
-                "PDF": "/assets/files/publications/17-schwartig-autonomy-icra.pdf"
+                "pdf": "/assets/files/publications/17-schwartig-autonomy-icra.pdf"
             },
             {
                 "video": "https://youtu.be/jPzQjusSy7o"
@@ -2550,7 +2551,7 @@
                 "web": "https://duckietown.mit.edu/"
             },
             {
-                "PDF": "/assets/files/publications/17-paull-duckietown-icra.pdf"
+                "pdf": "/assets/files/publications/17-paull-duckietown-icra.pdf"
             },
             {
                 "video": "https://youtu.be/b0B6S2Ca75Q"
@@ -2615,7 +2616,7 @@
                 "web": "https://ieeexplore.ieee.org/document/7487747"
             },
             {
-                "PDF": "/assets/files/publications/16-alonsomora-icra-distribformation.pdf"
+                "pdf": "/assets/files/publications/16-alonsomora-icra-distribformation.pdf"
             },
             {
                 "video": "https://youtu.be/kh7IlxziiMo"
@@ -2641,7 +2642,7 @@
                 "web": "https://dl.acm.org/doi/10.1145/2897843.2915197"
             },
             {
-                "PDF": "/assets/files/publications/16-digumarti.pdf"
+                "pdf": "/assets/files/publications/16-digumarti.pdf"
             },
             {
                 "video": "https://youtu.be/4-3rkrqvO14"
@@ -2667,7 +2668,7 @@
                 "web": "https://link.springer.com/article/10.1007/s10514-015-9429-0"
             },
             {
-                "PDF": "/assets/files/publications/15-alonsomora-AURO.pdf"
+                "pdf": "/assets/files/publications/15-alonsomora-AURO.pdf"
             },
             {
                 "video": "https://youtu.be/seMRMa82FzA"
@@ -2692,7 +2693,7 @@
                 "web": "https://ieeexplore.ieee.org/document/7354037"
             },
             {
-                "PDF": "/assets/files/publications/15-alonso-iros.pdf"
+                "pdf": "/assets/files/publications/15-alonso-iros.pdf"
             },
             {
                 "video": "https://youtu.be/MNvh03xYDIs"
@@ -2719,7 +2720,7 @@
                 "web": "https://link.springer.com/chapter/10.1007/978-3-319-51532-8_28"
             },
             {
-                "PDF": "/assets/files/publications/15-decastro-isrr.pdf"
+                "pdf": "/assets/files/publications/15-decastro-isrr.pdf"
             },
             {
                 "video": "https://youtu.be/oF8T6ZRQng8"
@@ -2745,7 +2746,7 @@
                 "web": "https://ieeexplore.ieee.org/document/7139967"
             },
             {
-                "PDF": "/assets/files/publications/15-alonso-manip-icra.pdf"
+                "pdf": "/assets/files/publications/15-alonso-manip-icra.pdf"
             },
             {
                 "video": "https://youtu.be/kxRu426UVdM"
@@ -2772,7 +2773,7 @@
                 "web": "https://ieeexplore.ieee.org/document/7140033"
             },
             {
-                "PDF": "/assets/files/publications/15-alonso-hri-icra.pdf"
+                "pdf": "/assets/files/publications/15-alonso-hri-icra.pdf"
             },
             {
                 "video": "https://youtu.be/bM5-nyeNjms"
@@ -2797,7 +2798,7 @@
                 "web": "https://www.multirobotsystems.org/sites/default/files/slides/2015_RSS_MRS_Alonso-Mora.pdf"
             },
             {
-                "PDF": "/assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf"
+                "pdf": "/assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf"
             }
         ],
         "note": null,
@@ -2822,7 +2823,7 @@
                 "web": "https://repository.tudelft.nl/islandora/object/uuid%3A2e865132-8a33-4115-84df-a02407d02d27"
             },
             {
-                "PDF": "/assets/files/publications/14-schiano.pdf"
+                "pdf": "/assets/files/publications/14-schiano.pdf"
             },
             {
                 "video": "https://youtu.be/jA7MuDNpBjM"
@@ -2846,13 +2847,13 @@
         "venue": "Proc. of the Int. Symposium on Experimental Robotics",
         "links": [
             {
-                "PDF": "/assets/files/publications/14-jud.pdf"
+                "pdf": "/assets/files/publications/14-jud.pdf"
             },
             {
                 "web": "https://link.springer.com/chapter/10.1007/978-3-319-23778-7_34"
             },
             {
-                "PDF": "/assets/files/publications/14-jud.pdf"
+                "pdf": "/assets/files/publications/14-jud.pdf"
             },
             {
                 "video": "https://youtu.be/MrbHmLkOajY"
@@ -2879,7 +2880,7 @@
                 "web": "https://ieeexplore.ieee.org/document/6907071"
             },
             {
-                "PDF": "/assets/files/publications/14-alonsomora-icra.pdf"
+                "pdf": "/assets/files/publications/14-alonsomora-icra.pdf"
             }
         ],
         "note": null,
@@ -2902,7 +2903,7 @@
                 "web": "https://ieeexplore.ieee.org/document/6907548"
             },
             {
-                "PDF": "/assets/files/publications/14-schoch.pdf"
+                "pdf": "/assets/files/publications/14-schoch.pdf"
             },
             {
                 "video": "https://youtu.be/f7y7n6n__38"
@@ -2927,13 +2928,13 @@
                 "web": "https://ieeexplore.ieee.org/document/8542599"
             },
             {
-                "PDF": "/assets/files/publications/14-alonso-HRI.pdf"
+                "pdf": "/assets/files/publications/14-alonso-HRI.pdf"
             },
             {
                 "video": "https://youtu.be/AM2rLmna9nA"
             }
         ],
-        "note": "Best Video Award 2nd Prize",
+        "note": "Best video Award 2nd Prize",
         "belongs_to_projects": null,
         "abstract": "Abstract: This work shows experimental results with three systems that take real-time user input to direct a robot swarm formed by tens of small robots. These are: real-time drawing, gesture based interaction with an RGB-D sensor and control via a hand-held tablet computer."
     },
@@ -2969,7 +2970,7 @@
                 "web": "https://homepages.laas.fr/afranchi/events/icra2014mrs/w/Home_files/2014ICRA_MRS_Grieder.pdf"
             },
             {
-                "PDF": "/assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf"
+                "pdf": "/assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf"
             },
             {
                 "video": "https://www.youtube.com/watch?v=WxbN0NyzEO0"
@@ -2994,7 +2995,7 @@
                 "web": "https://ieeexplore.ieee.org/document/6515630"
             },
             {
-                "PDF": "/assets/files/publications/13-rufli-tro.pdf"
+                "pdf": "/assets/files/publications/13-rufli-tro.pdf"
             },
             {
                 "video": "https://youtu.be/seMRMa82FzA"
@@ -3020,7 +3021,7 @@
                 "web": "https://arxiv.org/abs/1311.4527"
             },
             {
-                "PDF": "/assets/files/publications/13-bento.pdf"
+                "pdf": "/assets/files/publications/13-bento.pdf"
             },
             {
                 "video": "https://youtu.be/J8Z-7NaadK4"
@@ -3064,7 +3065,7 @@
                 "web": "https://ieeexplore.ieee.org/document/6696604"
             },
             {
-                "PDF": "/assets/files/publications/13-skye.pdf"
+                "pdf": "/assets/files/publications/13-skye.pdf"
             },
             {
                 "video": "https://youtu.be/qXvl3anK3w0"
@@ -3090,7 +3091,7 @@
                 "web": "https://ieeexplore.ieee.org/abstract/document/6630969"
             },
             {
-                "PDF": "/assets/files/publications/13-alonsomora.pdf"
+                "pdf": "/assets/files/publications/13-alonsomora.pdf"
             },
             {
                 "video": "https://youtu.be/FoByoWygCeo"
@@ -3117,7 +3118,7 @@
                 "web": "https://journals.sagepub.com/doi/10.1177/0278364912442095"
             },
             {
-                "PDF": "/assets/files/publications/12-alonsomora-ijrr.pdf"
+                "pdf": "/assets/files/publications/12-alonsomora-ijrr.pdf"
             },
             {
                 "video": "https://youtu.be/4-3rkrqvO14"
@@ -3142,7 +3143,7 @@
                 "web": "https://onlinelibrary.wiley.com/doi/10.1002/asjc.398"
             },
             {
-                "PDF": "/assets/files/publications/12-Schoellig-ajc.pdf"
+                "pdf": "/assets/files/publications/12-Schoellig-ajc.pdf"
             }
         ],
         "note": null,
@@ -3166,7 +3167,7 @@
                 "web": "https://ieeexplore.ieee.org/document/6385551"
             },
             {
-                "PDF": "/assets/files/publications/12-alonsomora-iros.pdf"
+                "pdf": "/assets/files/publications/12-alonsomora-iros.pdf"
             },
             {
                 "video": "https://youtu.be/f7y7n6n__38"
@@ -3193,7 +3194,7 @@
                 "web": "https://link.springer.com/chapter/10.1007/978-3-642-40686-7_12"
             },
             {
-                "PDF": "/assets/files/publications/12-hauri.pdf"
+                "pdf": "/assets/files/publications/12-hauri.pdf"
             },
             {
                 "video": "https://youtu.be/AM2rLmna9nA"
@@ -3219,7 +3220,7 @@
                 "web": "https://ieeexplore.ieee.org/document/6225166"
             },
             {
-                "PDF": "/assets/files/publications/12-alonsomora-icra.pdf"
+                "pdf": "/assets/files/publications/12-alonsomora-icra.pdf"
             },
             {
                 "video": "https://youtu.be/NT45HE7L7yk"
@@ -3245,7 +3246,7 @@
                 "web": "https://homepages.laas.fr/afranchi/events/icra2014mrs/w/Home_files/2014ICRA_MRS_Grieder.pdf"
             },
             {
-                "PDF": "/assets/files/publications/13-gohl.pdf"
+                "pdf": "/assets/files/publications/13-gohl.pdf"
             },
             {
                 "video": "https://youtu.be/Z-0Y5rqbtEI"
@@ -3289,7 +3290,7 @@
                 "web": "https://ieeexplore.ieee.org/document/5980269"
             },
             {
-                "PDF": "/assets/files/publications/11-alonsomora.pdf"
+                "pdf": "/assets/files/publications/11-alonsomora.pdf"
             },
             {
                 "video": "https://youtu.be/giPxyQ9do-E"
@@ -3333,7 +3334,7 @@
                 "web": "https://ieeexplore.ieee.org/document/5717888"
             },
             {
-                "PDF": "/assets/files/publications/10-schollig-cdc.pdf"
+                "pdf": "/assets/files/publications/10-schollig-cdc.pdf"
             }
         ],
         "note": null,
@@ -3357,7 +3358,7 @@
                 "web": "https://link.springer.com/chapter/10.1007/978-3-642-32723-0_15"
             },
             {
-                "PDF": "/assets/files/publications/10-alonsomora.pdf"
+                "pdf": "/assets/files/publications/10-alonsomora.pdf"
             },
             {
                 "video": "https://youtu.be/s9lvMvFcuCE"
@@ -3383,7 +3384,7 @@
                 "web": "https://onlinelibrary.wiley.com/doi/abs/10.1002/apj.195"
             },
             {
-                "PDF": "/assets/files/publications/09-alonsomora-apjqe.pdf"
+                "pdf": "/assets/files/publications/09-alonsomora-apjqe.pdf"
             }
         ],
         "note": null,
