@@ -11,7 +11,7 @@ links: # If you have a website for the project, repos, etc. put it here.
       url: "https://andreumatoses.github.io/"
     - name: Repository
       url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en&inst=6173373803492361994&oi=ao"
-fundings: 
+fundings: This project is funded in part by the National Police (Politie) of the Netherlands.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Lasse Peters 
       # extra_info: website here?

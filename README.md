@@ -127,7 +127,7 @@ links:
       url: "https://..."
     - name: "Github: multi-agent fabrics"
       url: "https://github.com/tud-amr/multi-robot-fabrics"
-fundings: This project is founded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
+fundings: This project is funded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
 people:
     - name: Saray Bakker 
     - name: Andreu Matoses Gimenez

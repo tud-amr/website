@@ -10,7 +10,7 @@ image: /assets/images/projects/police/Environment_exploration_drones.png
 links: # If you have a website for the project, repos, etc. put it here.
     - name: Project Website
       url: "/"
-fundings: This project is founded by the National Police (Politie) of the Netherlands.
+fundings: This project is funded by the National Police (Politie) of the Netherlands.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Dennis Benders 
       extra_info: PhD candidate
