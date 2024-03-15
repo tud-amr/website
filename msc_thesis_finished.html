@@ -20,6 +20,8 @@ permalink: /msc_projects_finished/
 
     <!-- Create year titles for each distinct year of the master projects -->
     {% for msc_project in projects_sorted %}
+    {% unless msc_project.url contains 'msc-project-template' %}
+
     {% assign currDate = msc_project.end_date | date: "%Y" %} 
     {% if currDate != date %}
     <h3 class="archive-year border-bottom">{{ currDate }}</h3>
@@ -34,6 +36,7 @@ permalink: /msc_projects_finished/
         {% include msc_project_item.html project=msc_project id=counter %}
     </div>
 
+    {% endunless %}
     {% endfor %}
 
 </div>
