@@ -38,9 +38,11 @@ If you do not find an interesting project, but you would like to join our group,
 
 In the following link you can find a list of available MSc projects. For announced projects, please first contact the daily supervisor to discuss the project.
 <!-- [Click here for Available MSc thesis projects and information]({{ '/student-projects' | relative_url }}) -->
-<div class="d-grid gap-2 d-flex justify-content-md-center justify-content-center mb-3">
+<div class="d-grid gap-2 d-flex justify-content-md-start justify-content-center mb-3">
     <a href="{{ '/student-projects' | relative_url }}"><button type="button" class="btn btn-primary rounded-5  px-4 me-md-2">Available MSc thesis projects and information</button></a>
+    <a href="{{ '/msc_projects_finished' | relative_url }}"><button type="button" class="btn btn-outline-dark rounded-5  px-4 me-md-2">Past MSc thesis</button></a>
 </div>
+
 
 ## Internships
 
