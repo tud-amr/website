@@ -3,7 +3,7 @@
         "title": "Reducing the Minimal Fleet Size by Delaying Individual Tasks",
         "authors": [
             "Maximilian Kronmueller",
-            "andres Fielbaum",
+            "Andres Fielbaum",
             "Javier Alonso-Mora"
         ],
         "date": "2024-03-06",
@@ -11,6 +11,7 @@
         "venue": "IEEE Transactions on Intelligent Transportation Systems",
         "links": [
             {
+                "pdf": "/assets/files/publications/24_Kronmueller_T-ITS.pdf",
                 "web": "https://ieeexplore.ieee.org/abstract/document/10462002"
             }
         ],
