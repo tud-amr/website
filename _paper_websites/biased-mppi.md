@@ -24,7 +24,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
       icon: bi-github
     - name: Video
       icon: bi-youtube
-      url: "https://www.youtube.com/watch?v=T-pE4g2mcqo"
+      url: "https://youtu.be/1ZbbcfFgpxc"
 ---
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
