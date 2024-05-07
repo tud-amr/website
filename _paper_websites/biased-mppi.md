@@ -19,7 +19,7 @@ release_date: 2024-03-18 # publication or relevant date, approximated if not sur
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
     - name: arXiv
       icon: bi-file-earmark-pdf
-      url: "https://arxiv.org/abs/2401.09241v1"
+      url: "https://arxiv.org/abs/2401.09241"
     - name: Code available after publication
       icon: bi-github
     - name: Video
