@@ -25,10 +25,11 @@ affiliations:
     #   superscript: "†"
 release_date: 2023-12-04 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    - name: Paper
+    - name: IEEE Xplore
       icon: bi-file-earmark-pdf
-      url: "https://ieeexplore.ieee.org/abstract/document/10416788"
+      url: "https://doi.org/10.1109/MRS60187.2023.10416788"
     - name: arXiv
+      icon: bi-file-earmark-pdf
       url: "https://arxiv.org/abs/2309.14931"
     - name: Model
       url: "https://surfdrive.surf.nl/files/index.php/s/jUdiLvFaHmRurhB"

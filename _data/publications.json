@@ -11,7 +11,7 @@
         "links": [
             {
                 "pdf": "/assets/files/publications/24_trevisan_ral_biased.pdf",
-                "web": "https://autonomousrobots.nl/paper_websites/biased-mppi"
+                "web": "/paper_websites/biased-mppi"
             }
         ],
         "image": "/assets/images/papers/biased_mppi/icon.png",
@@ -415,9 +415,6 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             {
                 "web": "/paper_websites/ia-mppi"
             },
-            {
-                "Data, Model, Code and video": "https://www.autonomousrobots.nl/paper_webs/ia-mppi"
-            }
         ],
         "note": null,
         "belongs_to_projects": [
