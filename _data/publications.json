@@ -426,7 +426,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "venue": " IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "pdf": "/assets/files/publications/24-clarence-ral-2023.pdf"
+                "pdf": "/assets/files/publications/23-chen-ral.pdf"
             },
             {
                 "code": "https://github.com/tud-amr/RAST_corridor_planning"
