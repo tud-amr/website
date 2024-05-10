@@ -1,5 +1,44 @@
 [
     {
+        "title": "Probabilistic Motion Planning and Prediction via Partitioned Scenario Replay",
+        "authors": [
+            "Oscar de Groot",
+            "Anish Sridharan",
+            "Javier Alonso-Mora",
+            "Laura Ferranti"
+        ],
+        "date": "2024-05-15",
+        "type": "conference",
+        "venue": "IEEE Int. Conf. on Robotics and Automation (ICRA)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-degroot-icra.pdf"
+            }
+        ],
+        "abstract": "Autonomous mobile robots require predictions of human motion to plan a safe trajectory that avoids them. Because human motion cannot be predicted exactly, future trajectories are typically inferred from real-world data via learning-based approximations. These approximations provide useful information on the pedestrian’s behavior, but may deviate from the data, which can lead to collisions during planning. In this work, we introduce a joint prediction and planning framework, Partitioned Scenario Replay (PSR), that stores and partitions previously observed human trajectories, referred to as scenarios. During planning, scenarios observed in similar situations are reintroduced (or replayed) as motion predictions. By sampling real data and by building on scenario optimization and predictive control, the planner provides probabilistic col- lision avoidance guarantees in the real-world. Relying on this guarantee to remain safe, PSR can incrementally improve its prediction and planning performance online. We demonstrate our approach on a mobile robot navigating around pedestrians."
+      },
+    {
+        "title": "Decentralized Multi-Agent Trajectory Planning in Dynamic Environments with Spatiotemporal Occupancy Grid Maps",
+        "authors": [
+            "Siyuan Wu",
+            "Gang Chen",
+            "Moji Shi",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-05-15",
+        "type": "conference",
+        "venue": "IEEE Int. Conf. on Robotics and Automation (ICRA)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-wu-icra.pdf"
+            }
+        ],
+        "belongs_to_projects": [
+            "interact"
+        ],
+        "abstract": "This paper proposes a decentralized trajectory planning framework for the collision avoidance problem of mul- tiple micro aerial vehicles (MAVs) in environments with static and dynamic obstacles. The framework utilizes spatiotemporal occupancy grid maps (SOGM), which forecast the occupancy status of neighboring space in the near future, as the environ- ment representation. Based on this representation, we extend the kinodynamic A* and the corridor-constrained trajectory optimization algorithms to efficiently tackle static and dynamic obstacles with arbitrary shapes. Collision avoidance between communicating robots is integrated by sharing planned tra- jectories and projecting them onto the SOGM. The simulation results show that our method achieves competitive performance against state-of-the-art methods in dynamic environments with different numbers and shapes of obstacles. Finally, the proposed method is validated in real experiments."
+      },
+    {
         "title": "Biased-MPPI: Informing Sampling-Based Model Predictive Control by Fusing Ancillary Controllers",
         "authors": [
             "Elia Trevisan",
