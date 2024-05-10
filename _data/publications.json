@@ -217,7 +217,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
                 "web": "https://www.tandfonline.com/doi/full/10.1080/19427867.2023.2278859"
             },
             {
-                "pdf": "https://www.tandfonline.com/doi/epdf/10.1080/19427867.2023.2278859?needAccess=true"
+                "pdf": "/assets/files/publications/24-kronmuller-letters.pdf"
             }
         ],
         "note": null,
@@ -240,7 +240,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "venue": " IEEE Transactions on Robotics (TRO)",
         "links": [
             {
-                "pdf": "https://arxiv.org/pdf/2202.06273.pdf"
+                "pdf": "/assets/files/publications/23-chen-tro.pdf"
             }
         ],
         "note": null,
