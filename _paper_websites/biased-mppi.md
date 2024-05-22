@@ -23,8 +23,9 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: arXiv
       icon: bi-file-earmark-pdf
       url: "https://arxiv.org/abs/2401.09241"
-    - name: Code available after publication
+    - name: Code
       icon: bi-github
+      url: https://github.com/eliatrevisan/biased-mppi
     - name: Video
       icon: bi-youtube
       url: "https://youtu.be/1ZbbcfFgpxc"
