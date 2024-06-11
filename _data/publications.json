@@ -15,6 +15,9 @@
                 "pdf": "/assets/files/publications/24-racp-tiv.pdf"
             }
         ],
+        "belongs_to_projects": [
+        	"nwa-act"
+        ],
         "abstract": "For an autonomous vehicle to operate reliably within real-world traffic scenarios, it is imperative to assess the repercussions of its prospective actions by anticipating the uncertain intentions exhibited by other participants in the traffic environment. Driven by the pronounced multi-modal nature of human driving behavior, this paper presents an approach that leverages Bayesian beliefs over the distribution of potential policies of other road users to construct a novel risk-aware probabilistic motion planning framework. In particular, we propose a novel contingency planner that outputs long-term contingent plans conditioned on multiple possible intents for other actors in the traffic scene. The Bayesian belief is incorporated into the optimization cost function to influence the behavior of the short-term plan based on the likelihood of other agents' policies. Furthermore, a probabilistic risk metric is employed to fine-tune the balance between efficiency and robustness. Through a series of closed-loop safety-critical simulated traffic scenarios shared with human-driven vehicles, we demonstrate the practical efficacy of our proposed approach that can handle multi-vehicle scenarios."
       },
       
@@ -623,15 +626,15 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
     {
         "title": "Probabilistic Risk Assessment for Chance-Constrained Collision Avoidance in Uncertain Dynamic Environments",
         "authors": [
-            "K. Mustafa",
-            "O. de Groot",
-            "X. Wang",
-            "J. Kober",
-            "J. Alonso-Mora"
+            "Khaled A. Mustafa",
+            "Oscar de Groot",
+            "Xinwei Wang",
+            "Jens Kober",
+            "Javier Alonso-Mora"
         ],
         "date": "2023-05-01",
         "type": "conference",
-        "venue": ", in IEEE Int. Conf. on Robotics and Automation (ICRA)",
+        "venue": "IEEE International Conference on Robotics and Automation (ICRA)",
         "links": [
             {
                 "pdf": "/assets/files/publications/23-mustafa-icra.pdf"
@@ -639,6 +642,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": "probabilistic-planning",
+        "belongs_to_projects": "nwa-act",
         "abstract": "Abstract: Balancing safety and efficiency when planning in crowded scenarios with uncertain dynamics is challenging where it is imperative to accomplish the robot\u2019s mission without incurring any safety violations. Typically, chance constraints are incorporated into the planning problem to provide probabilistic safety guarantees by imposing an upper bound on the collision probability of the planned trajectory. Yet, this results in overly conservative behavior on the grounds that the gap between the obtained risk and the specified upper limit is not explicitly restricted. To address this issue, we propose a real-time capable approach to quantify the risk associated with planned trajec- tories obtained from multiple probabilistic planners, running in parallel, with different upper bounds of the acceptable risk level. Based on the evaluated risk, the least conservative plan is selected provided that its associated risk is below a specified threshold. In such a way, the proposed approach provides probabilistic safety guarantees by attaining a closer bound to the specified risk, while being applicable to generic uncertainties of moving obstacles. We demonstrate the efficiency of our proposed approach, by improving the performance of a state- of-the-art probabilistic planner, in simulations and experiments using a mobile robot in an environment shared with humans."
     },
     {
@@ -733,7 +737,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "nwa-act",
         "abstract": "Abstract: Predicting the future behaviour of people re- mains an open challenge for the development of risk-aware autonomous vehicles. An important aspect of this challenge is effectively capturing the uncertainty inherent to human behaviour. This paper studies an approach for multi-modal probabilistic motion forecasting of an agent with improved accuracy in the predicted sample likelihoods. Our approach achieves state-of-the-art results on the inD dataset when evalu- ated with the standard metrics employed for motion forecasting. Furthermore, our approach also achieves state-of-the-art results when evaluated with respect to the likelihoods it assigns to its generated trajectories. Evaluations on artificial datasets indicate that the distributions learned by our model closely correspond to the true distributions observed in data and are not as prone to being over-confident in a single outcome in the face of uncertainty."
     },
     {
