@@ -15,4 +15,3 @@ links: # Optional, links to other stuff
 
 <!-- Here add your interests or small paragraph. Keep it brief -->
 Motion planning for multi-robot high-level scene reasoning. Now Postdoc at Leiden University. 
-```
