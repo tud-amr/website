@@ -121,6 +121,7 @@
                 "pdf": "/assets/files/publications/24-wilde-TRO.pdf"
             }
         ],
+        "image": "/assets/images/papers/multi_objective/mo_mrta.png",
         "belongs_to_projects": [
             "harmony"
         ],
