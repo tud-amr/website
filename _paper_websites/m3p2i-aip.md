@@ -265,7 +265,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/reactive_pick.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/reactive_pick_compress.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -277,7 +277,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/m3p2i_1.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/m3p2i_1_compress.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
