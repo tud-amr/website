@@ -8,9 +8,9 @@ joined_date: 2022-06-01
 image: /assets/images/people/Saray_Bakker.jpg # link or path in /assets/...
 links: # Optional, links to other stuff
     - name: Google Scholar
-      url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en&inst=6173373803492361994&oi=ao"
+      url: "https://scholar.google.nl/citations?user=kAlAUFkAAAAJ&hl=nl"
     - name: Contact
-      url: "https://www.tudelft.nl/staff/j.alonsomora/"
+      url: "https://www.tudelft.nl/en/staff/s.bakker-7/"
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief -->

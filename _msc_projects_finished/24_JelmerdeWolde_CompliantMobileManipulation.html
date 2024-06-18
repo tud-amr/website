@@ -1,0 +1,212 @@
+---
+title: "Current-Based Impedance Control for Mobile Manipulators Without Force/Torque Sensors"
+authors:
+    - name: "Jelmer de Wolde"
+      url: "/"
+      superscript: "1"
+    - name: "Luzia Knoedler"
+      url: "https://scholar.google.com/citations?user=oQKJuLoAAAAJ&hl=en&oi=ao"
+      superscript: "2"
+    - name: "Javier Alonso-Mora"
+      url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en"
+      superscript: "3"
+affiliations:
+    - name: "Master Student"
+      superscript: "1"
+      url: "/"
+    - name: "Daily Supervisor"
+      superscript: "2"
+    - name: "Primary Supervisor"
+      superscript: "3"
+end_date: 2024-03-06 # end date if ended, approximated if not sure. Just for display purposes and ordering.
+# This is the short project description, displayed in the project's card"
+description: "This project explores the use of impedance control on mobile manipulators consisting of an off-the-shelf arm and mobile base. The aim is to achieve compliant behavior, enabeling the system to effectively interact with its environment. Impedance control relies on contact information usually obtained from joint torque measurements. However, off-the-shelf robots may lack such sensors, and adding them is costly. Additionally, the robots may not support torque control, limiting the application of impedance control. Thus, this project presents a calibration method that enables the application of impedance control on a current-controlled manipulator. Moreover, it presents to operational modes for interacting with the mobile manipulator."
+cover_image: /assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/cover_image.jpg # Image displayed in the project's card, make it aspect ratio 1x1 (square) for best results, and keep it a reasonable size (like 1-2MB). Can also be a gif
+links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
+    - name: Thesis
+      url: "https://repository.tudelft.nl/islandora/object/uuid%3A11af06dd-e28b-41d0-ba53-85b437af0cbc?collection=education"
+    - name: arxiv
+      url: "https://arxiv.org/abs/2403.13079"
+    - name: Code
+      icon: bi-github
+      url: "https://github.com/tud-amr/mobile-manipulator-compliance"
+---
+
+<div class="teaser-video d-flex justify-content-center">
+  <div class="ratio ratio-16x9">
+    <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+      <source src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/summary_video_reduced.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+
+<section id="abstract">
+  <h2>Summary</h2>
+  <p>
+    As robots transition from industrial settings to human-centered spaces, integrating mobile manipulation and compliant control becomes vital for efficient and safe task execution.
+    Mobile manipulation extends the robot's workspace by combining navigation and manipulation capabilities, enhancing flexibility and efficiency.
+    Moreover, compliance is mandatory for robust behaviors in unstructured environments and safe operation in the proximity of humans. 
+    Compliance is commonly achieved through indirect force control methods such as admittance and impedance control. 
+    However, these methods require contact information that are typically derived from measurements of the joint torques or from a force/torque sensor mounted at the end-effector. 
+    Such equipment can be expensive, and off-the-shelf robots might not come equipped with them.
+    Further challenges arise based on the control mode supported by the robot.
+    For instance, while admittance control can be applied to position/velocity-controlled robots, compliance is only achieved concerning the measured forces.
+    On the other hand, impedance control is exclusive to torque-controlled robots, yet it effectively achieves compliance to all forces interacting with the robot. 
+    Therefore, implementing compliant control on a mobile manipulator poses significant challenges. 
+    This work presents a holistic approach to address compliance for mobile manipulators using off-the-shelf current-controlled manipulators and velocity-controlled mobile bases without adding force/torque sensors.
+    In the context of the manipulator, the approach involves leveraging the direct correlation between
+    the actuator current and the resulting joint torque, overcoming the typical reliance of impedance control on torque sensors.
+    Additionally, we present two operational modes to achieve a compliant mobile-manipulator.
+    First, a guidance mode facilitating compliant lead-through interaction between the manipulator and the mobile base. Second, a tracking mode which involves the base following the arm, enhancing stability and extending the workspace.
+  </p>
+
+
+  
+</section>
+
+<!-- <section id="showcase-1">
+  <h2>Background Information</h2>
+  <p>
+    The dynamics of a manipulator with $n$ rigid joints are represented by the nonlinear differential equation
+  </p>
+
+
+  <div class="math-block">
+    $$\boldsymbol{M}(\boldsymbol{q})\ddot{\boldsymbol{q}} + \boldsymbol{C}(\boldsymbol{q},\dot{\boldsymbol{q}}) \dot{\boldsymbol{q}} + \boldsymbol{\tau}_\mathrm{g}(\boldsymbol{q}) + \boldsymbol{\tau}_\mathrm{f} = \boldsymbol{\tau} + \boldsymbol{\tau}_\mathrm{ext},\label{eq:dynamics_q}$$ 
+  </div>
+
+  <p>
+    where the symmetric, positive definite inertia matrix $\boldsymbol{M}(\boldsymbol{q}) \in \mathbb{R}^{n \times n}$, the Coriolis/centrifugal matrix $\boldsymbol{C}(\boldsymbol{q},\dot{\boldsymbol{q}}) \in \mathbb{R}^{n \times n}$, and the gravitational torque $\boldsymbol{\tau}_\mathrm{g} \in \mathbb{R}^n$ depend on the joint positions $\boldsymbol{q} \in \mathbb{R}^n$ and the joint velocities $\dot{\boldsymbol{q}} \in \mathbb{R}^n$.
+    The torques applied to the system are the actuator torques $\boldsymbol{\tau} \in \mathbb{R}^n$ and the external torques $\boldsymbol{\tau}_\mathrm{ext} \in \mathbb{R}^n$. The vector $\boldsymbol{\tau}_\mathrm{f} \in \mathbb{R}^n$ contains the torques due to friction.
+    Given the task coordinates $\boldsymbol{x}$ and $\dot{\boldsymbol{x}}$, each term in the equation above can be transformed in task space, leading to the model:
+  </p>
+
+  <div class="math-block">
+    $$\boldsymbol{\Lambda}(\boldsymbol{q})\ddot{\boldsymbol{x}} + \boldsymbol{\mu}(\boldsymbol{q},\dot{\boldsymbol{q}}) \dot{\boldsymbol{x}} + \boldsymbol{f}_\mathrm{g}(\boldsymbol{q}) + \boldsymbol{f}_\mathrm{f} = \boldsymbol{f} + \boldsymbol{f}_\mathrm{ext},$$ 
+  </div>
+
+  <p>
+    with $\boldsymbol{\Lambda}(\boldsymbol{q})$, $\boldsymbol{\mu}(\boldsymbol{q},\dot{\boldsymbol{q}})$ being the Cartesian inertia matrix and Coriolis/centrifugal matrix, respectively. The effects of gravity, friction, actuator, and external forces are given by $\boldsymbol{f}_\mathrm{g}$, $\boldsymbol{f}_\mathrm{f}$, $\boldsymbol{f}$, and $\boldsymbol{f}_\mathrm{ext}$, respectively.
+    Impedance control aims to let the \end-effector of the robot behave as a spring-damper system with the desired stiffness~$\boldsymbol{K}_d$ and damping~$\boldsymbol{D}_d$. In operational space, an impedance controller is generally defined as
+  </p>
+
+  <div class="math-block">
+    $$    \boldsymbol{f} = \underbrace{\boldsymbol{\Lambda}(\boldsymbol{q}) \ddot{\boldsymbol{x}}_\mathrm{d} + \boldsymbol{\mu}(\boldsymbol{q},\dot{\boldsymbol{q}}) \dot{\boldsymbol{x}} + \boldsymbol{f}_\mathrm{g}}_\text{"+"-part} \underbrace{- \boldsymbol{K}_\mathrm{d} \boldsymbol{e} - \boldsymbol{D}_\mathrm{d} \dot{\boldsymbol{e}} \vphantom{\Mo \ddx_\mathrm{d} + \Co \dx_\mathrm{d} + \bm{f}_\mathrm{g}}}_\text{PD-part},$$
+  </div>
+
+  <p>
+    where the "+"-part compensates for the effect of gravity and adds feedforward terms. The PD component specifies the desired compliance of the robot concerning the position and velocity errors of the end-effector, represented as $\boldsymbol{e} = \boldsymbol{x} - \boldsymbol{x}_\mathrm{d}$ and $\dot{\boldsymbol{e}}$, respectively, where $\boldsymbol{x}_\mathrm{d}$ denotes the desired end-effector position.
+    The required joint torques can be computed using the Jacobian matrix $\boldsymbol{J}(\boldsymbol{q})$, with $ \dot{\boldsymbol{x}} = \boldsymbol{J}(\boldsymbol{q}) \dot{\boldsymbol{q}} $ and:
+  </p>
+
+  <div class="math-block">
+    $$   \boldsymbol{\tau} = \boldsymbol{J}^\mathrm{T}(\boldsymbol{q}) \dot{\boldsymbol{q}}.$$
+  </div> -->
+
+  
+<!-- </section> -->
+
+<section id="showcase-1">
+  <h2>Calibration Method</h2>
+  <p>
+    We consider a mobile manipulator, including a current-controlled manipulator without force/torque sensors, which does not allow the direct application of an impedance controller. Thus, the goal is to derive the relation
+  </p>
+
+  <div class="math-block">
+    $$\boldsymbol{c} =\boldsymbol{h}(\boldsymbol{\tau})$$ 
+  </div>
+
+  <p>
+    that matches the actuator currents $\boldsymbol{c}$ with the joint torques from the impedance controller $\boldsymbol{\tau}$.
+    This process utilizes the robot's model and Earth's gravity to estimate the ratio between the actuator current and the resulting torque. Additionally, it estimates joint friction and incorporates a compensatory control strategy. Challenges arising from model inaccuracies and their resolution are addressed. 
+    To enhance clarity, we outline the process for a single joint below but note that this can be replicated for each joint.
+  </p>
+
+  <p>
+    We start by estimating the ratio $r$ between the actuator current $c$ and the model-based actuator torque $\tau$ so that the relation above becomes $c = r \tau$ for a single joint. Initially, we assume zero friction, but friction is addressed later.
+    For any given robot pose, it is possible to calculate the gravitational torque $\tau_\mathrm{g}$ acting on the joint. For a constant rotational velocity of the robot, $\tau$
+    is exactly the opposite of $\tau_\mathrm{g}$, which depends on the mass
+    $m$ the joint is carrying, the gravity constant $g$, the length of the moment arm $a$, and the angle between the moment arm and the direction of gravity $\theta$. 
+    Given these information about the model and current data recorded when moving the joint with a constant velocity, the ratio $r$ can be estimated. In a similar way, the friction loss $l$ can be estimated resulting in $c=r \tau +l$.
+    How the controller can be adapted to compensate for the estimated friction loss is described in detail in the thesis.
+  </p>
+
+
+
+  <p>
+    The approach described for deriving the ratio $r$ and friction loss $l$ relies entirely on the accuracy of the robot's model. However, inaccuracies in the model, e.g. the center of mass location (COM), can occur.
+    More information on how the presented calibration method can account for model errors is described in the thesis.
+  </p>
+
+  <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
+  <div class="image-grid text-center mb-2">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/joint_with_correct_com_reduced.png' %}" alt="Image 1" style="max-width: 50%; height: auto;">
+      </div>
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/joint_with_incorrect_com_reduced.png' %}" alt="Image 2" style="max-width: 50%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+
+
+  
+</section>
+
+
+<section id="showcase-2">
+  <h2>Guidance and Tracking Mode</h2>
+  <p>
+    We have introduced a calibration method that allows impedance control on a current-controlled manipulator without force/torque sensors.
+    Implementing impedance control on many off-the-shelf mobile bases is not possible since they only allow position/velocity control. This is also the case for the considered mobile base.
+    Hence, an alternative control strategy is employed for the base, where the base controller aims to keep the end-effector position $\boldsymbol{p}$ always at a defined desired position $\boldsymbol{p}_\mathrm{d}$, both expressed in the reference frame of the base itself as shown in the left image below.
+    A difference between $\boldsymbol{p}$ and $\boldsymbol{p}_\mathrm{d}$ results in a base velocity using a defined constant gain. With this controller, the base will always follow the end-effector when the end-effector deviates from the desired position.
+  </p>
+  
+  <!-- This basically puts images in a grid. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
+  <div class="image-grid text-center mb-2">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/base_control_reduced.png' %}" alt="Image 1">
+      </div>
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/guidance_mode.png' %}" alt="Image 1">
+      </div>
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/tracking_mode.png' %}" alt="Image 1">
+      </div>
+    </div>
+  </div>
+
+  <p>
+    We present two operational modes for interacting with the mobile manipulator: A <b>guidance mode</b> to guide the mobile manipulator around the workspace through interacting with the arm, and a <b>tracking mode</b> to execute a tracking task. Both modes are compliant in the case of contacts.
+  </p>
+
+  <p>
+    In the guidance mode, the target of the end effector is statically placed in the reference frame of the base, see center image above. By defining $\boldsymbol{p}_\mathrm{d}$ at the same location, the base will not move when the end-effector reaches the target. When the user pushes the end-effector away, the base will follow. Since the target is statically placed in the reference frame of the base,
+     the target follows the movement of the base. When the end-effector is released, it can return to the target, and the base stops. This setup allows the user to easily move the mobile manipulator by leading it through interaction with the arm.
+  </p>
+
+  <p>
+    In tracking mode, the target is placed in the reference frame of the world, see right image above. Therefore, the target does not follow the movement of the base, in contrast to the guidance mode.
+    The user can push or pull the end-effector away from the target, resulting in a movement of the base following the end-effector. Since the target is defined in the reference frame of the world, 
+    the robot moves further away from the target as long as the user keeps pushing the robot away. When the robot is released, the end-effector tries to get back to the target. The base will move, 
+    following the end-effector, until the end-effector is at the desired position $\boldsymbol{p}_\mathrm{d}$ relative to the base.
+  </p>
+
+</section>
+
+<section id="conclusions">
+  <h2>Conclusions</h2>
+  <p>
+    This thesis presented a holistic approach to addressing compliance for mobile manipulators using off-the-shelf manipulators and wheeled mobile bases. 
+    Specifically, we introduced a calibration method that enables the application of impedance control on current-controlled manipulators. 
+    This method involves estimating the torque/actuator current ratio and friction loss and can account for model inaccuracies using only signals available from standard position control. 
+    Thus, no force/torque sensors are required. Furthermore, we presented two operational modes for interacting with the mobile manipulator that allow a human to guide the robot through interaction with the manipulator and extend the manipulator's workspace.
+    We showed the consistency of the calibration method in real-world experiments and we evaluated our impedance controller, which considers the identified torque/actuator current ratio and friction loss on a manipulator. 
+    Additionally, we showcased the whole-body implementation on a mobile manipulator consisting of off-the-shelf components without relying on any force/torque sensors and showed that compliant control on a current-controlled 
+    robot without force/torque sensors is possible with good performance. 
+</section>

@@ -247,7 +247,7 @@ Hi! I am Jackal...
 
 ## Adding a New MSc project
 
-A new master thesis proposal can be added in the folder `/_msc_projects_finished`. The file should start with a YAML frontmatter block that looks like this:
+A new master thesis proposal can be added in the folder `/_msc_projects_available`. The file should start with a YAML frontmatter block that looks like this:
 
 ```yaml
 title: MSc Project Example about the development of a new algorithm for the planning and control 
@@ -354,4 +354,4 @@ Images are the same (put the html in the markdown file as is), just append the `
 - [x] Make the old link /education_projects redirect to the education page (as students have this old link) jekyll-redirect-from plugin
 - [x] Table for available projects: Filed: Title, Direct supervisor, 
 - [x] Move the link to brochure of master student projects tot he master thesis
-- [ ] 
+- [ ] Make the projects sort by area, no duplicates

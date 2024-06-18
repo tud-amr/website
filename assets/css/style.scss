@@ -53,14 +53,19 @@ ul.timeline > li:before {
     z-index: 400;
 }
 
-// .paper-body {
-//     h2 {
-//         margin-top: 25px;
-//     }
-// }
+.paper-body {
+    h2 {
+        margin-top: 45px;
+        margin-bottom: 10px;
+    }
+    h3 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+}
 
 h2 {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 ::-moz-selection { /* Code for Firefox */

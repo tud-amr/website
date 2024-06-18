@@ -50,7 +50,7 @@
         {% if include.publication.image contains '.mp4' %}
         <video src="{% include fix_link.html link=include.publication.image %}" class="object-fit-contain" height="110" alt="paper video" muted autoplay loop></video>
         {% else %}
-        <img class="object-fit-contain" height="110" src="{% include fix_link.html link=include.publication.image %}" alt="paper image">
+        <img class="object-fit-contain" height="85" src="{% include fix_link.html link=include.publication.image %}" alt="paper image">
         {% endif %}
     </div>
     {% endif %}

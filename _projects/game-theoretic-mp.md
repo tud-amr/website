@@ -7,10 +7,8 @@ description: >- # >- this means to ignore newlines until next field. This is the
    This project brings tools from the field of dynamic game theory to robotic motion planning. This combination enables new motion-planning algorithms that allow a robot to strategically interact with other agents while accounting for their unknown—potentially malicious—intents. 
 image: /assets/images/projects/gtmotion_planning.svg
 links: # If you have a website for the project, repos, etc. put it here.
-    - name: Project Website
-      url: "https://andreumatoses.github.io/"
-    - name: Repository
-      url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en&inst=6173373803492361994&oi=ao"
+    - name: Code
+      url: "https://github.com/orgs/JuliaGameTheoreticPlanning/repositories"
 fundings: This project is funded in part by the National Police (Politie) of the Netherlands.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Lasse Peters 

@@ -34,13 +34,15 @@ These projects are primarily for students in the TUD MSc Robotics. In exceptiona
 
 All of our MSc Thesis + Literature Survey assignments can be extended with a Research Assignment in the same topic. This is an interesting option for students interested in a longer research experience (e.g. if you would like to publish an article during your MSc thesis or do a PhD afterwards). We do not offer separate Research Assignments - only those linked to an MSc thesis project. You may also choose to do an Internship in a company.
 
+If you do not find an interesting project, but you would like to join our group, or your would like to propose your own project, then, send an email to Prof. J. Alonso-Mora. We can also supervise TUD MSc students in industry or in our partners abroad. For example in one of our industrial partners or collaborators (e.g., MIT, Stanford, ETH Zurich, Harvard, TUM, etc). Send an email to Prof. J. Alonso-Mora if interested.
+
 In the following link you can find a list of available MSc projects. For announced projects, please first contact the daily supervisor to discuss the project.
+<!-- [Click here for Available MSc thesis projects and information]({{ '/student-projects' | relative_url }}) -->
+<div class="d-grid gap-2 d-flex justify-content-md-start justify-content-center mb-3">
+    <a href="{{ '/student-projects' | relative_url }}"><button type="button" class="btn btn-primary rounded-5  px-4 me-md-2">Available MSc thesis projects and information</button></a>
+    <a href="{{ '/msc_projects_finished' | relative_url }}"><button type="button" class="btn btn-outline-dark rounded-5  px-4 me-md-2">Past MSc thesis</button></a>
+</div>
 
-[Click here for Available MSc thesis projects and information]({{ '/student-projects' | relative_url }})
-
-If you do not find an interesting project, but you would like to join our group, or your would like to propose your own project, then, send an email to Prof. J. Alonso-Mora.
-
-We can also supervise TUD MSc students in industry or in our partners abroad. For example in one of our industrial partners or collaborators (e.g., MIT, Stanford, ETH Zurich, Harvard, TUM, etc). Send an email to Prof. J. Alonso-Mora if interested.
 
 ## Internships
 

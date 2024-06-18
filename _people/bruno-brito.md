@@ -11,4 +11,4 @@ links: # Optional, links to other stuff
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief. Also for past members, put here e.g Now at..., [supervised by...] -->
-Now Senior Researcher at Motional, Boston.
+Now Researcher at NVIDIA
