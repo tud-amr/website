@@ -295,6 +295,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
+        "image": "/assets/images/papers/mrta/DVRP.png",
         "belongs_to_projects": [
             "harmony"
         ],
@@ -1064,6 +1065,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
+        "image": "/assets/images/papers/multi_objective/MRPS.png",
         "belongs_to_projects": [
             "harmony"
         ],
