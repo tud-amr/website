@@ -121,6 +121,7 @@
                 "pdf": "/assets/files/publications/24-wilde-TRO.pdf"
             }
         ],
+        "image": "/assets/images/papers/multi_objective/mo_mrta.png",
         "belongs_to_projects": [
             "harmony"
         ],
@@ -141,6 +142,7 @@
                 "pdf": "/assets/files/publications/24-wilde-RAL.pdf"
             }
         ],
+        "image": "/assets/images/papers/multi_objective/scalarizing_weighted_maximum.png",
         "belongs_to_projects": [
             "harmony"
         ],
@@ -293,6 +295,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
+        "image": "/assets/images/papers/mrta/DVRP.png",
         "belongs_to_projects": [
             "harmony"
         ],
@@ -1062,6 +1065,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
+        "image": "/assets/images/papers/multi_objective/MRPS.png",
         "belongs_to_projects": [
             "harmony"
         ],
