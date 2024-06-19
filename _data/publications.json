@@ -15,7 +15,7 @@
         "links": [
             {
                 "pdf": "/assets/files/publications/24-wang-ecc.pdf",
-                "web": "https://github.com/tud-amr/ncbf-simultaneous-synthesis-and-verification"
+                "code": "https://github.com/tud-amr/ncbf-simultaneous-synthesis-and-verification"
             }
         ],
         "image": "/assets/images/papers/nCBF-ECC24/combined_figure4.png",
