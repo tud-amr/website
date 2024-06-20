@@ -56,21 +56,32 @@ links: # If you have other website for the project, github repos, datasets, etc.
   </p>
 </div> -->
 
-<h2> Abstract </h2>
+<h3> Abstract </h3>
 <p align="justify">
 Task and Motion Planning (TAMP) has made strides in complex manipulation tasks, yet the execution robustness of the planned solutions remains overlooked. In this work, we
-propose a method for reactive TAMP to cope with runtime uncertainties and disturbances. We combine an Active Inference planner (AIP) for adaptive high-level action selection and a
-novel Multi-Modal Model Predictive Path Integral controller (M3P2I) for low-level control. This results in a scheme that simultaneously adapts both high-level actions and low-level motions. 
-The AIP generates alternative symbolic plans, each linked to a cost function for M3P2I. The latter employs a physics simulator for diverse trajectory rollouts, deriving optimal control
-by weighing the different samples according to their cost. This idea enables blending different robot skills for fluid and reactive plan execution, accommodating plan adjustments at both the
+propose a method for reactive TAMP to cope with <b>runtime uncertainties and disturbances</b>. We combine an Active Inference planner (AIP) for adaptive high-level action selection and a
+novel Multi-Modal Model Predictive Path Integral controller (M3P2I) for low-level control. This results in a scheme that simultaneously <b>adapts both high-level actions and low-level motions.</b>
+The AIP generates <b>alternative symbolic plans</b>, each linked to a cost function for M3P2I. The latter employs a physics simulator for diverse trajectory rollouts, deriving optimal control
+by <b>weighing the different samples according to their cost</b>. This idea enables blending different robot skills for fluid and reactive plan execution, accommodating plan adjustments at both the
 high and low levels to cope, for instance, with dynamic obstacles or disturbances that invalidate the current plan. We have tested our approach in simulations and real-world scenarios.
 </p>
 
-<h2> Simulation Results of Push and Pull </h2>
+<h3> Proposed Scheme </h3>
+<div class="image-grid text-center mb-1">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-1">
+    <div class="col">
+      <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/general_scheme.png' %}" alt="Image 1" style="max-width: 60%; height: auto;">
+    </div>
+  </div>
+  <p align="justify">
+  Given symbolic observations $o$ of the environment, the action planner computes $N$ different plan alternatives linked to individual cost functions $C_i$. M3P2I samples control input sequences and uses an importance sampling scheme to approximate the optimal control $u_0^*$.
+  </p>
+</div>
 
+<h3> Simulation Results </h3>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Push only using MPPI</h3>
+    <h5 align="center">Push only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -83,7 +94,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Push only using MPPI</h3>
+    <h5 align="center">Push only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -99,7 +110,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Pull only using MPPI</h3>
+    <h5 align="center">Pull only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -112,7 +123,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Pull only using MPPI</h3>
+    <h5 align="center">Pull only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -128,7 +139,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Multi-modal motion using M3P2I</h3>
+    <h5 align="center">Multi-modal motion using M3P2I</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -141,7 +152,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Multi-modal motion using M3P2I</h3>
+    <h5 align="center">Multi-modal motion using M3P2I</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -155,11 +166,9 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
   </div>
 </div>
 
-<h2> Simulation Results of Pick and Place </h2>
-
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Reactive pick using MPPI</h3>
+    <h5 align="center">Reactive pick using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -172,7 +181,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Multi-modal pick using M3P2I</h3>
+    <h5 align="center">Multi-modal pick using M3P2I</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -188,7 +197,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Multi-modal motion using M3P2I</h3>
+    <h5 align="center">Multi-modal motion using M3P2I</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -201,7 +210,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Reactive pick and place using RL</h3>
+    <h5 align="center">Reactive pick using RL</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -215,53 +224,10 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
   </div>
 </div>
 
-<!-- <div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2">
-  <div class="col">
-    <h3 align="center">Switching Controller</h3>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_switching.m4v' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center">
-    Uses heuristics to switch between an EBC for swingup, an LQR for stabilization, and an LQI for tracking a reference with the arm when the pendulum is at the top equilibrium.
-    </p>
-  </div>
-  <div class="col">
-    <h3 align="center">Classic MPPI</h3>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_nobias.m4v' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center">
-    Takes 100 samples around a time shifted version of the previous plan.
-    </p>
-  </div>
-  <div class="col">
-    <h3 align="center">Biased-MPPI</h3>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_bias.m4v' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center">
-    Samples all the ancillary controllers used by the switching controller once, and takes the remaining samples around the previous plan.
-    </p>
-  </div>
-</div> -->
-
-
-<h2> Real-World Experiments </h2>
+<h3> Real-World Experiments </h3>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Reactive pick place using MPPI</h3>
+    <h5 align="center">Reactive pick place</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -273,7 +239,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Multi-modal pick place using M3P2I</h3>
+    <h5 align="center">Multi-modal pick place</h5>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
