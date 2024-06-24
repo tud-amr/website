@@ -56,6 +56,33 @@ links: # If you have other website for the project, github repos, datasets, etc.
   </p>
 </div> -->
 
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <h5 align="center">Reactive pick place</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-4x3">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/reactive_pick_compress.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center"> 
+    </p>
+  </div>
+  <div class="col">
+    <h5 align="center">Multi-modal pick place</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-4x3">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/m3p2i_1_compress.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    </p>
+  </div>
+</div>
+
 <h3> Abstract </h3>
 <p align="justify">
 Task and Motion Planning (TAMP) has made strides in complex manipulation tasks, yet the execution robustness of the planned solutions remains overlooked. In this work, we
@@ -220,34 +247,6 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     </div>
     <p align="center">
     Oscillation occurs when introducing disturbance
-    </p>
-  </div>
-</div>
-
-<h3> Real-World Experiments </h3>
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
-  <div class="col">
-    <h5 align="center">Reactive pick place</h5>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/reactive_pick_compress.mp4' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center"> 
-    </p>
-  </div>
-  <div class="col">
-    <h5 align="center">Multi-modal pick place</h5>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/m3p2i_1_compress.mp4' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center">
     </p>
   </div>
 </div>
