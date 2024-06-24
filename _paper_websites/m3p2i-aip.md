@@ -43,156 +43,210 @@ links: # If you have other website for the project, github repos, datasets, etc.
       url: "https://www.youtube.com/watch?v=y2CTgv6hxVI"
 ---
 
+<!-- <div class="col">
+  <h3 align="center"></h3>
+  <div class="teaser-video d-flex justify-content-center">
+    <div class="ratio ratio-16x9">
+      <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+        <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/video_ral.m4v' %}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <p align="center">
+  </p>
+</div> -->
+
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Classic MPPI</h3>
+    <h5 align="center">Reactive pick place</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/no_bias8_with_samples.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/reactive_pick_compress.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
-    <p align="center">
-    MPPI usually only takes samples around a previous plan. Here, the enviroment changes in an unexpected way. This results in all samples being in collision, thus computing a plan that also collides.
+    <p align="center"> 
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Biased-MPPI</h3>
+    <h5 align="center">Multi-modal pick place</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/bias8_with_samples.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/m3p2i_1_compress.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    Biased-MPPI can sample from multiple ancillary controllers. Here, sampling a zero-velocity reference, the sampling distribution quickly collapses to a braking manoeuvre, avoiding collision.
     </p>
   </div>
 </div>
 
-<h2> Abstract </h2>
+<h3> Abstract </h3>
 <p align="justify">
-Motion planning for autonomous robots in human-populated environments poses numerous challenges due to uncertainties in the robot's dynamics, environment, and interaction with other agents. Sampling-based MPC approaches, such as Model Predictive Path Integral (MPPI) control, have shown promise in addressing these complex motion planning problems. However, the performance of MPPI relies heavily on the choice of sampling distribution. Existing literature often uses the previously computed input sequence as the mean of a Gaussian distribution for sampling, leading to potential failures and local minima. In this paper, we propose novel derivations of the MPPI method to enhance its efficiency, robustness, and convergence. Our approach includes a mathematical formulation allowing for arbitrary sampling distributions, addressing numerical issues, and alleviating the problem of local minima. We present an efficient importance sampling scheme that combines classical and learning-based ancillary controllers simultaneously, resulting in more informative sampling and control fusion. We demonstrate our proposed scheme's superior efficiency and robustness through experiments by handling model uncertainties and rapid environmental changes and reducing susceptibility to local minima.
+Task and Motion Planning (TAMP) has made strides in complex manipulation tasks, yet the execution robustness of the planned solutions remains overlooked. In this work, we
+propose a method for reactive TAMP to cope with <b>runtime uncertainties and disturbances</b>. We combine an Active Inference planner (AIP) for adaptive high-level action selection and a
+novel Multi-Modal Model Predictive Path Integral controller (M3P2I) for low-level control. This results in a scheme that simultaneously <b>adapts both high-level actions and low-level motions.</b>
+The AIP generates <b>alternative symbolic plans</b>, each linked to a cost function for M3P2I. The latter employs a physics simulator for diverse trajectory rollouts, deriving optimal control
+by <b>weighing the different samples according to their cost</b>. This idea enables blending different robot skills for fluid and reactive plan execution, accommodating plan adjustments at both the
+high and low levels to cope, for instance, with dynamic obstacles or disturbances that invalidate the current plan. We have tested our approach in simulations and real-world scenarios.
 </p>
 
-<h2> Illustrative Example: Rotary Inverted Pendulum </h2>
-<div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2">
-  <div class="col">
-    <h3 align="center">Switching Controller</h3>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_switching.m4v' %}" type="video/mp4">
-        </video>
-      </div>
+<h3> Proposed Scheme </h3>
+<div class="image-grid text-center mb-1">
+  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-1">
+    <div class="col">
+      <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/general_scheme.png' %}" alt="Image 1" style="max-width: 60%; height: auto;">
     </div>
-    <p align="center">
-    Uses heuristics to switch between an EBC for swingup, an LQR for stabilization, and an LQI for tracking a reference with the arm when the pendulum is at the top equilibrium.
-    </p>
   </div>
-  <div class="col">
-    <h3 align="center">Classic MPPI</h3>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_nobias.m4v' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center">
-    Takes 100 samples around a time shifted version of the previous plan.
-    </p>
-  </div>
-  <div class="col">
-    <h3 align="center">Biased-MPPI</h3>
-    <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_bias.m4v' %}" type="video/mp4">
-        </video>
-      </div>
-    </div>
-    <p align="center">
-    Samples all the ancillary controllers used by the switching controller once, and takes the remaining samples around the previous plan.
-    </p>
-  </div>
+  <p align="justify">
+  Given symbolic observations $o$ of the environment, the action planner computes $N$ different plan alternatives linked to individual cost functions $C_i$. M3P2I samples control input sequences and uses an importance sampling scheme to approximate the optimal control $u_0^*$.
+  </p>
 </div>
 
-
-<h2> Experiment: Crossing an Intersection </h2>
+<h3> Simulation Results </h3>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Classic MPPI</h3>
+    <h5 align="center">Push only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
+      <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/crossing_no_AC_crop.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_1corner_push.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    Classic MPPI gets stuck in a local minima whereby both agents think they should pass first, even when it becomes clear the orange agent should yield, resulting in a collision. 
+    Middle to corner -- success
     </p>
   </div>
   <div class="col">
-    <h3 align="center">Biased-MPPI</h3>
+    <h5 align="center">Push only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
+      <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/crossing_AC_crop.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_2corners_push.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    Biased-MPPI, sampling from multiple ancillary controllers, results in the orange agent quickly converging to a yielding manoeuvre, avoiding collisions.
+    Corner to corner -- fail
     </p>
   </div>
 </div>
 
-<h2> Experiment: Multi-Agent Navigation </h2>
-<div class="row row-cols-1 row-cols-sm-3 row-cols-md-3 g-2">
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center" style="margin-bottom: 0;">Classic MPPI</h3>
-    <h5 align="center" style="margin-bottom: 0;">with <span class="amr-color">2000</span> samples</h5>
+    <h5 align="center">Pull only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
+      <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/Hg_2000_No_AC_crop.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_1corner_pull.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    With 2000 samples, IA-MPPI based on the classic MPPI sampling strategy can solve the problem correctly.
+    Middle to corner -- fail
     </p>
   </div>
   <div class="col">
-    <h3 align="center" style="margin-bottom: 0;">Classic MPPI</h3>
-    <h5 align="center" style="margin-bottom: 0;">with <span class="amr-color">200</span> samples</h5>
+    <h5 align="center">Pull only using MPPI</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
+      <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/Hg_200_No_AC_crop.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_2corners_pull.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    With 200 samples, the algorithm using the classic MPPI sampling strategy fails to find a good solution.
+    Corner to corner -- fail
+    </p>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <h5 align="center">Multi-modal motion using M3P2I</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/m3p2i_1corner.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Middle to corner -- success
     </p>
   </div>
   <div class="col">
-    <h3 align="center" style="margin-bottom: 0;">Biased-MPPI</h3>
-    <h5 align="center" style="margin-bottom: 0;">with <span class="amr-color">200</span> samples</h5>
+    <h5 align="center">Multi-modal motion using M3P2I</h5>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-4x3">
+      <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/Hg_200_AC_crop.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/m3p2i_2corners.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    Biased-MPPI, taking suggestions from several ancillary controllers, can solve the problem correctly using only 200 samples.
+    Corner to corner -- success
+    </p>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <h5 align="center">Reactive pick using MPPI</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/tamp_reactive_pick.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Pick from top
+    </p>
+  </div>
+  <div class="col">
+    <h5 align="center">Multi-modal pick using M3P2I</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/m3p2i_pickplace.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Top pick and side pick
+    </p>
+  </div>
+</div>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <h5 align="center">Multi-modal motion using M3P2I</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/m3p2i_pick_with_obs.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    With collision avoidance
+    </p>
+  </div>
+  <div class="col">
+    <h5 align="center">Reactive pick using RL</h5>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/rl_reactive_16.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Oscillation occurs when introducing disturbance
     </p>
   </div>
 </div>
