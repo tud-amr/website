@@ -1900,7 +1900,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "interact"
+            
         ],
         "abstract": "Abstract: We present a framework that integrates social psychology tools into controller design for autonomous vehicles. Our key insight utilizes Social Value Orientation (SVO), quantifying an agent\u2019s degree of selfishness or altruism, which allows us to better predict driver behavior. We model interactions between human and autonomous agents with game theory and the principle of best response. Our unified algorithm estimates driver SVOs and incorporates their predicted trajectories into the autonomous vehicle\u2019s control while respecting safety constraints. We study common-yet-difficult traffic scenarios: highway merging and unprotected left turns. Incorporating SVO reduces error in predictions by 25%, validated on 92 human driving merges. Furthermore, we find that merging drivers are more competitive than nonmerging drivers."
     },
