@@ -29,8 +29,15 @@ people: # If you put your name in the same way you have it in your _people entry
 
 ## About the Project
 
-This project addresses the interaction of highly automated vehicles with vulnerable road users (VRU) such as pedestrians and cyclists, in the context of future urban mobility. The project pursues an integrated approach, covering the spectrum of VRU sensing, cooperative localization, behaviour modeling and intent recognition and vehicle control. Within the AMR group we focus on the vehicle control, enabling safe and efficient autonomous driving.
+INTERACT aims to equip mobile robots with the ability to navigate and operate safely in human-populated environments. Leveraging advancements in Motion Planning, Multi-robot Task Assignment, and Machine Learning, this project seeks to overcome the challenges of modeling intuition and ensuring safety in complex, uncertain settings. By developing intuitive models from past interactions and integrating them into novel optimization methods, INTERACT will enable robots to perform seamless, interaction-aware navigation and task planning. This foundational work paves the way for a new era of automation in both industrial and urban settings, where robots and humans can coexist harmoniously.
 
-## Partners
+## Ongoing Work
 
-Amsterdam Institute for Advanced Metropolitan Solutions (AMS). 
+<div class="ratio ratio-16x9">  
+  <iframe src="https://www.youtube.com/embed/AldMFKnlW3M?si=X570HkJbSm7nanBI&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+  </iframe>
+</div>
+
+## Funding & Partners
+
+This project has received funding from the European Union through ERC, INTERACT, under Grant 101041863. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them.
