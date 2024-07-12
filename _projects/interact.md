@@ -7,8 +7,8 @@ description: >- # >- this means to ignore newlines until next field. This is the
   In this project, interactions of mobile robots and humans is key. This concept is considered on multiple spatio-temporal granularities ranging from individual interactions to the macro interaction of a robot fleet with humans, and from short term (local) to long term (global) effects of the interaction. 
 image: /assets/images/projects/INTERACT_picture.jpg
 links: # If you have a website for the project, repos, etc. put it here.
-    - name: Project Website
-      url: "/"
+    - name: "Github: Fabrics Implementation"
+      url: "https://github.com/tud-amr/fabrics"
     - name: "Github: multi-agent fabrics"
       url: "https://github.com/tud-amr/multi-robot-fabrics"
 fundings: This project is funded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
