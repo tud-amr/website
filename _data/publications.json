@@ -20,7 +20,10 @@
         ],
         "image": "/assets/images/papers/m3p2i_aip/rw_icon.png",
         "belongs_to_projects": [
-            "trilogy", "airlab-manipulation"
+            "trilogy", "airlab-manipulation","ahold","nwo","enw","interact"
+        ],
+        "topics":[
+            "motion planning","task planning"  
         ],
         "abstract": "Task and Motion Planning (TAMP) has made strides in complex manipulation tasks, yet the execution robustness of the planned solutions remains overlooked. In this work, we propose a method for reactive TAMP to cope with runtime uncertainties and disturbances. We combine an Active Inference planner (AIP) for adaptive high-level action selection and a novel Multi-Modal Model Predictive Path Integral controller (M3P2I) for low-level control. This results in a scheme that simultaneously adapts both high-level actions and low-level motions. The AIP generates alternative symbolic plans, each linked to a cost function for M3P2I. The latter employs a physics simulator for diverse trajectory rollouts, deriving optimal control by weighing the different samples according to their cost. This idea enables blending different robot skills for fluid and reactive plan execution, accommodating plan adjustments at both the high and low levels to cope, for instance, with dynamic obstacles or disturbances that invalidate the current plan. We have tested our approach in simulations and real-world scenarios."
       }, 
@@ -43,7 +46,10 @@
         ],
         "image": "/assets/images/papers/nCBF-ECC24/combined_figure4.png",
         "belongs_to_projects": [
-        	"harmony"
+        	"harmony","horizon"
+        ],
+        "topics":[
+            "motion planning"    
         ],
         "abstract": "Control Barrier Functions (CBFs) that provide formal safety guarantees have been widely used for safety-critical systems. However, it is non-trivial to design a CBF. Utilizing neural networks as CBFs has shown great success, but it necessitates their certification as CBFs. In this work, we leverage bound propagation techniques and the Branch-and-Bound scheme to efficiently verify that a neural network satisfies the conditions to be a CBF over the continuous state space. To accelerate training, we further present a framework that embeds the verification scheme into the training loop to synthesize and verify a neural CBF simultaneously. In particular, we employ the verification scheme to identify partitions of the state space that are not guaranteed to satisfy the CBF conditions and expand the training dataset by incorporating additional data from these partitions. The neural network is then optimized using the augmented dataset to meet the CBF conditions. We show that for a non-linear control-affine system, our framework can efficiently certify a neural network as a CBF and render a larger safe set than state-of-the-art neural CBF works. We further employ our learned neural CBF to derive a safe controller to illustrate the practical use of our framework."
       },
@@ -67,6 +73,9 @@
         "belongs_to_projects": [
         	"nwa-act"
         ],
+        "topics":[
+            "motion planning"    
+        ],
         "abstract": "For an autonomous vehicle to operate reliably within real-world traffic scenarios, it is imperative to assess the repercussions of its prospective actions by anticipating the uncertain intentions exhibited by other participants in the traffic environment. Driven by the pronounced multi-modal nature of human driving behavior, this paper presents an approach that leverages Bayesian beliefs over the distribution of potential policies of other road users to construct a novel risk-aware probabilistic motion planning framework. In particular, we propose a novel contingency planner that outputs long-term contingent plans conditioned on multiple possible intents for other actors in the traffic scene. The Bayesian belief is incorporated into the optimization cost function to influence the behavior of the short-term plan based on the likelihood of other agents' policies. Furthermore, a probabilistic risk metric is employed to fine-tune the balance between efficiency and robustness. Through a series of closed-loop safety-critical simulated traffic scenarios shared with human-driven vehicles, we demonstrate the practical efficacy of our proposed approach that can handle multi-vehicle scenarios."
       },
       
@@ -89,7 +98,10 @@
         ],
         "image": "/assets/images/papers/psr/eyecatcher.png",
         "belongs_to_projects": [
-            "probabilistic-planning"
+            "probabilistic-planning","harmonia"
+        ],
+        "topics":[
+            "motion planning"    
         ],
         "abstract": "Autonomous mobile robots require predictions of human motion to plan a safe trajectory that avoids them. Because human motion cannot be predicted exactly, future trajectories are typically inferred from real-world data via learning-based approximations. These approximations provide useful information on the pedestrian’s behavior, but may deviate from the data, which can lead to collisions during planning. In this work, we introduce a joint prediction and planning framework, Partitioned Scenario Replay (PSR), that stores and partitions previously observed human trajectories, referred to as scenarios. During planning, scenarios observed in similar situations are reintroduced (or replayed) as motion predictions. By sampling real data and by building on scenario optimization and predictive control, the planner provides probabilistic col- lision avoidance guarantees in the real-world. Relying on this guarantee to remain safe, PSR can incrementally improve its prediction and planning performance online. We demonstrate our approach on a mobile robot navigating around pedestrians."
       },
@@ -112,6 +124,9 @@
         "belongs_to_projects": [
             "interact"
         ],
+        "topics":[
+            "motion planning","multi-robot"    
+        ],
         "abstract": "This paper proposes a decentralized trajectory planning framework for the collision avoidance problem of mul- tiple micro aerial vehicles (MAVs) in environments with static and dynamic obstacles. The framework utilizes spatiotemporal occupancy grid maps (SOGM), which forecast the occupancy status of neighboring space in the near future, as the environ- ment representation. Based on this representation, we extend the kinodynamic A* and the corridor-constrained trajectory optimization algorithms to efficiently tackle static and dynamic obstacles with arbitrary shapes. Collision avoidance between communicating robots is integrated by sharing planned tra- jectories and projecting them onto the SOGM. The simulation results show that our method achieves competitive performance against state-of-the-art methods in dynamic environments with different numbers and shapes of obstacles. Finally, the proposed method is validated in real experiments."
       },
     {
@@ -133,6 +148,9 @@
         "belongs_to_projects": [
             "trilogy"
         ],
+        "topics":[
+            "motion planning"    
+        ],
         "abstract": "Motion planning for autonomous robots in dynamic environments poses numerous challenges due to uncertainties in the robot's dynamics and interaction with other agents. Sampling-based MPC approaches, such as Model Predictive Path Integral (MPPI) control, have shown promise in addressing these complex motion planning problems. However, the performance of MPPI relies heavily on the choice of sampling distribution. Existing literature often uses the previously computed input sequence as the mean of a Gaussian distribution for sampling, leading to potential failures and local minima. In this paper, we propose a novel derivation of MPPI that allows for arbitrary sampling distributions to enhance efficiency, robustness, and convergence while alleviating the problem of local minima. We present an efficient importance sampling scheme that combines classical and learning-based ancillary controllers simultaneously, resulting in more informative sampling and control fusion. Several simulated and real-world demonstrate the validity of our approach."
       },
     {
@@ -152,7 +170,10 @@
             }
         ],
         "belongs_to_projects": [
-            "airlab-ondemand"
+            "airlab-ondemand","ahold"
+        ],
+        "topics":[
+            "transportation","task planning"    
         ],
         "abstract": "This work formally defines the problem of fleet sizing with delays (FSD), where the option of delaying individual tasks within fleet sizing is considered. We prove that the FSD problem is NP-hard and solve a formulation of the FSD problem as a mixed integer linear problem (MILP). We then analyze the proposed method in detail in an abstract case and validate it in a case study of taxi rides in Manhattan. We show that fleet sizes can be decreased significantly and that the trade-off space of the number of required vehicles to execution time and added delay can be enlarged."
       },
@@ -172,7 +193,10 @@
         ],
         "image": "/assets/images/papers/multi_objective/mo_mrta.png",
         "belongs_to_projects": [
-            "harmony"
+            "harmony","horizon"
+        ],
+        "topics":[
+            "transportation","task planning","multi-robot"   
         ],
         "abstract": "We study the problem of finding statistically distinct plans for stochastic task assignment problems such as online multi-robot pickup and delivery (MRPD) when facing multiple competing objectives. In many real-world settings robot fleets do not only need to fulfil delivery requests, but also have to consider auxiliary objectives such as energy efficiency or avoiding human-centered work spaces. We pose MRPD as a multi-objective optimization problem where the goal is to find MRPD policies that yield different trade-offs between given objectives. There are two main challenges: 1) MRPD is computationally hard, which limits the number of trade-offs that can reasonably be computed, and 2) due to the random task arrivals, one needs to consider statistical variance of the objective values in addition to the average. We present an adaptive sampling algorithm that finds a set of policies which i) are approximately optimal, ii) approximate the set of all optimal solutions, and iii) are statistically distinguishable. We prove completeness and adapt a state-of-the-art MRPD solver to the multi-objective setting for three example objectives. In a series of simulation experiments we demonstrate the advantages of the proposed method compared to baseline approaches and show its robustness in a sensitivity analysis. The approach is general and could be adapted to other multi-objective task assignment and planning problems under uncertainty."
       },
@@ -193,11 +217,15 @@
         ],
         "image": "/assets/images/papers/multi_objective/scalarizing_weighted_maximum.png",
         "belongs_to_projects": [
-            "harmony"
+            "harmony","horizon"
         ],
-        "abstract": "When designing a motion planner for autonomous robots there are usually multiple objectives to be considered. However, a cost function that yields the desired trade-off between objectives is not easily obtainable. A common technique across many
-applications is to use a weighted sum of relevant objective functions and then carefully adapt the weights. However, this approach may not find all relevant trade-offs even in simple planning problems. Thus, we study an alternative method based on a weighted maximum of objectives. Such a cost function is more expressive than the weighted sum, and we show how it can be deployed in both continuous- and discrete-space motion planning problems. We propose a novel path planning algorithm for the proposed cost function and establish its correctness, and present heuristic adaptations that
-yield a practical runtime. In extensive simulation experiments, we demonstrate that the proposed cost function and algorithm are able to find a wider range of trade-offs between objectives (i.e., Pareto-optimal solutions) for various planning problems, showcasing its advantages in practice."
+        "topics":[
+            "motion planning","task planning"  
+        ],
+        "abstract": "When designing a motion planner for autonomous robots there are usually multiple objectives to be considered. However, a cost function that yields the desired trade-off between objectives is not easily obtainable. A common technique across many applications is to use a weighted sum of relevant objective functions and then carefully adapt the weights. However, this approach may not find all relevant trade-offs even in simple planning problems. 
+                    Thus, we study an alternative method based on a weighted maximum of objectives. Such a cost function is more expressive than the weighted sum, and we show how it can be deployed in both continuous- and discrete-space motion planning problems. We propose a novel path planning algorithm for the proposed cost function and establish its correctness, and present heuristic adaptations that
+                    yield a practical runtime. In extensive simulation experiments, we demonstrate that the proposed cost function and algorithm are able to find a wider range of trade-offs between objectives (i.e., Pareto-optimal solutions) for various planning problems, 
+                    showcasing its advantages in practice."
       },
     {
         "title": "Auto-Encoding Bayesian Inverse Games",
@@ -219,6 +247,9 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "belongs_to_projects": [
             "game-theoretic-mp"
+        ],
+        "topics":[
+            "motion planning","multi-robot"   
         ],
         "abstract": "When multiple agents interact in a common environment, each agent's actions impact others' future decisions, and noncooperative dynamic games naturally capture this coupling. In interactive motion planning, however, agents typically do not have access to a complete model of the game, e.g., due to unknown objectives of other players. Therefore, we consider the inverse game problem, in which some properties of the game are unknown a priori and must be inferred from observations. Existing maximum likelihood estimation (MLE) approaches to solve inverse games provide only point estimates of unknown parameters without quantifying uncertainty, and perform poorly when many parameter values explain the observed behavior. To address these limitations, we take a Bayesian perspective and construct posterior distributions of game parameters. To render inference tractable, we employ a variational autoencoder (VAE) with an embedded differentiable game solver. This structured VAE can be trained from an unlabeled dataset of observed interactions, naturally handles continuous, multi-modal distributions, and supports efficient sampling from the inferred posteriors without computing game solutions at runtime. Extensive evaluations in simulated driving scenarios demonstrate that the proposed approach successfully learns the prior and posterior game parameter distributions, provides more accurate objective estimates than MLE baselines, and facilitates safer and more efficient game-theoretic motion planning."
     },
@@ -250,7 +281,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "image": "https://lasse-peters.net/static/projects/contingency-games.png",
         "note": null,
         "belongs_to_projects": [
-            "game-theoretic-mp"
+            "game-theoretic-mp","harmonia","interact","nsf"
+        ],
+        "topics":[
+            "motion planning","multi-robot"   
         ],
         "abstract": "Contingency planning, wherein an agent generates a set of possible plans conditioned on the outcome of an uncertain event, is an increasingly popular way for robots to act under uncertainty. In this work we take a game-theoretic perspective on contingency planning, tailored to multi-agent scenarios in which a robot’s actions impact the decisions of other agents and vice versa. The resulting contingency game allows the robot to efficiently interact with other agents by generating strategic motion plans conditioned on multiple possible intents for other actors in the scene. Contingency games are parameterized via a scalar variable which represents a future time when intent uncertainty will be resolved. By estimating this parameter online, we construct a game-theoretic motion planner that adapts to changing beliefs while anticipating future certainty. We show that existing variants of game-theoretic planning under uncertainty are readily obtained as special cases of contingency games. Through a series of simulated autonomous driving scenarios, we demonstrate that contingency games close the gap between certainty-equivalent games that commit to a single hypothesis and non-contingent multi-hypothesis games that do not account for future uncertainty reduction."
     },
@@ -276,7 +310,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "scene-reasoning-team"
+            "scene-reasoning-team","nicop"
+        ],
+        "topics":[
+            "motion planning","multi-robot"   
         ],
         "abstract": "Decentralized multi-robot systems typically perform coordinated motion planning by constantly broadcasting their intentions to avoid collisions. However, the risk of collision between robots varies as they move and communication may not always be needed. This paper presents an efficient communication method that addresses the problem of “when” and “with whom” to communicate in multi-robot collision avoidance scenarios. In this approach, each robot learns to reason about other robots’ states and considers the risk of future collisions before asking for the trajectory plans of other robots. We introduce a new neural architecture for the learned communication policy which allows our method to be scalable. We evaluate and verify the proposed communication strategy in simulation with up to twelve quadrotors, and present results on the zero-shot generalization/robustness capabilities of the policy in different scenarios. We demonstrate that our policy (learned in a simulated environment) can be successfully transferred to real robots."
     },
@@ -300,7 +337,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "airlab-ondemand"
+            "airlab-ondemand","ahold"
+        ],
+        "topics":[
+            "transportation","multi-robot","task planning"   
         ],
         "abstract": "Abstract: We study routing for on-demand last-mile logistics with two crucial novel features: i) Multiple depots, optimizing where to pick-up every order, ii) Allowing vehicles to perform depot returns prior to being empty, thus adapting their routes to include new orders online. Both features result in shorter distances and more agile planning.We propose a scalable dynamic method to deliver orders as fast as possible. Following a rolling horizon approach, each time step the following is executed. First, define potential pick-up locations and identify which groups of orders can be transported together, with which vehicle and following which route. Then, decide which of these potential groups of orders will be executed and by which vehicle by solving an integer linear program. We simulate one day of service in Amsterdam that considers 10,000 requests, compare results to several strategies and test different scenarios. Results underpin the advantages of the proposed method."
     },
@@ -322,7 +362,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects":[
+            "nsf china","shanghai rising-star"
+        ],
+        "topics":[
+            "perception"   
+        ],
         "abstract": "Abstract: Particle-based dynamic occupancy maps were proposed in recent years to model the obstacles in dynamic environments. Current particle-based maps describe the occupancy status in discrete grid form and suffer from the grid size problem, wherein a large grid size is unfavorable for motion planning, while a small grid size lowers efficiency and causes gaps and inconsistencies. To tackle this problem, this paper generalizes the particle-based map into continuous space and builds an efficient 3D egocentric local map. A dual-structure subspace division paradigm, composed of a voxel subspace division and a novel pyramid-like subspace division, is proposed to propagate particles and update the map efficiently with the consideration of occlusions. The occupancy status of an arbitrary point in the map space can then be estimated with the particles' weights. To further enhance the performance of simultaneously modeling static and dynamic obstacles and minimize noise, an initial velocity estimation approach and a mixture model are utilized. Experimental results show that our map can effectively and efficiently model both dynamic obstacles and static obstacles. Compared to the state-of-the-art grid-form particle-based map, our map enables continuous occupancy estimation and substantially improves the performance in different resolutions."
     },
     {
@@ -346,7 +391,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "note": null,
         "image": "/assets/images/papers/mrta/DVRP.png",
         "belongs_to_projects": [
-            "harmony"
+            "harmony","horizon","nserc canada"
+        ],
+        "topics":[
+            "transportation","task planning","motion planning","multi-robot"   
         ],
         "abstract": "Abstract: We study the problem of deploying a fleet of mobile robots to service tasks that arrive stochastically over time and at random locations in an environment. This is known as the Dynamic Vehicle Routing Problem (DVRP) and requires robots to allocate incoming tasks among themselves and find an optimal sequence for each robot. State-of-the-art approaches only consider average wait times and focus on high-load scenarios where the arrival rate of tasks approaches the limit of what can be handled by the robots while keeping the queue of unserviced tasks bounded, i.e., stable. To ensure stability, these approaches repeatedly compute minimum distance tours over a set of newly arrived tasks. This letter is aimed at addressing the missing policies for moderate-load scenarios, where quality of service can be improved by prioritizing long-waiting tasks. We introduce a novel DVRP policy based on a cost function that takes the p-norm over accumulated wait times and show it guarantees stability even in high-load scenarios. We demonstrate that the proposed policy outperforms the state-of-the-art in both mean and 95th percentile wait times in moderate-load scenarios through simulation experiments in the Euclidean plane as well as using real-world data for city scale service requests."
     },
@@ -376,6 +424,9 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "belongs_to_projects": [
             "game-theoretic-mp"
         ],
+        "topics":[
+            "task planning","multi-robot"   
+        ],
         "abstract": "Abstract: Robots deployed to the real world must be able to interact with other agents in their environment. Dynamic game theory provides a powerful mathematical framework for modeling scenarios in which agents have individual objectives and interactions evolve over time. However, a key limitation of such techniques is that they require a priori knowledge of all players\u2019 objectives. In this work, we address this issue by proposing a novel method for learning players\u2019 objectives in continuous dynamic games from noise-corrupted, partial state observations. Our approach learns objectives by coupling the estimation of unknown cost parameters of each player with inference of unobserved states and inputs through Nash equilibrium constraints. By coupling past state estimates with future state predictions, our approach is amenable to simultaneous online learning and prediction in receding horizon fashion. We demonstrate our method in several simulated traffic scenarios in which we recover players\u2019 preferences, for, e.g. desired travel speed and collision-avoidance behavior. Results show that our method reliably estimates game-theoretic models from noise-corrupted data that closely matches ground-truth objectives, consistently outperforming state-of-the-art approaches."
     },
     {
@@ -394,7 +445,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "anid pia"
+        ],
+        "topics":[
+            "transportation"   
+        ],
         "abstract": "Abstract: We analyse the sources of economies and diseconomies of scale in On-Demand Ridepooling (ODRP), disen- tangling three effects: when demand grows, average costs are reduced due to i) a larger fleet that diminishes waiting and walking times (Mohring Effect), and ii) matching users with more similar routes (Better-matching Effect). A counter-balance force (Extra-detour Effect), occurs when iii) the number of passengers per vehicle in- creases and users face longer detours. At low demand levels, there is little sharing and the Mohring effect pre- vails; as demand grows, more passengers per vehicle push for the Extra-detour Effect to dominate; eventually, vehicles run at capacity, and the Better-matching Effect prevails. The last two effects are specific to ODRP as the routes are not fixed but adapted online. Our simulations show that considering both users\u2019 and operators\u2019 costs, scale economies prevail, and that ODRP with human-driven vehicles and walks allowed has total costs similar to door-to-door systems with driverless vehicles."
     },
     {
@@ -415,7 +471,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "scene-reasoning-team"
+            "scene-reasoning-team","nicop"
+        ],
+        "topics":[
+            "perception","motion planning"   
         ],
         "abstract": "Abstract: WIn this paper, we consider the problem where a drone has to collect semantic information to classify multiple moving targets. In particular, we address the challenge of computing control inputs that move the drone to informative viewpoints, position and orientation, when the information is extracted using a \u201cblack-box\u201d classifier, e.g., a deep learning neural network. These algorithms typically lack of analytical relationships between the viewpoints and their associated out- puts, preventing their use in information-gathering schemes. To fill this gap, we propose a novel attention-based architecture, trained via Reinforcement Learning (RL), that outputs the next viewpoint for the drone favoring the acquisition of evidence from as many unclassified targets as possible while reasoning about their movement, orientation, and occlusions. Then, we use a low-level MPC controller to move the drone to the desired viewpoint taking into account its actual dynamics. We show that our approach not only outperforms a variety of baselines but also generalizes to scenarios unseen during training. Additionally, we show that the network scales to large numbers of targets and generalizes well to different movement dynamics of the targets."
     },
@@ -436,7 +495,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "criticalmaas"
+        ],
+        "topics":[
+            "transportation"
+        ],
         "abstract": "Abstract: Previous studies into the potential benefits of ride pooling failed to account for the trade-off that users likely make when considering a shared ride. We address this shortcoming by formulating user net benefit stemming from pooling as a compensatory function where the additional travel time and on-board discomfort need to be compensated by the price discount for a traveller to choose a pooled ride over a private ride. The proposed formulation is embedded in a method for matching travel requests and vehicles. We conduct a series of experiments investigating how the potential of ride-pooling services depends on demand characteristics, user preferences and the pricing policy adopted by the service provider. Our results suggest that the total vehicle mileage savings found by previous studies is only attainable when users are very willing to share their ride (i.e. attach low premium to private rides) and are offered a 50% discount for doing so."
     },
     {
@@ -462,7 +526,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "game-theoretic-mp"
+            "game-theoretic-mp","interact"
+        ],
+        "topics":[
+            "motion planning","multi-robot"   
         ],
         "abstract": "Abstract: Many autonomous agents, such as intelligent ve- hicles, are inherently required to interact with one another. Game theory provides a natural mathematical tool for robot motion planning in such interactive settings. However, tractable algorithms for such problems usually rely on a strong assumption, namely that the objectives of all players in the scene are known. To make such tools applicable for ego-centric planning with only local information, we propose an adaptive model-predictive game solver, which jointly infers other players\u2019 objectives online and computes a corresponding generalized Nash equilibrium (GNE) strategy. The adaptivity of our approach is enabled by a differentiable trajectory game solver whose gradient signal is used for maximum likelihood estimation (MLE) of opponents\u2019 objectives. This differentiability of our pipeline facilitates direct integration with other differentiable elements, such as neural networks (NNs). Furthermore, in contrast to existing solvers for cost inference in games, our method handles not only partial state observations but also general inequality constraints. In two simulated traffic scenarios, we find superior performance of our approach over both existing game-theoretic methods and non- game-theoretic model-predictive control (MPC) approaches. We also demonstrate our approach\u2019s real-time planning capabilities and robustness in two-player hardware experiments."
     },
@@ -486,7 +553,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "airlab-manipulation"
+            "airlab-manipulation","ahold"
+        ],
+        "topics":[
+            "motion planning"
         ],
         "abstract": "Abstract: Optimization fabrics are a geometric approach to real-time local motion generation, where motions are designed by the composition of several differential equations that exhibit a desired motion behavior. We generalize this framework to dynamic scenarios and nonholonomic robots and prove that fundamental properties can be conserved. We show that convergence to desired trajectories and avoidance of moving obstacles can be guaranteed using simple construction rules of the components. In addition, we present the first quantitative comparisons between optimization fabrics and model predictive control and show that optimization fabrics can generate similar trajectories with better scalability, and thus, much higher replanning frequency (up to 500 Hz with a 7 de- grees of freedom robotic arm). Finally, we present empirical results on several robots, including a nonholonomic mobile manipulator with 10 degrees of freedom and avoidance of a moving human, supporting the theoretical findings."
     },
@@ -512,7 +582,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "nicop","nsf china","shanghai rising-star","interact"
+        ],
+        "topics":[
+            "motion planning","perception"   
+        ],
         "abstract": "Abstract: Autonomous navigation of Micro Aerial Vehicles (MAVs) in dynamic and unknown environments is a complex and challenging task. Current works rely on assumptions to solve the problem. The MAV\u2019s pose is precisely known, the dynamic obstacles can be explicitly segmented from static ones, their number is known and fixed, or they can be modeled with given shapes. In this paper, we present a method for MAV navigation in dynamic uncertain environments without making any of these assumptions. The method employs a particle-based dynamic map to represent the local environment and predicts it to the near future. Collision risk is defined based on the predicted maps and a series of risk-aware spatio-temporal (RAST) safety corridors are constructed, which are finally used to optimize a dynamically- feasible collision-free trajectory for the MAV. We compared our method with several state-of-the-art works in 12000 simulation tests in Gazebo with the physical engine enabled. The results show that our method has the highest success rate at different uncertainty levels. Finally, we validated the proposed method in real experiments."
     },
     {
@@ -520,7 +595,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "authors": [
             "W. Jansma",
             "E. Trevisan",
-            "\u00c1. Serra-G\u00f3mez",
+            "Serra-Gomez",
             "J. Alonso-Mora"
         ],
         "date": "2023-12-01",
@@ -537,6 +612,9 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "note": null,
         "belongs_to_projects": [
             "trilogy"
+        ],
+        "topics":[
+            "motion planning"   
         ],
         "image": "/assets/images/papers/ia_mppi/framework.png",
         "abstract": "Abstract: Motion planning for autonomous robots in tight, interaction-rich, and mixed human-robot environments is challenging. State-of-the-art methods typically separate prediction and planning, predicting other agents' trajectories first and then planning the ego agent's motion in the remaining free space. However, agents' lack of awareness of their influence on others can lead to the freezing robot problem. We build upon Interaction-Aware Model Predictive Path Integral (IA-MPPI) control and combine it with learning-based trajectory predictions, thereby relaxing its reliance on communicated short-term goals for other agents. We apply this framework to Autonomous Surface Vessels (ASVs) navigating urban canals. By generating an artificial dataset in real sections of Amsterdam's canals, adapting and training a prediction model for our domain, and proposing heuristics to extract local goals, we enable effective cooperation in planning. Our approach improves autonomous robot navigation in complex, crowded environments, with potential implications for multi-agent systems and human-robot interaction."
@@ -556,7 +634,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": "harmony",
+        "belongs_to_projects": [
+            "harmony","horizon"
+        ],
+        "topics":[
+            "multi-robot","task planning"
+        ],
         "abstract": "Abstract: We study the problem of selecting a fleet of robots to service spatially distributed tasks with diverse requirements within time-windows. The problem of allocating tasks to a fleet of potentially heterogeneous robots and finding an optimal sequence for each robot is known as multi-robot task assignment (MRTA). Most state-of-the-art methods focus on the problem when the fleet of robots is fixed. In contrast, we consider that we are given a set of available robot types and requested tasks, and need to assemble a fleet that optimally services the tasks while the cost of the fleet remains under a budget limit. We characterize the complexity of the problem and provide a Mixed-Integer Linear Program (MILP) formulation. Due to poor scalability of the MILP, we propose a heuristic solution based on a Large Neighbourhood Search (LNS). In simulations, we demonstrate that the proposed method requires substantially lower budgets than a greedy algorithm to service all tasks."
     },
     {
@@ -585,7 +668,11 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "note": null,
         "belongs_to_projects": [
             "harmony",
-            "interact"
+            "interact",
+            "ahold"
+        ],
+        "topics":[
+            "motion planning","multi-robot"   
         ],
         "abstract": "Abstract: In this paper, we address the problem of real-time motion planning for multiple robotic manipulators that operate in close proximity. We build upon the concept of dynamic fabrics and extend them to multi-robot systems, referred to as Multi-Robot Dynamic Fabrics (MRDF). This geometric method enables a very high planning frequency for high-dimensional systems at the expense of being reactive and prone to deadlocks. To detect and resolve deadlocks, we propose Rollout Fabrics where MRDF are forward simulated in a decentralized manner. We validate the methods in simulated close-proximity pick-and-place scenarios with multiple manipulators, showing high success rates and real-time performance."
     },
@@ -606,7 +693,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "foceta","elo-x","becareful","horizon"
+        ],
+        "topics":[
+            "motion planning","transportation"  
+        ],
         "abstract": "Abstract: Reinforcement learning (RL) is a promising solution for autonomous vehicles to deal with complex and uncertain traffic environments. The RL training process is however expensive, unsafe, and time-consuming. Algorithms are often developed first in simulation and then transferred to the real-world, leading to a common sim2real challenge where performance decreases when the domain changes. In this paper, we propose a transfer learning process to minimize the gap by exploiting digital twin technology, relying on a systematic and simultaneous combination of virtual and real world data coming from vehicle dynamics and traffic scenarios. The model and testing environment is evolved from model, hardware to vehicle in the loop and proving ground testing stages, similar to standard development cycle in the automotive industry. In particular, we also integrate other transfer learning techniques such as domain randomization and adaptation in each stage. The simulation and real data are gradually incorporated to accelerate and make the transfer learning process more robust. The proposed RL methodology is applied to develop a path-following steering controller for an autonomous electric vehicle. After learning and deploying the real-time RL control policy on the vehicle, we obtained satisfactory and safe control performance already from the first deployment, demonstrating the advantages of the proposed digital twin based learning process."
     },
     {
@@ -628,7 +720,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "nicop","feder","fse"
+        ],
+        "topics":[
+            "perception"   
+        ],
         "abstract": "Abstract: Robotic applications involving people often re- quire advanced perception systems to better understand com- plex real-world scenarios. To address this challenge, photo- realistic and physics simulators are gaining popularity as a means of generating accurate data labeling and designing scenarios for evaluating generalization capabilities, e.g., lighting changes, camera movements or different weather conditions. We develop a photo-realistic framework built on Unreal Engine and AirSim to generate easily scenarios with pedestrians and mobile robots. The framework is capable to generate random and customized trajectories for each person and provides up to 50 ready-to-use people models along with an API for their metadata retrieval. We demonstrate the usefulness of the proposed framework with a use case of multi-target tracking, a popular problem in real pedestrian scenarios. The notable feature variability in the obtained perception data is presented and evaluated."
     },
     {
@@ -649,7 +746,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "ara","yip","nicop"
+        ],
+        "topics":[
+            "perception"
+        ],
         "abstract": "Abstract: In this paper we propose a novel algorithm, Wi- Closure, to improve the computational efficiency and robustness of loop closure detection in multi-robot SLAM. Our approach decreases the computational overhead of classical approaches by pruning the search space of potential loop closures, prior to evaluation by a typical multi-robot SLAM pipeline. Wi-Closure achieves this by identifying candidates that are spatially close to each other measured via sensing over the wireless commu- nication signal between robots, even when they are operating in non-line-of-sight or in remote areas of the environment from one another. We demonstrate the validity of our approach in simulation and in hardware experiments. Our results show that using Wi-closure greatly reduces computation time, by 54.1% in simulation and 76.8% in hardware experiments, compared with a multi-robot SLAM baseline. Importantly, this is achieved without sacrificing accuracy. Using Wi-closure reduces absolute trajectory estimation error by 98.0% in simulation and 89.2% in hardware experiments. This improvement is partly due to Wi-Closure\u2019s ability to avoid catastrophic optimization failure that typically occurs with classical approaches in challenging repetitive environments."
     },
     {
@@ -671,7 +773,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "airlab-manipulation"
+            "airlab-manipulation","ahold"
+        ],
+        "topics":[
+            "motion planning"   
         ],
         "abstract": "Abstract: In this paper, we present an automated parameter optimization method for trajectory generation. We formulate parameter optimization as a constrained optimization problem that can be effectively solved using Bayesian optimization. While the approach is generic to any trajectory generation method, we showcase it using optimization fabrics. Optimiza- tion fabrics are a geometric trajectory generation method based on non-Riemannian geometry. By symbolically pre-solving the structure of the tree of fabrics, we obtain a parameterized trajectory generator, called symbolic fabrics. We show that autotuned symbolic fabrics reach expert-level performance in a few trials. Additionally, we show that tuning transfers across different robots, motion planning problems and between sim- ulation and real world. Finally, we qualitatively showcase that the framework could be used for coupled mobile manipulation."
     },
@@ -693,7 +798,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": ["probabilistic-planning","nwa-act"],
+        "belongs_to_projects": ["probabilistic-planning","nwa-act","safe-up"],
+        "topics":[
+            "motion planning"   
+        ],
         "abstract": "Abstract: Balancing safety and efficiency when planning in crowded scenarios with uncertain dynamics is challenging where it is imperative to accomplish the robot\u2019s mission without incurring any safety violations. Typically, chance constraints are incorporated into the planning problem to provide probabilistic safety guarantees by imposing an upper bound on the collision probability of the planned trajectory. Yet, this results in overly conservative behavior on the grounds that the gap between the obtained risk and the specified upper limit is not explicitly restricted. To address this issue, we propose a real-time capable approach to quantify the risk associated with planned trajec- tories obtained from multiple probabilistic planners, running in parallel, with different upper bounds of the acceptable risk level. Based on the evaluated risk, the least conservative plan is selected provided that its associated risk is below a specified threshold. In such a way, the proposed approach provides probabilistic safety guarantees by attaining a closer bound to the specified risk, while being applicable to generic uncertainties of moving obstacles. We demonstrate the efficiency of our proposed approach, by improving the performance of a state- of-the-art probabilistic planner, in simulations and experiments using a mobile robot in an environment shared with humans."
     },
     {
@@ -717,7 +825,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "image": "/assets/images/papers/tmpc/conference_eyecatcher.png",
         "note": null,
-        "belongs_to_projects": "probabilistic-planning",
+        "belongs_to_projects": [
+            "probabilistic-planning","safevru","harmonia"
+        ],
+        "topics":[
+            "motion planning"   
+        ],
         "abstract": "Abstract: Navigating mobile robots through environments shared with humans is challenging. From the perspective of the robot, humans are dynamic obstacles that must be avoided. These obstacles make the collision-free space nonconvex, which leads to two distinct passing behaviors per obstacle (passing left or right). For local planners, such as receding-horizon trajectory optimization, each behavior presents a local optimum in which the planner can get stuck. This may result in slow or unsafe motion even when a better plan exists. In this work, we identify trajectories for multiple locally optimal driving behaviors, by considering their topology. This identification is made consistent over successive iterations by propagating the topology information. The most suitable high-level trajectory guides a local optimization-based planner, resulting in fast and safe motion plans. We validate the proposed planner on a mobile robot in simulation and real-world experiments."
     },
     {
@@ -741,6 +854,9 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "belongs_to_projects": [
             "trilogy"
         ],
+        "topics":[
+            "motion planning"   
+        ],
         "abstract": "Abstract: Autonomous vehicles that operate in urban envi- ronments shall comply with existing rules and reason about the interactions with other decision-making agents. In this paper, we introduce a decentralized and communication-free interaction-aware motion planner and apply it to Autonomous Surface Vessels (ASVs) in urban canals. We build upon a sampling-based method, namely Model Predictive Path Integral control (MPPI), and employ it to, in each time instance, compute both a collision-free trajectory for the vehicle and a prediction of other agents\u2019 trajectories, thus modeling inter- actions. To improve the method\u2019s efficiency in multi-agent sce- narios, we introduce a two-stage sample evaluation strategy and define an appropriate cost function to achieve rule compliance. We evaluate this decentralized approach in simulations with multiple vessels in real scenarios extracted from Amsterdam\u2019s canals, showing superior performance than a state-of-the- art trajectory optimization framework and robustness when encountering different types of agents."
     },
     {
@@ -750,7 +866,7 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             "C. Salmi",
             "E. Trevisan",
             "J. Alonso-Mora",
-            "C. Hern\u00e1ndez Corbato"
+            "C. Hernandez Corbato"
         ],
         "date": "2023-05-01",
         "type": "workshop",
@@ -768,7 +884,10 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         ],
         "note": null,
         "belongs_to_projects": [
-            "trilogy"
+            "trilogy","ahold"
+        ],
+        "topics":[
+            "motion planning"   
         ],
         "abstract": "Abstract: We present a method for solving finite horizon optimal control problems using a generic physics simulator as the dynamical model. In particular, we present an open-source implementation of a model predictive path integral controller (MPPI), that uses the GPU-parallelizable IsaacGym simulator as the dynamical model to compute the forward dynamics of the system. This allows one to effortlessly solve complex contact-rich tasks such as for example, non-prehensile manipulation of a variety of objects, or picking with a mobile manipulator. Since there is no explicit dynamic modeling required from a user, the repository is easily extendable to different objects and robots, as we show in the experiments section. This makes this method a powerful and accessible tool to solve a large variety of contact-rich tasks."
     },
@@ -788,7 +907,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": "nwa-act",
+        "belongs_to_projects": [
+            "nwa-act"
+        ],
+        "topics":[
+            "motion planning"   
+        ],
         "abstract": "Abstract: Predicting the future behaviour of people re- mains an open challenge for the development of risk-aware autonomous vehicles. An important aspect of this challenge is effectively capturing the uncertainty inherent to human behaviour. This paper studies an approach for multi-modal probabilistic motion forecasting of an agent with improved accuracy in the predicted sample likelihoods. Our approach achieves state-of-the-art results on the inD dataset when evalu- ated with the standard metrics employed for motion forecasting. Furthermore, our approach also achieves state-of-the-art results when evaluated with respect to the likelihoods it assigns to its generated trajectories. Evaluations on artificial datasets indicate that the distributions learned by our model closely correspond to the true distributions observed in data and are not as prone to being over-confident in a single outcome in the face of uncertainty."
     },
     {
@@ -818,7 +942,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "veni","flexcraft","nwa"
+        ],
+        "topics":[
+            "motion planning"   
+        ],
         "abstract": "Abstract: The successful integration of autonomous robots in real-world environments strongly depends on their ability to reason from context and take socially acceptable actions. Current autonomous navigation systems mainly rely on geometric information and hard-coded rules to induce safe and socially compliant behaviors. Yet, in unstructured urban scenarios these approaches can become costly and suboptimal. In this paper, we introduce a motion planning framework consisting of two components: a data-driven policy that uses visual inputs and human feedback to generate socially compliant driving behaviors (encoded by high-level decision variables), and a local trajectory optimization method that executes these behaviors (ensuring safety). In particular, we employ Interactive Imitation Learning to jointly train the policy with the local planner, a Model Predictive Controller (MPC), which results in safe and human-like driving behaviors. Our approach is validated in realistic simulated urban scenarios. Qualitative results show the similarity of the learned behaviors with human driving. Furthermore, navigation performance is substantially improved in terms of safety, i.e., number of collisions, as compared to prior trajectory optimization frameworks, and in terms of data-efficiency as compared to prior learning-based frameworks, broadening the operational domain of MPC to more realistic autonomous driving scenarios."
     },
     {
@@ -845,7 +974,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "harmonia"
+        ],
+        "topics":[
+            "motion planning","multi-robot"   
+        ],
         "abstract": "Abstract: This work presents a method for multi-robot coordination based on a novel distributed nonlinear model predictive control (NMPC) formulation for trajectory optimization and its modified version to mitigate the effects of packet losses and delays in the communication among the robots. Our algorithms consider that each robot is equipped with an onboard computation unit to solve a local control problem and communicate with neighboring autonomous robots via a wireless network. The difference between the two proposed methods is in the way the robots exchange information to coordinate. The information exchange can occur in a following: 1) synchronous or 2) asynchronous fashion. By relying on the theory of the nonconvex alternating direction method of multipliers (ADMM), we show that the proposed solutions converge to a (local) solution of the centralized problem. For both algorithms, the communication exchange preserves the safety of the robots; that is, collisions with neighboring autonomous robots are prevented. The proposed approaches can be applied to various multi-robot scenarios and robot models. In this work, we assess our methods, both in simulation and with experiments, for the coordination of a team of autonomous vehicles in the following: 1) an unsupervised intersection crossing and 2) the platooning scenarios."
     },
     {
@@ -871,7 +1005,13 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "note": null,
         "belongs_to_projects": [
             "airlab-ondemand",
-            "harmony"
+            "harmony",
+            "nsf china",
+            "ara",
+            "horizon"
+        ],
+        "topics":[
+            "task planning","multi-robot","transportation"   
         ],
         "abstract": "Abstract: This paper studies the multi-robot task assignment problem in which a fleet of dispersed robots needs to efficiently transport a set of dynamically appearing packages from their initial locations to corresponding destinations within prescribed time-windows. Each robot can carry multiple packages simultaneously within its capacity. Given a sufficiently large robot fleet, the objective is to minimize the robots' total travel time to transport the packages within their respective time-window constraints. The problem is shown to be NP-hard, and we design two group-based distributed auction algorithms to solve this task assignment problem. Guided by the auction algorithms, robots first distributively calculate feasible package groups that they can serve, and then communicate to find an assignment of package groups. We quantify the potential of the algorithms with respect to the number of employed robots and the capacity of the robots by considering the robots' total travel time to transport all packages. Simulation results show that the designed algorithms are competitive compared with an exact centralized Integer Linear Program representation solved with the commercial solver Gurobi, and superior to popular greedy algorithms and a heuristic distributed task allocation method."
     },
@@ -897,7 +1037,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "veni","nwa"
+        ],
+        "topics":[
+            "motion planning","transportation"   
+        ],
         "abstract": "Abstract: Autonomous navigation in dense traffic scenarios remains challenging for autonomous vehicles (AVs) because the intentions of other drivers are not directly observable and AVs have to deal with a wide range of driving behaviors. To maneuver through dense traffic, AVs must be able to reason how their actions affect others (interaction model) and exploit this reasoning to navigate through dense traffic safely. This paper presents a novel framework for interaction-aware motion planning in dense traffic scenarios. We explore the connection between human driving behavior and their velocity changes when interacting. Hence, we propose to learn, via deep Reinforcement Learning (RL), an interaction-aware policy providing global guidance about the cooperativeness of other vehicles to an optimization-based planner ensuring safety and kinematic feasibility through constraint satisfaction. The learned policy can reason and guide the local optimization-based planner with interactive behavior to pro-actively merge in dense traffic while remaining safe in case the other vehicles do not yield. We present qualitative and quantitative results in highly interactive simulation environments (highway merging and unprotected left turns) against two baseline approaches, a learning-based and an optimization-based method. The presented results demonstrate that our method significantly reduces the number of collisions and increases the success rate with respect to both learning-based and optimization-based baselines."
     },
     {
@@ -919,7 +1064,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "safe-up"
+        ],
+        "topics":[
+            "motion planning","transportation"   
+        ],
         "abstract": "Abstract: Road traffic safety has attracted increasing research attention, in particular in the current transition from human-driven vehicles to autonomous vehicles. Surrogate measures of safety are widely used to assess traffic safety but they typically ignore motion uncertainties and are inflexible in dealing with two-dimensional motion. Meanwhile, learning-based lane-change and trajectory prediction models have shown potential to provide accurate prediction results. We therefore propose a prediction-based driving risk metric for two-dimensional motion on multi-lane highways, expressed by the maximum risk value over different time instants within a prediction horizon. At each time instant, the risk of the vehicle is estimated as the sum of weighted risks over each mode in a finite set of lane-change maneuver possibilities. Under each maneuver mode, the risk is calculated as the product of three factors: lane-change maneuver mode probability, collision probability and expected crash severity. The three factors are estimated leveraging two-stage multi-modal trajectory predictions for surrounding vehicles: first a lane-change intention prediction module is invoked to provide lane-change maneuver mode possibilities, and then the mode possibilities are used as partial input for a multi-modal trajectory prediction module. Working with the empirical trajectory dataset highD and simulated highway scenarios, the proposed two-stage model achieves superior performance compared to a state-of-the-art prediction model. The proposed risk metric is computationally efficient for real-time applications, and effective to identify potential crashes earlier thanks to the employed prediction model."
     },
     {
@@ -942,7 +1092,12 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "i-cave","nwo","ttw"
+        ],
+        "topics":[
+            "task planning","transportation","multi-robot"   
+        ],
         "abstract": "Abstract: With the popularization of transportation network companies (TNCs) (e.g., Uber, Lyft) and the rise of autonomous vehicles (AVs), even major car manufacturers are increasingly considering themselves as autonomous mobility-on-demand (AMoD) providers rather than individual vehicle sellers. However, matching the convenience of owning a vehicle requires providing consistent service quality, taking into account individual expectations. Typically, different classes of users have different service quality (SQ) expectations in terms of responsiveness, reliability, and privacy. Nonetheless, AMoD systems presented in the literature do not enable active control of service quality in the short term, especially in light of unusual demand patterns, sometimes allowing extensive delays and user rejections. This study proposes a method to control the daily operations of an AMoD system that uses the SQ expectations of heterogeneous user classes to dynamically distribute service quality among riders. Additionally, we consider an elastic vehicle supply, that is, privately-owned freelance AVs (FAVs) can be hired on short notice to help providers meeting user service-level expectations. We formalize the problem as the dial-a-ride problem with service quality contracts (DARP-SQC) and propose a multi-objective matheuristic to address real-world requests from Manhattan, New York City. Applying the proposed service-level constraints, we improve user satisfaction (in terms of reached service-level expectations) by 53% on average compared to conventional ridesharing systems, even without hiring additional vehicles. By deploying service-quality-oriented on-demand hiring, our hierarchical optimization approach allows providers to adequately cater to each segment of the customer base without necessarily owning large fleets."
     },
     {
@@ -974,6 +1129,9 @@ yield a practical runtime. In extensive simulation experiments, we demonstrate t
         "note": null,
         "belongs_to_projects": [
             "harmony"
+        ],
+        "topics":[
+            "motion planning"   
         ],
         "abstract": "Abstract: Autonomous mobile robots require accurate human motion predictions to safely and efficiently navigate among pedestrians, whose behavior may adapt to environmental changes. This letter introduces a self-supervised continual learning framework to improve data-driven pedestrian prediction models online across various scenarios continuously. In particular, we exploit online streams of pedestrian data, commonly available from the robot\u2019s detection and tracking pipeline, to refine the prediction model and its performance in unseen scenarios. To avoid the forgetting of previously learned concepts, a problem known as catastrophic forgetting, our framework includes a regularization loss to penalize changes of model parameters that are important for previous scenarios and retrains on a set of previous examples to retain past knowledge. Experimental results on real and simulation data show that our approach can improve prediction performance in unseen scenarios while retaining knowledge from seen scenarios when compared to naively training the prediction model online."
     },
