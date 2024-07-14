@@ -1,5 +1,27 @@
 [
     {
+        "title": "Physically Grounded Optimal Realizations of Symbolic Plans",
+        "authors": [
+            "Andreu Matoses Gimenez",
+            "Nils Wilde",
+            "Chris Pek",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-07-15",
+        "type": "workshop",
+        "venue": "Robotics: Science and Systems (RSS)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24_matoses_rss.pdf"
+            }
+        ],
+        "image": "/assets/images/papers/realization_of_plans/dingo_isaac.png",
+        "belongs_to_projects": [
+            "interact"
+        ],
+        "abstract": "Robot autonomy often involves planning high-level discrete decisions and continuous motion planning to realize each decision. Task and Motion Planning (TAMP) algorithms solve these hybrid problems jointly while considering constraints between the discrete symbolic actions, i.e., the task plan, and their continuous geometric realization. Previous TAMP algorithms have mostly focused on computational performance, completeness, or optimality. However, due to the required simplifications and abstractions, the resulting plans often do not account for robot dynamics, nor complex contacts. They also often ignore the effect of the low-level controllers on the optimality and/or feasibility of the plan's realizations. This work investigates the use of a parallelized physics simulator to compute realizations of the plan with a motion controller, realistic dynamics, and considering contacts with the environment. Using cross-entropy optimization, we sample the parameters used by the controllers, or actions, to obtain low-cost solutions. The resulting realized plan is straightforward to implement in the real system, as the robot uses the same controllers. We test our approach for a pick and place task, where our method is capable of finding low-cost feasible solutions in 1-2 min."
+      }, 
+    {
         "title": "Multi-Modal MPPI and Active Inference for Reactive Task and Motion Planning",
         "authors": [
             "Yuezhe Zhang",
