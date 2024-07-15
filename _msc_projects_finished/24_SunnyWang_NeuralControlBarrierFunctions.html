@@ -1,23 +1,24 @@
 ---
-title: "Synthesis and Verification of Neural Control Barrier Functions for Safe Reinforcement Learning with Guarantees"
+title: "Simultaneous Synthesis and Verification of Neural Control Barrier Functions through Branch-and-Bound Verification-in-the-loop Training"
 authors:
     - name: "Xinyu (Sunny) Wang"
       url: "/"
       superscript: "1"
     - name: "Luzia Knoedler"
       url: "https://scholar.google.com/citations?user=oQKJuLoAAAAJ&hl=en&oi=ao"
+      superscript: "1"
+    - name: "Frederik Baymler Mathiesen"
+      url: "https://scholar.google.com/citations?user=2tTAGlcAAAAJ&hl=en&oi=ao"
       superscript: "2"
     - name: "Javier Alonso-Mora"
       url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en"
-      superscript: "3"
+      superscript: "1"
 affiliations:
-    - name: "Master Student"
+    - name: "Cognitive Robotics, TU Delft"
       superscript: "1"
       url: "/"
-    - name: "Daily Supervisor"
+    - name: "Delft Center for Systems and Control, TU Delft"
       superscript: "2"
-    - name: "Primary Supervisor"
-      superscript: "3"
 end_date: 2024-04-03 # end date if ended, approximated if not sure. Just for display purposes and ordering.
 # This is the short project description, displayed in the project's card"
 description: "This thesis focuses on Certified Learning based on Control Barrier Functions (CBFs). 
@@ -55,6 +56,25 @@ links: # If you have other website for the project, github repos, datasets, etc.
 <section id="abstract">
   <h2>Summary</h2>
   <p>
+    Control Barrier Functions (CBFs) that provide formal safety guarantees have been widely used for safety-critical systems. 
+    However, it is non-trivial to design a CBF. Utilizing neural networks as CBFs has shown great success,
+  but it necessitates their certification as CBFs. In this work,
+  we leverage bound propagation techniques and the Branch-and-Bound scheme to efficiently verify that a neural network
+  satisfies the conditions to be a CBF over the continuous state
+  space. To accelerate training, we further present a framework
+  that embeds the verification scheme into the training loop to
+  synthesize and verify a neural CBF simultaneously. In particular, we employ the verification scheme to identify partitions
+  of the state space that are not guaranteed to satisfy the CBF
+  conditions and expand the training dataset by incorporating
+  additional data from these partitions. The neural network is
+  then optimized using the augmented dataset to meet the CBF
+  conditions. We show that for a non-linear control-affine system,
+  our framework can efficiently certify a neural network as a CBF
+  and render a larger safe set than state-of-the-art neural CBF
+  works. We further employ our learned neural CBF to derive a
+  safe controller to illustrate the practical use of our framework.
+  </p>
+  <!-- <p>
     While learning-based control techniques often outperform classical controller designs, safety requirements limit
     the acceptance of such methods in many applications. Recent developments address this issue through Certified
     Learning (CL), which combines a learning-based controller with formal methods to provide safety guarantees.
@@ -70,7 +90,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     control-affine system, our framework can efficiently certify a neural network as a CBF and render a larger safe set
     than state-of-the-art neural CBF works. We further employ our learned neural CBF to derive a safe controller to
     illustrate the practical use of our framework.
-  </p>
+  </p> -->
 
 
 

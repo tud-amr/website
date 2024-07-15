@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="project">
+  <h1 class="project-title mt-2">{{ page.title }}</h1>
+  {% if page.subtitle %}
+  <span class="fs-4 text-muted">{{ page.subtitle }}</span>
+  {% endif %}
+  
+  <div class="d-flex p-1 mt-3 justify-content-center align-items-center">
+    {% if include.project.cover_image contains '.mp4' %}
+    <video src="{% include fix_link.html link=page.image %}" class="object-fit-contain" width="600" alt="project video" muted autoplay loop></video>
+    {% else %}
+    <img src="{% include fix_link.html link=page.image %}" class="object-fit-contain img-fluid" style="max-height: 500px;" alt="project image">
+    {% endif %}
+  </div>
+
+  <div class="project-info border-top border-bottom my-4 py-3 border-1 border-dark-subtle">
+    {% if page.fundings %}
+    <div class="project-funding">
+      <h3 class="mb-1 fs-5 fw-semibold">Funding</h3>
+      <p class="mb-1">{{ page.fundings }}</p>
+    </div>
+    {% endif %}
+  
+    <!-- {% if person.extra_info %} - <span class="text-body-secondary small">{{ person.extra_info }}</span> {% endif %} -->
+    {% if page.people %}
+    <div class="project-people mt-3">
+      <h3 class="mb-1 fs-5 fw-semibold">People</h3>
+      <div class="person-project">
+        {% for person in page.people %}
+        <span>{{ person.name }}{% unless forloop.last %}, {% endunless %}</span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+    
+    {% if page.links %}
+    <div class="project-links mt-3">
+      <h3 class="mb-2 fs-5 fw-semibold">More Links</h3>
+      <div class="d-flex justify-content-start gap-2">
+        {% for link in page.links %}
+        <a href="{{ link.url }}" target="_blank" class="btn btn-sm btn-outline-dark ">{{ link.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+</div>
+
+<div class="project-content mt-4">
+  {{ content }}
+</div>
+
+<div class="publication-of-project mt-4">
+  <hr>
+  <h2>Related Publications</h2>
+  {% assign publications_sorted = site.data.publications | sort: 'year' %}
+  {% assign counter = 1 %}
+  {% for publication in publications_sorted %}
+
+  {% if publication.belongs_to_projects %}
+  {% for projects in publication.belongs_to_projects %}
+  {% for project in projects %}
+
+  {% if project == page.project_id %}
+  <div class="publication-item">
+      {% include publication_item.html publication=publication id=counter %}
+  </div>
+  {% endif %}
+
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% assign counter = counter | plus: 1 %}
+  {% endfor %}
+
+</div>

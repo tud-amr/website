@@ -3,10 +3,18 @@ layout: default
 ---
 
 <div class="project">
-  <h1 class="project-title">{{ page.title }}</h1>
+  <h1 class="project-title mt-2">{{ page.title }}</h1>
   {% if page.subtitle %}
   <span class="fs-4 text-muted">{{ page.subtitle }}</span>
   {% endif %}
+
+  <!-- <div class="d-flex p-1 justify-content-center align-items-center">
+    {% if include.project.cover_image contains '.mp4' %}
+    <video src="{% include fix_link.html link=page.image %}" class="object-fit-contain" width="600" alt="project video" muted autoplay loop></video>
+    {% else %}
+    <img src="{% include fix_link.html link=page.image %}" class="object-fit-contain img-fluid" style="max-height: 500px;" alt="project image">
+    {% endif %}
+  </div> -->
 
   <div class="mt-4">
     <div class="row g-0 overflow-hidden mb-3 position-relative">
@@ -45,17 +53,16 @@ layout: default
         </div>
       </div>
     </div>
-
   </div>
+
 </div>
 
 <div class="project-content mt-4">
   {{ content }}
 </div>
 
-<hr>
-
 <div class="publication-of-project mt-4">
+  <hr>
   <h2>Related Publications</h2>
   {% assign publications_sorted = site.data.publications | sort: 'year' %}
   {% assign counter = 1 %}
