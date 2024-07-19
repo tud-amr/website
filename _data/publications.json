@@ -3507,7 +3507,12 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "disney"
+        ],
+        "topics":[
+            "motion planning"
+        ],
         "abstract": "Abstract: In this paper the problem of estimation and correction of wind effects on a quadrotor UAV, without using wind sensors, is discussed. A large body of research addresses the effects of wind on a quadrotor, however most of them consider it only as a disturbance in their control loop and, for this reason, they solved the problem compensating for the wind with a powerful controller. The main part of this paper is related to the modeling of wind on a quadrotor and to the wind tunnel tests performed at the IFD wind tunnel of ETH Zurich. The approach presented can be used as a starting point for future works. The results obtained in the wind tunnel are really promising for the formulation of a complete aerodynamic model of the quadrotor that has been missing until now."
     },
     {
@@ -3538,6 +3543,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","perception"
+        ],
         "abstract": "Abstract: This paper describes a novel and compact design for an omni-directional stereo camera. A key goal of the work is to investigate the use of rapid prototyping to make the mirrors for the device, by 3D printing the mirror shape and chroming the surface. The target application is in robot swarms, and we discuss how the ability to create a customized omni-camera enables sensing to become an integrated part of system design, avoiding the constraints that arise when using commercial sensors."
     },
     {
@@ -3562,6 +3570,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "transportation","motion planning"
+        ],
         "abstract": "Abstract: This paper presents a method for shared control of a vehicle. The driver commands a preferred velocity which is transformed into a collision-free local motion that respects the actuator constraints and allows for smooth and safe control. Collision-free local motions are achieved with an extension of velocity obstacles that takes into account dynamic constraints and a grid-based map representation. To limit the freedom of the driver, a global guidance trajectory can be included, which specifies the areas where the vehicle is allowed to drive in each time instance. The low computational complexity of the method makes it well suited for multi-agent settings and high update rates and both a centralized and a distributed algorithm are provided that allow for real-time control of tens of vehicles. Extensive experimental results with real robotic wheelchairs at relatively high speeds in tight scenarios are presented."
     },
     {
@@ -3588,6 +3599,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: This paper presents a method to optimize the position and trajectory of each aerial vehicle within a large group that displays objects and animations in 3D space. The input is a single object or an animation created by an artist. In a first step, goal positions for the given number of vehicles and representing the object are optimized with respect to a known viewpoint. For displaying an animation, an optimal trajectory satisfying the dynamic constraints of each vehicle is computed using B-splines. Finally, a trajectory following controller is described, which provides the preferred velocity, later optimized to be collision-free with respect to all neighboring vehicles."
     },
     {
@@ -3613,6 +3627,9 @@
         ],
         "note": "Best video Award 2nd Prize",
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning","perception"
+        ],
         "abstract": "Abstract: This work shows experimental results with three systems that take real-time user input to direct a robot swarm formed by tens of small robots. These are: real-time drawing, gesture based interaction with an RGB-D sensor and control via a hand-held tablet computer."
     },
     {
@@ -3628,6 +3645,9 @@
         "links": [],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": null
     },
     {
@@ -3655,6 +3675,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: Real-time interaction with a group of robots is shown with a hand-held tablet, which tracks the robots and computes collision-free trajectories. Efficient algorithms are described and experiments are performed in scenarios with changing illumination. Augmented reality and a multi-player setup are also described."
     },
     {
@@ -3679,7 +3702,12 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "v-charge"
+        ],
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: This paper addresses decentralized motion planning among a homogeneous set of feedback-controlled, decision-making agents. It introduces the continuous control obstacle ( C n -CO), which describes the set of C n -continuous control sequences (and thus trajectories) that lead to a collision between interacting agents. By selecting a feasible trajectory from C n -CO's complement, a collision-free motion is obtained. The approach represents an extension to the reciprocal velocity obstacle (RVO, ORCA) collision-avoidance methods so that trajectory segments verify C n continuity rather than piecewise linearity. This allows the large class of robots capable of tracking C n -continuous trajectories to employ it for partial motion planning directly-rather than as a mere tool for collision checking. This paper further establishes that both the original velocity obstacle method and several of its recently developed reciprocal extensions (which treat specific robot physiologies only) correspond to particular instances of C n -CO. In addition to the described extension in trajectory continuity, C n -CO thus represents a unification of existing RVO theory. Finally, the presented method is validated in simulation-and a parameter study reveals under which environmental and control conditions C n -CO with admits significantly improved navigation performance compared with inflated approaches based on ORCA."
     },
     {
@@ -3709,6 +3737,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: We describe a novel approach for computing collision-free \\emph{global} trajectories for p agents with specified initial and final configurations, based on an improved version of the alternating direction method of multipliers (ADMM). Compared with existing methods, our approach is naturally parallelizable and allows for incorporating different cost functionals with only minor adjustments. We apply our method to classical challenging instances and observe that its computational requirements scale well with p for several cost functionals. We also show that a specialization of our algorithm can be used for {\\em local} motion planning by solving the problem of joint optimization in velocity space."
     },
     {
@@ -3750,6 +3781,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "perception","motion planning"
+        ],
         "abstract": "Abstract: This paper presents Skye, a novel blimp design. Skye is a helium-filled sphere of diameter 2.7m with a strong inelastic outer hull and an impermeable elastic inner hull. Four tetrahedrally-arranged actuation units (AU) are mounted on the hull for locomotion, with each AU having a thruster which can be rotated around a radial axis through the sphere center. This design provides redundant control in the six degrees of freedom of motion, and Skye is able to move omnidirectionally and to rotate around any axis. A multi-camera module is also mounted on the hull for capture of aerial imagery or live video stream according to an \u2018eyeball\u2019 concept \u2014 the camera module is not itself actuated, but the whole blimp is rotated in order to obtain a desired camera view. Skye is safe for use near people \u2014 the double hull minimizes the likelihood of rupture on an unwanted collision; the propellers are covered by grills to prevent accidental contact; and the blimp is near neutral buoyancy so that it makes only a light impact on contact and can be readily nudged away. The system is portable and deployable by a single operator \u2014 the electronics, AUs, and camera unit are mounted externally and are detachable from the hull during transport; operator control is via an intuitive touchpad interface. The motivating application is in entertainment robotics. Skye has a varied motion vocabulary such as swooping and bobbing, plus internal LEDs for visual effect. Computer vision enables interaction with an audience. Experimental results show dexterous maneuvers in indoor and outdoor environments, and non-dangerous impacts between the blimp and humans."
     },
     {
@@ -3776,6 +3810,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: In this paper a centralized method for collision avoidance among multiple agents is presented. It builds on the velocity obstacle (VO) concept and its extensions to arbitrary kino-dynamics and is applicable to heterogeneous groups of agents (with respect to size, kino-dynamics and aggressiveness) moving in 2D and 3D spaces. In addition, both static and dynamic obstacles can be considered in the framework. The method maximizes a joint utility function and is formulated as a mixed-integer quadratic program, where online computation can be achieved as a trade-off with solution optimality. In experiments with groups of two to 50 agents the benefits of the joint utility optimization are shown. By construction, it's suboptimal variant is at least as good as comparable decentralized methods, while retaining online capability for small groups of agents. In its optimal variant, the proposed algorithm can provide a benchmark for distributed collision avoidance methods, in particular for those based on the VO concept that take interaction into account."
     },
     {
@@ -3803,6 +3840,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning","perception"
+        ],
         "abstract": "Abstract: In this article we present a novel display that is created using a group of mobile robots. In contrast to traditional displays that are based on a fixed grid of pixels, such as a screen or a projection, this work describes a display in which each pixel is a mobile robot of controllable color. Pixels become mobile entities, and their positioning and motion are used to produce a novel experience. The system input is a single image or an animation created by an artist. The first stage is to generate physical goal configurations and robot colors to optimally represent the input imagery with the available number of robots. The run-time system includes goal assignment, path planning and local reciprocal collision avoidance, to guarantee smooth, fast and oscillation-free motion between images. The algorithms scale to very large robot swarms and extend to a wide range of robot kinematics. Experimental evaluation is done for two different physical swarms of size 14 and 50 differentially driven robots, and for simulations with 1,000 robot pixels."
     },
     {
@@ -3825,6 +3865,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","perception"
+        ],
         "abstract": "Abstract: This paper studies iterative learning control (ILC) in a multi-agent framework, wherein a group of agents simultaneously and repeatedly perform the same task. Assuming similarity between the agents, we investigate whether exchanging information between the agents improves an individual's learning performance. That is, does an individual agent benefit from the experience of the other agents? We consider the multi-agent iterative learning problem as a two-step process of: first, estimating the repetitive disturbance of each agent; and second, correcting for it. We present a comparison of an agent's disturbance estimate in the case of (I) independent estimation, where each agent has access only to its own measurement, and (II) joint estimation, where information of all agents is globally accessible. When the agents are identical and noise comes from measurement only, joint estimation yields a noticeable improvement in performance. However, when process noise is encountered or when the agents have an individual disturbance component, the benefit of joint estimation is negligible."
     },
     {
@@ -3852,6 +3895,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning","perception"
+        ],
         "abstract": "Abstract: This paper presents a fully automated method to display objects and animations in 3D with a group of aerial vehicles. The system input is a single object or an animation (sequence of objects) created by an artist. The first stage is to generate physical goal configurations and robot colors to represent the objects with the available number of robots. The run-time system includes algorithms for goal assignment, path planning and local reciprocal collision avoidance that guarantee smooth, fast and oscillation-free motion. The presented algorithms are tested in simulations and verified with real quadrotor helicopters and scale to large robot swarms."
     },
     {
@@ -3879,6 +3925,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning","perception"
+        ],
         "abstract": "Abstract: This paper describes a system that takes real-time user input to direct a robot swarm. The user interface is via drawing, and the user can create a single drawing or an animation to be represented by robots. For example, the drawn input could be a stick figure, with the robots automatically adopting a physical configuration to represent the figure. Or the input could be an animation of a walking stick figure, with the robots moving to represent the dynamic deforming figure. Each robot has a controllable RGB LED so that the swarm can represent color drawings. The computation of robot position, robot motion, and robot color is automatic, including scaling to the available number of robots. The work is in the field of entertainment robotics for play and making robot art, motivated by the fact that a swarm of mobile robots is now affordable as a consumer product. The technical contribution of the paper is three-fold. Firstly the paper presents shaped flocking, a novel algorithm to control multiple robots\u2014this extends existing flocking methods so that robot behavior is driven by both flocking forces and forces arising from a target shape. Secondly the new work is compared with an alternative approach from the existing literature, and the experimental results include a comparative analysis of both algorithms with metrics to compare performance. Thirdly, the paper describes a working real-time system with results for a physical swarm of 60 differential-drive robots."
     },
     {
@@ -3904,7 +3953,12 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": [
+            "alstom"
+        ],
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: In this paper a method for distributed reciprocal collision avoidance among multiple non-holonomic robots with bike kinematics is presented. The proposed algorithm, bicycle reciprocal collision avoidance (B-ORCA), builds on the concept of optimal reciprocal collision avoidance (ORCA) for holonomic robots but furthermore guarantees collision-free motions under the kinematic constraints of car-like vehicles. The underlying principle of the B-ORCA algorithm applies more generally to other kinematic models, as it combines velocity obstacles with generic tracking control. The theoretical results on collision avoidance are validated by several simulation experiments between multiple car-like robots."
     },
     {
@@ -3931,6 +3985,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","perception"
+        ],
         "abstract": null
     },
     {
@@ -3948,6 +4005,9 @@
         "links": [],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": null
     },
     {
@@ -3975,6 +4035,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: This paper describes work on multi-robot pattern formation. Arbitrary target patterns are represented with an optimal robot deployment, using a method that is independent of the number of robots. Furthermore, the trajectories are visually appealing in the sense of being smooth, oscillation free, and showing fast convergence. A distributed controller guarantees collision free trajectories while taking into account the kinematics of differentially driven robots. Experimental results are provided for a representative set of patterns, for a swarm of up to ten physical robots, and for fifty virtual robots in simulation."
     },
     {
@@ -4016,6 +4079,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: This paper studies iterative learning control (ILC) in a multi-agent framework, wherein a group of agents simultaneously and repeatedly perform the same task. The agents improve their performance by using the knowledge gained from previous executions. Assuming similarity between the agents, we investigate whether exchanging information between the agents improves an individual's learning performance. That is, does an individual agent benefit from the experience of the other agents? We consider the multi-agent iterative learning problem as a two-step process of: first, estimating the repetitive disturbance of each agent; and second, correcting for it. We present a comparison of an agent's disturbance estimate in the case of (I) independent estimation, where each agent has access only to its own measurement, and (II) joint estimation, where information of all agents is globally accessible. We analytically derive an upper bound of the performance improvement due to joint estimation. Results are obtained for two limiting cases: (i) pure process noise, and (ii) pure measurement noise. The benefits of information sharing are negligible in (i). For (ii), a performance improvement is observed when a high similarity between the agents is guaranteed."
     },
     {
@@ -4043,6 +4109,9 @@
         ],
         "note": "Nominated Best Student Paper Award",
         "belongs_to_projects": null,
+        "topics":[
+            "multi-robot","motion planning"
+        ],
         "abstract": "Abstract: IIn this paper an optimalmethod for distributed collision avoidance among multiple non-holonomic robots is presented in theory and experiments. Non-holonomic optimal reciprocal collision avoidance (NH-ORCA) builds on the concepts introduced in [2], but further guarantees smooth and collision-free motions under non-holonomic constraints. Optimal control inputs and constraints in velocity space are formally derived for the non-holonomic robots. The theoretical results are validated in several collision avoidance experiments with up to fourteen e-puck robots set on collision course. Even in scenarios with very crowded situations, NH-ORCA showed to be collision-free for all times."
     },
     {
@@ -4066,6 +4135,9 @@
         ],
         "note": null,
         "belongs_to_projects": null,
+        "topics":[
+            null
+        ],
         "abstract": "Abstract: The aim of this paper is to present a simple 3D computational model of a polymer electrolyte membrane fuel cell (PEMFC) that simulates over time the heat distribution, energy, and mass balance of the reactant gas flows in the fuel cell including pressure drop, humidity, and liquid water. Although this theoretical model can be adapted to any type of PEMFC, for verification of the model and to present different analysis it has been adapted to a single cell test fixture. The model parameters were adjusted through a series of experimental tests and the model was experimentally validated for a well-defined range of operating conditions: H2/air O2 as reactants, flow rates of 0.5\u20131.5 SLPM, dew points and cell temperatures of 30\u201380 \u00b0C, currents 0\u20135 A and with/without water condensation. The model is especially suited for the analysis of liquid water condensation in the reactant channels. A key finding is that the critical current at which liquid water is formed is determined at different flows, temperatures, and humidity. Copyright \u00a9 2008 Curtin University of Technology and John Wiley & Sons, Ltd."
     }
 ]
