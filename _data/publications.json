@@ -37,7 +37,8 @@
         "links": [
             {
                 "pdf": "/assets/files/publications/24_zhang_ral_reactive_tamp.pdf",
-                "web": "/paper_websites/m3p2i-aip"
+                "web": "/paper_websites/m3p2i-aip",
+                "code": "https://github.com/tud-amr/m3p2i-aip"
             }
         ],
         "image": "/assets/images/papers/m3p2i_aip/rw_icon.png",
