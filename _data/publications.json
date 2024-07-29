@@ -22,6 +22,9 @@
         "belongs_to_projects": [
         	"harmony"
         ],
+        "topics":[
+            "motion planning"    
+        ],
         "abstract": "As robots shift from industrial to human-centered spaces, adopting mobile manipulators, which expand workspace capabilities, becomes crucial. In these settings, seamless interaction with humans necessitates compliant control. Two common methods for safe interaction, admittance, and impedance control, require force or torque sensors, often absent in lowercost or lightweight robots. This paper presents an adaption of impedance control that can be used on current-controlled robots without the use of force or torque sensors and its application for compliant control of a mobile manipulator. A calibration method is designed that enables estimation of the actuators’ current/torque ratios and frictions, used by the adapted impedance controller, and that can handle model errors. The calibration method and the performance of the designed controller are experimentally validated using the Kinova GEN3 Lite arm. Results show that the calibration method is consistent and that the designed controller for the arm is compliant while also being able to track targets with fivemillimeter precision when no interaction is present. Additionally, this paper presents two operational modes for interacting with the mobile manipulator: one for guiding the robot around the workspace through interacting with the arm and another for executing a tracking task, both maintaining compliance to external forces. These operational modes were tested in realworld experiments, affirming their practical applicability and effectiveness."
       },
     {
@@ -43,6 +46,9 @@
         ],
         "note": null,
         "belongs_to_projects": "nwa-act",
+        "topics":[
+            "motion planning","perception","transportation"    
+        ],
         "abstract": "Predicting the future behavior of human road users is an important aspect for the development of risk-aware autonomous vehicles. While many models have been developed towards this end, effectively capturing and predicting the variability inherent to human behavior still remains an open challenge. This paper proposes TrajFlow—a new approach for probabilistic trajectory prediction based on Normalizing Flows. We reformulate the problem of capturing distributions over trajectories into capturing distributions over abstracted trajectory features using an autoencoder, simplifying the learning task of the Normalizing Flows. TrajFlow outperforms state-of-the-art behavior prediction models in capturing full trajectory distributions in two synthetic benchmarks with known true distributions, and is competitive on the naturalistic datasets ETH/UCY, rounD, and nuScenes. Our results demonstrate the effectiveness of TrajFlow in probabilistic prediction of human behavior."
     },
     {
@@ -64,6 +70,9 @@
         "image": "/assets/images/papers/realization_of_plans/dingo_isaac.png",
         "belongs_to_projects": [
             "interact"
+        ],
+        "topics":[
+            "motion planning","task planning"  
         ],
         "abstract": "Robot autonomy often involves planning high-level discrete decisions and continuous motion planning to realize each decision. Task and Motion Planning (TAMP) algorithms solve these hybrid problems jointly while considering constraints between the discrete symbolic actions, i.e., the task plan, and their continuous geometric realization. Previous TAMP algorithms have mostly focused on computational performance, completeness, or optimality. However, due to the required simplifications and abstractions, the resulting plans often do not account for robot dynamics, nor complex contacts. They also often ignore the effect of the low-level controllers on the optimality and/or feasibility of the plan's realizations. This work investigates the use of a parallelized physics simulator to compute realizations of the plan with a motion controller, realistic dynamics, and considering contacts with the environment. Using cross-entropy optimization, we sample the parameters used by the controllers, or actions, to obtain low-cost solutions. The resulting realized plan is straightforward to implement in the real system, as the robot uses the same controllers. We test our approach for a pick and place task, where our method is capable of finding low-cost feasible solutions in 1-2 min."
       }, 
