@@ -2526,7 +2526,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-         "pdot onr","boeing","future urban mobility","mineco/feder","microsoft","veni"   
+         "veni"   
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -2557,7 +2557,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "nsf swiss","nwo"
+            "veni"
         ],
         "topics":[
             "motion planning"
@@ -2576,6 +2576,7 @@
         "venue": "IEEE Transactions on Robotics, vol. 34, no. 2, pp. 404-420",
         "links": [
             {
+
                 "web": "https://ieeexplore.ieee.org/abstract/document/8322444"
             },
             {
@@ -2587,7 +2588,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            null
+            "phd-mp"
         ],
         "topics":[
             "motion planning"
@@ -2614,7 +2615,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "toyota research institute"
+            "postdoc-mp"
         ],
         "topics":[
             "motion planning","transportation","multi-robot","perception"
@@ -2646,10 +2647,10 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "excape","pdot onr","smarts","boeing","terraswarm"
+            "postdoc-multi"
         ],
         "topics":[
-            "motion planning","multi-robot"
+            "motion planning","multi-robot", "task planning"
         ],
         "abstract": "In the near future mobile robots, such as personal robots or mobile manipulators, will share the workspace with other robots and humans. We present a method for mission and motion planning that applies to small teams of robots performing a task in an environment with moving obstacles, such as humans. Given a mission specification written in linear temporal logic, such as patrolling a set of rooms, we synthesize an automaton from which the robots can extract valid strategies. This centralized automaton is executed by the robots in the team at runtime, and in conjunction with a distributed motion planner that guarantees avoidance of moving obstacles. Our contribution is a correct-by-construction synthesis approach to multi-robot mission planning that guarantees collision avoidance with respect to moving obstacles, guarantees satisfaction of the mission specification and resolves encountered deadlocks, where a moving obstacle blocks the robot temporally. Our method provides conditions under which deadlock will be avoided by identifying environment behaviors that, when encountered at runtime, may prevent the robot team from achieving its goals. In particular, (1) it identifies deadlock conditions; (2) it is able to check whether they can be resolved; and (3) the robots implement the deadlock resolution policy locally in a distributed manner. The approach is capable of synthesizing and executing plans even with a high density of dynamic obstacles. In contrast to many existing approaches to mission and motion planning, it is scalable with the number of moving obstacles. We demonstrate the approach in physical experiments with walking humanoids moving in 2D environments and in simulation with aerial vehicles (quadrotors) navigating in 2D and 3D environments."
     },
@@ -2674,7 +2675,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "ridepooling","czech science foundation","ams institute","op vvv meys"
+            "ridepooling","ams institute"
         ],
         "topics":[
             "task planning","transportation"
@@ -2702,7 +2703,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "ridepooling","veni","future urban mobility","pdot onr"
+            "ridepooling","veni"
         ],
         "topics":[
             "task planning","transportation"
@@ -2728,7 +2729,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "ridepooling","ams"
+            "ridepooling","ams-urban"
         ],
         "topics":[
             "task planning","transportation"
@@ -2825,7 +2826,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "toyota research institute"
+            "postdoc-mp"
         ],
         "topics":[
             "motion planning","transportation"
@@ -2855,7 +2856,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "mit lincoln","smarts","boeing"
+            "postdoc-multi"
         ],
         "topics":[
             "motion planning","multi-robot"
@@ -2887,7 +2888,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "microsoft"
+            "cinematography"
         ],
         "topics":[
             "motion planning","multi-robot"
@@ -2919,10 +2920,10 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "microsoft","smarts","toyota research institute","pdot onr"
+            "cinematography"
         ],
         "topics":[
-            "motion planning"
+            "motion planning","multi-robot"
         ],
         "abstract": "We propose a method for real-time trajectory generation with applications in aerial videography. Taking framing objectives, such as position of targets in the image plane, as input, our method solves for robot trajectories and gimbal controls automatically and adapts plans in real time due to changes in the environment. We contribute a real-time receding horizon planner that autonomously records scenes with moving targets, while optimizing for visibility under occlusion and ensuring collision-free trajectories. A modular cost function, based on the reprojection error of targets, is proposed that allows for flexibility and artistic freedom and is well behaved under numerical optimization. We formulate the minimization problem under constraints as a finite horizon optimal control problem that fulfills aesthetic objectives, adheres to nonlinear model constraints of the filming robot and collision constraints with static and dynamic obstacles and can be solved in real time. We demonstrate the robustness and efficiency of the method with a number of challenging shots filmed in dynamic environments including those with moving obstacles and shots with multiple targets to be filmed simultaneously."
     },
@@ -2954,7 +2955,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "future urban mobility","onr"
+            "ridepooling"
         ],
         "topics":[
             "task planning","transportation"
@@ -2988,7 +2989,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "toyota research institute"
+            "postdoc-mp"
         ],
         "topics":[
             "transportation"
@@ -3018,10 +3019,10 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "ridepooling","pdot onr","future urban mobility"
+            "ridepooling"
         ],
         "topics":[
-            "task planning","transportation","multi-robot"
+            "task planning","transportation"
         ],
         "abstract": "Ride-sharing, or carpooling, systems with autonomous vehicles will provide efficient and reliable urban mobility on demand. In this work we present a method for dynamic vehicle routing that leverages historical data to improve the performance of a network of self-driving taxis. In particular, we describe a constrained optimization method capable of assigning requests to autonomous vehicles in an informed way, to minimize the expected cost of serving both current and future travel requests. We allow several passengers with independent trips to share a vehicle and allow vehicles to pick additional passengers as they progress through their route. Based on historical data, we compute a probability distribution over future demand. Then, samples from the learned probability distribution are incorporated into a decoupled vehicle routing and passenger assignment method to take into account the predicted future demand. This method consists of three steps, namely pruning of feasible trips, assignment of trips to vehicles and rebalancing of idle vehicles. We show the benefits and trade-offs of this predictive approach in an experimental evaluation with over three million rides extracted from a dataset of taxi trips in New York City. Our method produces routes and assignments that, in expectation, reduce the travel and waiting times for passengers, with respect to a purely reactive approach. Besides the mobility on demand application, the method we present is general and could also be applied to other multi-task multi-vehicle assignment and routing problems."
     },
@@ -3049,7 +3050,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "horizon","seri"
+            "probabilistic-planning"
         ],
         "topics":[
             "motion planning","multi-robot"
@@ -3083,7 +3084,7 @@
         ],
         "note": null,
         "belongs_to_projects":[
-            "future urban mobility","nrf singapore"
+            "postdoc-mp"
         ],
         "topics":[
             "motion planning","transportation","perception"
@@ -3115,7 +3116,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            null
+            "postdoc-mp"
         ],
         "topics":[
             "motion planning","transportation","perception"
@@ -3155,7 +3156,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "future urban mobility","toyota research institute"
+            "postdoc-mp"
         ],
         "topics":[
             "motion planning","transportation","perception"
@@ -3187,7 +3188,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "toyota research institute"
+            "postdoc-mp"
         ],
         "topics":[
             "motion planning","transportation"
@@ -3244,7 +3245,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "nsf","robust intelligence award","national robotics initiative award","ford","toyota research institute"
+            "postdoc-edu"
         ],
         "topics":[
             "motion planning","perception","multi-robot"
@@ -3287,7 +3288,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             null
         ],
@@ -3317,7 +3318,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "pdot onr","future urban mobility","boeing","dpi2012-32100", "dpi2015-69376-r", "cud2013-05","cas14/00205"
+            "postdoc-multi"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -3348,7 +3349,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            null
+            "phd-pixelbots"
         ],
         "topics":[
             "multi-robot","motion planning","perception"
@@ -3379,7 +3380,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            null
+            "phd-mp"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -3409,7 +3410,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "future urban mobility","smarts","boeing"
+            "postdoc-multi"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -3441,7 +3442,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "excape","smarts","onr muri antidote","boeing","terraswarm"
+            "postdoc-multi"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -3472,7 +3473,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "onr muri antidote","smarts","boeing","disney"
+            "postdoc-multi"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -3504,7 +3505,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "disney"
+            "phd-pixelbots"
         ],
         "topics":[
             "multi-robot","motion planning","perception"
@@ -3530,7 +3531,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "postdoc-multi",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -3562,7 +3563,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "disney"
+            "phd-mp"
         ],
         "topics":[
             "motion planning"
@@ -3596,7 +3597,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","perception"
         ],
@@ -3623,9 +3624,9 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
-            "transportation","motion planning"
+           "motion planning"
         ],
         "abstract": "This paper presents a method for shared control of a vehicle. The driver commands a preferred velocity which is transformed into a collision-free local motion that respects the actuator constraints and allows for smooth and safe control. Collision-free local motions are achieved with an extension of velocity obstacles that takes into account dynamic constraints and a grid-based map representation. To limit the freedom of the driver, a global guidance trajectory can be included, which specifies the areas where the vehicle is allowed to drive in each time instance. The low computational complexity of the method makes it well suited for multi-agent settings and high update rates and both a centralized and a distributed algorithm are provided that allow for real-time control of tens of vehicles. Extensive experimental results with real robotic wheelchairs at relatively high speeds in tight scenarios are presented."
     },
@@ -3652,7 +3653,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -3680,7 +3681,7 @@
             }
         ],
         "note": "Best video Award 2nd Prize",
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning","perception"
         ],
@@ -3698,7 +3699,7 @@
         "venue": "Workshop The future of multiple-robot research and its multiple identities at the RSJ/IEEE Int. Conf. on Robotics and Intelligent Systems (IROS)",
         "links": [],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -3728,7 +3729,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -3757,7 +3758,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "v-charge"
+            "phd-mp"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -3790,7 +3791,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -3834,7 +3835,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "perception","motion planning"
         ],
@@ -3863,7 +3864,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -3893,7 +3894,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning","perception"
         ],
@@ -3918,7 +3919,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
             "multi-robot","perception"
         ],
@@ -3948,7 +3949,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning","perception"
         ],
@@ -3978,7 +3979,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning","perception"
         ],
@@ -4008,7 +4009,7 @@
         ],
         "note": null,
         "belongs_to_projects": [
-            "alstom"
+            "phd-mp"
         ],
         "topics":[
             "multi-robot","motion planning"
@@ -4038,7 +4039,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","perception"
         ],
@@ -4058,7 +4059,7 @@
         "venue": "Workshop Many-Robot Systems: Crossing the Reality Gap at the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -4088,7 +4089,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -4110,7 +4111,7 @@
         "venue": "IEEE/RSJ Int. Conf. on Intelligent Robots and Systems, Symposium: Robot Demonstrations",
         "links": [],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-pixelbots",
         "abstract": null
     },
     {
@@ -4132,7 +4133,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
             "multi-robot","motion planning"
         ],
@@ -4162,7 +4163,7 @@
             }
         ],
         "note": "Nominated Best Student Paper Award",
-        "belongs_to_projects": null,
+        "belongs_to_projects": "phd-mp",
         "topics":[
             "multi-robot","motion planning"
         ],
