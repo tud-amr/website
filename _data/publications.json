@@ -47,7 +47,7 @@
         "note": null,
         "belongs_to_projects": "nwa-act",
         "topics":[
-            "motion planning","perception","transportation"    
+            "perception"    
         ],
         "abstract": "Predicting the future behavior of human road users is an important aspect for the development of risk-aware autonomous vehicles. While many models have been developed towards this end, effectively capturing and predicting the variability inherent to human behavior still remains an open challenge. This paper proposes TrajFlow—a new approach for probabilistic trajectory prediction based on Normalizing Flows. We reformulate the problem of capturing distributions over trajectories into capturing distributions over abstracted trajectory features using an autoencoder, simplifying the learning task of the Normalizing Flows. TrajFlow outperforms state-of-the-art behavior prediction models in capturing full trajectory distributions in two synthetic benchmarks with known true distributions, and is competitive on the naturalistic datasets ETH/UCY, rounD, and nuScenes. Our results demonstrate the effectiveness of TrajFlow in probabilistic prediction of human behavior."
     },
@@ -97,7 +97,7 @@
         ],
         "image": "/assets/images/papers/m3p2i_aip/rw_icon.png",
         "belongs_to_projects": [
-            "trilogy", "airlab-manipulation","ahold","nwo","enw","interact"
+            "trilogy", "airlab-manipulation","interact"
         ],
         "topics":[
             "motion planning","task planning"  
@@ -123,7 +123,7 @@
         ],
         "image": "/assets/images/papers/nCBF-ECC24/combined_figure4.png",
         "belongs_to_projects": [
-        	"harmony","horizon"
+        	"harmony"
         ],
         "topics":[
             "motion planning"    
@@ -156,7 +156,7 @@
         "abstract": "For an autonomous vehicle to operate reliably within real-world traffic scenarios, it is imperative to assess the repercussions of its prospective actions by anticipating the uncertain intentions exhibited by other participants in the traffic environment. Driven by the pronounced multi-modal nature of human driving behavior, this paper presents an approach that leverages Bayesian beliefs over the distribution of potential policies of other road users to construct a novel risk-aware probabilistic motion planning framework. In particular, we propose a novel contingency planner that outputs long-term contingent plans conditioned on multiple possible intents for other actors in the traffic scene. The Bayesian belief is incorporated into the optimization cost function to influence the behavior of the short-term plan based on the likelihood of other agents' policies. Furthermore, a probabilistic risk metric is employed to fine-tune the balance between efficiency and robustness. Through a series of closed-loop safety-critical simulated traffic scenarios shared with human-driven vehicles, we demonstrate the practical efficacy of our proposed approach that can handle multi-vehicle scenarios."
       },
       
-    {
+    {  
         "title": "Probabilistic Motion Planning and Prediction via Partitioned Scenario Replay",
         "authors": [
             "Oscar de Groot",
@@ -175,7 +175,7 @@
         ],
         "image": "/assets/images/papers/psr/eyecatcher.png",
         "belongs_to_projects": [
-            "probabilistic-planning","harmonia"
+            "probabilistic-planning"
         ],
         "topics":[
             "motion planning"    
@@ -247,7 +247,7 @@
             }
         ],
         "belongs_to_projects": [
-            "airlab-ondemand","ahold"
+            "airlab-ondemand"
         ],
         "topics":[
             "transportation","task planning"    
@@ -270,10 +270,10 @@
         ],
         "image": "/assets/images/papers/multi_objective/mo_mrta.png",
         "belongs_to_projects": [
-            "harmony","horizon"
+            "harmony"
         ],
         "topics":[
-            "transportation","task planning","multi-robot"   
+            "task planning","multi-robot"   
         ],
         "abstract": "We study the problem of finding statistically distinct plans for stochastic task assignment problems such as online multi-robot pickup and delivery (MRPD) when facing multiple competing objectives. In many real-world settings robot fleets do not only need to fulfil delivery requests, but also have to consider auxiliary objectives such as energy efficiency or avoiding human-centered work spaces. We pose MRPD as a multi-objective optimization problem where the goal is to find MRPD policies that yield different trade-offs between given objectives. There are two main challenges: 1) MRPD is computationally hard, which limits the number of trade-offs that can reasonably be computed, and 2) due to the random task arrivals, one needs to consider statistical variance of the objective values in addition to the average. We present an adaptive sampling algorithm that finds a set of policies which i) are approximately optimal, ii) approximate the set of all optimal solutions, and iii) are statistically distinguishable. We prove completeness and adapt a state-of-the-art MRPD solver to the multi-objective setting for three example objectives. In a series of simulation experiments we demonstrate the advantages of the proposed method compared to baseline approaches and show its robustness in a sensitivity analysis. The approach is general and could be adapted to other multi-objective task assignment and planning problems under uncertainty."
       },
@@ -294,7 +294,7 @@
         ],
         "image": "/assets/images/papers/multi_objective/scalarizing_weighted_maximum.png",
         "belongs_to_projects": [
-            "harmony","horizon"
+            "harmony"
         ],
         "topics":[
             "motion planning","task planning"  
@@ -323,7 +323,7 @@
             }
         ],
         "belongs_to_projects": [
-            "game-theoretic-mp"
+            "game-theoretic-mp", "interact"
         ],
         "topics":[
             "motion planning","multi-robot"   
@@ -358,7 +358,7 @@
         "image": "https://lasse-peters.net/static/projects/contingency-games.png",
         "note": null,
         "belongs_to_projects": [
-            "game-theoretic-mp","harmonia","interact","nsf"
+            "game-theoretic-mp","interact"
         ],
         "topics":[
             "motion planning","multi-robot"   
