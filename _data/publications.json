@@ -25,6 +25,27 @@
         "abstract": "As robots shift from industrial to human-centered spaces, adopting mobile manipulators, which expand workspace capabilities, becomes crucial. In these settings, seamless interaction with humans necessitates compliant control. Two common methods for safe interaction, admittance, and impedance control, require force or torque sensors, often absent in lowercost or lightweight robots. This paper presents an adaption of impedance control that can be used on current-controlled robots without the use of force or torque sensors and its application for compliant control of a mobile manipulator. A calibration method is designed that enables estimation of the actuators’ current/torque ratios and frictions, used by the adapted impedance controller, and that can handle model errors. The calibration method and the performance of the designed controller are experimentally validated using the Kinova GEN3 Lite arm. Results show that the calibration method is consistent and that the designed controller for the arm is compliant while also being able to track targets with fivemillimeter precision when no interaction is present. Additionally, this paper presents two operational modes for interacting with the mobile manipulator: one for guiding the robot around the workspace through interacting with the arm and another for executing a tracking task, both maintaining compliance to external forces. These operational modes were tested in realworld experiments, affirming their practical applicability and effectiveness."
       },
     {
+        "title": "TrajFlow: Learning Distributions over Trajectories for Human Behavior Prediction",
+        "authors": [
+            "A. Meszaros",
+            "J. F. Schumann",
+            "J. Alonso-Mora",
+            "A. Zgonnikov",
+            "J. Kober"
+        ],
+        "date": "2024-07-15",
+        "type": "conference",
+        "venue": "IEEE Intelligent Vehicles Symposium (IV)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24_meszaros_iv.pdf"
+            }
+        ],
+        "note": null,
+        "belongs_to_projects": "nwa-act",
+        "abstract": "Predicting the future behavior of human road users is an important aspect for the development of risk-aware autonomous vehicles. While many models have been developed towards this end, effectively capturing and predicting the variability inherent to human behavior still remains an open challenge. This paper proposes TrajFlow—a new approach for probabilistic trajectory prediction based on Normalizing Flows. We reformulate the problem of capturing distributions over trajectories into capturing distributions over abstracted trajectory features using an autoencoder, simplifying the learning task of the Normalizing Flows. TrajFlow outperforms state-of-the-art behavior prediction models in capturing full trajectory distributions in two synthetic benchmarks with known true distributions, and is competitive on the naturalistic datasets ETH/UCY, rounD, and nuScenes. Our results demonstrate the effectiveness of TrajFlow in probabilistic prediction of human behavior."
+    },
+    {
         "title": "Physically Grounded Optimal Realizations of Symbolic Plans",
         "authors": [
             "Andreu Matoses Gimenez",
