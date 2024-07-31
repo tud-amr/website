@@ -5,12 +5,13 @@ belongs_to_areas: [social-robots, mobile-manipulation] # List of area IDs, separ
 date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, the focus is on enabling mobile robots to coexist with humans by developing novel control and communication methods to demonstrate safe motion in dynamic environments. These methods are then tested in real-life situations using autonomous boats navigating in canals and autonomous cars which will drive in an urban environment.  
-image: /assets/images/projects/INTERACT_picture.jpg
+image: /assets/images/projects/Veni_project_image.png
 links: # If you have a website for the project, repos, etc. put it here.
-    - name: "Github: Fabrics Implementation"
-      url: "https://github.com/tud-amr/fabrics"
-    - name: "Github: multi-agent fabrics"
-      url: "https://github.com/tud-amr/multi-robot-fabrics"
+    - name: "Github: multi-robot collision avoidance"
+      url: "https://github.com/tud-amr/mrca_vc"
+    - name: "Github: MPCC implementation"
+      url: "https://github.com/tud-amr/amr-lmpcc"
+
 fundings: This project is funded by the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Prof. Javier Alonso-Mora
@@ -27,15 +28,22 @@ people: # If you put your name in the same way you have it in your _people entry
 
 ## About the Project
 
-In a modern day smart city, a mobile robot needs to coexist with humans and other robots in a cluttered and dynamic environment. In the near future, fleets of autonomous boats and cars will be used for mobility on-demand. However, this would require developing control and communication methods which work for a variety of robotic systems and most importantly can be used in an ever changing surrounding. Previous research methods have typically...    
+In a modern day smart city, a mobile robot needs to coexist with humans and other robots in a cluttered and dynamic environment. In the near future, fleets of autonomous boats and cars will be used for mobility on-demand. However, this would require developing control and communication methods which work for a variety of robotic systems and most importantly can be used in an ever changing surrounding. Previous research methods have typically focused on low speed operation and highly simplistic environments which are not obtained in real-life. This project focuses on high performance motion planning methods which can safely operate during a realistic demonstration and be used in a variety of challenging situations. 
 
-## Completed Work
+The key challenge involved during this decision making problem is to develop algorithms which in real-time can yield safe motion by selecting a socially intuitive path from the large number of possibile trajectories. In this regard, one algorithm that has been developed is the Model Predictive Contouring Control (MPCC) which provides real-time collision free navigation for robots in presence of other agents in an environment. This motion planner can be used to encode human-like driving behavior using machine learning techniques. This entire solution can be fully implemented on the board of the robot and has been tested using various experimental setups to ensure smooth operation.  
 
-<div class="ratio ratio-16x9">  
-  <iframe src="https://www.youtube.com/embed/AldMFKnlW3M?si=X570HkJbSm7nanBI&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+Another significant contribution has been to develop decentralized and communication free collision avoidance for multi-robot systems which can be utilised in autonomous fleet operation. This method is termed buffered uncertainty-aware voronoi cells(B-UAVC) and computes a safe region for any  number of robots such that it can navigate in complex surroundings. This method is both scalable and robust to sensing uncertainties and has been tested through several experiments conducted in the lab.   
+
+## Project Demonstrations
+
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe src="https://www.youtube.com/embed/i8HRGeOmcH4?si=KPr0cvrksuNYPG1G&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="video-wrapper ratio ratio-16x9">  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/crGTsiiilHo?si=rPH4SBRroHrIKA_4&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
   </iframe>
 </div>
 
 ## Funding & Partners
 
-This project has received funding from the European Union through ERC, INTERACT, under Grant 101041863. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the European Union. Neither the European Union nor the granting authority can be held responsible for them.
+This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.

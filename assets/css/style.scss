@@ -78,4 +78,20 @@ h2 {
     background: #D107A9;
 }
 
+.video-wrapper {
+    margin-bottom: 20px; /* Adjust this value to increase or decrease the space between videos */
+}
+.ratio-16x9 {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+    height: 0;
+}
+.ratio-16x9 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
   
