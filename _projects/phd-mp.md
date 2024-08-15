@@ -1,11 +1,11 @@
 ---
-title: "VENI: Safe and socially intuitive navigation"
-project_id: veni # ID of the project, used by publications to display in this project.
-belongs_to_areas: [social-robots, mobile-manipulation] # List of area IDs, separated by commas.
+title: "Multi Agent Motion Planning"
+project_id: phd-mp # ID of the project, used by publications to display in this project.
+belongs_to_areas: [autonomous-vehicles,flying-robots] # List of area IDs, separated by commas.
 date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, the focus is on enabling mobile robots to coexist with humans by developing novel control and communication methods to demonstrate safe motion in dynamic environments. These methods are then tested in real-life situations using autonomous boats navigating in canals and autonomous cars which will drive in an urban environment.  
-image: /assets/images/projects/Veni_project_image.png
+image: /assets/images/projects/phd-mp.png
 links: # If you have a website for the project, repos, etc. put it here.
     - name: "Github: multi-robot collision avoidance"
       url: "https://github.com/tud-amr/mrca_vc"
@@ -38,11 +38,10 @@ Another significant contribution has been to develop decentralized and communica
 ## Project Demonstrations
 
 <div class="video-wrapper ratio ratio-16x9"> 
-  <iframe src="https://www.youtube.com/embed/i8HRGeOmcH4?si=KPr0cvrksuNYPG1G&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/seMRMa82FzA?si=SvNQuZQg2bRRYltG&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="video-wrapper ratio ratio-16x9">  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/crGTsiiilHo?si=rPH4SBRroHrIKA_4&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-  </iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/s9lvMvFcuCE?si=6g3MYMGtXsAh5FAb&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Funding & Partners

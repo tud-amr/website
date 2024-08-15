@@ -1,24 +1,24 @@
 project tags:
 
-scene-reasoning-team		--> ONRG (Hai and Alvaro)
-ridepooling					--> Andres Fielbaum +
-airlab-manipulation			--> Ahold (Max Spahn)
-airlab-ondemand				--> Ahold (Maxi K)
-harmony						--> H2020 Harmony
-interact					--> ERC Interact
-probabilistic-planning		--> Oscar de Groot
-game-theoretic-mp			--> Lasse
-safe-up						--> H2020 SafeUp (Xinwei)
+scene-reasoning-team		--> ONRG (Hai and Alvaro) (exists)
+ridepooling					--> Andres Fielbaum +  (exists)
+airlab-manipulation			--> Ahold (Max Spahn)  (exists)
+airlab-ondemand				--> Ahold (Maxi K)     (exists)
+harmony						--> H2020 Harmony      (exists)
+interact					--> ERC Interact       (exists)
+probabilistic-planning		--> Oscar de Groot     (exists) 
+game-theoretic-mp			--> Lasse              (exists) 
+safe-up						--> H2020 SafeUp (Xinwei) 
 safevru						--> NWO (Laura+Oscar)
-veni						--> NWO Veni (Bruno, Hai, etc)
-nwa-act						--> NWO NWA ACT (Anna, Khaled)
-drones-emergency			--> Police
-ara 						--> Amazon Research Award
+veni						--> NWO Veni (Bruno, Hai, etc) (done) 
+nwa-act						--> NWO NWA ACT (Anna, Khaled) (exists)
+drones-emergency			--> Police    (exists)
+ara 						--> Amazon Research Award (create this today)
 ams-urban					--> AMS urban robotics (M. Cap)
-cinematography				--> Tobias' PhD project with ETH
+cinematography				--> Tobias' PhD project with ETH (create this today)
 postdoc-mp 					--> Postdoc & first years AMR Javier motion planning
 postdoc-edu					--> Duckietown
 postdoc-multi				--> Postdoc multi-robots
-phd-mp						--> PhD Javier motion planning
-phd-pixelbots				--> Pixelbots
-trilogy                     --> Trilogy project
+phd-mp						--> PhD Javier motion planning (created)
+phd-pixelbots				--> Pixelbots (done)
+trilogy                     --> Trilogy project (exists)
