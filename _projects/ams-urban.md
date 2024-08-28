@@ -5,7 +5,7 @@ belongs_to_areas: [transportation] # List of area IDs, separated by commas.
 date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, the focus is on enabling mobile robots to coexist with humans by developing novel control and communication methods to demonstrate safe motion in dynamic environments. These methods are then tested in real-life situations using autonomous boats navigating in canals and autonomous cars which will drive in an urban environment.  
-image: /assets/images/projects/Veni_project_image.png
+image: /assets/images/projects/ams-urban.png
 links: # If you have a website for the project, repos, etc. put it here.
     - name: "Github: multi-robot collision avoidance"
       url: "https://github.com/tud-amr/mrca_vc"

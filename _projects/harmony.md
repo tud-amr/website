@@ -45,6 +45,17 @@ Traditionally task scheduling and planning has been decoupled from motion planni
 
 The goal is to have an integrated approach for mobile manipulation in uncertain and dynamic environments shared with humans, which accounts for social interactions, navigation and coordination tasks, and that provides performance guarantees (in expectation).
 
+
+## Project Demonstrations
+
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/sZBbWMnwle8?si=ngmtFusLo2cTxrJO&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="video-wrapper ratio ratio-16x9">  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/qsyd7NVgfRI?si=gq0ylGr3xbVtF_tD&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
 ## Partners
 
   <img class="img-fluid" height="200" src="{% include fix_link.html link='/assets/images/projects/harmony/harmony_partners_logos.png' %}" alt="TU Delft partners">

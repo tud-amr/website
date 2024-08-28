@@ -28,3 +28,16 @@ In order for robots to be helpful companions in our everyday lives, they must be
 A principled mathematical framework for modeling such interaction of multiple agents over time is provided by the field of dynamic game theory. In this framework, agents are modeled as rational decision-making entities with potentially differing objective whose actions affect the evolution of the state of a shared environment. The flexibility of this framework allows to capture a wide range of aspects and challenges common to real-world interactions, including noncooperative behavior, bounded rationality, and dynamic evolution of potentially imperfect and incomplete information available to each player. When solved to a generalized equilibrium concept, these problems can not only account for interdependence of preference but also for interdependence of feasible actions, e.g., collision avoidance constraints. This vast modeling capacity makes dynamic game theory an attractive framework for autonomous planning in the presence of other agents.
 
 The goal of this project is to push the state-of-the-art in motion planning for multi-agent interaction by combining game-theoretic approaches with learning-based techniques. Through this combination, we aim to develop algorithms that admit autonomous strategic decision-making in realis- tic real-world scenarios with limited computational resources.
+
+## Project Demonstrations
+
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/4xA3ZSHAa7w?si=qphzD0O9bHWqoE-r&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="video-wrapper ratio ratio-16x9">  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/f0KJuCC1Xyo?si=5-RYkDc5jyExWSw5&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+## Funding & Partners
+
+This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.

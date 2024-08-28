@@ -29,9 +29,15 @@ people: # If you put your name in the same way you have it in your _people entry
 
 ## About the Project
 
-INTERACT aims to equip mobile robots with the ability to navigate and operate safely in human-populated environments. Leveraging advancements in Motion Planning, Multi-robot Task Assignment, and Machine Learning, this project seeks to overcome the challenges of modeling intuition and ensuring safety in complex, uncertain settings. By developing intuitive models from past interactions and integrating them into novel optimization methods, INTERACT will enable robots to perform seamless, interaction-aware navigation and task planning. This foundational work paves the way for a new era of automation in both industrial and urban settings, where robots and humans can coexist harmoniously.
+INTERACT aims to equip mobile robots with the ability to navigate and operate safely in human-populated environments. Leveraging advancements in motion planning, multi-robot task assignment, and machine learning, this project seeks to overcome the challenges of modeling intuition and ensuring safety in complex, uncertain settings. By developing intuitive models from past interactions and integrating them into novel optimization methods, INTERACT will enable robots to perform seamless, interaction-aware navigation and task planning. This foundational work paves the way for a new era of automation in both industrial and urban settings, where robots and humans can coexist harmoniously.
 
-## Ongoing Work
+One recent contribution from this project has been development of task and motion planning (TAMP) algorithms which are used in robotic systems to autonomously decide the high-level actions along with the associated motions. Previous research into TAMP algorithms have several simplifications and often do not account for robot dynamics or issues with low-level controllers. This project uses GPU based physics simulators to find high-quality realizations which can be directly implemented in the real system as it accounts for robot dynamics. Experimental results validated the effectiveness of this algorithm for a pick and place task while finding low-cost feasible solutions in 1-2 minutes. 
+
+Another problem addressed in this project is that of real-time motion planning for multiple robotic manipulators in close proximity of each other. A novel method called multi-robot dynamics fabrics(MRDF) is developed which uses dynamic fabrics that rely on differential equations to solve for local motion planning. This method enables higher replanning frequencies and makes it useful for complex systems in dynamic environments. An online local motion planning algorithm is built that can enable multiple manipulators to operate in a shared workspace. The method is then validated in several pick-and-place scenarios obtaining high success rates and a real-time performance.   
+
+
+
+## Project Demonstrations
 
 <div class="ratio ratio-16x9">  
   <iframe src="https://www.youtube.com/embed/AldMFKnlW3M?si=X570HkJbSm7nanBI&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
