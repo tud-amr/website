@@ -6,20 +6,22 @@ date: 2017-01-01 # started date, approximated if not sure. Just for display purp
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, the focus is on introducing an alternative approach to autonomous driving termed as "Parallel Autonomy." This method tries to solve the safety problem associated with self driving.   
 image: /assets/images/projects/postdoc-mp.png
-links: # If you have a website for the project, repos, etc. put it here.
-    - name: "Github: multi-robot collision avoidance"
-      url: "https://github.com/tud-amr/mrca_vc"
-    - name: "Github: MPCC implementation"
-      url: "https://github.com/tud-amr/amr-lmpcc"
+# links: # If you have a website for the project, repos, etc. put it here.
+#     - name: "Github: multi-robot collision avoidance"
+#       url: "https://github.com/tud-amr/mrca_vc"
+#     - name: "Github: MPCC implementation"
+#       url: "https://github.com/tud-amr/amr-lmpcc"
 
-fundings: This project is funded by the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916
+fundings: This project was funded by the Toyota Research Institute(TRI)
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     
       # extra_info: PhD candidates
-    - name: Hai Zhu
-      extra_info: PhD Candidate
-    - name: Bruno Brito
-      extra_info: PhD Candidate
+    - name: Wilko Schwarting
+      # extra_info: PhD Candidate
+    - name: Daniela Rus
+      # extra_info: PhD Candidate
+    - name: Liam Paull
+    - name: Sertac Karaman
     - name: Prof. Javier Alonso-Mora
       extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
@@ -45,6 +47,9 @@ This project also focused on other safety issues for an autonomous vehicle. A no
   <iframe width="560" height="315" src="https://www.youtube.com/embed/gmpjYLksUx8?si=tu-gowe54hyb0j-s&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Funding & Partners
-
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+## Partners
+<div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
+  <a itemprop="url" href="https://www.tri.global/">
+  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/postdoc-mp/tri.png' %}" alt="Toyota Research Institute">
+  </a>
+</div>

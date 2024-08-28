@@ -45,6 +45,16 @@ Another significant contribution has been to develop decentralized and communica
   </iframe>
 </div>
 
-## Funding & Partners
+## Partners
+<div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
+  <a itemprop="url" href="https://www.ams-institute.org/">
+  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/trilogy/ams.png' %}" alt="AMS Institute">
+  </a>
+  <a itemprop="url" href="https://www.waternet.nl/">
+  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/veni/Logo_Waternet-blauw.png' %}" alt="Waternet">
+  </a>
+  <a itemprop="url" href="https://www.nwo.nl/en/">
+  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/veni/nwo.png' %}" alt="NWO Veni 15916">
+  </a>
+</div>
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.

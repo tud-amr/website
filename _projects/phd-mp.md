@@ -44,6 +44,5 @@ Another contribution of this project was the development of methods based on Vel
   <iframe width="560" height="315" src="https://www.youtube.com/embed/s9lvMvFcuCE?si=6g3MYMGtXsAh5FAb&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Funding & Partners
+## Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.

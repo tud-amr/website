@@ -6,20 +6,20 @@ date: 2017-01-01 # started date, approximated if not sure. Just for display purp
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   This project focuses on developing methods to validate driving safety for autonomous vehicles and ensure that at each time instance, the vehicle should not have a high probability of colliding with a traffic participant. This is done using reachability analysis and developing probabilistic risk metrics capable of identifying potential crashes in advance. 
 image: /assets/images/projects/safe-up.png
-links: # If you have a website for the project, repos, etc. put it here.
-    - name: "Github: multi-robot collision avoidance"
-      url: "https://github.com/tud-amr/mrca_vc"
-    - name: "Github: MPCC implementation"
-      url: "https://github.com/tud-amr/amr-lmpcc"
+# links: # If you have a website for the project, repos, etc. put it here.
+#     - name: "Github: multi-robot collision avoidance"
+#       url: "https://github.com/tud-amr/mrca_vc"
+#     - name: "Github: MPCC implementation"
+#       url: "https://github.com/tud-amr/amr-lmpcc"
 
-fundings: This project is funded by the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916
+fundings: This work was supported in part by the SAFE-UP Project through the European Union’s Horizon 2020 Research and Innovation Program under Grant 861570
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     
       # extra_info: PhD candidates
-    - name: Hai Zhu
-      extra_info: PhD Candidate
-    - name: Bruno Brito
-      extra_info: PhD Candidate
+    - name: Xinwei Wang
+      # extra_info:
+    - name: Meng Wang
+      # extra_info: PhD Candidate
     - name: Prof. Javier Alonso-Mora
       extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
@@ -38,12 +38,12 @@ Another contribution of this project was the development of a collision detectio
 
 ## Project Demonstrations
 
-<div class="video-wrapper ratio ratio-16x9"> 
+<!-- <div class="video-wrapper ratio ratio-16x9"> 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/OOMZn5TQ00Q?si=gMRI97EfWVCcmhhX&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 <div class="video-wrapper ratio ratio-16x9">  
   <iframe width="560" height="315" src="https://www.youtube.com/embed/tkRbsAuSTrA?si=PnL1cEa3R16thsAv&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+</div> -->
 
 ## Funding & Partners
 
