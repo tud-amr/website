@@ -274,12 +274,12 @@
             "Ufuk Topcu",
             "David Fridovich-Keil"
         ],
-        "date": "2024-02-01",
-        "type": "other",
-        "venue": "arxiv preprint arxiv:2402.08902",
+        "date": "2024-08-31",
+        "type": "conference",
+        "venue": "16th Workshop on the Algorithmic Foundations of Robotics (WAFR)",
         "links": [
             {
-                "pdf": "/assets/files/publications/24-liu-arxiv.pdf",
+                "pdf": "/assets/files/publications/24-liu-wafr.pdf",
                 "web": "https://xinjie-liu.github.io/projects/bayesian-inverse-games/"
             }
         ],
