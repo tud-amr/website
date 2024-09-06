@@ -3,18 +3,19 @@ title: "Future transport systems: On-Demand Ridepooling "
 project_id: ridepooling # ID of the project, used by publications to display in this project.
 belongs_to_areas: [transportation] # List of area IDs, separated by commas.
 date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
-# end_date: 2022-01-01 # end date if ended, approximated if not sure.
+# end_date: 2024-01-01 # end date if ended, approximated if not sure.
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   Routing and analysis of on-demand ridepooling systems, and integration into public transport. 
 image: /assets/images/projects/on_demand_taxis.jpg
 links: # If you have a website for the project, repos, etc. put it here.
     # - name: Project Website
     #   url: "/"
-fundings: This project is funded by NWO-TTW.
+fundings: This project is funded in part by Didi Udian Technologies Shenzhen.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Dr. Andres Fielbaum
+      extra_info: Postdoctoral researcher
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -36,4 +37,4 @@ This project also introduced a highly scalable anytime optimal algorithm for rid
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This project was funded in part by Didi Udian Technologies Shenzhen.
