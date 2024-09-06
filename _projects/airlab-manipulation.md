@@ -2,10 +2,10 @@
 title: "AI for Retail: Mobile Manipulation in Dynamic Environments"
 project_id: airlab-manipulation # ID of the project, used by publications to display in this project.
 belongs_to_areas: [mobile-manipulation] # List of area IDs, separated by commas.
-date: 2020-09-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2019-09-01
+end_date: 2024-05-31
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   This project looks into developing novel trajectory generation methods for mobile manipulation in dynamic environments, in the context of retail.
-
 image: /assets/images/projects/airlab.png
 links: # If you have a website for the project, repos, etc. put it here.
     - name: Project Website
