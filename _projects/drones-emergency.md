@@ -19,11 +19,11 @@ people: # If you put your name in the same way you have it in your _people entry
     - name: Thijs Niesten 
       extra_info: Research Engineer
     - name: Prof. Laura Ferranti
-      extra_info: Reliable Control (R2C) Lab TU Delft
+    # extra_info: Reliable Control (R2C) Lab TU Delft
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
     - name: Prof. Robert Babuska 
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -49,4 +49,5 @@ Another contribution from this project is a novel method that aims at understand
 
 ## Funding & Partners
 
+This project is funded by the National Police (Politie) of the Netherlands.
 This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
