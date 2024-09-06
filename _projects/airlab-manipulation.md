@@ -43,4 +43,4 @@ In addition to this, the project also introduced a reactive task and motion plan
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This project has been funded by Ahold Delhaize.
