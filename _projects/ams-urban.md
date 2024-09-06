@@ -15,11 +15,10 @@ links: # If you have a website for the project, repos, etc. put it here.
 fundings: Amsterdam Institute for Advanced Metropolitan Solutions (AMS).
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     
-      # extra_info: PhD candidates
     - name: Michal Cap
-      extra_info: Department of Cognitive Robotics, TU Delft
+      extra_info: Postdoctoral researcher
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+      # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
@@ -51,3 +50,6 @@ This project also looks at waterways and introduces a trajectory planner for aut
   </a>
 </div>
 
+## Funding
+
+This project is funded by the Amsterdam Institute for Advanced Metropolitan Solutions (AMS).
