@@ -4,7 +4,7 @@ project_id: trilogy # ID of the project, used by publications to display in this
 belongs_to_areas: [autonomous-vehicles] # List of area IDs, separated by commas.
 date: 2020-09-01
 end_date: 2025-01-15
-description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
+description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card
   Together with industry partners, we develop motion planning algorithms to navigate urban canals accounting for the interactions with other vessels.
 image: /assets/images/projects/trilogy/vessels_planning.png
 links: # If you have a website for the project, repos, etc. put it here.
