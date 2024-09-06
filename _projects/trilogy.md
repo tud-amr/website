@@ -2,7 +2,8 @@
 title: "TRiLOGy: Sustainable Transportation and Logistics Over Water: Electrification, Automation, and Optimization"
 project_id: trilogy # ID of the project, used by publications to display in this project.
 belongs_to_areas: [autonomous-vehicles] # List of area IDs, separated by commas.
-date: 2020-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2020-09-01
+end_date: 2025-01-15
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   Together with industry partners, we develop motion planning algorithms to navigate urban canals accounting for the interactions with other vessels.
 image: /assets/images/projects/trilogy/vessels_planning.png
@@ -12,12 +13,12 @@ links: # If you have a website for the project, repos, etc. put it here.
     - name: MPPI-ISAAC Webpage
       url: "https://sites.google.com/view/mppi-isaac/"
       
-fundings: "NWO Top Sector Water & Maritime: the Blue route, 'Sustainable Transportation and Logistics over Water: Electrification, Automation and Optimization (TRiLOGy)', 2020-2024."
+fundings: NWO Top Sector Water & Maritime: the Blue route, 'Sustainable Transportation and Logistics over Water: Electrification, Automation and Optimization (TRiLOGy)'.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Elia Trevisan 
       extra_info: PhD candidate
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
     - name: Prof. Bilge Atasoy
       extra_info: Key collaborator.
 ---
@@ -42,7 +43,9 @@ This project also presented a method for solving optimal control problems using 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/ovLZmSd-XX8?si=8dpVNsOdYn6p3Ecb&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Partners
+## Funding & Partners
+
+This project is funded by the NWO Top Sector Water & Maritime: the Blue route, 'Sustainable Transportation and Logistics over Water: Electrification, Automation and Optimization (TRiLOGy)'.
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.amsterdam.nl/">
