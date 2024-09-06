@@ -12,7 +12,7 @@ links: # If you have a website for the project, repos, etc. put it here.
 fundings: This project is funded in part by the National Police (Politie) of the Netherlands.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Lasse Peters 
-      # extra_info: website here?
+      extra_info: PhD candidate
     - name: Prof. Laura Ferranti
       # extra_info: Reliable Control (R2C) Lab TU Delft
     - name: Prof. Javier Alonso-Mora
@@ -38,10 +38,6 @@ The goal of this project is to push the state-of-the-art in motion planning for 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/f0KJuCC1Xyo?si=5-RYkDc5jyExWSw5&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Partners
+## Funding & Partners
 
-<div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
-  <a itemprop="url" href="https://www.politie.nl/en">
-  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/police/politie.png' %}" alt="National Police">
-  </a>
-</div>
+
