@@ -10,6 +10,7 @@ image: /assets/images/projects/trilogy/vessels_planning.png
 links: # If you have a website for the project, repos, etc. put it here.
     - name: MPPI-ISAAC Implementation
       url: "https://github.com/tud-airlab/mppi-isaac"
+      
     - name: MPPI-ISAAC Webpage
       url: "https://sites.google.com/view/mppi-isaac/"
 fundings: This project was funded by the NWO Top Sector Water and Maritime: the Blue route.
