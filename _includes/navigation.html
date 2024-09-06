@@ -1,17 +1,18 @@
-<nav class="navbar navbar-expand-md border-bottom border-black border-2 bg-body-tertiary ">
+<nav class="navbar navbar-expand-md border-bottom border-black border-2 bg-body-tertiary">
   <!-- <div class="container-fluid"> -->
   <div class="container-xl">
 
         <a class="navbar-brand p-0 me-5" href="{{ '/' | relative_url }}">
-          <img src="{{ '/assets/images/aml_icon.png' | relative_url}}" alt="logo" width="45  "
+          <img src="{{ '/assets/images/logo_amr_big_text.svg' | relative_url}}" alt="logo" height="40"
             class="d-inline-block align-top m-0">
-          <span class="navbar-name ms-2">{{ site.title }} </span>
+          <!-- <span class="navbar-name ms-2">{{ site.title }} </span> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+          <hr class="d-md-none">
           <ul class="navbar-nav me-auto">
             {% for item in site.data.navigation %}
             {% if item.subpages %}
@@ -39,6 +40,7 @@
             {% endif %}
             {% endfor %}
           </ul>
+          <hr class="d-md-none">
           <!-- <ul class="navbar-nav">
         {% for social in site.data.socials %}
         {% if social.icon == null %}
@@ -48,15 +50,14 @@
         {% endif %}
         {% endfor %} -->
           <span class="navbar-text">
-            <a href="https://www.tudelft.nl/en/3me/departments/cognitive-robotics-cor/"><img
+            <!-- <a href="https://www.tudelft.nl/en/3me/departments/cognitive-robotics-cor/"><img
                 src="{{ '/assets/images/delft_logos/CoR-Logo-small.png' | relative_url}}" class="me-2" alt="logo"
-                height="45"></a>
-            <a href="https://www.tudelft.nl/en"><img
-                src="{{ '/assets/images/delft_logos/TUDelft_logo_rgb.svg' | relative_url}}" class="" alt="logo"
+                height="45"></a> -->
+            <a href="https://www.tudelft.nl/en/me/about/departments/cognitive-robotics-cor/"><img
+                src="{{ '/assets/images/delft_logos/TUDelft_logo_rgb_and_CoR.svg' | relative_url}}" class="pb-1" alt="logo"
                 height="40"></a>
           </span>
         </div>
 
   </div>
-
 </nav>
