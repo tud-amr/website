@@ -2,27 +2,25 @@
 title: "PostDoc-Multi"
 project_id: postdoc-multi # ID of the project, used by publications to display in this project.
 belongs_to_areas: [mobile-manipulation] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2014-09-01
+end_date: 2016-08-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   This project focuses on developing methods to validate driving safety for autonomous vehicles and ensure that at each time instance, the vehicle should not have a high probability of colliding with a traffic participant. This is done using reachability analysis and developing probabilistic risk metrics capable of identifying potential crashes in advance. 
 image: /assets/images/projects/postdoc-multi.png
 links: # If you have a website for the project, repos, etc. put it here.
-    - name: "Github: multi-robot collision avoidance"
-      url: "https://github.com/tud-amr/mrca_vc"
-    - name: "Github: MPCC implementation"
-      url: "https://github.com/tud-amr/amr-lmpcc"
+    # - name: "Github: multi-robot collision avoidance"
+    #   url: "https://github.com/tud-amr/mrca_vc"
+    # - name: "Github: MPCC implementation"
+    #   url: "https://github.com/tud-amr/amr-lmpcc"
 
-fundings: This project is funded by the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916
+fundings: This project is funded at MIT by ONR, SMART and The Boing Company
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     
-      # extra_info: PhD candidates
-    - name: Hai Zhu
-      extra_info: PhD Candidate
-    - name: Bruno Brito
-      extra_info: PhD Candidate
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+      # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
+    - name: Prof. Daniela Rus
+      extra_info: Massachusetts Institute of Technology (MIT)
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -49,4 +47,4 @@ Another contribution of this project was a local planner that helps in collabora
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This project is funded at MIT by ONR, SMART and The Boing Company
