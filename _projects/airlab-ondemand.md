@@ -15,11 +15,11 @@ links: # If you have a website for the project, repos, etc. put it here.
 fundings: This project is funded by Ahold Delhaize.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Maximilian Kronmueller
-      # extra_info: PhD candidate
+      extra_info: PhD candidate
     - name: Andres Fielbaum
-      extra_info: Key collaborator
+      extra_info: Postdoctoral researcher
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+      #extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -44,4 +44,4 @@ Another method developed for vehicle routing focuses on deliveries from multiple
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This project is funded by Ahold Delhaize.
