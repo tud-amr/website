@@ -2,7 +2,8 @@
 title: "SAFEVRU"
 project_id: safevru # ID of the project, used by publications to display in this project.
 belongs_to_areas: [autonomous-vehicles] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2018-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2022-12-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   This project presents a research platform termed SafeVRU which focuses on the interaction between self driving vehicles and vulnerable road users like pedestrians and cyclists. A detailed design structure comprising of vehicle localisation, perception and motion planning modules are developed. 
 image: /assets/images/projects/safevru.png
@@ -14,16 +15,14 @@ image: /assets/images/projects/safevru.png
 
 fundings: This work is funded by the Dutch Science Foundation NWO-TTW Foundation, within the SafeVRU project
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
-    
-      # extra_info: PhD candidates
-    - name: Bruno Brito
-      # extra_info: PhD Candidate
+  
     - name: Oscar de Groot
-      # extra_info: PhD Candidate
+      extra_info: PhD Candidate
     - name: Prof. Laura Ferranti
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+      # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
+    - name: Prof. Dariu Gavrila
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -47,7 +46,10 @@ Another contribution of this project in addition to the platform is an optimisat
   <iframe width="560" height="315" src="https://www.youtube.com/embed/tkRbsAuSTrA?si=PnL1cEa3R16thsAv&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Partners
+## Funding & Partners
+
+This work is funded by the Dutch Science Foundation NWO-TTW Foundation, within the SafeVRU project
+
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.nwo.nl/en/">
   <img class="img-flex" height="90" src="{% include fix_link.html link='/assets/images/projects/safevru/nwo.jpg' %}" alt="AMS Institute">
