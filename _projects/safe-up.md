@@ -2,7 +2,8 @@
 title: "SAFEUP"
 project_id: safe-up # ID of the project, used by publications to display in this project.
 belongs_to_areas: [autonomous-vehicles] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2020-01-01
+end_date: 2023-12-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   This project focuses on developing methods to validate driving safety for autonomous vehicles and ensure that at each time instance, the vehicle should not have a high probability of colliding with a traffic participant. This is done using reachability analysis and developing probabilistic risk metrics capable of identifying potential crashes in advance. 
 image: /assets/images/projects/safe-up.png
@@ -17,12 +18,11 @@ people: # If you put your name in the same way you have it in your _people entry
     
       # extra_info: PhD candidates
     - name: Xinwei Wang
-      # extra_info:
-    - name: Meng Wang
+      extra_info: Postdoctoral researcher
+    - name: Prof. Meng Wang
       # extra_info: PhD Candidate
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
-      # extra_info: Intelligent Vehicles (IV) Group TU Delft
+      # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -47,4 +47,4 @@ Another contribution of this project was the development of a collision detectio
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This work was supported in part by the SAFE-UP Project through the European Union’s Horizon 2020 Research and Innovation Program under Grant 861570.
