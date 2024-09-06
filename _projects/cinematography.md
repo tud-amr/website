@@ -17,10 +17,12 @@ people: # If you put your name in the same way you have it in your _people entry
     
       # extra_info: PhD candidates
     - name: Tobias Nageli
-      extra_info: AIT Lab, ETH Zurich
+      extra_info: PhD candidate, AIT Lab, ETH Zurich
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+      # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
+    - name: Prof. Otmar Hilliges
+      extra_info: ETH Zurich
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -44,4 +46,4 @@ Another aspect of this project focused on human pose estimation using swarm of a
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This project was carried out in collaboration with ETH Zurich.
