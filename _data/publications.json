@@ -61,7 +61,7 @@
         ],
         "date": "2024-07-15",
         "type": "workshop",
-        "venue": "Robotics: Science and Systems (RSS)",
+        "venue": "Robotics: Science and Systems (RSS), Workshop on Frontiers of Optimization for Robotics",
         "links": [
             {
                 "pdf": "/assets/files/publications/24_matoses_rss.pdf"
@@ -313,12 +313,12 @@
             "Ufuk Topcu",
             "David Fridovich-Keil"
         ],
-        "date": "2024-02-01",
-        "type": "other",
-        "venue": "arxiv preprint arxiv:2402.08902",
+        "date": "2024-08-31",
+        "type": "conference",
+        "venue": "16th Workshop on the Algorithmic Foundations of Robotics (WAFR)",
         "links": [
             {
-                "pdf": "/assets/files/publications/24-liu-arxiv.pdf",
+                "pdf": "/assets/files/publications/24-liu-wafr.pdf",
                 "web": "https://xinjie-liu.github.io/projects/bayesian-inverse-games/"
             }
         ],
@@ -1066,7 +1066,7 @@
             "Luzia Knoedler",
             "Javier Alonso-Mora"
         ],
-        "date": "2022-05-01",
+        "date": "2023-04-01",
         "type": "journal",
         "venue": " IEEE Transactions on Automation Science and Engineering (T-ASE)",
         "links": [
