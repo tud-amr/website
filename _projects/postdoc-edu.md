@@ -17,9 +17,12 @@ fundings: MIT
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     
       # extra_info: PhD candidates
+    - name: Michal Cap
     - name: Prof. Javier Alonso-Mora
       # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
-    - name: Andrea Censi, Liam Paull & collaborators
+    - name: Liam Paull
+      extra_info: Massachussets Institute of Technology (MIT)
+    - name: Andrea Censi
       extra_info: Massachussets Institute of Technology (MIT)
 
       
