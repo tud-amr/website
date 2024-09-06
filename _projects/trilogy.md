@@ -2,9 +2,9 @@
 title: "TRiLOGy: Sustainable Transportation and Logistics Over Water: Electrification, Automation, and Optimization"
 project_id: trilogy # ID of the project, used by publications to display in this project.
 belongs_to_areas: [autonomous-vehicles] # List of area IDs, separated by commas.
-date: 2020-09-01
+date: 2020-09-01 # started date, approximated if not sure. Just for display purposes and ordering
 end_date: 2025-01-15
-description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card
+description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   Together with industry partners, we develop motion planning algorithms to navigate urban canals accounting for the interactions with other vessels.
 image: /assets/images/projects/trilogy/vessels_planning.png
 links: # If you have a website for the project, repos, etc. put it here.
@@ -12,15 +12,14 @@ links: # If you have a website for the project, repos, etc. put it here.
       url: "https://github.com/tud-airlab/mppi-isaac"
     - name: MPPI-ISAAC Webpage
       url: "https://sites.google.com/view/mppi-isaac/"
-      
-fundings: NWO Top Sector Water and Maritime: the Blue route
+fundings: This project was funded by the NWO Top Sector Water and Maritime: the Blue route.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
-    - name: Elia Trevisan 
+    - name: Elia Trevisan
       extra_info: PhD candidate
-    - name: Prof. Javier Alonso-Mora
-    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
     - name: Prof. Bilge Atasoy
-      extra_info: Key collaborator.
+    #  extra_info: Universidad de Zaragoza
+    - name: Prof. Javier Alonso-Mora
+    # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
