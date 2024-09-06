@@ -2,8 +2,8 @@
 title: "Parallelized Probabilistic Motion Planning in Dynamic Environments"
 project_id: probabilistic-planning # ID of the project, used by publications to display in this project.
 belongs_to_areas: [autonomous-vehicles, social-robots] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
-end_date: 2024-12-01 # end date if ended, approximated if not sure.
+date: 2020-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2024-12-31 # end date if ended, approximated if not sure.
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   This project develops probabilistic motion planners for social robots and automated vehicles. Our main goal is to account for the uncertain future motion of obstacles, such as pedestrians, to plan safe and efficient robot motion.
 image: /assets/images/projects/probabilistic-planning/t-mpc.jpg
@@ -15,11 +15,11 @@ people: # If you put your name in the same way you have it in your _people entry
     - name: Oscar de Groot 
       extra_info: PhD candidate
     - name: Prof. Laura Ferranti
-      extra_info: Reliable Control (R2C) Lab TU Delft
+    # extra_info: Reliable Control (R2C) Lab TU Delft
     - name: Prof. Dariu Gavrila 
       extra_info: Intelligent Vehicles (IV) Group TU Delft
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
