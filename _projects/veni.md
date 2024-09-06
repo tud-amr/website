@@ -2,7 +2,8 @@
 title: "VENI: Safe and socially intuitive navigation"
 project_id: veni # ID of the project, used by publications to display in this project.
 belongs_to_areas: [social-robots, mobile-manipulation] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2017-09-01
+end_date: 2020-08-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, the focus is on enabling mobile robots to coexist with humans by developing novel control and communication methods to demonstrate safe motion in dynamic environments. These methods are then tested in real-life situations using autonomous boats navigating in canals and autonomous cars which will drive in an urban environment.  
 image: /assets/images/projects/Veni_project_image.png
@@ -45,7 +46,10 @@ Another significant contribution has been to develop decentralized and communica
   </iframe>
 </div>
 
-## Partners
+## Funding & Partners
+
+This project is funded by the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916.
+
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.ams-institute.org/">
   <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/trilogy/ams.png' %}" alt="AMS Institute">
