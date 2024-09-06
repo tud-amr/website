@@ -5,27 +5,24 @@ belongs_to_areas: [autonomous-vehicles,flying-robots] # List of area IDs, separa
 date: 2010-09-01
 end_date: 2014-01-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
-  In this project, the focus is on building motion planning methods for multi-robot coordination. Often times methods that work well for single robots do not scale well with increasing robot density. Here, the focus is on both car-like robots and aerial vehicles and the developed methods have been tested through several experiments to ensure effective performance. 
+  In this project, the focus is on building motion planning methods for multi-robot coordination. Often times methods that work well for single robots do not scale well with increasing robot density. Here, the focus is on both car-like robots and aerial vehicles and the developed methods have been tested through several experiments to ensure effective performance.
 image: /assets/images/projects/phd-mp.png
-links: # If you have a website for the project, repos, etc. put it here.
-    - name: "Github: multi-robot collision avoidance"
-      url: "https://github.com/tud-amr/mrca_vc"
-    - name: "Github: MPCC implementation"
-      url: "https://github.com/tud-amr/amr-lmpcc"
-fundings: This project was funded by Disney Research Zurich.
+# links: # If you have a website for the project, repos, etc. put it here.
+#     - name: "Github: multi-robot collision avoidance"
+#       url: "https://github.com/tud-amr/mrca_vc"
+#     - name: "Github: MPCC implementation"
+#       url: "https://github.com/tud-amr/amr-lmpcc"
+fundings: This project was funded by Disney Research Zurich
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
-
-    # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    
+      # extra_info: PhD candidates
+    - name: Roland Siegwart
+      extra_info: Autonomous Systems Lab, ETH Zurich
+    - name: Paul Beardsley
+      extra_info: Disney Research Zurich
     - name: Prof. Javier Alonso-Mora
-    - name: Dr. Paul Beardsley
-    extra_info: Disney Research Zurich
-    - name: Prof. Roland Siegwart
-    extra_info: Autonomous Systems Lab, ETH Zurich
-      # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
-      # extra_info: Intelligent Vehicles (IV) Group TU Delft
+      extra_info: Autonomous Systems Lab, ETH Zurich
 ---
-<!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
-<!-- The fields of People, Funding, Links and Publications will be generated automatically -->
 
 ## About the Project
 
