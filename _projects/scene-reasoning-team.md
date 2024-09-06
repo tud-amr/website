@@ -2,7 +2,8 @@
 title: "Distributed high-level scene reasoning with teams of heterogeneous robots"
 project_id: scene-reasoning-team # ID of the project, used by publications to display in this project.
 belongs_to_areas: [flying-robots] # List of area IDs, separated by commas.
-date: 2020-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2020-06-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2024-05-31
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   In this project, we explore how a team of diverse robots can collaboratively monitor complex environments, such as bustling seaports or major city events. Equipped with varied sensors like cameras and microphones, each robot gathers data from its unique perspective...
 image: /assets/images/projects/MC_tracking_class.png
@@ -12,12 +13,14 @@ links: # If you have a website for the project, repos, etc. put it here.
 
     - name: Risk-aware spatio-temporal(RAST)
       url: "https://github.com/tud-amr/RAST_corridor_planning"
-fundings: This project is funded by the Office of Naval Research Global (ONRG) of the US.
+fundings: This project is funded by the Office of Naval Research Global (ONRG).
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Alvaro Serra-Gomez
-    - name: Hai Zhu
+      extra_info: PhD candidate
+    - name: Prof. Eduardo Montijano
+      extra_info: Universidad de Zaragoza
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -41,4 +44,4 @@ This project also addresses the problem of videography drone teams that have to 
 
 ## Funding & Partners
 
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+This project is funded by the Office of Naval Research Global (ONRG).
