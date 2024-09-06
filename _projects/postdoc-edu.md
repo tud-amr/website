@@ -21,7 +21,7 @@ people: # If you put your name in the same way you have it in your _people entry
     - name: Prof. Javier Alonso-Mora
       # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
     - name: Liam Paull
-      extra_info: Massachussets Institute of Technology (MIT)
+      extra_info: Massachusetts Institute of Technology (MIT)
     - name: Andrea Censi
       extra_info: Massachussets Institute of Technology (MIT)
 
