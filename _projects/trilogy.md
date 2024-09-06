@@ -8,11 +8,11 @@ description: >- # >- this means to ignore newlines until next field. This is the
   Together with industry partners, we develop motion planning algorithms to navigate urban canals accounting for the interactions with other vessels.
 image: /assets/images/projects/trilogy/vessels_planning.png
 links: # If you have a website for the project, repos, etc. put it here.
-    - name: MPPI-ISAAC Implementation
-      url: "https://github.com/tud-airlab/mppi-isaac"
-      
-    - name: MPPI-ISAAC Webpage
-      url: "https://sites.google.com/view/mppi-isaac/"
+    # - name: MPPI-ISAAC Implementation
+    #   url: "https://github.com/tud-airlab/mppi-isaac"
+    # - name: MPPI-ISAAC Webpage
+    #  url: "https://sites.google.com/view/mppi-isaac/"
+    
 fundings: This project was funded by the NWO Top Sector Water and Maritime: the Blue route.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Elia Trevisan
