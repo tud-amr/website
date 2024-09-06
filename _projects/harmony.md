@@ -22,7 +22,7 @@ people: # If you put your name in the same way you have it in your _people entry
     - name: Dr. Nils Wilde 
       extra_info: Postdoctoral researcher
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -57,6 +57,8 @@ The goal is to have an integrated approach for mobile manipulation in uncertain 
 
 
 ## Partners
+
+This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 101017008. 
 
   <img class="img-fluid" height="200" src="{% include fix_link.html link='/assets/images/projects/harmony/harmony_partners_logos.png' %}" alt="TU Delft partners">
 
