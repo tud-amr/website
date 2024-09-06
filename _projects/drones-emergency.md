@@ -50,4 +50,9 @@ Another contribution from this project is a novel method that aims at understand
 ## Funding & Partners
 
 This project is funded by the National Police (Politie) of the Netherlands.
-This project has received funding from the Netherlands Organisation for Scientific Research (NWO) Applied Sciences with project Veni 15916. Views and opinions expressed are, however, those of the author(s) only and do not necessarily reflect those of the NWO. Neither the NWO nor the granting authority can be held responsible for them.
+
+<div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
+  <a itemprop="url" href="https://www.politie.nl/en">
+  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/police/politie.png' %}" alt="National Police">
+  </a>
+</div>
