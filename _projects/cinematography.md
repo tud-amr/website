@@ -2,7 +2,8 @@
 title: "Real time Automated Cinematography using Aerial Vehicles"
 project_id: cinematography # ID of the project, used by publications to display in this project.
 belongs_to_areas: [entertainment,flying-robots] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2014-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2018-10-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, automated aerial vehicles are used for real time cinematography so that stunning visuals can be obtained without the need to use expensive gear like helicopters. Algorithms are developed which can provide motion plans to a fleet of drones to enable filming in complex environments. The developed methods are then tested over a number of challenging shots to determine their effectiveness. 
 image: /assets/images/projects/cinematography.png
