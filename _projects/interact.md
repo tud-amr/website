@@ -2,7 +2,7 @@
 title: "INTERACT: Intuitive Interaction for Robots among Humans"
 project_id: interact # ID of the project, used by publications to display in this project.
 belongs_to_areas: [social-robots, mobile-manipulation] # List of area IDs, separated by commas.
-date: 2023-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2022-09-01 # started date, approximated if not sure. Just for display purposes and ordering
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, interactions of mobile robots and humans is key. This concept is considered on multiple spatio-temporal granularities ranging from individual interactions to the macro interaction of a robot fleet with humans, and from short term (local) to long term (global) effects of the interaction. 
 image: /assets/images/projects/INTERACT_picture.jpg
@@ -11,18 +11,22 @@ links: # If you have a website for the project, repos, etc. put it here.
       url: "https://github.com/tud-amr/fabrics"
     - name: "Github: multi-agent fabrics"
       url: "https://github.com/tud-amr/multi-robot-fabrics"
-fundings: This project is funded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
+fundings: This project has received funding from the European Union through an ERC Starting Grant.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Saray Bakker 
-      # extra_info: PhD candidate
+      extra_info: PhD candidate
     - name: Andreu Matoses Gimenez
-      # extra_info: Reliable Control (R2C) Lab TU Delft
-    - name: Dr. Clarence Chen
-      # extra_info: Intelligent Vehicles (IV) Group TU Delft
-    - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+      extra_info: PhD candidate
+    - name: Clarence Chen
+      extra_info: Postdoctoral researcher
+    - name: Max Spahn
+      extra_info: Postdoctoral researcher
+    - name: Nils Wilde
+      extra_info: Postdoctoral researcher
     - name: Prof. Wendelin Bohmer 
       extra_info: Key collaborator.
+    - name: Prof. Javier Alonso-Mora
+    # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
