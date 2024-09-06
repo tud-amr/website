@@ -5,7 +5,7 @@ belongs_to_areas: [mobile-manipulation] # List of area IDs, separated by commas.
 date: 2014-09-01
 end_date: 2016-08-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
-  This project focuses on developing methods to validate driving safety for autonomous vehicles and ensure that at each time instance, the vehicle should not have a high probability of colliding with a traffic participant. This is done using reachability analysis and developing probabilistic risk metrics capable of identifying potential crashes in advance. 
+  This project focuses on developing methods for multi-robot motion planning.
 image: /assets/images/projects/postdoc-multi.png
 links: # If you have a website for the project, repos, etc. put it here.
     # - name: "Github: multi-robot collision avoidance"
