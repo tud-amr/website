@@ -2,7 +2,7 @@
 title: "	ACT: Perceptive Acting Under Uncertainty"
 project_id: nwa-act
 belongs_to_areas: [autonomous-vehicles, social-robots]
-date: 2022-06-01
+date: 2021-06-01
 # end_date: 2028-01-01 # end date if ended, approximated if not sure.
 description: >-
   The ACT project bridges Neuroscenice, Behavioral Psychology, Robotics, and AI to study interactions with humans and autonomous systems and develop new application for safe navigation. Our Lab's role in the project is to create a fundamental understanding of how autonomous agents can cope with uncertainty and demonstrate risk-aware autonomous agents that are demonstrably trustable and predictable.
@@ -16,10 +16,14 @@ people:
       extra_info: PhD candidate
     - name: Anna Meszaros
       extra_info: PhD candidate
+    - name: Daniel Jarne
+      extra_info: Postdoctoral researcher
+    - name: Ahmad Gazar
+      extra_info: Postdoctoral researcher
     - name: Prof. Jens Kober
-      extra_info: Learning, Autonomous, and Intillegent Robots (LAIR) TU Delft
+    # extra_info: Learning, Autonomous, and Intillegent Robots (LAIR) TU Delft
     - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
+    #  extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
 <!-- # Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 ## About the Project
@@ -39,7 +43,9 @@ Another contribution from this project has been to predict human behavior in tra
   <iframe width="560" height="315" src="https://www.youtube.com/embed/xPomLRHs-II?si=20t0JYx8X6RMxBLb&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-## Partners
+## Funding & Partners
+
+This project is funded the the Dutch Research Council NWO-NWA, within the "Acting under Uncertainty (ACT)" project (Grant No. NWA.1292.19.298). 
 
 <img class="img-fluid" src="{% include fix_link.html link='/assets/images/projects/ACT-NWA/partners.png' %}" alt="TU Delft partners" style="height: auto; width: 1000px;">
 
