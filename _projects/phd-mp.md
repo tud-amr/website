@@ -16,6 +16,10 @@ fundings: This project was funded by Disney Research Zurich
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
   
     - name: Prof. Javier Alonso-Mora
+    - name: Dr. Paul Beardsley
+    extra_info: Disney Research Zurich
+    - name: Prof. Roland Siegwart
+    extra_info: Autonomous Systems Lab, ETH Zurich
       # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
       # extra_info: Intelligent Vehicles (IV) Group TU Delft
 ---
