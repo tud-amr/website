@@ -2,7 +2,8 @@
 title: "Predictive Fleet Routing and Assignment"
 project_id: ara # ID of the project, used by publications to display in this project.
 belongs_to_areas: [transportation, autonomous-vehicles] # List of area IDs, separated by commas.
-date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2019-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2020-06-30
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, the focus is on developing algorithms for fleet routing and assignment. This is useful for robots and autonomous vehicles which can provide delivery services for supermarkets or logistic companies. The focus is on minimising time taken and improve the routes taken by each individual robot or vehicle.  
 image: /assets/images/projects/ara.png
