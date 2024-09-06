@@ -2,7 +2,8 @@
 title: "Pixelbots: Pixels with personality"
 project_id: phd-pixelbots # ID of the project, used by publications to display in this project.
 belongs_to_areas: [social-robots, entertainment] # List of area IDs, separated by commas.
-date: 2014-01-01 # started date, approximated if not sure. Just for display purposes and ordering
+date: 2010-09-01
+end_date: 2014-01-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   This project introduces a new interactive form of display termed as Pixelbots which can be used to project human movements onto these fleet of bots. Various human gestures and movements can be applied to this novel display which provides an interaction between human and display systems which have not been considered in conventional technologies. 
 image: /assets/images/projects/Pixelbots.png
@@ -11,8 +12,7 @@ image: /assets/images/projects/Pixelbots.png
 #       url: "https://github.com/tud-amr/mrca_vc"
 #     - name: "Github: MPCC implementation"
 #       url: "https://github.com/tud-amr/amr-lmpcc"
-
-fundings: This project did not recieve any specific grant from any organisation but was undertaken as a collaboration between ETH Zurich and Disney Research
+fundings: This project was funded by Disney Research Zurich
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     
       # extra_info: PhD candidates
