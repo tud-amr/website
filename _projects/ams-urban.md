@@ -42,14 +42,12 @@ This project also looks at waterways and introduces a trajectory planner for aut
   </iframe>
 </div>
 
-## Partners
+## Funding & Partners
+
+This project is funded by the Amsterdam Institute for Advanced Metropolitan Solutions (AMS).
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.ams-institute.org/">
   <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/trilogy/ams.png' %}" alt="AMS Institute">
   </a>
 </div>
-
-## Funding
-
-This project is funded by the Amsterdam Institute for Advanced Metropolitan Solutions (AMS).
