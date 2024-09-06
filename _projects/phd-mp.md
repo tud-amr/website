@@ -12,9 +12,8 @@ links: # If you have a website for the project, repos, etc. put it here.
       url: "https://github.com/tud-amr/mrca_vc"
     - name: "Github: MPCC implementation"
       url: "https://github.com/tud-amr/amr-lmpcc"
-fundings: This project was funded by Disney Research Zurich
+fundings: This project was funded by Disney Research Zurich.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
-
     # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
     - name: Prof. Javier Alonso-Mora
     - name: Dr. Paul Beardsley
