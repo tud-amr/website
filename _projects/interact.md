@@ -1,7 +1,7 @@
 ---
 title: "INTERACT: Intuitive Interaction for Robots among Humans"
 project_id: interact # ID of the project, used by publications to display in this project.
-belongs_to_areas: [social-robots, mobile-manipulation] # List of area IDs, separated by commas.
+belongs_to_areas: [social-robots, mobile-manipulation, autonomous-vehicles] # List of area IDs, separated by commas.
 date: 2022-09-01 # started date, approximated if not sure. Just for display purposes and ordering
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   In this project, interactions of mobile robots and humans is key. This concept is considered on multiple spatio-temporal granularities ranging from individual interactions to the macro interaction of a robot fleet with humans, and from short term (local) to long term (global) effects of the interaction. 
