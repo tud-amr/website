@@ -6,7 +6,7 @@ date: 2021-06-01
 # end_date: 2028-01-01 # end date if ended, approximated if not sure.
 description: >-
   The ACT project bridges Neuroscenice, Behavioral Psychology, Robotics, and AI to study interactions with humans and autonomous systems and develop new application for safe navigation. Our Lab's role in the project is to create a fundamental understanding of how autonomous agents can cope with uncertainty and demonstrate risk-aware autonomous agents that are demonstrably trustable and predictable.
-image: /assets/images/projects/INTERACT_picture.jpg
+image: /assets/images/projects/act_alternate.png
 links:
     - name: Project Website
       url: "https://nwa-act.nl/index.html"
