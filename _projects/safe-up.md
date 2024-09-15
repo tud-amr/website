@@ -6,10 +6,10 @@ date: 2020-01-01
 end_date: 2023-12-31
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
   This project focuses on developing methods to validate driving safety for autonomous vehicles and ensure that at each time instance, the vehicle should not have a high probability of colliding with a traffic participant. This is done using reachability analysis and developing probabilistic risk metrics capable of identifying potential crashes in advance. 
-image: /assets/images/projects/safe-up.png
-# links: # If you have a website for the project, repos, etc. put it here.
-#     - name: "Github: multi-robot collision avoidance"
-#       url: "https://github.com/tud-amr/mrca_vc"
+image: /assets/images/projects/safe-up-new.png
+links: # If you have a website for the project, repos, etc. put it here.
+     - name: "Project Website"
+       url: "https://www.safe-up.eu/"
 #     - name: "Github: MPCC implementation"
 #       url: "https://github.com/tud-amr/amr-lmpcc"
 
@@ -38,10 +38,10 @@ Another contribution of this project was the development of a collision detectio
 
 ## Project Demonstrations
 
-<!-- <div class="video-wrapper ratio ratio-16x9"> 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/OOMZn5TQ00Q?si=gMRI97EfWVCcmhhX&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/EuHIjJRgH64?si=_mb_xtfb5Q0bV1vl&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-<div class="video-wrapper ratio ratio-16x9">  
+<!-- <div class="video-wrapper ratio ratio-16x9">  
   <iframe width="560" height="315" src="https://www.youtube.com/embed/tkRbsAuSTrA?si=PnL1cEa3R16thsAv&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 

@@ -48,7 +48,9 @@ The goal is to have an integrated approach for mobile manipulation in uncertain 
 
 
 ## Project Demonstrations
-
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/X8vEKe2i508?si=pCe79i5PdG0gyOMk&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 <div class="video-wrapper ratio ratio-16x9"> 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/sZBbWMnwle8?si=ngmtFusLo2cTxrJO&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
