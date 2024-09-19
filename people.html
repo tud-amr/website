@@ -12,12 +12,12 @@ permalink: /people/
     {% if person.type == "professor" and person.left_date == null %}
 
     <div class="row g-0">
-        <div class="col-sm-auto d-flex justify-content-center">
-            <img src="{% include fix_link.html link=person.image %}" class=" object-fit-contain"
+        <div class="col-lg-auto d-flex justify-content-center align-items-center">
+            <img src="{% include fix_link.html link=person.image %}" class=" object-fit-contain rounded"
                 alt="{{ person.name }}" height="250px">
         </div>
-        <div class="col-sm d-flex flex-column">
-            <div class="d-felx px-3 mb-auto py-sm-1 py-2">
+        <div class="col-lg d-flex flex-column">
+            <div class="d-felx px-3 mb-auto py-lg-1 py-2">
                 <span>{{ person.name }}</span>
                 <br> <small class="text-body-secondary">{{ person.title }} | Since {{ person.joined_date
                     | date: "%Y"}}</small>
@@ -52,7 +52,7 @@ permalink: /people/
 <h2>Post-Docs</h2>
 
 <div class="post-docs pt-2 pb-3">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
         {% for person in people_sorted %}
         {% if person.type == "post-doc" and person.left_date == null %}
         <div class="col">
@@ -66,7 +66,7 @@ permalink: /people/
 <h2>PhD Candidates</h2>
 
 <div class="phd-students pt-2 pb-3">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
         {% for person in people_sorted %}
         {% if person.type == "phd-candidate" and person.left_date == null %}
         <div class="col">
@@ -80,7 +80,7 @@ permalink: /people/
 <h2>Research Assistants</h2>
 
 <div class="engineers pt-2 pb-3">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-lg-2 g-4">
         {% for person in people_sorted %}
         {% if person.type == "engineer" and person.left_date == null %}
         <div class="col">
