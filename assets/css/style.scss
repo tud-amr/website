@@ -1,6 +1,15 @@
 ---
 ---
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
 .navbar-name {
     color: #D107A9;
     font-weight: 700;
@@ -95,3 +104,17 @@ h2 {
     height: 100%;
 }
   
+// Overflow of cards:
+.right-column {
+    max-height: 250px; /* Adjust this value as needed */
+    overflow: hidden;
+}
+
+.right-column .text-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 6; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal; /* Allows wrapping within the box */
+}
