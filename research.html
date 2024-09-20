@@ -3,31 +3,74 @@ title: Research
 permalink: /research/
 ---
 
-<!-- We loop over the research areas and add a button for each area that is a hyperlink to the corresponding h2 -->
+<!-- Button group to select research area -->
 <div class="area_idex d-inline-block mb-3">
+    <a href="#" class="btn btn-outline-primary rounded-3 me-0 mb-2 active" data-area-id="all">All</a>
     {% for research_area in site.research_areas %}
-    <a href="#{{ research_area.title }}" class="btn btn-dark rounded-3 mr-3 mb-3 btn-sm">{{ research_area.title }}</a>
+    <a href="#" class="btn btn-outline-primary rounded-3 me-0 mb-2" data-area-id="{{ research_area.area_id }}">{{ research_area.title }}</a>
     {% endfor %}
 </div>
-
-<!-- We loop over research areas, then within each research area we loop over projects that belong the current area -->
-
-{% assign projects_sorted = site.projects | sort: 'date' | reverse %}
+  
+<!-- we loop over research area cards, which is title and text content -->
 {% for research_area in site.research_areas %}
-
-<div class="div research-area mt-1">
+<div class="div research-area-card mt-1" data-area-id="{{ research_area.area_id }}">
     {% include research_area_card.html area=research_area %}
-
-    <div class="projects">
-        {% for project in projects_sorted %}
-        {% for area in project.belongs_to_areas %}
-        {% if area == research_area.area_id %}
-        <div class="project-item">
-            {% include project_vcard.html project=project %}
-        </div>
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
-    </div>
 </div>
 {% endfor %}
+  
+<!-- We loop over projects each one can have several research area ids -->
+{% assign projects_sorted = site.projects | sort: 'date' | reverse %}
+{% for project in projects_sorted %}
+<div class="div project-item" data-area-ids="{%for v in project.belongs_to_areas %}{{v}}{% if forloop.last != true %},{% endif %}{% endfor %}">
+    {% include project_vcard.html project=project %}
+</div>
+{% endfor %}
+
+<style>
+    .research-area-card {
+      display: none;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.area_idex .btn');
+      const researchAreaCards = document.querySelectorAll('.research-area-card');
+      const projectItems = document.querySelectorAll('.project-item');
+    
+      buttons.forEach(button => {
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          const selectedAreaId = this.getAttribute('data-area-id');
+    
+          // Remove the selected class from all buttons
+          buttons.forEach(btn => btn.classList.remove('active'));
+    
+          // Add the selected class to the clicked button
+          this.classList.add('active');
+    
+          // Toggle research area cards
+          researchAreaCards.forEach(card => {
+            const cardAreaId = card.getAttribute('data-area-id');
+            if (selectedAreaId === 'all') {
+              card.style.display = 'none';
+            } else if (cardAreaId === selectedAreaId) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+    
+          // Toggle project items
+          projectItems.forEach(item => {
+            const areaIds = item.getAttribute('data-area-ids').split(',');
+            if (selectedAreaId === 'all' || areaIds.includes(selectedAreaId)) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+</script>
