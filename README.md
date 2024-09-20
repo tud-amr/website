@@ -121,7 +121,7 @@ date: 2023-01-01
 # end_date: 2028-01-01 # end date if ended, approximated if not sure.
 description: >-
   In this project, interactions of mobile robots and humans is key...
-image: /assets/images/projects/INTERACT_picture.jpg
+image: /assets/images/projects/interact/INTERACT_picture.png
 links:
     - name: Project Website
       url: "https://..."
