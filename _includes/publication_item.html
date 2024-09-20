@@ -18,7 +18,7 @@
             <span class="publication-venue"> In {{ include.publication.venue }}, </span>
             <span class="publication-date">{{ include.publication.date | date: "%Y" }}. </span>
             {% if include.publication.note %}
-            <span class="text-body-tertiary publication-note">{{ include.publication.note }}.</span>
+            <span class="publication-note amr-color">{{ include.publication.note }}.</span>
             {% endif %}
         </p>
         {% if include.publication.links %}
