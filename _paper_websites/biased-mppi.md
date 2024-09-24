@@ -29,6 +29,10 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: Video
       icon: bi-youtube
       url: "https://youtu.be/1ZbbcfFgpxc"
+    - name: Related Publications
+      icon: bi-file-text
+      url: "#related-publications"
+related_project_id: "trilogy"
 ---
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">

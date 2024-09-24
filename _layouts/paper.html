@@ -44,6 +44,34 @@ layout: default
 
     <hr>
 
+    <!-- Add related publications if related_project_id is defined -->
+    {% if page.related_project_id %}
+    <div class="publication-of-project mt-4">
+    <h2 id="related-publications">Related Publications</h2>
+    {% assign publications_sorted = site.data.publications | sort: 'year' %}
+    {% assign counter = 1 %}
+    {% for publication in publications_sorted %}
+
+    {% if publication.belongs_to_projects %}
+    {% for projects in publication.belongs_to_projects %}
+    {% for project in projects %}
+
+    {% if project == page.related_project_id %}
+    <div class="publication-item">
+        {% include publication_item.html publication=publication id=counter %}
+    </div>
+    {% endif %}
+
+    {% endfor %}
+    {% endfor %}
+    {% endif %}
+    {% assign counter = counter | plus: 1 %}
+    {% endfor %}
+
+    </div>
+    <hr>
+    {% endif %}
+
     <div class="d-flex justify-content-center mt-5">
     <a href="{% link publications.html %}" class="btn btn-dark rounded-pill"><i class="bi bi-arrow-left"></i> Back to Publications</a>
     </div>
