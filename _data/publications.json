@@ -1,5 +1,82 @@
 [
-    
+    {
+        "title": "Safe and stable motion primitives via imitation learning and geometric fabrics",
+        "authors": [
+            "Saray Bakker",
+            "Rodrigo Pérez-Dattari",
+            "Cosimo Della Santina",
+            "Wendelin Böhmer",
+            "Javier Alonso-Mora",
+        ],
+        "date": "2024-07-15",
+        "type": "workshop",
+        "venue": "Robotics: Science and Systems, Workshop on Structural Priors as Inductive Biases for Learning Robot Dynamics",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24_bakker_rss.pdf"
+            }
+        ],
+        "note": null,
+        "belongs_to_projects": "interact",
+        "topics":[
+            "motion planning", "imitation learning"    
+        ],
+        "abstract": "Using the language of dynamical systems, Imitation learning (IL) provides an intuitive and effective way of teaching stable task-space motions to robots with goal convergence. Yet, these techniques are affected by serious limitations when it comes to ensuring safety and fulfillment of physical constraints. With this work, we propose to solve this challenge via TamedPUMA, an IL algorithm augmented with a recent development in motion planning called geometric fabrics. We explore two variations of this approach, which we name the forcing policy method and the compatible potential method. Making these combinations possible requires two enabling factors: the possibility of learning second-order dynamical systems by imitation and the availability of a potential function that is compatible with the learned dynamics. In this paper, we show how these conditions can be met when using an IL strategy called PUMA. The result is a stable imitation learning strategy within which we can seamlessly blend geometrical constraints like collision avoidance and joint limits. Beyond providing a theoretical analysis, we demonstrate TamedPUMA with simulated and real-world tasks, including a 7-degree-of-freedom manipulator that is trained to pick a tomato from a crate in the presence of obstacles. "
+    },
+    {
+        "title": "Reactive grasp and motion planning for adaptive mobile manipulation among obstacles",
+        "authors": [
+            "Tomas Merva",
+            "Saray Bakker",
+            "Max Spahn",
+            "Ivan Virgala",
+            "Javier Alonso-Mora",
+        ],
+        "date": "2024-07-15",
+        "type": "workshop",
+        "venue": "Robotics: Science and Systems, Workshop on Frontiers of Optimization for Robotics",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24_merva_rss.pdf"
+            }
+        ],
+        "note": null,
+        "belongs_to_projects": "interact",
+        "topics":[
+            "motion planning", "grasp planning"    
+        ],
+        "abstract": "Mobile manipulators are susceptible to situations in which the precomputed grasp pose is not reachable as the result of conflicts between collision avoidance behaviour and the manipulation task. In this work, we address this issue by combining real-time grasp planning with geometric motion planning for decentralized multi-agent systems, referred to as Reactive Grasp Fabrics (RGF). We optimize the precomputed grasp pose candidate to account for obstacles and the robot's kinematics. By leveraging a reactive geometric motion planner, specifically geometric fabrics, the grasp optimization problem can be simplified, resulting in a fast, adaptive framework that can resolve deadlock situations in pick-and-place tasks. We demonstrate the robustness of this approach by controlling a mobile manipulator in both simulation and real-world experiments in dynamic environments."
+    },
+    {
+        "title": "Evaluating Dynamic Environment Difficulty for Obstacle Avoidance Benchmarking",
+        "authors": [
+            "Moji Shi",
+            "Gang Chen",
+            "Alvaro Serra-Gomez",
+            "Siyuan Wu",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-10-15",
+        "type": "conference",
+        "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24_moji_iros.pdf",
+                "code": "https://github.com/smoggy-P/gym-Drone2D-ActivePerception",
+                "web": "https://smoggy-p.github.io/Evaluating_Dynamic_Difficulty/"
+            }
+        ],
+        "image": "/assets/images/papers/dynamic_env_metric/dynamic_environment_difficulty.png",
+        "belongs_to_projects": [
+        	"interact"
+        ],
+        "topics":[
+            "evlaution",
+            "benchmarking",
+            "motion planning"    
+        ],
+        "abstract": "Dynamic obstacle avoidance is a popular research topic for autonomous systems, such as micro aerial vehicles and service robots. Accurately evaluating the performance of dynamic obstacle avoidance methods necessitates the establishment of a metric to quantify the environment's difficulty, a crucial aspect that remains unexplored. In this paper, we propose four metrics to measure the difficulty of dynamic environments. These metrics aim to comprehensively capture the influence of obstacles' number, size, velocity, and other factors on the difficulty. We compare the proposed metrics with existing static environment difficulty metrics and validate them through over 1.5 million trials in a customized simulator. This simulator excludes the effects of perception and control errors and supports different motion and gaze planners for obstacle avoidance. The results indicate that the survivability metric outperforms and establishes a monotonic relationship between the success rate, with a Spearman's Rank Correlation Coefficient (SRCC) of over 0.9. Specifically, for every planner, lower survivability leads to a higher success rate. This metric not only facilitates fair and comprehensive benchmarking but also provides insights for refining collision avoidance methods, thereby furthering the evolution of autonomous systems in dynamic environments."
+    },
     {
         "title": "Current-Based Impedance Control for Interacting with Mobile Manipulators",
         "authors": [
