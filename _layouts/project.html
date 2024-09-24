@@ -63,7 +63,7 @@ layout: default
 
 <div class="publication-of-project mt-4">
   <hr>
-  <h2>Related Publications</h2>
+  <h2 id="related-publications">Related Publications</h2>
   {% assign publications_sorted = site.data.publications | sort: 'year' %}
   {% assign counter = 1 %}
   {% for publication in publications_sorted %}
