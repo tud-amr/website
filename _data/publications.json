@@ -1,5 +1,32 @@
 [
     {
+        "title": "Sampling-based Model Predictive Control Leveraging Parallelizable Physics Simulations",
+        "authors": [
+            "Corrado Pezzato",
+            "Chadi Salmi",
+            "Elia Trevisan",
+            "Max Spahn",
+            "Javier Alonso-Mora",
+            "Carlos Hernández Corbato"
+        ],
+        "date": "2024-09-30",
+        "type": "other",
+        "venue": "Preprint",
+        "links": [
+            {
+                "web": "/paper_websites/isaac-mppi"
+            }
+        ],
+        "image": "/assets/images/papers/isaac_mppi/main_idea.png",
+        "belongs_to_projects": [
+            "trilogy", "airlab-manipulation"
+        ],
+        "topics":[
+            "motion planning"
+        ],
+        "abstract": "We present a method for sampling-based model predictive control that makes use of a generic physics simulator as the dynamical model. In particular, we propose a Model Predictive Path Integral controller (MPPI), that uses the GPU-parallelizable IsaacGym simulator to compute the forward dynamics of a problem. By doing so, we eliminate the need for manual encoding of robot dynamics and interactions among objects and allow one to effortlessly solve complex navigation and contact-rich tasks. Since no explicit dynamic modeling is required, the method is easily extendable to different objects and robots. We demonstrate the effectiveness of this method in several simulated and real-world settings, among which mobile navigation with collision avoidance, non-prehensile manipulation, and whole-body control for high-dimensional configuration spaces. This method is a powerful and accessible tool to solve a large variety of contact-rich motion planning tasks. "
+      }, 
+    {
         "title": "Safe and stable motion primitives via imitation learning and geometric fabrics",
         "authors": [
             "Saray Bakker",
@@ -320,7 +347,7 @@
         "links": [
             {
                 "pdf": "/assets/files/publications/24_Kronmueller_T-ITS.pdf",
-                "web": "https://ieeexplore.ieee.org/abstract/document/10462002"
+                "publisher": "https://ieeexplore.ieee.org/abstract/document/10462002"
             }
         ],
         "belongs_to_projects": [
@@ -456,7 +483,7 @@
         "venue": " Autonomous Robots 47, 1275-1297",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s10514-023-10127-3"
+                "publisher": "https://link.springer.com/article/10.1007/s10514-023-10127-3"
             },
             {
                 "pdf": "/assets/files/publications/23-serra-auro.pdf"
@@ -483,7 +510,7 @@
         "venue": " Transportation Letters",
         "links": [
             {
-                "web": "https://www.tandfonline.com/doi/full/10.1080/19427867.2023.2278859"
+                "publisher": "https://www.tandfonline.com/doi/full/10.1080/19427867.2023.2278859"
             },
             {
                 "pdf": "/assets/files/publications/24-kronmuller-letters.pdf"
@@ -1028,10 +1055,10 @@
                 "pdf": "/assets/files/publications/23_trevisan_embrace_contacts_workshop.pdf"
             },
             {
-                "Code": "https://github.com/tud-airlab/mppi-isaac"
+                "code": "https://github.com/tud-airlab/mppi-isaac"
             },
             {
-                "Web": "https://sites.google.com/view/mppi-isaac/"
+                "publisher": "https://openreview.net/forum?id=fvfZKL1hCx"
             }
         ],
         "note": null,
@@ -1081,7 +1108,7 @@
         "venue": " IFAC Engineering Applications of Artificial Intelligence Journal",
         "links": [
             {
-                "web": "https://www.sciencedirect.com/science/article/pii/S0952197622003323"
+                "publisher": "https://www.sciencedirect.com/science/article/pii/S0952197622003323"
             },
             {
                 "pdf": "/assets/files/publications/22-perezdattaria.pdf"
@@ -1116,7 +1143,7 @@
         "venue": " IEEE Transactions on Control Systems Technology (T-CST)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9920538"
+                "publisher": "https://ieeexplore.ieee.org/document/9920538"
             },
             {
                 "pdf": "/assets/files/publications/22-ferranti-tcst.pdf"
@@ -1148,7 +1175,7 @@
         "venue": " IEEE Transactions on Automation Science and Engineering (T-ASE)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9781631"
+                "publisher": "https://ieeexplore.ieee.org/document/9781631"
             },
             {
                 "pdf": "/assets/files/publications/22_Bai_TASE.pdf"
@@ -1179,7 +1206,7 @@
         "venue": " IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2107.04538"
+                "arxiv": "https://arxiv.org/abs/2107.04538"
             },
             {
                 "pdf": "/assets/files/publications/22-brito-tits.pdf"
@@ -1209,7 +1236,7 @@
         "venue": ", IEEE Transactions on Intelligent Transportation Systems (T-ITS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9751230"
+                "publisher": "https://ieeexplore.ieee.org/document/9751230"
             },
             {
                 "pdf": "/assets/files/publications/22-xinwei-ITST.pdf"
@@ -1237,7 +1264,7 @@
         "venue": ", Transportation Research Part C: Emerging Technologies",
         "links": [
             {
-                "web": "https://www.sciencedirect.com/science/article/pii/S0968090X21005027"
+                "publisher": "https://www.sciencedirect.com/science/article/pii/S0968090X21005027"
             },
             {
                 "pdf": "/assets/files/publications/22-beirigo-trc.pdf"
@@ -1266,7 +1293,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9705542"
+                "publisher": "https://ieeexplore.ieee.org/document/9705542"
             },
             {
                 "pdf": "/assets/files/publications/22-knoedler-ral.pdf"
@@ -1300,7 +1327,7 @@
         "venue": "Autonomous Robots (AURO)",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s10514-021-10029-2"
+                "publisher": "https://link.springer.com/article/10.1007/s10514-021-10029-2"
             },
             {
                 "pdf": "/assets/files/publications/22_zhu_auro.pdf"
@@ -1407,7 +1434,7 @@
         "venue": "Proc. 2022 IEEE - Int. Conf. on Intelligent Transportation (ITSC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9922062"
+                "publisher": "https://ieeexplore.ieee.org/document/9922062"
             },
             {
                 "pdf": "/assets/files/publications/22_kronmueller_ITSC.pdf"
@@ -1436,7 +1463,7 @@
         "venue": "15th Workshop on the Algorithmic Foundations of Robotics (WAFR)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2206.00663"
+                "arxiv": "https://arxiv.org/abs/2206.00663"
             },
             {
                 "pdf": "/assets/files/publications/22-wilde-wafr.pdf"
@@ -1465,7 +1492,7 @@
         "venue": "IEEE Intelligent Vehicles Symposium (IV)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2205.01357"
+                "arxiv": "https://arxiv.org/abs/2205.01357"
             },
             {
                 "pdf": "/assets/files/publications/22-wang-iv.pdf"
@@ -1495,7 +1522,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://doi.org/10.1109/ICRA46639.2022.9811608"
+                "publisher": "https://doi.org/10.1109/ICRA46639.2022.9811608"
             },
             {
                 "pdf": "/assets/files/publications/22_trevisan_icra.pdf"
@@ -1528,7 +1555,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2203.02381"
+                "arxiv": "https://arxiv.org/abs/2203.02381"
             },
             {
                 "pdf": "/assets/files/publications/22-lodel-icra.pdf"
@@ -1592,7 +1619,7 @@
         "venue": "Social Robot Navigation: Advances and Evaluation at IEEE International Conference on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://harmony-eu.org/wp-content/uploads/2022/06/knoedler2022icra_ws.pdf"
+                "publisher": "https://harmony-eu.org/wp-content/uploads/2022/06/knoedler2022icra_ws.pdf"
             },
             {
                 "pdf": "/assets/files/publications/22_icra_seanavbench_knoedler.pdf"
@@ -1620,7 +1647,7 @@
         "venue": ", European Journal of Operational Research",
         "links": [
             {
-                "web": "https://www.sciencedirect.com/science/article/pii/S0377221721009930"
+                "publisher": "https://www.sciencedirect.com/science/article/pii/S0377221721009930"
             },
             {
                 "pdf": "/assets/files/publications/2021_Fielbaum_Costsharing.pdf"
@@ -1647,7 +1674,7 @@
         "venue": ", Transportation",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s11116-021-10232-1"
+                "publisher": "https://link.springer.com/article/10.1007/s11116-021-10232-1"
             },
             {
                 "pdf": "/assets/files/publications/2021_Fielbaum_Anticipatory.pdf"
@@ -1676,7 +1703,7 @@
         "venue": ", Transportation Research Part C: Emerging Technologies",
         "links": [
             {
-                "web": "https://www.sciencedirect.com/science/article/pii/S0968090X21000887"
+                "publisher": "https://www.sciencedirect.com/science/article/pii/S0968090X21000887"
             },
             {
                 "pdf": "/assets/files/publications/21-Fielbaum-TRC.pdf"
@@ -1705,7 +1732,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/abstract/document/9410352"
+                "publisher": "https://ieeexplore.ieee.org/abstract/document/9410352"
             },
             {
                 "pdf": "/assets/files/publications/21-chen-ral.pdf"
@@ -1736,7 +1763,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9385847"
+                "publisher": "https://ieeexplore.ieee.org/document/9385847"
             },
             {
                 "pdf": "/assets/files/publications/21-brito-ral.pdf"
@@ -1767,7 +1794,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://www.semanticscholar.org/paper/Learning-Interaction-Aware-Trajectory-Predictions-Zhu-Claramunt/69ed87322418a7501765b66573840c5d1fa29f3d"
+                "publisher": "https://www.semanticscholar.org/paper/Learning-Interaction-Aware-Trajectory-Predictions-Zhu-Claramunt/69ed87322418a7501765b66573840c5d1fa29f3d"
             },
             {
                 "pdf": "/assets/files/publications/21-zhu-ral.pdf"
@@ -1799,7 +1826,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2103.12517"
+                "arxiv": "https://arxiv.org/abs/2103.12517"
             },
             {
                 "pdf": "/assets/files/publications/21-degroot-ral.pdf"
@@ -1830,7 +1857,7 @@
         "venue": "Proc. 3rd IEEE International Symposium on Multi-Robot and Multi-Agent Systems (MRS'21)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9620599"
+                "publisher": "https://ieeexplore.ieee.org/document/9620599"
             },
             {
                 "pdf": "/assets/files/publications/21_Kronmueller_MRS.pdf"
@@ -1862,7 +1889,7 @@
         "venue": "Proc. IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2205.15483"
+                "arxiv": "https://arxiv.org/abs/2205.15483"
             },
             {
                 "pdf": "/assets/files/publications/21-ray-iros.pdf"
@@ -1889,7 +1916,7 @@
         "venue": "Proc. 2021 IEEE - Int. Conf. on Intelligent Transportation (ITSC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9564910"
+                "publisher": "https://ieeexplore.ieee.org/document/9564910"
             },
             {
                 "pdf": "/assets/files/publications/21-Fielbaum-ITSC.pdf"
@@ -1918,7 +1945,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9561963"
+                "publisher": "https://ieeexplore.ieee.org/document/9561963"
             },
             {
                 "pdf": "/assets/files/publications/21_zhu_icra.pdf"
@@ -1948,7 +1975,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9561821"
+                "publisher": "https://ieeexplore.ieee.org/document/9561821"
             },
             {
                 "pdf": "/assets/files/publications/21-spahn-icra.pdf"
@@ -1979,7 +2006,7 @@
         "venue": "IEEE Intelligent Vehicles Symposium (IV)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9575193"
+                "publisher": "https://ieeexplore.ieee.org/document/9575193"
             },
             {
                 "pdf": "/assets/files/publications/21-berg-iv.pdf"
@@ -2011,7 +2038,7 @@
         "venue": ", IEEE Transactions on Robotics (T-RO)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/9244597"
+                "publisher": "https://ieeexplore.ieee.org/document/9244597"
             },
             {
                 "pdf": "/assets/files/publications/20-park-TRO.pdf"
@@ -2037,7 +2064,7 @@
         "venue": ", Transportation Research Part C: Emerging Technologies",
         "links": [
             {
-                "web": "https://www.sciencedirect.com/science/article/pii/S0968090X2030735X"
+                "publisher": "https://www.sciencedirect.com/science/article/pii/S0968090X2030735X"
             },
             {
                 "pdf": "/assets/files/publications/20-Fielbaum-TRC.pdf"
@@ -2065,7 +2092,7 @@
         "venue": "Transportmetrica A: Transport Science",
         "links": [
             {
-                "web": "https://www.tandfonline.com/doi/full/10.1080/23249935.2020.1829170"
+                "publisher": "https://www.tandfonline.com/doi/full/10.1080/23249935.2020.1829170"
             },
             {
                 "pdf": "/assets/files/publications/20-Fielbaum-Transportmetrica.pdf"
@@ -2117,7 +2144,7 @@
         "venue": "Springer Autonomous Robots",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s10514-020-09919-8"
+                "publisher": "https://link.springer.com/article/10.1007/s10514-020-09919-8"
             },
             {
                 "pdf": "/assets/files/publications/20-potdar.pdf"
@@ -2149,7 +2176,7 @@
         "venue": "IEEE Transactions on Intelligent Vehicles (T-IV)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8911227"
+                "publisher": "https://ieeexplore.ieee.org/document/8911227"
             },
             {
                 "pdf": "/assets/files/publications/19-andersen-t-iv.pdf"
@@ -2180,7 +2207,7 @@
         "venue": "Proc. 2020 Conference on Robot Learning (CoRL)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2010.09056"
+                "arxiv": "https://arxiv.org/abs/2010.09056"
             },
             {
                 "pdf": "/assets/files/publications/20-Brito-CoRL.pdf"
@@ -2212,7 +2239,7 @@
         "venue": "Proc. IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2009.12106"
+                "arxiv": "https://arxiv.org/abs/2009.12106"
             },
             {
                 "pdf": "/assets/files/publications/20-serra-iros.pdf"
@@ -2243,7 +2270,7 @@
         "venue": "Proc. IEEE Int. Conf. on Intelligent Transportation Systems (ITSC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/abstract/document/9294424"
+                "publisher": "https://ieeexplore.ieee.org/abstract/document/9294424"
             },
             {
                 "pdf": "/assets/files/publications/20-vanLochem-ITSC.pdf"
@@ -2273,7 +2300,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2002.04920"
+                "arxiv": "https://arxiv.org/abs/2002.04920"
             },
             {
                 "pdf": "/assets/files/publications/20-zhu-icra.pdf"
@@ -2306,7 +2333,7 @@
         "venue": ", Proceedings of the National Academy of Sciences USA (PNAS)",
         "links": [
             {
-                "web": "https://www.pnas.org/content/early/2019/11/21/1820676116"
+                "publisher": "https://www.pnas.org/content/early/2019/11/21/1820676116"
             },
             {
                 "pdf": "/assets/files/publications/19-schwarting-pnas.pdf"
@@ -2340,7 +2367,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/2010.10190"
+                "arxiv": "https://arxiv.org/abs/2010.10190"
             },
             {
                 "pdf": "/assets/files/publications/19-brito-ral.pdf"
@@ -2372,7 +2399,7 @@
         "venue": ", IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8613928"
+                "publisher": "https://ieeexplore.ieee.org/document/8613928"
             },
             {
                 "pdf": "/assets/files/publications/19-zhu-RAL.pdf"
@@ -2406,7 +2433,7 @@
         "venue": "Proc. IEEE Int. Conf. on Intelligent Transportation Systems (ITSC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8916904"
+                "publisher": "https://ieeexplore.ieee.org/document/8916904"
             },
             {
                 "pdf": "/assets/files/publications/19-wallar-itsc.pdf"
@@ -2432,7 +2459,7 @@
         "venue": "Proc. 2nd IEEE International Symposium on Multi-Robot and Multi-Agent Systems (MRS'19)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8901092"
+                "publisher": "https://ieeexplore.ieee.org/document/8901092"
             },
             {
                 "pdf": "/assets/files/publications/19-zhu-mrs.pdf"
@@ -2462,7 +2489,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8793685"
+                "publisher": "https://ieeexplore.ieee.org/document/8793685"
             },
             {
                 "pdf": "/assets/files/publications/19-wallar-icra.pdf"
@@ -2490,7 +2517,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8793765"
+                "publisher": "https://ieeexplore.ieee.org/document/8793765"
             },
             {
                 "pdf": "/assets/files/publications/19-zhu-icra.pdf"
@@ -2527,7 +2554,7 @@
         "venue": "Proc. IEEE Intelligent Vehicles Symposium",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8813899"
+                "publisher": "https://ieeexplore.ieee.org/document/8813899"
             },
             {
                 "pdf": "/assets/files/publications/19-ferranti-iv.pdf"
@@ -2559,7 +2586,7 @@
         "venue": ", ACM Transactions on Graphics (SIGGRAPH Asia)",
         "links": [
             {
-                "web": "https://dl.acm.org/doi/10.1145/3272127.3275022"
+                "publisher": "https://dl.acm.org/doi/10.1145/3272127.3275022"
             },
             {
                 "pdf": "/assets/files/publications/18_naegelit_siggraph.pdf"
@@ -2592,7 +2619,7 @@
         "venue": ", Autonomous Robots",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s10514-018-9783-9"
+                "publisher": "https://link.springer.com/article/10.1007/s10514-018-9783-9"
             },
             {
                 "pdf": "/assets/files/publications/18-alonsomora-AURO.pdf"
@@ -2623,7 +2650,7 @@
         "venue": "IEEE Robotics and Automation Letters",
         "links": [
             {
-                "web": "https://arxiv.org/abs/1906.12082"
+                "arxiv": "https://arxiv.org/abs/1906.12082"
             },
             {
                 "pdf": "/assets/files/publications/18-stevsic.pdf"
@@ -2654,7 +2681,7 @@
         "links": [
             {
 
-                "web": "https://ieeexplore.ieee.org/abstract/document/8322444"
+                "publisher": "https://ieeexplore.ieee.org/abstract/document/8322444"
             },
             {
                 "pdf": "/assets/files/publications/18-alonsomora-TRO.pdf"
@@ -2684,7 +2711,7 @@
         "venue": "Annual Review of Control, Robotics, and Autonomous Systems, vol. 1, pp. 187-210",
         "links": [
             {
-                "web": "http://www.annualreviews.org/eprint/d7k8kgZyfaxixxyjrtdq/full/10.1146/annurev-control-060117-105157"
+                "publisher": "http://www.annualreviews.org/eprint/d7k8kgZyfaxixxyjrtdq/full/10.1146/annurev-control-060117-105157"
             },
             {
                 "pdf": "/assets/files/publications/18-schwarting-AR.pdf"
@@ -2713,7 +2740,7 @@
         "venue": "Autonomous Robots, Special Issue on Online Decision Making in Multi-Robot Coordination, vol. 42, no. 4, pp. 801\u2013824",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s10514-017-9665-6"
+                "publisher": "https://link.springer.com/article/10.1007/s10514-017-9665-6"
             },
             {
                 "pdf": "/assets/files/publications/17-alonsomora-AURO-mission.pdf"
@@ -2744,7 +2771,7 @@
         "venue": "Proc. IEEE Int. Conf. on Intelligent Transportation Systems (ITSC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8569451"
+                "publisher": "https://ieeexplore.ieee.org/document/8569451"
             },
             {
                 "pdf": "/assets/files/publications/18-fiedler-itsc.pdf"
@@ -2772,7 +2799,7 @@
         "venue": "Proc. of the IEEE/RSJ Conf. on Robotics and Intelligent Systems (IROS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8593743"
+                "publisher": "https://ieeexplore.ieee.org/document/8593743"
             },
             {
                 "pdf": "/assets/files/publications/18-wallar-iros.pdf"
@@ -2798,7 +2825,7 @@
         "venue": "Proc. Robotics: Science and Systems (RSS)",
         "links": [
             {
-                "web": "http://www.roboticsproceedings.org/rss14/p39.pdf"
+                "publisher": "http://www.roboticsproceedings.org/rss14/p39.pdf"
             },
             {
                 "pdf": "/assets/files/publications/18-cap-RSS.pdf"
@@ -2826,7 +2853,7 @@
         "venue": "Proc. European Control Conference (ECC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8550178"
+                "publisher": "https://ieeexplore.ieee.org/document/8550178"
             },
             {
                 "pdf": "/assets/files/publications/18-ferranti-ECC.pdf"
@@ -2857,7 +2884,7 @@
         "venue": "Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8461138"
+                "publisher": "https://ieeexplore.ieee.org/document/8461138"
             },
             {
                 "pdf": "/assets/files/publications/18-zhou-ICRA.pdf"
@@ -2892,7 +2919,7 @@
         "venue": "IEEE Transactions on Intelligent Transportation Systems",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8207782"
+                "publisher": "https://ieeexplore.ieee.org/document/8207782"
             },
             {
                 "pdf": "/assets/files/publications/17-schwarting-t-its.pdf"
@@ -2922,7 +2949,7 @@
         "venue": "The International Journal of Robotics Research, Vol 36, Issue 9, pp. 1000-1021",
         "links": [
             {
-                "web": "https://journals.sagepub.com/doi/10.1177/0278364917719333"
+                "publisher": "https://journals.sagepub.com/doi/10.1177/0278364917719333"
             },
             {
                 "pdf": "/assets/files/publications/17-alonsomora-IJRR.pdf"
@@ -2954,7 +2981,7 @@
         "venue": "ACM Transactions on Graphics SIGGRAPH, vol. 36, no. 4, Article 132",
         "links": [
             {
-                "web": "https://dl.acm.org/doi/10.1145/3072959.3073712"
+                "publisher": "https://dl.acm.org/doi/10.1145/3072959.3073712"
             },
             {
                 "pdf": "/assets/files/publications/17-naegeli-siggraph.pdf"
@@ -2986,7 +3013,7 @@
         "venue": ", in IEEE Robotics and Automation Letters, vol. 2, no. 3, pp. 1696-1703",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/7847361"
+                "publisher": "https://ieeexplore.ieee.org/document/7847361"
             },
             {
                 "pdf": "/assets/files/publications/17-naegeli-RAL.pdf"
@@ -3018,7 +3045,7 @@
         "venue": "Proceedings of the National Academy of Sciences of the USA (PNAS), vol. 114, no. 3, pp. 462-467",
         "links": [
             {
-                "web": "http://www.pnas.org/cgi/doi/10.1073/pnas.1611675114"
+                "publisher": "http://www.pnas.org/cgi/doi/10.1073/pnas.1611675114"
             },
             {
                 "pdf": "/assets/files/publications/17-alonsomora-ridesharing-pnas.pdf"
@@ -3055,7 +3082,7 @@
         "venue": ", in Proc. of the Int. Symp. on Robotics Research (ISRR)",
         "links": [
             {
-                "web": "https://people.csail.mit.edu/lucasl/files/slides/isrr18_safety_standards_slides.pdf"
+                "publisher": "https://people.csail.mit.edu/lucasl/files/slides/isrr18_safety_standards_slides.pdf"
             },
             {
                 "pdf": "/assets/files/publications/17-Liebenwein.pdf"
@@ -3085,7 +3112,7 @@
         "venue": "Proc. of the IEEE/RSJ Conf. on Robotics and Intelligent Systems (IROS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8206203"
+                "publisher": "https://ieeexplore.ieee.org/document/8206203"
             },
             {
                 "pdf": "/assets/files/publications/17-alonsomora-IROS.pdf"
@@ -3116,7 +3143,7 @@
         "venue": "Proc. of the IEEE/RSJ Conf. on Robotics and Intelligent Systems (IROS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8202163"
+                "publisher": "https://ieeexplore.ieee.org/document/8202163"
             },
             {
                 "pdf": "/assets/files/publications/17-kamel-IROS.pdf"
@@ -3150,7 +3177,7 @@
         "venue": "proc. IEEE Intelligent Transportation Systems Conference",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8317853"
+                "publisher": "https://ieeexplore.ieee.org/document/8317853"
             },
             {
                 "pdf": "/assets/files/publications/17-andersen-ITSC.pdf"
@@ -3182,7 +3209,7 @@
         "venue": "Proc. of the Conf. on Field and Service Robotics (FSR)",
         "links": [
             {
-                "web": "https://www.semanticscholar.org/paper/Foresight%3A-Remote-Sensing-for-Autonomous-Vehicles-a-Wallar-Araki/4a0c1ee0a0e321ce2f8cd63b5a40c2138cf8cff7"
+                "publisher": "https://www.semanticscholar.org/paper/Foresight%3A-Remote-Sensing-for-Autonomous-Vehicles-a-Wallar-Araki/4a0c1ee0a0e321ce2f8cd63b5a40c2138cf8cff7"
             },
             {
                 "pdf": "/assets/files/publications/17-wallar-FSR.pdf"
@@ -3222,7 +3249,7 @@
         "venue": "Proc. of the IEEE Symposium on Intelligent Vehicles (IV)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/7995835"
+                "publisher": "https://ieeexplore.ieee.org/document/7995835"
             },
             {
                 "pdf": "/assets/files/publications/17-naser-car-iv.pdf"
@@ -3254,7 +3281,7 @@
         "venue": "Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/abstract/document/7989224"
+                "publisher": "https://ieeexplore.ieee.org/abstract/document/7989224"
             },
             {
                 "pdf": "/assets/files/publications/17-schwartig-autonomy-icra.pdf"
@@ -3384,7 +3411,7 @@
         "venue": ", in Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/7487747"
+                "publisher": "https://ieeexplore.ieee.org/document/7487747"
             },
             {
                 "pdf": "/assets/files/publications/16-alonsomora-icra-distribformation.pdf"
@@ -3415,7 +3442,7 @@
         "venue": "Proc. ACM SIGGRAPH 2016 Art Gallery (SIGGRAPH '16), ACM, New York, NY, USA, 366-367",
         "links": [
             {
-                "web": "https://dl.acm.org/doi/10.1145/2897843.2915197"
+                "publisher": "https://dl.acm.org/doi/10.1145/2897843.2915197"
             },
             {
                 "pdf": "/assets/files/publications/16-digumarti.pdf"
@@ -3446,7 +3473,7 @@
         "venue": ", Autonomous Robots, vol. 39, no. 1, pp. 101\u2013121",
         "links": [
             {
-                "web": "https://link.springer.com/article/10.1007/s10514-015-9429-0"
+                "publisher": "https://link.springer.com/article/10.1007/s10514-015-9429-0"
             },
             {
                 "pdf": "/assets/files/publications/15-alonsomora-AURO.pdf"
@@ -3476,7 +3503,7 @@
         "venue": "Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/7354037"
+                "publisher": "https://ieeexplore.ieee.org/document/7354037"
             },
             {
                 "pdf": "/assets/files/publications/15-alonso-iros.pdf"
@@ -3508,7 +3535,7 @@
         "venue": "Proc. of the Int. Symposium on Robotics Research (ISRR)",
         "links": [
             {
-                "web": "https://link.springer.com/chapter/10.1007/978-3-319-51532-8_28"
+                "publisher": "https://link.springer.com/chapter/10.1007/978-3-319-51532-8_28"
             },
             {
                 "pdf": "/assets/files/publications/15-decastro-isrr.pdf"
@@ -3539,7 +3566,7 @@
         "venue": "Proc. of the IEEE Int. Conf. Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/7139967"
+                "publisher": "https://ieeexplore.ieee.org/document/7139967"
             },
             {
                 "pdf": "/assets/files/publications/15-alonso-manip-icra.pdf"
@@ -3571,7 +3598,7 @@
         "venue": "Proc. of the IEEE Int. Conf. Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/7140033"
+                "publisher": "https://ieeexplore.ieee.org/document/7140033"
             },
             {
                 "pdf": "/assets/files/publications/15-alonso-hri-icra.pdf"
@@ -3601,7 +3628,7 @@
         "venue": "Tutorial on Multi-Robot Systems at Robotics Science and Systems (RSS)",
         "links": [
             {
-                "web": "https://www.multirobotsystems.org/sites/default/files/slides/2015_RSS_MRS_Alonso-Mora.pdf"
+                "publisher": "https://www.multirobotsystems.org/sites/default/files/slides/2015_RSS_MRS_Alonso-Mora.pdf"
             },
             {
                 "pdf": "/assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf"
@@ -3629,7 +3656,7 @@
         "venue": "Proc. of the Int. Micro Air Vehicle Conference and Competition",
         "links": [
             {
-                "web": "https://repository.tudelft.nl/islandora/object/uuid%3A2e865132-8a33-4115-84df-a02407d02d27"
+                "publisher": "https://repository.tudelft.nl/islandora/object/uuid%3A2e865132-8a33-4115-84df-a02407d02d27"
             },
             {
                 "pdf": "/assets/files/publications/14-schiano.pdf"
@@ -3664,7 +3691,7 @@
                 "pdf": "/assets/files/publications/14-jud.pdf"
             },
             {
-                "web": "https://link.springer.com/chapter/10.1007/978-3-319-23778-7_34"
+                "publisher": "https://link.springer.com/chapter/10.1007/978-3-319-23778-7_34"
             },
             {
                 "pdf": "/assets/files/publications/14-jud.pdf"
@@ -3694,7 +3721,7 @@
         "venue": "Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/6907071"
+                "publisher": "https://ieeexplore.ieee.org/document/6907071"
             },
             {
                 "pdf": "/assets/files/publications/14-alonsomora-icra.pdf"
@@ -3720,7 +3747,7 @@
         "venue": "Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/6907548"
+                "publisher": "https://ieeexplore.ieee.org/document/6907548"
             },
             {
                 "pdf": "/assets/files/publications/14-schoch.pdf"
@@ -3748,7 +3775,7 @@
         "venue": "ACM/IEEE Int. Conf. on Human-Robot Interaction (HRI)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/8542599"
+                "publisher": "https://ieeexplore.ieee.org/document/8542599"
             },
             {
                 "pdf": "/assets/files/publications/14-alonso-HRI.pdf"
@@ -3824,7 +3851,7 @@
         "venue": "IEEE Transactions on Robotics, vol. 29, no. 4, pp. 899-912",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/6515630"
+                "publisher": "https://ieeexplore.ieee.org/document/6515630"
             },
             {
                 "pdf": "/assets/files/publications/13-rufli-tro.pdf"
@@ -3855,7 +3882,7 @@
         "venue": ", In Advances in Neural Information Processing Systems (NIPS)",
         "links": [
             {
-                "web": "https://arxiv.org/abs/1311.4527"
+                "arxiv": "https://arxiv.org/abs/1311.4527"
             },
             {
                 "pdf": "/assets/files/publications/13-bento.pdf"
@@ -3902,7 +3929,7 @@
         "venue": "Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/6696604"
+                "publisher": "https://ieeexplore.ieee.org/document/6696604"
             },
             {
                 "pdf": "/assets/files/publications/13-skye.pdf"
@@ -3931,7 +3958,7 @@
         "venue": "Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/abstract/document/6630969"
+                "publisher": "https://ieeexplore.ieee.org/abstract/document/6630969"
             },
             {
                 "pdf": "/assets/files/publications/13-alonsomora.pdf"
@@ -3961,7 +3988,7 @@
         "venue": "International Journal of Robotics Research, vol. 31, no. 6, pp. 753-773",
         "links": [
             {
-                "web": "https://journals.sagepub.com/doi/10.1177/0278364912442095"
+                "publisher": "https://journals.sagepub.com/doi/10.1177/0278364912442095"
             },
             {
                 "pdf": "/assets/files/publications/12-alonsomora-ijrr.pdf"
@@ -3989,7 +4016,7 @@
         "venue": "Asian Journal of Control, vol. 14, no. 3, pp. 613-623",
         "links": [
             {
-                "web": "https://onlinelibrary.wiley.com/doi/10.1002/asjc.398"
+                "publisher": "https://onlinelibrary.wiley.com/doi/10.1002/asjc.398"
             },
             {
                 "pdf": "/assets/files/publications/12-Schoellig-ajc.pdf"
@@ -4016,7 +4043,7 @@
         "venue": "Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/6385551"
+                "publisher": "https://ieeexplore.ieee.org/document/6385551"
             },
             {
                 "pdf": "/assets/files/publications/12-alonsomora-iros.pdf"
@@ -4046,7 +4073,7 @@
         "venue": "Proc. of the 8th Int. Conf. on Field and Service Robots (FSR)",
         "links": [
             {
-                "web": "https://link.springer.com/chapter/10.1007/978-3-642-40686-7_12"
+                "publisher": "https://link.springer.com/chapter/10.1007/978-3-642-40686-7_12"
             },
             {
                 "pdf": "/assets/files/publications/12-hauri.pdf"
@@ -4075,7 +4102,7 @@
         "venue": "Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/6225166"
+                "publisher": "https://ieeexplore.ieee.org/document/6225166"
             },
             {
                 "pdf": "/assets/files/publications/12-alonsomora-icra.pdf"
@@ -4106,7 +4133,7 @@
         "venue": ", tech report",
         "links": [
             {
-                "web": "https://homepages.laas.fr/afranchi/events/icra2014mrs/w/Home_files/2014ICRA_MRS_Grieder.pdf"
+                "publisher": "https://homepages.laas.fr/afranchi/events/icra2014mrs/w/Home_files/2014ICRA_MRS_Grieder.pdf"
             },
             {
                 "pdf": "/assets/files/publications/13-gohl.pdf"
@@ -4156,7 +4183,7 @@
         "venue": "Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/5980269"
+                "publisher": "https://ieeexplore.ieee.org/document/5980269"
             },
             {
                 "pdf": "/assets/files/publications/11-alonsomora.pdf"
@@ -4203,7 +4230,7 @@
         "venue": "Proc. of the Conf. on Decision and Control (CDC)",
         "links": [
             {
-                "web": "https://ieeexplore.ieee.org/document/5717888"
+                "publisher": "https://ieeexplore.ieee.org/document/5717888"
             },
             {
                 "pdf": "/assets/files/publications/10-schollig-cdc.pdf"
@@ -4230,7 +4257,7 @@
         "venue": "Proc. of the Int. Symp. on Distributed Autonomous Robotics Systems (DARS)",
         "links": [
             {
-                "web": "https://link.springer.com/chapter/10.1007/978-3-642-32723-0_15"
+                "publisher": "https://link.springer.com/chapter/10.1007/978-3-642-32723-0_15"
             },
             {
                 "pdf": "/assets/files/publications/10-alonsomora.pdf"
@@ -4259,7 +4286,7 @@
         "venue": "Asia Pacific Journal of Chemical Engineering, vol. 4, no. 1, pp. 55-67",
         "links": [
             {
-                "web": "https://onlinelibrary.wiley.com/doi/abs/10.1002/apj.195"
+                "publisher": "https://onlinelibrary.wiley.com/doi/abs/10.1002/apj.195"
             },
             {
                 "pdf": "/assets/files/publications/09-alonsomora-apjqe.pdf"
