@@ -1026,7 +1026,8 @@
         "venue": ", in IEEE Int. Conf. on Robotics and Automation (ICRA)",
         "links": [
             {
-                "pdf": "/assets/files/publications/23_trevisan_icra.pdf"
+                "pdf": "/assets/files/publications/23_trevisan_icra.pdf",
+                "publisher": "https://doi.org/10.1109/ICRA48891.2023.10161511"
             }
         ],
         "note": null,
