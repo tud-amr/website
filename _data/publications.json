@@ -1,5 +1,84 @@
 [
     {
+        "title": "Distributed multi-target tracking and active perception with mobile camera networks",
+        "authors": [
+            "Sara Casao",
+            "Alvaro Serra-Gomez",
+            "Ana C. Murillo",
+            "Wendelin Böhmer"
+            "Javier Alonso-Mora",
+            "Eduardo Montijano"
+        ],
+        "date": "2024-01-30",
+        "type": "journal",
+        "venue": "S.I. Collaborative Mobile Smart Cameras, Computer Vision and Image Understanding",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-casao.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "scene-reasoning-team"
+        ],
+        "topics":[
+            "motion planning", "multi-robot", "task planning"
+        ],
+        "abstract": "Smart cameras are an essential component in surveillance and monitoring applications, and they have been typically deployed in networks of fixed camera locations. The addition of mobile cameras, mounted on robots, can overcome some of the limitations of static networks such as blind spots or back-lightning, allowing the system to gather the best information at each time by active positioning. This work presents a hybrid camera system, with static and mobile cameras, where all the cameras collaborate to observe people moving freely in the environment and efficiently visualize certain attributes from each person. Our solution combines a multi-camera distributed tracking system, to localize with precision all the people, with a control scheme that moves the mobile cameras to the best viewpoints for a specific classification task. The main contribution of this paper is a novel framework that exploits the synergies that result from the cooperation of the tracking and the control modules, obtaining a system closer to the real-world application and capable of high-level scene understanding. The static camera network provides global awareness of the control scheme to move the robots. In exchange, the mobile cameras onboard the robots provide enhanced information about the people on the scene. We perform a thorough analysis of the people monitoring application performance under different conditions thanks to the use of a photo-realistic simulation environment. Our experiments demonstrate the benefits of collaborative mobile cameras with respect to static or individual camera setups.",
+        }, 
+    {
+        "title": "Reachability-based confidence-aware probabilistic collision detection in highway driving",
+        "authors": [
+            "Xinwei Wang",
+            "Zirui Li",
+            "Javier Alonso-Mora",
+            "Meng Wang"
+        ],
+        "date": "2024-02-30",
+        "type": "journal",
+        "venue": "S.I. Safety for Intelligent and Connected Vehicles, Engineering",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-Wang-engineering.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "safe-up"
+        ],
+        "topics":[
+            "motion planning"
+        ],
+        "abstract": "Risk assessment is a crucial component of collision warning and avoidance systems for intelligent vehicles. Reachability-based formal approaches have been developed to ensure driving safety to accurately detect potential vehicle collisions. However, they suffer from over-conservatism, potentially resulting in false–positive risk events in complicated real-world applications. In this paper, we combine two reachability analysis techniques, a backward reachable set (BRS) and a stochastic forward reachable set (FRS), and propose an integrated probabilistic collision–detection framework for highway driving. Within this framework, we can first use a BRS to formally check whether a two-vehicle interaction is safe; otherwise, a prediction-based stochastic FRS is employed to estimate the collision probability at each future time step. Thus, the framework can not only identify non-risky events with guaranteed safety but also provide accurate collision risk estimation in safety-critical events. To construct the stochastic FRS, we develop a neural network-based acceleration model for surrounding vehicles and further incorporate a confidence-aware dynamic belief to improve the prediction accuracy. Extensive experiments were conducted to validate the performance of the acceleration prediction model based on naturalistic highway driving data. The efficiency and effectiveness of the framework with infused confidence beliefs were tested in both naturalistic and simulated highway scenarios. The proposed risk assessment framework is promising for real-world applications."
+      }, 
+    {
+        "title": "Sampling-based Model Predictive Control Leveraging Parallelizable Physics Simulations",
+        "authors": [
+            "Corrado Pezzato",
+            "Chadi Salmi",
+            "Elia Trevisan",
+            "Max Spahn",
+            "Javier Alonso-Mora",
+            "Carlos Hernández Corbato"
+        ],
+        "date": "2024-09-30",
+        "type": "other",
+        "venue": "Preprint",
+        "links": [
+            {
+                "web": "/paper_websites/isaac-mppi"
+            }
+        ],
+        "image": "/assets/images/papers/isaac_mppi/main_idea.png",
+        "belongs_to_projects": [
+            "trilogy", "airlab-manipulation"
+        ],
+        "topics":[
+            "motion planning"
+        ],
+        "abstract": "We present a method for sampling-based model predictive control that makes use of a generic physics simulator as the dynamical model. In particular, we propose a Model Predictive Path Integral controller (MPPI), that uses the GPU-parallelizable IsaacGym simulator to compute the forward dynamics of a problem. By doing so, we eliminate the need for manual encoding of robot dynamics and interactions among objects and allow one to effortlessly solve complex navigation and contact-rich tasks. Since no explicit dynamic modeling is required, the method is easily extendable to different objects and robots. We demonstrate the effectiveness of this method in several simulated and real-world settings, among which mobile navigation with collision avoidance, non-prehensile manipulation, and whole-body control for high-dimensional configuration spaces. This method is a powerful and accessible tool to solve a large variety of contact-rich motion planning tasks. "
+      }, 
+    {
         "title": "Demonstrating Adaptive Mobile Manipulation in Retail Environments",
         "authors": [
             "Max Spahn",
@@ -23,7 +102,7 @@
         ],
         "image": "/assets/images/projects/airlab_robohouse.png",
         "belongs_to_projects": [
-            "interact", "airlab-manipulation"
+            "airlab-manipulation"
         ],
         "topics":[
             "mobile manipulation"
