@@ -71,11 +71,12 @@
         "venue": "Robotics: Science and Systems, Workshop on Structural Priors as Inductive Biases for Learning Robot Dynamics",
         "links": [
             {
+                "web": "/paper_websites/pumafabrics",
                 "pdf": "/assets/files/publications/24_bakker_rss.pdf"
             }
         ],
         "note": null,
-        "belongs_to_projects": "interact",
+        "belongs_to_projects": ["interact", "saraypapers"],
         "topics":[
             "motion planning", "imitation learning"    
         ],
@@ -99,7 +100,7 @@
             }
         ],
         "note": null,
-        "belongs_to_projects": "interact",
+        "belongs_to_projects": ["interact", "saraypapers"],
         "topics":[
             "motion planning", "grasp planning"    
         ],
@@ -880,7 +881,8 @@
         "belongs_to_projects": [
             "harmony",
             "interact",
-            "airlab-manipulation"
+            "airlab-manipulation",
+            "saraypapers"
         ],
         "topics":[
             "motion planning","multi-robot"   
