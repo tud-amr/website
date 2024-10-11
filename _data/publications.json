@@ -1,4 +1,27 @@
 [
+    {
+        "title": "Design of mixed fixed-flexible bus public transport networks by tracking the paths of on-demand vehicles",
+        "authors": [
+            "Andres Fielbaum",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-03-28",
+        "type": "journal",
+        "venue": "Transportation Research Part C: Emerging Technologies",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-fielbaum-trc.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "ridepooling"
+        ],
+        "topics":[
+            "transportation","task planning"
+        ],
+        "abstract": "On-demand ridepooling (ODRP) vehicles follow routes that are fully flexible. However, when the system does not provide door-to-door service and users can be asked to walk, their paths tend to concentrate, particularly along main streets that connect highly demanded areas of the city. These frequently travelled segments are hence useful to multiple passengers, which can be used as an indicator that it would be efficient to allocate a fixed public transport line there. In this paper, we formalise this idea and propose a novel method to design a public transport network, where bus fixed lines are combined with ODRP. Given a network and a transport demand, we first simulate how to serve it using only ODRP with walking. For this, we employ a state-of-the-art assignment algorithm, and take as output the resulting users’ paths. These paths are then processed by a tailored algorithm to create fixed lines where the paths accumulate the most. Users who do not have an available fixed line (i.e., those whose paths were barely shared) are served by ODRP in the mixed system. Simulations using real-life data from Utrecht, The Netherlands, and the Sunshine Coast, Australia, reveal the merits of our method compared to several benchmarks. Crucially, our method builds a small number of fixed lines while still serving the majority of the demand through them. This study contributes not only to the design of public transport networks, but also to the understanding of the patterns that naturally appear in intrinsically flexible mobility systems."
+        }, 
      {
         "title": "Large-scale online ridesharing: the effect of assignment optimality on system performance",
         "authors": [
