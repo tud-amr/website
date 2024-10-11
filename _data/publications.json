@@ -1,11 +1,34 @@
 [
+     {
+        "title": "Beyond the last mile: different spatial strategies to integrate on-demand services into public transport in a simplified city",
+        "authors": [
+            "Andres Fielbaum",
+            "Sergio Jara-Díaz",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-09-02",
+        "type": "journal",
+        "venue": "Public Transport",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-fielbaum-public.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "ridepooling"
+        ],
+        "topics":[
+            "transportation","task planning"
+        ],
+        "abstract": "Integrating on-demand services into public transport networks might be the best way to face the current situation in which these new technologies have increased congestion in most cities. When cooperating with on-demand services rather than competing with them, public transport would not risk losing users, and could attract some passengers from private modes thanks to an increased quality of service. This fact has engendered a growing literature discussing how to design such an integrated system. However, all of that research has imposed that on-demand mobility is to solve the so-called “last-mile problem”, serving only as a feeder that connects the exact origins/destinations with the traditional public transit network. As it induces a large number of transfers and it precludes some scale-effects to be triggered, in this paper we challenge that imposition and investigate if this is the best spatial integration strategy. To do so, we study a simplified linear city in a morning peak situation, where we propose seven different line structures, all of them combining a traditional fixed line with on-demand ride-pooling (ODRP): three direct structures, where ODRP can serve full trips, three semi-direct, where a single ODRP vehicle can serve the largest part of a trip, and a base case in which ODRP is restricted to the first and final legs only. Our results show that the base case is optimal only under very specific demand patterns, or when transfer penalties are disregarded. Our analytical approach reveals relevant operational aspects of such integrated systems: namely, that the base case can help increase directness (diminishing detours), and that ODRP can help shorten the routes of the fixed services to decrease operator costs.",       }, 
     {
         "title": "Distributed multi-target tracking and active perception with mobile camera networks",
         "authors": [
             "Sara Casao",
             "Alvaro Serra-Gomez",
             "Ana C. Murillo",
-            "Wendelin Böhmer"
+            "Wendelin Böhmer",
             "Javier Alonso-Mora",
             "Eduardo Montijano"
         ],
