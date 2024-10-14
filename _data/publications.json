@@ -1,5 +1,130 @@
 [
     {
+        "title": "Design of mixed fixed-flexible bus public transport networks by tracking the paths of on-demand vehicles",
+        "authors": [
+            "Andres Fielbaum",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-03-28",
+        "type": "journal",
+        "venue": "Transportation Research Part C: Emerging Technologies",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-fielbaum-trc.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "ridepooling"
+        ],
+        "topics":[
+            "transportation","task planning"
+        ],
+        "abstract": "On-demand ridepooling (ODRP) vehicles follow routes that are fully flexible. However, when the system does not provide door-to-door service and users can be asked to walk, their paths tend to concentrate, particularly along main streets that connect highly demanded areas of the city. These frequently travelled segments are hence useful to multiple passengers, which can be used as an indicator that it would be efficient to allocate a fixed public transport line there. In this paper, we formalise this idea and propose a novel method to design a public transport network, where bus fixed lines are combined with ODRP. Given a network and a transport demand, we first simulate how to serve it using only ODRP with walking. For this, we employ a state-of-the-art assignment algorithm, and take as output the resulting users’ paths. These paths are then processed by a tailored algorithm to create fixed lines where the paths accumulate the most. Users who do not have an available fixed line (i.e., those whose paths were barely shared) are served by ODRP in the mixed system. Simulations using real-life data from Utrecht, The Netherlands, and the Sunshine Coast, Australia, reveal the merits of our method compared to several benchmarks. Crucially, our method builds a small number of fixed lines while still serving the majority of the demand through them. This study contributes not only to the design of public transport networks, but also to the understanding of the patterns that naturally appear in intrinsically flexible mobility systems."
+        }, 
+     {
+        "title": "Large-scale online ridesharing: the effect of assignment optimality on system performance",
+        "authors": [
+            "David Fiedler",
+            "Michal Čertický",
+            "Javier Alonso-Mora",
+            "Michal Pěchouček",
+            "Michal Cap"
+        ],
+        "date": "2022-12-04",
+        "type": "journal",
+        "venue": "Journal of Intelligent Transportation Systems",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/22-fiedler.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "ridepooling"
+        ],
+        "topics":[
+            "transportation","task planning"
+        ],
+        "abstract": "Mobility-on-demand (MoD) systems consist of a fleet of shared vehicles that can be hailed for one-way point-to-point trips. The total distance driven by the vehicles and the fleet size can be reduced by employing ridesharing, i.e., by assigning multiple passengers to one vehicle. However, finding the optimal passenger-vehicle assignment in an MoD system is a hard combinatorial problem. In this work, we demonstrate how the VGA method, a recently proposed systematic method for ridesharing, can be used to compute the optimal passenger-vehicle assignments and corresponding vehicle routes in a massive-scale MoD system. In contrast to existing works, we solve all passenger-vehicle assignment problems to optimality, regularly dealing with instances containing thousands of vehicles and passengers. Moreover, to examine the impact of using optimal ridesharing assignments, we compare the performance of an MoD system that uses optimal assignments against an MoD system that uses assignments computed using insertion heuristic and against an MoD system that uses no ridesharing. We found that the system that uses optimal ridesharing assignments subject to the maximum travel delay of 4 minutes reduces the vehicle distance driven by 57% compared to an MoD system without ridesharing. Furthermore, we found that the optimal assignments result in a 20% reduction in vehicle distance driven and 5% lower average passenger travel delay compared to a system that uses insertion heuristic.",
+        }, 
+     {
+        "title": "Beyond the last mile: different spatial strategies to integrate on-demand services into public transport in a simplified city",
+        "authors": [
+            "Andres Fielbaum",
+            "Sergio Jara-Díaz",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-09-02",
+        "type": "journal",
+        "venue": "Public Transport",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-fielbaum-public.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "ridepooling"
+        ],
+        "topics":[
+            "transportation","task planning"
+        ],
+        "abstract": "Integrating on-demand services into public transport networks might be the best way to face the current situation in which these new technologies have increased congestion in most cities. When cooperating with on-demand services rather than competing with them, public transport would not risk losing users, and could attract some passengers from private modes thanks to an increased quality of service. This fact has engendered a growing literature discussing how to design such an integrated system. However, all of that research has imposed that on-demand mobility is to solve the so-called “last-mile problem”, serving only as a feeder that connects the exact origins/destinations with the traditional public transit network. As it induces a large number of transfers and it precludes some scale-effects to be triggered, in this paper we challenge that imposition and investigate if this is the best spatial integration strategy. To do so, we study a simplified linear city in a morning peak situation, where we propose seven different line structures, all of them combining a traditional fixed line with on-demand ride-pooling (ODRP): three direct structures, where ODRP can serve full trips, three semi-direct, where a single ODRP vehicle can serve the largest part of a trip, and a base case in which ODRP is restricted to the first and final legs only. Our results show that the base case is optimal only under very specific demand patterns, or when transfer penalties are disregarded. Our analytical approach reveals relevant operational aspects of such integrated systems: namely, that the base case can help increase directness (diminishing detours), and that ODRP can help shorten the routes of the fixed services to decrease operator costs.",       
+        }, 
+    {
+        "title": "Distributed multi-target tracking and active perception with mobile camera networks",
+        "authors": [
+            "Sara Casao",
+            "Alvaro Serra-Gomez",
+            "Ana C. Murillo",
+            "Wendelin Böhmer",
+            "Javier Alonso-Mora",
+            "Eduardo Montijano"
+        ],
+        "date": "2024-01-30",
+        "type": "journal",
+        "venue": "S.I. Collaborative Mobile Smart Cameras, Computer Vision and Image Understanding",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-casao.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "scene-reasoning-team"
+        ],
+        "topics":[
+            "motion planning", "multi-robot", "task planning"
+        ],
+        "abstract": "Smart cameras are an essential component in surveillance and monitoring applications, and they have been typically deployed in networks of fixed camera locations. The addition of mobile cameras, mounted on robots, can overcome some of the limitations of static networks such as blind spots or back-lightning, allowing the system to gather the best information at each time by active positioning. This work presents a hybrid camera system, with static and mobile cameras, where all the cameras collaborate to observe people moving freely in the environment and efficiently visualize certain attributes from each person. Our solution combines a multi-camera distributed tracking system, to localize with precision all the people, with a control scheme that moves the mobile cameras to the best viewpoints for a specific classification task. The main contribution of this paper is a novel framework that exploits the synergies that result from the cooperation of the tracking and the control modules, obtaining a system closer to the real-world application and capable of high-level scene understanding. The static camera network provides global awareness of the control scheme to move the robots. In exchange, the mobile cameras onboard the robots provide enhanced information about the people on the scene. We perform a thorough analysis of the people monitoring application performance under different conditions thanks to the use of a photo-realistic simulation environment. Our experiments demonstrate the benefits of collaborative mobile cameras with respect to static or individual camera setups.",
+        }, 
+    {
+        "title": "Reachability-based confidence-aware probabilistic collision detection in highway driving",
+        "authors": [
+            "Xinwei Wang",
+            "Zirui Li",
+            "Javier Alonso-Mora",
+            "Meng Wang"
+        ],
+        "date": "2024-02-30",
+        "type": "journal",
+        "venue": "S.I. Safety for Intelligent and Connected Vehicles, Engineering",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-Wang-engineering.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "safe-up"
+        ],
+        "topics":[
+            "motion planning"
+        ],
+        "abstract": "Risk assessment is a crucial component of collision warning and avoidance systems for intelligent vehicles. Reachability-based formal approaches have been developed to ensure driving safety to accurately detect potential vehicle collisions. However, they suffer from over-conservatism, potentially resulting in false–positive risk events in complicated real-world applications. In this paper, we combine two reachability analysis techniques, a backward reachable set (BRS) and a stochastic forward reachable set (FRS), and propose an integrated probabilistic collision–detection framework for highway driving. Within this framework, we can first use a BRS to formally check whether a two-vehicle interaction is safe; otherwise, a prediction-based stochastic FRS is employed to estimate the collision probability at each future time step. Thus, the framework can not only identify non-risky events with guaranteed safety but also provide accurate collision risk estimation in safety-critical events. To construct the stochastic FRS, we develop a neural network-based acceleration model for surrounding vehicles and further incorporate a confidence-aware dynamic belief to improve the prediction accuracy. Extensive experiments were conducted to validate the performance of the acceleration prediction model based on naturalistic highway driving data. The efficiency and effectiveness of the framework with infused confidence beliefs were tested in both naturalistic and simulated highway scenarios. The proposed risk assessment framework is promising for real-world applications."
+      }, 
+    {
         "title": "Sampling-based Model Predictive Control Leveraging Parallelizable Physics Simulations",
         "authors": [
             "Corrado Pezzato",
@@ -27,13 +152,44 @@
         "abstract": "We present a method for sampling-based model predictive control that makes use of a generic physics simulator as the dynamical model. In particular, we propose a Model Predictive Path Integral controller (MPPI), that uses the GPU-parallelizable IsaacGym simulator to compute the forward dynamics of a problem. By doing so, we eliminate the need for manual encoding of robot dynamics and interactions among objects and allow one to effortlessly solve complex navigation and contact-rich tasks. Since no explicit dynamic modeling is required, the method is easily extendable to different objects and robots. We demonstrate the effectiveness of this method in several simulated and real-world settings, among which mobile navigation with collision avoidance, non-prehensile manipulation, and whole-body control for high-dimensional configuration spaces. This method is a powerful and accessible tool to solve a large variety of contact-rich motion planning tasks. "
       }, 
     {
+        "title": "Demonstrating Adaptive Mobile Manipulation in Retail Environments",
+        "authors": [
+            "Max Spahn",
+            "Corrado Pezzato",
+            "Chadi Salmi",
+            "Rick Dekker",
+            "Cong Wang",
+            "Christian Pek",
+            "Jens Kober",
+            "Javier Alonso-Mora",
+            "Carlos Hernández Corbato",
+            "Martijn Wisse"
+        ],
+        "date": "2024-07-15",
+        "type": "conference",
+        "venue": ", Proc. of Robotics: Science and Systems (RSS)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24_spahn_rss.pdf"
+            }
+        ],
+        "image": "/assets/images/projects/airlab_robohouse.png",
+        "belongs_to_projects": [
+            "airlab-manipulation"
+        ],
+        "topics":[
+            "mobile manipulation"
+        ],
+        "abstract": "Although autonomous robots have great potential to boost efficiency and throughput across the whole retail chain, they are mostly being deployed in large warehouses and distribution centers. Deploying robots in stores with customers, such as supermarkets, requires substantially more development efforts since they need to safely operate around customers and reliably cope with various uncertainties and disturbances, such as misplaced products. We present our recent efforts in developing a mobile manipulator platform for order picking in realistic supermarket settings. Our robot platform uses state-of-the-art perception and planning algorithms to robustly pick items in the presence of disturbances. In particular, it successfully demonstrates adaptive decision making and rapid replanning. Our robot allows adding new products and teaching new picking maneuvers from demonstrations. We validated our robot in a recreated supermarket in our lab and in a test supermarket of a large Dutch retailer. Our results show how our robot successfully recovers from various disturbances, including misplaced products, errors in picking, and from human interaction. We summarize our lessons learned to bring autonomous robots into real retail environments with customers."
+      }, 
+    {
         "title": "Safe and stable motion primitives via imitation learning and geometric fabrics",
         "authors": [
             "Saray Bakker",
             "Rodrigo Pérez-Dattari",
             "Cosimo Della Santina",
             "Wendelin Böhmer",
-            "Javier Alonso-Mora",
+            "Javier Alonso-Mora"
         ],
         "date": "2024-07-15",
         "type": "workshop",
@@ -2117,7 +2273,7 @@
             "S. Hoogendoorn"
         ],
         "date": "2020-09-01",
-        "type": "journal",
+        "type": "conference",
         "venue": "Transportation Research Board Annual Meeting",
         "links": [
             {
