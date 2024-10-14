@@ -65,7 +65,8 @@ related_project_id: "probabilistic-planning"
     </div>
     <p align="center">
     <br/>
-    <b>Topology-driven MPC (T-MPC++)</b> computes several locally optimized trajectories in parallel, each passing the obstacles differently. This leads to higher quality motion plans and makes it more likely that the planner finds a feasible motion plan.
+    <b>Topology-driven MPC (T-MPC++)</b> is our new trajectory optimization framework that simultaneously computes multiple trajectories, each passing obstacles in a unique way. Our approach enables mobile robots to choose from multiple distinct locally optimal trajectories, significantly improving their ability to navigate dynamic, crowded environments.
+    <!-- <b>Topology-driven MPC (T-MPC++)</b> computes several locally optimized trajectories in parallel, each passing the obstacles differently. This leads to higher quality motion plans and makes it more likely that the planner finds a feasible motion plan. -->
     </p>
   </div>
 </div>
@@ -91,10 +92,8 @@ related_project_id: "probabilistic-planning"
   <p align="justify">
   <br/>
   A schematic explanation of <b>T-MPC</b>. An environment with several obstacles and a robot is visualized in x, y, t (time in the upwards
-axis). Obstacle motion predictions are denoted with cylinders. (1) A guidance planner finds P = 4 trajectories
-(visualized with colored lines) from the robot initial position to one of the goals. Each of these trajectories is in a distinct
-homotopy class in the state space (i.e., each avoids obstacles differently). (2) Each trajectory guides a local planner as initial guess and through a set of homotopy constraints. Four guidance trajectories and optimized trajectories (as occupied regions for each step) are visualized. (3) The optimized trajectories are compared through their objective value (Sec. IV-E) and a single trajectory (in red) is excuted
-by the robot.<br/><br/>We observed that adding a non-guided regular MPC in parallel to the guided planners further improves performance. In crowded environments, the regular MPC may occasionally find trajectories that the guidance planner does not find. By combining both strategies we eliminate key weaknesses in both planners. We refer to the combined planner as <b>T-MPC++</b>.
+axis). Obstacle motion predictions are denoted with cylinders. <br/><br/>(Left) A <b>guidance planner</b> finds P = 4 trajectories
+(visualized with colored lines) from the robot initial position to one out of multiple goals. We filter trajectories on the way that they pass the obstacles using results from topology. As a result each of the guidance trajectories avoids obstacles differently. <br/><br/>(Middle) Each trajectory guides a <b>local planner</b> as initial guess and through a set of constraints that prevent the planner from changing its overtaking behavior. Four guidance trajectories and optimized trajectories (as occupied regions for each step) are visualized. <br/><br/>(Right) To <b>decide</b> on the trajectory to execute, the locally optimized trajectories are compared through their objective value the lowest cost trajectory (in red) is executed. This decision may take into account whether the robot was following the same behavior in the previous iteration.<br/><br/>We observed that adding a non-guided regular MPC in parallel to the guided planners further improves performance. In crowded environments, the regular MPC may occasionally find trajectories that the guidance planner does not find. By combining both strategies we eliminate key weaknesses in both planners. We refer to the combined planner as <b>T-MPC++</b>.
     </p>
 </div>
 
@@ -106,7 +105,7 @@ by the robot.<br/><br/>We observed that adding a non-guided regular MPC in paral
     </div>
     <div class="col-6">
     <p align="justify">
-    <b>Deterministic:</b> Our simulation results demonstrate that <b>T-MPC</b> is significantly faster than other methods in crowded environments. We compared several methods (see the paper) in a corridor environment with a varying number of pedestrians following the social forces model. This figure shows the distribution of the task duration over 200 experiments for 4, 8 and 12 pedestrians. The vertical dashed line denotes the task duration <i>without</i> obstacles. Performance of TEB-Planner and LMPCC degrade in more crowded environments. Our previous work Guidance-MPCC can cause high (undesired) speeds leading to faster task durations than without obstacles. The task duration of T-MPC++, however, remains concentrated closest to the case without pedestrians and does so without incurring more collisions than other methods.
+    <b>Deterministic:</b> Our results demonstrate that <b>T-MPC++</b> allows mobile robots to navigate significantly faster through crowded environments than other planners. We compared against several planners (see the paper) in a corridor environment with a varying number of pedestrians following the social forces model. The figure shows the distribution of the task duration over 200 experiments for 4, 8 and 12 pedestrians. The vertical dashed line denotes the task duration <i>without</i> obstacles. Performance of TEB-Planner and LMPCC degrade in more crowded environments. Our previous work Guidance-MPCC can cause high (undesired) speeds leading to faster task durations than without obstacles. T-MPC++, slows down the least compared to the case without pedestrians without leading to collisions.
     </p>
   </div>
   <hr/>
@@ -136,7 +135,7 @@ by the robot.<br/><br/>We observed that adding a non-guided regular MPC in paral
       <p align="left">
       We successfully applied T-MPC++ to navigate in a lab environment among 5 pedestrians, comparing it against LMPCC (i.e., regular MPC) and comparing TCC-MPC++ against CC-MPC. While the order of planners was randomized, participants unanimously preferred T-MPC++ and TCC-MPC++ over LMPCC and CC-MPC. <br/><br/>
       
-      We observed that our method almost never became infeasible and that it did not get stuck in fast overtake behaviors which therefore led to safer robot motion.
+      While the baseline planner regularly could not find a feasible trajectory or gets stuck in fast dangerous overtaking behaviors, T-MPC++ did not show these behaviors, which led to safer robot motion.
       </p>
     </div>
   </div>
@@ -145,7 +144,7 @@ by the robot.<br/><br/>We observed that adding a non-guided regular MPC in paral
 <div class="col">
   <h3 align="center"><u>Code</u></h3>
 <hr/>
-  <p>Our implementation is publicly available, with the MPC and guidance planner being available also as stand-alone packages. We provide:</p>
+  <p>Our implementation, including the simulation environments, is publicly available as a single VSCode containerized environment. The MPC and guidance planner are also available as stand-alone packages. Please see:</p>
   <ul>
   <li> A VSCode containerized environment with the MPC, Guidance Planner and simulation: <a href="https://github.com/tud-amr/mpc_planner_ws">mpc_planner_ws</a></li>
   <li> The MPC: <a href="https://github.com/tud-amr/mpc_planner">mpc_planner</a></li>
