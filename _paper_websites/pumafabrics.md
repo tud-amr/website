@@ -5,16 +5,16 @@ authors:
       # url: "https://andreumatoses.github.io/"
       superscript: "1"
     - name: "Rodrigo Pérez-Dattari"
-      # url: "https://andreumatoses.github.io/"
+      url: "https://rperezdattari.github.io/"
       superscript: "1"
     - name: "Cosimo Della Santina"
-      # url: "https://andreumatoses.github.io/"
+      url: "https://cosimodellasantina.eu/"
       superscript: "1"
     - name: "Wendelin Böhmer"
-      # url: "https://andreumatoses.github.io/"
+      url: "https://www.tudelft.nl/ewi/over-de-faculteit/afdelingen/software-technology/algorithmics/people/wendelin-boehmer"
       superscript: "2"
     - name: "Javier Alonso-Mora"
-      # url: "https://andreumatoses.github.io/"
+      url: "https://autonomousrobots.nl/people/"
       superscript: "1"
 affiliations:
     # - name: "Equal contribution"
@@ -76,7 +76,7 @@ MathJax = {
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <h3 align="center">Classical PUMA</h3>
+    <h3 align="center">PUMA</h3>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -89,7 +89,7 @@ MathJax = {
     </p>
   </div>
   <div class="col">
-    <h3 align="center">TamedPUMA</h3>
+    <h3 align="center">TamedPUMA (ours)</h3>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -382,7 +382,7 @@ To explore convergence of Eq. \eqref{eq: qddot_theoremIII5} over infinite time t
 In the limit, both $\beta\qdot \rightarrow \vec{0}$ and $energize_{\mathcal{H}_{\mathcal{L}_e}}[\h]$ converge to zero in Eq. \eqref{eq: limit_qddot_d}.
 In the following, we will elaborate why the equality in Eq. \eqref{eq: limit_qddot_e} requires $\f=\vec{0}$ in the limit.
 <br><br>
-The fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$ in Eq. \eqref{eq: limit_qddot_e} has two occurances of $\qdot$ both in the numerator and denominator. As $\vec{M}_{\mathcal{L}_e}$ is positive definite and bounded, the fraction becomes a projection operator in the limit,
+The fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$ in Eq. \eqref{eq: limit_qddot_e} has two occurances of $\qdot$ both in the numerator and denominator. As $\vec{M}_{\mathcal{L}_e}$ is positive definite and bounded, the fraction in the limit becomes,
 \begin{equation} \label{eq: A_limit}
     \lim_{t \rightarrow \infty}\ \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} = \vec{A} = \frac{\vec{v}\vec{v}^{\top}}{\vec{v}^{\top}\vec{M}_{\mathcal{L}_e}\vec{v}}  \ \ \ \  \text{where} \ \ \ \ \vec{v} = \lim_{t \rightarrow \infty} \frac{\qdot}{\norm{\qdot}}.
  \end{equation}
