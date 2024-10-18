@@ -17,14 +17,18 @@ people: # If you put your name in the same way you have it in your _people entry
       extra_info: PhD candidate
     - name: Andreu Matoses Gimenez
       extra_info: PhD candidate
-    - name: Clarence Chen
+    - name: Dr. Clarence Chen
       extra_info: Postdoctoral researcher
     - name: Max Spahn
       extra_info: Postdoctoral researcher
-    - name: Nils Wilde
+    - name: Dr. Nils Wilde
       extra_info: Postdoctoral researcher
+    - name: Tomas Merva
+      extra_info: Visiting PhD candidate
     - name: Prof. Wendelin Bohmer 
-      extra_info: Key collaborator.
+      extra_info: Key collaborator
+    - name: Prof. Chris Pek 
+      extra_info: Key collaborator
     - name: Prof. Javier Alonso-Mora
     # extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
 ---
