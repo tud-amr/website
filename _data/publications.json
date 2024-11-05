@@ -11,9 +11,10 @@
         "venue": "Transportation Research Part A: Policy and Practice",
         "links": [
             {
-                "pdf": "/assets/files/publications/24-fielbaum-tra"
+                "pdf": "/assets/files/publications/24-fielbaum-tra.pdf"
             }
         ],
+        "image": null,
         "belongs_to_projects": [
             "ridepooling"
         ],
