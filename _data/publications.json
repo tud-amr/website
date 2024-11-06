@@ -1,5 +1,29 @@
 [
     {
+        "title": "Fleet Sizing for the Flash Delivery Problem from Multiple Stores: a Case Study in Amsterdam",
+        "authors": [
+            "Maximilian Kronmueller",
+            "Andres Fielbaum",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-09-25",
+        "type": "conference",
+        "venue": "IEEE International Conference on Intelligent Transportation Systems (ITSC)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-kronmuller-itsc.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "airlab-ondemand"
+        ],
+        "topics":[
+            "task planning", "transportation"
+        ],
+        "abstract": "In this paper, we present an approach for fleet sizing in the context of flash delivery, a time-sensitive delivery service that requires the fulfilment of customer requests in minutes. Our approach effectively combines individual delivery requests into groups and generates optimized operational plans that can be executed by a single vehicle or autonomous robot. The groups are formed using a modified routing approach for the flash delivery problem. Combining the groups into operational plans is done by solving an integer linear problem. To evaluate the effectiveness of our approach, we compare it against three alternative methods: fixed vehicle routing, non- pooled deliveries and a strategy encouraging the pooling of requests. The results demonstrate the value of our proposed approach, showcasing its ability to optimize the fleet size and improve operational efficiency. Our experimental analysis is based on a real-world dataset provided by a Dutch retailer, allowing us to gain valuable insights into the design of flash delivery operations and to analyze the effect of the maximum allowed delay, the number of stores to pick up goods from and the employed cost functions."
+      },
+    {
         "title": "Improving public transportation via line-based integration of on-demand ridepooling",
         "authors": [
             "Andres Fielbaum",
