@@ -1,5 +1,31 @@
 [
     {
+        "title": "ROME: Robust Multi-Modal Density Estimator",
+        "authors": [
+            "Anna Mészáros",
+            "Julian F Schumann",
+            "Javier Alonso-Mora",
+            "Arkady Zgonnikov",
+            "Jens Kober"
+        ],
+        "date": "2024-08-25",
+        "type": "conference",
+        "venue": "33rd International Joint Conference on Artificial Intelligence (IJCAI)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-meszaros-ijcai.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "nwa-act"
+        ],
+        "topics":[
+            "perception"
+        ],
+        "abstract": "The estimation of probability density functions is a fundamental problem in science and engineering. However, common methods such as kernel density estimation (KDE) have been demonstrated to lack robustness, while more complex methods have not been evaluated in multi-modal estimation problems. In this paper, we present ROME (RObust Multi-modal Estimator), a non-parametric approach for density estimation which addresses the challenge of estimating multi-modal, non-normal, and highly correlated distributions. ROME utilizes clustering to segment a multi-modal set of samples into multiple uni-modal ones and then combines simple KDE estimates obtained for individual clusters in a single multi-modal estimate. We compared our approach to state-of-the-art methods for density estimation as well as ablations of ROME, showing that it not only outperforms established methods but is also more robust to a variety of distributions. Our results demonstrate that ROME can overcome the issues of over-fitting and over-smoothing exhibited by other estimators."
+      },
+    {
         "title": "Fleet Sizing for the Flash Delivery Problem from Multiple Stores: a Case Study in Amsterdam",
         "authors": [
             "Maximilian Kronmueller",
