@@ -42,9 +42,12 @@ Harmony is a Horizon 2020 project which develops assistive robotic mobile manipu
    
 Current robotic automation solutions only offer “islands of automation” where either mobility or manipulation is dealt with in isolation. Harmony aims to fill this gap in knowledge by combining both robotic mobility and manipulation modalities in complex, human-centred environments. We at AMR focus on providing adaptive task and motion planning with multiple robots in human-centred environments.
 
-Traditionally task scheduling and planning has been decoupled from motion planning. Yet, when robots navigate in critical and dynamic environments, plans may have to be adapted online to take into account congestion and interaction with other robots and human co-workers. We will devise methods for multi-robot motion planning that schedule plans for the robots and adapt them online taking into account the priority of tasks, their associated uncertainty and the preferences and needs of human co-workers. Furthermore, we will develop local-motion planning approaches which do not only account for collision avoidance but also consider social interactions.
+Traditionally task scheduling and planning has been decoupled from motion planning. Yet, when robots navigate in critical and dynamic environments, plans may have to be adapted online to take into account congestion and interaction with other robots and human co-workers. 
 
-The goal is to have an integrated approach for mobile manipulation in uncertain and dynamic environments shared with humans, which accounts for social interactions, navigation and coordination tasks, and that provides performance guarantees (in expectation).
+We devise methods for multi-robot motion planning that schedule plans for the robots and adapt them online taking into account the priority of tasks, their associated uncertainty and the preferences and needs of human co-workers. This includes novel methods for Multi-Robot Task Assignment (MRTA) that consider uncertain environments and homogenous robot fleets. Further, we design novel multi-objective planning frameworks that can efficiently explore Pareto-optimal trade-offs. Our results include general solutions for a wide range of motion planning problems as well as specialized methods for multi-objective MRTA.
+
+Furthermore, we develop local-motion planning approaches which do not only account for collision avoidance but also consider social interactions. We design integrated approaches for navigation as well as mobile manipulation in uncertain and dynamic environments shared with humans, which accounts for social interactions, navigation and coordination tasks, and that provides performance guarantees (in expectation).
+
 
 
 ## Project Demonstrations
