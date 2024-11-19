@@ -43,7 +43,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: Video
       icon: bi-youtube
       url: "https://www.youtube.com/watch?v=ovLZmSd-XX8"
-    - name: Related Publications
+    - name: related Publications
       icon: bi-file-text
       url: "#related-publications"
 related_project_id: "trilogy"

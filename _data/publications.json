@@ -461,6 +461,57 @@
         "abstract": "Robot autonomy often involves planning high-level discrete decisions and continuous motion planning to realize each decision. Task and Motion Planning (TAMP) algorithms solve these hybrid problems jointly while considering constraints between the discrete symbolic actions, i.e., the task plan, and their continuous geometric realization. Previous TAMP algorithms have mostly focused on computational performance, completeness, or optimality. However, due to the required simplifications and abstractions, the resulting plans often do not account for robot dynamics, nor complex contacts. They also often ignore the effect of the low-level controllers on the optimality and/or feasibility of the plan's realizations. This work investigates the use of a parallelized physics simulator to compute realizations of the plan with a motion controller, realistic dynamics, and considering contacts with the environment. Using cross-entropy optimization, we sample the parameters used by the controllers, or actions, to obtain low-cost solutions. The resulting realized plan is straightforward to implement in the real system, as the robot uses the same controllers. We test our approach for a pick and place task, where our method is capable of finding low-cost feasible solutions in 1-2 min."
       }, 
     {
+        "title": "Learning Social Homologies for Navigation",
+        "authors": [
+            "Diego Martinez-Baselga",
+            "Oscar de Groot",
+            "Luzia Knoedler",
+            "Luis Riazuelo",
+            "Javier Alonso-Mora",
+            "Luis Montano"
+        ],
+        "date": "2024-07-15",
+        "type": "workshop",
+        "venue": "Robotics: Science and Systems (RSS), Workshop on Unsolved Problems in Social Robot Navigation",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-martinez-baselga-rss-ws.pdf"
+            }
+        ],
+        "image": "/assets/images/papers/shine_ws/shine_cover_image.png",
+        "belongs_to_projects": [
+            "harmony"
+        ],
+        "topics":[
+            "social navigation","collision avoidance"  
+        ],
+        "abstract": "Navigating mobile robots in social environments remains a challenging task due to the intricacies of human-robot interactions. Most of the motion planners designed for crowded and dynamic environments focus on reaching the goal while avoiding collisions or local social interactions, but do not explicitly consider the high-level navigation behavior (avoiding through the left or right side, letting others pass or passing before others, etc.). In this work, we present a novel motion planner that incorporates topology distinct paths representing diverse navigation strategies around humans. The planner uses a deep neural network model trained on real-world human motion data to estimate how well a topology classes imitate the human behavior. Then, selects the best topology class using it, ensuring socially intelligent and contextually aware navigation. Our system refines the chosen path through an optimization-based local planner in real time, ensuring adherence to desired social behaviors. We evaluate the prediction accuracy of the network with real-world data and the navigation capabilities in both simulation and a realworld platform. Our method demonstrates socially desirable behaviors, smooth and remarkable performance compared to other planners."
+      }, 
+      {
+        "title": "Interaction-Aware Autonomous Navigation among Pedestrians using Social Forces Response Dynamics",
+        "authors": [
+            "Luzia Knoedler",
+            "Nils Wilde",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2024-07-15",
+        "type": "workshop",
+        "venue": "Robotics: Science and Systems (RSS), Workshop on Unsolved Problems in Social Robot Navigation",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-knoedler-rss-ws.pdf"
+            }
+        ],
+        "image": "/assets/images/papers/sofiia/SoFIIA.png",
+        "belongs_to_projects": [
+            "harmony"
+        ],
+        "topics":[
+            "social navigation","collision avoidance"  
+        ],
+        "abstract": "Ignoring the interactions between agents during motion planning in multi-agent environments can result in overly conservative or opaque navigation behaviors, and in dense crowds, it may lead to the so-called Freezing robot problem. Although coupled planning can mitigate these issues, it typically incurs high computational costs, especially as the number of agents increases. To enhance interaction while limiting the computational complexity, we formulate the interactions as an underactuated system and propose to leverage the Social Forces Model (SFM) as the pedestrians’ response dynamics. The SFM is a well-established model widely used for describing pedestrian behaviors. Unlike deep learning models that require extensive training data, SFM offers interpretability and adaptability across various environments. We use Model Predictive Path Integral Control to solve the optimization problem, demonstrating that by accounting for interactions, the robot can effectively leverage the behavior of other agents. Additionally, we show that when combined with a specific cost function, the robot is able to plan motions that decrease its impact on surrounding pedestrians."
+      }, 
+    {
         "title": "Multi-Modal MPPI and Active Inference for Reactive Task and Motion Planning",
         "authors": [
             "Yuezhe Zhang",
@@ -1105,11 +1156,11 @@
     {
         "title": "Multi-Robot Local Motion Planning Using Dynamic Optimization Fabrics",
         "authors": [
-            "S. Bakker",
-            "L. Knoedler",
-            "M. Spahn",
-            "W. Boehmer",
-            "J. Alonso-Mora"
+            "Saray Bakker",
+            "Luzia Knoedler",
+            "Max Spahn",
+            "Wendelin Boehmer",
+            "Javier Alonso-Mora"
         ],
         "date": "2023-12-01",
         "type": "conference",
@@ -1889,11 +1940,11 @@
     {
         "title": "Learning a Guidance Policy from Humans for Social Navigation",
         "authors": [
-            "L. Knoedler",
-            "B. Brito",
-            "M. Everett",
-            "J.P. How",
-            "J. Alonso-Mora"
+            "Luzia Knoedler",
+            "Bruno Brito",
+            "Michael Everett",
+            "Jonathan P. How",
+            "Javier Alonso-Mora"
         ],
         "date": "2022-05-01",
         "type": "workshop",
