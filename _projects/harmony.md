@@ -47,13 +47,13 @@ Traditionally task scheduling and planning has been decoupled from motion planni
 We devise methods for multi-robot motion planning that schedule plans for the robots and adapt them online taking into account the priority of tasks, their associated uncertainty and the preferences and needs of human co-workers. This includes novel methods for Multi-Robot Task Assignment (MRTA) that consider uncertain environments and homogenous robot fleets. Further, we design novel multi-objective planning frameworks that can efficiently explore Pareto-optimal trade-offs. Our results include general solutions for a wide range of motion planning problems as well as specialized methods for multi-objective MRTA.
 
 <div class="d-flex justify-content-start mb-2">
-  <img class="img-fluid" style="max-height: 2cm;" src="{% include fix_link.html link='/assets/images/projects/harmony/multi_objective_MRTA.png' %}" alt="Multi-Objective Task Assignment">
+  <img class="img-fluid" style="max-height: 10cm;" src="{% include fix_link.html link='/assets/images/projects/harmony/multi_objective_MRTA.png' %}" alt="Multi-Objective Task Assignment">
 </div>
 
 Furthermore, we develop local-motion planning approaches which do not only account for collision avoidance but also consider social interactions. We design integrated approaches for navigation as well as mobile manipulation in uncertain and dynamic environments shared with humans, which accounts for social interactions, navigation and coordination tasks, and that provides performance guarantees (in expectation).
 
 <div class="d-flex justify-content-start mb-2">
-  <img class="img-fluid" style="max-height: 2cm;" src="{% include fix_link.html link='/assets/images/projects/harmony/local_planner.png' %}" alt="Socially interactive local motion planning">
+  <img class="img-fluid" style="max-height: 10cm;" src="{% include fix_link.html link='/assets/images/projects/harmony/local_planner.png' %}" alt="Socially interactive local motion planning">
 </div>
 
 
