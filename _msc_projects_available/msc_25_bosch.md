@@ -3,7 +3,7 @@ title: Collision-Free Smooth Motion Planning Among Humans
 direct_supervisors: 
     - name: Robert Bosch GmbH, Corporate Research, Stuttgart
 # If you want to use this webiste as the proposal document, comment the proposal_document, just write in the body of the document with markdown
-proposal_document: /assets/files/student_projects/msc_25_bosch.pdf
+proposal_document: /assets/files/student_projects/msc_25_bosch_motion_planning_among_humans.pdf
 display: true # Do you want to display this project in the table? (true/false)
 ---
 
