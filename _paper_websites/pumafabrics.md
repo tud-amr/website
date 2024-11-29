@@ -74,7 +74,7 @@ MathJax = {
     {% endif %}
 </div>
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+<!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
     <h3 align="center">PUMA</h3>
     <div class="teaser-video d-flex justify-content-center">
@@ -101,19 +101,41 @@ MathJax = {
     Via TamedPUMA, PUMA is enhanced for safe and stable navigation. <b>Whole-body collision avoidance</b> and <b>joint limits</b> are incorporated. 
     </p>
   </div>
-</div>
+</div> -->
+<div>
+    <!-- <h3 align="center">TamedPUMA</h3> -->
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    By leveraging the recently introduced geometric framework for motion planning called geometric fabrics, 
+our approach learns stable motion profiles while considering online whole-body collision-avoidance and joint limits.
+    </p>
+  </div>
 
 <h2> Abstract </h2>
 <p align="justify">
-Motion planning for autonomous robots in human-populated environments poses numerous challenges due to uncertainties in the robot's dynamics, environment, and interaction with other agents. Sampling-based MPC approaches, such as Model Predictive Path Integral (MPPI) control, have shown promise in addressing these complex motion planning problems. However, the performance of MPPI relies heavily on the choice of sampling distribution. Existing literature often uses the previously computed input sequence as the mean of a Gaussian distribution for sampling, leading to potential failures and local minima. In this paper, we propose novel derivations of the MPPI method to enhance its efficiency, robustness, and convergence. Our approach includes a mathematical formulation allowing for arbitrary sampling distributions, addressing numerical issues, and alleviating the problem of local minima. We present an efficient importance sampling scheme that combines classical and learning-based ancillary controllers simultaneously, resulting in more informative sampling and control fusion. We demonstrate our proposed scheme's superior efficiency and robustness through experiments by handling model uncertainties and rapid environmental changes and reducing susceptibility to local minima.
+Using the language of dynamical systems, Imitation learning (IL) provides an intuitive and effective way of teaching stable task-space motions to robots with goal convergence. Yet, IL techniques are affected by serious limitations when it comes to ensuring safety and fulfillment of physical constraints. With this work, we solve this challenge via TamedPUMA, an IL algorithm augmented with a recent development in motion planning called geometric fabrics. 
+As both the IL policy and geometric fabrics describe motions as artificial second-order dynamical systems, we propose two variations where IL provide a navigation policy for geometric fabrics. 
+The result is a stable imitation learning strategy within which we can seamlessly blend geometrical constraints like collision avoidance and joint limits.
+Beyond providing a theoretical analysis, we demonstrate TamedPUMA with simulated and real-world tasks, including a 7-DoF manipulator. 
+<br>
+<br>
+Keywords: Imitation Learning, Dynamical Systems, Geometric Motion Planning, Fabrics, Movement Primitives
 </p>
 
-<h2> Illustrative Point-mass Example: </h2>
-<div class="image-div mb-3 d-flex justify-content-center">
+<h2> Illustrative Point-mass Example </h2>
+In <a href="#table-hyperparameters">Fig. 1</a> , trajectories are shown of a 2D point-mass example for the proposed methods, alongside baselines of geometric fabrics<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[1, 2]</sup></span> with a manually designed potential function, and PUMA<span class="citation" onclick="document.getElementById('perezdattari2024deep').scrollIntoView();"><sup>[3]</sup></span>. The purely data-driven method PUMA follows the motion profile as learned from demonstrations, although it has no notion of obstacle avoidance or other physical constraints. The proposed methods, FPM and CPM, successfully follow the desired motion profile of PUMA, while avoiding collisions with the obstacles. In contrast, geometric fabrics are unable to follow the desired motion profile. 
+<div id="fig-pointmass" class="image-div mb-3 d-flex justify-content-center">
     <img src="{{ '/assets/images/papers/pumafabrics/point_mass_comparison_plot.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
 </div>
 
-<h2> Demonstrating the tomato-picking task</h2>
+<h2> Experiment: Tomato picking with a 7-DoF manipulator</h2>
+<h3> Demonstrating the tomato-picking task</h3>
 <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2"> -->
   <div class="col">
     <div class="teaser-video d-flex justify-content-center">
@@ -124,7 +146,6 @@ Motion planning for autonomous robots in human-populated environments poses nume
       </div>
     </div>
     <p align="center">
-    When an obstacle forces the robot towards a pose <b>far from the demonstrations</b>, TamedPUMA recovers and <b>reaches the goal</b>.
     </p>
   <!-- </div>
   <div class="col">
@@ -184,7 +205,37 @@ Motion planning for autonomous robots in human-populated environments poses nume
     </p>
   </div>
 </div> -->
-<h2> Experiment: Challenging scenarios</h2>
+<h3> Results of the tomato-picking task with TamedPUMA</h3>
+Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting for whole-body collision avoidance and joint limits. We propose two variations, the Forcing Policy Method (FPM) and the Compatible Potential Method (CPM).
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <h3 align="center">FPM</h3>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    In the FPM, convergence to the goal is not guaranteed, but works well in practice. 
+    </p>
+  </div>
+  <div class="col">
+    <h3 align="center">CPM</h3>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    CPM provides a stronger notion of goal convergence than the FPM. In practice, the performance is similar to FPM.
+    </p>
+  </div>
+</div>
+
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
     <h3 align="center">An out-of-distribution scenario</h3>
@@ -226,7 +277,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
       </div>
     </div>
     <p align="center">
-    Classic MPPI gets stuck in a local minima whereby both agents think they should pass first, even when it becomes clear the orange agent should yield, resulting in a collision. 
+    TamedPUMA avoid collisions with the helmet while performing a learned pouring task. 
     </p>
   </div>
   <div class="col">
@@ -244,7 +295,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
   </div>
 </div>
 
-<h2> Experiment: Simulated comparison with geometric fabrics </h2>
+<h2> Comparison with geometric fabrics and PUMA</h2>
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
     <h3 align="center">Geometric Fabrics</h3>
@@ -264,7 +315,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_CPM_no_obst.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_CPM_no_obst2.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -274,149 +325,154 @@ Motion planning for autonomous robots in human-populated environments poses nume
   </div>
 </div>
 
-<h2>Supplementary theoretical details on TamedPUMA</h2>
-<b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a></b>.
-<h3>Energization and Finsler energies</h3>
-<div>
-In fabrics<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>, the concept of energization is used to transform the system $\qddot = \h(\q, \qdot)$ into an energy-conserving system. 
-To ensure path-consistency after energization, the system $\qddot = \h(\q, \qdot)$ is designed to be <em>Homogenous of Degree 2 (HD2)</em>
-which holds if $\h(\q, \alpha\qdot) = \alpha^2 \h(\q, \qdot)$ for $\alpha\geq0$. An energized system that is HD2 follows the same path as the original system and differs only by an acceleration along the direction of motion. 
-<br><br>
-It is common to use a Finsler energy to energize the system, although any Lagrangian can be used. A Finsler energy extends the concept of kinetic energy by enabling the modeling of directionally dependence metric tensors, e.g. the Finsler energy is HD2 in the velocity<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[2]</sup></span>. Finsler energies have the property that the Hamiltonian $\mathcal{H}_{\mathcal{L}_e}$ associated with the Finsler energy $\mathcal{L}_e$, is the Finsler energy itself.
-An energized system that conserves a Finsler energy and is path consistent is called a <em>geometric fabric</em>. 
-<br><br>
-To transform the original system $\qddot = \h(\q, \qdot)$ into a geometric fabric, we find $\bar{\alpha}$ for which the system, $\qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h] = \h(\q, \qdot) + \bar{\alpha}\qdot$, conserves the Finsler energy $\mathcal{L}_e$. This <em>>energization</em> is performed by setting the time-derivative of the Hamilonian to zero, 
-<!-- $$
-\begin{subequations} -->
-    \begin{align}
-    \dot{\mathcal{H}}_{\mathcal{L}_e} &= \qdot^{\top}[\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e}] = 0,\\
-    &= \qdot^{\top}[\vec{M}_{\mathcal{L}_e}(\h + \bar{\alpha}\qdot)+ \vec{\xi}_{\mathcal{L}_e}] = 0,\\
-    \bar{\alpha} &= - \frac{\qdot^{\top}\left( \vec{M}_{\mathcal{L}_e} \h + \vec{\xi}_{\mathcal{L}_e}\right)}{\qdot^{\top}\bf{M}_{\mathcal{L}_e}\qdot},
-\end{align}
-<!-- \end{subequations}
-$$ -->
-where $\left(\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e}\right)$ are the Euler-Lagrange equations of $\mathcal{L}_e$ with $\vec{M}_{\mathcal{L}_e} = \partial^2_{\qdot\qdot}\mathcal{L}_e$ and $\vec{\xi}_{\mathcal{L}_e} = \partial_{\qdot \q}\mathcal{L}_e \qdot - \partial_{\q} \mathcal{L}_e$<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>.
-</div>
-<h3 id=proof>Theoretical details on the Compatible Potential Method</h3>
-<div>
-In the following, a theoretical analysis is provided of the stability and convergence properties related to the Compatible Potential Method (CPM). Firstly, more details are provided regarding the stability and convergence proof for a navigation policy $\f = \fC$ with a compatible potential $\psi(\q)$ and the required assumptions. This is followed by Section <a href="Compatible potentials for TamedPUMA">Compatible potentials for TamedPUMA</a>, providing an illustration of the CPM with its corresponding latent space, task spaces and configuration space, and the compatible potential. 
-<br><br>
-The stability and convergence properties of the CPM are based on Theorem III.5 in Ratliff et al. (2023)<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>.
-The Theorem reads as follows, where we correct for two typos, replacing $\mathcal{H}$ with $\mathcal{H}_{\mathcal{L}_e}$ and $\gamma \qdot $ with $\gamma$ in the original description,
-\begin{equation} \label{eq: system_CPM}
-\qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h+\f]+\gamma \qdot \ \ \text{is replaced by:} \ \ \qddot = energize_{\mathcal{H}}[\h+\f]+\gamma.
-\end{equation}
-<br><br>
-<b>Theorem III.5 adapted from Ratliff et al. (2023)<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>:</b> <em>Let </em>energize$_{\mathcal{L}_e}[\h(\q, \qdot)]$ <em>be a fabric with generator $\h$ and Finsler energy $\mathcal{L}_e$, and let $\f(\q, \qdot)$ be a navigation policy with compatible potential $\psi(\q)$. Denote the total energy by $\mathcal{H}=\mathcal{L}_e+\psi$. The system 
-<!-- \begin{subequations} \label{eq: qddot_theoremIII5} -->
-\begin{align} \label{eq: qddot_theoremIII5}
-    \qddot &= energize_{\mathcal{H}}[\h+\f] - \beta \qdot\\
-    &= energize_{\mathcal{H}_{\mathcal{L}_e}}[\h+\f]+\gamma %= \h + \f + \bar{\alpha} + \gamma,
-    \end{align}
-<!-- \end{subequations}  -->
-</em>
-<em>with energy regulator,</em>
-\begin{equation} \label{eq: gamma}
-    \gamma(\q, \qdot) = - \left(\frac{\qdot \qdot^{\top}}{\qdot^{\top}M_{\mathcal{L}_e}\qdot}\right)\delta \psi - \beta \qdot,
-\end{equation}
-<em>converges to the zero set of $\f$ for $\beta>0$.</em>
-<br><br>
-The proof of Theorem III.5 consists of two parts: (1) Showing that the system in Eq. \eqref{eq: qddot_theoremIII5} is energy-decreasing and therefore it results in $\qdot \rightarrow \vec{0}$ and $\qddot \rightarrow \vec{0}$ as time goes to infinity.  
-(2) Assuring that when the system converges, it converges to the zero set of the navigation policy $\f$. 
-<br><br>
-<b>Step 1: </b> To ensure that the damped system decreases in energy resulting in $\qdot = \vec{0}$ and $\qddot = \vec{0}$, we first analyze the energy-conservative system, $energize_{\mathcal{H}}[\h +\f]$. 
-<br><br>
-<b>Step 1a:</b>
-Let's start with finding $\alpha$ for which the system $\qddot = energize_{\mathcal{H}}[\h+\f] = \h + \f + \alpha \qdot$  is energy-conservative, i.e. the derivative of the Hamiltonian is zero, $\dot{\mathcal{H}} = 0$.  
-The total energy is a summation of the Hamiltonian associated with the Finsler energy, $\mathcal{H}_{\mathcal{L}_e}$, and the potential energy $\psi$. The total energy and its derivative therefore become,
-\begin{align}
-\mathcal{H} = \mathcal{H}_{\mathcal{L}_e} + \psi, &&
-    \dot{\mathcal{H}} = \frac{\partial \q}{\partial t}^{\top} \frac{\partial \mathcal{H}}{\partial \q} = \qdot^{\top}[\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e} + \delta \psi].
-\end{align}
-To find $\alpha$ for which $\dot{\mathcal{H}} = 0$, we substitute $\qddot = \h + \f + \alpha \qdot$ into the derivative of the Hamiltonian and set this equal to zero,
-<!-- \begin{subequations} -->
-\begin{align}
-    \dot{\mathcal{H}} &= \qdot^{\top}[\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e} + \delta \psi] = 0, \\
-    &= \qdot^{\top}[\vec{M}_{\mathcal{L}_e} \left( \h + \f + \alpha \qdot \right) + \vec{\xi}_{\mathcal{L}_e} + \delta \psi] = 0, \\
-    &= \alpha (\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot) + \qdot^{\top}\left( \vec{M}_{\mathcal{L}_e} \h + \vec{\xi}_{\mathcal{L}_e}\right) + \qdot^{\top}\left(\vec{M}_{\mathcal{L}_e} \f + \partial \psi \right) = 0.\\
-    \alpha &= - \left(\frac{\qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}\right) [ \vec{M}_{\mathcal{L}_e}(\h +\f) + \vec{\xi}_{\mathcal{L}_e} ] - \left(\frac{\qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}\right) \partial \psi. \label{eq: alpha_appendix}
-\end{align}
-<!-- \end{subequations} -->
-The expression for $\alpha$ is substituted into the system $\qddot = \h + \f + \alpha \qdot$, to obtain,
-<!-- \begin{subequations} \label{eq: qddot_conservative} -->
-\begin{align} \label{eq: qddot_conservative}
-    \qddot &= energize_{\mathcal{H}}[\h+\f], \\
-           &= \h + \f + \alpha \qdot, \\
-           &= \underbrace{\h + \f \underbrace{- \left(\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}\right) [ \vec{M}_{\mathcal{L}_e}(\h +\f) + \vec{\xi}_{\mathcal{L}_e} ]}_{\bar{\alpha}}}_{energize_{\mathcal{H}_{\mathcal{L}_e}}[\h+\f]} \underbrace{- \left(\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}\right) \partial \psi}_{\gamma \text{ with } \beta=0}. \label{eq:}
-\end{align}
-<!-- \end{subequations} -->
-Analyzing Eq. \eqref{eq: qddot_conservative}, the system can be split into the energized system of $\qddot = \h +\f$ with the Finsler energy $\mathcal{L}_e$ and corresponding energization vector $\bar{\alpha}$, and the term $\gamma$ where $\beta=0$.
-By adding damping to Eq. \eqref{eq: qddot_conservative}, we obtain the damped system as represented in Eq. \eqref{eq: qddot_theoremIII5}. In Step 1b, it is proven that the damped system decreases energy and converges to $\dot{\mathcal{H}} \rightarrow 0$, since $\mathcal{H}$ is decreasing and lower bounded, leading to $\qdot \rightarrow \vec{0}$ and $\qddot \rightarrow \vec{0}$ as time goes to infinity. 
-<br><br>
-<b>Step 1b</b>: Damping is added to Eq. \eqref{eq: qddot_conservative} via $-\beta \qdot$ with $\beta>0$,
-\begin{equation}
-    \qddot = \h + \f + \alpha \qdot - \beta \qdot.
-\end{equation}
-As the derivative of the Hamiltonian is zero for $\beta=0$, this leads to the following derivative of the Hamiltonian for the damped system,
-<!-- \begin{subequations} \label{eq: Hdot_damped} -->
-\begin{align} \label{eq: Hdot_damped}
-    \dot{\mathcal{H}} &= \qdot^{\top}[\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e} + \delta \psi] - \beta \qdot^{\top} \vec{M}_{\mathcal{L}_e} \qdot, \\
-    &= - \beta \qdot^{\top} \vec{M}_{\mathcal{L}_e} \qdot.
-\end{align}
-<!-- \end{subequations} -->
-As $\vec{M}_{\mathcal{L}_e}$ is strictly positive, Eq. \eqref{eq: Hdot_damped} is less than zero for all $\qdot \neq \vec{0}$ and zero for $\qdot = \vec{0}$. Since the total energy $\mathcal{H}$ is always decreasing and lower bounded by zero, 
-the rate of the decrease must converge to zero, $\dot{\mathcal{H}} \rightarrow 0$, which means that 
-$\dot{\mathcal{H}} = -\beta \qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot \rightarrow 0$ converges to zero, and therefore $\qdot \rightarrow \vec{0}$ leading to $\qddot \rightarrow \vec{0}$. 
-<br><br>
-<b>Step 2</b>: The second step is to ensure convergence of the system in Eq. \eqref{eq: qddot_theoremIII5} to the zero set of the navigation policy $\f$. For the CPM, this ensures that the system Eq. \eqref{eq: system_CPM} converges to the zero set of the pulled dynamical system of PUMA ($\qddot = \f^{\mathcal{C}}_{\theta}(\q, \qdot)$, Eq. 6 in <a href="https://arxiv.org">Section 3.2</a>) which contains the desired goal. 
-To explore convergence of Eq. \eqref{eq: qddot_theoremIII5} over infinite time to the zero set of $\f$, we take the limit with $\qdot, \qddot \rightarrow \vec{0}$,
-<!-- \begin{subequations} \label{eq: limit_qddot} -->
-    \begin{align} \label{eq: limit_qddot}
-    \qddot &= \h + \f + \alpha \qdot - \beta \qdot,\\
-           &= \h + \f - \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} [ \vec{M}_{\mathcal{L}_e}(\h +\f) + \vec{\xi}_{\mathcal{L}_e} ] - \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} \partial \psi - \beta \qdot,\\
-    &= \h - \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}[ \vec{M}_{\mathcal{L}_e}\h + \vec{\xi}_{\mathcal{L}_e} ]- \beta \qdot +  \f - \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} \left(\vec{M}_{\mathcal{L}_e} \f + \partial \psi \right),\label{eq: limit_qddot_c}\\
-    \xrightarrow[t \rightarrow \infty]{}\ \vec{0}       &= \underbrace{energize_{\mathcal{H}_{\mathcal{L}_e}}[\h]- \beta \qdot }_{\xrightarrow[t \rightarrow \infty]{}\ \vec{0}}+  \f - \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} \left(\vec{M}_{\mathcal{L}_e} \f + \partial \psi \right),\label{eq: limit_qddot_d}\\
-    \xrightarrow[t \rightarrow \infty]{}\ \vec{0}  &= \f - \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} \left(\vec{M}_{\mathcal{L}_e} \f + \partial \psi \right). \label{eq: limit_qddot_e} 
-    \end{align}
-<!-- \end{subequations} -->
-In the limit, both $\beta\qdot \rightarrow \vec{0}$ and $energize_{\mathcal{H}_{\mathcal{L}_e}}[\h]$ converge to zero in Eq. \eqref{eq: limit_qddot_d}.
-In the following, we will elaborate why the equality in Eq. \eqref{eq: limit_qddot_e} requires $\f=\vec{0}$ in the limit.
-<br><br>
-The fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$ in Eq. \eqref{eq: limit_qddot_e} has two occurances of $\qdot$ both in the numerator and denominator. As $\vec{M}_{\mathcal{L}_e}$ is positive definite and bounded, the fraction in the limit becomes,
-\begin{equation} \label{eq: A_limit}
-    \lim_{t \rightarrow \infty}\ \frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot} = \vec{A} = \frac{\vec{v}\vec{v}^{\top}}{\vec{v}^{\top}\vec{M}_{\mathcal{L}_e}\vec{v}}  \ \ \ \  \text{where} \ \ \ \ \vec{v} = \lim_{t \rightarrow \infty} \frac{\qdot}{\norm{\qdot}}.
- \end{equation}
- Using the definition for $\vec{A}$ in Eq. \eqref{eq: A_limit}, Eq. \eqref{eq: limit_qddot_e} can be rewritten as,
- \begin{equation} \label{eq: limit_lambdas}
-     \xrightarrow[t \rightarrow \infty]{}\ \vec{0}  = \underbrace{[\vec{I} - \vec{A} \vec{M}_{\mathcal{L}_e}] \f}_{\lambda_1} + \underbrace{\vec{A}(\delta \psi)}_{\lambda_2},
- \end{equation}
-In the limit, the term $[\vec{I} - \vec{A} \vec{M}_{\mathcal{L}_e}]$ has nullspace $\vec{v}$ as $[\vec{I} - \vec{A} \vec{M}_{\mathcal{L}_e}]\vec{v} = \vec{0}$,
- \begin{equation} \label{eq: spanv}
-     [\vec{I} - \vec{A} \vec{M}_{\mathcal{L}_e}] \vec{v} = \vec{v} - \frac{\vec{v} \vec{v}^{\top}}{\vec{v}^{\top}\vec{M}_{\mathcal{L}_e}\vec{v}} \vec{M}_{\mathcal{L}_e}\vec{v} = \vec{v} - \vec{v} \frac{\vec{v} \vec{M}_{\mathcal{L}_e}\vec{v}^{\top}}{\vec{v}^{\top}\vec{M}_{\mathcal{L}_e}\vec{v}} = \vec{v} - \vec{v} = \vec{0},
- \end{equation}
-which implies that $\lambda_1$ and $\lambda_2$ in Eq. \eqref{eq: limit_lambdas}, are orthogonal, $\lambda_1 \perp \lambda_2$. Both terms must be zero, $\lambda_1 = \vec{0}, \ \lambda_2 = \vec{0}$ for Eq. \eqref{eq: limit_lambdas} to hold. By contradiction, it is proven that $\f$  is equal to zero as time goes to infinity.
-<br><br>
-<b>Proof by contradiction</b>: Let us assume that $\f \neq \vec{0}$. 
-First, note that if $\f \neq \vec{0}$, for $\lambda_1$ to be zero, $\f$ must be in the nullspace of $[\vec{I} - \vec{A} \vec{M}_{\mathcal{L}_e}]$, which we have already noted is  equal to $\vec{v}$. As a consequence, $\f \in \text{span}(\vec{v})$.
-In contrast, for $\lambda_2$ to be equal to zero, i.e., $\vec{A}(\partial \psi) = \vec{0}$, two cases exist:
-<ol>
-    <li><b>Case 1</b>: The gradient of the potential is equal to zero, $\partial \psi = \vec{0}$. For $\f \neq \vec{0}$, this case cannot hold, as the potential is a compatible potential of $\f$, which indicates that $\partial \psi = \vec{0}$ if only if $\f = 0$, which would lead to a contradiction. </li>
-    <li><b>Case 2</b>: The other possibility is that $\partial \psi$ is in the nullspace of $\vec{A}$, which implies that $\partial \psi \perp \vec{v}$. Consequently, since $\f \in \text{span}(\vec{v})$, $\partial \psi \perp \vec{v}$ implies that $\partial \psi \perp \f$; hence, $\partial \psi^{\top}\f=0$. However, a compatible potential also has the property $-\partial \psi^{\top} \f>\vec{0}$ wherever $\f \neq \vec{0}$, which once again leads to a contradiciton.</li>
-</ol>
-As a result, since both possible cases lead to a contradiction for $\f \neq 0$, $\f$ must be zero in the limit. 
-<br><br>
-<b>Assumptions:</b> It is assumed that $\vec{M}_{\mathcal{L}_e}$ is bounded in a finite region and strictly positive definite everywhere, including that $\vec{M}_{\mathcal{L}_e}$ doesn't vanish or reduce rank as $\qdot \rightarrow \vec{0}$.
-To avoid numerical instability of the fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$, the denominator is replaced by $\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot + \epsilon$ with $\epsilon>0$.
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <h3 align="center">PUMA</h3>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Via PUMA, the demonstrated movement is learned while ensuring goal converge. Obstacle avoidance and physical constraints are <b> NOT </b> considered.
+    </p>
+  </div>
+  <div class="col">
+    <h3 align="center">TamedPUMA (ours)</h3>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Via TamedPUMA, PUMA is enhanced for safe and stable navigation. <b>Whole-body collision avoidance</b> and <b>joint limits</b> are incorporated. 
+    </p>
+  </div>
 </div>
 
-<h3> Compatible potentials for TamedPUMA </h3>
+<h2>Supplementary theoretical details on TamedPUMA</h2>
+<a href="pumafabrics-details">Link to webpage with theoretical details on TamedPUMA.</a>
 <div>
-In <a href="https://arxiv.org">Section 3.3</a>, the Compatible Potential Method (CPM) is discussed which is extended with a detailed theoretical analysis of the stability and convergence properties in <a href="#proof">Theoretical details on the Compatible Potential Method</a>. 
-In <a href="../../assets/images/papers/pumafabrics/illustration_potentials_jpg.jpg">the Figure below</a>, we provide an illustration of the different components of the CPM and its compatible potential function. The potential in the latent space, $\psi = \norm{\vec{y}_g - \vec{y}}^{2}$
-can be expressed in the task space variables $\vec{x}$ by the encoder $\rho_{\theta}$. The energy regulator $\gamma$ of the CPM, Eq. \eqref{eq: system_CPM}, is defined in the configuration space and requires the partial derivative of the potential function with respect to $\q$, $\partial_{\q} \psi$, as explored in Eq. 10 (<a href="https://arxiv.org">Section 3.3</a>).
+A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a> (released upon publication).
+
+<h3> Specifications of the DNN by PUMA </h3>
+<div>
+<a href="#table-hyperparameters">Table 1</a>  contains specifications of the trained DNN for the tomato-picking task and pouring task. The network provides a second-order dynamical system where positions are trained over a Euclidian space and orientations over a spherical space. An illustration of the performance is provided in
+<a href="#fig-primitive-0-iter-5000cut">Figure 3</a> at 5000 iterations. This shows the convergence to goal and the closeness of the solutions to the demonstrated motion profile by the user. A DNN with 5000 iterations takes 9 minutes to train on a standard laptop (i7-12700H) and 0.6 $\pm$ 0.1 ms to request an action from the DNN online.
 </div>
-<div class="image-div mb-3 d-flex justify-content-center">
-    <img src="{{ '/assets/images/papers/pumafabrics/illustration_potentials_jpg.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
+<br>
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+</style>
+</div>
+<table id="table-hyperparameters">
+  <caption>Table 1. Hyperparameters of PUMA for a second-order dynamical system</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Hyperparameter</th>
+      <th>Value (tomato-picking)</th>
+      <th>Value (pouring)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="6"><strong>PUMA</strong></td>
+      <td>Stability loss margin ($m$)</td>
+      <td>1e-6</td>
+      <td>1e-6</td>
+    </tr>
+    <tr>
+      <td>Triplet imitation loss weight ($\lambda$)</td>
+      <td>1.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <td>Window size imitation ($\mathcal{H}^i$)</td>
+      <td>13</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>Window size stability ($\mathcal{H}^s$)</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Batch size imitation ($\mathcal{B}^i$)</td>
+      <td>800</td>
+      <td>800</td>
+    </tr>
+    <tr>
+      <td>Batch size stability ($\mathcal{B}^s$)</td>
+      <td>800</td>
+      <td>800</td>
+    </tr>
+    <tr>
+      <td rowspan="6"><strong>Neural Network</strong></td>
+      <td>Optimizer</td>
+      <td>Adam</td>
+      <td>Adam</td>
+    </tr>
+    <tr>
+      <td>Number of iterations</td>
+      <td>40000</td>
+      <td>27000</td>
+    </tr>
+    <tr>
+      <td>Learning rate</td>
+      <td>1e-4</td>
+      <td>1e-4</td>
+    </tr>
+    <tr>
+      <td>Activation function</td>
+      <td>GELU</td>
+      <td>GELU</td>
+    </tr>
+    <tr>
+      <td>Num. layers ($\varphi_{\theta}, \rho_\theta$)</td>
+      <td>(3, 3)</td>
+      <td>(3, 3)</td>
+    </tr>
+    <tr>
+      <td>Layer normalization</td>
+      <td>yes</td>
+      <td>yes</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  .image-div {
+    display: flex;
+    justify-content: center;
+  }
+  figure {
+    text-align: center;
+  }
+</style>
+
+<div id="fig-primitive-0-iter-5000cut" class="image-div mb-3 d-flex justify-content-center">
+  <figure>
+    <img src="{{ '/assets/images/papers/pumafabrics/primitive_0_iter_5000cut.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
+     <figcaption>Figure 3. Performance of the DNN trained via PUMA where all states are normalized. The demonstrations are indicated in black, the trajectories generated by the DNN for the same initial poses as the demonstrations are given in red, and trajectories from randomly sampled initial conditions are indicated in blue.</figcaption>
+    </figure>
 </div>
 
 <h2>References</h2>
@@ -426,5 +482,8 @@ can be expressed in the task space variables $\vec{x}$ by the encoder $\rho_{\th
   </li>
 <li id="ratliff2020optimization">
   Ratliff, Nathan D., Van Wyk, Karl, Xie, Mandy, Li, Anqi, and Rana, Muhammad Asif. (2020). "Optimization fabrics." <em>arXiv preprint arXiv:2008.02399</em>.
+</li>
+<li id="perezdattari2024deep">
+  Pérez-Dattari, Rodrigo, Della Santina, Cosimo and Kober, Jens. (2024). "Deep metric imitation learning for stable motion primitives." <em>Advanced Intelligent Systems</em>.
 </li>
 </ol>
