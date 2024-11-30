@@ -30,10 +30,10 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: IEEE Xplore
     #   icon: bi-file-earmark-pdf
     #   url: "https://doi.org/10.1109/LRA.2024.3397083"
-    - name: arXiv
-      icon: bi-file-earmark-pdf
-      url: "https://arxiv.org"
-    - name: Code
+    # - name: arXiv
+    #   icon: bi-file-earmark-pdf
+    #   url: "https://arxiv.org"
+    - name: Code (released upon publication)
       icon: bi-github
       url: https://github.com/saraybakker1/PumaFabrics
     # - name: Video
@@ -76,7 +76,7 @@ MathJax = {
 
 
 <h2>Supplementary theoretical details on TamedPUMA</h2>
-<b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a></b>.
+<!-- <b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a></b>. -->
 <h3>Energization and Finsler energies</h3>
 <div>
 In fabrics<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>, the concept of energization is used to transform the system $\qddot = \h(\q, \qdot)$ into an energy-conserving system. 
@@ -100,10 +100,11 @@ where $\left(\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e}\right)$ a
 </div>
 <h3 id=proof>Theoretical details on the Compatible Potential Method</h3>
 <div>
-In the following, a theoretical analysis is provided of the stability and convergence properties related to the Compatible Potential Method (CPM). Firstly, more details are provided regarding the stability and convergence proof for a navigation policy $\f = \fC$ with a compatible potential $\psi(\q)$ and the required assumptions. This is followed by Section <a href="Compatible potentials for TamedPUMA">Compatible potentials for TamedPUMA</a>, providing an illustration of the CPM with its corresponding latent space, task spaces and configuration space, and the compatible potential. 
+In the following, a theoretical analysis is provided of the stability and convergence properties related to the Compatible Potential Method (CPM). Firstly, more details are provided regarding the stability and convergence proof for a navigation policy $\f = \fC$ with a compatible potential $\psi(\q)$ and the required assumptions. 
+<!-- This is followed by Section <a href="Compatible potentials for TamedPUMA">Compatible potentials for TamedPUMA</a>, providing an illustration of the CPM with its corresponding latent space, task spaces and configuration space, and the compatible potential.  -->
 <br><br>
 The stability and convergence properties of the CPM are based on Theorem III.5 in Ratliff et al. (2023)<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>.
-The Theorem reads as follows, where we correct for two typos, replacing $\mathcal{H}$ with $\mathcal{H}_{\mathcal{L}_e}$ and $\gamma \qdot $ with $\gamma$ in the original description,
+The Theorem reads as follows, where we correct for two typos, replacing $\mathcal{H}$ with $\mathcal{H}_{\mathcal{L}_e}$ and $\gamma \qdot $ with $\gamma$ in the original description, i.e.
 \begin{equation} \label{eq: system_CPM}
 \qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h+\f]+\gamma \qdot \ \ \text{is replaced by:} \ \ \qddot = energize_{\mathcal{H}}[\h+\f]+\gamma.
 \end{equation}
@@ -169,7 +170,7 @@ As $\vec{M}_{\mathcal{L}_e}$ is strictly positive, Eq. \eqref{eq: Hdot_damped} i
 the rate of the decrease must converge to zero, $\dot{\mathcal{H}} \rightarrow 0$, which means that 
 $\dot{\mathcal{H}} = -\beta \qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot \rightarrow 0$ converges to zero, and therefore $\qdot \rightarrow \vec{0}$ leading to $\qddot \rightarrow \vec{0}$. 
 <br><br>
-<b>Step 2</b>: The second step is to ensure convergence of the system in Eq. \eqref{eq: qddot_theoremIII5} to the zero set of the navigation policy $\f$. For the CPM, this ensures that the system Eq. \eqref{eq: system_CPM} converges to the zero set of the pulled dynamical system of PUMA ($\qddot = \f^{\mathcal{C}}_{\theta}(\q, \qdot)$, Eq. 6 in <a href="https://arxiv.org">Section 3.2</a>) which contains the desired goal. 
+<b>Step 2</b>: The second step is to ensure convergence of the system in Eq. \eqref{eq: qddot_theoremIII5} to the zero set of the navigation policy $\f$. For the CPM, this ensures that the system Eq. \eqref{eq: system_CPM} converges to the zero set of the pulled dynamical system of PUMA ($\qddot = \f^{\mathcal{C}}_{\theta}(\q, \qdot)$, Eq. 6 in our paper) which contains the desired goal. 
 To explore convergence of Eq. \eqref{eq: qddot_theoremIII5} over infinite time to the zero set of $\f$, we take the limit with $\qdot, \qddot \rightarrow \vec{0}$,
 <!-- \begin{subequations} \label{eq: limit_qddot} -->
     \begin{align} \label{eq: limit_qddot}
@@ -206,11 +207,13 @@ In contrast, for $\lambda_2$ to be equal to zero, i.e., $\vec{A}(\partial \psi) 
 </ol>
 As a result, since both possible cases lead to a contradiction for $\f \neq 0$, $\f$ must be zero in the limit. 
 <br><br>
-<b>Assumptions:</b> It is assumed that $\vec{M}_{\mathcal{L}_e}$ is bounded in a finite region and strictly positive definite everywhere, including that $\vec{M}_{\mathcal{L}_e}$ doesn't vanish or reduce rank as $\qdot \rightarrow \vec{0}$.
+<!-- <b>Assumptions:</b> It is assumed that $\vec{M}_{\mathcal{L}_e}$ is bounded in a finite region and strictly positive definite everywhere, including that $\vec{M}_{\mathcal{L}_e}$ doesn't vanish or reduce rank as $\qdot \rightarrow \vec{0}$.
 To avoid numerical instability of the fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$, the denominator is replaced by $\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot + \epsilon$ with $\epsilon>0$.
-</div>
+</div> -->
+Let's take a closer look at the implications of the assumptions on $\vec{M}_{\mathcal{L}_{e}}$. 
+For a fabric describing collision avoidance, two cases exist as the Spec describing the fabric must be boundary conforming<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[2]</sup></span>: (1) The metric $\vec{M}_{\mathcal{L}_{e}}$ is finite along the Eigen-directions parallel with the boundary's tangent space but goes to infinite along directions orthogonal to the tangent space. (2) The metric $\vec{M}_{\mathcal{L}_{e}}$ is a finite matrix along all trajectories, implying that $\vec{M}_{\mathcal{L}_{e}}$ is also finite in the limit when $t\rightarrow \infty$. Observing the assumption on $\vec{M}_{\mathcal{L}_{e}}$ in the \ac{cpm} that the metric is bounded in a finite region and strictly positive definite everywhere, only fabrics can be designed following the second case. This implies that in the limit we ensure convergence to the zero set of the forcing policy $\f^{\mathcal{C}}_{\theta}(\q, \qdot)$, but collision avoidance is not guaranteed as barrier-like functions going to infinity on the boundary, cannot be used to construct $\vec{M}_{\mathcal{L}_e}$
 
-<h3> Compatible potentials for TamedPUMA </h3>
+<!-- <h3> Compatible potentials for TamedPUMA </h3>
 <div>
 In <a href="https://arxiv.org">Section 3.3</a>, the Compatible Potential Method (CPM) is discussed which is extended with a detailed theoretical analysis of the stability and convergence properties in <a href="#proof">Theoretical details on the Compatible Potential Method</a>. 
 In <a href="../../assets/images/papers/pumafabrics/illustration_potentials_jpg.jpg">the Figure below</a>, we provide an illustration of the different components of the CPM and its compatible potential function. The potential in the latent space, $\psi = \norm{\vec{y}_g - \vec{y}}^{2}$
@@ -218,7 +221,7 @@ can be expressed in the task space variables $\vec{x}$ by the encoder $\rho_{\th
 </div>
 <div class="image-div mb-3 d-flex justify-content-center">
     <img src="{{ '/assets/images/papers/pumafabrics/illustration_potentials_jpg.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
-</div>
+</div> -->
 
 <h2>References</h2>
 <ol>
