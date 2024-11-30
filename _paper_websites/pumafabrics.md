@@ -30,10 +30,10 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: IEEE Xplore
     #   icon: bi-file-earmark-pdf
     #   url: "https://doi.org/10.1109/LRA.2024.3397083"
-    - name: arXiv
-      icon: bi-file-earmark-pdf
-      url: "https://arxiv.org"
-    - name: Code
+    # - name: arXiv
+    #   icon: bi-file-earmark-pdf
+    #   url: "https://arxiv.org"
+    - name: Code (released on publication)
       icon: bi-github
       url: https://github.com/saraybakker1/PumaFabrics
     # - name: Video
@@ -129,7 +129,7 @@ Keywords: Imitation Learning, Dynamical Systems, Geometric Motion Planning, Fabr
 </p>
 
 <h2> Illustrative Point-mass Example </h2>
-In <a href="#table-hyperparameters">Fig. 1</a> , trajectories are shown of a 2D point-mass example for the proposed methods, alongside baselines of geometric fabrics<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[1, 2]</sup></span> with a manually designed potential function, and PUMA<span class="citation" onclick="document.getElementById('perezdattari2024deep').scrollIntoView();"><sup>[3]</sup></span>. The purely data-driven method PUMA follows the motion profile as learned from demonstrations, although it has no notion of obstacle avoidance or other physical constraints. The proposed methods, FPM and CPM, successfully follow the desired motion profile of PUMA, while avoiding collisions with the obstacles. In contrast, geometric fabrics are unable to follow the desired motion profile. 
+In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-mass example for the proposed methods, alongside baselines of geometric fabrics<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[1, 2]</sup></span> with a manually designed potential function, and PUMA<span class="citation" onclick="document.getElementById('perezdattari2024deep').scrollIntoView();"><sup>[3]</sup></span>. The purely data-driven method PUMA follows the motion profile as learned from demonstrations, although it has no notion of obstacle avoidance or other physical constraints. The proposed methods, FPM and CPM, successfully follow the desired motion profile of PUMA, while avoiding collisions with the obstacles. In contrast, geometric fabrics are unable to follow the desired motion profile. 
 <div id="fig-pointmass" class="image-div mb-3 d-flex justify-content-center">
     <img src="{{ '/assets/images/papers/pumafabrics/point_mass_comparison_plot.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
 </div>
@@ -211,9 +211,9 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">FPM</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/FPM_43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -224,14 +224,14 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">CPM</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    CPM provides a stronger notion of goal convergence than the FPM. In practice, the performance is similar to FPM.
+    CPM provides a <b>stronger notion of goal convergence</b> than the FPM. In practice, the performance is similar to FPM.
     </p>
   </div>
 </div>
@@ -240,9 +240,9 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">An out-of-distribution scenario</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/video_out_of_distribution.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/video_out_of_distribution43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -253,9 +253,9 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">Human disturbances</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/video_human_disturbance.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/video_human_disturbance43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -270,27 +270,27 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">Avoiding the helmet</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/helmet_pouring.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/helmet_pouring43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    TamedPUMA avoid collisions with the helmet while performing a learned pouring task. 
+    TamedPUMA <b>avoids collisions with the helmet</b> while performing a learned pouring task. 
     </p>
   </div>
   <div class="col">
     <h3 align="center">Online goal changes</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/goal_change_good1.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/goal_change_good1_43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    The goal can be changed online.
+    Using TamedPUMA, <b>the goal can be changed online</b>.
     </p>
   </div>
 </div>
@@ -307,11 +307,11 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
       </div>
     </div>
     <p align="center">
-    <b>Deadlock scenario</b> with two obstacles representing the side of the box.
+    <b>Fabrics causes a deadlock scenario</b> with two obstacles representing the side of the box.
     </p>
   </div>
   <div class="col">
-    <h3 align="center">TamedPUMA</h3>
+    <h3 align="center">TamedPUMA (ours)</h3>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
@@ -329,9 +329,9 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">PUMA</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1_43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -342,9 +342,9 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
   <div class="col">
     <h3 align="center">TamedPUMA (ours)</h3>
     <div class="teaser-video d-flex justify-content-center">
-      <div class="ratio ratio-16x9">
+      <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -355,9 +355,9 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
 </div>
 
 <h2>Supplementary theoretical details on TamedPUMA</h2>
-<a href="pumafabrics-details">Link to webpage with theoretical details on TamedPUMA.</a>
+<a href="pumafabrics-details">This link guides to the webpage with theoretical details on TamedPUMA.</a>
 <div>
-A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a> (released upon publication).
+<!-- A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a> (released upon publication). -->
 
 <h3> Specifications of the DNN by PUMA </h3>
 <div>
@@ -383,7 +383,7 @@ A PDF of these supplementary theoretical details can be found <a href="https://g
 </style>
 </div>
 <table id="table-hyperparameters">
-  <caption>Table 1. Hyperparameters of PUMA for a second-order dynamical system</caption>
+  <caption>Table 1. Hyperparameters of PUMA for a second-order dynamical system learning a pose, e.g. position and orientation.</caption>
   <thead>
     <tr>
       <th></th>
