@@ -86,7 +86,7 @@ which holds if $\h(\q, \alpha\qdot) = \alpha^2 \h(\q, \qdot)$ for $\alpha\geq0$.
 It is common to use a Finsler energy to energize the system, although any Lagrangian can be used. A Finsler energy extends the concept of kinetic energy by enabling the modeling of directionally dependence metric tensors, e.g. the Finsler energy is HD2 in the velocity<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[2]</sup></span>. Finsler energies have the property that the Hamiltonian $\mathcal{H}_{\mathcal{L}_e}$ associated with the Finsler energy $\mathcal{L}_e$, is the Finsler energy itself.
 An energized system that conserves a Finsler energy and is path consistent is called a <em>geometric fabric</em>. 
 <br><br>
-To transform the original system $\qddot = \h(\q, \qdot)$ into a geometric fabric, we find $\bar{\alpha}$ for which the system, $\qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h] = \h(\q, \qdot) + \bar{\alpha}\qdot$, conserves the Finsler energy $\mathcal{L}_e$. This <em>>energization</em> is performed by setting the time-derivative of the Hamilonian to zero, 
+To transform the original system $\qddot = \h(\q, \qdot)$ into a geometric fabric, we find $\bar{\alpha}$ for which the system, $\qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h] = \h(\q, \qdot) + \bar{\alpha}\qdot$, conserves the Finsler energy $\mathcal{L}_e$. This <em>energization</em> is performed by setting the time-derivative of the Hamilonian to zero, 
 <!-- $$
 \begin{subequations} -->
     \begin{align}
@@ -101,12 +101,12 @@ where $\left(\vec{M}_{\mathcal{L}_e}\qddot + \vec{\xi}_{\mathcal{L}_e}\right)$ a
 <h3 id=proof>Theoretical details on the Compatible Potential Method</h3>
 <div>
 In the following, a theoretical analysis is provided of the stability and convergence properties related to the Compatible Potential Method (CPM). Firstly, more details are provided regarding the stability and convergence proof for a navigation policy $\f = \fC$ with a compatible potential $\psi(\q)$ and the required assumptions. 
-<!-- This is followed by Section <a href="Compatible potentials for TamedPUMA">Compatible potentials for TamedPUMA</a>, providing an illustration of the CPM with its corresponding latent space, task spaces and configuration space, and the compatible potential.  -->
+This is followed by <a href="#tamedpuma_illustration">an illustration</a> of TamedPUMA with its corresponding relationships between latent space, task spaces and configuration space.
 <br><br>
 The stability and convergence properties of the CPM are based on Theorem III.5 in Ratliff et al. (2023)<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>.
 The Theorem reads as follows, where we correct for two typos, replacing $\mathcal{H}$ with $\mathcal{H}_{\mathcal{L}_e}$ and $\gamma \qdot $ with $\gamma$ in the original description, i.e.
 \begin{equation} \label{eq: system_CPM}
-\qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h+\f]+\gamma \qdot \ \ \text{is replaced by:} \ \ \qddot = energize_{\mathcal{H}}[\h+\f]+\gamma.
+\qddot = energize_{\mathcal{H}_{\mathcal{L}_e}}[\h+\f]+\gamma \qdot \ \ \ \ \text{is replaced by:} \ \ \ \ \qddot = energize_{\mathcal{H}}[\h+\f]+\gamma.
 \end{equation}
 <br><br>
 <b>Theorem III.5 adapted from Ratliff et al. (2023)<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>:</b> <em>Let </em>energize$_{\mathcal{L}_e}[\h(\q, \qdot)]$ <em>be a fabric with generator $\h$ and Finsler energy $\mathcal{L}_e$, and let $\f(\q, \qdot)$ be a navigation policy with compatible potential $\psi(\q)$. Denote the total energy by $\mathcal{H}=\mathcal{L}_e+\psi$. The system 
@@ -207,21 +207,22 @@ In contrast, for $\lambda_2$ to be equal to zero, i.e., $\vec{A}(\partial \psi) 
 </ol>
 As a result, since both possible cases lead to a contradiction for $\f \neq 0$, $\f$ must be zero in the limit. 
 <br><br>
-<!-- <b>Assumptions:</b> It is assumed that $\vec{M}_{\mathcal{L}_e}$ is bounded in a finite region and strictly positive definite everywhere, including that $\vec{M}_{\mathcal{L}_e}$ doesn't vanish or reduce rank as $\qdot \rightarrow \vec{0}$.
-To avoid numerical instability of the fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$, the denominator is replaced by $\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot + \epsilon$ with $\epsilon>0$.
-</div> -->
+</div>
+<h4 id=proof>Discussion</h4>
+<div>
 Let's take a closer look at the implications of the assumptions on $\vec{M}_{\mathcal{L}_{e}}$. 
 For a fabric describing collision avoidance, two cases exist as the Spec describing the fabric must be boundary conforming<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[2]</sup></span>: (1) The metric $\vec{M}_{\mathcal{L}_{e}}$ is finite along the Eigen-directions parallel with the boundary's tangent space but goes to infinite along directions orthogonal to the tangent space. (2) The metric $\vec{M}_{\mathcal{L}_{e}}$ is a finite matrix along all trajectories, implying that $\vec{M}_{\mathcal{L}_{e}}$ is also finite in the limit when $t\rightarrow \infty$. Observing the assumption on $\vec{M}_{\mathcal{L}_{e}}$ in the \ac{cpm} that the metric is bounded in a finite region and strictly positive definite everywhere, only fabrics can be designed following the second case. This implies that in the limit we ensure convergence to the zero set of the forcing policy $\f^{\mathcal{C}}_{\theta}(\q, \qdot)$, but collision avoidance is not guaranteed as barrier-like functions going to infinity on the boundary, cannot be used to construct $\vec{M}_{\mathcal{L}_e}$
-
-<!-- <h3> Compatible potentials for TamedPUMA </h3>
-<div>
-In <a href="https://arxiv.org">Section 3.3</a>, the Compatible Potential Method (CPM) is discussed which is extended with a detailed theoretical analysis of the stability and convergence properties in <a href="#proof">Theoretical details on the Compatible Potential Method</a>. 
-In <a href="../../assets/images/papers/pumafabrics/illustration_potentials_jpg.jpg">the Figure below</a>, we provide an illustration of the different components of the CPM and its compatible potential function. The potential in the latent space, $\psi = \norm{\vec{y}_g - \vec{y}}^{2}$
-can be expressed in the task space variables $\vec{x}$ by the encoder $\rho_{\theta}$. The energy regulator $\gamma$ of the CPM, Eq. \eqref{eq: system_CPM}, is defined in the configuration space and requires the partial derivative of the potential function with respect to $\q$, $\partial_{\q} \psi$, as explored in Eq. 10 (<a href="https://arxiv.org">Section 3.3</a>).
+<br><br>
+The metric $\vec{M}_{\mathcal{L}_e}$ is additionally assumed to not vanish in the limit $\qdot \rightarrow \vec{0}$. In practice, numerical instability of the fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$ is avoided by replacing the denominator by $\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot + \epsilon$ with $\epsilon>0$.
 </div>
-<div class="image-div mb-3 d-flex justify-content-center">
-    <img src="{{ '/assets/images/papers/pumafabrics/illustration_potentials_jpg.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
-</div> -->
+<h3> Illustration of TamedPUMA </h3>
+<div>
+This illustration of TamedPUMA shows the behavior design given the relationships between the different task and configuration-space variables. The joint angles and velocities get mapped into task space where the desired behavior is specified. Via fabrics, all avoidance behaviors are defined using the joint limits, and varying obstacle positions. The DNN captures the desired behavior of the end-effector position and orientation.
+<br><br>
+</div>
+<div id="tamedpuma_illustration" class="image-div mb-3 d-flex justify-content-center">
+    <img src="{{ '/assets/images/papers/pumafabrics/illustration_tamedpuma_28_11_2024_10.png' | relative_url}}" class="img-fluid" width="800" alt="lab">
+</div>
 
 <h2>References</h2>
 <ol>
