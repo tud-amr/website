@@ -302,7 +302,7 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_fabrics.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_fabrics_43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -315,7 +315,7 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_CPM_no_obst2.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_CPM_no_obst2_43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
