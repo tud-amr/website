@@ -296,6 +296,7 @@ Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting
 </div>
 
 <h2> Comparison with geometric fabrics and PUMA</h2>
+Note: The following videos might not display in Chrome, but they do render in Firefox, we are addressing this problem!
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
     <h3 align="center">Geometric Fabrics</h3>
