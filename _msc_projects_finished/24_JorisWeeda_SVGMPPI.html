@@ -1,0 +1,77 @@
+---
+title: "Pushing Through Clutter With Movability Awareness of Blocking Obstacles"
+authors:
+    - name: "Joris Weeda"
+      url: "/"
+    - name: "Saray Bakker"
+      url: "https://scholar.google.com/citations?user=kAlAUFkAAAAJ&hl=nl"
+    - name: "Gang (Clarence) Chen"
+      url: "https://scholar.google.com/citations?hl=nl&user=fryWUUEAAAAJ"
+    - name: "Javier Alonso-Mora"
+      url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en"
+affiliations:
+    - name: "Cognitive Robotics, TU Delft"
+      url: "/"
+end_date: 2024-08-31 # end date if ended, approximated if not sure. Just for display purposes and ordering.
+# This is the short project description, displayed in the project's card"
+description: "Navigation Among Movable Obstacles (NAMO) poses a challenge for traditional path-planning methods when obstacles block the path, requiring push actions to reach the goal. 
+We propose a framework that enables movability-aware planning to overcome this challenge without relying on explicit obstacle placement.
+Our framework integrates a global Semantic Visibility Graph and a local Model Predictive Path Integral (SVG-MPPI) approach to efficiently sample rollouts, taking into account the continuous range of obstacle movability. A physics engine is adopted to simulate the interaction result of the rollouts with the environment, and generate trajectories that minimize contact force.
+In qualitative and quantitative experiments, SVG-MPPI outperforms the existing paradigm that uses only binary movability for planning, achieving higher success rates with reduced cumulative contact forces."
+cover_image: /assets/images/msc_projects/24_JorisWeeda_SVGMPPI/img_simplified_svg_mppi_overview.jpg # Image displayed in the project's card, make it aspect ratio 1x1 (square) for best results, and keep it a reasonable size (like 1-2MB). Can also be a gif
+links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
+    - name: Thesis
+      url: "https://repository.tudelft.nl/person/Person_728a81fc-4261-4fd7-ab1d-e5c161e1bbd7"
+    - name: Code
+      icon: bi-github
+      url: "https://github.com/tud-amr/SVG-MPPI"
+---
+
+  <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
+  <!-- <div class="image-grid text-center mb-1">
+    <div class="row row-cols-1 row-cols-sm-2g-1">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JorisWeeda_SVGMPPI/img_simplified_svg_mppi_overview.jpg' %}" alt="Image 1" style="max-width: 50%; height: auto;">
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+<section id="abstract">
+  <h2>Summary</h2>
+  <p>
+    Navigation Among Movable Obstacles (NAMO) poses a challenge for traditional path-planning methods when obstacles block the path, requiring push actions to reach the goal. 
+    We propose a framework that enables movability-aware planning to overcome this challenge without relying on explicit obstacle placement.
+    Our framework integrates a global Semantic Visibility Graph and a local Model Predictive Path Integral (SVG-MPPI) approach to efficiently sample rollouts, taking into account the continuous range of obstacle movability. A physics engine is adopted to simulate the interaction result of the rollouts with the environment, and generate trajectories that minimize contact force.
+    In qualitative and quantitative experiments, SVG-MPPI outperforms the existing paradigm that uses only binary movability for planning, achieving higher success rates with reduced cumulative contact forces.
+  </p>
+
+
+<section id="overview">
+  <h2>Overview</h2>
+  <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
+  <div class="image-grid text-center mb-1">
+    <div class="row row-cols-1 row-cols-sm-2g-1">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JorisWeeda_SVGMPPI/img_simplified_svg_mppi_overview.jpg' %}" alt="Image 1" style="max-width: 85%; height: auto;">
+      </div>
+    </div>
+  </div>
+  <p>
+    An overview of the proposed SVG-MPPI architecture where the SVG provides a weighted graph with efficient node placement around movable obstacles along which a lowest-effort path can be found. The generated set of waypoints guides the MPPI control strategy to efficiently sample rollouts around movable obstacles. If during interaction an obstacle is considered non-movable, the movability estimation gets updated and the path is replanned. Snapshots of a real-world example are shown on the left where the red star indicates the goal location and the masses of the obstacles are (A): 25 kg, (B): 20 kg, (C): 5 kg.
+  </p>
+</section>
+
+
+<section id="example">
+  <h2>Example</h2>
+  <div class="image-grid text-center mb-1">
+    <div class="row row-cols-1 row-cols-sm-2g-1">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JorisWeeda_SVGMPPI/demonstration.gif' %}" alt="GIF 1" style="max-width: 100%; height: auto;">
+      </div>
+    </div>
+  </div>
+</section>
