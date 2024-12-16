@@ -116,7 +116,8 @@
         ],
         "image": "/assets/images/projects/probabilistic-planning/t-mpc.jpg",
         "belongs_to_projects": [
-            "probabilistic-planning"
+            "probabilistic-planning",
+            "interact"
         ],
         "topics":[
             "motion planning"
