@@ -7,11 +7,6 @@ end_date: 2024-05-31
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   This project looks into developing novel trajectory generation methods for mobile manipulation in dynamic environments, in the context of retail.
 image: /assets/images/projects/airlab_fabrics.png
-links: # If you have a website for the project, repos, etc. put it here.
-    - name: Project Website
-      url: "https://icai.ai/airlab-delft/"
-    # - name: Repository
-    #   url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en&inst=6173373803492361994&oi=ao"
 fundings: This project is funded by Ahold Delhaize.
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Max Spahn
@@ -35,11 +30,11 @@ In addition to this, the project also introduced a reactive task and motion plan
 
 ## Project Demonstrations
 
-<div class="video-wrapper ratio ratio-16x9"> 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/jaJBrSecDcM?si=rIBE3gVqIPp7LqCT&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
 <div class="video-wrapper ratio ratio-16x9">  
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/7kcWaBtXvwc?si=XP6ezR21iqkwH-zf&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/BN5isom1stk?si=tcs4dXwdVczh173U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Mgc_dg4Y4gI?si=y5Ntd2_nG2Zx8kj_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
 ## Funding & Partners

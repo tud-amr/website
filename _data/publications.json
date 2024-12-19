@@ -295,7 +295,8 @@
         "venue": ", Proc. of Robotics: Science and Systems (RSS)",
         "links": [
             {
-                "pdf": "/assets/files/publications/24_spahn_rss.pdf"
+                "pdf": "/assets/files/publications/24_spahn_rss.pdf",
+                "video": "https://youtu.be/BN5isom1stk?si=TYnV3X9Nx0jvPQj2"
             }
         ],
         "image": "/assets/images/projects/airlab_robohouse.png",
@@ -1084,7 +1085,8 @@
         "venue": " IIEEE Transactions on Robotics (T-RO)",
         "links": [
             {
-                "pdf": "/assets/files/publications/23_spahn_tro.pdf"
+                "pdf": "/assets/files/publications/23_spahn_tro.pdf",
+                "video": "https://youtu.be/Mgc_dg4Y4gI?si=HS77juVUr2oEgJx8"
             },
             {
                 "code": "https://github.com/tud-amr/fabrics"
