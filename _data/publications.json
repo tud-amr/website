@@ -1,4 +1,28 @@
-[
+[   
+    {
+        "title": "Particle-based Instance-aware Semantic Occupancy Mapping in Dynamic Environments",
+        "authors": [
+            "G. Chen",
+            "Z. Wang",
+            "W. Dong",
+            "J. Alonso-Mora"
+        ],
+        "date": "2024-12-09",
+        "type": "journal",
+        "venue": " IEEE Transactions on Robotics (TRO)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/24-chen-tro.pdf"
+            }
+        ],
+        "note": null,
+        "belongs_to_projects":[
+        ],
+        "topics":[
+            "perception"   
+        ],
+        "abstract": "Representing the 3D environment with instance-aware semantic and geometric information is crucial for interaction-aware robots in dynamic environments. Nevertheless, creating such a representation poses challenges due to sensor noise, instance segmentation and tracking errors, and the objects' dynamic motion. This paper introduces a novel particle-based instance-aware semantic occupancy map to tackle these challenges. Particles with an augmented instance state are used to estimate the Probability Hypothesis Density (PHD) of the objects and implicitly model the environment. Utilizing a State-augmented Sequential Monte Carlo PHD (S2MC-PHD) filter, these particles are updated to jointly estimate occupancy status, semantic, and instance IDs, mitigating noise. Additionally, a memory module is adopted to enhance the map's responsiveness to previously observed objects. Experimental results on the Virtual KITTI 2 dataset demonstrate that the proposed approach surpasses state-of-the-art methods across multiple metrics under different noise conditions. Subsequent tests using real-world data further validate the effectiveness of the proposed approach."
+    },
     {
         "title": "ROME: Robust Multi-Modal Density Estimator",
         "authors": [
