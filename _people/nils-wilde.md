@@ -17,4 +17,3 @@ links: # Optional, links to other stuff
 <!-- Here add your interests or small paragraph. Keep it brief -->
 Now Assistant Professor at the Faculty of Computer Science at Dalhousie University, Canada.
 Research topics: multi-robot coordination and task assignment, vehicle routing, human-robot interaction, preference learning, learning from human feedback, motion planning and multi-objective planning.
-# HRI and Multi-robot task assignment.
