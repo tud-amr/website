@@ -43,7 +43,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: Video
       icon: bi-youtube
       url: "https://www.youtube.com/watch?v=ovLZmSd-XX8"
-    - name: related Publications
+    - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
 related_project_id: "trilogy"
@@ -256,7 +256,7 @@ We present a method for sampling-based model predictive control that makes use o
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media8.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media9.m4v' %}" type="video/mp4">
         </video>
       </div>
     </div>
@@ -269,7 +269,7 @@ We present a method for sampling-based model predictive control that makes use o
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media9.m4v' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media8.m4v' %}" type="video/mp4">
         </video>
       </div>
     </div>
