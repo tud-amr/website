@@ -96,7 +96,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_onestable_fabrics_ppt2.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_onestable_fabrics_ppt.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>

@@ -115,7 +115,7 @@ MathJax = {
     By leveraging the recently introduced geometric framework for motion planning called geometric fabrics, 
 our approach learns stable motion profiles while considering online whole-body collision-avoidance and joint limits.
     </p>
-  </div>
+</div>
 
 <h2> Abstract </h2>
 <p align="justify">
