@@ -14,4 +14,4 @@ links: # Optional, links to other stuff
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief -->
-Interested in problems that fall into the category of trajectory optimization, adaptive control/reinforcement learning and optimal decision-making under uncertainty for autonomous robots. 
+Trajectory optimization, adaptive control/reinforcement learning and optimal decision-making under uncertainty for autonomous robots. 
