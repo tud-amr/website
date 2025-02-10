@@ -38,26 +38,68 @@ links: # If you have other website for the project, github repos, datasets, etc.
 <section id="abstract">
   <h2>Summary</h2>
   <p>
-    This page is still in progress, stay tuned!
+    Mobile manipulators, combining a robotic arm with a mobile base, are gaining traction in healthcare, logistics, 
+    and aerospace. While motion planning for single-agent systems is well-studied, multi-agent coordination remains 
+    a challenge, particularly in real-world settings. This thesis presents a decentralized Model Predictive Control (MPC) 
+    framework, MPC-d, for multi-mobile manipulators in shared workspaces. It integrates optimization-based planning and 
+    robust state estimation for collision avoidance, with a prioritized heuristic to mitigate livelocks. Simulations compare 
+    MPC-d with a triple-integrator MPC (MPC-t) and Geometric Fabrics (GF), demonstrating comparable task success rates and 
+    superior efficiency. Real-world experiments confirm its effectiveness, showcasing reliable collision avoidance and improved coordination. 
+    Despite higher computational costs than reactive methods, MPC-d offers robust motion prediction and enhanced multi-agent performance.
   </p>
 
 
 <section id="overview">
-  <!-- <h2>Overview</h2> -->
+  <h2>Overview</h2>
   <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
-  <!-- <div class="image-grid text-center mb-1">
+  <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JorisWeeda_SVGMPPI/img_simplified_svg_mppi_overview.jpg' %}" alt="Image 1" style="max-width: 85%; height: auto;">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/pipeline-final.png' %}" alt="Image 1" style="max-width: 85%; height: auto;">
       </div>
     </div>
-  </div> -->
-  <!-- <p>
-    An overview of the proposed SVG-MPPI architecture where the SVG provides a weighted graph with efficient node placement around movable obstacles along which a lowest-effort path can be found. The generated set of waypoints guides the MPPI control strategy to efficiently sample rollouts around movable obstacles. If during interaction an obstacle is considered non-movable, the movability estimation gets updated and the path is replanned. Snapshots of a real-world example are shown on the left where the red star indicates the goal location and the masses of the obstacles are (A): 25 kg, (B): 20 kg, (C): 5 kg.
-  </p> -->
+  </div>
+  <p class="text-center">
+    An Overview of the multi-robot MPC and a pioritized heuristic in a multi-agent settings
+  </p>
 </section>
 
-
+<section id="Experiments">
+  <h2>Simulation experiments</h2>
+  <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+    <div class="col">
+      <!-- <h4 align="center">Image 1</h4> -->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/two-tables-cross.jpg' %}" alt="Image 1">
+      </div>
+      <p align="center">(a) Scenario 1 (S1): Two tables </p>
+    </div>
+  
+    <div class="col">
+      <!-- <h4 align="center">Image 2</h4> -->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/one-table-avoiding.jpg' %}" alt="Image 2">
+      </div>
+      <p align="center">(b) Scenario 2 (S2): One table </p>
+    </div>
+  
+    <div class="col">
+      <!-- <h4 align="center">Image 3</h4> -->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/three-robot.jpg' %}" alt="Image 3">
+      </div>
+      <p align="center">(c) Scenario 3 (S3): Three robots</p>
+    </div>
+  </div>
+  
+  <p class="text-center">
+    In each scenario, the robots’ end-effector are required to reach a static
+pre-grasp target in SE(3). The grasp target is represented by a marker placed next to the generated cup, whose color matches
+that of the corresponding robot’s arm. The robots are tasked with achieving their targets while avoiding collisions with each
+other and static obstacles.
+  </p>
+</section>
 <section id="example">
   <!-- <h2>Example</h2>
   <div class="image-grid text-center mb-1">
