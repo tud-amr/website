@@ -129,38 +129,70 @@ in real-world settings.
   <h2>Real-World experiments</h2>
   <h3>Assessing single robot static obstacle avoidance</h3>
   <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
-    <div class="col">
-      <!-- <h4 align="center">Image 1</h4> -->
-      <div class="d-flex justify-content-center">
-        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/two-tables-cross.jpg' %}" alt="Image 1">
+  <div class="image-grid text-center mb-1">
+    <div class="row row-cols-1 row-cols-sm-2g-1">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/static-obstacle-avoidance-setup.jpg' %}" alt="Image 1" style="max-width: 85%; height: auto;">
       </div>
-      <p align="center">(a) Scenario 1 (S1): Two tables </p>
-    </div>
-  
-    <div class="col">
-      <!-- <h4 align="center">Image 2</h4> -->
-      <div class="d-flex justify-content-center">
-        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/one-table-avoiding.jpg' %}" alt="Image 2">
-      </div>
-      <p align="center">(b) Scenario 2 (S2): One table </p>
-    </div>
-  
-    <div class="col">
-      <!-- <h4 align="center">Image 3</h4> -->
-      <div class="d-flex justify-content-center">
-        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/three-robot.jpg' %}" alt="Image 3">
-      </div>
-      <p align="center">(c) Scenario 3 (S3): Three robots</p>
     </div>
   </div>
+  <p>
+    As illustrated in video, the mobile manipulator can reach three different goals without any collisions. The computation time of the MPC-d has a value of 6 ms on
+    average, aligning with the results observed in the simulation experiments
+  </p>
+
   <h3>A prioritized heuristic to solve livelocks</h3>
   <!-- <p class="text-center"> -->
+    <div class="row row-cols-1 row-cols-sm-2 g-2">
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/symmetric-table-setup.jpg' %}" alt="Image 1">
+        </div>
+        <p align="center">(a) Setup 1. Robots are symmetrically positioned about the x-axis. </p>
+      </div>
+    
+      <div class="col">
+        <div class="d-flex justify-content-center">
+          <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/ee-base-tables-setup.jpg' %}" alt="Image 2">
+        </div>
+        <p align="center">(b) Setup 2. Robot-2 (red) is shifted 0.5 meters behind Robot-1 (blue) in x-axis</p>
+      </div>
+    </div>
+    <!-- <p class="text-center"> Two robots are tasked with reaching end-effector target poses, represented by colored stars, with their trajectories
+      crossing. The initial configurations of the robots are shown in the figure, and the marker at the center denotes the origin of the
+      world frame. </p> -->
+    <!-- <p class="text-center"><b>Figure 1:</b> Overall caption describing both images together.</p> -->
+    To evaluate the dynamic collision avoidance functionality and the efficiency of the heuristic  in resolving livelock situations, two robots are tasked with reaching end-effector target poses that are
+    symmetric about the x-axis, causing their trajectories to cross,as illustrated in figures above.
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+      <div class="col">
+        <div class="teaser-video d-flex justify-content-center">
+          <div class="ratio ratio-1x1">
+            <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+              <source src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/symmetric.mp4' %}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p align="center">
+        </p>
+      </div>
+      <div class="col">
+        <div class="teaser-video d-flex justify-content-center">
+          <div class="ratio ratio-1x1">
+            <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+              <source src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/Livelock1.mp4' %}" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p align="center">
+        </p>
+      </div>
+    </div>
+    <!-- <p align="center">In the presence of <b>static obstacles</b>, G3F achieves its goal considering the full task horizon from start to goal.</p> -->
+    
   <p>
-    The proposed method is evaluated across three distinct realistic pick-and-place scenarios and compared against two baseline methods: GF and the original MPC-t approach.In each scenario, the robots' end-effector are required to reach a static pre-grasp target in SE(3). 
-    The grasp target is represented by a marker placed next to the generated cup, whose color matches that 
-    of the corresponding robot's arm. The robots are tasked with achieving their targets while avoiding 
-    collisions with each other and static obstacles.
+
   </p>
 </section>
 
