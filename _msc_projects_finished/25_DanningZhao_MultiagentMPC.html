@@ -66,6 +66,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
 
 <section id="Experiments">
   <h2>Simulation experiments</h2>
+  <h3>Simulated pick-and-place scenarios</h3>
   <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
     <div class="col">
@@ -93,13 +94,76 @@ links: # If you have other website for the project, github repos, datasets, etc.
     </div>
   </div>
   
-  <p class="text-center">
-    In each scenario, the robots’ end-effector are required to reach a static
-pre-grasp target in SE(3). The grasp target is represented by a marker placed next to the generated cup, whose color matches
-that of the corresponding robot’s arm. The robots are tasked with achieving their targets while avoiding collisions with each
-other and static obstacles.
+  <!-- <p class="text-center"> -->
+  <p>
+    The proposed method is evaluated across three distinct realistic pick-and-place scenarios and compared against two baseline methods: GF and the original MPC-t approach.In each scenario, the robots' end-effector are required to reach a static pre-grasp target in SE(3). 
+    The grasp target is represented by a marker placed next to the generated cup, whose color matches that 
+    of the corresponding robot's arm. The robots are tasked with achieving their targets while avoiding 
+    collisions with each other and static obstacles.
+  </p>
+  <!-- <h3>Results</h3> -->
+  <div class="image-grid text-center mb-1">
+    <div class="row row-cols-1 row-cols-sm-2g-1">
+      <div class="col">
+        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/results.jpg' %}" alt="Image 1" style="max-width: 85%; height: auto;">
+      </div>
+    </div>
+  </div>
+
+  <p>
+    This table presents the performance of GF, MPC-d, and MPC-t across three scenarios, evaluated using
+metrics such as success rate, computation time, and collision rate. Specifically, MPC-d exhibits performance comparable to the state-of-the-art GF in terms of success rate and collision
+rate across all scenarios. Regarding computation time, although MPC-d incurs higher computational costs compared to GF, it demonstrates a significant reduction relative to MPC-t. This efficiency allows MPC-d to maintain real-time performance across all scenarios, highlighting its potential for application
+in real-world settings.
+    <!-- In Scenario 1, where robots navigated between two tables, MPC-d achieved a success rate of 80 percent, slightly higher than MPC-t 
+    at 70 percent and GF at 63.3 percent. While GF experienced more inter-robot collisions, MPC-based methods faced occasional table 
+    collisions due to livelock situations. In Scenario 2, where two robots shared a single table, MPC-d managed trajectory conflicts 
+    more effectively through dynamic tracking weight adjustment, reaching 80 percent success compared to GF at 50 percent and MPC-t at 
+    53.3 percent. However, deadlocks still occurred when grasp poses required crossed trajectories. In Scenario 3, with three robots 
+    operating in a shared workspace, MPC-d and MPC-t both achieved a 70 percent success rate, while GF reached 46.7 percent. 
+    Similarly, GF struggled with inter-robot collisions, whereas MPC-based methods reduced these but still encountered table collisions. 
+    Unlike MPC-t, which had increased computation time, MPC-d maintained real-time performance, demonstrating its potential for multi-agent 
+    robotic tasks. -->
+  </p>
+
+  <h2>Real-World experiments</h2>
+  <h3>Assessing single robot static obstacle avoidance</h3>
+  <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+    <div class="col">
+      <!-- <h4 align="center">Image 1</h4> -->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/two-tables-cross.jpg' %}" alt="Image 1">
+      </div>
+      <p align="center">(a) Scenario 1 (S1): Two tables </p>
+    </div>
+  
+    <div class="col">
+      <!-- <h4 align="center">Image 2</h4> -->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/one-table-avoiding.jpg' %}" alt="Image 2">
+      </div>
+      <p align="center">(b) Scenario 2 (S2): One table </p>
+    </div>
+  
+    <div class="col">
+      <!-- <h4 align="center">Image 3</h4> -->
+      <div class="d-flex justify-content-center">
+        <img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/three-robot.jpg' %}" alt="Image 3">
+      </div>
+      <p align="center">(c) Scenario 3 (S3): Three robots</p>
+    </div>
+  </div>
+  <h3>A prioritized heuristic to solve livelocks</h3>
+  <!-- <p class="text-center"> -->
+  <p>
+    The proposed method is evaluated across three distinct realistic pick-and-place scenarios and compared against two baseline methods: GF and the original MPC-t approach.In each scenario, the robots' end-effector are required to reach a static pre-grasp target in SE(3). 
+    The grasp target is represented by a marker placed next to the generated cup, whose color matches that 
+    of the corresponding robot's arm. The robots are tasked with achieving their targets while avoiding 
+    collisions with each other and static obstacles.
   </p>
 </section>
+
 <section id="example">
   <!-- <h2>Example</h2>
   <div class="image-grid text-center mb-1">
