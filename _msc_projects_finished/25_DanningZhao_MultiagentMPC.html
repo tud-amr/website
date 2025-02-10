@@ -41,9 +41,8 @@ links: # If you have other website for the project, github repos, datasets, etc.
     Mobile manipulators, combining a robotic arm with a mobile base, are gaining traction in healthcare, logistics, 
     and aerospace. While motion planning for single-agent systems is well-studied, multi-agent coordination remains 
     a challenge, particularly in real-world settings. This thesis presents a decentralized Model Predictive Control (MPC) 
-    framework, MPC-d, for multi-mobile manipulators in shared workspaces. It integrates optimization-based planning and 
-    robust state estimation for collision avoidance, with a prioritized heuristic to mitigate livelocks. Simulations compare 
-    MPC-d with a triple-integrator MPC (MPC-t) and Geometric Fabrics (GF), demonstrating comparable task success rates and 
+    framework with a double integrator as dynamic model, denoted as MPC-d,  MPC-d, for multi-mobile manipulators in shared workspaces. It integrates optimization-based planning and 
+    robust state estimation for collision avoidance, with a prioritized heuristic to mitigate livelocks. Simulations compare with a triple-integrator MPC (MPC-t) and Geometric Fabrics (GF), demonstrating comparable task success rates and 
     superior efficiency. Real-world experiments confirm its effectiveness, showcasing reliable collision avoidance and improved coordination. 
     Despite higher computational costs than reactive methods, MPC-d offers robust motion prediction and enhanced multi-agent performance.
   </p>
@@ -96,7 +95,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
   
   <!-- <p class="text-center"> -->
   <p>
-    The proposed method is evaluated across three distinct realistic pick-and-place scenarios and compared against two baseline methods: GF and the original MPC-t approach.In each scenario, the robots' end-effector are required to reach a static pre-grasp target in SE(3). 
+    The proposed method is evaluated across three distinct realistic pick-and-place scenarios and compared against two baseline methods: GF and the original MPC-t approach.In each scenario, the robots' end-effector are required to reach a static pre-grasp target. 
     The grasp target is represented by a marker placed next to the generated cup, whose color matches that 
     of the corresponding robot's arm. The robots are tasked with achieving their targets while avoiding 
     collisions with each other and static obstacles.
@@ -128,20 +127,43 @@ in real-world settings.
 
   <h2>Real-World experiments</h2>
   <h3>Assessing single robot static obstacle avoidance</h3>
-  <!-- This basically puts images in a grid of X columns. row-cols-md-X, where X means how many columns. md means until the screen is smaller than medium (ipad). Change X for 2,3,4,6,8,12 -->
-  <div class="image-grid text-center mb-1">
-    <div class="row row-cols-1 row-cols-sm-2g-1">
-      <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/static-obstacle-avoidance-setup.jpg' %}" alt="Image 1" style="max-width: 85%; height: auto;">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Image -->
+      <div class="col-12 d-flex flex-column align-items-center">
+        <div class="ratio ratio-16x9" style="width: 100%;">
+          <img class="img-fluid object-fit-cover"
+               src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/static-obstacle-avoidance-setup.jpg' %}" 
+               alt="Image 1"
+               style="width: 100%; height: 100%;">
+        </div>
+        <!-- Caption -->
+        <p class="text-center mt-2" style="max-width: 80%;">
+          Real-world environment for static obstacle avoidance experiments. The robot sequentially reaches three
+          end-effector targets, indicated by the markers in the figure.
+        </p> 
+      </div>
+    </div>
+  
+    <!-- Video Section -->
+    <div class="row mt-3">
+      <!-- Video -->
+      <div class="col-12 d-flex flex-column align-items-center">
+        <div class="ratio ratio-16x9" style="width: 100%;">
+          <video id="teaser" autoplay muted controls loop playsinline style="width: 100%; height: 100%;">
+            <source src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/static_obstacle_avoidance_real_world2x.mp4' %}" type="video/mp4">
+          </video>
+        </div>
+        <!-- Caption Below the Video -->
+        <p class="text-center mt-2" style="max-width: 80%;">
+          The video is played at 2x speed, illustrating how the mobile manipulator can reach three different goals without any collisions. 
+          The computation time of the MPC-d is 6 ms on average, which aligns with the results observed in the simulation experiments.
+        </p>
       </div>
     </div>
   </div>
-  <p>
-    As illustrated in video, the mobile manipulator can reach three different goals without any collisions. The computation time of the MPC-d has a value of 6 ms on
-    average, aligning with the results observed in the simulation experiments
-  </p>
 
-  <h3>A prioritized heuristic to solve livelocks</h3>
+  <h3>Assessing multi robots collision avoidance</h3>
   <!-- <p class="text-center"> -->
     <div class="row row-cols-1 row-cols-sm-2 g-2">
       <div class="col">
@@ -162,8 +184,13 @@ in real-world settings.
       crossing. The initial configurations of the robots are shown in the figure, and the marker at the center denotes the origin of the
       world frame. </p> -->
     <!-- <p class="text-center"><b>Figure 1:</b> Overall caption describing both images together.</p> -->
+    <!-- <p>
     To evaluate the dynamic collision avoidance functionality and the efficiency of the heuristic  in resolving livelock situations, two robots are tasked with reaching end-effector target poses that are
-    symmetric about the x-axis, causing their trajectories to cross,as illustrated in figures above.
+    symmetric about the x-axis, causing their trajectories to cross, as illustrated in figures above.
+    </p> -->
+    <p>
+      To assess dynamic collision avoidance and the effectiveness of the heuristic in resolving livelock situations, two robots are assigned end-effector targets symmetrically positioned about the x-axis, leading to intersecting trajectories, as shown above.
+    </p>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
       <div class="col">
@@ -174,7 +201,7 @@ in real-world settings.
             </video>
           </div>
         </div>
-        <p align="center">
+        <p align="center">(a) Setup 1</p>
         </p>
       </div>
       <div class="col">
@@ -183,17 +210,17 @@ in real-world settings.
             <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
               <source src="{% include fix_link.html link='/assets/images/msc_projects/25_DanningZhao_MultiagentMPC/Livelock1.mp4' %}" type="video/mp4">
             </video>
+            
           </div>
         </div>
-        <p align="center">
+        <p align="center">(b) Setup 2</p>
         </p>
       </div>
     </div>
     <!-- <p align="center">In the presence of <b>static obstacles</b>, G3F achieves its goal considering the full task horizon from start to goal.</p> -->
-    
-  <p>
-
-  </p>
+    <p>
+      Each scenario is tested 10 times under varying start pose disturbances and other uncertainties. No collisions occur between robots and tables, demonstrating the proposed method's efficiency in real-world conditions.
+    </p>
 </section>
 
 <section id="example">
