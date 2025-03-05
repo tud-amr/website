@@ -31,9 +31,9 @@ affiliations:
     #   superscript: "†"
 release_date: 2024-09-30 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    # - name: IEEE Xplore
-    #   icon: bi-file-earmark-pdf
-    #   url: "https://doi.org/10.1109/LRA.2024.3426183"
+    - name: IEEE Xplore
+      icon: bi-file-earmark-pdf
+      url: "https://doi.org/10.1109/LRA.2025.3535185"
     - name: arXiv
       icon: bi-file-earmark-pdf
       url: "https://arxiv.org/abs/2307.09105"
