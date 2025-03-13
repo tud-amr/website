@@ -89,6 +89,13 @@ title: Perception and Planning for Mobile Manipulation in Changing Environments
             text-decoration: none;
             font-size: 18px;
         }
+        #home p, #home ul {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            /* padding-left: 20px;
+            padding-right: 20px; */
+        }
         section {
             padding: 50px;
             text-align: center;
@@ -98,10 +105,13 @@ title: Perception and Planning for Mobile Manipulation in Changing Environments
             box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
         }
         .schedule-table {
-            width: 100%;
+            width: 80%;
             border-collapse: collapse;
             margin-top: 20px;
             overflow-x: auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
             /* display: block; */
         }
         .schedule-table th, .schedule-table td {
@@ -162,6 +172,7 @@ title: Perception and Planning for Mobile Manipulation in Changing Environments
             color: #5E35B1;
             cursor: pointer;
         }
+        
 
         @media screen and (max-width: 768px) {
             .header-content h1 p {
@@ -211,7 +222,7 @@ title: Perception and Planning for Mobile Manipulation in Changing Environments
         <div class="header-content">
             <h1><p style="font-size: 1.5em;">Perception and Planning for Mobile Manipulation in Changing Environments</p></h1>
             <h1><p style="font-size: 1.0em;">IROS 2025 Workshop</p></h1>
-            <h1><p style="font-size: 0.8em;">Date: TBD Place: TBD</p></h1>
+            <h1><p style="font-size: 0.8em;">Date: TBD Place: Hangzhou, China</p></h1>
         </div>
     </header>
     <nav>
@@ -241,57 +252,130 @@ title: Perception and Planning for Mobile Manipulation in Changing Environments
             <tr>
                 <th>Time</th>
                 <th>Event</th>
-                <th>Speaker</th>
+                <th>Comments</th>
             </tr>
             <tr>
-                <td>09:00 - 10:00</td>
-                <td>Opening Keynote</td>
-                <td>Dr. X</td>
+                <td>8:30 - 8:40</td>
+                <td>Opening</td>
+                <td> </td>
             </tr>
             <tr>
-                <td>10:15 - 12:00</td>
-                <td>Session 1</td>
-                <td>Various</td>
+                <td>8:40 - 9:05</td>
+                <td>Speaker 1</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>9:05 - 9:30</td>
+                <td>Speaker 2</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>9:30 - 9:55</td>
+                <td>Speaker 3</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>9:55 - 10:10</td>
+                <td>Spotlight Talk Videos</td>
+                <td> (Quick video rounds) </td>
+            </tr>
+            <tr>
+                <td>10:10 - 10:30</td>
+                <td>Poster Session</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>10:30 - 10:45</td>
+                <td>Coffee Break</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>10:45 - 11:10</td>
+                <td>Speaker 4</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>11:10 - 11:35</td>
+                <td>Speaker 5</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>11:35 - 12:00</td>
+                <td>Speaker 6</td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td>12:00 - 12:30</td>
+                <td>Discussion with Audience</td>
+                <td> </td>
             </tr>
         </table>
     </section>
     <section id="speakers">
         <h2>Invited Speakers</h2>
+        <p>* Ranked by the first letter of name.</p>
         <div class="profile">
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/bkg1.webp' %} alt="Speaker 1">
-                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
-                <p>Professor, ABC University</p>
+                <img src="/assets/images/workshops/2025_iros/people/valada_page.jpg" alt="Speaker 1">
+                <h3><a href="https://rl.uni-freiburg.de/people/valada" target="_blank"> Abhinav Valada</a></h3>
+                <p>Professor, University of Freiburg</p>
                 <p class="show-bio" onclick="toggleBio('bio1')">Show Bio</p>
-                <p class="bio" id="bio1">Dr. Alice Smith specializes in AI-driven robotics and motion planning.</p>
+                <p class="bio" id="bio1">Abhinav Valada is a Full Professor (W3) at the University of Freiburg, where he directs the Robot Learning Lab. He is a member of the Department of Computer Science, the BrainLinks-BrainTools center, and a founding faculty of the ELLIS unit Freiburg. Abhinav is a DFG Emmy Noether AI Fellow, Scholar of the ELLIS Society, IEEE Senior Member, and Chair of the IEEE Robotics and Automation Society Technical Committee on Robot Learning.
+
+                    He received his PhD (summa cum laude) working with Prof. Wolfram Burgard at the University of Freiburg in 2019, his MS in Robotics from Carnegie Mellon University in 2013, and his BTech. in Electronics and Instrumentation Engineering from VIT University in 2010. After his PhD, he worked as a Postdoctoral researcher and subsequently an Assistant Professor (W1) from 2020 to 2023. He co-founded and served as the Director of Operations of Platypus LLC from 2013 to 2015, a company developing autonomous robotic boats in Pittsburgh, and has previously worked at the National Robotics Engineering Center and the Field Robotics Center of Carnegie Mellon University from 2011 to 2014.
+                    
+                    Abhinav’s research lies at the intersection of robotics, machine learning, and computer vision with a focus on tackling fundamental robot perception, state estimation, and planning problems to enable robots to operate reliably in complex and diverse domains. The overall goal of his research is to develop scalable lifelong robot learning systems that continuously learn multiple tasks from what they perceive and experience by interacting with the real world. For his research, he received the IEEE RAS Early Career Award in Robotics and Automation, IROS Toshio Fukuda Young Professional Award, NVIDIA Research Award, AutoSens Most Novel Research Award, among others. Many aspects of his research have been prominently featured in wider media such as the Discovery Channel, NBC News, Business Times, and The Economic Times.</p>
             </div>
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 2">
-                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
-                <p>Research Scientist, XYZ Labs</p>
+                <img src="/assets/images/workshops/2025_iros/people/Bucher.png" alt="Speaker 2">
+                <h3><a href="https://bucherb.github.io/" target="_blank">Bernadette Bucher (tentative)</a></h3>
+                <p>Assistant Professor, University of Michigan</p>
                 <p class="show-bio" onclick="toggleBio('bio2')">Show Bio</p>
-                <p class="bio" id="bio2">Dr. Bob Johnson works on perception algorithms for autonomous robots.</p>
+                <p class="bio" id="bio2">I am an Assistant Professor in the Robotics Department (primary) and Computer Science and Engineering Department at University of Michigan.
+
+                    My research interests lie in the intersection of robotics, computer vision, and machine learning. My research is on learning interpretable visual representations and estimating their uncertainty for use in downstream science and robotics tasks particularly autonomous mobile manipulation.
+                    
+                    Previously, I have worked at the Boston Dynamics AI Institute, NVIDIA Research, and Lockheed Martin Corporation. I received my PhD in computer science in the GRASP lab at University of Pennsylvania co-advised by Dr. Kostas Daniilidis and Dr. Nikolai Matni. I received an M.A. in Mathematics, M.A. in Economics, and B.S. in Mathematics and Economics from The University of Alabama in 2014.</p>
             </div>
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 3">
-                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
-                <p>Professor, LMN University</p>
+                <img src="/assets/images/workshops/2025_iros/people/he_wang.jpg" alt="Speaker 3">
+                <h3><a href="https://hughw19.github.io/" target="_blank">He Wang</a></h3>
+                <p>Assistant Professor, Peking University</p>
                 <p class="show-bio" onclick="toggleBio('bio3')">Show Bio</p>
-                <p class="bio" id="bio3">Dr. Carol Lee focuses on dynamic environment modeling in robotics.</p>
+                <p class="bio" id="bio3">I am a tenure-track assistant professor in the Center on Frontiers of Computing Studies (CFCS) at Peking University. I founded and lead the Embodied Perception and InteraCtion (EPIC) Lab with the mission of developing generalizable skills and embodied multimodal large model for robots to facilitate embodied AGI.
+
+                    I am also the director of the PKU-Galbot joint lab of Embodied AI and the BAAI center of Embodied AI. I have published more than 50 papers in top conferences and journals of computer vision, robotics, and learning, including CVPR/ICCV/ECCV/TRO/ICRA/IROS/NeurIPS/ICLR/AAAI. My pioneering work on category-level 6D pose estimation, NOCS, received the 2022 World Artificial Intelligence Conference Youth Outstanding Paper (WAICYOP) Award, and my work also received ICCV 2023 best paper finalist, ICRA 2023 outstanding manipulation paper award finalist and Eurographics 2019 best paper honorable mention.
+                    
+                    I serve as an associate editor of Image and Vision Computing and serve as an area chair in CVPR 2022 and WACV 2022. Prior to joining Peking University, I received my Ph.D. degree from Stanford University in 2021 under the advisory of Prof. Leonidas J.Guibas and my Bachelor's degree from Tsinghua University in 2014.</p>
             </div>
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 4">
-                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
-                <p>Senior Engineer, PQR Robotics</p>
+                <img src="/assets/images/workshops/2025_iros/people/Lerrel Pinto.jpg" alt="Speaker 4">
+                <h3><a href="https://www.lerrelpinto.com/" target="_blank">Lerrel Pinto (tentative)</a></h3>
+                <p>Assistant Professor, New York University</p>
                 <p class="show-bio" onclick="toggleBio('bio4')">Show Bio</p>
-                <p class="bio" id="bio4">Dr. David Kim is an expert in task and motion planning integration.</p>
+                <p class="bio" id="bio4">I am an Assistant Professor of Computer Science at NYU Courant and part of the CILVR group. Before that, I was at UC Berkeley for a postdoc, at CMU Robotics Institute for a PhD, and at IIT Guwahati for undergrad.
+
+                    Research: I run the General-purpose Robotics and AI Lab (GRAIL) with the goal of getting robots to generalize and adapt in the messy world we live in. Our research focuses broadly on robot learning and decision making, with an emphasis on large-scale learning (both data and models), representation learning for sensory data, developing algorithms to model actions and behavior, reinforcement learning for adapting to new scenarios, and building open-sourced affordable robots. A talk on our recent robotics efforts is here. If you are interested in joining our lab, please read this.</p>
             </div>
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 5">
-                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
-                <p>Researcher, DEF Institute</p>
+                <img src="/assets/images/workshops/2025_iros/people/niko2021.png" alt="Speaker 5">
+                <h3><a href="https://nikosuenderhauf.github.io/" target="_blank">Niko Suenderhauf</a></h3>
+                <p>Professor, Queensland University of Technology</p>
                 <p class="show-bio" onclick="toggleBio('bio5')">Show Bio</p>
-                <p class="bio" id="bio5">Dr. Emily Brown studies adaptive manipulation strategies.</p>
+                <p class="bio" id="bio5">I am a Professor at Queensland University of Technology (QUT) in Brisbane and Deputy Director of the QUT Centre for Robotics, where I lead the Visual Understanding and Learning Program.
+
+                    I am also Deputy Director (Research) for the ARC Research Hub in Intelligent Robotic Systems for Real-Time Asset Management (2022-2027) and was Chief Investigator of the Australian Centre for Robotic Vision 2017-2020.
+                    
+                    I conduct research in robotic vision and robot learning, at the intersection of robotics, computer vision, and machine learning. My research interests focus on robotic learning for manipulation, interaction and navigation, scene understanding, and the reliability of deep learning for open-set and open-world conditions.</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2025_iros/people/yunzhu_li.jpg" alt="Speaker 5">
+                <h3><a href="https://yunzhuli.github.io/" target="_blank">Yunzhu Li (tentative)</a></h3>
+                <p>Assistant Professor, Columbia University</p>
+                <p class="show-bio" onclick="toggleBio('bio5')">Show Bio</p>
+                <p class="bio" id="bio5">I am an Assistant Professor of Computer Science at Columbia University.
+
+                    Before joining Columbia, I was an Assistant Professor at UIUC CS. I also spent time as a Postdoc at the Stanford Vision and Learning Lab (SVL), working with Fei-Fei Li and Jiajun Wu. I received my PhD from the Computer Science and Artificial Intelligence Laboratory (CSAIL) at MIT, where I was advised by Antonio Torralba and Russ Tedrake, and I obtained my bachelor's degree from Peking University..</p>
             </div>
         </div>
     </section>
@@ -306,19 +390,24 @@ title: Perception and Planning for Mobile Manipulation in Changing Environments
         <h2>Organizers</h2>
         <div class="profile">
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Organizer 1">
-                <h3><a href="https://g-ch.github.io/" target="_blank">Dr. Gang Chen (Clarence)</a></h3>
+                <img src="/assets/images/workshops/2025_iros/people/gang.jpeg" alt="Organizer 1">
+                <h3><a href="https://g-ch.github.io/" target="_blank">Gang Chen (Clarence)</a></h3>
                 <p>Postdoc, TU Delft</p>
             </div>
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Organizer 2">
-                <h3><a href="https://autonomousrobots.nl/people/" target="_blank">Dr. Javier Alonso-Mora</a></h3>
+                <img src="/assets/images/workshops/2025_iros/people/javier.png" alt="Organizer 2">
+                <h3><a href="https://autonomousrobots.nl/people/" target="_blank">Javier Alonso-Mora</a></h3>
                 <p>Associate Professor, TU Delft</p>
             </div>
             <div class="profile-card">
-                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Organizer 3">
-                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
-                <p>Engineer, JKL Robotics</p>
+                <img src="/assets/images/workshops/2025_iros/people/LiamUdM.png" alt="Organizer 3">
+                <h3><a href="https://liampaull.ca/" target="_blank">Liam Paull</a></h3>
+                <p>Associate Professor, Université de Montréal</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2025_iros/people/jia.png" alt="Organizer 4">
+                <h3><a href="https://increase24.github.io/" target="_blank">Jia Zeng</a></h3>
+                <p>Researcher, Shanghai AI Lab</p>
             </div>
         </div>
     </section>
