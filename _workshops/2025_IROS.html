@@ -1,0 +1,330 @@
+---
+title: Perception and Planning for Mobile Manipulation in Changing Environments
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perception and Planning for Mobile Manipulation in Changing Environments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        } */
+        header {
+            position: relative;
+            height: auto;
+            min-height: 300px;
+            text-align: center;
+            color: white;
+        }
+        .header-content {
+            padding: 40px 20px;  /* Reduced padding for mobile */
+        }
+        .header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            flex-direction: row;  /* Make sure items flow horizontally */
+            justify-content: space-between;
+        }
+        .header-image-left {
+            width: 50%;  /* Slightly less than 50% to create some gap */
+            height: 100%;
+            background: url('/assets/images/workshops/2025_iros/bkg1.webp') no-repeat center center/cover;
+            float: left;  /* Ensure left alignment */
+        }
+        .header-image-right {
+            width: 50%;  /* Slightly less than 50% to create some gap */
+            height: 100%;
+            background: url('/assets/images/workshops/2025_iros/bkg2.webp') no-repeat center center/cover;
+            float: right;  /* Ensure right alignment */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .header-content {
+            position: relative;
+            padding: 100px;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        /* nav ul li {
+            display: inline;
+            margin: 0 15px;
+        } */
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            /* display: block; */
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .schedule-table th {
+            background-color: #333;
+            color: white;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .profile-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        .profile-card img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-card a {
+            text-decoration: none;
+            color: #5E35B1;  /* Modern blue */
+        }
+        .profile-card a:hover {
+            text-decoration: underline;
+            /* Optional: slightly darker shade on hover */
+            filter: brightness(85%);
+        }
+        .bio {
+            display: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .show-bio {
+            color: #5E35B1;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header-content h1 p {
+                font-size: 1.2em !important;  /* Override inline styles */
+            }
+            
+            .header-content h1 p:nth-child(2) {
+                font-size: 0.9em !important;
+            }
+            
+            .header-content h1 p:nth-child(3) {
+                font-size: 0.7em !important;
+            }
+            
+            /* Adjust background images for mobile */
+            .header-image-left, .header-image-right {
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+            
+            .header-background {
+                flex-direction: column;  /* Stack images vertically on mobile */
+            }
+        }
+    </style>
+    <script>
+        function toggleBio(id) {
+            var bio = document.getElementById(id);
+            if (bio.style.display === "none") {
+                bio.style.display = "block";
+            } else {
+                bio.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- <div class="header-background"></div> -->
+        <div class="header-background">
+            <div class="header-image-left"></div>
+            <div class="header-image-right"></div>
+        </div>
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1><p style="font-size: 1.5em;">Perception and Planning for Mobile Manipulation in Changing Environments</p></h1>
+            <h1><p style="font-size: 1.0em;">IROS 2025 Workshop</p></h1>
+            <h1><p style="font-size: 0.8em;">Date: TBD Place: TBD</p></h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Invited Speakers</a></li>
+            <li><a href="#papers">Accepted Papers</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>About the Workshop </h2>
+        <p style="text-align: left; font-size: 1.2em;">Human workers in factories, warehouses, and hospitality settings effortlessly perceive their surroundings, adapt to continuous changes, and adjust their actions based on new assignments or environmental modifications. In contrast, mobile robots often struggle with real-time perception and task and motion planning in these changing environments, limiting their ability to function effectively in real-world scenarios.</p>
+        <p style="text-align: left; font-size: 1.2em;">To advance mobile manipulation, robots must <strong>continuously perceive environmental changes</strong>—such as shifted objects, human and other robot’s activities, and unforeseen obstacles—and <strong>update their task and motion plans accordingly</strong>. However, most existing research assumes relatively static environments, limiting adaptability in practical applications.</p>
+        <p style="text-align: left; font-size: 1.2em;"> <strong>Key challenges remain in:</strong></p>
+            <ul>
+                <li><p style="text-align: left; font-size: 1.2em;">1) Efficient real-time perception and modeling of dynamic environments. </p></li>
+                <li><p style="text-align: left; font-size: 1.2em;">2) Task and motion planning strategies that can quickly adapt to new/changing environments while ensuring smooth and effective execution.</p></li>
+            </ul>
+        <p style="text-align: left; font-size: 1.2em;">This workshop will explore techniques for efficient environment modeling and real-time task and motion planning in dynamic environments. We will also discuss how perception and planning can be tightly integrated to improve the adaptability and robustness of mobile manipulation systems in real-world settings.</p>
+
+    </section>
+    <section id="schedule">
+        <h2>Schedule</h2>
+        <table class="schedule-table">
+            <tr>
+                <th>Time</th>
+                <th>Event</th>
+                <th>Speaker</th>
+            </tr>
+            <tr>
+                <td>09:00 - 10:00</td>
+                <td>Opening Keynote</td>
+                <td>Dr. X</td>
+            </tr>
+            <tr>
+                <td>10:15 - 12:00</td>
+                <td>Session 1</td>
+                <td>Various</td>
+            </tr>
+        </table>
+    </section>
+    <section id="speakers">
+        <h2>Invited Speakers</h2>
+        <div class="profile">
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/bkg1.webp' %} alt="Speaker 1">
+                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
+                <p>Professor, ABC University</p>
+                <p class="show-bio" onclick="toggleBio('bio1')">Show Bio</p>
+                <p class="bio" id="bio1">Dr. Alice Smith specializes in AI-driven robotics and motion planning.</p>
+            </div>
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 2">
+                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
+                <p>Research Scientist, XYZ Labs</p>
+                <p class="show-bio" onclick="toggleBio('bio2')">Show Bio</p>
+                <p class="bio" id="bio2">Dr. Bob Johnson works on perception algorithms for autonomous robots.</p>
+            </div>
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 3">
+                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
+                <p>Professor, LMN University</p>
+                <p class="show-bio" onclick="toggleBio('bio3')">Show Bio</p>
+                <p class="bio" id="bio3">Dr. Carol Lee focuses on dynamic environment modeling in robotics.</p>
+            </div>
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 4">
+                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
+                <p>Senior Engineer, PQR Robotics</p>
+                <p class="show-bio" onclick="toggleBio('bio4')">Show Bio</p>
+                <p class="bio" id="bio4">Dr. David Kim is an expert in task and motion planning integration.</p>
+            </div>
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Speaker 5">
+                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
+                <p>Researcher, DEF Institute</p>
+                <p class="show-bio" onclick="toggleBio('bio5')">Show Bio</p>
+                <p class="bio" id="bio5">Dr. Emily Brown studies adaptive manipulation strategies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="papers">
+        <h2>Call for Papers</h2>
+        <p>Details coming soon...</p>
+    </section>
+
+
+    <section id="organizers">
+        <h2>Organizers</h2>
+        <div class="profile">
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Organizer 1">
+                <h3><a href="https://g-ch.github.io/" target="_blank">Dr. Gang Chen (Clarence)</a></h3>
+                <p>Postdoc, TU Delft</p>
+            </div>
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Organizer 2">
+                <h3><a href="https://autonomousrobots.nl/people/" target="_blank">Dr. Javier Alonso-Mora</a></h3>
+                <p>Associate Professor, TU Delft</p>
+            </div>
+            <div class="profile-card">
+                <img src={% include fix_link.html link='/assets/images/workshops/2025_iros/placeholder_image.jpg' %} alt="Organizer 3">
+                <h3><a href="https://xxxxx/" target="_blank">Dr. XXXX</a></h3>
+                <p>Engineer, JKL Robotics</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Perception and Planning for Mobile Manipulation in Changing Environments Workshop in IROS</p>
+    </footer>
+</body>
+</html>

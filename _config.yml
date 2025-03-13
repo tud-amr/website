@@ -68,6 +68,9 @@ collections:
   paper_websites:
     output: true
     permalink: /:collection/:name
+  workshops:
+    output: true
+    permalink: /:collection/:name
 
 # defaults
 defaults:
@@ -109,6 +112,12 @@ defaults:
     values:
       layout: "paper"
       usemathjax: true
+  -
+    scope:
+      path: ""
+      type: "workshops" # a collection in your site, in plural form
+    values:
+      layout: ""
 
 # Build settings (theme is null as we use our own theme)
 
