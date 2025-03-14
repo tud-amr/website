@@ -14,7 +14,7 @@ authors:
       superscript: "1"
     - name: "Ivan Virgala"
       superscript: "2"
-      url: "https://www.sjf.tuke.sk/km/en/department/staff/20-frontpage/410-ivan-virgala"
+      url: "https://arm-lab.sk/staff.html#IvanVirgala"
     - name: "Javier Alonso-Mora"
       url: "https://autonomousrobots.nl/people/"
       superscript: "1"
@@ -26,7 +26,7 @@ affiliations:
       url: "https://tudelft.nl"
     - name: "Industrial Automation and Mechatronics, Technical University of Kosice, Slovakia."
       superscript: "2"
-      url: "https://tudelft.nl"
+      url: "https://tuke.sk/en"
 release_date: 2025-02-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
     # - name: IEEE Xplore
@@ -243,26 +243,47 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinova_pybullet_mix_comp.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Comparative examples of G3F versus GF and MPC demonstrating the benefits of <b>globally-guided</b> motions in <b>aiding the overcoming of local minima</b>.
+    </p>
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-16x9">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
           <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_pybullet_mix_zoomout.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
     <p align="center">
-    The proposed G3F outperforms Geometric Fabrics (GF), Prioritzed Rollout Fabrics (P-RF) and MPC in terms of success rate over all four scenarios consisting of 20 randomized multi-agent environments. 
+    The proposed G3F outperforms Geometric Fabrics (GF), Prioritzed Rollout Fabrics (P-RF) and MPC in terms of success rate over all four scenarios consisting of <b>20 randomized multi-agent environments</b>. 
     </p>
 </div>
 
 <h2>Illustration of grasp pose optimization</h2>
 
 <p align="justify"> Alternative target poses are explored based on the current state of the robot and the dynamic environment. In the Figure below, it is shown that the target pose is optimized with respect to the current end-effector pose of the robot. The axis along which the rotations are allowed, can vary based on the task. </p>
-  <div class="container">
+  <!-- <div class="container">
     <div id="fig-grasp1" class="image-div mb-3 d-flex justify-content-center">
       <img src="{{ '/assets/images/papers/g3f/grasp_constraint.png' | relative_url}}" class="img-fluid" alt="lab">
     </div>
     <div id="fig-grasp2" class="image-div mb-3 d-flex justify-content-center">
       <img src="{{ '/assets/images/papers/g3f/grasp_poses.png' | relative_url}}" class="img-fluid" alt="lab">
     </div>
-  </div>
+  </div> -->
+
+  <div class="container">
+    <div class="d-flex justify-content-center">
+        <div id="fig-grasp1" class="image-div me-3">
+            <img src="{{ '/assets/images/papers/g3f/grasp_constraint.png' | relative_url }}" class="img-fluid" alt="lab">
+        </div>
+        <div id="fig-grasp2" class="image-div">
+            <img src="{{ '/assets/images/papers/g3f/dinova_grasp_adapt.png' | relative_url }}" class="img-fluid" alt="lab">
+        </div>
+    </div>
+</div>
 
 
 <h2>Specifications of G3F</h2>
