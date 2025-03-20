@@ -36,9 +36,12 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: Code (released on publication)
       icon: bi-github
       url: https://github.com/saraybakker1/PumaFabrics
-    # - name: Video
-    #   icon: bi-youtube
-    #   url: "https://youtu.be/1ZbbcfFgpxc"
+    - name: Video
+      icon: bi-youtube
+      url: "https://www.youtube.com/watch?v=iWR5PmLZZ7o"
+    - name: Appendix
+      icon: bi-file-text
+      url: "https://github.com/saraybakker1/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf"
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
@@ -207,12 +210,13 @@ In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-ma
 </div> -->
 <h3> Results of the tomato-picking task with TamedPUMA</h3>
 Via TamedPUMA, PUMA is enhanced for safe and stable navigation, while accounting for whole-body collision avoidance and joint limits. We propose two variations, the Forcing Policy Method (FPM) and the Compatible Potential Method (CPM).
+Note that the robot-hand is controlled via a binary open-close when the target pose is reached within the tolerance.
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
     <h3 align="center">FPM</h3>
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
-        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+        <video id="teaser" autoplay="" muted controls="" loop="" playsinline="">
           <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/FPM_43.mp4' %}" type="video/mp4">
         </video>
       </div>
@@ -355,10 +359,51 @@ Note: The following videos might not display in Chrome, but they do render in Fi
   </div>
 </div>
 
-<h2>Supplementary theoretical details on TamedPUMA</h2>
-<a href="pumafabrics-details">This link guides to the webpage with theoretical details on TamedPUMA.</a>
+<h2>Appendix - Supplementary material on TamedPUMA</h2>
+<a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf">This PDF</a> contains additional theoretical analysis on the proofs, 
+differential mappings and pseudo-code for TamedPUMA. 
+
+<br>
+<a href="pumafabrics-details">This link guides to the webpage with theoretical details on TamedPUMA,</a> as also explored in Section 1 of the pdf.
+<br>
+
+Learned dynamical systems are often trained in a normalized position and orientation space. To obtain the correct inputs for the network from joint positions and velocities, we require forward kinematics and transformations with respect to Euclidian and non-Euclidian spaces. The output of the network is mapped to a joint acceleration via a pullback operation, as in Eq. (6) in the paper. 
+Section 2 in the PDF explores the required differential mappings of PUMA to map these inputs and outputs of the DNN.
+<br>
+
+Pseudo-code of the algorithm can also be found in the Section 3 of the document.
+
+<h2>Limitations</h2>
+One limitation of TamedPUMA is that its optimization is conducted separately from fabrics. Consequently, because physical constraints are overlooked during training, it is still possible to obtain infeasible trajectories in the real system, especially when starting from states far from the support of the demonstration data. In such cases, PUMA might find solutions that lead to TamedPUMA reaching zero velocity, due to the fabrics component, in states other than the goal state $\vec{x}_{\textrm{g}}$.
+Furthermore, this approach alters the behavior of the learned system when PUMA is integrated with fabrics, which, in some cases, may cause undesired deviations in the system's behavior.
 <div>
-<!-- A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a> (released upon publication). -->
+<br>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+  <div class="col">
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-4x3">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/limitations_video1_v4.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    The DNN provides a trajectory leading to an undesirable configuration, as PUMA is unaware of the physical limitations.
+    </p>
+  </div>
+  <div class="col">
+    <div class="teaser-video d-flex justify-content-center">
+      <div class="ratio ratio-4x3">
+        <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/limitations_video2_v4.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <p align="center">
+    Human errors ...
+    </p>
+  </div>
+</div>
 
 <h3> Specifications of the DNN by PUMA </h3>
 <div>
@@ -468,6 +513,42 @@ Note: The following videos might not display in Chrome, but they do render in Fi
     text-align: center;
   }
 </style>
+
+<h3> Specifications of the joint impedance controller</h3>
+<div>
+The joint impedance controller is updated at 1000 Hz, while TamedPUMA runs at 30 Hz on the real-world KUKA iiwa 14. Detailed settings of the joint impedance controller are indicated in <a href="#params_impedance">Table 2</a>.
+<br>
+<br>
+<div>
+<table id="params_impedance">
+  <caption>Table 2. Parameters of the joint impedance controller</caption>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Parameters</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="4"><strong>Joint impedance controller</strong></td>
+      <td>Stiffness position</td>
+      <td>[600, 600, 500, 450, 180, 100, 40]</td>
+    </tr>
+    <tr>
+      <td>Damping position</td>
+      <td>[61, 61, 33, 32, 20, 12, 7]</td>
+    </tr>
+    <tr>
+      <td>Stiffness velocity</td>
+      <td>[950, 950, 850, 680, 290, 170, 85]</td>
+    </tr>
+    <tr>
+      <td>Damping velocity</td>
+      <td>[61, 61, 33, 32, 18, 11, 7]</td>
+    </tr>
+  </tbody>
+</table>
 
 <div id="fig-primitive-0-iter-5000cut" class="image-div mb-3 d-flex justify-content-center">
   <figure>
