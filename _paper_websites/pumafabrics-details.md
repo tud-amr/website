@@ -76,7 +76,7 @@ MathJax = {
 
 
 <h2>Supplementary theoretical details on TamedPUMA</h2>
-<!-- <b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/paper/tamedpuma_supplementary_material.pdf">HERE</a></b>. -->
+<b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf">HERE</a></b>.
 <h3>Energization and Finsler energies</h3>
 <div>
 In fabrics<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>, the concept of energization is used to transform the system $\qddot = \h(\q, \qdot)$ into an energy-conserving system. 
@@ -223,6 +223,7 @@ This illustration of TamedPUMA shows the behavior design given the relationships
 <div id="tamedpuma_illustration" class="image-div mb-3 d-flex justify-content-center">
     <img src="{{ '/assets/images/papers/pumafabrics/illustration_tamedpuma_28_11_2024_10.png' | relative_url}}" class="img-fluid" width="800" alt="lab">
 </div>
+
 
 <h2>References</h2>
 <ol>
