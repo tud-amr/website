@@ -33,9 +33,9 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: arXiv
     #   icon: bi-file-earmark-pdf
     #   url: "https://arxiv.org"
-    - name: Code (released upon publication)
+    - name: Code
       icon: bi-github
-      url: https://github.com/saraybakker1/PumaFabrics
+      url: https://github.com/tud-amr/PumaFabrics
     # - name: Video
     #   icon: bi-youtube
     #   url: "https://youtu.be/1ZbbcfFgpxc"
@@ -76,7 +76,7 @@ MathJax = {
 
 
 <h2>Supplementary theoretical details on TamedPUMA</h2>
-<b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf">HERE</a></b>.
+<b>A PDF of these supplementary theoretical details can be found <a href="https://github.com/tud-amr/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf">HERE</a></b>.
 <h3>Energization and Finsler energies</h3>
 <div>
 In fabrics<span class="citation" onclick="document.getElementById('ratliff2023fabrics').scrollIntoView();"><sup>[1]</sup></span>, the concept of energization is used to transform the system $\qddot = \h(\q, \qdot)$ into an energy-conserving system. 

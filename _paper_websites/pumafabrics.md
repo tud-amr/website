@@ -33,15 +33,15 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: arXiv
     #   icon: bi-file-earmark-pdf
     #   url: "https://arxiv.org"
-    - name: Code (released on publication)
+    - name: Code
       icon: bi-github
-      url: https://github.com/saraybakker1/PumaFabrics
+      url: https://github.com/tud-amr/PumaFabrics
     - name: Video
       icon: bi-youtube
       url: "https://www.youtube.com/watch?v=iWR5PmLZZ7o"
     - name: Appendix
       icon: bi-file-text
-      url: "https://github.com/saraybakker1/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf"
+      url: "https://github.com/tud-amr/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf"
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
@@ -360,7 +360,7 @@ Note: The following videos might not display in Chrome, but they do render in Fi
 </div>
 
 <h2>Appendix - Supplementary material on TamedPUMA</h2>
-<a href="https://github.com/saraybakker1/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf">This PDF</a> contains additional theoretical analysis on the proofs, 
+<a href="https://github.com/tud-amr/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf">This PDF</a> contains additional theoretical analysis on the proofs, 
 differential mappings and pseudo-code for TamedPUMA. 
 
 <br>
