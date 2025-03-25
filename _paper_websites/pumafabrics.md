@@ -30,9 +30,9 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: IEEE Xplore
     #   icon: bi-file-earmark-pdf
     #   url: "https://doi.org/10.1109/LRA.2024.3397083"
-    # - name: arXiv
-    #   icon: bi-file-earmark-pdf
-    #   url: "https://arxiv.org"
+    - name: arXiv
+      icon: bi-file-earmark-pdf
+      url: "https://arxiv.org/abs/2503.17432"
     - name: Code
       icon: bi-github
       url: https://github.com/tud-amr/PumaFabrics
