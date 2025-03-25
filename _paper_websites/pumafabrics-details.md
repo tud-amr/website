@@ -30,15 +30,18 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: IEEE Xplore
     #   icon: bi-file-earmark-pdf
     #   url: "https://doi.org/10.1109/LRA.2024.3397083"
-    # - name: arXiv
-    #   icon: bi-file-earmark-pdf
-    #   url: "https://arxiv.org"
+    - name: arXiv
+      icon: bi-file-earmark-pdf
+      url: "https://arxiv.org/abs/2503.17432"
     - name: Code
       icon: bi-github
       url: https://github.com/tud-amr/PumaFabrics
-    # - name: Video
-    #   icon: bi-youtube
-    #   url: "https://youtu.be/1ZbbcfFgpxc"
+    - name: Video
+      icon: bi-youtube
+      url: "https://www.youtube.com/watch?v=iWR5PmLZZ7o"
+    - name: Appendix
+      icon: bi-file-text
+      url: "https://github.com/tud-amr/pumafabrics/blob/main/assets/TamedPUMA_appendix.pdf"
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
