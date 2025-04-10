@@ -18,9 +18,12 @@ permalink: /research/
 </div>
 {% endfor %}
   
-<!-- We loop over projects each one can have several research area ids -->
-{% assign projects_sorted = site.projects | sort: 'date' | reverse %}
-{% for project in projects_sorted %}
+<!-- We loop over projects sorted by end_date (null first) then by date -->
+{% assign ongoing_projects = site.projects | where_exp: "item", "item.end_date == nil" | sort: "date" | reverse %}
+{% assign completed_projects = site.projects | where_exp: "item", "item.end_date != nil" | sort: "end_date" | sort: "date" | reverse %}
+{% assign all_projects = ongoing_projects | concat: completed_projects %}
+
+{% for project in all_projects %}
 <div class="div project-item" data-area-ids="{%for v in project.belongs_to_areas %}{{v}}{% if forloop.last != true %},{% endif %}{% endfor %}">
     {% include project_vcard.html project=project %}
 </div>
