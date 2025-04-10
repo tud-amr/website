@@ -33,44 +33,87 @@ permalink: /research/
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const buttons = document.querySelectorAll('.area_idex .btn');
-      const researchAreaCards = document.querySelectorAll('.research-area-card');
-      const projectItems = document.querySelectorAll('.project-item');
-    
-      buttons.forEach(button => {
-        button.addEventListener('click', function(event) {
-          event.preventDefault();
-          const selectedAreaId = this.getAttribute('data-area-id');
-    
-          // Remove the selected class from all buttons
-          buttons.forEach(btn => btn.classList.remove('active'));
-    
-          // Add the selected class to the clicked button
-          this.classList.add('active');
-    
-          // Toggle research area cards
-          researchAreaCards.forEach(card => {
-            const cardAreaId = card.getAttribute('data-area-id');
-            if (selectedAreaId === 'all') {
-              card.style.display = 'none';
-            } else if (cardAreaId === selectedAreaId) {
-              card.style.display = 'block';
-            } else {
-              card.style.display = 'none';
-            }
-          });
-    
-          // Toggle project items
-          projectItems.forEach(item => {
-            const areaIds = item.getAttribute('data-area-ids').split(',');
-            if (selectedAreaId === 'all' || areaIds.includes(selectedAreaId)) {
-              item.style.display = 'block';
-            } else {
-              item.style.display = 'none';
-            }
-          });
-        });
+  document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.area_idex .btn');
+    const researchAreaCards = document.querySelectorAll('.research-area-card');
+    const projectItems = document.querySelectorAll('.project-item');
+  
+    // Function to update the UI based on the selected area ID
+    function updateUI(selectedAreaId) {
+      // Remove the selected class from all buttons
+      buttons.forEach(btn => btn.classList.remove('active'));
+  
+      // Add the selected class to the matching button
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-area-id') === selectedAreaId) {
+          btn.classList.add('active');
+        }
+      });
+  
+      // Toggle research area cards
+      researchAreaCards.forEach(card => {
+        const cardAreaId = card.getAttribute('data-area-id');
+        if (selectedAreaId === 'all') {
+          card.style.display = 'none';
+        } else if (cardAreaId === selectedAreaId) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+  
+      // Toggle project items
+      projectItems.forEach(item => {
+        const areaIds = item.getAttribute('data-area-ids').split(',');
+        if (selectedAreaId === 'all' || areaIds.includes(selectedAreaId)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    }
+
+    // Check if there's a hash in the URL when the page loads
+    function loadFilterFromHash() {
+      if (window.location.hash) {
+        // Remove the # character
+        const selectedAreaId = window.location.hash.substring(1);
+        // Check if this area ID exists
+        const validAreaIds = Array.from(buttons).map(btn => btn.getAttribute('data-area-id'));
+        if (validAreaIds.includes(selectedAreaId)) {
+          updateUI(selectedAreaId);
+        } else {
+          // If invalid hash, default to 'all'
+          updateUI('all');
+        }
+      } else {
+        // Default to 'all' if no hash
+        updateUI('all');
+      }
+    }
+
+    // Initial load from hash
+    loadFilterFromHash();
+  
+    // Event listener for button clicks
+    buttons.forEach(button => {
+      button.addEventListener('click', function(event) {
+        event.preventDefault();
+        const selectedAreaId = this.getAttribute('data-area-id');
+        
+        // Update the URL hash without causing page reload
+        if (selectedAreaId === 'all') {
+          // Remove the hash completely for "all"
+          history.pushState("", document.title, window.location.pathname + window.location.search);
+        } else {
+          window.location.hash = selectedAreaId;
+        }
+        
+        updateUI(selectedAreaId);
       });
     });
+
+    // Handle browser back/forward navigation
+    window.addEventListener('hashchange', loadFilterFromHash);
+  });
 </script>

@@ -53,7 +53,7 @@ layout: default
 
             <div class="area_idex mb-3">
                 {% for research_area in site.research_areas %}
-                {% if forloop.first == false %}<br>{% endif %}- <a href="{{ '/research' | relative_url }}#{{ research_area.title }}" class="">{{ research_area.title }}</a>
+                {% if forloop.first == false %}<br>{% endif %}- <a href="{{ '/research' | relative_url }}#{{ research_area.area_id }}" class="">{{ research_area.title }}</a>
                 {% endfor %}
             </div>
 
