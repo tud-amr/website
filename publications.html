@@ -148,30 +148,25 @@ permalink: /publications/
     var searchButton = document.getElementById('search-button');
     var yearSelect = document.getElementById('year-select');
 
-    // Trigger search when Enter key is pressed
-    searchInput.addEventListener('keyup', function(event) {
-        if (event.key === 'Enter') {
-            searchButton.click();
-        }
-    });
-    // Trigger search when year is changed
-    yearSelect.addEventListener('change', function () {
-            searchButton.click();
-    });
-
-    searchButton.addEventListener('click', function () {
+    // Function to perform the search based on input values
+    function performSearch() {
         var searchValue = searchInput.value.toLowerCase();
-        var yearValue = document.getElementById('year-select').value;
+        var yearValue = yearSelect.value;
         var publicationItems = document.getElementsByClassName('publication-item');
         var archiveYears = document.getElementsByClassName('archive-year');
 
+        // Update URL with search parameters
+        updateUrlHash(searchValue, yearValue);
+
+        // Filter publication items
         for (var i = 0; i < publicationItems.length; i++) {
             var publicationTitle = publicationItems[i].querySelector('.publication-title').textContent.toLowerCase();
             var publicationAuthor = publicationItems[i].querySelector('.author-names').textContent.toLowerCase();
             var publicationVenue = publicationItems[i].querySelector('.publication-venue').textContent.toLowerCase();
             var publicationYear = publicationItems[i].querySelector('.publication-date').textContent.toLowerCase();
 
-            if ((publicationTitle.includes(searchValue) || publicationAuthor.includes(searchValue) || publicationVenue.includes(searchValue) || publicationYear.includes(searchValue)) &&
+            if ((publicationTitle.includes(searchValue) || publicationAuthor.includes(searchValue) || 
+                 publicationVenue.includes(searchValue) || publicationYear.includes(searchValue)) &&
                 (yearValue === "" || publicationYear.includes(yearValue))) {
                 publicationItems[i].style.display = "block";
             } else {
@@ -179,26 +174,82 @@ permalink: /publications/
             }
         }
 
+        // Show/hide year headers based on visible publications
         for (var j = 0; j < archiveYears.length; j++) {
             var year = archiveYears[j].textContent.trim();
-            // var yearItems = document.querySelectorAll('.publication-item .publication-date');
             var yearItems = document.getElementsByClassName('publication-date');
-            console.log(year);
             var showYear = false;
+            
             for (var k = 0; k < yearItems.length; k++) {
                 var itemYear = yearItems[k].textContent.trim();
-                console.log(itemYear);
                 if (itemYear.includes(year) && publicationItems[k].style.display !== "none") {
                     showYear = true;
                     break;
                 }
             }
 
-            if (showYear) {
-                archiveYears[j].style.display = "block";
-            } else {
-                archiveYears[j].style.display = "none";
+            archiveYears[j].style.display = showYear ? "block" : "none";
+        }
+    }
+
+    // Function to update URL hash
+    function updateUrlHash(search, year) {
+        if (search === "" && year === "") {
+            // Clear hash if no filters
+            history.pushState("", document.title, window.location.pathname + window.location.search);
+        } else {
+            // Format: #search_string#year
+            var hashValue = "#" + encodeURIComponent(search);
+            if (year !== "") {
+                hashValue += "#" + year;
             }
+            window.location.hash = hashValue.substring(1); // Remove the first # to avoid ##
+        }
+    }
+
+    // Function to parse URL hash and set search parameters
+    function parseUrlHash() {
+        if (window.location.hash) {
+            var hashParts = window.location.hash.substring(1).split('#');
+            
+            if (hashParts.length >= 1) {
+                var searchQuery = decodeURIComponent(hashParts[0]);
+                searchInput.value = searchQuery;
+            }
+            
+            if (hashParts.length >= 2) {
+                var yearValue = hashParts[1];
+                // Check if year exists in dropdown
+                var yearOptions = yearSelect.options;
+                for (var i = 0; i < yearOptions.length; i++) {
+                    if (yearOptions[i].value === yearValue) {
+                        yearSelect.value = yearValue;
+                        break;
+                    }
+                }
+            }
+            
+            // Perform search with the parameters from URL
+            performSearch();
+        }
+    }
+
+    // Event listeners
+    searchInput.addEventListener('keyup', function(event) {
+        if (event.key === 'Enter') {
+            performSearch();
         }
     });
+    
+    yearSelect.addEventListener('change', function() {
+        performSearch();
+    });
+    
+    searchButton.addEventListener('click', performSearch);
+    
+    // Handle browser back/forward navigation
+    window.addEventListener('hashchange', parseUrlHash);
+    
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', parseUrlHash);
 </script>
