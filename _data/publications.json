@@ -14,14 +14,14 @@
         "venue": "IEEE Transactions on Robotics (T-RO)",
         "links": [
           {
-            "pdf": "https://arxiv.org/abs/2406.11506",
+            "arXiv": "https://arxiv.org/abs/2406.11506",
             "code": "https://github.com/dbenders1/hmpc",
             "web": "/paper_websites/hmpc",
             "video": "https://youtu.be/0RnrKk6830I"
           }
         ],
         "note": null,
-        "image": "/assets/images/papers/hmpc/smpc_hmpc_front_page.png",
+        "image": "/assets/images/papers/hmpc/smpc_hmpc_front_page.webp",
         "belongs_to_projects": [
           "drones-emergency"
         ],
