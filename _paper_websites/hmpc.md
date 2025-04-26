@@ -42,6 +42,30 @@ links: # If you have other website for the project, github repos, datasets, etc.
     #   url: "#related-publications"
 related_project_id: "drones-emergency"
 ---
+<style>
+    ol.figure-list {
+        list-style-type: none;
+        counter-reset: list-counter;
+        padding-left: 10px;
+    }
+    ol.figure-list li::before {
+        counter-increment: list-counter;
+        content: "(" counter(list-counter, lower-alpha) ")";
+        padding-right: 8px;
+    }
+</style>
+<style>
+    ol.ref-list {
+        list-style-type: none;
+        counter-reset: list-counter;
+        padding-left: 10px;
+    }
+    ol.ref-list li::before {
+        counter-increment: list-counter;
+        content: "[" counter(list-counter) "]";
+        padding-right: 8px;
+    }
+</style>
 <!-- Simulated Mobile Robot | Real-World Mobile Robot | -->
 <!-- | ------------- | ------------- | -->
 <!-- | <img src="https://imgur.com/YZNLaww.gif" width="100%"> | <img src="https://imgur.com/861MmhI.gif" width=100%> | -->
@@ -60,11 +84,60 @@ related_project_id: "drones-emergency"
   </div>
   <div class="col-6">
     <p align="justify">
-
-    The proposed hierarchical MPC scheme consists of a planning and a tracking layer. The planner constructs a trajectory with a long prediction horizon at a slow rate, while the tracker ensures trajectory tracking at a relatively fast rate. We prove that the proposed framework avoids collisions and is recursively feasible.
+      The <b>goal</b> is to plan and track a collision-free trajectory towards the goal position given the initial position of the mobile robot and a grid map of the environment.
+      <br><br>
+      Below, we summarize some important properties of the proposed HMPC scheme. Please refer to <a href="https://arxiv.org/html/2406.11506v2#S5">Section V</a> in the paper for more details.
     </p>
   </div>
 </div>
+<br>
+<div class="row">
+  <div class="col-6">
+    <p align="justify">
+      In <b>offline</b> phase, we compute the terminal ingredients of the tracking MPC (TMPC). These ingredients include terminal cost matrix $P$ and feedback control gain $K$ that renders a sublevel set of the terminal cost function invariant. This sublevel set is the terminal set and its size is given by terminal set scaling $\alpha$. Furthermore, we compute Lipschitz constants $\boldsymbol{c}^\mathrm{s}$ and $c^\mathrm{o}$ for the planning MPC (PMPC), such that the TMPC satisfies the original system and obstacle avoidance constraints if these constraints are tightened by a multiplication of the tightening constants and $\alpha$ in the PMPC formulation.
+      <br>
+      See Algorithm 1 in the paper for more details on the offline design.
+    </p>
+  </div>
+  <div class="col-6">
+    <p align="justify">
+      In <b>online</b> phase, we:
+      <ul>
+        <li>generate obstacle avoidance constraints using the <i>I-DecompUtil</i> method explained below;</li>
+        <li>optimize a dynamically feasible and collision free trajectory by solving the PMPC problem with a goal-oriented objective function and tightened constraints. See <a href="https://arxiv.org/html/2406.11506v2#S3">Section III</a> in the paper for more details on the properties that the trajectory needs to satisfy;</li>
+        <li>communicate the optimized trajectory and corresponding obstacle avoidance constraints from PMPC to TMPC via the specific interconnection scheme illustrated next;</li>
+        <li>track the trajectory and satisfy the constraints by solving the TMPC problem with reference tracking objective and terminal set constraint.</li>
+      </ul>
+      See Algorithm 2 in the paper for more details on the online design.
+    </p>
+  </div>
+</div>
+<br>
+<p align="justify">
+  This following figure illustrates the interconnection scheme between PMPC and TMPC using a 1D state trajectory example:
+  <ol class="figure-list">
+    <li>At time $t_i-T^{\mathrm{s},\mathrm{t}}$, the TMPC optimizes a trajectory (orange) over horizon $T^\mathrm{t}$ starting from forward-simulated state $\hat{\boldsymbol{x}}_{0|t_i}^t$ (purple), which is the model response when applying $\boldsymbol{u}_{[0,T^{\mathrm{s},\mathrm{t}}]|t_i-T^{\mathrm{s},\mathrm{t}}}^{\mathrm{t},*}$ starting from current state $\boldsymbol{x}_{t_i-T^{\mathrm{s},\mathrm{t}}}$ (green). The trajectory ends in terminal set $\mathcal{X}^\mathrm{f,t}$ around the reference trajectory $\boldsymbol{x}_{\tau|t_i}^\mathrm{r}$ (red) that becomes valid at $t_i$. $\boldsymbol{x}_{\tau|t_i}^\mathrm{r}$ is the sub-sampled version of reference plan $\boldsymbol{x}_{\tau|t_i}^{\mathrm{p},*}$ (blue).</li>
+    <li>In this example, the TMPC executes 2 more times ($\tau \in \{0,T^{\mathrm{s},\mathrm{t}}\}$) until the next reference trajectory becomes valid, thereby getting closer to the reference.</li>
+    <li>At time $t_{i+1}-T^{\mathrm{s},\mathrm{t}}$, the TMPC starts optimizing a trajectory based on a new reference plan $\boldsymbol{x}_{\tau|t_{i+1}}^{\mathrm{p},*}$ that becomes valid at $t_{i+1}$. This reference plan is optimized by the PMPC starting at time $t_i - T^{\mathrm{s},\mathrm{t}}$.</li>
+  </ol>
+</p>
+<img src="{% include fix_link.html link='/assets/images/papers/hmpc/HMPC_timing.svg' %}" width="100%">
+<hr/>
+<h2 align="center"><u>Obstacle avoidance generation using <i>I-DecompUtil</i></u></h2>
+<p align="justify">
+  The figure below gives a 2D visualization of map pre-processing and <i>I-DecompUtil</i>, given occupied grid cells $\tilde{\mathcal{O}}$ and the last optimized plan $\boldsymbol{x}_{\tau|t}^*$:
+  <ol class="figure-list">
+    <li>The obstacles are inflated by half of the robot radius (orange arrows).</li>
+    <li>To construct the obstacle avoidance constraints around a specific line segment, first, a subset of the grid map $\mathcal{M}$ is selected such that the bounding box $\mathcal{B}$ with any orientation fits in this subset.</li>
+    <li>The obstacle avoidance constraints $\mathcal{F}_{\tau|t+T^\mathrm{s,p}}$ are constructed according to the <i>DecompUtil</i> method<span class="citation" onclick="document.getElementById('liu2017planning').scrollIntoView();"><sup>[1]</sup></span> by growing an ellipsoid around the line segment, creating the tangential lines and clipping them to $\mathcal{B}$. Furthermore, $\mathcal{F}_{\tau|t+T^\mathrm{s,p}}$ are tightened by the other half of the robot radius, such that the robot does not collide with the obstacles if its center satisfies $\mathcal{F}_{\tau|t+T^\mathrm{s,p}}$.</li>
+    <li>The tightened obstacle avoidance constraints $\bar{\mathcal{F}}_{\tau|t+T^\mathrm{s,p}}$ are constructed by tightening $\mathcal{F}_{\tau|t+T^\mathrm{s,p}}$ with $c^\mathrm{o} \alpha$, visualized using terminal set $\mathcal{X}^\mathrm{f,t}$ in this figure.</li>
+  </ol>
+  Note that (b)-(d) are repeated for all line segments.
+</p>
+<img src="{% include fix_link.html link='/assets/images/papers/hmpc/HMPC_obstacle_avoidance_constraints.svg' %}" width="100%">
+<p align="justify">
+  Please refer to <a href="https://arxiv.org/html/2406.11506v2#S4">Section IV</a> in the paper for more details on the obstacle avoidance generation.
+</p>
 <hr/>
 <h2 align="center"><u>HMPC versus SMPC</u></h2>
   <div class="row">
@@ -78,10 +151,9 @@ related_project_id: "drones-emergency"
     </div>
 </div>
 <hr/>
-<!-- Insert link to Youtube video -->
-<h2 align="center"><u>And more!</u></h2>
+<h2 align="center"><u>There is more!</u></h2>
   <p align="justify">
-    HMPC has more capabilities. Interested? Check out the <a href="https://youtu.be/0RnrKk6830I">YouTube video</a> and the <a href="https://github.com/dbenders1/hmpc">code</a>!<br>Special care has been taken to construct the repository according to the guidelines presented in recent work<span class="citation" onclick="document.getElementById('cervera2018try').scrollIntoView();"><sup>[1]</sup></span> to enhance method reproducibility.
+    HMPC has more capabilities. Interested? Check out the <a href="https://youtu.be/0RnrKk6830I">YouTube video</a> and the <a href="https://github.com/dbenders1/hmpc">code</a>!<br>Special care has been taken to construct the repository according to the guidelines presented in recent work<span class="citation" onclick="document.getElementById('cervera2018try').scrollIntoView();"><sup>[2]</sup></span> to enhance method reproducibility.
   </p>
 <hr/>
 <h2 align="center"><u>Research platform</u></h2>
@@ -97,7 +169,10 @@ related_project_id: "drones-emergency"
 </div>
 <hr/>
 <h2>References</h2>
-<ol>
+<ol class="ref-list">
+  <li id="liu2017planning">
+    S. Liu, M. Watterson, K. Mohta, K. Sun, S. Bhattacharya, C. J. Taylor, and V. Kumar, “Planning dynamically feasible trajectories for quadrotors using safe flight corridors in 3-d complex environments,” <em>IEEE Robotics and Automation Letters</em>, vol. 2, no. 3, pp. 1688–1695, 2017.
+  </li>
   <li id="cervera2018try">
     E. Cervera, “Try to start it! the challenge of reusing code in robotics research,” <em>IEEE Robotics and Automation Letters</em>, vol. 4, no. 1, pp. 49–56, 2018.
   </li>
