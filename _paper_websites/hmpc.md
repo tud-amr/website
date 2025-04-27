@@ -116,8 +116,8 @@ related_project_id: "drones-emergency"
       In <b>online</b> phase, we:
       <ul>
         <li>generate obstacle avoidance constraints using the <i>I-DecompUtil</i> method explained below;</li>
-        <li>optimize a dynamically feasible and collision free trajectory by solving the PMPC problem with a goal-oriented objective function and tightened constraints. See <a href="https://arxiv.org/html/2406.11506v2#S3">Section III</a> in the paper for more details on the properties that the trajectory needs to satisfy;</li>
-        <li>communicate the optimized trajectory and corresponding obstacle avoidance constraints from PMPC to TMPC via the specific interconnection scheme illustrated next;</li>
+        <li>optimize a dynamically feasible and collision-free trajectory by solving the PMPC problem with a goal-oriented objective function and tightened constraints. See <a href="https://arxiv.org/html/2406.11506v2#S3">Section III</a> in the paper for more details on the properties that the trajectory needs to satisfy;</li>
+        <li>communicate the optimized trajectory and corresponding obstacle avoidance constraints from PMPC to TMPC via the specific interconnection scheme explained next;</li>
         <li>track the trajectory and satisfy the constraints by solving the TMPC problem with reference tracking objective and terminal set constraint.</li>
       </ul>
       See Algorithm 2 in the paper for more details on the online design.
@@ -166,7 +166,7 @@ related_project_id: "drones-emergency"
 <div class="row">
   <div class="col-6">
     <p align="justify">
-      This figure shows a specific snapshot of the <i>TMPC prediction</i> starting from forward-simulated state <i>TMPC init state</i> and ending in the terminal set, given the obstacles, their collision region based on robot region $\mathcal{R}$, reference plan <i>PMPC prediction</i> and corresponding reference trajectory <i>TMPC ref traj</i>, and obstacle avoidance constraints <i>PMPC obs con</i>. Note that the PMPC obstacle avoidance constraints are tightened with respect to TMPC obstacle avoidance constraints <i>TMPC obs con</i> and <i>Current state</i>, and forward-simulated state do not overlap, showing the presence of model mismatch.
+      This figure shows a specific snapshot of the <i>TMPC prediction</i> starting from forward-simulated state <i>TMPC init state</i> and ending in the terminal set, given the obstacles, their collision region based on robot region $\mathcal{R}$, reference plan <i>PMPC prediction</i> and corresponding reference trajectory <i>TMPC ref traj</i>, and obstacle avoidance constraints <i>PMPC obs con</i>. Note that the PMPC obstacle avoidance constraints are tightened with respect to TMPC obstacle avoidance constraints <i>TMPC obs con</i>, and <i>Current state</i> and forward-simulated state do not overlap, showing the presence of model mismatch.
     </p>
   </div>
   <div class="col-6">
@@ -181,7 +181,7 @@ related_project_id: "drones-emergency"
   In summary, based on all HMPC results, we conclude that:
   <ol>
     <li>HMPC is able to efficiently navigate from start to goal position while avoiding the obstacles;</li>
-    <li>HMPC runs in real-time on the quadrotor's embedded computer;</li>
+    <li>HMPC runs in real time on the quadrotor's embedded computer;</li>
     <li>In the absence of model mismatch, HMPC guarantees obstacle avoidance and recursive feasibility;</li>
     <li>In the presence of model mismatch, HMPC is empirically shown to avoid obstacles and run without infeasibility of both PMPC and TMPC.</li>
   </ol>
