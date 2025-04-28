@@ -12,8 +12,8 @@ links: # Optional, links to other stuff
     - name: Google Scholar
       url: "https://scholar.google.com/citations?user=5yxHxjoAAAAJ&hl=en"
     - name: Contact
-      url: "https://www.tudelft.nl/staff/e.trevisan/"
+      url: "https://www.linkedin.com/in/eliatrevisan/"
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief -->
-Sampling-based MPC for motion planning of vessels in urban canals.
+I have worked with Model Predictive Path Integral control (MPPI), a sampling-based MPC-like algorithm for motion planning. The focus of my project was on interaction- and rule-aware motion planning for autonomous vessels, but I have also worked with ground robots and mobile manipulators. 
