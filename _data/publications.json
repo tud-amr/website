@@ -1,5 +1,32 @@
 [
     {
+        "title": "Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments",
+        "authors": [
+            "T. Merva",
+            "S. Bakker",
+            "M. Spahn",
+            "D. Zhao",
+            "I. Virgala",
+            "J. Alonso-Mora"
+        ],
+        "date": "2025-11-04",
+        "type": "journal",
+        "venue": "IEEE Robotics and Automation Letters (RA-L)",
+        "links": [
+            {
+                "web": "https://autonomousrobots.nl/paper_websites/g3f",
+                "pdf": "https://ieeexplore.ieee.org/document/10967245"
+            }
+        ],
+        "note": null,
+        "image": "/assets/images/papers/g3f/dinovas_crossover_gomp.png",
+        "belongs_to_projects": ["interact", "saraypapers"],
+        "topics":[
+           "motion planning"
+        ],
+        "abstract": "Mobile manipulators operating in dynamic environments shared with humans and robots must adapt in real time to environmental changes to complete their tasks effectively. While global planning methods are effective at considering the full task scope, they lack the computational efficiency required for reactive adaptation. In contrast, local planning approaches can be executed online but are limited by their inability to account for the full task’s duration. To tackle this, we propose Globally-Guided Geometric Fabrics (G3F), a framework for real-time motion generation along the full task horizon, by interleaving an optimization-based planner with a fast reactive geometric motion planner, called Geometric Fabrics (GF). The approach adapts the path and explores a multitude of acceptable target poses, while accounting for collision avoidance and the robot’s physical constraints. This results in a real-time adaptive framework considering whole-body motions, where a robot operates in close proximity to other robots and humans. We validate our approach through various simulations and real-world experiments on mobile manipulators in multi-agent settings, achieving improved success rates compared to vanilla GF, Prioritized Rollout Fabrics and Model Predictive Control."
+    },
+    {
         "title": "Embedded Hierarchical MPC for Autonomous Navigation",
         "authors": [
           "Dennis Benders",
