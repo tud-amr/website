@@ -43,7 +43,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
       url: https://github.com/TomasMerva/g3f_planner
     - name: Video
       icon: bi-youtube
-      url: "https://youtu.be/1ZbbcfFgpxc"
+      url: "https://youtu.be/PLbyBExg23s"
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
