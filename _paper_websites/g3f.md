@@ -35,12 +35,15 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: arXiv
     #   icon: bi-file-earmark-pdf
     #   url: "https://arxiv.org"
-    - name: Code (released on publication)
+    - name: IEEE Xplore
+      icon: bi-file-earmark-pdf
+      url: "https://ieeexplore.ieee.org/document/10967245"
+    - name: Code
       icon: bi-github
-      url: https://github.com/tud-amr
-    # - name: Video
-    #   icon: bi-youtube
-    #   url: "https://youtu.be/1ZbbcfFgpxc"
+      url: https://github.com/TomasMerva/g3f_planner
+    - name: Video
+      icon: bi-youtube
+      url: "https://youtu.be/PLbyBExg23s"
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
@@ -182,7 +185,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/video_gomp_static_double_ppt.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/g3f/video_gomp_static_complex_ppt.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
