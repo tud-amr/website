@@ -25,9 +25,9 @@ affiliations:
       url: "https://www.cvut.cz/en/"
 release_date: 2025-04-19 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    # - name: IEEE Xplore
-    #   icon: bi-file-earmark-pdf
-    #   url: "https://doi.org/10.1109/TRO.2024.3475047"
+    - name: IEEE Xplore
+      icon: bi-file-earmark-pdf
+      url: "https://doi.org/10.1109/TRO.2025.3567529"
     - name: arXiv
       icon: bi-file-earmark-pdf
       url: "https://arxiv.org/abs/2406.11506"
