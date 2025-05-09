@@ -42,6 +42,7 @@
         "venue": "IEEE Transactions on Robotics (T-RO)",
         "links": [
           {
+            "IEEE Xplore": "https://doi.org/https://doi.org/10.1109/TRO.2025.3567529",
             "arXiv": "https://arxiv.org/abs/2406.11506",
             "code": "https://github.com/dbenders1/hmpc",
             "web": "/paper_websites/hmpc",
