@@ -99,7 +99,7 @@ In collaboration with project partners, we have collected real-world data onboar
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/turn_video_compressed.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/turn_dataonly_spedup.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>
