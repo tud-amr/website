@@ -1,4 +1,38 @@
 [
+     {
+        "title": "Scenario-based motion planning with bounded probability of collision",
+        "authors": [
+            "Oscar de Groot",
+            "Laura Ferranti",
+            "Dariu M. Gavrila",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2025-06-01",
+        "type": "journal",
+        "venue": "The International Journal of Robotics Research (IJRR)",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/25-degroot-ijrr.pdf",
+            }
+        ],
+        "note": null,
+        "belongs_to_projects": ["interact"],
+        "topics":[
+           "motion planning"
+        ],
+        "abstract": "Robots will increasingly operate near humans that introduce uncertainties in the motion planning problem due to their
+complex nature. Optimization-based planners typically avoid humans through collision avoidance chance constraints. This
+allows the planner to optimize performance while guaranteeing probabilistic safety. However, existing real-time methods
+do not consider the actual probability of collision for the planned trajectory but rather its marginalization, that is, the
+independent collision probabilities for each planning step and/or dynamic obstacle, resulting in conservative trajectories.
+To address this issue, we introduce a novel real-time capable method termed Safe Horizon MPC that explicitly constrains
+the joint probability of collision with all obstacles over the duration of the motion plan. This is achieved by reformulating
+the chance-constrained planning problem using scenario optimization and predictive control. Out of sampled realizations
+of human motion, we identify which cases affect the optimization. This allows us to certify the planned trajectory in real-
+time. Our method is less conservative than state-of-the-art approaches, applicable to arbitrary probability distributions of
+the obstacles’ trajectories, computationally tractable and scalable. We demonstrate our proposed approach using a mobile
+robot and an autonomous vehicle in an environment shared with humans."
+    },
     {
         "title": "Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments",
         "authors": [
