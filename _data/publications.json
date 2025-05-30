@@ -211,6 +211,7 @@ robot and an autonomous vehicle in an environment shared with humans."
         ],
         "note": null,
         "belongs_to_projects":[
+		"interact"
         ],
         "topics":[
             "perception"   
