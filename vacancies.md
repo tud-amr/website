@@ -7,12 +7,14 @@ permalink: /vacancies/
 
 We have the following vacancies in our group:
 
-- [PhD Position Autonomous Planning on Task Execution for Robots Operating in the Real, Open World ](https://www.tudelft.nl/over-tu-delft/werken-bij-tu-delft/vacatures/details/?nPostingId=6112&nPostingTargetId=17982&)
+- [Postdoc Learning-based Multi-robot Mobile Manipulation in Human-centered Environments ](https://careers.tudelft.nl/job/Delft-Postdoc-Learning-based-Multi-robot-Mobile-Manipulation-in-Human-centered-Environments-2628-CD/819913502/)
 
-For existing vacancies, please directly apply to the announcements above. Otherwise, applications from excellent individuals interested in a PhD or Postdoctoral position are always welcomed. Please send your CV and a motivation letter to [Javier Alonso-Mora](mailto:{{ site.contact_email }}). 
+Despite our efforts, this page might not be up to date. For current vacancies in our department, including those of our group, please refer to:
+[CoR vacancies](https://www.tudelft.nl/me/over/afdelingen/cognitive-robotics-cor/about-cor/vacancies)
+
+Otherwise, applications from excellent individuals interested in a PhD or Postdoctoral position are always welcomed. Please send your CV and a motivation letter to [Javier Alonso-Mora](mailto:{{ site.contact_email }}). 
 
 We are looking forward to play a game of robot-Quoridor with you:
-
 
 <div style="text-align: center;">
   <video width="640" height="360" autoplay muted loop>
