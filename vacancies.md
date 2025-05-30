@@ -3,7 +3,7 @@ title: Vacancies
 permalink: /vacancies/
 ---
 
-## PhD's and Postdocs
+## PhD's, Postdocs and Engineers
 
 We have the following vacancies in our group:
 
