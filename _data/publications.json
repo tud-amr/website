@@ -1,4 +1,28 @@
 [
+	{
+        "title": "What do walking and e-hailing bring to scale economies in on-demand mobility?",
+        "authors": [
+            "Kenan Zhang",
+            "Javier Alonso-Mora",
+	    "Andres Fielbaum"
+        ],
+        "date": "2025-02-01",
+        "type": "journal",
+        "venue": "Transportation Research Part B: Methodological",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/25-zhang.pdf"
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "ridepooling"
+        ],
+        "topics":[
+            "task planning", "transportation"
+        ],
+        "abstract": "This study investigates the impact of walking and e-hailing on the scale economies of on-demand mobility services. An analytical framework is developed to i) explicitly characterize the physical interactions between passengers and vehicles in the matching and pickup processes, and ii) derive the closed-form degree of scale economies (DSE) to quantify scale economies. The general model is then specified for conventional street-hailing and e-hailing, with and without walking before pickup and after dropoff. We show that, under a system-optimum fleet size, the market always exhibits economies of scale regardless of the matching mechanism and the walking behaviors, though the scale effect diminishes as passenger demand increases. Yet, street-hailing and e-hailing show different scale economies in their matching process. While street-hailing matching shows a constant DSE of two, e-hailing matching is more sensitive to demand and its DSE diminishes to one when passenger competition emerges. Walking, on the other hand, has mixed effects on the scale economies: while the reduced pickup and in-vehicle times bring a positive scale effect, the extra walking time and possible concentration of vacant vehicles and waiting passengers on streets negatively affect scale economies. All these analytical results are validated through agent-based simulations on Manhattan with real-life demand patterns."
+      }, 
      {
         "title": "Scenario-based motion planning with bounded probability of collision",
         "authors": [
@@ -49,7 +73,7 @@ robot and an autonomous vehicle in an environment shared with humans."
         "links": [
             {
                 "web": "https://autonomousrobots.nl/paper_websites/g3f",
-                "pdf": "https://ieeexplore.ieee.org/document/10967245",
+                "pdf": "/assets/files/publications/25-merva-ral.pdf",
                 "video": "https://youtu.be/PLbyBExg23s"
             }
         ],
