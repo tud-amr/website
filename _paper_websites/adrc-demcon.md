@@ -27,14 +27,14 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: IEEE Xplore (coming soon)
       icon: bi-file-earmark-pdf
       # url: "https://doi.org/10.1109/LRA.2025.3535185"
-    - name: arXiv (coming soon)
+    - name: arXiv
       icon: bi-file-earmark-pdf
-      # url: "https://arxiv.org/abs/2307.09105"
+      url: "https://arxiv.org/abs/2506.21265"
     # - name: Code
     #   icon: bi-github
     #   url: "https://github.com/tud-airlab/mppi-isaac"
-    - name: Video (coming soon)
-      icon: bi-youtube
+    # - name: Video (coming soon)
+    #   icon: bi-youtube
       # url: "https://www.youtube.com/watch?v=ovLZmSd-XX8"
     - name: Related Publications
       icon: bi-file-text
@@ -42,4 +42,16 @@ links: # If you have other website for the project, github repos, datasets, etc.
 related_project_id: "trilogy"
 ---
 
+
+
+<div class="ratio ratio-16x9">
+    <iframe src="https://www.youtube.com/embed/664NpYXnbgk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <!-- <iframe src="https://www.youtube.com/embed/?listType=playlist&list=PLOksz-MTFhN2T4gYQlLHR2lGCdC0BDkJw&" allowfullscreen></iframe> -->
+</div>
+
+
+<h3> Abstract </h3>
+<p align="justify">
+Unmanned Surface Vessels (USVs) face significant control challenges due to uncertain environmental disturbances like waves and currents. This paper proposes a trajectory tracking controller based on Active Disturbance Rejection Control (ADRC) implemented on the DUS V2500. A custom simulation incorporating realistic waves and current disturbances is developed to validate the controller's performance, supported by further validation through field tests in the harbour of Scheveningen, the Netherlands, and at sea. Simulation results demonstrate that ADRC significantly reduces cross-track error across all tested conditions compared to a baseline PID controller but increases control effort and energy consumption. Field trials confirm these findings while revealing a further increase in energy consumption during sea trials compared to the baseline. 
+</p>
 

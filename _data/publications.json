@@ -13,13 +13,13 @@
         "venue": "IEEE Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://autonomousrobots.nl/paper_websites/dra-mppi",
+                "web": "/paper_websites/dra-mppi",
                 "pdf": "/assets/files/publications/25-trevisan-iros-dra-mppi.pdf"
             }
         ],
-        "image": null,
+        "image": "/assets/images/papers/dra-mppi/icon.png",
         "belongs_to_projects": [
-            "trilogy"
+            "trilogy", "nwa-act"
         ],
         "topics":[
             "motion planning"
@@ -39,11 +39,11 @@
         "venue": "IEEE Int. Conf. on Intelligent Robots and Systems (IROS)",
         "links": [
             {
-                "web": "https://autonomousrobots.nl/paper_websites/adrc-demcon",
+                "web": "/paper_websites/adrc-demcon",
                 "pdf": "/assets/files/publications/25-trevisan-iros-adrc.pdf"
             }
         ],
-        "image": null,
+        "image": "/assets/images/papers/adrc-demcon/icon.png",
         "belongs_to_projects": [
             "trilogy"
         ],

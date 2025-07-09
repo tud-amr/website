@@ -37,14 +37,14 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: IEEE Xplore (coming soon)
       icon: bi-file-earmark-pdf
       # url: "https://doi.org/10.1109/LRA.2025.3535185"
-    - name: arXiv (coming soon)
+    - name: arXiv
       icon: bi-file-earmark-pdf
-      # url: "https://arxiv.org/abs/2307.09105"
+      url: "https://arxiv.org/abs/2506.21205"
     # - name: Code
     #   icon: bi-github
     #   url: "https://github.com/tud-airlab/mppi-isaac"
-    - name: Video (coming soon)
-      icon: bi-youtube
+    # - name: Video (coming soon)
+    #   icon: bi-youtube
       # url: "https://www.youtube.com/watch?v=ovLZmSd-XX8"
     - name: Related Publications
       icon: bi-file-text

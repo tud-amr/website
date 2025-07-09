@@ -64,7 +64,7 @@ We demonstrated our decentralized, rule- and interaction-aware MPPI planner runn
 
 <!-- add links to internal pages  -->
 
-With experiments on ground robots, we have shown the reactivity of the planner to unexpected dynamic obstacles [[2](/paper_websites/biased-mppi)] as well as the ability to plan accounting for prediction uncertainty.
+With experiments on ground robots, we have shown the reactivity of the planner to unexpected dynamic obstacles [[2](/paper_websites/biased-mppi)] as well as the ability to plan accounting for prediction uncertainty [[3](/paper_websites/dra-mppi)].
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
@@ -93,7 +93,7 @@ With experiments on ground robots, we have shown the reactivity of the planner t
   </div>
 </div>
 
-In collaboration with project partners, we have collected real-world data onboards ships. We have also genereated large artificial datasets that we used to train a prediction model for vessels in urban canals [[3](/paper_websites/ia-mppi)].
+In collaboration with project partners, we have collected real-world data onboards ships. We have also genereated large artificial datasets that we used to train a prediction model for vessels in urban canals [[4](/paper_websites/ia-mppi)].
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
@@ -122,7 +122,7 @@ In collaboration with project partners, we have collected real-world data onboar
   </div>
 </div>
 
-In collaboration with Demcon, we have demonstrated a robust controller for reference tracking in harbour and open sea, showing good performance in the presence of wind, waves and currents.
+In collaboration with Demcon, we have demonstrated a robust controller for reference tracking in harbour and open sea, showing good performance in the presence of wind, waves and currents [[5](/paper_websites/adrc-demcon)].
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
@@ -151,7 +151,7 @@ In collaboration with Demcon, we have demonstrated a robust controller for refer
   </div>
 </div>
 
-Collaborating across projects, we have shown that the same planner used on vessels can be successfully used on ground robots and manipulators in contact rich tasks [[4](/paper_websites/isaac-mppi)], [[5](/paper_websites/m3p2i-aip)].
+Collaborating across projects, we have shown that the same planner used on vessels can be successfully used on ground robots and manipulators in contact rich tasks [[6](/paper_websites/isaac-mppi)], [[7](/paper_websites/m3p2i-aip)].
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
