@@ -50,7 +50,7 @@ related_project_id: "trilogy"
 <div class="teaser-video d-flex justify-content-center">
   <div class="ratio ratio-16x9">
     <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-      <source src="{% include fix_link.html link='/assets/images/papers/ia_mppi/LBM_IAMPPI.mp4' %}" type="video/mp4">
+      <source src="{% include fix_link.html link='/assets/images/papers/ia_mppi_lbm/LBM_IAMPPI.mp4' %}" type="video/mp4">
     </video>
   </div>
 </div>
@@ -61,7 +61,7 @@ Motion planning for autonomous robots in tight, interaction-rich, and mixed huma
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
   <div class="col">
-    <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/ia_mppi/framework.png' %}" alt="Image 1">
+    <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/ia_mppi_lbm/framework.png' %}" alt="Image 1">
   </div>
   <div class="col">
   <div class=" ms-2">
