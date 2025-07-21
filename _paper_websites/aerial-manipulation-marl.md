@@ -36,6 +36,9 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: Video
       icon: bi-youtube
       url: "https://youtu.be/NLYVruRREyI"
+    - name: MSc Thesis
+      icon: bi-file-text
+      url: "https://resolver.tudelft.nl/uuid:0e1d8dae-4592-4209-be5d-6aac10057491"
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
