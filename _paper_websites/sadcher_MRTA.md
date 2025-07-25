@@ -1,5 +1,6 @@
 ---
 title: "SADCHER: Scheduling using Attention-based Dynamic Coalitions of Heterogeneous Robots in Real-Time"
+permalink: /paper_websites/sadcher_MRTA/
 authors:
     - name: "Jakob Bichler"
       url: "https://github.com/jakbichler"
