@@ -27,21 +27,24 @@ affiliations:
       url: "https://nyu.edu"
 release_date: 2025-08-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    - name: arXiv (coming soon)
-      icon: bi-file-earmark-pdf
+    - name: CoRL paper (coming soon)
+      icon: bi-file-text
       url: ""
-    - name: Code (coming soon)
+    - name: arXiv
+      icon: bi-file-earmark-pdf
+      url: "https://arxiv.org/abs/2508.01522"
+    - name: Code
       icon: bi-github
-      url: "" 
+      url: "https://github.com/Aerial-Manipulation-Lab/MARL_mav_ext" 
     - name: Video
       icon: bi-youtube
       url: "https://youtu.be/NLYVruRREyI"
     - name: MSc Thesis
       icon: bi-file-text
       url: "https://resolver.tudelft.nl/uuid:0e1d8dae-4592-4209-be5d-6aac10057491"
-    - name: Related Publications
-      icon: bi-file-text
-      url: "#related-publications"
+    # - name: Related Publications
+    #   icon: bi-file-text
+    #   url: "#related-publications"
 related_project_id: ""
 ---
 
