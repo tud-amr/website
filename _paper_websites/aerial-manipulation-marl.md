@@ -45,7 +45,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     # - name: Related Publications
     #   icon: bi-file-text
     #   url: "#related-publications"
-related_project_id: "sihao-veni"
+related_project_id: "veni-sihao"
 ---
 
 <h3>Real-world experimental results</h3>
