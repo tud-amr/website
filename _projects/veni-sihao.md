@@ -1,7 +1,7 @@
 ---
 title: "VENI: Accurate Control of Aerial Robotic Manipulators under Uncertainties "
 project_id: veni-sihao # ID of the project, used by publications to display in this project.
-belongs_to_areas: [flying-robots] # List of area IDs, separated by commas.
+belongs_to_areas: [flying-robots, mobile-manipulation] # List of area IDs, separated by commas.
 date: 2024-01-17 # started date, approximated if not sure. Just for display purposes and ordering
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   Aerial manipulators as flying hands can manipulate objects in the air, which is a key capability for applications such as aerial delivery, nondestructive inspection, and infrastructure maintenance. However, aerial manipulators are subject to dynamical uncertainties, which can lead to inaccurate control and unstable operation. This project aims to develop planning and control algorithms that enable aerial manipulators to perform accurate, agile, and safe manipulation of tasks in the presence of strong dynamical uncertainties, such as wind gusts, unknown contact wrenches, load variations, and even system failures. 
@@ -10,6 +10,7 @@ fundings: This project is funded by the Netherlands Organisation for Scientific 
 people: # If you put your name in the same way you have it in your _people entry, your preferred link will be added. extra_info is optional.
     - name: Dr. Sihao Sun
       extra_info: Principal Investigator
+    - name: Prof. Javier Alonso-Mora
 ---
 <!-- Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html -->
 <!-- The fields of People, Funding, Links and Publications will be generated automatically -->
@@ -25,3 +26,8 @@ Furthermore, the project will establish a comprehensive experimental validation 
 ## Funding & Partners
 
 This project is funded by the Dutch Research Council (NWO).
+
+## Project Demonstrations
+<div class="video-wrapper ratio ratio-16x9"> 
+  <iframe width="560" height="315" src="https://youtu.be/SsiOUvC_DOI?si=WLXwF4aB2W_RK1nf&t=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
