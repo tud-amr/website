@@ -32,8 +32,8 @@ This project is funded by the Dutch Research Council (NWO).
   <iframe width="560" height="315" src="https://youtu.be/SsiOUvC_DOI?si=WLXwF4aB2W_RK1nf&t=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div> -->
 
-<div class="video-wrapper ratio ratio-16x9">
+<!-- <div class="video-wrapper ratio ratio-16x9">
   <video id="teaser1" autoplay="" muted="" controls="" loop="" playsinline="">
     <source src="{% include fix_link.html link='/assets/images/papers/camls-agile/video_camls_agile.mp4' %}" type="video/mp4">
   </video>
-</div>
+</div> -->
