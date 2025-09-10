@@ -17,7 +17,7 @@ permalink: /research/
     {% include research_area_card.html area=research_area %}
 </div>
 {% endfor %}
-  
+ <!--TODO: The ones that have end date, sort by end date and not date  -->
 <!-- We loop over projects sorted by end_date (null first) then by date -->
 {% assign ongoing_projects = site.projects | where_exp: "item", "item.end_date == nil" | sort: "date" | reverse %}
 {% assign completed_projects = site.projects | where_exp: "item", "item.end_date != nil" | sort: "end_date" | sort: "date" | reverse %}
