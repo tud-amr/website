@@ -39,6 +39,9 @@ google_analytics: G-FG7RQ0Y2D0
 
 permalink: /:year/:month/:day/:title/
 
+# Allow future-dated posts to be published
+future: true
+
 # Collections. Output true if you want to generate pages for the items in the collection, false if not.
 collections:
   people:
@@ -117,7 +120,7 @@ defaults:
       path: ""
       type: "workshops" # a collection in your site, in plural form
     values:
-      layout: ""
+      layout: "workshop"
 
 # Build settings (theme is null as we use our own theme)
 

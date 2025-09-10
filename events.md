@@ -8,13 +8,14 @@ redirect_from:
 ## Workshops
 <hr>
 
-{% for workshop in site.workshops %}
+{% assign sorted_workshops = site.workshops | sort: 'date' | reverse %}
+{% for workshop in sorted_workshops %}
 #### [{{ workshop.title }}]({{ workshop.url | relative_url }})
 
-**IROS 2025 Workshop**  
-**Date:** Oct. 20, 2025  
-**Time:** 8:00-12:00 AM  
-**Location:** Hangzhou, China
+**{{ workshop.venue }} Workshop**  
+**Date:** {{ workshop.date | date: "%B %d, %Y" }}  
+**Time:** {{ workshop.time }}  
+**Location:** {{ workshop.location }}
 
 <!-- [Workshop Details]({{ workshop.url | relative_url }}) -->
 
