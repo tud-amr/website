@@ -49,7 +49,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: Related Publications
       icon: bi-file-text
       url: "#related-publications"
-related_project_id: "trilogy"
+related_project_id: "trilogy, nwa-act"
 ---
 
 <h2 align="center">Real-Robot Experiment with Pedestrians</h2>
