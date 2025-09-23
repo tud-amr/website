@@ -1,9 +1,9 @@
 ---
-name: Dr. Javier Alonso-Mora
+name: Prof. Javier Alonso-Mora
 title: Full Professor # The title that shows below your name.
 type: professor # post-doc, phd-visitor, professor, engineer. For choosing the right place in the people page
 is_past_member: false
-joined_date: 2016-10-01
+joined_date: 
 # left_date: 2023-09-30 # Optional, if you add a left date the member will be moved to the past members section
 # now_at: Assistant Professor at Cool Uni # Add this for extra info for past members
 image: "/assets/images/people/javier_formal.jpg" # link or path in /assets/...
