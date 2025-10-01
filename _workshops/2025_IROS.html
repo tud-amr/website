@@ -438,8 +438,140 @@ time: 8:00-12:00 AM
         <p style="text-align: left; font-size: 1.2em;"></p>
         <p style="text-align: left; font-size: 1.2em;">The following papers have been accepted for poster presentation and a spotlight talk at the workshop.</p> 
         <p style="text-align: left; font-size: 1.2em;">Authors should print and bring their own posters and at least one author must be present during their poster presentation.
-        Posters should adhere to the IROS poster guidelines (no larger than 36 inches wide and 48 inches in height, <a href="https://www.iros25.org/InstructionsOnAuthorsPresentationMaterials">link</a>). The author of the accepted paper can promote their work in a 1-minute spotlight talk.</p>
+        Posters should adhere to the IROS poster guidelines (no larger than 36 inches wide and 48 inches in height, <a href="https://www.iros25.org/InstructionsOnAuthorsPresentationMaterials">link</a>). 
+        The author of the accepted paper can promote their work in a 1-minute spotlight talk. The authors are requested to submit a 1-slide presentation (pdf or ppt) for their spotlight talk before the 16th of October (23:59) by sending an email to <a href="mailto:irosworkshop.pm2ce@gmail.com">irosworkshop.pm2ce@gmail.com</a>. The organizers will display the slide during the spotlight talk.</p>
         <p style="text-align: left; font-size: 1.2em;"> Accepted papers will be published on the workshop website after IROS 2025, unless otherwise specified by the authors.</p>
+        
+        <div class="papers-container" style="width: 66%; margin: 20px auto; text-align: left;">
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Perception and Motion Planning for Mobile Manipulation with Synthetic Generated Data in Dynamic Environments</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Artur J. Cordeiro, Pedro A. Dias, Luís F. Rocha, Frederico M. Borgues, Manuel F. Silva, José Boaventura and João P.C. de Souza</p>
+                <p class="show-bio" onclick="toggleBio('paper1')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper1" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                We propose a framework that enables robotic manipulators to incorporate novel objects into their operation without manual intervention. The approach combines synthetic data generation with a perception pipeline that integrates model-based and model-free techniques, enabling grasp generation without complete 3D models and robust pose estimation from partial visual cues. The system is deployed on a mobile manipulator using a state-machine architecture that coordinates perception, navigation, and manipulation. Experiments in both controlled and unstructured environments demonstrate reliable performance across diverse objects, achieving success rates of 88.47% in grasp prediction, 98.47% in grasp reaching, 96.72% in grasp holding, and 100% in handling.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">A Benchmark for Multi-Modal Multi-Robot Multi-Goal Path Planning</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Valentin N. Hartmann, Tirza Heinle, Yijiang Huang and Stelian Coros </p>
+                <p class="show-bio" onclick="toggleBio('paper2')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper2" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                    In many industrial robotics applications, multiple robots are working in a shared workspace to complete a set of tasks as fast as possible.
+Such settings can be treated as multi-modal multi-robot multi-goal path planning problems, where each robot has to reach a set of goals. Existing approaches to this type of problem are neither optimal nor complete. We tackle this problem as a single centralized path planning problem and present planners that are probabilistically complete and asymptotically optimal. The planners plan in the composite space of all robots and are modifications of standard sampling-based planners where we introduce the required changes to work in our multi-modal, multi-robot, multi-goal setting. We validate the planners on a diverse range of problems including scenarios with various robots, planning horizons, and collaborative tasks such as handovers, and compare the planners against a suboptimal prioritized planner.
+Videos and code for the planners and the benchmark is available at <a href="https://github.com/vhartman/multirobot-pathplanning-benchmark">https://github.com/vhartman/multirobot-pathplanning-benchmark</a>.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Accelerated Multi-Modal Motion Planning Using Context-Conditioned Diffusion Models</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Edward Sandra, Lander Vanroye, Dries Dirckx, Ruben Cartuyvels, Jan Swevers and Wilm Decré </p>
+                <p class="show-bio" onclick="toggleBio('paper3')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper3" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Classical methods in robot motion planning, such as sampling-based and optimization-based methods, often struggle with scalability towards higher-dimensional state spaces and complex environments. Diffusion models, known for their capability to learn complex, high-dimensional and multi-modal data distributions, provide a promising alternative when applied to motion planning problems and have already shown interesting results. However, most of the current approaches train their model for a single environment, limiting their generalization to unseen environments. The techniques that do train a model for multiple environments rely on a specific camera to provide the model with the necessary environmental information. 
+To effectively adapt to diverse scenarios without the need for retraining, this research proposes Context-Aware Motion Planning Diffusion (CAMPD).
+CAMPD leverages a classifier-free denoising probabilistic diffusion model, conditioned on sensor-agnostic contextual information.
+An attention mechanism, integrated in the well-known U-Net architecture, conditions the model on an arbitrary number of contextual parameters. CAMPD is evaluated on a 7-DoF robot manipulator and benchmarked against state-of-the-art approaches on real-world tasks, demonstrating its adaptability to changing and unseen environments while generating high-quality, multi-modal trajectories at a fraction of the time required by existing methods.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Humanoid Occupancy: Enabling A Generalized Multimodal Occupancy Perception System on Humanoid Robots</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Wei Cui, Haoyu Wang, Jiaru Zhong, Wenkang Qin, Yijie Guo, Gang Han, Wen Zhao, Jiahang Cao, Zhang Zhang, Jingkai SUN, Pihai Sun, Shuai Shi, Botuo Jiang, Jiahao Ma, Jiaxu Wang, Hao Cheng, Zhichao Liu, Yang Wang, Zheng Zhu, Guan Huang, Lingfeng Zhang, Jun Ma, Junwei Liang, Renjing Xu, Jian Tang and Qiang Zhang</p>
+                <p class="show-bio" onclick="toggleBio('paper4')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper4" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                As the most promising general-purpose robots, humanoid robots have witnessed rapid development. The visual perception module serves as a crucial component within their system, providing essential information for key tasks such as mobile manipulation.
+Therefore, this paper proposes a perception framework centered on semantic occupancy, termed Humanoid Occupancy, enhancing perception capabilities by optimized scene representation and efficient data fusion. Specifically, we design a sensor arrangement scheme, develop the first panoramic occupancy dataset for humanoid robots, and propose a lightweight multi-modal temporal feature fusion network which can present the dynamic environments precisely. Furthermore, this perception method has been deployed on the Tienkung humanoid robot platform, demonstrating its superior environmental perception and navigation performance in changing environments.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Autonomous Robotic Manipulation with a Clutter-Aware Pushing Policy</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Sanraj Lachhiramka, Pradeep J, Archanaa A. Chandaragi, Arjun Achar and Dr. Shikha Tripathi </p>
+                <p class="show-bio" onclick="toggleBio('paper5')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper5" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                This work addresses the challenge of grasping a target object in cluttered environments, even when it is partially visible or fully occluded. The proposed approach enables the manipulator to learn a sequence of strategic non-prehensile (pushing) actions to rearrange the scene and make the target object graspable. Our pipeline integrates a deep reinforcement learning (DRL) agent for pushing with the GR-ConvNet model for grasp prediction. When the object is considered ungraspable, a Soft Actor-Critic (SAC) model guides optimal pushing actions.  A key contribution is a novel pixel-wise clutter map, which is integrated directly into the agent's state representation to provide an explicit, quantitative measure of environmental clutter. This clutter-aware state representation guides the decision-making process, leading to more efficient policies. Experimental results demonstrate that incorporating the clutter map significantly improves performance, reducing the number of actions required to complete the task by approximately 25%. The system generalizes well to diverse objects and transfers directly from simulation to hardware without requiring additional training for real-world deployment.
+                </p>
+            </div>
+        
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Jacobian-Guided Active Learning for Gaussian Process-Based Inverse Kinematics</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Shibao Yang, Pengcheng Liu and Nick Pears</p>
+                <p class="show-bio" onclick="toggleBio('paper6')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper6" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Frequent replanning in dynamically changing environments often pushes robot manipulators towards singular configurations and joint limits, causing traditional inverse kinematics (IK) solvers to fail and hindering adaptability. We address this with an enhanced Gaussian Process IK (GP-IK) framework that uses a Jacobian-guided acquisition strategy for robust planning. This method adapts its exploration-exploitation balance in real-time based on local sensitivity and mechanical constraints, ensuring the planner can find reliable solutions even near manipulator limits. By enabling robust performance in challenging configurations, our approach allows for a tighter integration of perception and planning, fostering more adaptive and resilient robots, as demonstrated on a 7-DOF Franka robot.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Dynamic Objects Relocalization in Changing Environments with Flow Matching</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Francesco Argenziano, Miguel Saavedra-Ruiz, Sacha Morin, Daniele Nardi and Liam Paull </p>
+                <p class="show-bio" onclick="toggleBio('paper7')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper7" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Task and motion planning are long-standing challenges in robotics, especially when robots have to deal with dynamic environments exhibiting long-term dynamics, such as households or warehouses. In these environments, long-term dynamics mostly stem from human activities, since previously detected objects can be moved or removed from the scene. This adds the necessity to find such objects again before completing the designed task, increasing the risk of failure due to missed relocalizations. However, in these settings, the nature of such human-object interactions is often overlooked, despite being governed by common habits and repetitive patterns. Our conjecture is that these cues can be exploited to recover the most likely objects' positions in the scene, helping to address the problem of unknown relocalization in changing environments. To this end we propose FlowMaps a model based on Flow Matching that is able to infer multimodal object locations over space and time. Our results present statistical evidence to support our hypotheses, opening the way to more complex applications of our approach. The code is publically available at <a href="https://github.com/Fra-Tsuna/flowmaps">https://github.com/Fra-Tsuna/flowmaps</a>.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Open-Vocabulary and Semantic-Aware Reasoning for Search and Retrieval of Objects in Dynamic and Concealed Spaces</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Rohit Menon, Yasmin Schmiede, Maren Bennewitz and Hermann Blum</p>
+                <p class="show-bio" onclick="toggleBio('paper8')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper8" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                We present an open-vocabulary framework that combines spatial, semantic, and geometric reasoning to solve a highly relevant, yet under-studied problem: Given an (outdated) map of an environment, how can a robot efficiently retrieve relocated or unmapped items? By unifying spatial cues about proximity and topology, semantic priors on typical placements, and geometric constraints that rule out infeasible locations, particularly within concealed spaces, our approach finds objects even when they are relocated or hidden in drawers or cabinets.
+We further propose in-situ viewpoint planning to model new objects for manipulation, and to add the object to our dynamic 3D scene graph.
+We validate our framework through extensive real-world trials on the Stretch SE3 mobile manipulator, evaluating search and retrieval in various conditions. Results demonstrate robust navigation (100%) and open-space detection (100%), with semantic-geometric reasoning reducing concealed space search time by 68% versus semantic-only approaches. 
+Implemented on a low-cost, compact mobile manipulator, our solution combines sophisticated cognitive capabilities with practical deployability, representing a significant step toward accessible service robots for everyday homes.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">HANDO: Hierarchical Autonomous Navigation and Dexterous Omni-loco-manipulation</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Jingyuan Sun, Chaoran Wang, Mingyu Zhang, Cui Miao, Hongyu Ji, Zihan Qu, Sun Han, Bing Wang and Qingyi Si </p>
+                <p class="show-bio" onclick="toggleBio('paper9')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper9" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Seamless loco-manipulation in unstructured environments requires robots to leverage autonomous exploration alongside whole-body control for physical interaction. In this work, we introduce HANDO (Hierarchical Autonomous Navigation and Dexterous Omni-loco-manipulation), a two-layer framework designed for legged robots equipped with manipulators to perform human-centered mobile manipulation tasks. The first layer utilizes a goal-conditioned autonomous exploration policy to guide the robot to semantically specified
+targets, such as a black office chair in a dynamic environment. The second layer employs a unified whole-body loco-manipulation policy to coordinate the arm and legs for precise interaction tasks—for example, handing a drink to a person seated on the chair. We have conducted an initial deployment of the navigation module, and will continue to pursue finer-grained deployment of whole-body loco-manipulation.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">T-FunS3D: Task-Driven Hierarchical Open-Vocabulary 3D Functionality Segmentation via Vision-Language Models</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Jingkun Feng and Reza Sabzevari</p>
+                <p class="show-bio" onclick="toggleBio('paper10')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper10" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Open-vocabulary 3D functionality segmentation enables robots to localize functional object components in 3D scenes. It is a challenging task that requires spatial understanding and task interpretation. Current open-vocabulary 3D segmentation methods primarily focus on object-level recognition, while scene-wide part segmentation methods attempt to segment the entire scene exhaustively, making them highly resource-intensive. However, such significant computational and storage capacities are typically not accessible on the majority of mobile robots. To address this challenge, we introduce T-FunS3D, a task-driven hierarchical open-vocabulary 3D functionality segmentation method that provides actionable perception for robotic applications. Given a task description, T-FunS3D identifies the most relevant instances in an open-vocabulary scene graph and extracts their functional components. Experiments on SceneFun3D demonstrate that T-FunS3D outperforms baseline methods in open-vocabulary 3D functionality segmentation, while achieving faster runtime and reduced memory usage.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Air-ground Robotic Collaborative Framework for Autonomous Cramped-space Post-earthquake Search</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Ruiyang Yang, Ming Xue, Yue Zeng, Zihao Yang, Yudong Fang, Jixing Yang, Yongqiang Liu, Xiaohui Huang and Jingya Liu </p>
+                <p class="show-bio" onclick="toggleBio('paper11')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper11" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                After an earthquake, employing robots for search and rescue has become a prevailing trend. However, complex and changing environments, such as composite ruins and limited-space caves, present significant challenges for personnel to approach, making effective plans difficult, and a single type of robot is insufficient given constraints on weight, size, and endurance. To address these issues, an air-ground robotic collaborative framework is proposed. Specifically, a quadruped robot-based recessed helipad structural component with lateral clamping arms is designed for safely and stably on-board manipulation. The quadruped robot carries the drone to the vicinity of the narrow space, and a deep-learning-based perception algorithm is applied to determine whether the drone autonomously launches and continues the inspection. The drone can finally return on its own. The framework is verified through an authentic earthquake training environment, providing promising applications for unmanned search and rescue.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Perception-Driven Adaptive Mobile Manipulation for Autonomous Container Unloading</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Maria S. Lopes, João Pedro C. de Souza, Pedro Costa, José A. Beça and Manuel F. Silva </p>
+                <p class="show-bio" onclick="toggleBio('paper12')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper12" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Maritime container unloading is a physically demanding task often carried out under challenging conditions, motivating automation. However, automating this process is complex due to each shipment's unpredictable sizes and quantities. Existing solutions tend to be task-specific, with hardware and software designed exclusively for container handling, which restricts their adaptability. We propose a modular framework that empowers a versatile mobile manipulator with standard sensors and actuators to unload containers autonomously. This system integrates real-time perception and adaptive task execution, enabling it to react effectively to task progress and feedback. Simulation results indicate that the system can unload an entire container without collisions, and individual modules have been successfully tested in a laboratory setting, with full pipeline validation currently in progress.
+                </p>
+            </div>
+
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">U-LAG: Uncertainty-Aware, Lag-Adaptive Goal Retargeting for Robotic Manipulation</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Anamika J. H. and Anujith Muraleedharan </p>
+                <p class="show-bio" onclick="toggleBio('paper13')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Abstract</p>
+                <p class="bio" id="paper13" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                Robots often grasp with observations that are delayed, noisy, or stale. We present U-LAG, a mid-execution goal-retargeting layer that leaves the low-level controller unchanged while re-aiming task goals (pre-grasp hover, grasp, post-lift) as fresh observations arrive. Unlike visual servoing or online re-planning that redesign control or regenerate trajectories, U-LAG treats in-flight goal re-aiming as a pluggable module between perception and control. Our main technical contribution is UAR-PF, an uncertainty-aware retargeter that maintains a belief over object pose under sensing lag and selects goals that maximize expected capture, evaluated against ICP and nearest-geometry baselines within the same interface. We instantiate a reproducible Shift×Lag stress test in PyBullet/PandaGym for pick and place, where the object undergoes abrupt in-plane shifts while synthetic perception lag is injected during approach. Across 0–10 cm shifts and 0–400 ms lags, UAR-PF degrades gracefully relative to a no-retarget baseline and achieves higher success with modest end-effector travel and few aborts; simple operational safeguards further improve stability.
+                </p>
+            </div>
+        </div>
+        
+        
         <!-- <p style="text-align: left; font-size: 1.2em;"> We invite researchers and industry professionals to submit short papers of up to four pages for presentation at our workshop on “<b>Perception and Planning for Mobile Manipulation in Changing Environments</b>”. 
             The workshop will take place at IROS 2025, Hangzhou, China, on 20th October 2025 (8:00-12:00 AM). 
             All submissions will undergo <b>single-blind peer review</b> by experts in the field. 
