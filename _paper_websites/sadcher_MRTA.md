@@ -32,7 +32,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: MSc Thesis
       icon: bi-file-text
       url: "https://resolver.tudelft.nl/uuid:d90491cd-cf57-4d29-b38d-88df646ab301"
-related_project_id: ""
+related_project_id: "interact" # put the project id here if the work belongs to a project. This will add a "Related to project" box with a link to the project page.
 ---
 <div style="text-align: justify;">
 <div class="image-grid text-center mb-1">
