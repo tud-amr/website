@@ -1,5 +1,31 @@
 [
     {
+        "title": "SADCHER: Scheduling using Attention-based Dynamic Coalitions of Heterogeneous Robots in Real-Time",
+        "authors": [
+            "Jakob Bichler",
+            "Andreu Matoses Gimenez",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2025-10-01",
+        "type": "conference",
+        "venue": "IEEE International Symposium on Multi-Robot & Multi-Agent Systems (MRS)",
+        "links": [
+            {
+                "code": "https://github.com/jakbichler",
+                "dataset": "https://data.4tu.nl/datasets/10e28ee0-9ad9-450d-8be7-6e6a91f2931f",
+                "thesis": "https://resolver.tudelft.nl/uuid:d90491cd-cf57-4d29-b38d-88df646ab301",
+                "web": "/paper_websites/sadcher_MRTA"
+            }
+        ],
+        "note": null,
+        "image": "assets/images/msc_projects/25_JakobBichler_sadcher_MRTA/opening_image1x1.png",
+        "belongs_to_projects": "interact",
+        "topics":[
+            "task planning", "multi-robot systems"
+        ],
+        "abstract": "Multi-robot task allocation in heterogeneous systems requires efficient scheduling methods that can handle dynamic environments and diverse robot capabilities. This paper presents SADCHER, a novel attention-based approach for scheduling dynamic coalitions of heterogeneous robots in real-time. Our method leverages deep reinforcement learning and attention mechanisms to enable scalable and adaptive task assignment across robot teams with varying capabilities. The approach is validated through extensive simulations and demonstrates significant improvements in task completion rates and system efficiency compared to baseline methods."
+    },     
+    {
         "title": "Safety on the Fly: Constructing Robust Safety Filters Via Policy Control Barrier Functions At Runtime",
         "authors": [
             "Luzia Knoedler",
@@ -48,6 +74,7 @@
             }
         ],
         "note": null,
+        "image": "/assets/images/msc_projects/25_JackZeng_AerialManipulationMARL/snapshot_flycrane_cropped_1x1.png",
         "belongs_to_projects": "veni-sihao",
         "topics":[
             "flying-robots", "mobile-manipulation"
@@ -204,18 +231,7 @@
         "topics":[
            "motion planning"
         ],
-        "abstract": "Robots will increasingly operate near humans that introduce uncertainties in the motion planning problem due to their
-complex nature. Optimization-based planners typically avoid humans through collision avoidance chance constraints. This
-allows the planner to optimize performance while guaranteeing probabilistic safety. However, existing real-time methods
-do not consider the actual probability of collision for the planned trajectory but rather its marginalization, that is, the
-independent collision probabilities for each planning step and/or dynamic obstacle, resulting in conservative trajectories.
-To address this issue, we introduce a novel real-time capable method termed Safe Horizon MPC that explicitly constrains
-the joint probability of collision with all obstacles over the duration of the motion plan. This is achieved by reformulating
-the chance-constrained planning problem using scenario optimization and predictive control. Out of sampled realizations
-of human motion, we identify which cases affect the optimization. This allows us to certify the planned trajectory in real-
-time. Our method is less conservative than state-of-the-art approaches, applicable to arbitrary probability distributions of
-the obstacles’ trajectories, computationally tractable and scalable. We demonstrate our proposed approach using a mobile
-robot and an autonomous vehicle in an environment shared with humans."
+        "abstract": "Robots will increasingly operate near humans that introduce uncertainties in the motion planning problem due to their complex nature. Optimization-based planners typically avoid humans through collision avoidance chance constraints. This allows the planner to optimize performance while guaranteeing probabilistic safety. However, existing real-time methods do not consider the actual probability of collision for the planned trajectory but rather its marginalization, that is, the independent collision probabilities for each planning step and/or dynamic obstacle, resulting in conservative trajectories.  To address this issue, we introduce a novel real-time capable method termed Safe Horizon MPC that explicitly constrains the joint probability of collision with all obstacles over the duration of the motion plan. This is achieved by reformulating the chance-constrained planning problem using scenario optimization and predictive control. Out of sampled realizations of human motion, we identify which cases affect the optimization. This allows us to certify the planned trajectory in real-time. Our method is less conservative than state-of-the-art approaches, applicable to arbitrary probability distributions of the obstacles’ trajectories, computationally tractable and scalable. We demonstrate our proposed approach using a mobile robot and an autonomous vehicle in an environment shared with humans."
     },
     {
         "title": "Globally-Guided Geometric Fabrics for Reactive Mobile Manipulation in Dynamic Environments",
@@ -1142,10 +1158,7 @@ robot and an autonomous vehicle in an environment shared with humans."
         "topics":[
             "motion planning","task planning"  
         ],
-        "abstract": "When designing a motion planner for autonomous robots there are usually multiple objectives to be considered. However, a cost function that yields the desired trade-off between objectives is not easily obtainable. A common technique across many applications is to use a weighted sum of relevant objective functions and then carefully adapt the weights. However, this approach may not find all relevant trade-offs even in simple planning problems. 
-                    Thus, we study an alternative method based on a weighted maximum of objectives. Such a cost function is more expressive than the weighted sum, and we show how it can be deployed in both continuous- and discrete-space motion planning problems. We propose a novel path planning algorithm for the proposed cost function and establish its correctness, and present heuristic adaptations that
-                    yield a practical runtime. In extensive simulation experiments, we demonstrate that the proposed cost function and algorithm are able to find a wider range of trade-offs between objectives (i.e., Pareto-optimal solutions) for various planning problems, 
-                    showcasing its advantages in practice."
+        "abstract": "When designing a motion planner for autonomous robots there are usually multiple objectives to be considered. However, a cost function that yields the desired trade-off between objectives is not easily obtainable. A common technique across many applications is to use a weighted sum of relevant objective functions and then carefully adapt the weights. However, this approach may not find all relevant trade-offs even in simple planning problems. Thus, we study an alternative method based on a weighted maximum of objectives. Such a cost function is more expressive than the weighted sum, and we show how it can be deployed in both continuous- and discrete-space motion planning problems. We propose a novel path planning algorithm for the proposed cost function and establish its correctness, and present heuristic adaptations that yield a practical runtime. In extensive simulation experiments, we demonstrate that the proposed cost function and algorithm are able to find a wider range of trade-offs between objectives (i.e., Pareto-optimal solutions) for various planning problems, showcasing its advantages in practice."
       },
     {
         "title": "Auto-Encoding Bayesian Inverse Games",
