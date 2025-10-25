@@ -22,10 +22,12 @@ links: # If you have other website for the project, github repos, datasets, etc.
     - name: arXiv (coming soon)
       icon: bi-file-earmark-pdf
       url: ""
+    - name: PDF
+      icon: bi-file-earmark-pdf
+      url: "/assets/files/publications/25-bichler-SADCHER_MRS.pdf"
     - name: Code (Pytorch) 
       icon: bi-github
       url: "https://github.com/jakbichler" 
-
     - name: Dataset 
       icon: bi-file-text
       url: "https://data.4tu.nl/datasets/10e28ee0-9ad9-450d-8be7-6e6a91f2931f" 
