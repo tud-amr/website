@@ -1,4 +1,52 @@
 [
+	{
+        "title": "Dynamic Risk-Aware MPPI for Mobile Robots in Crowds via Efficient Monte Carlo Approximations",
+        "authors": [
+            "Roman Chiva Gil",
+			"Daniel Jarne Ornia",
+            "Khaled A. Mustafa",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2025-05-18",
+        "type": "conference",
+        "venue": "24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)",
+        "links": [
+            {
+
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "nwa-act"
+        ],
+        "topics":[
+            "motion planning"
+        ],
+        "abstract": ""
+    }, 
+	{
+        "title": "Decentralized Real-Time Planning for Multi-UAV Cooperative Manipulation via Imitation Learning",
+        "authors": [
+            "Shantnav Bichler",
+            "Javier Alonso-Mora",
+			"Sihao Sun"
+        ],
+        "date": "2025-12-01",
+        "type": "conference",
+        "venue": "IEEE Int. Symposium on Multi-Robot & Multi-Agent Systems (MRS)",
+        "links": [
+            {
+
+            }
+        ],
+        "note": null,
+        "image": null,
+        "belongs_to_projects": "veni-sihao",
+        "topics":[
+            "flying-robots", "multi-robot systems"
+        ],
+        "abstract": ""
+    },
     {
         "title": "SADCHER: Scheduling using Attention-based Dynamic Coalitions of Heterogeneous Robots in Real-Time",
         "authors": [
