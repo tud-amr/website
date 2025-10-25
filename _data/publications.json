@@ -90,9 +90,9 @@
             "Marco Tognon",
             "Javier Alonso-Mora"
         ],
-        "date": "2025-01-30",
+        "date": "2025-10-30",
         "type": "journal",
-        "venue": "ArXiv",
+        "venue": "Science Robotics",
         "links": [
             {
                 "arxiv": "https://arxiv.org/abs/2501.18802",
@@ -217,7 +217,7 @@
             "Dariu M. Gavrila",
             "Javier Alonso-Mora"
         ],
-        "date": "2025-06-01",
+        "date": "2025-08-01",
         "type": "journal",
         "venue": "The International Journal of Robotics Research (IJRR)",
         "links": [
@@ -242,7 +242,7 @@
             "I. Virgala",
             "J. Alonso-Mora"
         ],
-        "date": "2025-04-11",
+        "date": "2025-04-01",
         "type": "journal",
         "venue": "IEEE Robotics and Automation Letters (RA-L)",
         "links": [
@@ -270,7 +270,7 @@
           "Javier Alonso-Mora",
           "Laura Ferranti"
         ],
-        "date": "2025-04-19",
+        "date": "2025-05-01",
         "type": "journal",
         "venue": "IEEE Transactions on Robotics (T-RO)",
         "links": [
@@ -302,7 +302,7 @@
             "Javier Alonso-Mora",
             "Luis Montano"
         ],
-        "date": "2025-04-11",
+        "date": "2025-06-01",
         "type": "journal",
         "venue": "International Journal of Robotics Research (IJRR)",
         "links": [
@@ -376,7 +376,7 @@
             "W. Dong",
             "J. Alonso-Mora"
         ],
-        "date": "2024-12-09",
+        "date": "2025-01-01",
         "type": "journal",
         "venue": " IEEE Transactions on Robotics (T-RO)",
         "links": [
