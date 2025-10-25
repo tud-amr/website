@@ -1,5 +1,74 @@
 [
 	{
+        "title": "A Vehicle System for Navigating Among Vulnerable Road Users Including Remote Operation",
+        "authors": [
+            "Oscar de Groot",
+			"Alberto Bertipaglia",
+			"Hidde Boekema",
+			"Vishrut Jain",
+			"Marcell Kegl",
+			"Varun Kotian",
+			"Ted Lentsch",
+			"Yancong Lin",
+			"Chrysovalanto Messiou",
+			"Emma Schippers",
+			"Farzam Tajdari",
+			"Shiming Wang",
+			"Zimin Xia",
+			"Mubariz Zaffar",
+			"Ronald Ensing",
+			"Mario Garzon",
+			"Javier Alonso-Mora",
+			"Holger Caesar",
+			"Laura Ferranti",
+			"Riender Happee",
+			"Julian FP Kooij",
+			"Georgios Papaioannou",
+			"Barys Shyrokau",
+			"Dariu M Gavrila"
+        ],
+        "date": "2025-06-18",
+        "type": "conference",
+        "venue": "IEEE Symposium on Intelligent Vehicles (IV)",
+        "links": [
+            {
+
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "probabilistic-planning"
+        ],
+        "topics":[
+            "motion planning" 
+        ],
+        "abstract": "We present a vehicle system capable of navigating safely and efficiently around Vulnerable Road Users (VRUs), such as pedestrians and cyclists. The system comprises key modules for environment perception, localization and mapping, motion planning, and control, integrated into a prototype vehicle. A key innovation is a motion planner based on Topology-driven Model Predictive Control (T-MPC). The guidance layer generates multiple trajectories in parallel, each representing a distinct strategy for obstacle avoidance or non-passing. The underlying trajectory optimization constrains the joint probability of collision with VRUs under generic uncertainties. To address extraordinary situations ("edge cases") that go beyond the autonomous capabilities - such as construction zones or encounters with emergency responders - the system includes an option for remote human operation, supported by visual and haptic guidance. In simulation, our motion planner outperforms three baseline approaches in terms of safety and efficiency. We also demonstrate the full system in prototype vehicle tests on a closed track, both in autonomous and remotely operated modes."
+	},
+	{
+        "title": "Overcoming Explicit Environment Representations with Geometric Fabrics",
+        "authors": [
+            "Max Spahn",
+			"Saray Bakker",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2025-05-18",
+        "type": "journal",
+        "venue": "IEEE Robotics and Automation Letters (RA-L)",
+        "links": [
+            {
+
+            }
+        ],
+        "image": null,
+        "belongs_to_projects": [
+            "interact"
+        ],
+        "topics":[
+            "motion planning", "mobiile-manipulation"
+        ],
+        "abstract": "Deployment of robots in dynamic environments requires reactive trajectory generation. While optimization-based methods, such as Model Predictive Control focus on constraint verificaction, Geometric Fabrics offer a computationally efficient way to generate trajectories that include all avoidance behaviors if the environment can be represented as a set of object primitives. Obtaining such a representation from sensor data is challenging, especially in dynamic environments. In this letter, we integrate implicit environment representations, such as Signed Distance Fields and Free Space Decomposition into the framework of Geometric Fabrics. In the process, we derive how numerical gradients can be integrated into the push and pull operations in Geometric Fabrics. Our experiments reveal that both, ground robots and robotic manipulators, can be controlled using these implicit representations. Moreover, we show that, unlike the explicit representation, implicit representations can be used in the presence of dynamic obstacles without further considerations. Finally, we demonstrate our methods in the real-world, showing the applicability of our approach in practice."
+    },
+	{
         "title": "Dynamic Risk-Aware MPPI for Mobile Robots in Crowds via Efficient Monte Carlo Approximations",
         "authors": [
             "Roman Chiva Gil",
