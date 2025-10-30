@@ -88,7 +88,7 @@
                 "PDF": "/assets/files/publications/25-mustafa-aamas.pdf"
             }
         ],
-        "image": null,
+        "image": "/assets/images/papers/25-mustafa-aamas/aamas.png",
         "belongs_to_projects": [
             "nwa-act"
         ],
