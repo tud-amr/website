@@ -100,7 +100,7 @@
 	{
         "title": "Decentralized Real-Time Planning for Multi-UAV Cooperative Manipulation via Imitation Learning",
         "authors": [
-            "Shantnav Bichler",
+            "Shantnav Agarwal",
             "Javier Alonso-Mora",
 			"Sihao Sun"
         ],
@@ -109,8 +109,8 @@
         "venue": "IEEE Int. Symposium on Multi-Robot & Multi-Agent Systems (MRS)",
         "links": [
             {
-
-            }
+                "thesis": "https://repository.tudelft.nl/record/uuid:39d40ea4-a4c3-4c8d-8ab4-81730dca3be3",
+                "arxiv": "https://arxiv.org/abs/2510.17143"            }
         ],
         "note": null,
         "image": null,
@@ -218,7 +218,8 @@
         "links": [
             {
                 "arxiv": "https://arxiv.org/abs/2501.18802",
-                "video": "https://www.youtube.com/watch?v=SsiOUvC_DOI"
+                "video": "https://www.youtube.com/watch?v=SsiOUvC_DOI",
+                "url": "https://www.science.org/doi/abs/10.1126/scirobotics.adu8015"
             }
         ],
         "note": null,
