@@ -30,7 +30,7 @@ This project is funded by the Dutch Research Council (NWO).
 ## Project Demonstrations
 <div class="video-wrapper ratio ratio-16x9"> 
   <iframe width="560" height="315" src="https://youtu.be/FBWN-rTK1YU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div> -->
+</div>
 
 <!-- <div class="video-wrapper ratio ratio-16x9">
   <video id="teaser1" autoplay="" muted="" controls="" loop="" playsinline="">
