@@ -19,15 +19,15 @@ affiliations:
       url: "https://tudelft.nl"
 release_date: 2025-10-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    - name: arXiv (coming soon)
+    - name: arXiv
       icon: bi-file-earmark-pdf
-      url: ""
+      url: "https://arxiv.org/abs/2510.14851"
     - name: PDF
       icon: bi-file-earmark-pdf
       url: "/assets/files/publications/25-bichler-SADCHER_MRS.pdf"
     - name: Code (Pytorch) 
       icon: bi-github
-      url: "https://github.com/jakbichler" 
+      url: "https://github.com/jakbichler/Sadcher" 
     - name: Dataset 
       icon: bi-file-text
       url: "https://data.4tu.nl/datasets/10e28ee0-9ad9-450d-8be7-6e6a91f2931f" 
