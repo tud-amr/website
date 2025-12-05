@@ -56,7 +56,7 @@
         "venue": "IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-
+                "pdf": "/assets/files/publications/25-Spahn-RAL.pdf"
             }
         ],
         "image": null,
@@ -457,7 +457,7 @@
         "links": [
             {
                 "web": "https://autonomousrobots.nl/paper_websites/pumafabrics",
-                "pdf": "https://arxiv.org/abs/2503.17432"
+                "pdf": "/assets/files/publications/25-bakker-L4DC.pdf"
             }
         ],
         "note": null,
