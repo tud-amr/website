@@ -11,7 +11,7 @@ permalink: /paper_websites/
     </p>
 </div>
 
-{% assign papers_sorted = site.paper_websites | sort: 'release_date' | reverse %}
+{% assign papers_sorted = site.paper_websites | where_exp: "paper", "paper.hidden != true" | sort: 'release_date' | reverse %}
 
 <div class="msc_project-container" id="msc_project-container">
 
