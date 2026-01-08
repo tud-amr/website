@@ -1,39 +1,39 @@
 ---
 title: "CoDi: Synthesizing Multi-Agent Behavior from Single-Agent Demonstrations via Coordinated Diffusion"
 authors:
-    - name: "Lasse Peters"
-      url: "https://lasse-peters.net/"
-      superscript: "1"
-    - name: "Andrea Bajcsy"
-      url: "https://www.cs.cmu.edu/~abajcsy/"
-      superscript: "2"
-    - name: "Javier Alonso-Mora"
-      url: "https://www.autonomousrobots.nl/"
-      superscript: "1"
+  - name: "Lasse Peters"
+    url: "https://lasse-peters.net/"
+    superscript: "1"
+  - name: "Andrea Bajcsy"
+    url: "https://www.cs.cmu.edu/~abajcsy/"
+    superscript: "2"
+  - name: "Javier Alonso-Mora"
+    url: "https://www.autonomousrobots.nl/"
+    superscript: "1"
 affiliations:
-    - name: "TU Delft"
-      superscript: "1"
-      url: "https://tudelft.nl"
-    - name: "Carnegie Mellon University"
-      superscript: "2"
-      url: "https://www.cs.cmu.edu/"
+  - name: "TU Delft"
+    superscript: "1"
+    url: "https://tudelft.nl"
+  - name: "Carnegie Mellon University"
+    superscript: "2"
+    url: "https://www.cs.cmu.edu/"
 release_date: 2025-01-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    - name: Paper (coming soon)
-      icon: bi-file-earmark-pdf
-      # url: "https://arxiv.org/abs/..."
-    # - name: Code
-    #   icon: bi-github
-    #   url: "https://github.com/..."
-    # - name: Video
-    #   icon: bi-youtube
-    #   url: "https://www.youtube.com/watch?v=..."
-    - name: Related Publications
-      icon: bi-file-text
-      url: "#related-publications"
+  - name: Paper (coming soon)
+    icon: bi-file-earmark-pdf
+    # url: "https://arxiv.org/abs/..."
+  # - name: Code
+  #   icon: bi-github
+  #   url: "https://github.com/..."
+  # - name: Video
+  #   icon: bi-youtube
+  #   url: "https://www.youtube.com/watch?v=..."
+  - name: Related Publications
+    icon: bi-file-text
+    url: "#related-publications"
 related_project_id: "saraypapers"
-hidden: true  # Only accessible via direct link, not listed or indexed
-sitemap: false  # Exclude from sitemap
+hidden: true # Only accessible via direct link, not listed or indexed
+sitemap: false # Exclude from sitemap
 ---
 
 <style>
@@ -155,42 +155,6 @@ sitemap: false  # Exclude from sitemap
   These results suggest that—by learning manipulation skills in the smaller single-agent state-action space—CoDi makes use of the training data more efficiently than methods that require multi-agent demonstrations.
 </p>
 
-<h3 align="center">Rollout Sequence</h3>
-<div class="row row-cols-2 row-cols-md-4 g-2">
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-0.png' %}" width="100%">
-    <p align="center"><small>Initial state</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-1.png' %}" width="100%">
-    <p align="center"><small>Right arm approaches</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-2.png' %}" width="100%">
-    <p align="center"><small>Right arm picks up</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-3.png' %}" width="100%">
-    <p align="center"><small>Right arm moves object</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-4.png' %}" width="100%">
-    <p align="center"><small>Handover position</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-5.png' %}" width="100%">
-    <p align="center"><small>Left arm picks up</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-6.png' %}" width="100%">
-    <p align="center"><small>Left arm moves to goal</small></p>
-  </div>
-  <div class="col">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/frame-7.png' %}" width="100%">
-    <p align="center"><small>Task completed</small></p>
-  </div>
-</div>
-
 <hr/>
 <h2 align="center"><u>Cost Function Design</u></h2>
 <p align="justify">
@@ -226,4 +190,3 @@ sitemap: false  # Exclude from sitemap
 <p align="justify">
   These limitations motivate future research into learning the guidance term directly from a <em>small</em> number of multi-agent demonstrations, thereby eliminating the need to define the multi-agent cost function explicitly.
 </p>
-
