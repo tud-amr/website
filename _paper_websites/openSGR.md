@@ -9,7 +9,7 @@ authors:
     superscript: "2"
   - name: "Stefan Leutenegger"
     # url: "https://www.cs.cmu.edu/~abajcsy/"
-    superscript: "2" "3"
+    superscript: "2,3"
   - name: "Javier Alonso-Mora"
     url: "https://www.autonomousrobots.nl/"
     superscript: "1"
