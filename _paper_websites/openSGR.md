@@ -1,5 +1,5 @@
 ---
-title: "CoDi: Synthesizing Multi-Agent Behavior from Single-Agent Demonstrations via Coordinated Diffusion"
+title: "OpenSGR: Efficient 3D Scene Graph Registration in the Open World"
 authors:
   - name: "Gang (Clarence) Chen"
     url: "https://g-ch.github.io/"
