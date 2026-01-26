@@ -61,26 +61,28 @@ sitemap: false # Exclude from sitemap
     <img src="{% include fix_link.html link='/assets/images/papers/opensgr/cover_image.png' %}" width="100%">
   </div>
 </div>
+
+<p align="justify">
+  In this work, we first propose a data annotation pipeline that can generate open-set 3D scene graphs from RGB-D images and poses by combining several foundation models with point cloud processing tools. We apply this pipeline to ScanNet, which contains more than 1,500 scans of 807 scenes, and build a dataset that supports both F2S and S2S alignment tasks. Each object node is associated with rich attributes, including semantic labels, BERT embeddings, VLM embeddings, object point clouds, and 3D bounding boxes. Then efficient scene graph alignment framework that fuses VLM, BERT, and 3D bounding box features of each object with its spatial context is proposed to predict correspondences between two graphs. Specifically, we introduce a robust correspondence prediction network that incorporates a distance-gated spatial attention encoder for context fusion, a matcher with both lightweight and high-performance variants for correspondence score matrix prediction, and a minimum-cost-flow-based many-to-one allocator for globally consistent matching. In Figures above, a result of our high-performance version model to illustrate the dataset and tasks. Below we show a flow chart of our method.
+</p>
+
 <div class="row">
   <div class="col-12">
     <img src="{% include fix_link.html link='/assets/images/papers/opensgr/method.png' %}" width="100%">
   </div>
 </div>
-<p align="justify">
-  In this work, we first propose a data annotation pipeline that can generate open-set 3D scene graphs from RGB-D images and poses by combining several foundation models with point cloud processing tools. We apply this pipeline to ScanNet, which contains more than 1{,}500 scans of 807 scenes, and build a dataset that supports both F2S and S2S alignment tasks. Each object node is associated with rich attributes, including semantic labels, BERT embeddings, VLM embeddings, object point clouds, and 3D bounding boxes. Then efficient scene graph alignment framework that fuses VLM, BERT, and 3D bounding box features of each object with its spatial context is proposed to predict correspondences between two graphs. Specifically, we introduce a robust correspondence prediction network that incorporates a distance-gated spatial attention encoder for context fusion, a matcher with both lightweight and high-performance variants for correspondence score matrix prediction, and a minimum-cost-flow-based many-to-one allocator for globally consistent matching. In Figures above, a result of our high-performance version model and the framework of our method are presented to illustrate the dataset, tasks and our method. 
-</p>
 
 <p align="justify">
-  Our main __contributions__ include:
+  Our main **contributions** include:
 </p>
 <p align="justify">
-  A unified framework for efficient scene graph alignment: We introduce an end-to-end alignment framework that performs node matching and submap-level matching, enabling robust alignment across partial and cross-view observations.  We release both lightweight and high-performance versions to support different efficiency--accuracy trade-offs.
+  (1) A unified framework for efficient scene graph alignment: We introduce an end-to-end alignment framework that performs node matching and submap-level matching, enabling robust alignment across partial and cross-view observations.  We release both lightweight and high-performance versions to support different efficiency--accuracy trade-offs.
 </p>
 <p align="justify">
-  Robust scene graph alignment network: We propose a distance-gated spatial attention encoder that encodes node context even under large coordinate discrepancies, together with a minimum-cost-flow-based many-to-one allocator for efficient and globally consistent matching.
+  (2) Robust scene graph alignment network: We propose a distance-gated spatial attention encoder that encodes node context even under large coordinate discrepancies, together with a minimum-cost-flow-based many-to-one allocator for efficient and globally consistent matching.
 </p>
 <p align="justify">
-  A scalable annotation pipeline and a large-scale dataset: We develop an automated annotation pipeline and construct ScanNet-SG, a dataset that supports both F2S and S2S alignment tasks. ScanNet-SG covers over 500 and 3k object classes (in different groups) and provides more than 700k samples in total.
+  (3) A scalable annotation pipeline and a large-scale dataset: We develop an automated annotation pipeline and construct ScanNet-SG, a dataset that supports both F2S and S2S alignment tasks. ScanNet-SG covers over 500 and 3k object classes (in different groups) and provides more than 700k samples in total.
 </p>
 
 
