@@ -57,9 +57,11 @@ layout: default
     {% for project in projects %}
 
     {% if project == page.related_project_id or page.related_project_id contains project %}
-    <div class="publication-item">
-        {% include publication_item.html publication=publication id=counter %}
-    </div>
+        {% unless publication.title == page.title %}
+        <div class="publication-item">
+            {% include publication_item.html publication=publication id=counter %}
+        </div>
+        {% endunless %}
     {% endif %}
 
     {% endfor %}
