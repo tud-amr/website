@@ -24,9 +24,9 @@ affiliations:
     #   superscript: "†"
 release_date: 2025-06-27 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    - name: IEEE Xplore (coming soon)
+    - name: IEEE Xplore
       icon: bi-file-earmark-pdf
-      # url: "https://doi.org/10.1109/LRA.2025.3535185"
+      url: "https://doi.org/10.1109/IROS60139.2025.11246851"
     - name: arXiv
       icon: bi-file-earmark-pdf
       url: "https://arxiv.org/abs/2506.21265"
