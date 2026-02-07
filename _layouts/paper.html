@@ -56,7 +56,7 @@ layout: default
     {% for projects in publication.belongs_to_projects %}
     {% for project in projects %}
 
-    {% if project == page.related_project_id %}
+    {% if project == page.related_project_id or page.related_project_id contains project %}
     <div class="publication-item">
         {% include publication_item.html publication=publication id=counter %}
     </div>
