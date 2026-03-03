@@ -4,7 +4,7 @@ title: Post-Doctoral Researcher # The title that shows below your name.
 type: post-doc # post-doc, phd-visitor, professor, engineer
 joined_date: 2025-12-01
 # left_date: 2023-09-30 # Optional, if you add a left date the member will be moved to the past members section
-image: /assets/images/people/Yanbo_Wang.png # link or path in /assets/...
+image: /assets/images/people/Yanbo_Wang.jpg # link or path in /assets/...
 links: # Optional, links to other stuff
     - name: Website
       url: "https://ywangattud.github.io/website/"
