@@ -13,4 +13,4 @@ links: # Optional, links to other stuff
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief. Also for past members, put here e.g Now at..., [supervised by...] -->
-Generalizable Motion planning with Genarative Models.
+Generalizable Scene Understanding, Motion Planning, and Representation Learning with Genarative Models.
