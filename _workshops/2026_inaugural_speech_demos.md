@@ -1,6 +1,6 @@
 ---
-title: Robot Demonstrations for Javier Alonso-Mora Inaugural Lecture
-venue: Javier Alonso-Mora Inaugural Lecture
+title: Robot Demonstrations for Javier Alonso-Mora's Inaugural Lecture
+venue: Mobile Robotics Lab, Cognitive Robotics
 location: TU Delft, Netherlands
 date: 2026-03-13
 time: 13:00-14:15 PM
