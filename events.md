@@ -12,7 +12,7 @@ redirect_from:
 {% for workshop in sorted_workshops %}
 #### [{{ workshop.title }}]({{ workshop.url | relative_url }})
 
-**{{ workshop.venue }} Workshop**  
+**{{ workshop.venue }}**  
 **Date:** {{ workshop.date | date: "%B %d, %Y" }}  
 **Time:** {{ workshop.time }}  
 **Location:** {{ workshop.location }}
