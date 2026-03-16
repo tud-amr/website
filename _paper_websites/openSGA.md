@@ -5,10 +5,10 @@ authors:
     url: "https://g-ch.github.io/"
     superscript: "1"
   - name: "Sebastian Barbas Laina"
-    # url: "https://www.cs.cmu.edu/~abajcsy/"
+    url: "https://srl.cit.tum.de/members/barba"
     superscript: "2"
   - name: "Stefan Leutenegger"
-    # url: "https://www.cs.cmu.edu/~abajcsy/"
+    url: "https://mrl.ethz.ch/"
     superscript: "2,3"
   - name: "Javier Alonso-Mora"
     url: "https://www.autonomousrobots.nl/"
@@ -22,7 +22,7 @@ affiliations:
   - name: "ETH Zurich"
     superscript: "3"
     # url: "https://www.cs.cmu.edu/"
-release_date: 2025-01-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
+release_date: 2025-03-10 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
   - name: Paper (coming soon)
     icon: bi-file-earmark-pdf
@@ -33,8 +33,14 @@ links: # If you have other website for the project, github repos, datasets, etc.
   - name: Dataset
     icon: bi-github
     url: "https://github.com/tud-amr/ScanNet-SG"
-related_project_id: "saraypapers"
-hidden: true # Only accessible via direct link, not listed or indexed
+  # - name: Video
+  #   icon: bi-youtube
+  #   url: "https://www.youtube.com/watch?v=..."
+  # - name: Related Publications
+  #   icon: bi-file-text
+  #   url: "#related-publications"
+related_project_id: "interact"
+# hidden: true # Only accessible via direct link, not listed or indexed
 sitemap: false # Exclude from sitemap
 ---
 
