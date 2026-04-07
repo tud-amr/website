@@ -5,8 +5,8 @@ redirect_from:
   - /workshops/
 ---
 
-## Workshops
-<hr>
+<!-- ## Workshops -->
+<!-- <hr> -->
 
 {% assign sorted_workshops = site.workshops | sort: 'date' | reverse %}
 {% for workshop in sorted_workshops %}

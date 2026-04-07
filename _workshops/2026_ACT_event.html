@@ -1,0 +1,500 @@
+---
+title: "The Future of Driving: Autonomous Vehicles in a World of Uncertainty"
+venue: "Project NWO-NWA ACT: Perceptive Acting Under Uncertainty"
+location: TU Delft, The Netherlands
+date: 2026-05-20
+time: 10:00-17:00
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Driving: Autonomous Vehicles in a World of Uncertainty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* header {
+            background: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        } */
+        header {
+            position: relative;
+            height: auto;
+            min-height: 300px;
+            text-align: center;
+            color: white;
+        }
+        .header-content {
+            padding: 40px 20px;  /* Reduced padding for mobile */
+        }
+        .header-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            flex-direction: row;  /* Make sure items flow horizontally */
+            justify-content: space-between;
+        }
+        .header-image-left {
+            width: 50%;  /* Slightly less than 50% to create some gap */
+            height: 100%;
+            background: url('/assets/images/workshops/2026_act/car1.png') no-repeat center center/cover;
+            float: left;  /* Ensure left alignment */
+        }
+        .header-image-right {
+            width: 50%;  /* Slightly less than 50% to create some gap */
+            height: 100%;
+            background: url('/assets/images/workshops/2026_act/car2.png') no-repeat center center/cover;
+            float: right;  /* Ensure right alignment */
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        .header-content {
+            position: relative;
+            padding: 100px;
+        }
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* ensures it stays above content */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        /* nav ul li {
+            display: inline;
+            margin: 0 15px;
+        } */
+        nav ul li {
+            display: inline;
+            margin: 0 40px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        #home p, #home ul {
+            width: 66%;
+            margin-left: auto;
+            margin-right: auto;
+            /* padding-left: 20px;
+            padding-right: 20px; */
+        }
+        #demos p, #demos ul {
+            width: 66%;
+            margin-left: auto;
+            margin-right: auto;
+            /* padding-left: 20px;
+            padding-right: 20px; */
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+            background: white;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        .schedule-table {
+            width: 65%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            /* display: block; */
+        }
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        .schedule-table th {
+            background-color: #333;
+            color: white;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 66%;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .profile-card {
+            background: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            width: 320px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+        }
+        .profile-card img {
+            width: 280;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile-card a {
+            text-decoration: none;
+            color: #5E35B1;  /* Modern blue */
+        }
+        .profile-card a:hover {
+            text-decoration: underline;
+            /* Optional: slightly darker shade on hover */
+            filter: brightness(85%);
+        }
+        .bio {
+            display: none;
+            text-align: left;
+            margin-top: 10px;
+        }
+        .show-bio {
+            color: #5E35B1;
+            cursor: pointer;
+        }
+
+        ul li p {
+            list-style-position: outside;
+            text-indent: -10em;
+            padding-left: 2em;
+        }
+
+        section ul {
+            text-align: left;
+            font-family: Arial, sans-serif;
+            font-size: 1.2em;
+        }
+        
+
+        @media screen and (max-width: 768px) {
+            .header-content h1 p {
+                font-size: 1.2em !important;  /* Override inline styles */
+            }
+            
+            .header-content h1 p:nth-child(2) {
+                font-size: 0.9em !important;
+            }
+            
+            .header-content h1 p:nth-child(3) {
+                font-size: 0.7em !important;
+            }
+            
+            /* Adjust background images for mobile */
+            .header-image-left, .header-image-right {
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+            
+            .header-background {
+                flex-direction: column;  /* Stack images vertically on mobile */
+            }
+        }
+    </style>
+    <script>
+        function toggleBio(id) {
+            var bio = document.getElementById(id);
+            if (bio.style.display === "none") {
+                bio.style.display = "block";
+            } else {
+                bio.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- <div class="header-background"></div> -->
+        <div class="header-background">
+            <div class="header-image-left"></div>
+            <div class="header-image-right"></div>
+        </div>
+        <div class="overlay"></div>
+        <div class="header-content">
+            <h1><p style="font-size: 1.5em;">The Future of Driving: Autonomous Vehicles in a World of Uncertainty</p></h1>
+            <h1><p style="font-size: 1.0em;">Project NWO-NWA ACT: Perceptive Acting Under Uncertainty</p></h1>
+            <h1><p style="font-size: 0.8em;">10:00-17:00, May 20, 2026</p></h1>
+            <h1><p style="font-size: 0.8em;">Lecture hall A, Mechanical Engineering, TU Delft, The Netherlands</p></h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#demos">Demos</a></li>
+            <li><a href="#panelists">Panelists</a></li>
+            <li><a href="#organizers">Organizers</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>About the Event </h2>
+        <p style="color: red; text-align: left;"><strong>*Please note that the website is still under development. Both the schedule and participants information are being updated.</strong></p>
+        <p style="text-align: left; font-size: 1.2em;"> As autonomous vehicles continue to evolve, a key challenge lies in enabling them to operate safely and reliably in the open world, where uncertainty is inherent and unavoidable. Real-world traffic is shaped by incomplete information, changing environments, and complex interactions between human and automated agents. Beyond technical robustness, this raises fundamental questions about how autonomous systems interpret situations, make decisions, and communicate intent in ways that remain clear and predictable to the humans around them.</p>
+        <p style="text-align: left; font-size: 1.2em;">Uncertainty is particularly pronounced in the interaction between humans and automated driving systems. Whether considering the behavior of other road users or the role of humans within the vehicle, ambiguity can arise in expectations, responsibilities, and system behavior. This makes it essential for autonomous vehicles to not only reason about their environment, but also to account for how their actions are perceived and understood by humans. Approaches that incorporate human-aware prediction, risk-sensitive planning, and behavior that aligns with human expectations are therefore central to achieving safe and effective integration into everyday traffic.</p>
+        <p style="text-align: left; font-size: 1.2em;">This event brings together academic and industrial researchers to explore how risk and uncertainty can be systematically addressed in autonomous driving. It provides a platform to discuss methods for modeling and managing uncertainty, predicting and interacting with human behavior, and designing decision-making and control strategies that are both safe and transparent. Through talks, discussions, and demonstrations, the event aims to highlight advances that contribute to autonomous vehicles that are not only technically capable, but also trustworthy and well-adapted to real-world human environments.</p>
+        <p style="text-align: left; font-size: 1.2em;">The event is organized in the context of the Project NWO-NWA ACT: Perceptive Acting Under Uncertainty together with the Transport & Mobility Institute.</p>
+    </section>
+    <section id="schedule">
+        <h2>Schedule</h2>
+        <table class="schedule-table">
+            <tr>
+                <th>Time</th>
+                <th>Event</th>
+            </tr>
+            <tr>
+                <td>09:45 - 10:00</td>
+                <td>Registration.</td>
+            </tr>
+            <tr>
+                <td>10:00 - 10:10</td>
+                <td><strong>Opening.</strong> Sander Bohte (CWI)</td>
+            </tr>
+            <tr>
+                <td>10:10 - 10:40</td>
+                <td><strong>Understanding Human Behavior to Enable Safe and Reliable Autonomous Vehicles.</strong> Cristina Olaverri-Monreal (JKU)</td>
+            </tr>
+            <tr>
+                <td>10:40 - 11:10</td>
+                <td><strong>Title TBD.</strong> Ilse Harms (CBR)</td>
+            </tr>
+            <tr>
+                <td>11:10 - 13:30</td>
+                <td><strong>Lunch and Demos.</strong> <a href="#demos">See Demos list</a></td>
+            </tr>
+            <tr>
+                <td>13:30 - 14:00</td>
+                <td><strong>Title TBD.</strong> Michal Cap (ISEE AI)</td>
+            </tr>
+            <tr>
+                <td>14:00 - 14:30</td>
+                <td><strong>Title TBD.</strong> Maartje de Goede (SWOV)</td>
+            </tr>
+            <tr>
+                <td>14:30 - 15:30</td>
+                <td><strong>Panel Discussion.</strong> Full list of participants to be announced</td>
+            </tr>
+            <tr>
+                <td>15:30 - 17:00</td>
+                <td>Networking and drinks</td>
+            </tr>
+        </table>
+    </section>
+    <section id="speakers">
+        <h2>Invited Speakers</h2>
+        <p>* Ranked by scheduled order.</p>
+        <div class="profile">
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/cristina.jpg" alt="Cristina Olaverri-Monreal">
+                <h3><a href="http://cristinaolaverri.com/" target="_blank">Cristina Olaverri-Monreal</a></h3>
+                <p>Full Professor, Johannes Kepler University</p>
+                <p class="show-bio" onclick="toggleBio('bio1')">Show Bio</p>
+                <div id="bio1" class="bio">
+                <p>Cristina Olaverri-Monreal is a full professor and head of the Department Intelligent Transport Systems at the 
+Johannes Kepler University Linz, in Austria. Prior to this position, she led diverse teams in the industry and in the 
+academia in the US and in distinct countries in Europe.</p>
+                <p>She is the IEEE Division IX Director and member of the 2026-2027 IEEE Board of Directors. Prior to this role, 
+she served as President of the IEEE Intelligent Transportation Systems Society (IEEE ITSS) in 2022 and 2023. 
+She also serves as Chair of the Technical Activities Committee (TAC) on Human Factors in Intelligent 
+Transportation Systems and is the founder and chair of the Austrian IEEE ITSS chapter. Prof. Olaverri is a 
+senior/associate editor and editorial board member of several journals in the field, including the IEEE ITS 
+Transactions and IEEE ITS Magazine.
+</p>
+                <p>She received her PhD from the Ludwig-Maximilians University (LMU) in Munich in cooperation with BMW. Her 
+research aims at studying solutions for an efficient and effective transportation focusing on minimizing the barrier 
+between users and road systems. To this end, she relies on the automation, wireless communication and sensing 
+technologies that pertain to the field of Intelligent Transportation Systems (ITS).</p>
+                <p>Furthermore, she is an expert for the European Commission on ”Automated Road Transport” and consultant and 
+project evaluator in the field of ICT and “Connected, Cooperative Autonomous Mobility Systems” for various EU 
+and national agencies as well as organizations in Germany, Sweden, France, Ireland, etc. In 2017, she was the 
+general chair of the “IEEE International Conference on Vehicles Electronics and Safety” (ICVES 2017). She was 
+awarded the “IEEE Educational Activities Board Meritorious Achievement Award in Continuing Education” for her 
+dedicated contribution to continuing education in the field of ITS. She has also been recently awarded with the 
+prestigious 2023 IEEE MGA Diversity & Inclusion Award.
+ss</p>
+                </div>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/ilse.jpeg" alt="Ilse Harms">
+                <h3><a href="https://linkedin.com/in/ilseharms" target="_blank">Ilse Harms</a></h3>
+                <p>Strategic Advisor, CBR</p>
+                <p class="show-bio" onclick="toggleBio('bio4')">Show Bio</p>
+                <p class="bio" id="bio4">TBD.</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/michal.jpg" alt="Michal Cap">
+                <h3><a href="https://michalcap.net/" target="_blank">Michal Cap</a></h3>
+                <p>VP of Engineering, ISEE AI</p>
+                <p class="show-bio" onclick="toggleBio('bio3')">Show Bio</p>
+                <p class="bio" id="bio3">TBD.</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/maartje.jpg" alt="Maartje de Goede">
+                <h3><a href="https://swov.nl/nl/experts/goede" target="_blank">Maartje de Goede</a></h3>
+                <p>SWOV</p>
+                <p class="show-bio" onclick="toggleBio('bio2')">Show Bio</p>
+                <p class="bio" id="bio2">TBD.</p>
+            </div>
+        </div>
+    </section>
+
+    </section>
+    <section id="demos">
+        <h2>Demos</h2>
+        <p style="text-align: left; font-size: 1.2em;"></p>
+        <p style="text-align: left; font-size: 1.2em;"></p>
+        <p style="text-align: left; font-size: 1.2em;">MORE DEMOS TO BE ANNOUNCED. We expect around 10 different demos. They will be listed here, as well as a map with their location.</p>
+        
+        <div class="papers-container" style="width: 66%; margin: 20px auto; text-align: left;">
+            <!-- <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Autonomous bus robotTUNER demo</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">robotTUNER</p>
+                <p class="show-bio" onclick="toggleBio('demo1')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Description</p>
+                <p class="bio" id="demo1" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                TBD.
+                </p>
+            </div> -->
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">PerceivAI Demo</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">PerceivAI</p>
+                <p class="show-bio" onclick="toggleBio('demo2')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Description</p>
+                <p class="bio" id="demo2" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                TBD.
+                </p>
+            </div>
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Autonomous Car Avoiding Obstacles</h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Khaled Mustafa, Diego Martinez-Baselga (TU Delft)</p>
+                <p class="show-bio" onclick="toggleBio('demo3')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Description</p>
+                <p class="bio" id="demo3" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                TBD.
+                </p>
+            </div>
+            <div class="paper-item" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border-left: 4px solid #5E35B1;">
+                <h4 style="margin: 0 0 5px 0; color: #333;">Human-Aware Robot Navigation </h4>
+                <p style="margin: 0 0 10px 0; color: #666; font-size: 1.0em;">Khaled Mustafa, Diego Martinez-Baselga (TU Delft)</p>
+                <p class="show-bio" onclick="toggleBio('demo4')" style="color: #5E35B1; cursor: pointer; margin: 0; font-size: 0.9em;">Show Description</p>
+                <p class="bio" id="demo4" style="display: none; margin-top: 10px; padding: 10px; background: white; border-radius: 4px; font-size: 0.95em;">
+                TBD.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="panelists">
+        <h2>Panelists</h2>
+        <p>* Ranked by the first letter of name. Final list of participants to be announced.</p>
+        <div class="profile">
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/andras3.jpg" alt="Andras Palffy">
+                <h3><a href="https://www.perciv.ai/" target="_blank">Andras Palffy</a></h3>
+                <p>Co-Founder and Director of Technology, PercivAI</p>
+                <p class="show-bio" onclick="toggleBio('bio44')">Show Bio</p>
+                <div id="bio44" class="bio">
+                    <p>Andras Palffy received an M.Sc. degree in computer science engineering from Pazmany Peter Catholic University, Hungary, in 2016, and another M.Sc. degree in digital signal and image processing from Cranfield University, U.K., in 2015.</p>
+                    <p>From 2013 to 2017, he was an algorithm researcher at Eutecus, a US based startup acquired by Verizon, developing computer vision algorithms for traffic monitoring and ADAS applications.</p>
+                    <p>He obtained his Ph.D. degree in 2022 at Delft University of Technology, Netherlands, focusing on radar based road user detection for automated driving. He is the first author of the "View of Delft" dataset, which is one of the most widely used automotive dataset including 4D radar data, used by 800+ researchers around the world.</p>
+                    <p>In 2022 he co-founded Perciv AI, a machine perception startup developing AI-driven, next generation machine perception for radars.</p>
+                </div>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/solmaz.jpeg" alt="Solmaz Razmi Rad">
+                <h3><a href="https://www.linkedin.com/in/solmaz-razmi-rad-56864958/" target="_blank">Solmaz Razmi Rad</a></h3>
+                <p>Human Factors & Vehicle Automation, RDW</p>
+                <p class="show-bio" onclick="toggleBio('bio55')">Show Bio</p>
+                <div id="bio55" class="bio">
+                    <p>TBD.</p>
+                </div>
+            </div>
+            <!-- <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/arkady.jpeg" alt="Arkady Zgonnikov">
+                <h3><a href="http://www.zgonnikov.net/" target="_blank">Arkady Zgonnikov</a></h3>
+                <p>Assistant Professor, TU Delft</p>
+                <p class="show-bio" onclick="toggleBio('bio11')">Show Bio</p>
+                <p class="bio" id="bio11">TBD.</p>
+            </div> -->
+            <!-- <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/marieke.webp" alt="Marieke Mertens">
+                <h3><a href="https://research.tue.nl/en/persons/marieke-h-martens/" target="_blank">Marieke Mertens</a></h3>
+                <p>Full Professor, TU Eindhoven, TNO</p>
+                <p class="show-bio" onclick="toggleBio('bio33')">Show Bio</p>
+                <p class="bio" id="bio33">TBD.</p>
+            </div> -->
+            <!-- <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/simeon.jpeg" alt="Simeon Calvert">
+                <h3><a href="https://www.tudelft.nl/en/staff/s.c.calvert/" target="_blank">Simeon Calvert</a></h3>
+                <p>Associate Professor, TU Delft</p>
+                <p class="show-bio" onclick="toggleBio('bio22')">Show Bio</p>
+                <p class="bio" id="bio22">TBD.</p>
+            </div> -->
+        </div>
+    </section>
+    <section id="organizers">
+        <h2>Organizers</h2>
+        <div class="profile">
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/diego.jpeg" alt="Diego Martinez-Baselga">
+                <h3><a href="https://sites.google.com/view/dmartnezbaselga/" target="_blank">Diego Martinez-Baselga</a></h3>
+                <p>Postdoc, TU Delft</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/arkady.jpeg" alt="Arkady Zgonnikov">
+                <h3><a href="http://www.zgonnikov.net/" target="_blank">Arkady Zgonnikov</a></h3>
+                <p>Assistant Professor, TU Delft</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/simeon.jpeg" alt="Simeon Calvert">
+                <h3><a href="https://www.tudelft.nl/en/staff/s.c.calvert/" target="_blank">Simeon Calvert</a></h3>
+                <p>Associate Professor, TU Delft</p>
+            </div>
+            <div class="profile-card">
+                <img src="/assets/images/workshops/2026_act/javier2.png" alt="Javier Alonso-Mora">
+                <h3><a href="https://autonomousrobots.nl/people/" target="_blank">Javier Alonso-Mora</a></h3>
+                <p>Full Professor, TU Delft</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Future of Driving: Autonomous Vehicles in a World of Uncertainty in TU Delft</p>
+    </footer>
+</body>
+</html>
