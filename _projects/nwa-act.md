@@ -20,6 +20,8 @@ people:
       extra_info: Postdoctoral researcher
     - name: Ahmad Gazar
       extra_info: Postdoctoral researcher
+    - name: Diego Martinez-Baselga
+      extra_info: Postdoctoral researcher
     - name: Prof. Jens Kober
     # extra_info: Learning, Autonomous, and Intillegent Robots (LAIR) TU Delft
     - name: Prof. Javier Alonso-Mora
