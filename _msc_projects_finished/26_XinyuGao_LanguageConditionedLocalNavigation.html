@@ -1,0 +1,127 @@
+---
+title: "Language-Conditioned Navigation Affordance Prediction under Occlusion"
+authors:
+    - name: "Xinyu Gao"
+      superscript: "1"
+    - name: "Gang Chen"
+      superscript: "1"
+    - name: "Javier Alonso-Mora"
+      superscript: "1"
+affiliations:
+    - name: "TU Delft"
+      superscript: "1"
+      url: "https://tudelft.nl"
+end_date: 2026-03-30
+description: "This thesis focuses on language-conditioned local navigation under occlusion, where a robot needs to infer a nearby traversable target from free-form, spatially grounded natural-language instructions and current surround-view RGB-D observations. Our method predicts an ego-centric bird's-eye view affordance heatmap by combining vision-language model reasoning with geometry-aware bird's-eye view features. In unseen Habitat environments, it substantially improves accuracy averaged over geodesic thresholds compared with prior image-space baselines, especially when the target is occluded."
+cover_image: /assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/webpage_cover.png
+links:
+    - name: arXiv
+      icon: bi-file-earmark-pdf
+      url: "https://arxiv.org/abs/2603.09961"
+    - name: MSc Thesis
+      icon: bi-file-text
+      url: "https://repository.tudelft.nl/record/uuid:8f650e8a-1b46-4fa9-9f46-dcf29a4f01f1"
+---
+
+<div class="single-image d-flex justify-content-center mb-4">
+  <img
+    src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/beginning.png' %}"
+    class="img-fluid"
+    alt="BEACON teaser overview"
+    style="max-width: 100%; height: auto;"
+  >
+</div>
+
+<section id="abstract">
+  <h2>Abstract</h2>
+  <p>
+    Language-conditioned local navigation requires a robot to infer a nearby traversable target location from its current observation and an open-vocabulary, relational instruction. Existing vision-language spatial grounding methods usually rely on vision-language models (VLMs) to reason in image space, producing 2D predictions tied to visible pixels. As a result, they struggle to infer target locations in occluded regions, typically caused by furniture or moving humans. To address this issue, we propose BEACON, which predicts an ego-centric Bird's-Eye View (BEV) affordance heatmap over a bounded local region including occluded areas. Given an instruction and surround-view RGB-D observations from four directions around the robot, BEACON predicts the BEV heatmap by injecting spatial cues into a VLM and fusing the VLM's output with depth-derived BEV features. Using an occlusion-aware dataset built in the Habitat simulator, we conduct detailed experimental analysis to validate both our BEV space formulation and the design choices of each module. Our method improves the accuracy averaged across geodesic thresholds by 22.74 percentage points over the state-of-the-art image-space baseline on the validation subset with occluded target locations.
+  </p>
+
+  <div class="single-image d-flex justify-content-center mb-3">
+    <img
+      src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/intro.png' %}"
+      class="img-fluid"
+      alt="BEACON motivation figure"
+      style="max-width: 100%; height: auto;"
+    >
+  </div>
+</section>
+
+<section id="method-overview">
+  <h2>Method Overview</h2>
+  <p>
+    BEACON overview. Stage 1 performs auto-derived ego-centric instruction tuning with ego-centric 3D position encoding to train the Ego-Aligned VLM. Stage 2 initializes the Ego-Aligned VLM weights from Stage 1, combines the resulting instruction-conditioned output with Geometry-Aware BEV features, and predicts an ego-centric BEV navigation affordance heatmap via a Post-Fusion Affordance Decoder. The two stages use different supervision signals, and inference selects the navigation target by taking the argmax.
+  </p>
+
+  <div class="single-image d-flex justify-content-center mb-3">
+    <img
+      src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/architecture.png' %}"
+      class="img-fluid"
+      alt="BEACON architecture"
+      style="max-width: 100%; height: auto;"
+    >
+  </div>
+</section>
+
+<section id="results">
+  <h2>Results</h2>
+  <p>
+    Using an occlusion-aware dataset built in the Habitat simulator, we conduct detailed experimental analysis to validate both our BEV space formulation and the design choices of each module.
+  </p>
+
+  <div class="image-grid text-center mb-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+      <div class="col">
+        <img
+          class="img-fluid object-fit-contain"
+          src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/results.png' %}"
+          alt="Quantitative results"
+        >
+      </div>
+      <div class="col">
+        <img
+          class="img-fluid object-fit-contain"
+          src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/ablations.png' %}"
+          alt="Ablation results"
+        >
+      </div>
+    </div>
+  </div>
+
+  <p>
+    Our method improves the accuracy averaged across geodesic thresholds by 22.74 percentage points over the state-of-the-art image-space baseline on the validation subset with occluded target locations.
+  </p>
+
+  <div class="image-grid text-center mb-3">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+      <div class="col">
+        <img
+          class="img-fluid object-fit-contain"
+          src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/example1.png' %}"
+          alt="Qualitative result example 1"
+        >
+        <p class="mt-2 text-start">
+          These two examples show BEACON correctly grounding the instruction under heavy occlusion. Compared with image-space baselines, it can infer plausible target regions even when they are occluded, by predicting affordance in BEV space beyond visible pixels.
+        </p>
+      </div>
+      <div class="col">
+        <img
+          class="img-fluid object-fit-contain"
+          src="{% include fix_link.html link='/assets/images/msc_projects/26_XinyuGao_LanguageConditionedLocalNavigation/example2.png' %}"
+          alt="Qualitative result example 2"
+        >
+        <p class="mt-2 text-start">
+          These two examples illustrate typical errors: confusion about the referred landmark or spatial relation, and ambiguity in how far the robot should proceed. Even when it fails, the predicted target still remains spatially feasible.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="conclusions">
+  <h2>Conclusions</h2>
+  <p>
+    In this work, we propose BEACON, a VLM-based BEV affordance predictor for local navigation target prediction conditioned on an open-vocabulary instruction. In unseen environments in the Habitat simulator, BEACON shows consistent gains over prior image-space baselines, with the largest improvements on the occluded-target subset. While image-space baselines struggle with occluded cues or targets, BEACON outputs an ego-centric BEV affordance heatmap that yields more accurate targets and substantially fewer non-traversable predictions. These improvements are not simply the result of adding task-specific supervision, nor are they explained solely by post-hoc snapping to free space; instead, BEACON improves both Euclidean target accuracy and traversable-target validity. Extensive ablations further validate the importance of ego-aligned 3D cues and BEV-space design choices.
+  </p>
+</section>
