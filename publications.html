@@ -51,6 +51,12 @@ permalink: /publications/
     </div>
 </div>
 
+<div class="paper_websites_info mb-4">
+    <span>
+        You can find the papers with dedicated websites <a href="{% link paper_websites_view.html %}" target="_blank">here</a>.
+    </span>
+</div>
+
 <div class="publication-container" id="publication-container">
     {% assign counter = publications_sorted | size %}
     {% assign j_counter = publications_sorted | where: 'type',"journal" | size %}
