@@ -9,7 +9,7 @@ authors:
     superscript: "2"
   - name: "Stefan Leutenegger"
     url: "https://mrl.ethz.ch/"
-    superscript: "2,3"
+    superscript: "3"
   - name: "Javier Alonso-Mora"
     url: "https://www.autonomousrobots.nl/"
     superscript: "1"
@@ -24,7 +24,7 @@ affiliations:
     # url: "https://www.cs.cmu.edu/"
 release_date: 2025-03-10 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-  - name: Paper (coming soon)
+  - name: Paper (arXiv)
     icon: bi-file-earmark-pdf
     # url: "https://arxiv.org/abs/..."
   - name: Code (coming soon)
@@ -33,9 +33,9 @@ links: # If you have other website for the project, github repos, datasets, etc.
   - name: Dataset
     icon: bi-github
     url: "https://github.com/tud-amr/ScanNet-SG"
-  - name: Video (coming soon)
+  - name: Video
     icon: bi-youtube
-  #   url: "https://www.youtube.com/watch?v=..."
+    url: "https://youtu.be/yG5Ln4kwh_M"
   # - name: Related Publications
   #   icon: bi-file-text
   #   url: "#related-publications"
@@ -58,6 +58,12 @@ sitemap: false # Exclude from sitemap
 </style>
 
 <hr/>
+
+<h2 align="center"><u>Introduction Video</u></h2>
+
+<div class="ratio ratio-16x9">
+    <iframe src="https://www.youtube.com/embed/yG5Ln4kwh_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 
 <h2 align="center"><u>Abstract</u></h2>
 <p align="justify">

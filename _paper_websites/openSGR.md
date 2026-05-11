@@ -5,11 +5,11 @@ authors:
     url: "https://g-ch.github.io/"
     superscript: "1"
   - name: "Sebastian Barbas Laina"
-    # url: "https://www.cs.cmu.edu/~abajcsy/"
+    url: "https://srl.cit.tum.de/members/barba"
     superscript: "2"
   - name: "Stefan Leutenegger"
-    # url: "https://www.cs.cmu.edu/~abajcsy/"
-    superscript: "2,3"
+    url: "https://mrl.ethz.ch/"
+    superscript: "3"
   - name: "Javier Alonso-Mora"
     url: "https://www.autonomousrobots.nl/"
     superscript: "1"
@@ -22,9 +22,9 @@ affiliations:
   - name: "ETH Zurich"
     superscript: "3"
     # url: "https://www.cs.cmu.edu/"
-release_date: 2025-01-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
+release_date: 2025-03-10 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-  - name: Paper (coming soon)
+  - name: Paper (arXiv)
     icon: bi-file-earmark-pdf
     # url: "https://arxiv.org/abs/..."
   - name: Code (coming soon)
@@ -33,8 +33,14 @@ links: # If you have other website for the project, github repos, datasets, etc.
   - name: Dataset
     icon: bi-github
     url: "https://github.com/tud-amr/ScanNet-SG"
-related_project_id: "saraypapers"
-hidden: true # Only accessible via direct link, not listed or indexed
+  - name: Video
+    icon: bi-youtube
+    url: "https://youtu.be/yG5Ln4kwh_M"
+  # - name: Related Publications
+  #   icon: bi-file-text
+  #   url: "#related-publications"
+related_project_id: "interact"
+# hidden: true # Only accessible via direct link, not listed or indexed
 sitemap: false # Exclude from sitemap
 ---
 
@@ -52,7 +58,24 @@ sitemap: false # Exclude from sitemap
 </style>
 
 <hr/>
-<h2 align="center"><u>Overview</u></h2>
+
+<h2 align="center"><u>Introduction Video</u></h2>
+
+<div class="ratio ratio-16x9">
+    <iframe src="https://www.youtube.com/embed/yG5Ln4kwh_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
+
+<h2 align="center"><u>Abstract</u></h2>
+<p align="justify">
+  Scene graph alignment establishes object correspondences between two 3D scene graphs constructed from partially overlapping observations. It enables robots to associate observations across time and agents while preserving consistent object identities despite viewpoint changes and partial visibility.
+  Existing approaches mainly focus on subscan-to-subscan (S2S) alignment and depend heavily on geometric point-cloud features, leaving frame-to-scan (F2S) alignment and open-set vision–language features underexplored. 
+  In addition, existing datasets for scene graph alignment remain small-scale with limited object diversity, constraining systematic training and evaluation.
+  We present a unified and efficient alignment framework that predicts object correspondences by fusing vision–language, textual, and geometric features with spatial context. Our method introduces a distance-gated spatial attention encoder, a matching score predictor with lightweight and high-performance variants, a minimum cost flow based allocator, and a global scene embedding generator for accurate correspondence prediction even under large coordinate discrepancies.
+  We further introduce ScanNet-SG, a large-scale dataset generated via an automated annotation pipeline, containing over 700k samples and spanning 500–3k object classes under different vocabulary settings.
+  Experiments show that our method achieves the best overall performance on both F2S and S2S tasks, substantially outperforming existing scene graph alignment methods.
+</p>
+
+<!-- <h2 align="center"><u>Overview</u></h2> -->
 <div class="row">
   <div class="col-12">
     <img src="{% include fix_link.html link='/assets/images/papers/opensgr/cover_image.png' %}" width="100%">
@@ -60,7 +83,8 @@ sitemap: false # Exclude from sitemap
 </div>
 
 <p align="justify">
-  In this work, we first propose a data annotation pipeline that can generate open-set 3D scene graphs from RGB-D images and poses by combining several foundation models with point cloud processing tools. We apply this pipeline to ScanNet, which contains more than 1,500 scans of 807 scenes, and build a dataset that supports both F2S and S2S alignment tasks. Each object node is associated with rich attributes, including semantic labels, BERT embeddings, VLM embeddings, object point clouds, and 3D bounding boxes. Then efficient scene graph alignment framework that fuses VLM, BERT, and 3D bounding box features of each object with its spatial context is proposed to predict correspondences between two graphs. Specifically, we introduce a robust correspondence prediction network that incorporates a distance-gated spatial attention encoder for context fusion, a matcher with both lightweight and high-performance variants for correspondence score matrix prediction, and a minimum-cost-flow-based many-to-one allocator for globally consistent matching. In Figures above, a result of our high-performance version model to illustrate the dataset and tasks. Below we show a flow chart of our method.
+  <!-- In this work, we first propose a data annotation pipeline that can generate open-set 3D scene graphs from RGB-D images and poses by combining several foundation models with point cloud processing tools. We apply this pipeline to ScanNet, which contains more than 1,500 scans of 807 scenes, and build a dataset that supports both F2S and S2S alignment tasks. Each object node is associated with rich attributes, including semantic labels, BERT embeddings, VLM embeddings, object point clouds, and 3D bounding boxes. Then efficient scene graph alignment framework that fuses VLM, BERT, and 3D bounding box features of each object with its spatial context is proposed to predict correspondences between two graphs. Specifically, we introduce a robust correspondence prediction network that incorporates a distance-gated spatial attention encoder for context fusion, a matcher with both lightweight and high-performance variants for correspondence score matrix prediction, and a minimum-cost-flow-based many-to-one allocator for globally consistent matching.  -->
+  In Figures above, a result of our high-performance version model to illustrate the dataset and tasks. Below we show a flow chart of our method.
 </p>
 
 <div class="row">
