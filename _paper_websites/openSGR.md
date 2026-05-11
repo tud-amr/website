@@ -59,7 +59,7 @@ sitemap: false # Exclude from sitemap
 
 <hr/>
 
-<h2 align="center"><u>Introduction Video</u></h2>
+<!-- <h2 align="center"><u>Introduction Video</u></h2> -->
 
 <div class="ratio ratio-16x9">
     <iframe src="https://www.youtube.com/embed/yG5Ln4kwh_M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
