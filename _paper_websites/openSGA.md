@@ -8,10 +8,10 @@ authors:
     url: "https://srl.cit.tum.de/members/barba"
     superscript: "2"
   - name: "Stefan Leutenegger"
-    url: "https://mrl.ethz.ch/"
+    url: "https://mrl.ethz.ch/the-group/people/lab-members/stefan-leutenegger.html"
     superscript: "3"
   - name: "Javier Alonso-Mora"
-    url: "https://www.autonomousrobots.nl/"
+    url: "https://autonomousrobots.nl/people/"
     superscript: "1"
 affiliations:
   - name: "TU Delft"
