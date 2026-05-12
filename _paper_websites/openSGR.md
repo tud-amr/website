@@ -26,7 +26,7 @@ release_date: 2025-03-10 # publication or relevant date, approximated if not sur
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
   - name: Paper (arXiv)
     icon: bi-file-earmark-pdf
-    # url: "https://arxiv.org/abs/..."
+    url: "https://arxiv.org/abs/2605.10484"
   - name: Code (coming soon)
     icon: bi-github
     url: "https://github.com/tud-amr/OpenSGA"
