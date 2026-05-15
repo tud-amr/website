@@ -8,7 +8,7 @@ authors:
     url: "https://lauraferranti.com/"
     superscript: "2,†"
   - name: "Andrea Bajcsy"
-    url: "https://abajcsy.github.io/"
+    url: "https://www.cs.cmu.edu/~abajcsy/"
     superscript: "3,†"
   - name: "Javier Alonso-Mora"
     url: "https://autonomousrobots.nl/"
