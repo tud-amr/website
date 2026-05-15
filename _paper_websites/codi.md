@@ -1,192 +1,253 @@
 ---
-title: "CoDi: Synthesizing Multi-Agent Behavior from Single-Agent Demonstrations via Coordinated Diffusion"
+title: "Coordinated Diffusion: Generating Multi-Agent Behavior Without Multi-Agent Demonstrations"
 authors:
   - name: "Lasse Peters"
     url: "https://lasse-peters.net/"
     superscript: "1"
+  - name: "Laura Ferranti"
+    url: "https://lauraferranti.com/"
+    superscript: "2,†"
   - name: "Andrea Bajcsy"
-    url: "https://www.cs.cmu.edu/~abajcsy/"
-    superscript: "2"
+    url: "https://abajcsy.github.io/"
+    superscript: "3,†"
   - name: "Javier Alonso-Mora"
-    url: "https://www.autonomousrobots.nl/"
-    superscript: "1"
+    url: "https://autonomousrobots.nl/"
+    superscript: "2,†"
 affiliations:
-  - name: "TU Delft"
+  - name: "UC Berkeley"
     superscript: "1"
+    url: "https://berkeley.edu"
+  - name: "TU Delft"
+    superscript: "2"
     url: "https://tudelft.nl"
   - name: "Carnegie Mellon University"
-    superscript: "2"
+    superscript: "3"
     url: "https://www.cs.cmu.edu/"
-release_date: 2025-01-01 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
-links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-  - name: Paper (coming soon)
+  - name: "Equal advising"
+    superscript: "†"
+release_date: 2026-05-12
+links:
+  - name: Paper (arXiv)
     icon: bi-file-earmark-pdf
-    # url: "https://arxiv.org/abs/..."
-  # - name: Code
-  #   icon: bi-github
-  #   url: "https://github.com/..."
-  # - name: Video
-  #   icon: bi-youtube
-  #   url: "https://www.youtube.com/watch?v=..."
+    url: "https://arxiv.org/abs/2605.11485"
+  - name: Code (coming soon)
+    icon: bi-github
+    url: "#"
   - name: Related Publications
     icon: bi-file-text
     url: "#related-publications"
 related_project_id: "saraypapers"
-hidden: true # Only accessible via direct link, not listed or indexed
-sitemap: false # Exclude from sitemap
+sitemap: false
 ---
 
 <style>
-    ol.figure-list {
-        list-style-type: none;
-        counter-reset: list-counter;
-        padding-left: 10px;
-    }
-    ol.figure-list li::before {
-        counter-increment: list-counter;
-        content: "(" counter(list-counter, lower-alpha) ")";
-        padding-right: 8px;
-    }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-regular.woff2' | relative_url }}") format("woff2");
+    font-weight: normal; font-style: normal;
+  }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-bold.woff2' | relative_url }}") format("woff2");
+    font-weight: bold; font-style: normal;
+  }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-italic.woff2' | relative_url }}") format("woff2");
+    font-weight: normal; font-style: italic;
+  }
+  @font-face {
+    font-family: "TeX Gyre Pagella";
+    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-bolditalic.woff2' | relative_url }}") format("woff2");
+    font-weight: bold; font-style: italic;
+  }
+
+  body { font-family: "TeX Gyre Pagella", Palatino, "Palatino Linotype", "Book Antiqua", serif; }
+
+  .codi-plot   { width: 100%; max-width: 353px; display: block; margin: 0 auto; }
+  .codi-legend { width: 100%; max-width: 687px; display: block; margin: 0 auto; }
 </style>
 
 <hr/>
-<h2 align="center"><u>Method Overview</u></h2>
-<div class="row">
-  <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/method-overview.png' %}" width="100%">
-  </div>
-</div>
+<video controls playsinline width="100%" poster="{{ '/assets/images/papers/codi/video-poster.jpg' | relative_url }}">
+  <source src="{{ '/assets/images/papers/codi/codi2026tro-supplementary-10MB.mp4' | relative_url }}" type="video/mp4">
+</video>
+
+<hr/>
+<h2 align="center">Abstract</h2>
 <p align="justify">
-  We present <b>CoDi (Coordinated Diffusion)</b>, a method for synthesizing coordinated multi-agent behavior from single-agent demonstrations.
-  Our approach composes single-agent diffusion policies with a user-defined multi-agent cost function to generate coordinated behavior without requiring any multi-agent demonstration data.
+  Imitation learning powered by generative models has proven effective for modeling complex single-agent behaviors.
+  However, teaching multi-agent systems, like multiple arms or vehicles, to coordinate through imitation learning is hindered by a fundamental data bottleneck: as the joint state-action space grows exponentially with the number of agents, collecting a sufficient amount of coordinated multi-agent demonstrations becomes extremely costly.
+  In this work, we ask: how can we leverage <em>single-agent</em> demonstration data to learn <em>multi-agent</em> policies?
+  We present <b>CoDi</b>, a framework that couples independently trained single-agent diffusion policies through a user-defined multi-agent cost function, without requiring any coordinated demonstrations.
+  We derive a new diffusion-based sampling scheme wherein the diffusion score function decomposes into independent, single-agent pre-trained base policies plus a cost-driven guidance term that coordinates these base policies into cohesive multi-agent behavior.
+  We show that this guidance term can be estimated in a gradient-free manner, making CoDi applicable to black-box, non-differentiable cost functions without additional training.
+  Theoretically and empirically, we analyze the conditions under which this composition can faithfully approximate a target multi-agent behavior.
+  We find a complementary role for demonstration data versus the cost function: single-agent demonstrations must cover the support of the desired multi-agent behavior, while the cost function must promote desired behavior from this product of single-agent policies.
+  Our results in simulation and hardware experiments of a two-arm manipulation task show that CoDi discovers robust coordinated behavior from single-agent data, is more data-efficient than multi-agent baselines, and highlights the importance of joint guidance, base-policy support, and cost design.
 </p>
 
 <hr/>
-<h2 align="center"><u>Abstract</u></h2>
+<h2 align="center">Method Overview</h2>
+<div class="row">
+  <div class="col-12">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/front-figure.jpg' %}" width="100%">
+  </div>
+</div>
 <p align="justify">
-  Imitation learning enables individual robots to learn complex behaviors such as object manipulation from expert demonstrations.
-  Generative models such as diffusion policies have recently further enhanced this capability.
-  However, many real-world tasks require multi-agent interaction—e.g., a robotic manipulator relying on another arm to grab an out-of-reach object, clearing a table after dinner, or assembling a piece of furniture.
-</p>
-<p align="justify">
-  A key challenge in solving complex multi-agent tasks is the scarcity of data in these settings, which can be attributed to two main issues:
-  (i) the product space of states and actions grows exponentially with the number of players and
-  (ii) the cost of acquiring data for multi-agent systems is inevitably higher than for single-agent systems.
-</p>
-<p align="justify">
-  To tackle these challenges, this work focuses on the following question:
-  <em>How can we generate multi-agent behavior while leveraging single-agent demonstrations?</em>
-  We investigate this question based on the observation that the gap between single-agent and multi-agent behavior often does not arise in the low-level actuation of robots, but rather at a higher level of decision-making.
-  As a result, single-agent data can serve as a strong prior for learning multi-agent policies.
-</p>
-<p align="justify">
-  The main contribution of this work is <b>CoDi</b>, a method for synthesizing a single cohesive multi-agent policy by <em>guiding</em> multiple single-agent diffusion policies towards <em>coordinated</em> behavior.
-  We achieve this via a multi-stage training procedure:
+  CoDi inverts the conventional <em>centralized training, decentralized execution</em> paradigm: instead, it enables <em>decentralized</em> (single-agent) pre-training at the cost of requiring <em>centralized</em> execution.
+  The method proceeds in three steps:
   <ol>
-    <li>The user provides single-agent demonstrations of basic single-agent skills (e.g., picking and placing objects).</li>
-    <li>We use this data to train single-agent diffusion policies that capture the low-level skills of each agent.</li>
-    <li>The user provides a multi-agent cost function that penalizes deviations from desired multi-agent behavior.</li>
-    <li>We construct a centralized guidance model from this cost function that bridges the gap between the marginal (single-agent) diffusion policies and the joint (multi-agent) diffusion policy.</li>
+    <li>Train independent single-agent diffusion policies from single-agent demonstrations of basic skills (e.g., picking and placing objects).</li>
+    <li>Specify a user-defined multi-agent cost function that encodes the desired coordination behavior (e.g., move the object to a goal, avoid collisions).</li>
+    <li>At deployment, solve a KL-regularized cooperative game that combines the single-agent base policies with a cost-driven guidance term into a cohesive multi-agent policy.</li>
   </ol>
+  The resulting multi-agent policy takes the composite form
+  $$\pi(\mathbf{a} \mid \mathbf{s}) \propto \exp\!\left(-J(\mathbf{s}, \mathbf{a}) / \lambda\right) \cdot \prod_i p^{(i)}(a^{(i)} \mid s^{(i)}),$$
+  where each $p^{(i)}$ is a single-agent diffusion policy and $J$ is the shared cost function.
+  Crucially, the guidance term is estimated in a gradient-free, sampling-based manner, making the approach applicable to black-box simulators and non-differentiable costs.
+</p>
+<p align="justify">
+  In the paper, we formally analyze under which conditions this structure can recover a desired target behavior $\pi^*$.
+  The key result is that exact recovery is possible when the product of single-agent policies is an <em>over-approximation</em> of $\pi^*$ — i.e., wherever $\pi^*$ assigns positive probability to a joint action, the product must as well (a support-coverage condition).
+  Under this condition, the cost $J$ can compensate for the KL gap between the product of single-agent policies and $\pi^*$: the more informative the single-agent demonstrations are for the targeted multi-agent behavior, the less design effort needs to go into $J$.
 </p>
 
 <hr/>
-<h2 align="center"><u>Key Idea: Decentralized Pre-training, Centralized Execution</u></h2>
-<p align="justify">
-  Our approach effectively inverts the conventional <em>centralized training, decentralized execution</em> paradigm: we enable <em>decentralized</em> (single-agent) pre-training at the expense of requiring <em>centralized</em> execution.
-  We contend that in many settings, this trade-off is preferable; enabling centralized execution via multi-agent communication is often less demanding than collecting multi-agent demonstration data.
-</p>
-<p align="justify">
-  Mathematically, our proposed multi-agent policy takes the following composite form:
-</p>
-<p align="center">
-  <em>π(a | s) ∝ exp(-J(s, a) / λ) · ∏<sub>i</sub> p<sup>(i)</sup>(a<sup>(i)</sup> | s<sup>(i)</sup>)</em>
-</p>
-<p align="justify">
-  where <em>p<sup>(i)</sup></em> is the single-agent diffusion policy for agent <em>i</em> (learned from single-agent data), and <em>J</em> is the user-defined multi-agent cost function that penalizes deviations from desired multi-agent behavior.
-</p>
-
-<hr/>
-<h2 align="center"><u>Task: Out-of-Reach Manipulation</u></h2>
-<div class="row">
-  <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/rollout.png' %}" width="100%">
-  </div>
-</div>
-<p align="justify">
-  <b>Qualitative example of the closed-loop behavior of CoDi.</b>
-  Two 7-DoF Franka arms are placed at opposite ends of a wide table.
-  The dimensions of the table (width 1.8m, depth 1.2m) are such that no single robot can reach across the entire table.
-  The task requires both robots to collaboratively move the object (a red cube) to the goal location (marked by a green star).
-</p>
-<p align="justify">
-  In this example, the goal is not reachable for the right robot.
-  CoDi causes the right robot to pick up the object and place it at an intermediate location reachable by the left robot, which then completes the task.
-  <b>Notably, object handovers are not part of single-agent demonstrations—CoDi discovers new collaboration strategies not present in the original training data.</b>
-</p>
-
-<hr/>
-<h2 align="center"><u>Results</u></h2>
-<p align="justify">
-  We compare CoDi against <b>Multi-Agent Classifier-Guidance (MACG)</b>, which applies vanilla classifier-guidance to a multi-agent diffusion policy trained directly on multi-agent demonstrations.
-  Both methods are trained on the same amount of data.
-</p>
-
-<div class="row">
-  <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/completion_times_ecdf.png' %}" width="100%">
-    <p align="center"><b>Task Completion Time</b>: CoDi completes tasks faster.</p>
-  </div>
-  <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/min_box_distances_ecdf.png' %}" width="100%">
-    <p align="center"><b>Manipulation Accuracy</b>: CoDi achieves better goal accuracy.</p>
+<h2 align="center">Results</h2>
+<div class="card border-secondary mb-4">
+  <div class="card-header fw-bold">Key Takeaways</div>
+  <div class="card-body">
+    <ul class="mb-0">
+      <li><b>(C1)</b> CoDi discovers object-handover strategies from single-agent demonstrations alone — no multi-agent data required.</li>
+      <li><b>(C2)</b> CoDi is robust enough for real-hardware deployment and generalizes to unseen objects.</li>
+      <li><b>(C3)</b> CoDi outperforms methods trained on multi-agent demonstrations at the same data budget, using cheaper single-agent data that also transfers better when data is scarce.</li>
+      <li><b>(C4)</b> Joint guidance is critical: independently guiding single-agent policies leads to arm collisions and task failures.</li>
+      <li><b>(C5)</b> The sampling-based guidance estimator is necessary — classifier guidance fails when applied to independently pre-trained single-agent policies.</li>
+      <li><b>(C6)</b> The cost function must supply the coordination signal absent from single-agent demonstrations; a simplified cost degrades CoDi but not a jointly trained baseline.</li>
+    </ul>
   </div>
 </div>
 
+<h2 align="center">Hardware Experiments</h2>
+<div class="row g-1">
+  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/001.jpg' %}" width="100%"></div>
+  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/002.jpg' %}" width="100%"></div>
+  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/003.jpg' %}" width="100%"></div>
+  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/004.jpg' %}" width="100%"></div>
+  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/005.jpg' %}" width="100%"></div>
+</div>
 <p align="justify">
-  <b>Key findings:</b>
-  <ul>
-    <li><b>CoDi learns multi-agent policies while pre-training only on single-agent data.</b></li>
-    <li><b>CoDi discovers new collaboration strategies</b> (such as object handovers) not present in the original single-agent demonstrations.</li>
-    <li><b>CoDi generates more efficient and accurate manipulation policies</b> than baselines that directly rely on multi-agent demonstrations, given the same amount of data.</li>
-  </ul>
-</p>
-<p align="justify">
-  These results suggest that—by learning manipulation skills in the smaller single-agent state-action space—CoDi makes use of the training data more efficiently than methods that require multi-agent demonstrations.
+  We deploy CoDi on two 7-DoF Franka Research 3 arms placed at opposite ends of a table (1.8 m wide × 1.2 m deep) — wide enough that no single arm can reach across.
+  CoDi guides the left arm to pick up the cube and place it at an intermediate location reachable by the right arm, which then completes the task by placing the cube at the goal (green star).
+  <b>(C1) Object handovers are not present in the single-agent training data</b> — CoDi discovers this collaboration strategy by composing the individual manipulation skills through the multi-agent cost function.
+  The supplementary video also includes examples where the cube is replaced with other objects, demonstrating <b>(C2)</b> robustness of the learned behavior beyond the training conditions.
 </p>
 
 <hr/>
-<h2 align="center"><u>Cost Function Design</u></h2>
+<h2 align="center">Simulation Results</h2>
+
+<h4>CoDi is more data-efficient than methods requiring multi-agent demonstrations (C3)</h4>
 <p align="justify">
-  The cost function used for guidance takes the form of a weighted sum of cost components:
+  We compare CoDi (trained on single-agent data only) against four baselines that use multi-agent demonstration data: classifier-guided diffusion (CG-Joint), diffusion policy mirror descent (DPMD-Joint), stochastic diffusion actor-critic (SDAC-Joint), and expert policy optimization (EXPO-Joint).
+  Despite the less informative training data, CoDi achieves better task efficiency and manipulation accuracy than all baselines.
+  As an additional ablation, applying our guidance scheme to a <em>joint</em> base policy (CoDi-Joint) also improves performance but falls short of CoDi with single-agent pre-training — confirming that the single-agent state-action space yields better manipulation skills per demonstration.
 </p>
-<p align="center">
-  <em>J(s, a) = J<sub>goal</sub>(s, a) + J<sub>collision</sub>(s, a) + J<sub>engage</sub>(s, a)</em>
-</p>
+<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_joint.jpg' %}" class="codi-legend">
+<div class="row">
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_joint.jpg' %}" class="codi-plot">
+    <p align="center">Task efficiency</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_joint.jpg' %}" class="codi-plot">
+    <p align="center">Manipulation accuracy</p>
+  </div>
+</div>
 <p align="justify">
-  where:
-  <ul>
-    <li><b>J<sub>goal</sub></b> measures the distance of the object from the goal resulting from applying action-sequence <em>a</em> from state <em>s</em>.</li>
-    <li><b>J<sub>collision</sub></b> is a binary indicator, equal to one if end-effectors are closer than a given safety distance.</li>
-    <li><b>J<sub>engage</sub></b> measures the distance of the closer robot to the object, encouraging engagement with the task.</li>
-  </ul>
+  We further study the sensitivity to demonstration data density.
+  Training CoDi on only 20% of the single-agent data still achieves a task success rate close to CG-Joint trained on the <em>full</em> multi-agent dataset (88% vs. 92%), while substantially outperforming CG-Joint trained on the same reduced multi-agent dataset (54% success rate).
+  This highlights that single-agent demonstrations — which are far cheaper to collect — transfer more efficiently to the multi-agent setting.
 </p>
+<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_data_density.jpg' %}" class="codi-legend">
+<div class="row">
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_data_density.jpg' %}" class="codi-plot">
+    <p align="center">Task efficiency</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_data_density.jpg' %}" class="codi-plot">
+    <p align="center">Manipulation accuracy</p>
+  </div>
+</div>
+
+<h4>Joint guidance is critical for safe coordination (C4)</h4>
 <p align="justify">
-  The demonstration data only encodes knowledge of the base <em>skills</em> (picking and placing objects); not of the exact task to be performed (where the object should be placed).
-  Instead, the task-specific information is encoded in the cost function.
-  This enables using the same base policy for multiple different tasks.
+  A key design choice is that CoDi generates <em>joint</em> actions for all robots simultaneously, rather than guiding each robot independently.
+  Without joint guidance (CoDi-Indep.), robots can fail to coordinate: both arms attempt to reach the cube at the same time, leading to arm collisions and task failures.
+  Joint guidance eliminates this failure mode by explicitly accounting for inter-agent interactions through the collision-avoidance and engagement cost components.
 </p>
+<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_product.jpg' %}" class="codi-legend">
+<div class="row">
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_product.jpg' %}" class="codi-plot">
+    <p align="center">Task efficiency</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_product.jpg' %}" class="codi-plot">
+    <p align="center">Manipulation accuracy</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_inter_arm_distances_ecdf_product.jpg' %}" class="codi-plot">
+    <p align="center">Safety (inter-arm distance)</p>
+  </div>
+  <div class="col-md-6 d-flex align-items-center">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/codi-indep-collision.png' %}" width="100%">
+  </div>
+</div>
+<p align="center">Independent guidance failure: both arms reach for the cube simultaneously, causing a collision.</p>
+
+<h4>The guidance estimator matters when composing single-agent policies (C5)</h4>
+<p align="justify">
+  We compare our sampling-based guidance estimator against applying vanilla classifier guidance to the product-of-marginals base policy (CG-Product).
+  While classifier guidance works reasonably well when the base policy already encodes coordination (as in the joint baseline setting), it fails when applied to independently pre-trained single-agent policies.
+  The product-of-marginals policy exhibits a larger tilt relative to the coordinated target distribution, making the learned cost model a poor guide.
+  Our sampling-based estimator bridges this gap without requiring an additional trained cost model.
+</p>
+<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_guidance_variants.jpg' %}" class="codi-legend">
+<div class="row">
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_guidance_variants.jpg' %}" class="codi-plot">
+    <p align="center">Task efficiency</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_guidance_variants.jpg' %}" class="codi-plot">
+    <p align="center">Manipulation accuracy</p>
+  </div>
+</div>
+
+<h4>The cost function must compensate for the coordination gap in single-agent data (C6)</h4>
+<p align="justify">
+  We isolate the role of the guidance cost by evaluating a simplified variant that retains only the goal term, removing the collision-avoidance and engagement components.
+  CoDi with single-agent base policies degrades substantially under this simplified cost, whereas a joint base policy trained on multi-agent demonstrations remains largely unaffected.
+  This confirms the complementary roles of demonstrations and the cost function: when coordination is not present in the training data, the cost must explicitly supply it.
+</p>
+<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_simple_cost.jpg' %}" class="codi-legend">
+<div class="row">
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_simple_cost.jpg' %}" class="codi-plot">
+    <p align="center">Task efficiency</p>
+  </div>
+  <div class="col-md-6">
+    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_simple_cost.jpg' %}" class="codi-plot">
+    <p align="center">Manipulation accuracy</p>
+  </div>
+</div>
 
 <hr/>
-<h2 align="center"><u>Limitations & Future Work</u></h2>
-<p align="justify">
-  Despite these promising results, several limitations suggest directions for future work:
-  <ul>
-    <li><b>Simulator dependency:</b> The current approach requires evaluating the joint effect of all agents' actions on the future environment state. In our manipulation example, this requires a simulator to assess the cost function. Although our offline score estimator mitigates computational cost, such a simulator may not always be available.</li>
-    <li><b>Cost function design:</b> While our proposed online score estimator facilitates rapid evaluation of a given cost design, specifying an appropriate cost function remains challenging.</li>
-    <li><b>Cooperative assumption:</b> We assume fully cooperative behavior, requiring all players to optimize the same cost function. Future work should explore non-cooperative settings with distinct costs.</li>
-  </ul>
-</p>
-<p align="justify">
-  These limitations motivate future research into learning the guidance term directly from a <em>small</em> number of multi-agent demonstrations, thereby eliminating the need to define the multi-agent cost function explicitly.
-</p>
+<h2 align="center">Limitations &amp; Future Work</h2>
+<ul>
+  <li><b>Using available multi-agent data:</b> This work studies the extreme case of <em>no</em> multi-agent demonstrations. In practice, some such data may exist. How to combine it with single-agent demonstrations — e.g., for fine-tuning the base policy or learning the guidance term directly — is a natural next step.</li>
+  <li><b>Centralized execution:</b> CoDi coordinates agents centrally at test time. Distilling the resulting joint policy into a decentralized one is an important direction for deployment in settings where communication is limited.</li>
+  <li><b>Cooperative assumption:</b> CoDi assumes all agents optimize a shared cost. Extending the framework to non-cooperative settings with distinct per-agent objectives is an open avenue for future work.</li>
+</ul>
