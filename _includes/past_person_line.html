@@ -2,10 +2,13 @@
 </strong>
 <span class="strong"> {{ person.title }}: </span>
 <span class="me-lg-2">{{ include.person.content | markdownify | remove: '<p>' | remove: '</p>' }} </span>
+{% if include.person.now_at %}
+<span class="me-lg-2">Now: {{ include.person.now_at }}</span>
+{% endif %}
 {% if include.person.links %}
 <div class="d-inline-flex gap-2">
     {% for link in include.person.links %}
-    <a href="{{ link.url }}" target="_blank">{{ link.name }},</a>
+    <a href="{{ link.url }}" target="_blank">{{ link.name }}{% unless forloop.last %},{% endunless %}</a>
     {% endfor %}
 </div>
 {% endif %}
