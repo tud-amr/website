@@ -17,7 +17,7 @@ people: # If you put your name in the same way you have it in your _people entry
       extra_info: PhD candidate
     - name: Andreu Matoses Gimenez
       extra_info: PhD candidate
-    - name: Dr. Clarence Chen
+    - name: Dr. Gang (Clarence) Chen
       extra_info: Postdoctoral researcher
     - name: Max Spahn
       extra_info: Postdoctoral researcher
@@ -39,9 +39,25 @@ people: # If you put your name in the same way you have it in your _people entry
 
 INTERACT aims to equip mobile robots with the ability to navigate and operate safely in human-populated environments. Leveraging advancements in motion planning, multi-robot task assignment, and machine learning, this project seeks to overcome the challenges of modeling intuition and ensuring safety in complex, uncertain settings. By developing intuitive models from past interactions and integrating them into novel optimization methods, INTERACT will enable robots to perform seamless, interaction-aware navigation and task planning. This foundational work paves the way for a new era of automation in both industrial and urban settings, where robots and humans can coexist harmoniously.
 
-One recent contribution from this project has been development of task and motion planning (TAMP) algorithms which are used in robotic systems to autonomously decide the high-level actions along with the associated motions. Previous research into TAMP algorithms have several simplifications and often do not account for robot dynamics or issues with low-level controllers. This project uses GPU based physics simulators to find high-quality realizations which can be directly implemented in the real system as it accounts for robot dynamics. Experimental results validated the effectiveness of this algorithm for a pick and place task while finding low-cost feasible solutions in 1-2 minutes. 
+INTERACT works mainly on three parts: 1) Perception of the dynamic and open-world environment; 2) Task and motion planning (rename, Andreu); 3) Motion planning and control (rename, Saray).
 
-Another problem addressed in this project is that of real-time motion planning for multiple robotic manipulators in close proximity of each other. A novel method called multi-robot dynamics fabrics(MRDF) is developed which uses dynamic fabrics that rely on differential equations to solve for local motion planning. This method enables higher replanning frequencies and makes it useful for complex systems in dynamic environments. An online local motion planning algorithm is built that can enable multiple manipulators to operate in a shared workspace. The method is then validated in several pick-and-place scenarios obtaining high success rates and a real-time performance.   
+
+### Perception of the dynamic and open-world environment
+The perception system consists of a local mapping layer and a global mapping layer. The local mapping layer focuses on modeling ego-centric local environments under highly dynamic conditions, where moving entities such as pedestrians continuously change the scene structure. To address this challenge, we first proposed a particle-based occupancy representation named the [DSP Map](https://autonomousrobots.nl/assets/files/publications/23-chen-tro.pdf), which models dynamic environments from RGB-D point cloud observations. The DSP Map is built upon Random Finite Set (RFS) theory and the Sequential Monte Carlo Probability Hypothesis Density (SMC-PHD) filter, enabling unified probabilistic modeling of dynamic objects with arbitrary shapes. To further improve robustness and reconstruction accuracy, we extended this framework by incorporating semantic information and proposed the [Semantic-DSP Map](https://autonomousrobots.nl/assets/files/publications/23-chen-tro.pdf). The method introduces an S2MC-PHD filter that jointly handles uncertainty from both depth observations and semantic predictions, enabling more reliable dynamic environment representation in complex real-world scenes.
+
+The global mapping layer focuses on open-world object recognition and long-term environment representation. We proposed [OpenSGA](https://autonomousrobots.nl/paper_websites/opensga), a framework for constructing 3D scene graphs from posed RGB-D observations. Building upon these scene graphs, we developed a graph alignment framework based on Graph Neural Networks (GNNs) and attention mechanisms to establish object correspondences across different observations. This enables the system to re-recognize previously observed objects by jointly leveraging open-set visual-semantic features and contextual scene relationships.
+
+### Task and motion planning (rename, Andreu)
+
+
+### Motion planning and control (rename, Saray)
+
+
+We also model interactions between agents with game theory. Details can be found [here](https://autonomousrobots.nl/projects/game-theoretic-mp).
+
+<!-- One recent contribution from this project has been development of task and motion planning (TAMP) algorithms which are used in robotic systems to autonomously decide the high-level actions along with the associated motions. Previous research into TAMP algorithms have several simplifications and often do not account for robot dynamics or issues with low-level controllers. This project uses GPU based physics simulators to find high-quality realizations which can be directly implemented in the real system as it accounts for robot dynamics. Experimental results validated the effectiveness of this algorithm for a pick and place task while finding low-cost feasible solutions in 1-2 minutes. 
+
+Another problem addressed in this project is that of real-time motion planning for multiple robotic manipulators in close proximity of each other. A novel method called multi-robot dynamics fabrics(MRDF) is developed which uses dynamic fabrics that rely on differential equations to solve for local motion planning. This method enables higher replanning frequencies and makes it useful for complex systems in dynamic environments. An online local motion planning algorithm is built that can enable multiple manipulators to operate in a shared workspace. The method is then validated in several pick-and-place scenarios obtaining high success rates and a real-time performance.    -->
 
 
 
