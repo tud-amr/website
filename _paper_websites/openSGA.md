@@ -22,7 +22,7 @@ affiliations:
   - name: "ETH Zurich"
     superscript: "3"
     # url: "https://www.cs.cmu.edu/"
-release_date: 2025-03-10 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
+release_date: 2026-03-10 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
   - name: Paper (arXiv)
     icon: bi-file-earmark-pdf
