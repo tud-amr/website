@@ -47,8 +47,57 @@ The perception system consists of a local mapping layer and a global mapping lay
 
 The global mapping layer focuses on open-world object recognition and long-term environment representation. We proposed [OpenSGA](https://autonomousrobots.nl/paper_websites/opensga), a framework for constructing 3D scene graphs from posed RGB-D observations. Building upon these scene graphs, we developed a graph alignment framework based on Graph Neural Networks (GNNs) and attention mechanisms to establish object correspondences across different observations. This enables the system to re-recognize previously observed objects by jointly leveraging open-set visual-semantic features and contextual scene relationships.
 
-### Task and motion planning (rename, Andreu)
+### Task and motion planning
 
+We develop task and motion planning (TAMP) algorithms that enable robotic systems to autonomously decide high-level actions along with the associated motions. Previous research into TAMP algorithms has several simplifications and often does not account for robot dynamics or limitations of low-level controllers. This project uses GPU-based physics simulators to find high-quality and low-cost realizations that can be directly implemented on the real system, as they account for complex interactions with the environment. More information can be found in the related publication: [Parallel Realization of Task and Motion Plans](https://autonomousrobots.nl/assets/files/publications/26-matoses-ral.pdf).
+
+Two examples are shown below: (1) a pick-and-place problem (move, pick, move, place, move) with a central obstacle that can yield more efficient solutions, and (2) a move-and-push problem where the robot must find the best way to push a stick with an object on top so that it reaches its symbolic goal (inside the box).
+
+<div class="row g-4 align-items-start mt-2 mb-5">
+  <div class="col-12">
+    <h5 class="mb-3">(1) Pick and place</h5>
+  </div>
+  <div class="col-12 col-md-6">
+    <h6 class="mb-1">Simulation</h6>
+    <p class="small text-muted mb-2">Cross-entropy evolution and simulated solution for two different obstacles.</p>
+    <div class="ratio ratio-16x9">
+      <video controls muted autoplay loop playsinline preload="metadata">
+        <source src="{{ '/assets/images/papers/26-matoses-ral/p_and_p_ce_sim.mp4' | relative_url }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h6 class="mb-1">Real robot</h6>
+    <p class="small text-muted mb-2">Real-robot execution.</p>
+    <div class="ratio ratio-16x9">
+      <video controls muted autoplay loop playsinline preload="metadata">
+        <source src="{{ '/assets/images/papers/26-matoses-ral/x3_PandP_real_ramp_lowres.mp4' | relative_url }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+
+  <div class="col-12 mt-3">
+    <h5 class="mb-3">(2) Move and push</h5>
+  </div>
+  <div class="col-12 col-md-6">
+    <h6 class="mb-1">Simulation</h6>
+    <p class="small text-muted mb-2">Cross-entropy evolution for two stick locations and simulated solution.</p>
+    <div class="ratio ratio-16x9">
+      <video controls muted autoplay loop playsinline preload="metadata">
+        <source src="{{ '/assets/images/papers/26-matoses-ral/push_ce_sim.mp4' | relative_url }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <div class="col-12 col-md-6">
+    <h6 class="mb-1">Real robot</h6>
+    <p class="small text-muted mb-2">Real-robot execution.</p>
+    <div class="ratio ratio-16x9">
+      <video controls muted autoplay loop playsinline preload="metadata">
+        <source src="{{ '/assets/images/papers/26-matoses-ral/x3_push_real_stick_on_right_lowres.mp4' | relative_url }}" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
 
 ### Motion planning and control (rename, Saray)
 
