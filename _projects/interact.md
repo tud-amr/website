@@ -62,7 +62,7 @@ Two examples are shown below: (1) a pick-and-place problem (move, pick, move, pl
     <p class="small text-muted mb-2">Cross-entropy evolution and simulated solution for two different obstacles.</p>
     <div class="ratio ratio-16x9">
       <video controls muted autoplay loop playsinline preload="metadata">
-        <source src="{{ '/assets/images/papers/26-matoses-ral/p_and_p_ce_sim.mp4' | relative_url }}" type="video/mp4">
+        <source src="{{ '/assets/images/papers/26-matoses-ral/p_and_p_ce_sim_lowres.mp4' | relative_url }}" type="video/mp4">
       </video>
     </div>
   </div>
@@ -84,7 +84,7 @@ Two examples are shown below: (1) a pick-and-place problem (move, pick, move, pl
     <p class="small text-muted mb-2">Cross-entropy evolution for two stick locations and simulated solution.</p>
     <div class="ratio ratio-16x9">
       <video controls muted autoplay loop playsinline preload="metadata">
-        <source src="{{ '/assets/images/papers/26-matoses-ral/push_ce_sim.mp4' | relative_url }}" type="video/mp4">
+        <source src="{{ '/assets/images/papers/26-matoses-ral/push_ce_sim_lowres.mp4' | relative_url }}" type="video/mp4">
       </video>
     </div>
   </div>
