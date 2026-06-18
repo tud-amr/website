@@ -25,20 +25,20 @@ affiliations:
     url: "https://tudelft.nl"
   - name: "Equal Contributions"
     superscript: "*"
-  release_date: 2026-03-06 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
-  links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-    - name: Paper (arXiv)
-      icon: bi-file-earmark-pdf
-      url: "https://arxiv.org/abs/2511.16949"
-    - name: Code (coming soon)
-      icon: bi-github
-      url: "https://github.com/tud-amr/MobileOcc"
-    - name: Dataset
-      icon: bi-github
-      url: "https://github.com/tud-amr/MobileOcc" # TODO: replace with dataset link
-  related_project_id: "interact"
-  # hidden: true # Only accessible via direct link, not listed or indexed
-  sitemap: false # Exclude from sitemap
+release_date: 2026-03-06 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
+links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
+  - name: Paper (arXiv)
+    icon: bi-file-earmark-pdf
+    url: "https://arxiv.org/abs/2511.16949"
+  - name: Code (coming soon)
+    icon: bi-github
+    url: "https://github.com/tud-amr/MobileOcc"
+  - name: Dataset
+    icon: bi-github
+    url: "https://github.com/tud-amr/MobileOcc" # TODO: replace with dataset link
+related_project_id: "interact"
+# hidden: true # Only accessible via direct link, not listed or indexed
+sitemap: false # Exclude from sitemap
 ---
 
 <style>
