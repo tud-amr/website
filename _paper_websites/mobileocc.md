@@ -19,12 +19,12 @@ authors:
   - name: "Javier Alonso-Mora"
     url: "https://autonomousrobots.nl/people/"
     superscript: "1"
-  affiliations:
-    - name: "TU Delft"
-      superscript: "1"
-      url: "https://tudelft.nl"
-    - name: "Equal Contributions"
-      superscript: "*"
+affiliations:
+  - name: "TU Delft"
+    superscript: "1"
+    url: "https://tudelft.nl"
+  - name: "Equal Contributions"
+    superscript: "*"
   release_date: 2026-03-06 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
   links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
     - name: Paper (arXiv)
