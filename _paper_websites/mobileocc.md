@@ -34,8 +34,8 @@ links: # If you have other website for the project, github repos, datasets, etc.
     icon: bi-github
     url: "https://github.com/tud-amr/MobileOcc"
   - name: Dataset
-    icon: bi-github
-    url: "https://github.com/tud-amr/MobileOcc" # TODO: replace with dataset link
+    icon: bi-database
+    url: "https://doi.org/10.4121/6bc25605-aa0f-4a1e-a289-0267c71c1d7e"
 related_project_id: "interact"
 # hidden: true # Only accessible via direct link, not listed or indexed
 sitemap: false # Exclude from sitemap
@@ -64,7 +64,7 @@ sitemap: false # Exclude from sitemap
 <!-- <h2 align="center"><u>Overview</u></h2> -->
   <div class="row justify-content-center">
     <div class="col-8 col-md-6">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/first_figure.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/first_figure.png' %}" width="100%">
     </div>
   </div>
 
@@ -74,7 +74,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/pipeline.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pipeline.png' %}" width="100%">
     </div>
   </div>
 
@@ -83,7 +83,7 @@ sitemap: false # Exclude from sitemap
   </p>
 
 <p align="justify">
-  Our main **contributions** include:
+  Our main <b>contributions</b> include:
   </p>
   <p align="justify">
   (1) We introduce <b>MobileOcc</b>, a 3D semantic occupancy prediction dataset built on raw sensor data from the UT Campus Object Dataset (CODa) for mobile robots navigating among near-field pedestrians.
@@ -119,12 +119,12 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/occ_compare1.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/occ_compare1.png' %}" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/occ_compare2.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/occ_compare2.png' %}" width="100%">
     </div>
   </div>
   <p align="justify">
@@ -137,17 +137,17 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/pano1.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pano1.png' %}" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/pano2.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pano2.png' %}" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/pano3.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pano3.png' %}" width="100%">
     </div>
   </div>
   <p align="justify">
@@ -160,22 +160,20 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/flow1.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow1.png' %}" width="100%">
     </div>
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/flow2.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow2.png' %}" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/flow3.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow3.png' %}" width="100%">
     </div>
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/paper/mobileocc/flow4.png' %}" width="100%">
+      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow4.png' %}" width="100%">
     </div>
   </div>
   <p align="justify">
   Pedestrian velocity prediction using Panoptic-FlashOcc-vel (8f). Each panel shows the stereo-left input, ground-truth velocity, and predicted velocity. The model produces plausible velocities for most pedestrians while exhibiting typical failure cases, such as confusion between forward and backward walking directions.
   </p>
-</content>
-</invoke>

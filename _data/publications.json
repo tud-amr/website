@@ -1,5 +1,34 @@
 [
     {
+        "title": "MobileOcc: A Human-Aware Semantic Occupancy Dataset for Mobile Robots",
+        "authors": [
+            "Junseo Kim",
+            "Guido Dumont",
+            "Xinyu Gao",
+            "Gang Chen",
+            "Holger Caesar",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2026-03-06",
+        "type": "conference",
+        "venue": "European Conference on Computer Vision (ECCV)",
+        "links": [
+            {
+                "pdf": "https://arxiv.org/pdf/2511.16949",
+                "web": "/paper_websites/mobileocc",
+                "dataset": "https://doi.org/10.4121/6bc25605-aa0f-4a1e-a289-0267c71c1d7e"
+            }
+        ],
+        "image": "/assets/images/papers/mobileocc/first_figure.png",
+        "belongs_to_projects": [
+            "interact"
+        ],
+        "topics":[
+            "occupancy prediction", "dataset", "perception"
+        ],
+        "abstract": "Dense 3D semantic occupancy perception is critical for mobile robots operating in pedestrian-rich environments, yet it remains underexplored compared to its application in autonomous driving. To address this gap, we present MobileOcc, a semantic occupancy dataset for mobile robots operating in crowded human environments. Our dataset is built using an annotation pipeline that incorporates static object occupancy annotations and a novel mesh optimization framework explicitly designed for human occupancy modeling. It reconstructs deformable human geometry from 2D images and subsequently refines and optimizes it using associated LiDAR point data. Using MobileOcc, we establish benchmarks for two tasks: i) occupancy prediction and ii) pedestrian velocity prediction, using different methods, including monocular, stereo, and panoptic occupancy, with metrics and baseline implementations for reproducible comparison. Beyond occupancy prediction, we further assess our annotation method on 3D human pose estimation datasets, where results demonstrate robust performance across different datasets."
+    },
+    {
         "title": "Cross-Entropy Optimization of Physically Grounded Task and Motion Plans",
         "authors": [
             "Andreu Matoses Gimenez",
