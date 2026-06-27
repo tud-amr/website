@@ -36,6 +36,9 @@ links: # If you have other website for the project, github repos, datasets, etc.
   - name: Dataset
     icon: bi-database
     url: "https://doi.org/10.4121/6bc25605-aa0f-4a1e-a289-0267c71c1d7e"
+  - name: Supplementary
+    icon: bi-file-earmark-text
+    url: "/assets/files/publications/mobileocc_supplementary.pdf"
 related_project_id: "interact"
 # hidden: true # Only accessible via direct link, not listed or indexed
 sitemap: false # Exclude from sitemap
