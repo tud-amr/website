@@ -1,10 +1,10 @@
 ---
-title: Actuator Dynamic Compensator for Incremental Nonlinear Control
+title: Visual-Servoing for an Under-Actuated Aerial Manipulator
 direct_supervisors: 
     - name: Dr. Sihao Sun 
       url: "https://sihaosun.github.io/"
 # If you want to use this webiste as the proposal document, comment the proposal_document, just write in the body of the document with markdown
-proposal_document: /assets/files/student_projects/msc_24_sihao_actuator.pdf
+proposal_document: /assets/files/student_projects/msc_25_sihao_visual_servoing.pdf
 display: true # Do you want to display this project in the table? (true/false)
 ---
 
