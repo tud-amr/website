@@ -24,9 +24,9 @@ affiliations:
   #   superscript: "*"
 release_date: 2026-06-15 # publication or relevant date, approximated if not sure. Just for display purposes and ordering.
 links: # If you have other website for the project, github repos, datasets, etc. put it here. You can also add an icon from https://icons.getbootstrap.com/
-  - name: Paper (arXiv)
+  - name: Paper
     icon: bi-file-earmark-pdf
-    url: "https://arxiv.org/abs/2602.06925"
+    url: "/assets/files/publications/26-papuc-ral.pdf"
   - name: Code
     icon: bi-github
     url: "https://github.com/andrejcarlo/ral26_strategizing_at_speed/"
@@ -109,3 +109,9 @@ lemniscate track. <b>(I)</b> Zero-shot win rates for the real-world flight tourn
 for all methods. <b>(K)</b> Low level system latencies distributions encountered during real-life experiments. <b>(L)</b> Vizualization of a single real-life
 lap of <b>LMPG</b>-<b>GEN</b> deployed zero-shot vs <b>MPC</b> (sopt) on the trefoil track.</small></p>
 </div>
+
+
+<h2 align="center"><u>Acknowledgments</u></h2>
+<p align="justify">
+  This work was supported by the Office of Naval Research Global under Grant N62909-25-12027 (Project SECURE) and by the Dutch Research Council (NWO) under Grant no. 20256 (Project Accurate Aerial Manipulation).
+</p>

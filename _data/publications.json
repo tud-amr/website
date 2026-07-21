@@ -13,7 +13,7 @@
         "venue": "IEEE Robotics and Automation Letters (RA-L)",
         "links": [
             {
-                "pdf": "https://arxiv.org/abs/2602.06925",
+                "pdf": "/assets/files/publications/26-papuc-ral.pdf",
                 "web": "/paper_websites/sas-drone-racing",
                 "video": "https://youtu.be/JalS5aQ7LWA",
                 "code": "https://github.com/andrejcarlo/ral26_strategizing_at_speed/",
