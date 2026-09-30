@@ -23,6 +23,35 @@
         "abstract": "The driving behavior of autonomous vehicles is typically governed by the cost function of their motion planner, which encodes objectives such as speed tracking, smoothness, lane keeping, and collision avoidance. However, tuning the parameters that shape this cost function is a challenging task that requires technical expertise, limiting the vehicle's ability to adapt to evolving traffic scenarios or end-user preferences. This work presents a language-driven framework for adaptive cost design in autonomous driving. A Large Language Model (LLM) interprets structured scenario descriptions and natural language user queries to generate the parameters applied to a risk-aware Model Predictive Path Integral (MPPI) controller. The system incorporates a human-in-the-loop validation stage in which the proposed behavioral changes are described in non-technical language and confirmed prior to deployment. Users may additionally provide feedback either before or after deployment, enabling iterative refinement of the vehicle's motion behavior. The framework is evaluated across multiple queries in realistic driving scenarios to assess its effectiveness. Simulation results demonstrate that our method successfully induces behavioral changes that align with the intended requirements in an intuitive manner, thereby bridging the gap between intelligent vehicle control systems and end users."
     },
     {
+        "title": "Automatic Personalized Limbed Robot Design from Media Inputs",
+        "authors": [
+            "Gang Chen",
+            "Moji Shi",
+            "Yu Xing",
+            "Marija Popovic",
+            "Javier Alonso-Mora",
+            "Lei Zhang",
+            "Jiangmiao Pang"
+        ],
+        "date": "2026-06-09",
+        "type": "journal",
+        "venue": "npj Robotics",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/26-chen-npj-robotics.pdf",
+                "code": "https://github.com/g-ch/anything2robot"
+            }
+        ],
+        "image": "/assets/images/papers/26-chen-npj-robotics/cover.png",
+        "belongs_to_projects": [
+            "secure"
+        ],
+        "topics":[
+            "automatic robot design"
+        ],
+        "abstract": "Designing limbed robots is a complex, multidisciplinary task that typically requires substantial effort from experienced engineers. In this paper, we present a novel automatic robot design framework based on Decomposition-Optimization-Assembling (DOA) to address this challenge. Our framework enables non-experts to create personalized limbed robot designs from media inputs, such as text and images, within minutes to a few hours. Our system leverages recent advances in generative AI and 3D printing to produce designs that match the descriptions provided in the input media. The output consists of selected motors and 3D-printable mechanical components that can be assembled into a limbed robot. To handle the large design space and intricate details in fabrication and assembly, we formulate and solve a series of optimization problems involving actuators, geometry, and structural density. We validate the proposed system by designing and fabricating a centaur robot based on an image input. Furthermore, we demonstrate the system's versatility and effectiveness through the generation of a wide variety of limbed robot designs."
+    },
+    {
         "title": "Strategizing at Speed: A Learned Model Predictive Game for Multi-Agent Drone Racing",
         "authors": [
             "Andrei-Carlo Papuc",
@@ -45,7 +74,7 @@
         ],
         "image": "/assets/images/papers/26-papuc-ral/cover.jpg",
         "belongs_to_projects": [
-            "secure"
+            "none"
         ],
         "topics":[
             "multi-robot systems", "motion planning", "flying-robots"
@@ -107,6 +136,31 @@
             "task planning", "motion planning", "mobile-manipulation"
         ],
         "abstract": "Autonomously performing tasks often requires robots to plan high-level discrete actions and continuous low-level motions to realize them. Previous TAMP algorithms have focused mainly on computational performance, completeness, or optimality by making the problem tractable through simplifications and abstractions. However, this comes at the cost of the resulting plans potentially failing to account for the dynamics or complex contacts necessary to reliably perform the task when object manipulation is required. Additionally, approaches that ignore effects of the low-level con- trollers may not obtain optimal or feasible plan realizations for the real system. We investigate the use of a GPU-parallelized physics simulator to compute realizations of plans with motion controllers, explicitly accounting for dynamics, and considering contacts with the environment. Using cross-entropy optimization, we sample the parameters of the controllers, or actions, to obtain low-cost solutions. Since our approach uses the same controllers as the real system, the robot can directly execute the computed plans. We demonstrate our approach for a set of tasks where the robot is able to exploit the environment's geometry to move an object "
+    },
+    {
+        "title": "Building Explicit World Model for Zero-Shot Open-World Object Manipulation",
+        "authors": [
+            "Xiaotong Li",
+            "Gang Chen",
+            "Javier Alonso-Mora"
+        ],
+        "date": "2026-03-14",
+        "type": "conference",
+        "venue": "arXiv",
+        "links": [
+            {
+                "pdf": "/assets/files/publications/26-li-arxiv.pdf",
+                "web": "https://bojack-bj.github.io/projects/world-model-manipulation/"
+            }
+        ],
+        "image": "/assets/images/papers/26-chen-npj-robotics/grasp.png",
+        "belongs_to_projects": [
+            "interact"
+        ],
+        "topics":[
+            "motion planning", "mobile-manipulation"
+        ],
+        "abstract": "Open-world object manipulation remains a fundamental challenge in robotics. While Vision-Language-Action (VLA) models have demonstrated promising results, they rely heavily on large-scale robot action demonstrations, which are costly to collect and can hinder out-of-distribution generalization. In this paper, we propose an explicit-world-model-based framework for open-world manipulation that achieves zero-shot generalization by constructing a physically grounded digital twin of the environment. The framework integrates open-set perception, digital-twin reconstruction, sampling and evaluation of interaction strategies. By constructing a digital twin of the environment, our approach efficiently explores and evaluates manipulation strategies in physic-enabled simulator and reliably deploys the chosen strategy to the real world. Experimentally, the proposed framework is able to perform multiple open-set manipulation tasks without any task-specific action demonstrations, proving strong zero-shot generalization on both the task and object levels."
     },
     {
         "title": "A Vehicle System for Navigating Among Vulnerable Road Users Including Remote Operation",
