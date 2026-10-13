@@ -1,0 +1,16 @@
+// Accessibility: no serious or critical axe-core violations on pages built from the site's own
+// templates. (Paper websites and workshop pages contain authors' own HTML and are not checked here.)
+import { test, expect } from '@playwright/test';
+import AxeBuilder from '@axe-core/playwright';
+import { TEMPLATE_PAGES, stayLocal } from './helpers.js';
+
+for (const path of TEMPLATE_PAGES) {
+  test(`${path} has no serious accessibility problems`, async ({ page }) => {
+    await stayLocal(page);
+    await page.goto(path);
+    const { violations } = await new AxeBuilder({ page }).analyze();
+    const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');
+    const report = serious.map((v) => `${v.id}: ${v.help} (${v.nodes.length}x, e.g. ${v.nodes[0].target.join(' ')})`);
+    expect(report, report.join('\n')).toEqual([]);
+  });
+}

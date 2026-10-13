@@ -1,0 +1,56 @@
+# Weekly check of external links (papers, code, videos on other sites). These break on their
+# own, so they do not block pull requests; instead this opens or updates an issue listing them.
+name: External links
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npx eleventy --quiet
+
+      - name: Check external links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress --max-concurrency 8 --timeout 30 --max-retries 2
+            --accept 200..=299,403,429
+            --exclude-path _site/assets
+            --exclude '^https?://(localhost|127\.0\.0\.1)'
+            --exclude 'linkedin\.com'
+            --scheme https --scheme http
+            '_site/**/*.html'
+          output: lychee-report.md
+          fail: false
+
+      - name: Find an open issue from an earlier run
+        id: issue
+        if: steps.lychee.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: echo "number=$(gh issue list --state open --search 'Broken external links in:title' --json number --jq '.[0].number // empty')" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the issue
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          issue-number: ${{ steps.issue.outputs.number }}
+          title: Broken external links
+          content-filepath: lychee-report.md
+          labels: links

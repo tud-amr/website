@@ -16,8 +16,9 @@ const TYPES = {
 export function resolve(root, urlPath) {
   let clean;
   try { clean = decodeURIComponent(urlPath.split('?')[0]); } catch { return null; }
-  const base = path.join(root, clean);
-  if (!base.startsWith(path.resolve(root))) return null;
+  const absRoot = path.resolve(root);
+  const base = path.join(absRoot, clean);
+  if (!base.startsWith(absRoot)) return null;
   return [base, path.join(base, 'index.html'), `${base}.html`].find((p) => fs.existsSync(p) && fs.statSync(p).isFile()) || null;
 }
 

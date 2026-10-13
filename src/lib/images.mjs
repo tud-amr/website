@@ -1,8 +1,9 @@
 // Responsive images, applied to every built page.
 //
 // For each local <img> (PNG, JPEG or WebP under /assets/), this adds resized WebP copies with
-// srcset/sizes, the image's width and height (so the page does not jump while loading), and
-// lazy loading for anything that is not marked loading="eager". The original file keeps its
+// srcset/sizes, and lazy loading for anything that is not marked loading="eager". It does not
+// add width/height: content pages size images with their own CSS, and the attributes could
+// stretch them. The site's own templates set width/height where they know the layout. The original file keeps its
 // URL; the copies live in /assets/img/. GIF, SVG and external images are left as they are.
 //
 // Resized files are generated once into .cache/img/ (named by a hash of the source) and
@@ -78,13 +79,8 @@ export async function imageTransform(content) {
     if (!fs.existsSync(file)) return [tag, out];
     try {
       const files = await resize(file, /\bdata-thumbnail\b/.test(tag));
-      const largest = files[files.length - 1];
       out = setAttr(out, 'srcset', files.map((f) => `${f.url} ${f.width}w`).join(', '));
       out = setAttr(out, 'sizes', sizesFor(tag));
-      if (!attr(tag, 'width') && !attr(tag, 'height')) {
-        out = setAttr(out, 'width', largest.width);
-        out = setAttr(out, 'height', largest.height);
-      }
     } catch (e) {
       console.warn(`[images] could not resize ${src}: ${e.message}`);
     }
