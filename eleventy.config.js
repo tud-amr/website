@@ -7,7 +7,7 @@ import yaml from 'js-yaml';
 import markdownIt from 'markdown-it';
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { validateContent } from './src/lib/content.mjs';
-import { imageTransform } from './src/lib/images.mjs';
+import { imageTransform, copyResizedImages } from './src/lib/images.mjs';
 import { mediaTransform } from './src/lib/media.mjs';
 import { writeIconCss } from './src/lib/icons.mjs';
 
@@ -20,7 +20,10 @@ export default function (eleventyConfig) {
     }
   });
 
-  eleventyConfig.on('eleventy.after', ({ dir }) => { writeIconCss(dir.output); });
+  eleventyConfig.on('eleventy.after', ({ dir }) => {
+    writeIconCss(dir.output);
+    copyResizedImages(dir.output);
+  });
 
   // ---- Templates ------------------------------------------------------------------------------
   // Liquid set up to behave like Jekyll's, so existing content keeps working:
@@ -100,7 +103,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ assets: 'assets' });
   eleventyConfig.addPassthroughCopy({ 'content/CNAME': 'CNAME' });
   eleventyConfig.addPassthroughCopy({ 'src/css': 'assets/site/css', 'src/js': 'assets/site/js', 'src/fonts': 'assets/site/fonts' });
-  eleventyConfig.addPassthroughCopy({ '.cache/img': 'assets/img' });
   // Fonts and libraries are served from this site, not from Google or a CDN.
   eleventyConfig.addPassthroughCopy({
     'node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2': 'assets/vendor/bootstrap-icons/bootstrap-icons.woff2',

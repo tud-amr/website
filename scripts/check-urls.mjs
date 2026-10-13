@@ -26,6 +26,7 @@ const EXCEPTIONS = {
   '/assets/js/custom.js': 'unused script, removed',
   // Junk that was never linked.
   '/assets/images/papers/codi/ffmpeg2pass-0.log.mbtree': '64 MB video-encoder log, never linked',
+  '/assets/images/papers/codi/ffmpeg2pass-0.log': 'video-encoder log, never linked',
 };
 
 // Resolve a URL path the way GitHub Pages does.
