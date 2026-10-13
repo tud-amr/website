@@ -413,3 +413,4 @@ ul.timeline > li > p { margin-bottom: 0.25rem; }
 .bar-label { position: absolute; top: 100%; left: 0; right: 0; padding-top: 0.25rem; text-align: center; font-size: 0.75rem; color: var(--muted); }
 .stat-tables { display: grid; gap: 0 2rem; }
 @media (min-width: 992px) { .stat-tables { grid-template-columns: 1fr 1fr; } }
+.stat-tables .table { display: table; }

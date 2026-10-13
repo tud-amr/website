@@ -32,6 +32,6 @@
 <script defer src="/assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.querySelector('main'), {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}]});"></script>
 {%- endif %}
 {%- if site.goatcounter != "" and eleventy.env.runMode == "build" %}
-<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="/assets/site/js/count.js"></script>
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 {%- endif %}
 <script defer src="/assets/site/js/site.js"></script>
