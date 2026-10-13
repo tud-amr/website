@@ -279,3 +279,46 @@ _None._
 | 2010-schollig-cdc | Independent vs. Joint Estimation in Multi-Agent Iterative Learning Control |
 | 2010-alonsomora | Optimal Reciprocal Collision Avoidance for Multiple Non-Holonomic Robots |
 | 2009-alonsomora-apjqe | Numerical model for polymer electrolyte membrane fuel cells with experimental application and validation |
+
+## Typos corrected after the migration (best guesses, please check)
+
+| File | Field | Before | After | Why |
+| --- | --- | --- | --- | --- |
+| 2013-bento | venue | venue: In Advances in Neural Information Processing Systems (NIPS) | venue: Advances in Neural Information Processing Systems (NIPS) | the page already prints "In", so it showed "In In" |
+| 2015-decastro-isrr | authors | - H. Kress-Gezit | - H. Kress-Gazit | Hadas Kress-Gazit |
+| 2016-alonsomora-icra-distribformation | venue | venue: in Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (ICRA) | venue: Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA) | name was IROS but acronym and PDF name say ICRA |
+| 2017-alonsomora-iros | venue | venue: Proc. of the IEEE/RSJ Conf. on Robotics and Intelligent Systems (IROS) | venue: Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS) | IROS is "Intelligent Robots and Systems" |
+| 2017-kamel-iros | venue | venue: Proc. of the IEEE/RSJ Conf. on Robotics and Intelligent Systems (IROS) | venue: Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS) | IROS is "Intelligent Robots and Systems" |
+| 2017-liebenwein | venue | venue: in Proc. of the Int. Symp. on Robotics Research (ISRR) | venue: Proc. of the Int. Symp. on Robotics Research (ISRR) | the page already prints "In", so it showed "In in" |
+| 2017-naegeli-ral | venue | venue: in IEEE Robotics and Automation Letters, | venue: IEEE Robotics and Automation Letters, | the page already prints "In", so it showed "In in" |
+| 2018-alonsomora-auro | authors | - M. Schweger | - M. Schwager | Mac Schwager |
+| 2018-wallar-iros | venue | venue: Proc. of the IEEE/RSJ Conf. on Robotics and Intelligent Systems (IROS) | venue: Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS) | IROS is "Intelligent Robots and Systems" |
+| 2019-schwarting-pnas | authors | - A. Pearson | - A. Pierson | Alyssa Pierson, co-author of "Social behavior for autonomous vehicles" (PNAS 2019) |
+| 2019-wallar-itsc | authors | - W. Schwartig | - W. Schwarting | Wilko Schwarting |
+| 2023-casao-icra | venue | venue: in IEEE Int. Conf. on Robotics and Automation (ICRA) | venue: IEEE Int. Conf. on Robotics and Automation (ICRA) | the page already prints "In", so it showed "In in" |
+| 2023-spahn-tro | venue | venue: IIEEE Transactions on Robotics (T-RO) | venue: IEEE Transactions on Robotics (T-RO) | typo "IIEEE" |
+| 2023-trevisan-icra | venue | venue: in IEEE Int. Conf. on Robotics and Automation (ICRA) | venue: IEEE Int. Conf. on Robotics and Automation (ICRA) | the page already prints "In", so it showed "In in" |
+| 2024-degroot-tro | venue | venue: IEEE Transaction on Robotics (T-RO) | venue: IEEE Transactions on Robotics (T-RO) | "Transaction" -> "Transactions" |
+| 2024-moji-iros | topics | evlaution | evaluation | typo |
+| 2024-racp-tiv | venue | venue: IEEE Transactions on Intelliegent Vehicles (T-IV) | venue: IEEE Transactions on Intelligent Vehicles (T-IV) | typo "Intelliegent" |
+| 2024-wilde-tro-regret | venue | venue: IEEE Transaction on Robotics(T-RO) | venue: IEEE Transactions on Robotics (T-RO) | "Transaction" and missing space |
+| 2024-wilde-tro | venue | venue: IEEE Transaction on Robotics(T-RO) | venue: IEEE Transactions on Robotics (T-RO) | "Transaction" and missing space |
+| 2025-agarwal-mrs | topics | topics: [flying-robots, multi-robot systems] | topics: [flying robots, multi-robot systems] | same topic as the spelling without a hyphen |
+| 2025-benders-t-ro | links | - arXiv: | - arxiv: | button label written like on the other papers |
+| 2025-knoedler-ral | topics | topics: [flying-robots, safety] | topics: [flying robots, safety] | same topic as the spelling without a hyphen |
+| 2025-mustafa-aamas | links | - PDF: | - pdf: | button label written like on the other papers |
+| 2025-spahn-ral | topics | topics: [motion planning, mobile-manipulation] | topics: [motion planning, mobile manipulation] | same topic as the spelling without a hyphen |
+| 2025-sun-agile | topics | topics: [flying-robots, mobile-manipulation] | topics: [flying robots, mobile manipulation] | same topic as the spelling without a hyphen |
+| 2025-zeng-corl | topics | topics: [flying-robots, mobile-manipulation] | topics: [flying robots, mobile manipulation] | same topic as the spelling without a hyphen |
+| 2026-li-arxiv | topics | topics: [motion planning, mobile-manipulation] | topics: [motion planning, mobile manipulation] | same topic as the spelling without a hyphen |
+| 2026-matoses-ral | topics | topics: [task planning, motion planning, mobile-manipulation] | topics: [task planning, motion planning, mobile manipulation] | same topic as the spelling without a hyphen |
+| 2026-papuc-ral | topics | topics: [multi-robot systems, motion planning, flying-robots] | topics: [multi-robot systems, motion planning, flying robots] | same topic as the spelling without a hyphen |
+| 2022-spahn-iros | venue | venue: "" | venue: Workshop on Evaluating Motion Planning Performance at the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS) | was empty; workshop named in arXiv 2210.06033 |
+| 2022-spahn-iros | links | - pdf: /assets/files/publications/22-spahn-iros.pdf | - pdf: https://arxiv.org/pdf/2210.06033  # was /assets/files/publications/22-spahn-iros.pdf, which is the LaTeX source, not a PDF
+| 2014-alonso-mora-iros | venue | ... at the RSJ/IEEE Int. Conf. on Robotics and Intelligent Systems (IROS) | ... at the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS) | IROS is "IEEE/RSJ ... Intelligent Robots and Systems" |
+  - arxiv: https://arxiv.org/abs/2210.06033 | the linked "PDF" was the LaTeX source file |
+
+Not changed, but worth a look: name variants that may be the same person (`M. Kronmueller` / `M. Kronmuller`,
+`R. Babuska` / `Robert Babuška`, `A. Serra-Gomez` / `Álvaro Serra-Gómez`, `R. Perez-Dattari` / `R. Pérez-Dattari`),
+`2012-gohl-vision-based` (a tech report listed as a workshop paper) and `2026-li-arxiv` (an arXiv preprint listed
+as a conference paper). Changing a type also changes the J/C/W/T/O numbers.

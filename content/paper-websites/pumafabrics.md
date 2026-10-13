@@ -88,7 +88,7 @@ MathJax = {
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1.mp4' %}" type="video/mp4">
+          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1_43.mp4' %}" type="video/mp4">
         </video>
       </div>
     </div>

@@ -8,12 +8,7 @@ import { resolve } from './lib/serve.mjs';
 const SITE = '_site';
 // Links that were already broken on the old site and need an author to fix them.
 // Format: '<page path> -> <link>': 'reason'. Keep this list short.
-const KNOWN_BROKEN = {
-  '/paper_websites/ia-mppi.html -> /assets/images/papers/m3p2i_aip/video_ral.m4v': 'file never committed (broken on the old site too)',
-  '/paper_websites/isaac-mppi.html -> /assets/images/papers/m3p2i_aip/video_ral.m4v': 'file never committed (broken on the old site too)',
-  '/paper_websites/m3p2i-aip.html -> /assets/images/papers/m3p2i_aip/video_ral.m4v': 'file never committed (broken on the old site too)',
-  '/paper_websites/pumafabrics.html -> /assets/images/papers/pumafabrics/pure_puma_1.mp4': 'removed in e6bac6d; maybe pure_puma_1_43.mp4 was meant (broken on the old site too)',
-};
+const KNOWN_BROKEN = {};
 
 function htmlFiles(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
@@ -26,7 +21,8 @@ function htmlFiles(dir) {
 const broken = [];
 let checked = 0;
 for (const file of htmlFiles(SITE)) {
-  const html = fs.readFileSync(file, 'utf8');
+  // Commented-out HTML is never shown, so links inside it do not count.
+  const html = fs.readFileSync(file, 'utf8').replace(/<!--[\s\S]*?-->/g, '');
   if (/http-equiv="refresh"/.test(html)) continue; // redirect pages
   const pagePath = '/' + path.relative(SITE, file).replace(/index\.html$/, '');
   const links = new Set();

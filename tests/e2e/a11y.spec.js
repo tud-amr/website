@@ -4,6 +4,9 @@ import { test, expect } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 import { TEMPLATE_PAGES, stayLocal } from './helpers.js';
 
+// The publications page has ~190 entries; axe needs more than the default minute on a busy machine.
+test.setTimeout(120_000);
+
 for (const path of TEMPLATE_PAGES) {
   test(`${path} has no serious accessibility problems`, async ({ page }) => {
     await stayLocal(page);

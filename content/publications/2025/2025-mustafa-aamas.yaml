@@ -15,7 +15,7 @@ image: /assets/images/papers/25-mustafa-aamas/aamas.png
 note: ""
 links:
   - web: https://romanchiva.github.io/PAProjectPage/
-  - PDF: /assets/files/publications/25-mustafa-aamas.pdf
+  - pdf: /assets/files/publications/25-mustafa-aamas.pdf
 abstract: >-
   To safely and efficiently solve motion planning problems in multiagent settings, most approaches
   attempt to solve a joint optimization that explicitly accounts for the responses triggered in

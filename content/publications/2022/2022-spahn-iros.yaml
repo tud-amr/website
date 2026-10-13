@@ -5,7 +5,7 @@ authors:
   - Javier Alonso-Mora
 date: 2022-10-12
 type: workshop
-venue: ""
+venue: Workshop on Evaluating Motion Planning Performance at the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
 projects: [airlab-manipulation]
 collections: []
 funding: []
@@ -13,7 +13,8 @@ topics: [motion planning]
 image: ""
 note: ""
 links:
-  - pdf: /assets/files/publications/22-spahn-iros.pdf
+  - pdf: https://arxiv.org/pdf/2210.06033  # was /assets/files/publications/22-spahn-iros.pdf, which is the LaTeX source, not a PDF
+  - arxiv: https://arxiv.org/abs/2210.06033
 abstract: >-
   Ride-sourcing companies have worsened congestion in numerous cities worldwide, as many users are
   attracted from more sustainable modes. To reverse this trend, it is crucial to leverage the

@@ -11,7 +11,7 @@ venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS
 projects: [interact]
 collections: []
 funding: []
-topics: [evlaution, benchmarking, motion planning]
+topics: [evaluation, benchmarking, motion planning]
 image: /assets/images/papers/dynamic_env_metric/dynamic_environment_difficulty.png
 note: ""
 links:
