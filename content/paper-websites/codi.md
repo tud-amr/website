@@ -37,7 +37,7 @@ links:
     icon: bi-file-text
     url: "#related-publications"
 # Related publications listed at the bottom of the page: papers from these projects and/or
-# collections (content/_data/collections.yaml), plus any handpicked papers (publication file names).
+# collections (content/_data/paper_collections.yaml), plus any handpicked papers (publication file names).
 related:
   projects: []
   collections: [saraypapers]

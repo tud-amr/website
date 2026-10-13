@@ -1,0 +1,42 @@
+{%- comment -%}
+  One publication. Parameters: publication, numbered (show J79 etc.).
+  The data-* attributes are what the search and filters on the Publications page use.
+{%- endcomment -%}
+{%- assign p = include.publication -%}
+<article class="pub" id="{{ p.id }}" data-year="{{ p.year }}" data-type="{{ p.type }}" data-projects="{{ p.projects | join: ' ' }}" data-collections="{{ p.collections | join: ' ' }}" data-search="{{ p.search | escape }}">
+  <div class="pub-body">
+    <p class="pub-citation">
+      {%- if include.numbered %}<span class="pub-number">{{ p.number }}.</span> {% endif -%}
+      <span class="pub-title">{{ p.title }}</span><br>
+      <span class="pub-authors">{{ p.authors | join: ", " }}.</span>
+      <span class="pub-venue">In {{ p.venue }}, {{ p.year }}.</span>
+      {%- if p.note != "" %} <span class="pub-note">{{ p.note }}.</span>{% endif %}
+    </p>
+    <div class="pub-actions">
+      {%- if p.abstract != "" %}
+      <button class="btn btn-sm btn-light pub-toggle" type="button" aria-expanded="false" aria-controls="abstract-{{ p.id }}{{ include.suffix }}"><i class="bi bi-chevron-right" aria-hidden="true"></i> abstract</button>
+      {%- endif %}
+      {%- if p.bibtex != "" %}
+      <button class="btn btn-sm btn-light pub-toggle" type="button" aria-expanded="false" aria-controls="bibtex-{{ p.id }}{{ include.suffix }}"><i class="bi bi-quote" aria-hidden="true"></i> cite</button>
+      {%- endif %}
+      {%- for l in p.links %}{% for pair in l %}
+      <a class="btn btn-sm btn-light" href="{% include fix_link.html link=pair[1] %}">{{ pair[0] }}</a>
+      {%- endfor %}{% endfor %}
+    </div>
+    {%- if p.abstract != "" %}
+    <div class="pub-panel" id="abstract-{{ p.id }}{{ include.suffix }}" hidden>{{ p.abstract }}</div>
+    {%- endif %}
+    {%- if p.bibtex != "" %}
+    <pre class="pub-panel pub-bibtex" id="bibtex-{{ p.id }}{{ include.suffix }}" hidden>{{ p.bibtex | escape }}</pre>
+    {%- endif %}
+  </div>
+  {%- if p.image != "" %}
+  <div class="pub-media">
+    {%- if p.image contains '.mp4' %}
+    <video src="{% include fix_link.html link=p.image %}" muted autoplay loop playsinline aria-label="Video of the paper"></video>
+    {%- else %}
+    <img src="{% include fix_link.html link=p.image %}" alt="" height="85" data-thumbnail>
+    {%- endif %}
+  </div>
+  {%- endif %}
+</article>

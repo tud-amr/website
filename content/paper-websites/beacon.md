@@ -28,7 +28,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     icon: bi-file-text
     url: "https://repository.tudelft.nl/record/uuid:8f650e8a-1b46-4fa9-9f46-dcf29a4f01f1"
 # Related publications listed at the bottom of the page: papers from these projects and/or
-# collections (content/_data/collections.yaml), plus any handpicked papers (publication file names).
+# collections (content/_data/paper_collections.yaml), plus any handpicked papers (publication file names).
 related:
   projects: []
   collections: [explicit-representations]

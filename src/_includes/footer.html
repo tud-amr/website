@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">© {{ "now" | date: "%Y" }} {{ site.author }}, Autonomous Multi-Robots Lab, TU Delft</p>
+    <ul class="footer-social">
+      {%- for social in socials %}
+      <li><a href="{{ social.url }}" aria-label="{{ social.name }}">{% if social.icon %}<i class="{{ social.icon }}" aria-hidden="true"></i>{% else %}{{ social.name }}{% endif %}</a></li>
+      {%- endfor %}
+    </ul>
+    <div class="footer-logos">
+      <a href="/"><img src="/assets/images/amr_logos/logo_amr_big_text.svg" alt="Autonomous Multi-Robots Lab" width="136" height="35" loading="lazy"></a>
+      <a href="https://www.tudelft.nl/en/me/about/departments/cognitive-robotics-cor/"><img src="/assets/images/delft_logos/TUDelft_logo_rgb_and_CoR.svg" alt="TU Delft, Cognitive Robotics" width="140" height="40" loading="lazy"></a>
+    </div>
+  </div>
+</footer>

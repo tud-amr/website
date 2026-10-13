@@ -23,12 +23,11 @@
     "@11ty/eleventy": "3.1.2",
     "@11ty/eleventy-img": "6.0.4",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
-    "@fontsource/montserrat": "5.1.0",
-    "@fontsource/poppins": "5.1.0",
     "bootstrap-icons": "1.11.3",
     "gray-matter": "4.0.3",
     "js-yaml": "4.1.0",
-    "katex": "0.16.11"
+    "katex": "0.16.11",
+    "markdown-it": "14.1.0"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.10.0",

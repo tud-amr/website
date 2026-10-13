@@ -1,0 +1,24 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }} news</title>
+  <subtitle>{{ site.description | normalize_whitespace }}</subtitle>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self"/>
+  <link href="{{ '/' | absolute_url }}"/>
+  <id>{{ '/' | absolute_url }}</id>
+  {%- assign latest = collections.news | first %}
+  <updated>{{ latest.date | date: "%Y-%m-%dT00:00:00Z" }}</updated>
+  <author><name>{{ site.author }}</name></author>
+  {%- for item in collections.news %}
+  <entry>
+    <title>{{ item.data.title | escape }}</title>
+    <link href="{{ '/' | absolute_url }}"/>
+    <id>{{ '/' | absolute_url }}#news-{{ item.fileSlug }}</id>
+    <updated>{{ item.date | date: "%Y-%m-%dT00:00:00Z" }}</updated>
+    <content type="html">{{ item.content | escape }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

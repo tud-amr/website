@@ -1,0 +1,9 @@
+---
+permalink: /redirects.json
+eleventyExcludeFromCollections: true
+---
+{
+{%- for r in collections.redirects %}
+  {{ r.from | jsonify }}: {% if r.to contains '://' %}{{ r.to | jsonify }}{% else %}{{ r.to | absolute_url | jsonify }}{% endif %}{% unless forloop.last %},{% endunless %}
+{%- endfor %}
+}

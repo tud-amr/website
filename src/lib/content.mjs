@@ -184,7 +184,7 @@ export function loadFolder(folder) {
   });
 }
 
-export const loadCollections = () => readYaml(path.join(CONTENT, '_data/collections.yaml')) || {};
+export const loadCollections = () => readYaml(path.join(CONTENT, '_data/paper_collections.yaml')) || {};
 
 // ---------------------------------------------------------------------------------------------
 // Checking.
@@ -254,11 +254,11 @@ export function validateContent() {
   try {
     const registry = loadCollections();
     for (const [id, c] of Object.entries(registry)) {
-      if (!c || typeof c.title !== 'string') errors.push(`content/_data/collections.yaml: \`${id}\` needs a \`title\``);
+      if (!c || typeof c.title !== 'string') errors.push(`content/_data/paper_collections.yaml: \`${id}\` needs a \`title\``);
     }
     collectionIds = new Set(Object.keys(registry));
   } catch (e) {
-    errors.push(`content/_data/collections.yaml: is not valid YAML: ${e.reason || e.message}`);
+    errors.push(`content/_data/paper_collections.yaml: is not valid YAML: ${e.reason || e.message}`);
   }
 
   const refs = (file, kind, values, known, where) => {
@@ -278,7 +278,7 @@ export function validateContent() {
       errors.push(`${file}: date is in ${new Date(data.date).getUTCFullYear()}, so the file belongs in content/publications/${new Date(data.date).getUTCFullYear()}/`);
     }
     if (Array.isArray(data.projects)) refs(file, 'project', data.projects, projectIds, 'project IDs are the `project_id` of a file in content/projects/');
-    if (Array.isArray(data.collections)) refs(file, 'collection', data.collections, collectionIds, 'add it to content/_data/collections.yaml first');
+    if (Array.isArray(data.collections)) refs(file, 'collection', data.collections, collectionIds, 'add it to content/_data/paper_collections.yaml first');
   }
 
   for (const { data, file } of folders.projects) refs(file, 'research area', data.belongs_to_areas, areaIds);

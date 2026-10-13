@@ -35,7 +35,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
       icon: bi-file-text
       url: "https://resolver.tudelft.nl/uuid:d90491cd-cf57-4d29-b38d-88df646ab301"
 # Related publications listed at the bottom of the page: papers from these projects and/or
-# collections (content/_data/collections.yaml), plus any handpicked papers (publication file names).
+# collections (content/_data/paper_collections.yaml), plus any handpicked papers (publication file names).
 related:
   projects: [interact]
   collections: []

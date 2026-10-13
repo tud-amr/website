@@ -16,8 +16,8 @@ Otherwise, applications from excellent individuals interested in a PhD or Postdo
 
 We are looking forward to play a game of robot-Quoridor with you:
 
-<div style="text-align: center;">
-  <video width="640" height="360" autoplay muted loop>
+<div class="center">
+  <video class="responsive" width="640" height="360" autoplay muted loop playsinline>
     <source src="/assets/images/quoridor_speedup.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>

@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="paper">
+  <header class="paper-header">
+    <h1 class="paper-title">{{ title }}</h1>
+    <p class="paper-authors">
+      {%- for author in authors %}
+      {%- if author.url %}
+      <a href="{{ author.url }}">{{ author.name }}<sup>{{ author.superscript }}</sup></a>
+      {%- else %}
+      <span>{{ author.name }}<sup>{{ author.superscript }}</sup></span>
+      {%- endif %}
+      {%- endfor %}
+    </p>
+    <p class="paper-affiliations">
+      {%- for affiliation in affiliations %}
+      {%- if affiliation.url %}
+      <a href="{{ affiliation.url }}"><sup>{{ affiliation.superscript }}</sup>{{ affiliation.name }}</a>
+      {%- else %}
+      <span><sup>{{ affiliation.superscript }}</sup>{{ affiliation.name }}</span>
+      {%- endif %}
+      {%- endfor %}
+    </p>
+    <div class="button-row button-row-center">
+      {%- for link in links %}
+      {%- if link.url and link.url != "" %}
+      <a class="btn btn-dark" href="{{ link.url }}">{% if link.icon %}<i class="bi {{ link.icon }}" aria-hidden="true"></i> {% endif %}{{ link.name }}</a>
+      {%- else %}
+      <span class="btn btn-dark is-disabled">{% if link.icon %}<i class="bi {{ link.icon }}" aria-hidden="true"></i> {% endif %}{{ link.name }}</span>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </header>
+  <div class="paper-body">
+{{ content }}
+  </div>
+  {%- assign related_list = related | related_publications: publications, title %}
+  {%- if related_list.size > 0 %}
+  <section class="related">
+    <h2 id="related-publications">Related Publications</h2>
+    {%- for p in related_list %}
+    {% include publication.html publication=p %}
+    {%- endfor %}
+  </section>
+  {%- endif %}
+  <p class="back-link"><a class="btn btn-dark" href="/publications/"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to Publications</a></p>
+</article>

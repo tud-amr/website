@@ -38,9 +38,9 @@ If you do not find an interesting project, but you would like to join our group,
 
 In the following link you can find a list of available MSc projects. For announced projects, please first contact the daily supervisor to discuss the project.
 <!-- [Click here for Available MSc thesis projects and information]({{ '/student-projects' | relative_url }}) -->
-<div class="d-grid gap-2 d-flex justify-content-md-start justify-content-center mb-3">
-    <a href="{{ '/student-projects' | relative_url }}"><button type="button" class="btn btn-primary rounded-5  px-4 me-md-2">Available MSc thesis projects and information</button></a>
-    <a href="{{ '/msc_projects_finished' | relative_url }}"><button type="button" class="btn btn-outline-dark rounded-5  px-4 me-md-2">Past MSc thesis</button></a>
+<div class="button-row">
+    <a class="btn btn-primary" href="/student-projects/">Available MSc thesis projects and information</a>
+    <a class="btn btn-outline" href="/msc_projects_finished/">Past MSc thesis</a>
 </div>
 
 
@@ -70,20 +70,11 @@ The motivation letter should state:
 
 # Recorded Talks
 
-<div class="row">
-    <div class="col">
-        <ul class="timeline">
-            {% assign talks = site.talks | sort: 'date' | reverse %}
-            {% for talk in talks %}
-            <li>
-                <span class="fw-bold"> {{ talk.date | date: "%B %d, %Y" }}, {{ talk.speaker }}: <a href="{{ talk.recording }}"> {{ talk.title }}</a></span>
-                <br>
-                <!-- render abstract if we have it -->
-                {% if talk.abstract %}
-                <span class="fw-bold">Abstract:</span> {{ talk.abstract }}
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-</div>
+<ul class="timeline">
+    {%- for talk in collections.talks %}
+    <li>
+        <span class="timeline-title">{{ talk.data.date | date: "%B %d, %Y" }}, {{ talk.data.speaker }}: <a href="{{ talk.data.recording }}">{{ talk.data.title }}</a></span>
+        {%- if talk.data.abstract %}<br><strong>Abstract:</strong> {{ talk.data.abstract }}{% endif %}
+    </li>
+    {%- endfor %}
+</ul>
