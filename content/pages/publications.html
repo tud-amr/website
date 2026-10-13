@@ -49,7 +49,7 @@ permalink: /publications/
   <section class="pub-year" data-year-group="{{ group.year }}">
     <h2 class="pub-year-title">{{ group.year }}</h2>
     {%- for p in group.items %}
-    {% include publication.html publication=p numbered=true %}
+    {% render 'publication.html', publication: p, numbered: true %}
     {%- endfor %}
   </section>
   {%- endfor %}

@@ -37,7 +37,7 @@ All of our MSc Thesis + Literature Survey assignments can be extended with a Res
 If you do not find an interesting project, but you would like to join our group, or your would like to propose your own project, then, send an email to Prof. J. Alonso-Mora. We can also supervise TUD MSc students in industry or in our partners abroad. For example in one of our industrial partners or collaborators (e.g., MIT, Stanford, ETH Zurich, Harvard, TUM, etc). Send an email to Prof. J. Alonso-Mora if interested.
 
 In the following link you can find a list of available MSc projects. For announced projects, please first contact the daily supervisor to discuss the project.
-<!-- [Click here for Available MSc thesis projects and information]({{ '/student-projects' | relative_url }}) -->
+<!-- [Click here for Available MSc thesis projects and information](/student-projects) -->
 <div class="button-row">
     <a class="btn btn-primary" href="/student-projects/">Available MSc thesis projects and information</a>
     <a class="btn btn-outline" href="/msc_projects_finished/">Past MSc thesis</a>

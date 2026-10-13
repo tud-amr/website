@@ -7,7 +7,7 @@ layout: default
     {%- if subtitle %}<p class="page-subtitle">{{ subtitle }}</p>{% endif %}
   </header>
   <div class="project-intro">
-    <img class="project-image" src="{% include fix_link.html link=image %}" alt="" width="500" height="300">
+    <img class="project-image" src="{{ image }}" alt="" width="500" height="300">
     <aside class="project-info">
       {%- if people %}
       <h2>People</h2>
@@ -39,7 +39,7 @@ layout: default
   <section class="related">
     <h2 id="related-publications">Related Publications</h2>
     {%- for p in related %}
-    {% include publication.html publication=p %}
+    {% render 'publication.html', publication: p %}
     {%- endfor %}
   </section>
   {%- endif %}

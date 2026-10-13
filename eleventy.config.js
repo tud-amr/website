@@ -26,10 +26,9 @@ export default function (eleventyConfig) {
   });
 
   // ---- Templates ------------------------------------------------------------------------------
-  // Liquid set up to behave like Jekyll's, so existing content keeps working:
-  // `{% include fix_link.html link='...' %}` with unquoted file names and `include.*` parameters.
+  // Standard Liquid: `{% render 'gallery.html', images: list %}` for reusable pieces.
   // Dates are stored as midnight UTC; timezoneOffset 0 prints them on the same day everywhere.
-  eleventyConfig.setLiquidOptions({ jekyllInclude: true, dynamicPartials: false, timezoneOffset: 0 });
+  eleventyConfig.setLiquidOptions({ timezoneOffset: 0 });
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));
 
   // Markdown with raw HTML allowed and heading IDs like the old site (kramdown) made them.
@@ -48,7 +47,6 @@ export default function (eleventyConfig) {
 
   // ---- Filters --------------------------------------------------------------------------------
   const site = yaml.load(fs.readFileSync('content/_data/site.yaml', 'utf8'));
-  eleventyConfig.addFilter('relative_url', (url) => url || '');
   eleventyConfig.addFilter('absolute_url', (url) => (url && url.startsWith('/') ? site.url + url : url));
   eleventyConfig.addFilter('markdownify', (text) => md.render(String(text || '')));
   eleventyConfig.addFilter('markdownify_inline', (text) => md.renderInline(String(text || '')));

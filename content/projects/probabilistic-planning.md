@@ -36,7 +36,7 @@ We developed two model-based planning frameworks in this project:
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-left mb-4 mt-4">
   <!-- <a itemprop="url" href="https://www.nwo.nl/en/projects/14667"> -->
-  <!-- <img class="img-flex" height="250" src="{% include fix_link.html link='/assets/images/projects/probabilistic-planning/sh_mpc.png' %}" alt="Safe Horizon MPC"> -->
+  <!-- <img class="img-flex" height="250" src="/assets/images/projects/probabilistic-planning/sh_mpc.png" alt="Safe Horizon MPC"> -->
   <!-- </a> -->
 <!-- </div> --> 
 The main idea behind scenario-based planning is to sample from the distribution of the uncertainty. Each sample represents a possible future trajectory of the obstacle. We enforce collision constraints with all samples to account for the uncertainty. By sampling, we can handle any type of distribution, making the approach widely applicable. The more samples are taken, the safer our motion plan becomes. Scenario-based trajectory optimization plans probabilistic safe trajectories in real-time while incorporating generic uncertainties associated with the future motion of dynamic obstacles.
@@ -45,7 +45,7 @@ The main idea behind scenario-based planning is to sample from the distribution 
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-left mb-4 mt-4">
   <!-- <a itemprop="url" href="https://www.nwo.nl/en/projects/14667"> -->
-  <!-- <img class="img-flex" height="250" src="{% include fix_link.html link='/assets/images/projects/probabilistic-planning/t-mpc.jpg' %}" alt="Safe Horizon MPC"> -->
+  <!-- <img class="img-flex" height="250" src="/assets/images/projects/probabilistic-planning/t-mpc.jpg" alt="Safe Horizon MPC"> -->
   <!-- </a> -->
 <!-- </div> -->
 
@@ -64,6 +64,6 @@ Many existing planners, in particular optimization-based methods, plan only a si
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-left mb-4 mt-4">
   <a itemprop="url" href="https://www.nwo.nl/en/projects/14667">
-  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/probabilistic-planning/nwo.png' %}" alt="NWO-TTW Project SafeVRU">
+  <img class="img-flex" height="70" src="/assets/images/projects/probabilistic-planning/nwo.png" alt="NWO-TTW Project SafeVRU">
   </a>
 </div>

@@ -23,4 +23,4 @@ This is a project in industry. See the pdf for the details. The project will be 
 <!-- {% assign image_list = "/assets/images/msc_projects/msc_project_template/hackathon-team.jpg,/assets/images/msc_projects/msc_project_template/hackathon-team.jpg,/assets/images/robots/dingo_kinova.mp4"  | split: ',' %}-->
 
 <!-- This will include the images in a grid of n_columns. Use for 2 or more columns -->
-<!-- {% include gallery.html images=image_list n_columns=3 %}-->
+<!-- {% render 'gallery.html', images: image_list, n_columns: 3 %}-->

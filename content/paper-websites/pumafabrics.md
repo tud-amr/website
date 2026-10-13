@@ -51,35 +51,18 @@ related:
   projects: []
   collections: [saraypapers]
   papers: []
+# LaTeX shortcuts used in this page's equations (rendered with KaTeX).
+math_macros:
+  '\norm': '\left\lVert #1 \right\rVert'
+  '\vec': '\boldsymbol'
+  '\qdot': '\dot{\q}'
+  '\qddot': '\ddot{\q}'
+  '\q': '\vec{q}'
+  '\h': '\vec{h}'
+  '\f': '\vec{f}'
+  '\fC': '\f^{\mathcal{C}}_{\theta}'
 ---
 <div>
-{% if page.usemathjax %}
-<script>
-MathJax = {
-  tex: {
-    tags: 'ams',
-    inlineMath: [['$', '$']],
-    displayMath: [['$$', '$$']],
-    packages: {'[+]': ['ams']}, 
-    processEscapes: true,
-    macros: {
-      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
-      vec: "\\boldsymbol",
-      qdot: "\\dot{\\q}",
-      qddot: "\\ddot{\\q}",
-      q: "\\vec{q}",
-      h: "\\vec{h}",
-      f: "\\vec{f}",
-      fC: "\\f^{\\mathcal{C}}_{\\theta}",
-    }
-  // svg: {
-  //   fontCache: 'global'
-  //  }
-  }
-};        
-</script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    {% endif %}
 </div>
 
 <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
@@ -88,7 +71,7 @@ MathJax = {
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1_43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/pure_puma_1_43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -101,7 +84,7 @@ MathJax = {
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/cpm.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -115,7 +98,7 @@ MathJax = {
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/cpm.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -139,7 +122,7 @@ Keywords: Imitation Learning, Dynamical Systems, Geometric Motion Planning, Fabr
 <h2> Illustrative Point-mass Example </h2>
 In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-mass example for the proposed methods, alongside baselines of geometric fabrics<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[1, 2]</sup></span> with a manually designed potential function, and PUMA<span class="citation" onclick="document.getElementById('perezdattari2024deep').scrollIntoView();"><sup>[3]</sup></span>. The purely data-driven method PUMA follows the motion profile as learned from demonstrations, although it has no notion of obstacle avoidance or other physical constraints. The proposed methods, FPM and CPM, successfully follow the desired motion profile of PUMA, while avoiding collisions with the obstacles. In contrast, geometric fabrics are unable to follow the desired motion profile. 
 <div id="fig-pointmass" class="image-div mb-3 d-flex justify-content-center">
-    <img src="{{ '/assets/images/papers/pumafabrics/point_mass_comparison_plot.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
+    <img src="/assets/images/papers/pumafabrics/point_mass_comparison_plot.jpg" class="img-fluid" width="800" alt="lab">
 </div>
 
 <h2> Experiment: Tomato picking with a 7-DoF manipulator</h2>
@@ -149,7 +132,7 @@ In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-ma
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/demonstrations_from_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/demonstrations_from_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -161,7 +144,7 @@ In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-ma
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/crossing_AC_crop.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/crossing_AC_crop.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -176,7 +159,7 @@ In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-ma
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <h5 align="center">Tracking Mode</h5>
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/pumafabrics/point_mass_comparison_plot.jpg' %}" alt="Image 1">
+        <img class="img-fluid object-fit-contain" src="/assets/images/papers/pumafabrics/point_mass_comparison_plot.jpg" alt="Image 1">
         <p align="center">
         Traget defined in world frame
         </p> 
@@ -191,7 +174,7 @@ In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-ma
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_nobias.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/pendulum_nobias.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -204,7 +187,7 @@ In <a href="#fig-pointmass">Fig. 1</a> , trajectories are shown of a 2D point-ma
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_bias.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/pendulum_bias.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -222,7 +205,7 @@ Note that the robot-hand is controlled via a binary open-close when the target p
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/FPM_43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/FPM_43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -235,7 +218,7 @@ Note that the robot-hand is controlled via a binary open-close when the target p
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/cpm43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -251,7 +234,7 @@ Note that the robot-hand is controlled via a binary open-close when the target p
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/video_out_of_distribution43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/video_out_of_distribution43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -264,7 +247,7 @@ Note that the robot-hand is controlled via a binary open-close when the target p
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/video_human_disturbance43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/video_human_disturbance43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -281,7 +264,7 @@ Note that the robot-hand is controlled via a binary open-close when the target p
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/helmet_pouring43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/helmet_pouring43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -294,7 +277,7 @@ Note that the robot-hand is controlled via a binary open-close when the target p
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/goal_change_good1_43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/goal_change_good1_43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -312,7 +295,7 @@ Note: The following videos might not display in Chrome, but they do render in Fi
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_fabrics_43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/scenario3_fabrics_43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -325,7 +308,7 @@ Note: The following videos might not display in Chrome, but they do render in Fi
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/scenario3_CPM_no_obst2_43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/scenario3_CPM_no_obst2_43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -341,7 +324,7 @@ Note: The following videos might not display in Chrome, but they do render in Fi
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/pure_puma_1_43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/pure_puma_1_43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -354,7 +337,7 @@ Note: The following videos might not display in Chrome, but they do render in Fi
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/cpm43.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/cpm43.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -388,7 +371,7 @@ Furthermore, this approach alters the behavior of the learned system when PUMA i
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/limitations_video1_v4.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/limitations_video1_v4.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -400,7 +383,7 @@ Furthermore, this approach alters the behavior of the learned system when PUMA i
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/pumafabrics/limitations_video2_v4.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/pumafabrics/limitations_video2_v4.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -557,7 +540,7 @@ The joint impedance controller is updated at 1000 Hz, while TamedPUMA runs at 30
 
 <div id="fig-primitive-0-iter-5000cut" class="image-div mb-3 d-flex justify-content-center">
   <figure>
-    <img src="{{ '/assets/images/papers/pumafabrics/primitive_0_iter_5000cut.jpg' | relative_url}}" class="img-fluid" width="800" alt="lab">
+    <img src="/assets/images/papers/pumafabrics/primitive_0_iter_5000cut.jpg" class="img-fluid" width="800" alt="lab">
      <figcaption>Figure 3. Performance of the DNN trained via PUMA where all states are normalized. The demonstrations are indicated in black, the trajectories generated by the DNN for the same initial poses as the demonstrations are given in red, and trajectories from randomly sampled initial conditions are indicated in blue.</figcaption>
     </figure>
 </div>

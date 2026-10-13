@@ -6,4 +6,4 @@ pagination:
 permalink: "{% if redirect.from contains '.html' %}{{ redirect.from }}{% else %}{{ redirect.from | append: '/' | replace: '//', '/' }}index.html{% endif %}"
 eleventyExcludeFromCollections: true
 ---
-{% include redirect.html to=redirect.to %}
+{% render 'redirect.html', to: redirect.to %}

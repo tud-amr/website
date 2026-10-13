@@ -45,7 +45,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/impedance4mm/videos/guide_shortened_convert_reduced.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/impedance4mm/videos/guide_shortened_convert_reduced.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -58,7 +58,7 @@ links: # If you have other website for the project, github repos, datasets, etc.
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/impedance4mm/videos/track_shortened.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/impedance4mm/videos/track_shortened.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -80,7 +80,7 @@ the adapted impedance controller, and that can handle model errors. The calibrat
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/impedance4mm/videos/calibration_convert_reduced.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/impedance4mm/videos/calibration_convert_reduced.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -96,21 +96,21 @@ the adapted impedance controller, and that can handle model errors. The calibrat
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
       <div class="col">
         <h5 align="center">Controlling the base</h5>
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/base_control_reduced.png' %}" alt="Image 1">
+        <img class="img-fluid object-fit-contain" src="/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/base_control_reduced.png" alt="Image 1">
         <p align="center">
         The base follows the end-effector
         </p>  
       </div>
       <div class="col">
       <h5 align="center">Guidance Mode</h5>
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/guidance_mode.png' %}" alt="Image 1">
+        <img class="img-fluid object-fit-contain" src="/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/guidance_mode.png" alt="Image 1">
         <p align="center">
         Traget defined in base frame
         </p> 
       </div>
       <div class="col">
       <h5 align="center">Tracking Mode</h5>
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/tracking_mode.png' %}" alt="Image 1">
+        <img class="img-fluid object-fit-contain" src="/assets/images/msc_projects/24_JelmerDeWolde_CompliantMobileManipulation/tracking_mode.png" alt="Image 1">
         <p align="center">
         Traget defined in world frame
         </p>      

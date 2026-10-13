@@ -46,7 +46,9 @@ Playwright's Chromium: use the Docker form if `npx playwright` is not set up.
   `content/research-areas/`. Funding sources go in `funding:`, not `projects:`.
 - **Do not lose metadata.** When cleaning up data, keep values (move them to the right field, or keep a
   YAML comment saying what was there before).
-- Local paths start with `/assets/` (leading slash). Put new files under the existing folder pattern.
+- Local paths start with `/assets/` (leading slash) and are written as they are. Do not use the old Jekyll
+  helpers (`{% include fix_link.html %}`, `| relative_url`, `{% include x.html a=b %}`); validation rejects them.
+- Math: KaTeX, on by default for paper and MSc pages; page-specific LaTeX shortcuts go in `math_macros`.
 - Keep media small: images under ~2 MB, videos ideally under 5 MB. The repo is already >2 GB and the
   published site is around GitHub Pages' 1 GB guideline; say so if a user adds large files.
 - Do not edit generated or recorded files: `_site/`, `.cache/`, `tests/baseline/*` (only regenerate the
@@ -94,7 +96,7 @@ content/<type>/<type>.11tydata.json URL pattern and layout for each folder
 content/pages/                      top-level pages
 content/_data/                      site.yaml, navigation.yaml, socials.yaml, paper_collections.yaml,
                                     patents.yaml, redirects.yaml, publications.js, stats.js
-src/_layouts/, src/_includes/       Liquid templates (Jekyll-style includes: {% include x.html a=b %})
+src/_layouts/, src/_includes/       Liquid templates; reusable pieces via {% render 'x.html', a: b %}
 src/css/site.css, src/js/site.js    all styling and behaviour
 src/lib/content.mjs                 content schemas and validation (edit when adding a field)
 src/lib/images.mjs, media.mjs       responsive images, lazy videos, YouTube previews

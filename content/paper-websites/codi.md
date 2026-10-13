@@ -48,22 +48,22 @@ sitemap: false
 <style>
   @font-face {
     font-family: "TeX Gyre Pagella";
-    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-regular.woff2' | relative_url }}") format("woff2");
+    src: url("/assets/fonts/tex-gyre-pagella/texgyrepagella-regular.woff2") format("woff2");
     font-weight: normal; font-style: normal;
   }
   @font-face {
     font-family: "TeX Gyre Pagella";
-    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-bold.woff2' | relative_url }}") format("woff2");
+    src: url("/assets/fonts/tex-gyre-pagella/texgyrepagella-bold.woff2") format("woff2");
     font-weight: bold; font-style: normal;
   }
   @font-face {
     font-family: "TeX Gyre Pagella";
-    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-italic.woff2' | relative_url }}") format("woff2");
+    src: url("/assets/fonts/tex-gyre-pagella/texgyrepagella-italic.woff2") format("woff2");
     font-weight: normal; font-style: italic;
   }
   @font-face {
     font-family: "TeX Gyre Pagella";
-    src: url("{{ '/assets/fonts/tex-gyre-pagella/texgyrepagella-bolditalic.woff2' | relative_url }}") format("woff2");
+    src: url("/assets/fonts/tex-gyre-pagella/texgyrepagella-bolditalic.woff2") format("woff2");
     font-weight: bold; font-style: italic;
   }
 
@@ -74,8 +74,8 @@ sitemap: false
 </style>
 
 <hr/>
-<video controls playsinline width="100%" poster="{{ '/assets/images/papers/codi/video-poster.jpg' | relative_url }}">
-  <source src="{{ '/assets/images/papers/codi/codi2026tro-supplementary-10MB.mp4' | relative_url }}" type="video/mp4">
+<video controls playsinline width="100%" poster="/assets/images/papers/codi/video-poster.jpg">
+  <source src="/assets/images/papers/codi/codi2026tro-supplementary-10MB.mp4" type="video/mp4">
 </video>
 
 <hr/>
@@ -96,7 +96,7 @@ sitemap: false
 <h2 align="center">Method Overview</h2>
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/front-figure.jpg' %}" width="100%">
+    <img src="/assets/images/papers/codi/front-figure.jpg" width="100%">
   </div>
 </div>
 <p align="justify">
@@ -136,11 +136,11 @@ sitemap: false
 
 <h2 align="center">Hardware Experiments</h2>
 <div class="row g-1">
-  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/001.jpg' %}" width="100%"></div>
-  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/002.jpg' %}" width="100%"></div>
-  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/003.jpg' %}" width="100%"></div>
-  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/004.jpg' %}" width="100%"></div>
-  <div class="col"><img src="{% include fix_link.html link='/assets/images/papers/codi/multi-agent-banner-frames/005.jpg' %}" width="100%"></div>
+  <div class="col"><img src="/assets/images/papers/codi/multi-agent-banner-frames/001.jpg" width="100%"></div>
+  <div class="col"><img src="/assets/images/papers/codi/multi-agent-banner-frames/002.jpg" width="100%"></div>
+  <div class="col"><img src="/assets/images/papers/codi/multi-agent-banner-frames/003.jpg" width="100%"></div>
+  <div class="col"><img src="/assets/images/papers/codi/multi-agent-banner-frames/004.jpg" width="100%"></div>
+  <div class="col"><img src="/assets/images/papers/codi/multi-agent-banner-frames/005.jpg" width="100%"></div>
 </div>
 <p align="justify">
   We deploy CoDi on two 7-DoF Franka Research 3 arms placed at opposite ends of a table (1.8 m wide × 1.2 m deep) — wide enough that no single arm can reach across.
@@ -158,14 +158,14 @@ sitemap: false
   Despite the less informative training data, CoDi achieves better task efficiency and manipulation accuracy than all baselines.
   As an additional ablation, applying our guidance scheme to a <em>joint</em> base policy (CoDi-Joint) also improves performance but falls short of CoDi with single-agent pre-training — confirming that the single-agent state-action space yields better manipulation skills per demonstration.
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_joint.jpg' %}" class="codi-legend">
+<img src="/assets/images/papers/codi/plots/legend_joint.jpg" class="codi-legend">
 <div class="row">
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_joint.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/completion_times_ecdf_joint.jpg" class="codi-plot">
     <p align="center">Task efficiency</p>
   </div>
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_joint.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/min_box_distances_ecdf_joint.jpg" class="codi-plot">
     <p align="center">Manipulation accuracy</p>
   </div>
 </div>
@@ -174,14 +174,14 @@ sitemap: false
   Training CoDi on only 20% of the single-agent data still achieves a task success rate close to CG-Joint trained on the <em>full</em> multi-agent dataset (88% vs. 92%), while substantially outperforming CG-Joint trained on the same reduced multi-agent dataset (54% success rate).
   This highlights that single-agent demonstrations — which are far cheaper to collect — transfer more efficiently to the multi-agent setting.
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_data_density.jpg' %}" class="codi-legend">
+<img src="/assets/images/papers/codi/plots/legend_data_density.jpg" class="codi-legend">
 <div class="row">
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_data_density.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/completion_times_ecdf_data_density.jpg" class="codi-plot">
     <p align="center">Task efficiency</p>
   </div>
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_data_density.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/min_box_distances_ecdf_data_density.jpg" class="codi-plot">
     <p align="center">Manipulation accuracy</p>
   </div>
 </div>
@@ -192,22 +192,22 @@ sitemap: false
   Without joint guidance (CoDi-Indep.), robots can fail to coordinate: both arms attempt to reach the cube at the same time, leading to arm collisions and task failures.
   Joint guidance eliminates this failure mode by explicitly accounting for inter-agent interactions through the collision-avoidance and engagement cost components.
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_product.jpg' %}" class="codi-legend">
+<img src="/assets/images/papers/codi/plots/legend_product.jpg" class="codi-legend">
 <div class="row">
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_product.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/completion_times_ecdf_product.jpg" class="codi-plot">
     <p align="center">Task efficiency</p>
   </div>
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_product.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/min_box_distances_ecdf_product.jpg" class="codi-plot">
     <p align="center">Manipulation accuracy</p>
   </div>
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_inter_arm_distances_ecdf_product.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/min_inter_arm_distances_ecdf_product.jpg" class="codi-plot">
     <p align="center">Safety (inter-arm distance)</p>
   </div>
   <div class="col-md-6 d-flex align-items-center">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/codi-indep-collision.png' %}" width="100%">
+    <img src="/assets/images/papers/codi/codi-indep-collision.png" width="100%">
   </div>
 </div>
 <p align="center">Independent guidance failure: both arms reach for the cube simultaneously, causing a collision.</p>
@@ -219,14 +219,14 @@ sitemap: false
   The product-of-marginals policy exhibits a larger tilt relative to the coordinated target distribution, making the learned cost model a poor guide.
   Our sampling-based estimator bridges this gap without requiring an additional trained cost model.
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_guidance_variants.jpg' %}" class="codi-legend">
+<img src="/assets/images/papers/codi/plots/legend_guidance_variants.jpg" class="codi-legend">
 <div class="row">
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_guidance_variants.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/completion_times_ecdf_guidance_variants.jpg" class="codi-plot">
     <p align="center">Task efficiency</p>
   </div>
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_guidance_variants.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/min_box_distances_ecdf_guidance_variants.jpg" class="codi-plot">
     <p align="center">Manipulation accuracy</p>
   </div>
 </div>
@@ -237,14 +237,14 @@ sitemap: false
   CoDi with single-agent base policies degrades substantially under this simplified cost, whereas a joint base policy trained on multi-agent demonstrations remains largely unaffected.
   This confirms the complementary roles of demonstrations and the cost function: when coordination is not present in the training data, the cost must explicitly supply it.
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/codi/plots/legend_simple_cost.jpg' %}" class="codi-legend">
+<img src="/assets/images/papers/codi/plots/legend_simple_cost.jpg" class="codi-legend">
 <div class="row">
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/completion_times_ecdf_simple_cost.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/completion_times_ecdf_simple_cost.jpg" class="codi-plot">
     <p align="center">Task efficiency</p>
   </div>
   <div class="col-md-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/codi/plots/min_box_distances_ecdf_simple_cost.jpg' %}" class="codi-plot">
+    <img src="/assets/images/papers/codi/plots/min_box_distances_ecdf_simple_cost.jpg" class="codi-plot">
     <p align="center">Manipulation accuracy</p>
   </div>
 </div>

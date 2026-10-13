@@ -21,7 +21,7 @@ permalink: /msc_projects_finished/
 <h2 class="year-title">{{ year }}</h2>
 <div class="tile-list">
 {%- endif %}
-{% include msc_card.html project=project %}
+{% render 'msc_card.html', project: project %}
 {%- endunless %}
 {%- endfor %}
 </div>

@@ -1,10 +1,10 @@
-{%- assign d = include.person.data -%}
+{%- assign d = person.data -%}
 <article class="person">
-  <img class="person-photo" src="{% include fix_link.html link=d.image %}" alt="{{ d.name }}" width="160" height="160" loading="lazy">
+  <img class="person-photo" src="{{ d.image }}" alt="{{ d.name }}" width="160" height="160" loading="lazy">
   <div class="person-body">
     <h3 class="person-name">{{ d.name }}</h3>
     <p class="person-role">{{ d.title }} | Since {{ d.joined_date | date: "%Y" }}</p>
-    <div class="person-bio">{{ include.person.content }}</div>
+    <div class="person-bio">{{ person.content }}</div>
     {%- if d.links %}
     <div class="person-links">
       {%- for link in d.links %}

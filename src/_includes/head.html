@@ -26,10 +26,17 @@
 <link rel="preload" href="/assets/site/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site/css/site.css">
 <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/icons.css">
-{%- if math or usemathjax or usekatex %}
+{%- if math %}
+<script>
+  // KaTeX renders $...$ and $$...$$; a page can define its own LaTeX shortcuts in `math_macros`.
+  window.mathOptions = {
+    delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}],
+    macros: {% if math_macros %}{{ math_macros | jsonify }}{% else %}{}{% endif %}
+  };
+</script>
 <link rel="stylesheet" href="/assets/vendor/katex/katex.min.css">
 <script defer src="/assets/vendor/katex/katex.min.js"></script>
-<script defer src="/assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.querySelector('main'), {delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}]});"></script>
+<script defer src="/assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.querySelector('main'), window.mathOptions)"></script>
 {%- endif %}
 {%- if site.goatcounter != "" and eleventy.env.runMode == "build" %}
 <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>

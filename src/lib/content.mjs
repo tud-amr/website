@@ -70,7 +70,8 @@ const person = t.object({ name: t.text, url: t.string, superscript: t.string }, 
 // `optional` fields may be left out. `strict` types reject unknown fields, to catch typos.
 
 const PAGE_FIELDS = {
-  layout: t.string, permalink: t.string, sitemap: t.bool, hidden: t.bool, usemathjax: t.bool, usekatex: t.bool,
+  layout: t.string, permalink: t.string, sitemap: t.bool, hidden: t.bool, math: t.bool,
+  math_macros: (v) => (v && typeof v === 'object' && Object.values(v).every((x) => typeof x === 'string') ? null : "must be a list of shortcuts like '\\q': '\\vec{q}'"),
   redirect_from: t.list(), redirect_to: t.string, eleventyExcludeFromCollections: t.bool,
 };
 
@@ -226,6 +227,30 @@ function checkLocalFiles(file, value, errors) {
   else if (value && typeof value === 'object' && !(value instanceof Date)) Object.values(value).forEach((v) => checkLocalFiles(file, v, errors));
 }
 
+// Syntax from the old Jekyll site that no longer works, with what to write instead.
+const LEGACY = [
+  [/\{%-?\s*include\s+fix_link\.html\s+link\s*=\s*['"]?([^'"%\s]*)/, (m) => `\`fix_link\` is no longer needed: write the path directly, e.g. ${m[1] || '/assets/...'}`],
+  [/\|\s*relative_url\b/, () => '`relative_url` is no longer needed: write the path directly, e.g. "/assets/..."'],
+  [/\{%-?\s*include\s+([\w.-]+\.html)\s+\w+\s*=/, (m) => `old include syntax: write {% render '${m[1]}', name: value %} instead of {% include ${m[1]} name=value %}`],
+  [/\b(page\.)?(usemathjax|usekatex)\b/, () => 'math is on for paper and MSc pages; for other pages add `math: true` to the header (LaTeX shortcuts go in `math_macros`)'],
+];
+
+function checkLegacySyntax(errors) {
+  const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) return e.name === '_data' || e.name === 'publications' ? [] : walk(p);
+    return /\.(md|html|liquid)$/.test(e.name) ? [p] : [];
+  });
+  for (const file of walk(CONTENT)) {
+    fs.readFileSync(file, 'utf8').split('\n').forEach((line, i) => {
+      for (const [re, message] of LEGACY) {
+        const m = re.exec(line);
+        if (m) errors.push(`${rel(file)}:${i + 1}: ${message(m)}`);
+      }
+    });
+  }
+}
+
 /** Check all content. Returns { errors: string[] }. */
 export function validateContent() {
   const errors = [];
@@ -290,5 +315,6 @@ export function validateContent() {
     refs(file, 'collection', r.collections, collectionIds);
     refs(file, 'publication', r.papers, publicationIds, 'use the publication file name without .yaml');
   }
+  checkLegacySyntax(errors);
   return { errors };
 }

@@ -140,7 +140,12 @@ Notes per type:
   paper website instead, add `redirect_to: /paper_websites/<name>`.
 - **Events**: most workshop pages are complete, standalone HTML documents with their own styles. Add
   `layout: page` to use the normal site layout instead.
-- Math works on paper websites and MSc pages: `$x^2$` inline, `$$x^2$$` on its own line.
+- Math works on paper websites and MSc pages (`math: true` turns it on elsewhere): `$x^2$` inline, `$$x^2$$`
+  on its own line. Define LaTeX shortcuts for a page in its header:
+  ```yaml
+  math_macros:
+    '\qdot': '\dot{\boldsymbol{q}}'
+  ```
 
 ## Images, videos and files
 
@@ -156,7 +161,8 @@ In Markdown or HTML:
 <a href="/assets/files/publications/25-degroot-ijrr.pdf">PDF</a>
 ```
 
-(`{% include fix_link.html link='/assets/...' %}` from the old site still works too.)
+Write paths as they are, starting with `/assets/`. The old `fix_link` include and `relative_url` filter are
+no longer needed; the content check points them out if they appear.
 
 What the build does for you:
 
@@ -168,7 +174,7 @@ What the build does for you:
 - **YouTube** embeds (`<iframe src="https://www.youtube.com/embed/...">`) become a click-to-play preview
   that loads YouTube only when clicked, from the privacy-friendly `youtube-nocookie.com`.
 
-A grid of images: `{% include gallery.html images=image_list n_columns=3 %}`, with
+A grid of images: `{% render 'gallery.html', images: image_list, n_columns: 3 %}`, with
 `{% assign image_list = "/assets/images/a.jpg,/assets/images/b.mp4" | split: "," %}` before it.
 
 ## Pages, menu and old URLs

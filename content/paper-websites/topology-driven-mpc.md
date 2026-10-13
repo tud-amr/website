@@ -50,7 +50,7 @@ related:
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-1x1">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/tmpc/lmpcc_cut_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/tmpc/lmpcc_cut_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -64,7 +64,7 @@ related:
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-1x1">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/tmpc/tmpc_cut_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/tmpc/tmpc_cut_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -84,7 +84,7 @@ related:
       </p>
     </div>
     <div class="col-5">
-      <img src="{% include fix_link.html link='/assets/images/projects/probabilistic-planning/t-mpc.jpg' %}" width="100%">
+      <img src="/assets/images/projects/probabilistic-planning/t-mpc.jpg" width="100%">
     </div>
 </div>
 <hr/>
@@ -92,7 +92,7 @@ related:
 
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/tmpc/method.png' %}" width="100%">
+    <img src="/assets/images/papers/tmpc/method.png" width="100%">
   </div>
   <p align="justify">
   <br/>
@@ -106,7 +106,7 @@ axis). Obstacle motion predictions are denoted with cylinders. <br/><br/>(Left) 
   <hr/>
   <div class="row">
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/tmpc/duration_with_baseline.png' %}" width="100%">
+      <img src="/assets/images/papers/tmpc/duration_with_baseline.png" width="100%">
     </div>
     <div class="col-6">
     <p align="justify">
@@ -122,7 +122,7 @@ axis). Obstacle motion predictions are denoted with cylinders. <br/><br/>(Left) 
     </p>
     </div>
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/tmpc/uncertainty.png' %}" width="100%">
+      <img src="/assets/images/papers/tmpc/uncertainty.png" width="100%">
     </div>
 </div>
 <div class="col">

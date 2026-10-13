@@ -61,7 +61,7 @@ related:
 <div class="teaser-video d-flex justify-content-center">
   <div class="ratio ratio-16x9">
     <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-      <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/dra_side.mp4' %}" type="video/mp4">
+      <source src="/assets/images/papers/dra-mppi/dra_side.mp4" type="video/mp4">
     </video>
   </div>
 
@@ -87,7 +87,7 @@ Although not visualized in the video, all pedestrians are predicted to have a sm
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mppi_mm_2exp.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mppi_mm_2exp.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -97,7 +97,7 @@ Although not visualized in the video, all pedestrians are predicted to have a sm
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mpc_mm_2exp.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mpc_mm_2exp.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -115,7 +115,7 @@ Below are the video comparisons showing a Jackal robot navigating a corridor wit
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mppi_4obs_1exp.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mppi_4obs_1exp.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -126,7 +126,7 @@ Below are the video comparisons showing a Jackal robot navigating a corridor wit
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mpc_4obs_1exp.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mpc_4obs_1exp.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -140,7 +140,7 @@ Below are the video comparisons showing a Jackal robot navigating a corridor wit
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mppi_8obs_2exps.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mppi_8obs_2exps.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -150,7 +150,7 @@ Below are the video comparisons showing a Jackal robot navigating a corridor wit
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mpc_8obs_2exps.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mpc_8obs_2exps.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -163,7 +163,7 @@ Below are the video comparisons showing a Jackal robot navigating a corridor wit
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mppi_12obs_2exps.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mppi_12obs_2exps.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -173,7 +173,7 @@ Below are the video comparisons showing a Jackal robot navigating a corridor wit
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/dra-mppi/mpc_12obs_2exps.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/dra-mppi/mpc_12obs_2exps.mp4" type="video/mp4">
         </video>
       </div>
     </div>

@@ -51,35 +51,18 @@ related:
   projects: []
   collections: [saraypapers]
   papers: []
+# LaTeX shortcuts used in this page's equations (rendered with KaTeX).
+math_macros:
+  '\norm': '\left\lVert #1 \right\rVert'
+  '\vec': '\boldsymbol'
+  '\qdot': '\dot{\q}'
+  '\qddot': '\ddot{\q}'
+  '\q': '\vec{q}'
+  '\h': '\vec{h}'
+  '\f': '\vec{f}'
+  '\fC': '\f^{\mathcal{C}}_{\theta}'
 ---
 <div>
-{% if page.usemathjax %}
-<script>
-MathJax = {
-  tex: {
-    tags: 'ams',
-    inlineMath: [['$', '$']],
-    displayMath: [['$$', '$$']],
-    packages: {'[+]': ['ams']}, 
-    processEscapes: true,
-    macros: {
-      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
-      vec: "\\boldsymbol",
-      qdot: "\\dot{\\q}",
-      qddot: "\\ddot{\\q}",
-      q: "\\vec{q}",
-      h: "\\vec{h}",
-      f: "\\vec{f}",
-      fC: "\\f^{\\mathcal{C}}_{\\theta}",
-    }
-  // svg: {
-  //   fontCache: 'global'
-  //  }
-  }
-};        
-</script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    {% endif %}
 </div>
 
 
@@ -229,7 +212,7 @@ This illustration of TamedPUMA shows the behavior design given the relationships
 <br><br>
 </div>
 <div id="tamedpuma_illustration" class="image-div mb-3 d-flex justify-content-center">
-    <img src="{{ '/assets/images/papers/pumafabrics/illustration_tamedpuma_28_11_2024_10.png' | relative_url}}" class="img-fluid" width="800" alt="lab">
+    <img src="/assets/images/papers/pumafabrics/illustration_tamedpuma_28_11_2024_10.png" class="img-fluid" width="800" alt="lab">
 </div>
 
 

@@ -82,7 +82,7 @@ sitemap: false # Exclude from sitemap
 <!-- <h2 align="center"><u>Overview</u></h2> -->
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/opensgr/cover_image.png' %}" width="100%">
+    <img src="/assets/images/papers/opensgr/cover_image.png" width="100%">
   </div>
 </div>
 
@@ -93,7 +93,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/opensgr/method.png' %}" width="100%">
+    <img src="/assets/images/papers/opensgr/method.png" width="100%">
   </div>
 </div>
 
@@ -115,7 +115,7 @@ sitemap: false # Exclude from sitemap
 <h2 align="center"><u>Dataset</u></h2>
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/opensgr/dataset1.png' %}" width="100%">
+    <img src="/assets/images/papers/opensgr/dataset1.png" width="100%">
   </div>
 </div>
 
@@ -125,7 +125,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/opensgr/dataset2.png' %}" width="100%">
+    <img src="/assets/images/papers/opensgr/dataset2.png" width="100%">
   </div>
 </div>
 
@@ -139,7 +139,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/opensgr/results_cross5.png' %}" width="100%">
+    <img src="/assets/images/papers/opensgr/results_cross5.png" width="100%">
   </div>
 </div>
 <p align="justify">
@@ -147,7 +147,7 @@ sitemap: false # Exclude from sitemap
 </p>
 <div class="row">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/opensgr/s2s_results.png' %}" width="100%">
+    <img src="/assets/images/papers/opensgr/s2s_results.png" width="100%">
   </div>
 </div>
 <p align="justify">

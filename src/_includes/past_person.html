@@ -1,6 +1,6 @@
-{%- assign d = include.person.data -%}
+{%- assign d = person.data -%}
 <li><strong>{{ d.name }} ({{ d.joined_date | date: "%Y" }} - {{ d.left_date | date: "%Y" }}),</strong>
-  {{ d.title }}: {{ include.person.content | strip_html | strip }}
+  {{ d.title }}: {{ person.content | strip_html | strip }}
   {%- if d.now_at %} Now: {{ d.now_at }}{% endif %}
   {%- if d.links %} {% for link in d.links %}<a href="{{ link.url }}">{{ link.name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
 </li>

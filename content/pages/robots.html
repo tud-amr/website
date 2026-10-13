@@ -14,7 +14,7 @@ images_carousel:
 
 <div class="carousel" role="region" aria-label="Photos of the lab" tabindex="0">
   {%- for image in images_carousel %}
-  <img src="{% include fix_link.html link=image.image_path %}" alt="Photo {{ forloop.index }} of the lab"{% if forloop.first %} loading="eager"{% endif %}>
+  <img src="{{ image.image_path }}" alt="Photo {{ forloop.index }} of the lab"{% if forloop.first %} loading="eager"{% endif %}>
   {%- endfor %}
 </div>
 
@@ -36,6 +36,6 @@ images_carousel:
 <h3 class="capitalize">{{ current_type }}s</h3>
 <div class="tile-list">
 {%- endif %}
-{% include robot_card.html robot=robot %}
+{% render 'robot_card.html', robot: robot %}
 {%- endfor %}
 </div>

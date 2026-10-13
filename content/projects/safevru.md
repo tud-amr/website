@@ -52,6 +52,6 @@ This work is funded by the Dutch Science Foundation NWO-TTW Foundation, within t
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.nwo.nl/en/">
-  <img class="img-flex" height="90" src="{% include fix_link.html link='/assets/images/projects/safevru/nwo.jpg' %}" alt="AMS Institute">
+  <img class="img-flex" height="90" src="/assets/images/projects/safevru/nwo.jpg" alt="AMS Institute">
   </a>
 </div>

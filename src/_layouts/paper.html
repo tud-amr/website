@@ -40,7 +40,7 @@ layout: default
   <section class="related">
     <h2 id="related-publications">Related Publications</h2>
     {%- for p in related_list %}
-    {% include publication.html publication=p %}
+    {% render 'publication.html', publication: p %}
     {%- endfor %}
   </section>
   {%- endif %}

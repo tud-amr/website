@@ -73,7 +73,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/teaser.jpg' %}" width="100%" alt="BEACON teaser">
+    <img src="/assets/images/papers/beacon/teaser.jpg" width="100%" alt="BEACON teaser">
   </div>
 </div>
 
@@ -97,7 +97,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center">
   <div class="col-10">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/dataset.jpg' %}" width="100%" alt="Task and dataset examples">
+    <img src="/assets/images/papers/beacon/dataset.jpg" width="100%" alt="Task and dataset examples">
   </div>
 </div>
 <p align="justify">
@@ -110,7 +110,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/pipeline.png' %}" width="100%" alt="BEACON overview">
+    <img src="/assets/images/papers/beacon/pipeline.png" width="100%" alt="BEACON overview">
   </div>
 </div>
 <p align="justify">
@@ -119,7 +119,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center mt-4">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/architecture.jpg' %}" width="100%" alt="BEACON architecture">
+    <img src="/assets/images/papers/beacon/architecture.jpg" width="100%" alt="BEACON architecture">
   </div>
 </div>
 <p align="justify">
@@ -135,7 +135,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/results.png' %}" width="100%" alt="Main results">
+    <img src="/assets/images/papers/beacon/results.png" width="100%" alt="Main results">
   </div>
 </div>
 <p align="justify">
@@ -144,7 +144,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center mt-4">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/ablations.png' %}" width="100%" alt="Ablations">
+    <img src="/assets/images/papers/beacon/ablations.png" width="100%" alt="Ablations">
   </div>
 </div>
 <p align="justify">
@@ -157,7 +157,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/qualitative_success.jpg' %}" width="100%" alt="Qualitative success cases">
+    <img src="/assets/images/papers/beacon/qualitative_success.jpg" width="100%" alt="Qualitative success cases">
   </div>
 </div>
 <p align="justify">
@@ -166,7 +166,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row justify-content-center mt-4">
   <div class="col-12">
-    <img src="{% include fix_link.html link='/assets/images/papers/beacon/qualitative_failure.jpg' %}" width="100%" alt="Qualitative failure cases">
+    <img src="/assets/images/papers/beacon/qualitative_failure.jpg" width="100%" alt="Qualitative failure cases">
   </div>
 </div>
 <p align="justify">

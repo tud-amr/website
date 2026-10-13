@@ -49,5 +49,5 @@ Another contribution from this project has been to predict human behavior in tra
 
 This project is funded the the Dutch Research Council NWO-NWA, within the "Acting under Uncertainty (ACT)" project (Grant No. NWA.1292.19.298). 
 
-<img class="img-fluid" src="{% include fix_link.html link='/assets/images/projects/ACT-NWA/partners.png' %}" alt="TU Delft partners" style="height: auto; width: 1000px;">
+<img class="img-fluid" src="/assets/images/projects/ACT-NWA/partners.png" alt="TU Delft partners" style="height: auto; width: 1000px;">
 

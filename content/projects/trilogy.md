@@ -41,7 +41,7 @@ We demonstrated our decentralized, rule- and interaction-aware MPPI planner runn
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/crossing_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/crossing_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -53,7 +53,7 @@ We demonstrated our decentralized, rule- and interaction-aware MPPI planner runn
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/headon3_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/headon3_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -72,7 +72,7 @@ With experiments on ground robots, we have shown the reactivity of the planner t
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/bias8_with_samples.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/bias8_with_samples.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -84,7 +84,7 @@ With experiments on ground robots, we have shown the reactivity of the planner t
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/dra_side_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/dra_side_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -101,7 +101,7 @@ In collaboration with project partners, we have collected real-world data onboar
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/turn_dataonly_spedup.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/turn_dataonly_spedup.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -113,7 +113,7 @@ In collaboration with project partners, we have collected real-world data onboar
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/LBM_IAMPPI_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/LBM_IAMPPI_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -130,7 +130,7 @@ In collaboration with Demcon, we have demonstrated a robust controller for refer
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/harbour_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/harbour_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -142,7 +142,7 @@ In collaboration with Demcon, we have demonstrated a robust controller for refer
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/projects/trilogy/sea_compressed.mp4' %}" type="video/mp4">
+          <source src="/assets/images/projects/trilogy/sea_compressed.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -159,7 +159,7 @@ Collaborating across projects, we have shown that the same planner used on vesse
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/omnipush480p.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/omnipush480p.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -171,7 +171,7 @@ Collaborating across projects, we have shown that the same planner used on vesse
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/pandapush480.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/pandapush480.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -187,24 +187,24 @@ This project is funded by the NWO Top Sector Water & Maritime: the Blue route, '
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.amsterdam.nl/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/gemeente.png' %}" alt="Municipality of Amsterdam">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/gemeente.png" alt="Municipality of Amsterdam">
   </a>
   <a itemprop="url" href="https://www.ams-institute.org/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/ams.png' %}" alt="AMS Institute">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/ams.png" alt="AMS Institute">
   </a>
   <a itemprop="url" href="https://www.flying-fish.tech/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/flying_fish.png' %}" alt="Flying Fish">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/flying_fish.png" alt="Flying Fish">
   </a>
   <a itemprop="url" href="https://demcon-unmanned.nl/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/demcon.png' %}" alt="Municipality of Amsterdam">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/demcon.png" alt="Municipality of Amsterdam">
   </a>
   <a itemprop="url" href="https://www.zoevcity.nl/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/zoev.jpeg' %}" alt="Zoev City">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/zoev.jpeg" alt="Zoev City">
   </a>
   <a itemprop="url" href="https://rasdelft.nl/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/ras.png' %}" alt="Researchlab Autonomous Shipping">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/ras.png" alt="Researchlab Autonomous Shipping">
   </a>
   <a itemprop="url" href="https://www.damen.com/">
-  <img class="img-flex" height="60" src="{% include fix_link.html link='/assets/images/projects/trilogy/damen.jpg' %}" alt="Damen">
+  <img class="img-flex" height="60" src="/assets/images/projects/trilogy/damen.jpg" alt="Damen">
   </a>
 </div>

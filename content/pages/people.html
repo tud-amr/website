@@ -13,7 +13,7 @@ permalink: /people/
 {%- assign d = person.data %}
 {%- if d.type == "professor" and d.left_date == nil %}
 <article class="person person-lead">
-  <img class="person-photo" src="{% include fix_link.html link=d.image %}" alt="{{ d.name }}" width="250" height="250">
+  <img class="person-photo" src="{{ d.image }}" alt="{{ d.name }}" width="250" height="250">
   <div class="person-body">
     <h3 class="person-name">{{ d.name }}</h3>
     <p class="person-role">{{ d.title }} | Since {{ d.joined_date | date: "%Y" }}</p>
@@ -41,7 +41,7 @@ permalink: /people/
 <div class="people-grid">
   {%- for person in people_by_join %}
   {%- if person.data.type == parts[0] and person.data.left_date == nil %}
-  {% include person_card.html person=person %}
+  {% render 'person_card.html', person: person %}
   {%- endif %}
   {%- endfor %}
 </div>
@@ -53,7 +53,7 @@ permalink: /people/
 <ul class="past-people">
   {%- for person in people_by_leave %}
   {%- if person.data.type != "phd-visitor" and person.data.type != "engineer" %}
-  {% include past_person.html person=person %}
+  {% render 'past_person.html', person: person %}
   {%- endif %}
   {%- endfor %}
 </ul>
@@ -62,7 +62,7 @@ permalink: /people/
 <ul class="past-people">
   {%- for person in people_by_leave %}
   {%- if person.data.type == "phd-visitor" %}
-  {% include past_person.html person=person %}
+  {% render 'past_person.html', person: person %}
   {%- endif %}
   {%- endfor %}
 </ul>
@@ -71,7 +71,7 @@ permalink: /people/
 <ul class="past-people">
   {%- for person in people_by_leave %}
   {%- if person.data.type == "engineer" %}
-  {% include past_person.html person=person %}
+  {% render 'past_person.html', person: person %}
   {%- endif %}
   {%- endfor %}
 </ul>

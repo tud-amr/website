@@ -63,7 +63,7 @@ From left to right, top to bottom, the videos below show 1) Full-pose manipulati
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser1" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/full_pose_3.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/aerial-manipulation-marl/full_pose_3.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -74,7 +74,7 @@ From left to right, top to bottom, the videos below show 1) Full-pose manipulati
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser2" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/failure_agent.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/aerial-manipulation-marl/failure_agent.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -85,7 +85,7 @@ From left to right, top to bottom, the videos below show 1) Full-pose manipulati
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser3" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/full_pose_4.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/aerial-manipulation-marl/full_pose_4.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -96,7 +96,7 @@ From left to right, top to bottom, the videos below show 1) Full-pose manipulati
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser4" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/unknown_disturbances.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/aerial-manipulation-marl/unknown_disturbances.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -107,7 +107,7 @@ From left to right, top to bottom, the videos below show 1) Full-pose manipulati
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser5" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/heterogeneous_agent.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/aerial-manipulation-marl/heterogeneous_agent.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -118,7 +118,7 @@ From left to right, top to bottom, the videos below show 1) Full-pose manipulati
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser6" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/trajectory_top.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/aerial-manipulation-marl/trajectory_top.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -135,7 +135,7 @@ This paper presents the first decentralized method to enable real-world 6-DoF ma
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/aerial-manipulation-marl/method.png' %}" alt="Image 1" style="max-width: 100%; height: auto;">
+        <img class="img-fluid object-fit-contain" src="/assets/images/papers/aerial-manipulation-marl/method.png" alt="Image 1" style="max-width: 100%; height: auto;">
       </div>
     </div>
   </div>

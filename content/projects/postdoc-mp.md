@@ -50,6 +50,6 @@ This project also focused on other safety issues for an autonomous vehicle. A no
 ## Funding & Partners
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.tri.global/">
-  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/postdoc-mp/tri.png' %}" alt="Toyota Research Institute">
+  <img class="img-flex" height="70" src="/assets/images/projects/postdoc-mp/tri.png" alt="Toyota Research Institute">
   </a>
 </div>

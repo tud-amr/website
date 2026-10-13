@@ -80,7 +80,7 @@ related:
 <h2 align="center"><u>Teaser</u></h2>
 <div class="row">
   <div class="col-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/hmpc/smpc_hmpc_front_page.webp' %}" width="100%">
+    <img src="/assets/images/papers/hmpc/smpc_hmpc_front_page.webp" width="100%">
   </div>
   <div class="col-6">
     <p align="justify">
@@ -97,7 +97,7 @@ related:
 <h2 align="center"><u>Embedded HMPC</u></h2>
 <div class="row">
   <div class="col-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/hmpc/HMPC_system_diagram.png' %}" width="100%">
+    <img src="/assets/images/papers/hmpc/HMPC_system_diagram.png" width="100%">
   </div>
   <div class="col-6">
     <p align="justify">
@@ -138,7 +138,7 @@ related:
     <li>At time $t_{i+1}-T^{\mathrm{s},\mathrm{t}}$, the TMPC starts optimizing a trajectory based on a new reference plan $\boldsymbol{x}_{\tau|t_{i+1}}^{\mathrm{p},*}$ that becomes valid at $t_{i+1}$. This reference plan is optimized by the PMPC starting at time $t_i - T^{\mathrm{s},\mathrm{t}}$.</li>
   </ol>
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/hmpc/HMPC_timing.png' %}" width="100%">
+<img src="/assets/images/papers/hmpc/HMPC_timing.png" width="100%">
 <hr/>
 <h2 align="center"><u>Obstacle avoidance generation using <i>I-DecompUtil</i></u></h2>
 <p align="justify">
@@ -151,7 +151,7 @@ related:
   </ol>
   Note that (b)-(d) are repeated for all line segments.
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/hmpc/HMPC_obstacle_avoidance_constraints.png' %}" width="100%">
+<img src="/assets/images/papers/hmpc/HMPC_obstacle_avoidance_constraints.png" width="100%">
 <p align="justify">
   Please refer to <a href="https://arxiv.org/html/2406.11506v2#S4">Section IV</a> in the paper for more details on the design of the obstacle avoidance generation.
   <br><br>
@@ -175,13 +175,13 @@ related:
     </p>
   </div>
   <div class="col-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/hmpc/2024-05-16_exp_hg_2_obs_tmpc_prediction.png' %}" width="100%">
+    <img src="/assets/images/papers/hmpc/2024-05-16_exp_hg_2_obs_tmpc_prediction.png" width="100%">
   </div>
 </div>
 <p align="justify">
   The animation below shows the the RViZ visualization of the quadrotor flying in the lab using the HMPC scheme:
 </p>
-<img src="{% include fix_link.html link='/assets/images/papers/hmpc/hmpc.gif' %}" width="100%">
+<img src="/assets/images/papers/hmpc/hmpc.gif" width="100%">
 <p align="justify">
   In summary, based on all HMPC results, we conclude that:
   <ol>
@@ -194,7 +194,7 @@ related:
 <h3 align="center"><u>Performance comparison with SMPC</u></h3>
 <div class="row">
   <div class="col-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/hmpc/2024-05-16_exp_hg_2_obs_smpc_hmpc_trajectories_vel.png' %}" width="100%">
+    <img src="/assets/images/papers/hmpc/2024-05-16_exp_hg_2_obs_smpc_hmpc_trajectories_vel.png" width="100%">
   </div>
   <div class="col-6">
     <p align="justify">
@@ -210,7 +210,7 @@ related:
     </p>
   </div>
   <div class="col-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/hmpc/2024-05-16_exp_hg_2_obs_smpc_hmpc_timing_box.png' %}" width="100%">
+    <img src="/assets/images/papers/hmpc/2024-05-16_exp_hg_2_obs_smpc_hmpc_timing_box.png" width="100%">
   </div>
 </div>
 <p align="justify">
@@ -236,7 +236,7 @@ related:
   The TMPC discretization time $T^\mathrm{s,t}$ is chosen small enough to ensure accurate control and large enough to solve the MPC problem with a reasonable horizon $T^\mathrm{t}$ in real time on the embedded computer. We choose the PMPC discretization time $T^\mathrm{s,p}$ using the ratio $\beta=\frac{T^\mathrm{s,p}}{T^\mathrm{s,t}}$. As shown in the figure below, $\beta$ gives a trade-off between the PMPC execution time and the goal-reaching time. From this figure we can conclude that $\beta=10$ is a reasonable value to choose. From there, we choose the PMPC horizon length $T^\mathrm{p}$ to be short enough to ensure real-time feasibility and long enough to compute a reasonable trajectory around the obstacles towards the goal. The input weights in both TMPC and PMPC are chosen sufficiently large to ensure stability of the closed-loop system, and the goal and state weights are chosen sufficiently large to ensure that the system reaches the goal and accurately tracks the reference trajectory in the case of PMPC and TMPC, respectively. Finally, the terminal set scaling $\alpha$ is chosen large enough to ensure TMPC feasibility and small enough to optimize a trajectory with limited conservativeness in the PMPC.
 </p>
 <div style="text-align: center;">
-  <img src="{% include fix_link.html link='/assets/images/papers/hmpc/2024-11-20_sim_hg_2_obs_hmpc_beta_timing.png' %}" width="50%">
+  <img src="/assets/images/papers/hmpc/2024-11-20_sim_hg_2_obs_hmpc_beta_timing.png" width="50%">
 </div>
 <hr/>
 <h2 align="center"><u>There is more!</u></h2>
@@ -247,7 +247,7 @@ related:
 <h2 align="center"><u>Research platform</u></h2>
 <div class="row">
   <div class="col-6">
-    <img src="{% include fix_link.html link='/assets/images/papers/hmpc/Lab_setup.png' %}" width="100%">
+    <img src="/assets/images/papers/hmpc/Lab_setup.png" width="100%">
   </div>
   <div class="col-6">
     <p align="justify">

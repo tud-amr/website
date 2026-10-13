@@ -6,7 +6,7 @@ permalink: /student-projects/
 <p>
     Every year we offer several MSc projects in multi-robot motion planning and control, navigation in dynamic
     environments, human-swarm interaction and automated mobility-on-demand. Here is the overview information from the
-    <a href="{% include fix_link.html link='/assets/files/student_projects/Brochure_thesis_jam.pdf' %}">MSc Robotics booklet</a>. 
+    <a href="/assets/files/student_projects/Brochure_thesis_jam.pdf">MSc Robotics booklet</a>. 
     Below you can find the available projects.
 </p>
 
@@ -31,7 +31,7 @@ permalink: /student-projects/
                 </td>
                 <td>
                     {%- if project.data.proposal_document %}
-                    <a href="{% include fix_link.html link=project.data.proposal_document %}">Here</a>
+                    <a href="{{ project.data.proposal_document }}">Here</a>
                     {%- else %}
                     <a href="{{ project.url }}">Here</a>
                     {%- endif %}

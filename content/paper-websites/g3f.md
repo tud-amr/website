@@ -53,35 +53,18 @@ related:
   projects: []
   collections: [saraypapers]
   papers: []
+# LaTeX shortcuts used in this page's equations (rendered with KaTeX).
+math_macros:
+  '\norm': '\left\lVert #1 \right\rVert'
+  '\vec': '\boldsymbol'
+  '\qdot': '\dot{\q}'
+  '\qddot': '\ddot{\q}'
+  '\q': '\vec{q}'
+  '\h': '\vec{h}'
+  '\f': '\vec{f}'
+  '\fC': '\f^{\mathcal{C}}_{\theta}'
 ---
 <div>
-{% if page.usemathjax %}
-<script>
-MathJax = {
-  tex: {
-    tags: 'ams',
-    inlineMath: [['$', '$']],
-    displayMath: [['$$', '$$']],
-    packages: {'[+]': ['ams']}, 
-    processEscapes: true,
-    macros: {
-      norm: ["\\left\\lVert #1 \\right\\rVert", 1],
-      vec: "\\boldsymbol",
-      qdot: "\\dot{\\q}",
-      qddot: "\\ddot{\\q}",
-      q: "\\vec{q}",
-      h: "\\vec{h}",
-      f: "\\vec{f}",
-      fC: "\\f^{\\mathcal{C}}_{\\theta}",
-    }
-  // svg: {
-  //   fontCache: 'global'
-  //  }
-  }
-};        
-</script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    {% endif %}
 </div>
 
 <h2> Abstract </h2>
@@ -104,7 +87,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_onestable_fabrics_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinovas_onestable_fabrics_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -117,7 +100,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_onetable_gomp_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinovas_onetable_gomp_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -134,7 +117,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_pickplace_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinovas_pickplace_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -149,7 +132,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/gomp_human_scenario_1_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/gomp_human_scenario_1_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -161,7 +144,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/gomp_human_scenario_2_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/gomp_human_scenario_2_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -178,7 +161,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/video_gomp_static_double_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/video_gomp_static_double_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -190,7 +173,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/video_gomp_static_complex_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/video_gomp_static_complex_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -207,7 +190,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinova_single_pickplace_1_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinova_single_pickplace_1_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -219,7 +202,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinova_gomp_noncooperative_agent_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinova_gomp_noncooperative_agent_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -236,7 +219,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_crossover_gomp_ppt.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinovas_crossover_gomp_ppt.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -251,7 +234,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinova_pybullet_mix_comp.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinova_pybullet_mix_comp.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -261,7 +244,7 @@ We validate our approach through various simulations and real-world experiments 
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/g3f/dinovas_pybullet_mix_zoomout.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/g3f/dinovas_pybullet_mix_zoomout.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -275,20 +258,20 @@ We validate our approach through various simulations and real-world experiments 
 <p align="justify"> Alternative target poses are explored based on the current state of the robot and the dynamic environment. In the Figure below, it is shown that the target pose is optimized with respect to the current end-effector pose of the robot. The axis along which the rotations are allowed, can vary based on the task. </p>
   <!-- <div class="container">
     <div id="fig-grasp1" class="image-div mb-3 d-flex justify-content-center">
-      <img src="{{ '/assets/images/papers/g3f/grasp_constraint.png' | relative_url}}" class="img-fluid" alt="lab">
+      <img src="/assets/images/papers/g3f/grasp_constraint.png" class="img-fluid" alt="lab">
     </div>
     <div id="fig-grasp2" class="image-div mb-3 d-flex justify-content-center">
-      <img src="{{ '/assets/images/papers/g3f/grasp_poses.png' | relative_url}}" class="img-fluid" alt="lab">
+      <img src="/assets/images/papers/g3f/grasp_poses.png" class="img-fluid" alt="lab">
     </div>
   </div> -->
 
   <div class="container">
     <div class="d-flex justify-content-center">
         <div id="fig-grasp1" class="image-div me-3">
-            <img src="{{ '/assets/images/papers/g3f/grasp_constraint.png' | relative_url }}" class="img-fluid" alt="lab">
+            <img src="/assets/images/papers/g3f/grasp_constraint.png" class="img-fluid" alt="lab">
         </div>
         <div id="fig-grasp2" class="image-div">
-            <img src="{{ '/assets/images/papers/g3f/dinova_grasp_adapt.png' | relative_url }}" class="img-fluid" alt="lab">
+            <img src="/assets/images/papers/g3f/dinova_grasp_adapt.png" class="img-fluid" alt="lab">
         </div>
     </div>
 </div>

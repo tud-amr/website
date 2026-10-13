@@ -31,7 +31,7 @@ people: # If you put your name in the same way you have it in your _people entry
 ## About the Project
 
 <div class="d-flex justify-content-start mb-2">
-  <img class="img-fluid" style="max-height: 2cm;" src="{% include fix_link.html link='/assets/images/projects/harmony/harmony_logo.png' %}" alt="TU Delft partners">
+  <img class="img-fluid" style="max-height: 2cm;" src="/assets/images/projects/harmony/harmony_logo.png" alt="TU Delft partners">
 </div>
 
 Harmony is a Horizon 2020 project which develops assistive robotic mobile manipulation technologies for environments shared with humans, i.e., hospitals. Specifically, Harmony addresses two use cases:
@@ -48,7 +48,7 @@ We devise methods for multi-robot motion planning that schedule plans for the ro
 
 <div class="image-div mb-3 d-flex justify-content-center">
     <figure class="figure">
-        <img src="{% include fix_link.html link='/assets/images/projects/harmony/multi_objective_MRTA.png' %}" alt="Multi-Objective Task Assignment" class="figure-img img-fluid" width="500">
+        <img src="/assets/images/projects/harmony/multi_objective_MRTA.png" alt="Multi-Objective Task Assignment" class="figure-img img-fluid" width="500">
         <figcaption class="figure-caption text-center">Multi-Objective Task Assignment</figcaption>
     </figure>
 </div>
@@ -57,7 +57,7 @@ Furthermore, we develop local-motion planning approaches which do not only accou
 
 <div class="image-div mb-3 d-flex justify-content-center">
     <figure class="figure">
-        <img src="{% include fix_link.html link='/assets/images/projects/harmony/local_planner.png' %}" alt="Socially interactive local motion planning" class="figure-img img-fluid" width="600">
+        <img src="/assets/images/projects/harmony/local_planner.png" alt="Socially interactive local motion planning" class="figure-img img-fluid" width="600">
         <figcaption class="figure-caption text-center">Socially interactive local motion planning</figcaption>
     </figure>
 </div>
@@ -79,7 +79,7 @@ Furthermore, we develop local-motion planning approaches which do not only accou
 
 This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No 101017008. 
 
-  <img class="img-fluid" height="200" src="{% include fix_link.html link='/assets/images/projects/harmony/harmony_partners_logos.png' %}" alt="TU Delft partners">
+  <img class="img-fluid" height="200" src="/assets/images/projects/harmony/harmony_partners_logos.png" alt="TU Delft partners">
 
 
 

@@ -1,4 +1,4 @@
-{%- assign target = include.to -%}
+{%- assign target = to -%}
 {%- if target contains '://' -%}{%- else -%}{%- assign target = target | absolute_url -%}{%- endif -%}
 <!DOCTYPE html>
 <html lang="en-US">

@@ -56,6 +56,6 @@ This project is funded by the National Police (Politie) of the Netherlands.
 
 <div class="d-flex flex-row gap-2 flex-wrap justify-content-evenly mb-4 mt-4">
   <a itemprop="url" href="https://www.politie.nl/en">
-  <img class="img-flex" height="70" src="{% include fix_link.html link='/assets/images/projects/police/politie.png' %}" alt="National Police">
+  <img class="img-flex" height="70" src="/assets/images/projects/police/politie.png" alt="National Police">
   </a>
 </div>

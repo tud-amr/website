@@ -30,6 +30,6 @@ This project is funded by the Dutch Research Council (NWO).
 ## Project Demonstrations
 <div class="video-wrapper ratio ratio-16x9">
   <video id="teaser1" autoplay="" muted="" controls="" loop="" playsinline="">
-    <source src="{% include fix_link.html link='/assets/images/papers/camls-agile/video_camls_agile.mp4' %}" type="video/mp4">
+    <source src="/assets/images/papers/camls-agile/video_camls_agile.mp4" type="video/mp4">
   </video>
 </div>

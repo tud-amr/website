@@ -71,7 +71,7 @@ sitemap: false # Exclude from sitemap
 <!-- <h2 align="center"><u>Overview</u></h2> -->
   <div class="row justify-content-center">
     <div class="col-8 col-md-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/first_figure.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/first_figure.png" width="100%">
     </div>
   </div>
 
@@ -81,7 +81,7 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pipeline.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/pipeline.png" width="100%">
     </div>
   </div>
 
@@ -126,12 +126,12 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/occ_compare1.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/occ_compare1.png" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/occ_compare2.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/occ_compare2.png" width="100%">
     </div>
   </div>
   <p align="justify">
@@ -144,17 +144,17 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pano1.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/pano1.png" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pano2.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/pano2.png" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-12">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/pano3.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/pano3.png" width="100%">
     </div>
   </div>
   <p align="justify">
@@ -167,18 +167,18 @@ sitemap: false # Exclude from sitemap
 
 <div class="row">
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow1.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/flow1.png" width="100%">
     </div>
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow2.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/flow2.png" width="100%">
     </div>
   </div>
   <div class="row">
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow3.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/flow3.png" width="100%">
     </div>
     <div class="col-6">
-      <img src="{% include fix_link.html link='/assets/images/papers/mobileocc/flow4.png' %}" width="100%">
+      <img src="/assets/images/papers/mobileocc/flow4.png" width="100%">
     </div>
   </div>
   <p align="justify">

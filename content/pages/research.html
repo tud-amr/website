@@ -27,9 +27,9 @@ permalink: /research/
 
 <div class="tile-list" data-area-list>
   {%- for project in ongoing %}
-  <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% include project_card.html project=project %}</div>
+  <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% render 'project_card.html', project: project %}</div>
   {%- endfor %}
   {%- for project in finished %}
-  <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% include project_card.html project=project %}</div>
+  <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% render 'project_card.html', project: project %}</div>
   {%- endfor %}
 </div>

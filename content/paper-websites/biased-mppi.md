@@ -46,7 +46,7 @@ related:
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/no_bias8_with_samples.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/no_bias8_with_samples.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -59,7 +59,7 @@ related:
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/bias8_with_samples.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/bias8_with_samples.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -81,7 +81,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_switching.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/pendulum_switching.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -94,7 +94,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_nobias.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/pendulum_nobias.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -107,7 +107,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/pendulum_bias.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/pendulum_bias.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -125,7 +125,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/crossing_no_AC_crop.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/crossing_no_AC_crop.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -138,7 +138,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/crossing_AC_crop.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/crossing_AC_crop.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -156,7 +156,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/Hg_2000_No_AC_crop.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/Hg_2000_No_AC_crop.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -170,7 +170,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/Hg_200_No_AC_crop.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/Hg_200_No_AC_crop.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -184,7 +184,7 @@ Motion planning for autonomous robots in human-populated environments poses nume
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/biased_mppi/Hg_200_AC_crop.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/biased_mppi/Hg_200_AC_crop.m4v" type="video/mp4">
         </video>
       </div>
     </div>

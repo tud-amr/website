@@ -57,7 +57,7 @@ related:
   <div class="teaser-video d-flex justify-content-center">
     <div class="ratio ratio-16x9">
       <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-        <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/video_ral.m4v' %}" type="video/mp4">
+        <source src="/assets/images/papers/m3p2i_aip/video_ral.m4v" type="video/mp4">
       </video>
     </div>
   </div>
@@ -71,7 +71,7 @@ related:
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/reactive_pick_compress.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/real-world/reactive_pick_compress.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -83,7 +83,7 @@ related:
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-4x3">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/real-world/m3p2i_1_compress.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/real-world/m3p2i_1_compress.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -106,7 +106,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
 <div class="image-grid text-center mb-1">
   <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-1">
     <div class="col">
-      <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/general_scheme.png' %}" alt="Image 1" style="max-width: 60%; height: auto;">
+      <img class="img-fluid object-fit-contain" src="/assets/images/papers/m3p2i_aip/general_scheme.png" alt="Image 1" style="max-width: 60%; height: auto;">
     </div>
   </div>
   <p align="justify">
@@ -121,7 +121,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_1corner_push.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_1corner_push.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -134,7 +134,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_2corners_push.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_2corners_push.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -150,7 +150,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_1corner_pull.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_1corner_pull.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -163,7 +163,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_2corners_pull.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-push-pull/mppi_2corners_pull.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -179,7 +179,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/m3p2i_1corner.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-push-pull/m3p2i_1corner.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -192,7 +192,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-push-pull/m3p2i_2corners.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-push-pull/m3p2i_2corners.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -208,7 +208,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/tamp_reactive_pick.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-pick-place/tamp_reactive_pick.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -221,7 +221,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/m3p2i_pickplace.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-pick-place/m3p2i_pickplace.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -237,7 +237,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/m3p2i_pick_with_obs.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-pick-place/m3p2i_pick_with_obs.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -250,7 +250,7 @@ high and low levels to cope, for instance, with dynamic obstacles or disturbance
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/sim-pick-place/rl_reactive_16.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/m3p2i_aip/sim-pick-place/rl_reactive_16.mp4" type="video/mp4">
         </video>
       </div>
     </div>

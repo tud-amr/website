@@ -45,7 +45,7 @@ related:
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-    <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/sadcher_MRTA/opening_image_new.png' %}" alt="Image 1" style="max-width: 90%; height: auto;">
+    <img class="img-fluid object-fit-contain" src="/assets/images/papers/sadcher_MRTA/opening_image_new.png" alt="Image 1" style="max-width: 90%; height: auto;">
       </div>
     </div>
   </div>
@@ -73,7 +73,7 @@ i.e., when robots finish tasks or new tasks are announced.
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/sadcher_MRTA/thesis_architecture_high_res.png' %}" alt="Image 1" style="max-width: 100%; height: auto;">
+        <img class="img-fluid object-fit-contain" src="/assets/images/papers/sadcher_MRTA/thesis_architecture_high_res.png" alt="Image 1" style="max-width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -86,7 +86,7 @@ i.e., when robots finish tasks or new tasks are announced.
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-    <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/sadcher_MRTA/sadcher.gif' %}" alt="Image 1" style="max-width: 70%; height: auto;">
+    <img class="img-fluid object-fit-contain" src="/assets/images/papers/sadcher_MRTA/sadcher.gif" alt="Image 1" style="max-width: 70%; height: auto;">
       </div>
     </div>
   </div>
@@ -102,7 +102,7 @@ i.e., when robots finish tasks or new tasks are announced.
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/sadcher_MRTA/violin_without_travel_distance.png' %}" alt="Image 1" style="max-width: 100%; height: auto;">
+        <img class="img-fluid object-fit-contain" src="/assets/images/papers/sadcher_MRTA/violin_without_travel_distance.png" alt="Image 1" style="max-width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -117,7 +117,7 @@ construction, total computation time is reported; for methods returning instanta
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/sadcher_MRTA/1v1_0_500_833_paper.png' %}" alt="Image 1" style="max-width: 100%; height: auto;">
+        <img class="img-fluid object-fit-contain" src="/assets/images/papers/sadcher_MRTA/1v1_0_500_833_paper.png" alt="Image 1" style="max-width: 100%; height: auto;">
       </div>
     </div>
   </div>
@@ -134,7 +134,7 @@ points below the diagonal indicate better performance by (S-)Sadcher.
 <div class="image-grid text-center mb-1">
     <div class="row row-cols-1 row-cols-sm-2g-1">
       <div class="col">
-        <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/sadcher_MRTA/2x2_scaling_graphs_with_comp_time.png' %}" alt="Image 1" style="max-width: 100%; height: auto;">
+        <img class="img-fluid object-fit-contain" src="/assets/images/papers/sadcher_MRTA/2x2_scaling_graphs_with_comp_time.png" alt="Image 1" style="max-width: 100%; height: auto;">
       </div>
     </div>
   </div>

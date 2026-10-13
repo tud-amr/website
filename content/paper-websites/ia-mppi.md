@@ -54,7 +54,7 @@ related:
   <div class="teaser-video d-flex justify-content-center">
     <div class="ratio ratio-16x9">
       <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-        <source src="{% include fix_link.html link='/assets/images/papers/m3p2i_aip/video_ral.m4v' %}" type="video/mp4">
+        <source src="/assets/images/papers/m3p2i_aip/video_ral.m4v" type="video/mp4">
       </video>
     </div>
   </div>
@@ -73,7 +73,7 @@ The videos below show head-on and crossing scenarios onboard two quarterscale Ro
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/ia_mppi/headon2.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/ia_mppi/headon2.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -84,7 +84,7 @@ The videos below show head-on and crossing scenarios onboard two quarterscale Ro
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/ia_mppi/headon3.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/ia_mppi/headon3.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -95,7 +95,7 @@ The videos below show head-on and crossing scenarios onboard two quarterscale Ro
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/ia_mppi/crossing4.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/ia_mppi/crossing4.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -106,7 +106,7 @@ The videos below show head-on and crossing scenarios onboard two quarterscale Ro
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/ia_mppi/crossing5.mp4' %}" type="video/mp4">
+          <source src="/assets/images/papers/ia_mppi/crossing5.mp4" type="video/mp4">
         </video>
       </div>
     </div>
@@ -126,7 +126,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
 <div class="image-grid text-center mb-1">
   <div class="row row-cols-1 row-cols-sm-1 row-cols-md-1 g-1">
     <div class="col">
-      <img class="img-fluid object-fit-contain" src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/main_idea.png' %}" alt="Image 1" style="max-width: 60%; height: auto;">
+      <img class="img-fluid object-fit-contain" src="/assets/images/papers/isaac_mppi/main_idea.png" alt="Image 1" style="max-width: 60%; height: auto;">
     </div>
   </div>
   <p align="justify">
@@ -142,7 +142,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media2.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media2.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -153,7 +153,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media1.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media1.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -167,7 +167,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media3.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media3.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -180,7 +180,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media4.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media4.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -196,7 +196,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media5.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media5.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -209,7 +209,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media6.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media6.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -225,7 +225,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media7.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media7.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -238,7 +238,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media12.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media12.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -254,7 +254,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media9.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media9.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -267,7 +267,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media8.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media8.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -283,7 +283,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media10.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media10.m4v" type="video/mp4">
         </video>
       </div>
     </div>
@@ -296,7 +296,7 @@ We build upon a sampling-based method, namely Model Predictive Path Integral con
     <div class="teaser-video d-flex justify-content-center">
       <div class="ratio ratio-16x9">
         <video id="teaser" autoplay="" muted="" controls="" loop="" playsinline="">
-          <source src="{% include fix_link.html link='/assets/images/papers/isaac_mppi/media11.m4v' %}" type="video/mp4">
+          <source src="/assets/images/papers/isaac_mppi/media11.m4v" type="video/mp4">
         </video>
       </div>
     </div>
