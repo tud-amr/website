@@ -14,12 +14,14 @@ echo "==> Building the Jekyll site (Ruby 3.1; Jekyll 3.9 does not run on Ruby 3.
 docker run --rm -v "$PWD":/srv/site -w /srv/site -v amr-bundle31:/usr/local/bundle ruby:3.1-bookworm \
   bash -c 'bundle install --quiet && bundle exec jekyll build --destination /srv/site/_site'
 git checkout -- Gemfile.lock 2>/dev/null || true   # bundler may rewrite platforms
+# The Ruby image runs as root; hand the output back to the current user.
+docker run --rm -v "$PWD":/w ruby:3.1-bookworm chown -R "$(id -u):$(id -g)" /w/_site
 
 echo "==> Recording every output file"
 (cd _site && find . -type f | sed 's|^\./|/|' | LC_ALL=C sort) > "$OUT/files.txt"
 
 echo "==> Crawling pages"
-docker run --rm --ipc=host -v "$PWD":/work -w /tmp mcr.microsoft.com/playwright:v1.48.0-noble \
-  bash -c 'npm install --silent --no-save playwright@1.48.0 >/dev/null && cp /work/scripts/baseline/crawl.mjs . && node crawl.mjs /work/_site /work/'"$OUT"
+docker run --rm --ipc=host -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD":/work -w /tmp mcr.microsoft.com/playwright:v1.48.0-noble \
+  bash -c 'mkdir -p /tmp/crawl && cd /tmp/crawl && npm install --silent --no-save playwright@1.48.0 >/dev/null && cp /work/scripts/baseline/crawl.mjs . && node crawl.mjs /work/_site /work/'"$OUT"
 
 echo "==> Done. See $OUT/"

@@ -5,3 +5,8 @@ _site
 vendor
 tests/baseline/screenshots/
 .DS_Store
+node_modules/
+.cache/
+.shots/
+test-results/
+playwright-report/
