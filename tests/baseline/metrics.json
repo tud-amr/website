@@ -1,0 +1,1924 @@
+{
+  "widths": [
+    390,
+    768,
+    1280
+  ],
+  "settleMs": 2000,
+  "pages": {
+    "/": {
+      "390": {
+        "status": 200,
+        "requests": 31,
+        "mb": 2.23,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 32,
+        "mb": 2.29,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (688px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 33,
+        "mb": 2.24,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "AMR Lab"
+    },
+    "/2023/12/19/welcome-to-jekyll/": {
+      "390": {
+        "status": 200,
+        "requests": 14,
+        "mb": 0.69,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 14,
+        "mb": 0.69,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 13,
+        "mb": 0.69,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Welcome to Jekyll! | AMR Lab"
+    },
+    "/404.html": {
+      "390": {
+        "status": 200,
+        "requests": 15,
+        "mb": 0.66,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 15,
+        "mb": 0.66,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 14,
+        "mb": 0.66,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "AMR Lab"
+    },
+    "/education/": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 17,
+        "mb": 0.71,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (691px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 17,
+        "mb": 0.71,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Education and Teaching | AMR Lab"
+    },
+    "/events/": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 17,
+        "mb": 0.71,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (688px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.71,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Events | AMR Lab"
+    },
+    "/msc_projects_available/msc-24-lely-rl-path-planning.html": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.95,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 15,
+        "mb": 0.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Using reinforcement learning for path planning of an autonomous robot | AMR Lab"
+    },
+    "/msc_projects_available/msc-25-bosch.html": {
+      "390": {
+        "status": 200,
+        "requests": 25,
+        "mb": 1.18,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 25,
+        "mb": 1.18,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 25,
+        "mb": 1.18,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Collision-Free Smooth Motion Planning Among Humans | AMR Lab"
+    },
+    "/msc_projects_available/msc-25-damen.html": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.95,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 15,
+        "mb": 0.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Internship or graduation project - autonomous shipping | AMR Lab"
+    },
+    "/msc_projects_available/msc-25-reza-slam.html": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.95,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 15,
+        "mb": 0.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Simultaneous Localization and Mapping in Dynamic Environments | AMR Lab"
+    },
+    "/msc_projects_finished/": {
+      "390": {
+        "status": 200,
+        "requests": 23,
+        "mb": 8.5,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 23,
+        "mb": 8.5,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 23,
+        "mb": 8.5,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Master's Thesis Projects | AMR Lab"
+    },
+    "/msc_projects_finished/24-jelmerdewolde-compliantmobilemanipulation.html": {
+      "390": {
+        "status": 200,
+        "requests": 33,
+        "mb": 7.01,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 33,
+        "mb": 7.01,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 33,
+        "mb": 7.01,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Current-Based Impedance Control for Mobile Manipulators Without Force/Torque Sensors | AMR Lab"
+    },
+    "/msc_projects_finished/24-jorisweeda-svgmppi.html": {
+      "390": {
+        "status": 200,
+        "requests": 17,
+        "mb": 2.99,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 17,
+        "mb": 2.99,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 17,
+        "mb": 2.99,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Pushing Through Clutter With Movability Awareness of Blocking Obstacles | AMR Lab"
+    },
+    "/msc_projects_finished/24-sunnywang-neuralcontrolbarrierfunctions.html": {
+      "390": {
+        "status": 200,
+        "requests": 24,
+        "mb": 1.92,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 24,
+        "mb": 1.92,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 24,
+        "mb": 1.92,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Simultaneous Synthesis and Verification of Neural Control Barrier Functions through Branch-and-Bound Verification-in-the-loop Training | AMR Lab"
+    },
+    "/msc_projects_finished/25-danningzhao-multiagentmpc.html": {
+      "390": {
+        "status": 200,
+        "requests": 32,
+        "mb": 10.02,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 32,
+        "mb": 10.02,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 32,
+        "mb": 10.02,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Motion planning for mobile manipulators in multi-agent settings using MPC | AMR Lab"
+    },
+    "/msc_projects_finished/msc-project-template.html": {
+      "390": {
+        "status": 200,
+        "requests": 47,
+        "mb": 6.05,
+        "sidewaysScroll": false,
+        "overflow": [
+          "table.rouge-table (611px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 46,
+        "mb": 5.2,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 45,
+        "mb": 6.06,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "This is an example of how the Webpage for a finished will look like | AMR Lab"
+    },
+    "/paper_websites/": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Paper Websites | AMR Lab"
+    },
+    "/paper_websites/adrc-demcon.html": {
+      "390": {
+        "status": 200,
+        "requests": 41,
+        "mb": 3.47,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 41,
+        "mb": 3.5,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 41,
+        "mb": 3.5,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Active Disturbance Rejection Control (ADRC) for Trajectory Tracking of a Seagoing USV: Design, Simulation, and Field Experiments | AMR Lab"
+    },
+    "/paper_websites/aerial-manipulation-marl.html": {
+      "390": {
+        "status": 200,
+        "requests": 34,
+        "mb": 26.03,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 24.09,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 34,
+        "mb": 20.28,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Decentralized Aerial Manipulation of a Cable-Suspended Load Using Multi-Agent Reinforcement Learning | AMR Lab"
+    },
+    "/paper_websites/beacon.html": {
+      "390": {
+        "status": 200,
+        "requests": 28,
+        "mb": 4.54,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 28,
+        "mb": 4.54,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 28,
+        "mb": 4.54,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "BEACON: Language-Conditioned Navigation Affordance Prediction under Occlusion | AMR Lab"
+    },
+    "/paper_websites/biased-mppi.html": {
+      "390": {
+        "status": 200,
+        "requests": 39,
+        "mb": 16.18,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 39,
+        "mb": 16.18,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 39,
+        "mb": 16.18,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Biased-MPPI: Informing Sampling-Based Model Predictive Control by Fusing Ancillary Controllers | AMR Lab"
+    },
+    "/paper_websites/codi.html": {
+      "390": {
+        "status": 200,
+        "requests": 54,
+        "mb": 4.31,
+        "sidewaysScroll": false,
+        "overflow": [
+          "semantics (363px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 54,
+        "mb": 4.32,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (653px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 54,
+        "mb": 4.32,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Coordinated Diffusion: Generating Multi-Agent Behavior Without Multi-Agent Demonstrations | AMR Lab"
+    },
+    "/paper_websites/dra-mppi.html": {
+      "390": {
+        "status": 200,
+        "requests": 40,
+        "mb": 13.02,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 43,
+        "mb": 12.15,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 45,
+        "mb": 8.28,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Dynamic Risk-Aware MPPI for Mobile Robots in Crowds via Efficient Monte Carlo Approximations | AMR Lab"
+    },
+    "/paper_websites/g3f.html": {
+      "390": {
+        "status": 200,
+        "requests": 40,
+        "mb": 25.3,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 55,
+        "mb": 18.99,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 51,
+        "mb": 15.28,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Globally-guided geometric fabrics for reactive mobile manipulation in dynamic environments | AMR Lab"
+    },
+    "/paper_websites/hmpc.html": {
+      "390": {
+        "status": 200,
+        "requests": 34,
+        "mb": 8.21,
+        "sidewaysScroll": false,
+        "overflow": [
+          "math (16px)",
+          "math (105px)",
+          "math (59px)",
+          "math (34px)",
+          "math (67px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 8.21,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)",
+          "math (105px)",
+          "math (31px)",
+          "math (67px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 34,
+        "mb": 8.21,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Embedded Hierarchical MPC for Autonomous Navigation | AMR Lab"
+    },
+    "/paper_websites/ia-mppi-lbm.html": {
+      "390": {
+        "status": 200,
+        "requests": 32,
+        "mb": 4.46,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 32,
+        "mb": 6.07,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 32,
+        "mb": 5.25,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Interaction-Aware Sampling-Based MPC with Learned Local Goal Prediction | AMR Lab"
+    },
+    "/paper_websites/ia-mppi.html": {
+      "390": {
+        "status": 200,
+        "requests": 37,
+        "mb": 7.53,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 14.08,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 34,
+        "mb": 14.08,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Interaction-Aware Model Predictive Path Integral Control for Motion Planning in Urban Settings | AMR Lab"
+    },
+    "/paper_websites/impedance4mm.html": {
+      "390": {
+        "status": 200,
+        "requests": 30,
+        "mb": 10.39,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 30,
+        "mb": 10.39,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 30,
+        "mb": 10.39,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Current-Based Impedance Control for Interacting with Mobile Manipulators | AMR Lab"
+    },
+    "/paper_websites/isaac-mppi.html": {
+      "390": {
+        "status": 200,
+        "requests": 48,
+        "mb": 12.74,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 51,
+        "mb": 12.25,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 50,
+        "mb": 7.56,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Sampling-based Model Predictive Control Leveraging Parallelizable Physics Simulations | AMR Lab"
+    },
+    "/paper_websites/m3p2i-aip.html": {
+      "390": {
+        "status": 200,
+        "requests": 49,
+        "mb": 16.78,
+        "sidewaysScroll": false,
+        "overflow": [
+          "math (20px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 47,
+        "mb": 12.48,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 50,
+        "mb": 13.99,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Multi-Modal MPPI and Active Inference for Reactive Task and Motion Planning | AMR Lab"
+    },
+    "/paper_websites/mobileocc.html": {
+      "390": {
+        "status": 200,
+        "requests": 41,
+        "mb": 15.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 41,
+        "mb": 15.95,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 41,
+        "mb": 15.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "MobileOcc: A Human-Aware Semantic Occupancy Dataset for Mobile Robots | AMR Lab"
+    },
+    "/paper_websites/opensga.html": {
+      "390": {
+        "status": 200,
+        "requests": 55,
+        "mb": 14.91,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 55,
+        "mb": 14.94,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 55,
+        "mb": 14.91,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "OpenSGA: Efficient 3D Scene Graph Alignment in the Open World | AMR Lab"
+    },
+    "/paper_websites/pumafabrics-details.html": {
+      "390": {
+        "status": 200,
+        "requests": 23,
+        "mb": 2.04,
+        "sidewaysScroll": true,
+        "overflow": [
+          "math (42px)",
+          "math (58px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 23,
+        "mb": 2.04,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)",
+          "math (89px)",
+          "math (124px)",
+          "math (66px)",
+          "math (54px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 23,
+        "mb": 2.04,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "TamedPUMA: safe and stable imitation learning with geometric fabrics | AMR Lab"
+    },
+    "/paper_websites/pumafabrics.html": {
+      "390": {
+        "status": 200,
+        "requests": 46,
+        "mb": 35.08,
+        "sidewaysScroll": true,
+        "overflow": [
+          "table (453px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 46,
+        "mb": 35.08,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 57,
+        "mb": 7.33,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "TamedPUMA: safe and stable imitation learning with geometric fabrics | AMR Lab"
+    },
+    "/paper_websites/sadcher_MRTA/": {
+      "390": {
+        "status": 200,
+        "requests": 36,
+        "mb": 17.94,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 36,
+        "mb": 17.94,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 36,
+        "mb": 17.94,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "SADCHER: Scheduling using Attention-based Dynamic Coalitions of Heterogeneous Robots in Real-Time | AMR Lab"
+    },
+    "/paper_websites/sas-drone-racing.html": {
+      "390": {
+        "status": 200,
+        "requests": 41,
+        "mb": 5.01,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 39,
+        "mb": 5.03,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 41,
+        "mb": 5.02,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Strategizing at Speed: A Learned Model Predictive Game for Multi-Agent Drone Racing | AMR Lab"
+    },
+    "/paper_websites/topology-driven-mpc.html": {
+      "390": {
+        "status": 200,
+        "requests": 34,
+        "mb": 9.41,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 9.41,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 34,
+        "mb": 9.41,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Topology-Driven Parallel Trajectory Optimization in Dynamic Environments | AMR Lab"
+    },
+    "/people/": {
+      "390": {
+        "status": 200,
+        "requests": 28,
+        "mb": 6.36,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 29,
+        "mb": 6.37,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (689px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 29,
+        "mb": 6.37,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Our Team Members | AMR Lab"
+    },
+    "/projects/airlab-manipulation.html": {
+      "390": {
+        "status": 200,
+        "requests": 50,
+        "mb": 6.43,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 51,
+        "mb": 6.58,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 49,
+        "mb": 6.58,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "AI for Retail: Mobile Manipulation in Dynamic Environments | AMR Lab"
+    },
+    "/projects/airlab-ondemand.html": {
+      "390": {
+        "status": 200,
+        "requests": 32,
+        "mb": 2.05,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 33,
+        "mb": 2.09,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 34,
+        "mb": 2.11,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "AI for Retail: On-Demand Last-Mile Logistics | AMR Lab"
+    },
+    "/projects/ams-urban.html": {
+      "390": {
+        "status": 200,
+        "requests": 48,
+        "mb": 3.27,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 48,
+        "mb": 3.31,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 49,
+        "mb": 3.34,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "AMS Urban | AMR Lab"
+    },
+    "/projects/ara.html": {
+      "390": {
+        "status": 200,
+        "requests": 34,
+        "mb": 1.91,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 31,
+        "mb": 1.94,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 33,
+        "mb": 1.94,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Predictive Fleet Routing and Assignment | AMR Lab"
+    },
+    "/projects/cinematography.html": {
+      "390": {
+        "status": 200,
+        "requests": 45,
+        "mb": 3.11,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 47,
+        "mb": 3.23,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 45,
+        "mb": 3.27,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Real time Automated Cinematography using Aerial Vehicles | AMR Lab"
+    },
+    "/projects/drones-emergency.html": {
+      "390": {
+        "status": 200,
+        "requests": 48,
+        "mb": 5.12,
+        "sidewaysScroll": true,
+        "overflow": [
+          "a.btn.btn-sm.btn-light (56px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 52,
+        "mb": 5.27,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 51,
+        "mb": 5.21,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Autonomous Drones for Emergency Responders | AMR Lab"
+    },
+    "/projects/game-theoretic-mp.html": {
+      "390": {
+        "status": 200,
+        "requests": 46,
+        "mb": 3.73,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 49,
+        "mb": 3.77,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 48,
+        "mb": 3.76,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Game-Theoretic Motion Planning for Multi-Agent Interaction | AMR Lab"
+    },
+    "/projects/harmony.html": {
+      "390": {
+        "status": 200,
+        "requests": 77,
+        "mb": 13.22,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 77,
+        "mb": 13.26,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 77,
+        "mb": 13.26,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "HARMONY: Assistive Robots for Healthcare | AMR Lab"
+    },
+    "/projects/interact.html": {
+      "390": {
+        "status": 200,
+        "requests": 54,
+        "mb": 11.05,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 59,
+        "mb": 9.93,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 55,
+        "mb": 11.14,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "INTERACT: Intuitive Interaction for Robots among Humans | AMR Lab"
+    },
+    "/projects/nwa-act.html": {
+      "390": {
+        "status": 200,
+        "requests": 49,
+        "mb": 4.3,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 48,
+        "mb": 4.34,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 49,
+        "mb": 4.37,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "ACT: Perceptive Acting Under Uncertainty | AMR Lab"
+    },
+    "/projects/openbots.html": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 3.09,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 3.09,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 16,
+        "mb": 3.09,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "OpenBots: Open world autonomy of robots by common sense AI | AMR Lab"
+    },
+    "/projects/phd-mp.html": {
+      "390": {
+        "status": 200,
+        "requests": 47,
+        "mb": 2.93,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 46,
+        "mb": 2.99,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 46,
+        "mb": 2.95,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Multi Agent Motion Planning | AMR Lab"
+    },
+    "/projects/phd-pixelbots.html": {
+      "390": {
+        "status": 200,
+        "requests": 45,
+        "mb": 3.02,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 46,
+        "mb": 3.08,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 45,
+        "mb": 3,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Pixelbots: Pixels with personality | AMR Lab"
+    },
+    "/projects/postdoc-edu.html": {
+      "390": {
+        "status": 200,
+        "requests": 33,
+        "mb": 1.97,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 2.04,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 34,
+        "mb": 2.05,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Duckietown | AMR Lab"
+    },
+    "/projects/postdoc-mp.html": {
+      "390": {
+        "status": 200,
+        "requests": 46,
+        "mb": 2.93,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 50,
+        "mb": 3.11,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 50,
+        "mb": 3.05,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Parallel Autonomy in Automated Vehicles | AMR Lab"
+    },
+    "/projects/postdoc-multi.html": {
+      "390": {
+        "status": 200,
+        "requests": 45,
+        "mb": 2.96,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 47,
+        "mb": 3.08,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 46,
+        "mb": 3.08,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "PostDoc-Multi | AMR Lab"
+    },
+    "/projects/probabilistic-planning.html": {
+      "390": {
+        "status": 200,
+        "requests": 49,
+        "mb": 3.45,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 50,
+        "mb": 3.49,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 51,
+        "mb": 3.49,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Parallelized Probabilistic Motion Planning in Dynamic Environments | AMR Lab"
+    },
+    "/projects/ridepooling.html": {
+      "390": {
+        "status": 200,
+        "requests": 35,
+        "mb": 4.84,
+        "sidewaysScroll": true,
+        "overflow": [
+          "a.btn.btn-sm.btn-light (56px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 4.91,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 32,
+        "mb": 4.92,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Future transport systems: On-Demand Ridepooling | AMR Lab"
+    },
+    "/projects/safe-up.html": {
+      "390": {
+        "status": 200,
+        "requests": 31,
+        "mb": 3.01,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 34,
+        "mb": 3.06,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 33,
+        "mb": 3.03,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "SAFEUP | AMR Lab"
+    },
+    "/projects/safevru.html": {
+      "390": {
+        "status": 200,
+        "requests": 49,
+        "mb": 3.43,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 54,
+        "mb": 3.53,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 51,
+        "mb": 3.49,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "SAFEVRU | AMR Lab"
+    },
+    "/projects/scene-reasoning-team.html": {
+      "390": {
+        "status": 200,
+        "requests": 46,
+        "mb": 3.04,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 46,
+        "mb": 3.15,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 47,
+        "mb": 3.14,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Distributed high-level scene reasoning with teams of heterogeneous robots | AMR Lab"
+    },
+    "/projects/secure.html": {
+      "390": {
+        "status": 200,
+        "requests": 20,
+        "mb": 2.46,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 20,
+        "mb": 2.46,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 20,
+        "mb": 2.46,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "SECURE: Secure Interaction-aware Multi-robot Cooperation | AMR Lab"
+    },
+    "/projects/trilogy.html": {
+      "390": {
+        "status": 200,
+        "requests": 47,
+        "mb": 28.57,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 51,
+        "mb": 19.75,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 48,
+        "mb": 28.29,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "TRiLOGy: Sustainable Transportation and Logistics Over Water: Electrification, Automation, and Optimization | AMR Lab"
+    },
+    "/projects/veni-sihao.html": {
+      "390": {
+        "status": 200,
+        "requests": 26,
+        "mb": 8.54,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 26,
+        "mb": 8.01,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 26,
+        "mb": 8.54,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "VENI: Accurate Control of Aerial Robotic Manipulators under Uncertainties | AMR Lab"
+    },
+    "/projects/veni.html": {
+      "390": {
+        "status": 200,
+        "requests": 50,
+        "mb": 3.27,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 49,
+        "mb": 3.34,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 51,
+        "mb": 3.37,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "VENI: Safe and socially intuitive navigation | AMR Lab"
+    },
+    "/publications/": {
+      "390": {
+        "status": 200,
+        "requests": 57,
+        "mb": 26.21,
+        "sidewaysScroll": true,
+        "overflow": [
+          "a.btn.btn-sm.btn-light (56px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 58,
+        "mb": 26.22,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (693px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 58,
+        "mb": 26.22,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Publications | AMR Lab"
+    },
+    "/readme/": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.66,
+        "sidewaysScroll": false,
+        "overflow": [
+          "code (798px)",
+          "code (1042px)",
+          "code (874px)",
+          "code (933px)",
+          "code (714px)",
+          "code (1201px)",
+          "code (563px)",
+          "code (1487px)",
+          "code (521px)",
+          "code (739px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.66,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)",
+          "code (798px)",
+          "code (1042px)",
+          "code (874px)",
+          "code (933px)",
+          "code (1201px)",
+          "code (1487px)",
+          "code (739px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.66,
+        "sidewaysScroll": false,
+        "overflow": [
+          "code (1201px)",
+          "code (1487px)"
+        ]
+      },
+      "title": "none | AMR Lab"
+    },
+    "/research/": {
+      "390": {
+        "status": 200,
+        "requests": 41,
+        "mb": 17.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 41,
+        "mb": 17.7,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (689px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 41,
+        "mb": 17.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Research | AMR Lab"
+    },
+    "/robots/": {
+      "390": {
+        "status": 200,
+        "requests": 26,
+        "mb": 18.66,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 27,
+        "mb": 18.67,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (689px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 27,
+        "mb": 18.67,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Our Robots and Installations | AMR Lab"
+    },
+    "/student-projects/": {
+      "390": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": false,
+        "overflow": [
+          "table.table.table-striped (460px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (687px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 16,
+        "mb": 0.7,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Master Projects | AMR Lab"
+    },
+    "/vacancies/": {
+      "390": {
+        "status": 200,
+        "requests": 17,
+        "mb": 3.89,
+        "sidewaysScroll": true,
+        "overflow": [
+          "video (640px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 18,
+        "mb": 3.9,
+        "sidewaysScroll": true,
+        "overflow": [
+          "div.collapse.navbar-collapse (689px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 18,
+        "mb": 3.9,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "Vacancies | AMR Lab"
+    },
+    "/workshops/2025-iros.html": {
+      "390": {
+        "status": 200,
+        "requests": 14,
+        "mb": 13.11,
+        "sidewaysScroll": true,
+        "overflow": [
+          "a (283px)",
+          "a (373px)",
+          "footer (410px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 14,
+        "mb": 13.11,
+        "sidewaysScroll": true,
+        "overflow": [
+          "footer (788px)"
+        ]
+      },
+      "1280": {
+        "status": 200,
+        "requests": 14,
+        "mb": 13.11,
+        "sidewaysScroll": true,
+        "overflow": [
+          "footer (1300px)"
+        ]
+      },
+      "title": "Perception and Planning for Mobile Manipulation in Changing Environments"
+    },
+    "/workshops/2026-act-event.html": {
+      "390": {
+        "status": 200,
+        "requests": 17,
+        "mb": 6.52,
+        "sidewaysScroll": true,
+        "overflow": [
+          "img [Benelux.jpg] (100px)"
+        ]
+      },
+      "768": {
+        "status": 200,
+        "requests": 17,
+        "mb": 6.52,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "1280": {
+        "status": 200,
+        "requests": 17,
+        "mb": 6.52,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": "The Future of Driving: Autonomous Vehicles in a World of Uncertainty"
+    },
+    "/workshops/2026-inaugural-speech-demos.html": {
+      "390": {
+        "status": 200,
+        "requests": 2,
+        "mb": 0,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "768": {
+        "status": 200,
+        "requests": 2,
+        "mb": 0,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "1280": {
+        "status": 200,
+        "requests": 2,
+        "mb": 0,
+        "sidewaysScroll": false,
+        "overflow": []
+      },
+      "title": ""
+    }
+  },
+  "redirects": {
+    "/education_projects.html": "https://autonomousrobots.nl/education/",
+    "/msc_projects_finished/23-frankiezhang-m3p2i-aip.html": "https://autonomousrobots.nl/paper_websites/m3p2i-aip",
+    "/msc_projects_finished/25-jackzeng-aerialmanipulationmarl.html": "https://autonomousrobots.nl/paper_websites/aerial-manipulation-marl",
+    "/msc_projects_finished/25-jakobbichler-sadcher-mrta.html": "https://autonomousrobots.nl/paper_websites/sadcher_MRTA",
+    "/msc_projects_finished/26-xinyugao-languageconditionedlocalnavigation.html": "https://autonomousrobots.nl/paper_websites/beacon",
+    "/pubpage/IA_MPPI_LBM.html": "https://autonomousrobots.nl/paper_websites/ia-mppi-lbm",
+    "/workshops/": "https://autonomousrobots.nl/events/"
+  }
+}

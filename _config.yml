@@ -141,3 +141,5 @@ plugins:
 #
 exclude:
   - CLAUDE.md
+  - scripts
+  - tests
