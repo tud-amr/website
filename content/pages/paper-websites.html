@@ -14,11 +14,14 @@ permalink: /paper_websites/
 {%- for paper in papers %}
 {%- assign year = paper.data.release_date | date: "%Y" %}
 {%- if year != current_year %}
+{%- unless current_year == "" %}</ul>{% endunless %}
 {%- assign current_year = year %}
 <h2 class="year-title">{{ year }}</h2>
+<ul class="paper-website-list">
 {%- endif %}
-<div class="paper-website-item">
+  <li class="paper-website-item">
     <h3><a href="{{ paper.url }}">{{ paper.data.title }}</a></h3>
-    <p class="muted">{% for person in paper.data.authors %}{{ person.name }}{% unless forloop.last %}, {% endunless %}{% endfor %} | {{ paper.data.release_date | date: "%B %Y" }}</p>
-</div>
+    <p>{% for person in paper.data.authors %}{{ person.name }}{% unless forloop.last %}, {% endunless %}{% endfor %} | {{ paper.data.release_date | date: "%B %Y" }}</p>
+  </li>
 {%- endfor %}
+</ul>

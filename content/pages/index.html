@@ -31,43 +31,46 @@ layout: default
   <div class="highlights-text">
     <h2>Research</h2>
     <p>Our group's research is applied mainly to the following fields:</p>
-    <ul class="area-list">
+    <ul class="tags">
       {%- for area in collections.researchAreas %}
       <li><a href="/research/?area={{ area.data.area_id }}">{{ area.data.title }}</a></li>
       {%- endfor %}
     </ul>
-    <p>Check our YouTube playlist to see the latest videos of demos and papers! You can also go directly to our <a href="{{ github.url }}">GitHub</a>.</p>
+    <p>Watch demos and paper videos on our YouTube playlist, or find our code on <a href="{{ github.url }}">GitHub</a>.</p>
     <div class="button-row">
-      <a class="btn btn-primary btn-lg" href="{{ youtube.url }}">YouTube</a>
-      <a class="btn btn-primary btn-lg" href="/research/">All Research</a>
+      <a class="btn btn-primary" href="/research/">See all research</a>
+      <a class="btn btn-outline" href="{{ youtube.url }}"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube channel</a>
     </div>
   </div>
   <div class="highlights-video">
-    <div class="ratio ratio-16x9">
-      <iframe src="https://www.youtube.com/embed/videoseries?list=PLOksz-MTFhN2T4gYQlLHR2lGCdC0BDkJw&rel=0" title="AMR Lab YouTube playlist" allowfullscreen></iframe>
-    </div>
+    <iframe src="https://www.youtube.com/embed/videoseries?list=PLOksz-MTFhN2T4gYQlLHR2lGCdC0BDkJw&rel=0" title="AMR Lab YouTube playlist" data-poster="/assets/images/robots/new_lab_pic_1.png" data-caption="Play our latest videos" allowfullscreen></iframe>
   </div>
 </section>
 
+{%- assign news_total = collections.news | size %}
 <section class="news">
-  <h2>Latest News</h2>
+  <h2>Latest news</h2>
   <ul class="timeline">
     {%- for item in collections.news limit: 4 %}
     <li>
-      <span class="timeline-title">{{ item.data.title }}</span> <span class="muted">| {{ item.data.date | date: "%b %Y" }}</span>
+      <span class="timeline-date">{{ item.data.date | date: "%B %Y" }}</span>
+      <span class="timeline-title">{{ item.data.title }}</span>
       {{ item.content }}
     </li>
     {%- endfor %}
   </ul>
+  {%- if news_total > 4 %}
   <details class="more">
-    <summary><i class="bi bi-chevron-right" aria-hidden="true"></i> All the news…</summary>
+    <summary class="btn btn-light"><i class="bi bi-chevron-right" aria-hidden="true"></i> Show all news ({{ news_total }})</summary>
     <ul class="timeline">
       {%- for item in collections.news offset: 4 %}
       <li>
-        <span class="timeline-title">{{ item.data.title }}</span> <span class="muted">| {{ item.data.date | date: "%b %Y" }}</span>
+        <span class="timeline-date">{{ item.data.date | date: "%B %Y" }}</span>
+        <span class="timeline-title">{{ item.data.title }}</span>
         {{ item.content }}
       </li>
       {%- endfor %}
     </ul>
   </details>
+  {%- endif %}
 </section>

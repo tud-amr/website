@@ -1,10 +1,12 @@
 {%- assign d = robot.data -%}
 <article class="tile">
-  {%- if d.image contains '.mp4' %}
-  <video class="tile-media" src="{{ d.image }}" muted autoplay loop playsinline aria-label="Video of {{ d.name }}"></video>
-  {%- else %}
-  <img class="tile-media" src="{{ d.image }}" alt="{{ d.name }}">
-  {%- endif %}
+  <div class="tile-figure">
+    {%- if d.image contains '.mp4' %}
+    <video class="tile-media" src="{{ d.image }}" muted autoplay loop playsinline aria-label="Video of {{ d.name }}"></video>
+    {%- else %}
+    <img class="tile-media" src="{{ d.image }}" alt="{{ d.name }}" width="300" height="225">
+    {%- endif %}
+  </div>
   <div class="tile-body">
     <h3 class="tile-title">{{ d.name }}</h3>
     <p class="tile-meta">{{ d.subtitle }}</p>

@@ -47,8 +47,11 @@ function iframe(match) {
   // Keep the size the iframe had, so the layout does not change before or after the click.
   const w = Number(attr(open, 'width')), h = Number(attr(open, 'height'));
   const size = w > 0 && h > 0 ? ` style="max-width: ${w}px; aspect-ratio: ${w} / ${h}"` : '';
-  const thumb = id ? `<img src="https://i.ytimg.com/vi/${id}/hqdefault.jpg" alt="" loading="lazy" decoding="async">` : '';
-  return `<button type="button" class="yt-facade" data-src="${escape(player)}"${data}${size} aria-label="Play: ${escape(title)}">${thumb}<span></span></button>`;
+  // A poster can be given with data-poster (e.g. for playlists, which have no thumbnail of their own).
+  const poster = attr(open, 'data-poster') || (id ? `https://i.ytimg.com/vi/${id}/hqdefault.jpg` : '');
+  const thumb = poster ? `<img src="${escape(poster)}" alt="" loading="lazy" decoding="async">` : '';
+  const caption = attr(open, 'data-caption') ? `<span class="yt-caption">${escape(attr(open, 'data-caption'))}</span>` : '';
+  return `<button type="button" class="yt-facade" data-src="${escape(player)}"${data}${size} aria-label="Play: ${escape(title)}">${thumb}<span class="yt-play"></span>${caption}</button>`;
 }
 
 export function mediaTransform(content) {

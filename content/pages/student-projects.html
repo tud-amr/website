@@ -11,7 +11,7 @@ permalink: /student-projects/
 </p>
 
 <div class="table-scroll">
-    <table class="table">
+    <table class="table table-cards">
         <thead>
             <tr>
                 <th>Title</th>
@@ -24,16 +24,16 @@ permalink: /student-projects/
             {%- if project.data.display %}
             <tr>
                 <td>{{ project.data.title }}</td>
-                <td>
+                <td data-label="Supervisor">
                     {%- for supervisor in project.data.direct_supervisors %}
                     {%- if supervisor.url %}<a href="{{ supervisor.url }}">{{ supervisor.name }}</a>{% else %}{{ supervisor.name }}{% endif %}<br>
                     {%- endfor %}
                 </td>
-                <td>
+                <td data-label="Proposal">
                     {%- if project.data.proposal_document %}
-                    <a href="{{ project.data.proposal_document }}">Here</a>
+                    <a href="{{ project.data.proposal_document }}">Proposal (PDF)</a>
                     {%- else %}
-                    <a href="{{ project.url }}">Here</a>
+                    <a href="{{ project.url }}">Proposal</a>
                     {%- endif %}
                 </td>
             </tr>

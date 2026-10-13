@@ -13,7 +13,6 @@ permalink: /msc_projects_finished/
 
 {%- assign current_year = "" %}
 {%- for project in collections.mscFinished %}
-{%- unless project.url contains 'msc-project-template' %}
 {%- assign year = project.data.end_date | date: "%Y" %}
 {%- if year != current_year %}
 {%- unless current_year == "" %}</div>{% endunless %}
@@ -22,6 +21,5 @@ permalink: /msc_projects_finished/
 <div class="tile-list">
 {%- endif %}
 {% render 'msc_card.html', project: project %}
-{%- endunless %}
 {%- endfor %}
 </div>

@@ -1,6 +1,9 @@
 {%- assign d = person.data -%}
-<li><strong>{{ d.name }} ({{ d.joined_date | date: "%Y" }} - {{ d.left_date | date: "%Y" }}),</strong>
-  {{ d.title }}: {{ person.content | strip_html | strip }}
-  {%- if d.now_at %} Now: {{ d.now_at }}{% endif %}
-  {%- if d.links %} {% for link in d.links %}<a href="{{ link.url }}">{{ link.name }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}
+<li>
+  <span class="past-name">{{ d.name }} <span class="past-years">{{ d.joined_date | date: "%Y" }}–{{ d.left_date | date: "%Y" }}</span></span>
+  <span class="past-role">{{ d.title }}{% assign bio = person.content | strip_html | strip %}{% if bio != "" %}: {{ bio }}{% endif %}</span>
+  {%- if d.now_at %}<span class="past-now">Now: {{ d.now_at }}</span>{% endif %}
+  {%- if d.links %}
+  <span class="past-links">{% for link in d.links %}<a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}</span>
+  {%- endif %}
 </li>

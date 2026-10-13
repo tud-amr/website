@@ -55,6 +55,40 @@
     facade.replaceWith(iframe);
   });
 
+  // ---- Photo carousels (robots page) -----------------------------------------------------------
+  // The photos are a horizontal strip that can be swiped or scrolled; the buttons and dots move it.
+  for (const carousel of document.querySelectorAll('[data-carousel]')) {
+    const track = carousel.querySelector('.carousel-track');
+    const slides = [...track.children];
+    const prev = carousel.querySelector('.carousel-prev');
+    const next = carousel.querySelector('.carousel-next');
+    const dots = slides.map((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', `Show photo ${i + 1}`);
+      dot.addEventListener('click', () => go(i));
+      carousel.querySelector('.carousel-dots').append(dot);
+      return dot;
+    });
+    const current = () => Math.round(track.scrollLeft / track.clientWidth);
+    const go = (i) => track.scrollTo({ left: Math.max(0, Math.min(i, slides.length - 1)) * track.clientWidth });
+    const update = () => {
+      const i = current();
+      dots.forEach((d, j) => d.setAttribute('aria-current', String(i === j)));
+      prev.disabled = i === 0;
+      next.disabled = i === slides.length - 1;
+    };
+    prev.addEventListener('click', () => go(current() - 1));
+    next.addEventListener('click', () => go(current() + 1));
+    track.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { e.preventDefault(); go(current() - 1); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(current() + 1); }
+    });
+    let ticking;
+    track.addEventListener('scroll', () => { cancelAnimationFrame(ticking); ticking = requestAnimationFrame(update); });
+    update();
+  }
+
   // ---- Publications: search and filters --------------------------------------------------------
   const form = document.querySelector('[data-pub-filters]');
   if (form) {

@@ -4,3 +4,5 @@
   to: /
 - from: /readme/
   to: https://github.com/tud-amr/website#readme
+- from: /msc_projects_finished/msc-project-template.html
+  to: /msc_projects_finished/

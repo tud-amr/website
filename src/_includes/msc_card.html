@@ -1,10 +1,12 @@
 {%- assign d = project.data -%}
 <article class="tile tile-link">
-  {%- if d.cover_image contains '.mp4' %}
-  <video class="tile-media" src="{{ d.cover_image }}" muted autoplay loop playsinline aria-label="Video of the thesis"></video>
-  {%- else %}
-  <img class="tile-media" src="{{ d.cover_image }}" alt="" width="250" height="250">
-  {%- endif %}
+  <div class="tile-figure">
+    {%- if d.cover_image contains '.mp4' %}
+    <video class="tile-media" src="{{ d.cover_image }}" muted autoplay loop playsinline aria-label="Video of the thesis"></video>
+    {%- else %}
+    <img class="tile-media" src="{{ d.cover_image }}" alt="" width="300" height="225">
+    {%- endif %}
+  </div>
   <div class="tile-body">
     <h3 class="tile-title"><a href="{{ project.url }}">{{ d.title }}</a></h3>
     <p class="tile-meta">{% for person in d.authors %}{{ person.name }}{% unless forloop.last %}, {% endunless %}{% endfor %} | {{ d.end_date | date: "%B %Y" }}</p>

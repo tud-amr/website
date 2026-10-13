@@ -41,3 +41,24 @@ test('unknown pages show the 404 page', async ({ page }) => {
   expect(response.status()).toBe(404);
   await expect(page.locator('h1')).toContainText('404');
 });
+
+test('robots photo carousel moves with the buttons and dots', async ({ page }) => {
+  await page.goto('/robots/');
+  const track = page.locator('.carousel-track');
+  const dots = page.locator('.carousel-dots button');
+  await expect(page.locator('.carousel-prev')).toBeDisabled();
+  await expect(dots.first()).toHaveAttribute('aria-current', 'true');
+  await page.click('.carousel-next');
+  await expect(dots.nth(1)).toHaveAttribute('aria-current', 'true');
+  await dots.last().click();
+  await expect(page.locator('.carousel-next')).toBeDisabled();
+  expect(await track.evaluate((t) => t.scrollLeft)).toBeGreaterThan(0);
+});
+
+test('"Show all news" reveals the older news', async ({ page }) => {
+  await page.goto('/');
+  const older = page.locator('.more .timeline li');
+  await expect(older.first()).toBeHidden();
+  await page.click('.more summary');
+  await expect(older.first()).toBeVisible();
+});

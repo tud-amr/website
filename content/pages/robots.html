@@ -12,10 +12,15 @@ images_carousel:
     The new lab, Mobile Robotics Lab, at CoR is located at the ground floor in the F-wing of the Mechanical Engineering building at TU Delft.
 </p>
 
-<div class="carousel" role="region" aria-label="Photos of the lab" tabindex="0">
-  {%- for image in images_carousel %}
-  <img src="{{ image.image_path }}" alt="Photo {{ forloop.index }} of the lab"{% if forloop.first %} loading="eager"{% endif %}>
-  {%- endfor %}
+<div class="carousel" data-carousel>
+  <div class="carousel-track" tabindex="0" role="region" aria-label="Photos of the lab (use the arrow keys to browse)">
+    {%- for image in images_carousel %}
+    <figure class="carousel-slide"><img src="{{ image.image_path }}" alt="Photo {{ forloop.index }} of {{ images_carousel.size }} of the lab"{% if forloop.first %} loading="eager"{% endif %}></figure>
+    {%- endfor %}
+  </div>
+  <button class="carousel-btn carousel-prev" type="button" aria-label="Previous photo"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+  <button class="carousel-btn carousel-next" type="button" aria-label="Next photo"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+  <div class="carousel-dots"></div>
 </div>
 
 <p>

@@ -135,9 +135,8 @@ Notes per type:
   Add `hidden: true` to keep a page out of the paper-websites list and search engines.
 - **Available MSc projects**: give `proposal_document` (a PDF in `assets/files/student_projects/`) or write
   the proposal below the header. `display: false` hides it from the table.
-- **Finished MSc projects**: students start from the
-  [thesis website template](https://github.com/tud-amr/msc_thesis_website_template). To send visitors to a
-  paper website instead, add `redirect_to: /paper_websites/<name>`.
+- **Finished MSc projects**: copy an existing one in `content/msc-finished/`. To send visitors to a paper
+  website instead, add `redirect_to: /paper_websites/<name>`.
 - **Events**: most workshop pages are complete, standalone HTML documents with their own styles. Add
   `layout: page` to use the normal site layout instead.
 - Math works on paper websites and MSc pages (`math: true` turns it on elsewhere): `$x^2$` inline, `$$x^2$$`

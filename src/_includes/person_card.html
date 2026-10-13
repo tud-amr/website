@@ -1,6 +1,6 @@
 {%- assign d = person.data -%}
 <article class="person">
-  <img class="person-photo" src="{{ d.image }}" alt="{{ d.name }}" width="160" height="160" loading="lazy">
+  {%- if d.image %}<img class="person-photo" src="{{ d.image }}" alt="" width="120" height="120" loading="lazy">{% endif %}
   <div class="person-body">
     <h3 class="person-name">{{ d.name }}</h3>
     <p class="person-role">{{ d.title }} | Since {{ d.joined_date | date: "%Y" }}</p>

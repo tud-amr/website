@@ -73,8 +73,9 @@ The motivation letter should state:
 <ul class="timeline">
     {%- for talk in collections.talks %}
     <li>
-        <span class="timeline-title">{{ talk.data.date | date: "%B %d, %Y" }}, {{ talk.data.speaker }}: <a href="{{ talk.data.recording }}">{{ talk.data.title }}</a></span>
-        {%- if talk.data.abstract %}<br><strong>Abstract:</strong> {{ talk.data.abstract }}{% endif %}
+        <span class="timeline-date">{{ talk.data.date | date: "%B %-d, %Y" }} | {{ talk.data.speaker }}</span>
+        <a class="timeline-title" href="{{ talk.data.recording }}">{{ talk.data.title }}</a>
+        {%- if talk.data.abstract %}<span class="muted">{{ talk.data.abstract }}</span>{% endif %}
     </li>
     {%- endfor %}
 </ul>

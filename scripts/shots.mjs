@@ -39,6 +39,11 @@ for (const page of pages) {
     const context = await browser.newContext({ viewport: { width, height: 900 } });
     const tab = await context.newPage();
     await tab.goto(`http://localhost:${port}${page}`, { waitUntil: 'load', timeout: 60000 }).catch(() => {});
+    // Scroll through the page so lazy-loaded images appear in the screenshot.
+    await tab.evaluate(async () => {
+      for (let y = 0; y < document.body.scrollHeight; y += 600) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); }
+      window.scrollTo(0, 0);
+    });
     await tab.waitForTimeout(800);
     const file = `.shots/${slug(page)}@${width}.png`;
     await tab.screenshot({ path: file, fullPage: true });
