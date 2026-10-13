@@ -1,0 +1,33 @@
+title: >-
+  Ride-Sharing Efficiency and Level of Service under Alternative Demand, Behavioral and Pricing
+  Settings
+authors:
+  - A. de Ruijter
+  - O. Cats
+  - J. Alonso-Mora
+  - S. Hoogendoorn
+date: 2020-09-01
+type: conference
+venue: Transportation Research Board Annual Meeting
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/20-deRuijter-trb.pdf
+abstract: >-
+  Previous studies examining ride-sharing potential assumed that rides can be shared as long as the
+  incurred delay does not exceed a certain threshold. Conversely, we formulate willingness to share
+  as a compensatory cost function at the individual passenger level. The latter considers trade-offs
+  between delays caused by detours, travel discomfort related to sharing a vehicle and a fare
+  discount associated with a shared ride. Next to finding how these behavioral preferences and the
+  offered discount structure affect the efficiency and level of service of ride-sharing services,
+  the effect of directionality in demand is considered. A graph-based approach is applied to perform
+  an efficient assignment of vehicles to requests. We test the model on an experiment representing
+  an urban context. Our findings suggest that service performance is strongly dependent on users'
+  willingness to share and somewhat less strongly on users' tolerance to delays. Implementation of a
+  ride-sharing service is most successful when directionality in demand is low, while ride-specific
+  discounts can be effective in maximizing societal benefits.
+bibtex: ""

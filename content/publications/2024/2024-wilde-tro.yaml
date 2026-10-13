@@ -1,0 +1,33 @@
+title: Statistically Distinct Plans for Multi-Objective Task Assignment
+authors:
+  - Nils Wilde
+  - Javier Alonso-Mora
+date: 2024-01-29
+type: journal
+venue: IEEE Transaction on Robotics(T-RO)
+projects: [harmony]
+collections: []
+funding: []
+topics: [task planning, multi-robot]
+image: /assets/images/papers/multi_objective/mo_mrta.png
+note: ""
+links:
+  - pdf: /assets/files/publications/24-wilde-TRO.pdf
+abstract: >-
+  We study the problem of finding statistically distinct plans for stochastic task assignment
+  problems such as online multi-robot pickup and delivery (MRPD) when facing multiple competing
+  objectives. In many real-world settings robot fleets do not only need to fulfil delivery requests,
+  but also have to consider auxiliary objectives such as energy efficiency or avoiding
+  human-centered work spaces. We pose MRPD as a multi-objective optimization problem where the goal
+  is to find MRPD policies that yield different trade-offs between given objectives. There are two
+  main challenges: 1) MRPD is computationally hard, which limits the number of trade-offs that can
+  reasonably be computed, and 2) due to the random task arrivals, one needs to consider statistical
+  variance of the objective values in addition to the average. We present an adaptive sampling
+  algorithm that finds a set of policies which i) are approximately optimal, ii) approximate the set
+  of all optimal solutions, and iii) are statistically distinguishable. We prove completeness and
+  adapt a state-of-the-art MRPD solver to the multi-objective setting for three example objectives.
+  In a series of simulation experiments we demonstrate the advantages of the proposed method
+  compared to baseline approaches and show its robustness in a sensitivity analysis. The approach is
+  general and could be adapted to other multi-objective task assignment and planning problems under
+  uncertainty.
+bibtex: ""

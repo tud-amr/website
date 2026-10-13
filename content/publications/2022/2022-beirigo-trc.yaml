@@ -1,0 +1,41 @@
+title: >-
+  A business class for autonomous mobility-on-demand: Modeling service quality contracts in dynamic
+  ridesharing systems
+authors:
+  - B. A. Beirigo
+  - R. R. Negenborn
+  - J. Alonso-Mora
+  - F. Schulte
+date: 2022-03-01
+type: journal
+venue: "Transportation Research Part C: Emerging Technologies"
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://www.sciencedirect.com/science/article/pii/S0968090X21005027
+  - pdf: /assets/files/publications/22-beirigo-trc.pdf
+abstract: >-
+  With the popularization of transportation network companies (TNCs) (e.g., Uber, Lyft) and the rise
+  of autonomous vehicles (AVs), even major car manufacturers are increasingly considering themselves
+  as autonomous mobility-on-demand (AMoD) providers rather than individual vehicle sellers. However,
+  matching the convenience of owning a vehicle requires providing consistent service quality, taking
+  into account individual expectations. Typically, different classes of users have different service
+  quality (SQ) expectations in terms of responsiveness, reliability, and privacy. Nonetheless, AMoD
+  systems presented in the literature do not enable active control of service quality in the short
+  term, especially in light of unusual demand patterns, sometimes allowing extensive delays and user
+  rejections. This study proposes a method to control the daily operations of an AMoD system that
+  uses the SQ expectations of heterogeneous user classes to dynamically distribute service quality
+  among riders. Additionally, we consider an elastic vehicle supply, that is, privately-owned
+  freelance AVs (FAVs) can be hired on short notice to help providers meeting user service-level
+  expectations. We formalize the problem as the dial-a-ride problem with service quality contracts
+  (DARP-SQC) and propose a multi-objective matheuristic to address real-world requests from
+  Manhattan, New York City. Applying the proposed service-level constraints, we improve user
+  satisfaction (in terms of reached service-level expectations) by 53% on average compared to
+  conventional ridesharing systems, even without hiring additional vehicles. By deploying
+  service-quality-oriented on-demand hiring, our hierarchical optimization approach allows providers
+  to adequately cater to each segment of the customer base without necessarily owning large fleets.
+bibtex: ""

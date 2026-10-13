@@ -1,0 +1,32 @@
+title: On-demand ridesharing with optimized pick-up and drop-off walking locations
+authors:
+  - A. Fielbaum
+  - X. Bai
+  - J. Alonso-Mora
+date: 2021-05-01
+type: journal
+venue: "Transportation Research Part C: Emerging Technologies"
+projects: [ridepooling]
+collections: []
+funding: [didi udian]
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://www.sciencedirect.com/science/article/pii/S0968090X21000887
+  - pdf: /assets/files/publications/21-Fielbaum-TRC.pdf
+abstract: >-
+  On-demand systems in which passengers with similar routes can share a vehicle are expected to
+  become a relevant part of future mobility, thanks to their flexibility and their potential impact
+  on reducing congestion. Nevertheless, due to the long detours required by a door-to-door scheme,
+  they induce extra costs to the users in terms of delay. In this paper, we face the design of such
+  a system in which users might be requested online to walk towards/from nearby pick-up/drop-off
+  points if this improves overall efficiency. We show theoretically that the general problem becomes
+  more complex (as it contains two sub-problems that extend set-cover), analyze the trade-offs that
+  emerge, and provide a general formulation and specific heuristics that are able to solve it over
+  large instances. We test this formulation over a real dataset of Manhattan taxi trips (9970
+  requests during one hour), finding that (a) average walks of about one minute can reduce the
+  number of rejections in more than 80% and Vehicles-Hour-Traveled in more than 10%, (b) users who
+  depart or arrive at the most demanded areas are more likely to be required to walk, and (c) the
+  performance improvement of the service is larger when the system receives more trip requests.
+bibtex: ""

@@ -1,0 +1,31 @@
+title: Overcoming Explicit Environment Representations with Geometric Fabrics
+authors:
+  - Max Spahn
+  - Saray Bakker
+  - Javier Alonso-Mora
+date: 2025-05-18
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [interact]
+collections: []
+funding: []
+topics: [motion planning, mobile-manipulation]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/25-Spahn-RAL.pdf
+abstract: >-
+  Deployment of robots in dynamic environments requires reactive trajectory generation. While
+  optimization-based methods, such as Model Predictive Control focus on constraint verificaction,
+  Geometric Fabrics offer a computationally efficient way to generate trajectories that include all
+  avoidance behaviors if the environment can be represented as a set of object primitives. Obtaining
+  such a representation from sensor data is challenging, especially in dynamic environments. In this
+  letter, we integrate implicit environment representations, such as Signed Distance Fields and Free
+  Space Decomposition into the framework of Geometric Fabrics. In the process, we derive how
+  numerical gradients can be integrated into the push and pull operations in Geometric Fabrics. Our
+  experiments reveal that both, ground robots and robotic manipulators, can be controlled using
+  these implicit representations. Moreover, we show that, unlike the explicit representation,
+  implicit representations can be used in the presence of dynamic obstacles without further
+  considerations. Finally, we demonstrate our methods in the real-world, showing the applicability
+  of our approach in practice.
+bibtex: ""

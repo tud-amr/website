@@ -1,0 +1,37 @@
+title: Real-time Planning for Automated Multi-View Drone Cinematography
+authors:
+  - T. Naegeli
+  - L. Meier
+  - A. Domahidi
+  - J. Alonso-Mora
+  - O. Hilliges
+date: 2017-07-01
+type: journal
+venue: ACM Transactions on Graphics SIGGRAPH, vol. 36, no. 4, Article 132
+projects: [cinematography]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://dl.acm.org/doi/10.1145/3072959.3073712
+  - pdf: /assets/files/publications/17-naegeli-siggraph.pdf
+  - video: https://youtu.be/_yei6Zh3f20
+abstract: >-
+  We propose a method for automated aerial videography in dynamic and cluttered environments. An
+  online receding horizon optimization formulation facilitates the planning process for novices and
+  experts alike. The algorithm takes high-level plans as input, which we dub virtual rails,
+  alongside interactively defined aesthetic framing objectives and jointly solves for 3D quadcopter
+  motion plans and associated velocities. The method generates control inputs subject to constraints
+  of a non-linear quadrotor model and dynamic constraints imposed by actors moving in an a priori
+  unknown way. The output plans are physically feasible, for the horizon length, and we apply the
+  resulting control inputs directly at each time-step, without requiring a separate trajectory
+  tracking algorithm. The online nature of the method enables incorporation of feedback into the
+  planning and control loop, makes the algorithm robust to disturbances. Furthermore, we extend the
+  method to include coordination between multiple drones to enable dynamic multi-view shots, typical
+  for action sequences and live TV coverage. The algorithm runs in real-time on standard hardware
+  and computes motion plans for several drones in the order of milliseconds. Finally, we evaluate
+  the approach qualitatively with a number of challenging shots, involving multiple drones and
+  actors and qualitatively characterize the computational performance experimentally.
+bibtex: ""

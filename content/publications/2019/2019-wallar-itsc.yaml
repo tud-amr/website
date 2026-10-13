@@ -1,0 +1,37 @@
+title: Optimizing Multi-class Fleet Compositions for Shared Mobility-as-a-Service
+authors:
+  - A. Wallar
+  - W. Schwartig
+  - J. Alonso-Mora
+  - D. Rus
+date: 2019-10-01
+type: conference
+venue: Proc. IEEE Int. Conf. on Intelligent Transportation Systems (ITSC)
+projects: [veni, ridepooling]
+collections: []
+funding: []
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8916904
+  - pdf: /assets/files/publications/19-wallar-itsc.pdf
+abstract: >-
+  Mobility-as-a-Service (MaaS) systems are transforming the way society moves. The introduction and
+  adoption of pooled ride-sharing has revolutionized urban transit with the potential of reducing
+  vehicle congestion, improving accessibility and flexibility of a city's transportation
+  infrastructure. Recently developed algorithms can compute routes for vehicles in realtime for a
+  city-scale volume of requests, as well as optimize fleet sizes for MaaS systems that allow
+  requests to share vehicles. Nonetheless, they are not capable of reasoning about the composition
+  of a fleet and their varying capacity classes. In this paper, we present a method to not only
+  optimize fleet sizes, but also their multi-class composition for MaaS systems that allow requests
+  to share vehicles. We present an algorithm to determine how many vehicles of each class and
+  capacity are needed, where they should be initialized, and how they should be routed to service
+  all the travel demand for a given period of time. The algorithm maximizes utilization while
+  reducing the total number of vehicles and incorporates constraints on wait- times and
+  travel-delays. Finally, we evaluate the effectiveness of the algorithm for multi-class fleets with
+  pooled ride-sharing using 426,908 historical taxi requests from Manhattan and 187,243 downtown
+  Singapore. We show fleets comprised of vehicles with smaller capacities can reduce the total
+  travel delay by 10% in Manhattan whereas larger capacity fleets in downtown Singapore contribute
+  to a 9% reduction in the total waiting time.
+bibtex: ""

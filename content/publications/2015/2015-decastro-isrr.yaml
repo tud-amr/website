@@ -1,0 +1,36 @@
+title: Collision-Free Reactive Mission and Motion Planning for Multi-Robot Systems
+authors:
+  - J. DeCastro
+  - J. Alonso-Mora
+  - V. Raman
+  - D. Rus
+  - H. Kress-Gezit
+date: 2015-09-01
+type: conference
+venue: Proc. of the Int. Symposium on Robotics Research (ISRR)
+projects: [postdoc-multi]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/chapter/10.1007/978-3-319-51532-8_28
+  - pdf: /assets/files/publications/15-decastro-isrr.pdf
+  - video: https://youtu.be/oF8T6ZRQng8
+abstract: >-
+  This paper describes a holistic method for automatically synthesizing controllers for a team of
+  robots operating in an environment shared with other agents. The proposed approach builds on
+  recent advances in Reactive Mission Planning using Linear Temporal Logic, and Local Motion
+  Planning using convex optimization. A local planner enforces the dynamic constraints of the robot
+  and guarantees collision avoidance in 2D and 3D workspaces. A reactive mission planner takes a
+  high-level specification that captures complex motion sequencing, and generates a
+  correct-by-construction controller guaranteed to achieve the specified behavior and be reactive to
+  sensor events. If there is no controller that fulfills the specification because of possible
+  deadlock in the local planner, a minimal set of human-readable assumptions is generated as a
+  certificate of the conditions on deadlock where the task is guaranteed. This is truly a
+  synergistic method: the low-level motion planner enables scalability of the high-level plan
+  synthesis with respect to dynamic obstacles, and the high-level mission planner enforces
+  correctness of the low-level motion. We provide formal guarantees for our approach and demonstrate
+  it via physical experiments with ground robots and simulations with a team of quadrotors.
+bibtex: ""

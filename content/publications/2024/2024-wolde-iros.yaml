@@ -1,0 +1,38 @@
+title: Current-Based Impedance Control for Interacting with Mobile Manipulators
+authors:
+  - Jelmer de Wolde
+  - Luzia Knoedler
+  - Gianluca Garofalo
+  - Javier Alonso-Mora
+date: 2024-10-15
+type: conference
+venue: IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)
+projects: [harmony]
+collections: []
+funding: []
+topics: [motion planning]
+image: /assets/images/papers/impedance4mm/images/real_world_results.png
+note: ""
+links:
+  - arxiv: https://arxiv.org/pdf/2403.13079
+  - code: https://github.com/tud-amr/mobile-manipulator-compliance
+  - web: /paper_websites/impedance4mm
+abstract: >-
+  As robots shift from industrial to human-centered spaces, adopting mobile manipulators, which
+  expand workspace capabilities, becomes crucial. In these settings, seamless interaction with
+  humans necessitates compliant control. Two common methods for safe interaction, admittance, and
+  impedance control, require force or torque sensors, often absent in lowercost or lightweight
+  robots. This paper presents an adaption of impedance control that can be used on
+  current-controlled robots without the use of force or torque sensors and its application for
+  compliant control of a mobile manipulator. A calibration method is designed that enables
+  estimation of the actuators' current/torque ratios and frictions, used by the adapted impedance
+  controller, and that can handle model errors. The calibration method and the performance of the
+  designed controller are experimentally validated using the Kinova GEN3 Lite arm. Results show that
+  the calibration method is consistent and that the designed controller for the arm is compliant
+  while also being able to track targets with fivemillimeter precision when no interaction is
+  present. Additionally, this paper presents two operational modes for interacting with the mobile
+  manipulator: one for guiding the robot around the workspace through interacting with the arm and
+  another for executing a tracking task, both maintaining compliance to external forces. These
+  operational modes were tested in realworld experiments, affirming their practical applicability
+  and effectiveness.
+bibtex: ""

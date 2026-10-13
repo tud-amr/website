@@ -1,0 +1,39 @@
+title: >-
+  How to split the costs and charge the travellers sharing a ride? Aligning system's optimum with
+  users' equilibrium
+authors:
+  - A. Fielbaum
+  - R. Kucharski
+  - O. Cats
+  - J. Alonso-Mora
+date: 2021-11-01
+type: journal
+venue: European Journal of Operational Research
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [transportation, task planning]
+image: ""
+note: ""
+links:
+  - publisher: https://www.sciencedirect.com/science/article/pii/S0377221721009930
+  - pdf: /assets/files/publications/2021_Fielbaum_Costsharing.pdf
+abstract: >-
+  Emerging on-demand sharing alternatives, in which one resource is utilised simultaneously by a
+  circumstantial group of users, entail several challenges regarding how to coordinate such users. A
+  very relevant case refers to how to form groups in a mobility system that offers shared rides, and
+  how to split the costs within the travellers of a group. These are non-trivial tasks, as two
+  objectives conflict: 1) minimising the total costs of the system, and 2) finding an equilibrium
+  where each user is content with her assignment. Aligning both objectives is challenging, as users
+  are not aware of the externalities induced to the rest. In this paper, we propose protocols to
+  share the costs within a ride so that optimal solutions can also constitute equilibria. To do
+  this, we model the situation as a non-cooperative game, which can be seen as a game-version of the
+  well-known set cover problem. We show that the traditional notions of equilibrium in game theory
+  (Nash and Strong) are not useful here, and prove that determining whether a Strong Equilibrium
+  exists is an NP-Complete problem, by reducing it to the k-Exact-Cover problem. Hence, we propose
+  three alternative equilibrium notions (stronger than Nash and weaker than Strong), depending on
+  how users can coordinate. For each of these equilibrium notions, we propose a (possibly
+  overcharging) cost-sharing protocol that yields the optimal solutions equilibria. Simulations for
+  Amsterdam reveal that our protocols can achieve stable solutions that are close to the optimum,
+  and that having a central coordinator can have a large impact.
+bibtex: ""

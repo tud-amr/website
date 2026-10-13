@@ -1,0 +1,37 @@
+title: >-
+  Real-time Motion Planning for Aerial videography with Dynamic Obstacle Avoidance and Viewpoint
+  Optimization
+authors:
+  - T. Naegeli
+  - J. Alonso-Mora
+  - A. Domahidi
+  - D. Rus
+  - O. Hilliges
+date: 2017-01-01
+type: journal
+venue: in IEEE Robotics and Automation Letters, vol. 2, no. 3, pp. 1696-1703
+projects: [cinematography]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/7847361
+  - pdf: /assets/files/publications/17-naegeli-RAL.pdf
+  - video: https://youtu.be/dh7yOEHBc_w
+abstract: >-
+  We propose a method for real-time trajectory generation with applications in aerial videography.
+  Taking framing objectives, such as position of targets in the image plane, as input, our method
+  solves for robot trajectories and gimbal controls automatically and adapts plans in real time due
+  to changes in the environment. We contribute a real-time receding horizon planner that
+  autonomously records scenes with moving targets, while optimizing for visibility under occlusion
+  and ensuring collision-free trajectories. A modular cost function, based on the reprojection error
+  of targets, is proposed that allows for flexibility and artistic freedom and is well behaved under
+  numerical optimization. We formulate the minimization problem under constraints as a finite
+  horizon optimal control problem that fulfills aesthetic objectives, adheres to nonlinear model
+  constraints of the filming robot and collision constraints with static and dynamic obstacles and
+  can be solved in real time. We demonstrate the robustness and efficiency of the method with a
+  number of challenging shots filmed in dynamic environments including those with moving obstacles
+  and shots with multiple targets to be filmed simultaneously.
+bibtex: ""

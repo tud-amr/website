@@ -1,0 +1,35 @@
+title: >-
+  Joint Multi-Policy Behavior Estimation and Receding-Horizon Trajectory Planning for Automated
+  Urban Driving
+authors:
+  - B. Zhou
+  - W. Schwarting
+  - D. Rus
+  - J. Alonso-Mora
+date: 2018-05-01
+type: conference
+venue: Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [veni]
+collections: []
+funding: []
+topics: [motion planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8461138
+  - pdf: /assets/files/publications/18-zhou-ICRA.pdf
+  - video spotlight: https://youtu.be/zaD-vCEOU9M
+  - video exp: https://youtu.be/nC32GaWHJLI
+abstract: >-
+  When driving in urban environments, an autonomous vehicle must account for the interaction with
+  other traffic participants. It must reason about their future behavior, how its actions affect
+  their future behavior, and potentially consider multiple motion hypothesis. In this paper we
+  introduce a method for joint behavior estimation and trajectory planning that models interaction
+  and multi-policy decision-making. The method leverages Partially Observable Markov Decision
+  Processes to estimate the behavior of other traffic participants given the planned trajectory for
+  the ego-vehicle, and Receding-Horizon Control for generating safe trajectories for the
+  ego-vehicle. To achieve safe navigation we introduce chance constraints over multiple motion
+  policies in the receding-horizon planner. These constraints account for uncertainty over the
+  behavior of other traffic participants. The method is capable of running in real-time and we show
+  its performance and good scalability in simulated multi-vehicle intersection scenarios.
+bibtex: ""

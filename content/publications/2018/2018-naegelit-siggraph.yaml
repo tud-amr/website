@@ -1,0 +1,36 @@
+title: "Flycon: Real-time Environment-independent Multi-view Human Pose Estimation with Aerial Vehicles"
+authors:
+  - T. Naegeli
+  - S. Oberholzer
+  - S. Pluess
+  - J. Alonso-Mora
+  - O. Hilliges
+date: 2018-12-01
+type: journal
+venue: ACM Transactions on Graphics (SIGGRAPH Asia)
+projects: [cinematography]
+collections: []
+funding: []
+topics: [multi-robot, motion planning, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://dl.acm.org/doi/10.1145/3272127.3275022
+  - pdf: /assets/files/publications/18_naegelit_siggraph.pdf
+  - video: https://youtu.be/iSJY-vHDmHQ
+abstract: >-
+  We propose a real-time method for the infrastructure-free estimation of articulated human motion.
+  The approach leverages a swarm of camera-equipped flying robots and jointly optimizes the swarm's
+  and skeletal states, which include the 3D joint positions and a set of bones. Our method allows to
+  track the motion of human subjects, for example an athlete, over long time horizons and long
+  distances, in challenging settings and at large scale, where fixed infrastructure approaches are
+  not applicable. The proposed algorithm uses active infra-red markers, runs in real-time and
+  accurately estimates robot and human pose parameters online without the need for accurately
+  calibrated or stationary mounted cameras. Our method i) estimates a global coordinate frame for
+  the MAV swarm, ii) jointly optimizes the human pose and relative camera positions, and iii)
+  estimates the length of the human bones. The entire swarm is then controlled via a model
+  predictive controller to maximize visibility of the subject from multiple viewpoints even under
+  fast motion such as jumping or jogging. We demonstrate our method in a number of difficult
+  scenarios including capture of long locomotion sequences at the scale of a triplex gym, in
+  non-planar terrain, while climbing and in outdoor scenarios.
+bibtex: ""

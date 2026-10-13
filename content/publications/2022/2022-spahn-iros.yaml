@@ -1,0 +1,39 @@
+title: "Local Planner Bench: Benchmarking for Local Motion Planning"
+authors:
+  - Max Spahn
+  - Chadi Salmi
+  - Javier Alonso-Mora
+date: 2022-10-12
+type: workshop
+venue: ""
+projects: [airlab-manipulation]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/22-spahn-iros.pdf
+abstract: >-
+  Ride-sourcing companies have worsened congestion in numerous cities worldwide, as many users are
+  attracted from more sustainable modes. To reverse this trend, it is crucial to leverage the
+  technology of connecting users and vehicles online and use it to strengthen public transport,
+  which can be achieved by integrating on-demand pooled services with existing fixed-line services.
+  We propose an efficient and practical integration idea: namely, to complement fixed bus lines with
+  a fleet of smaller vehicles that follow flexible (on-demand) routes side-by-side with the fixed
+  routes, so that part of the demand that would have used the fixed line can ride the flexible
+  service instead. With this scheme, a smaller bus fleet is required, partially compensating for the
+  increase in operators' costs stemming from the flexible vehicles. This integration strategy favors
+  mostly two types of users: those traveling in low-demand periods, through lower waiting times, and
+  those located far from the bus stops, because the on-demand vehicles can reduce their access time.
+  We develop simulations in real-world scenarios from Santiago, Chile, and Berlin, Germany, for the
+  cases of human-driven and automated vehicles. Results show that when vehicles are automated: (i) A
+  small number of on-demand vehicles can reduce average walking times from approximately 12 to 2 min
+  while reducing operators' costs, leading to a Pareto improvement, (ii) A larger number of
+  on-demand vehicles can diminish total costs by 13%–39%, through a reduction in users' costs,
+  although increasing operators' costs. If vehicles are not automated, total costs are reduced by
+  more than 10% in all of the scenarios analyzed, but a Pareto improvement is not always possible.
+  In general, this mixed fixed/on-demand system outperforms the use of on-demand ridepooling only.
+  Results are more promising in Berlin, because large buses are cheaper in Santiago and run more
+  crowded, so it is more costly to partially replace them by smaller vehicles.
+bibtex: ""

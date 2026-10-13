@@ -1,0 +1,31 @@
+title: Shared Control of Autonomous Vehicles based on Velocity Space Optimization
+authors:
+  - J. Alonso-Mora
+  - P. Gohl
+  - S. Watson
+  - R. Siegwart
+  - P. Beardsley
+date: 2014-06-01
+type: conference
+venue: Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/6907071
+  - pdf: /assets/files/publications/14-alonsomora-icra.pdf
+abstract: >-
+  This paper presents a method for shared control of a vehicle. The driver commands a preferred
+  velocity which is transformed into a collision-free local motion that respects the actuator
+  constraints and allows for smooth and safe control. Collision-free local motions are achieved with
+  an extension of velocity obstacles that takes into account dynamic constraints and a grid-based
+  map representation. To limit the freedom of the driver, a global guidance trajectory can be
+  included, which specifies the areas where the vehicle is allowed to drive in each time instance.
+  The low computational complexity of the method makes it well suited for multi-agent settings and
+  high update rates and both a centralized and a distributed algorithm are provided that allow for
+  real-time control of tens of vehicles. Extensive experimental results with real robotic
+  wheelchairs at relatively high speeds in tight scenarios are presented.
+bibtex: ""

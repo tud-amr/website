@@ -1,0 +1,36 @@
+title: >-
+  Safety on the Fly: Constructing Robust Safety Filters Via Policy Control Barrier Functions At
+  Runtime
+authors:
+  - Luzia Knoedler
+  - Oswin So
+  - Ji Yin
+  - Mitchell Black
+  - Zachary Serlin
+  - Panagiotis Tsiotras
+  - Javier Alonso-Mora
+  - Chuchu Fan
+date: 2025-08-11
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [secure]
+collections: []
+funding: []
+topics: [flying-robots, safety]
+image: /assets/images/papers/25_knoedler_ral_rpcbf/teaser_rpcbf.png
+note: ""
+links:
+  - pdf: /assets/files/publications/25-knoedler-ral.pdf
+  - IEEE: https://ieeexplore.ieee.org/document/11122656
+  - web: https://oswinso.xyz/rpcbf/
+abstract: >-
+  Control Barrier Functions (CBFs) have proven to be an effective tool for performing safe control
+  synthesis for nonlinear systems. However, guaranteeing safety in the presence of disturbances and
+  input constraints for high relative degree systems is a difficult problem. In this work, we
+  propose the Robust Policy CBF (RPCBF), a practical approach for constructing robust CBF
+  approximations online via the estimation of a value function. We establish conditions under which
+  the approximation qualifies as a valid CBF and demonstrate the effectiveness of the RPCBF-safety
+  filter in simulation on a variety of high relative degree input-constrained systems. Finally, we
+  demonstrate the benefits of our method in compensating for model errors on a hardware quadcopter
+  platform by treating the model errors as disturbances.
+bibtex: ""

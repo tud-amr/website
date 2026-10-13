@@ -1,0 +1,37 @@
+title: >-
+  Learning Interaction-Aware Trajectory Predictions for Decentralized Multi-Robot Motion Planning in
+  Dynamic Environments
+authors:
+  - H. Zhu
+  - F. Claramunt
+  - B. Brito
+  - J. Alonso-Mora
+date: 2021-03-01
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [scene-reasoning-team, veni]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://www.semanticscholar.org/paper/Learning-Interaction-Aware-Trajectory-Predictions-Zhu-Claramunt/69ed87322418a7501765b66573840c5d1fa29f3d
+  - pdf: /assets/files/publications/21-zhu-ral.pdf
+  - video: https://youtu.be/i8HRGeOmcH4
+abstract: >-
+  This letter presents a data-driven decentralized trajectory optimization approach for multi-robot
+  motion planning in dynamic environments. When navigating in a shared space, each robot needs
+  accurate motion predictions of neighboring robots to achieve predictive collision avoidance. These
+  motion predictions can be obtained among robots by sharing their future planned trajectories with
+  each other via communication. However, such communication may not be available nor reliable in
+  practice. In this letter, we introduce a novel trajectory prediction model based on recurrent
+  neural networks (RNN) that can learn multi-robot motion behaviors from demonstrated trajectories
+  generated using a centralized sequential planner. The learned model can run efficiently online for
+  each robot and provide interaction-aware trajectory predictions of its neighbors based on
+  observations of their history states. We then incorporate the trajectory prediction model into a
+  decentralized model predictive control (MPC) framework for multi-robot collision avoidance.
+  Simulation results show that our decentralized approach can achieve a comparable level of
+  performance to a centralized planner while being communication-free and scalable to a large number
+  of robots. We also validate our approach with a team of quadrotors in real-world experiments.
+bibtex: ""

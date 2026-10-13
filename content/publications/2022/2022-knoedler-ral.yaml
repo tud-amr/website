@@ -1,0 +1,35 @@
+title: Improving Pedestrian Prediction Models with Self-Supervised Continual Learning
+authors:
+  - Luzia Knoedler
+  - Chadi Salmi
+  - Hai Zhu
+  - Bruno Brito
+  - Javier Alonso-Mora
+date: 2022-02-01
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [harmony, airlab-manipulation]
+collections: []
+funding: []
+topics: [perception]
+image: /assets/images/papers/scl-RAL22/overview.png
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/9705542
+  - pdf: /assets/files/publications/22-knoedler-ral.pdf
+  - code: https://github.com/tud-amr/scl
+  - video: https://youtu.be/qsyd7NVgfRI
+abstract: >-
+  Autonomous mobile robots require accurate human motion predictions to safely and efficiently
+  navigate among pedestrians, whose behavior may adapt to environmental changes. This letter
+  introduces a self-supervised continual learning framework to improve data-driven pedestrian
+  prediction models online across various scenarios continuously. In particular, we exploit online
+  streams of pedestrian data, commonly available from the robot’s detection and tracking pipeline,
+  to refine the prediction model and its performance in unseen scenarios. To avoid the forgetting of
+  previously learned concepts, a problem known as catastrophic forgetting, our framework includes a
+  regularization loss to penalize changes of model parameters that are important for previous
+  scenarios and retrains on a set of previous examples to retain past knowledge. Experimental
+  results on real and simulation data show that our approach can improve prediction performance in
+  unseen scenarios while retaining knowledge from seen scenarios when compared to naively training
+  the prediction model online.
+bibtex: ""

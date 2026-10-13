@@ -1,0 +1,54 @@
+title: Design and Control of a Spherical Omnidirectional Blimp
+authors:
+  - M. Burri
+  - L. Gasser
+  - M. K. ch
+  - M. Krebs
+  - S. Laube
+  - A. Ledergerber
+  - D. Meier
+  - R. Michaud
+  - L. Mosimann
+  - L. Muri
+  - C. Ruch
+  - A. Schaffner
+  - N. Vuilliomenet
+  - J. Weichart
+  - K. Rudin
+  - S. Leutenegger
+  - J. Alonso-Mora
+  - R. Siegwart
+  - P. Beardsley
+date: 2013-11-01
+type: conference
+venue: Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [perception, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/6696604
+  - pdf: /assets/files/publications/13-skye.pdf
+  - video: https://youtu.be/qXvl3anK3w0
+abstract: >-
+  This paper presents Skye, a novel blimp design. Skye is a helium-filled sphere of diameter 2.7m
+  with a strong inelastic outer hull and an impermeable elastic inner hull. Four
+  tetrahedrally-arranged actuation units (AU) are mounted on the hull for locomotion, with each AU
+  having a thruster which can be rotated around a radial axis through the sphere center. This design
+  provides redundant control in the six degrees of freedom of motion, and Skye is able to move
+  omnidirectionally and to rotate around any axis. A multi-camera module is also mounted on the hull
+  for capture of aerial imagery or live video stream according to an ‘eyeball’ concept — the camera
+  module is not itself actuated, but the whole blimp is rotated in order to obtain a desired camera
+  view. Skye is safe for use near people — the double hull minimizes the likelihood of rupture on an
+  unwanted collision; the propellers are covered by grills to prevent accidental contact; and the
+  blimp is near neutral buoyancy so that it makes only a light impact on contact and can be readily
+  nudged away. The system is portable and deployable by a single operator — the electronics, AUs,
+  and camera unit are mounted externally and are detachable from the hull during transport; operator
+  control is via an intuitive touchpad interface. The motivating application is in entertainment
+  robotics. Skye has a varied motion vocabulary such as swooping and bobbing, plus internal LEDs for
+  visual effect. Computer vision enables interaction with an audience. Experimental results show
+  dexterous maneuvers in indoor and outdoor environments, and non-dangerous impacts between the
+  blimp and humans.
+bibtex: ""

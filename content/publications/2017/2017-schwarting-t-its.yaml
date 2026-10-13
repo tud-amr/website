@@ -1,0 +1,41 @@
+title: Safe Nonlinear Trajectory Generation for Parallel Autonomy With a Dynamic Vehicle Model
+authors:
+  - W. Schwarting
+  - J. Alonso-Mora
+  - L. Paull
+  - S. Karaman
+  - D. Rus
+date: 2017-12-01
+type: journal
+venue: IEEE Transactions on Intelligent Transportation Systems
+projects: [postdoc-mp]
+collections: []
+funding: []
+topics: [motion planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8207782
+  - pdf: /assets/files/publications/17-schwarting-t-its.pdf
+  - video: https://youtu.be/jPzQjusSy7o
+abstract: >-
+  High-end vehicles are already equipped with safety systems, such as assistive braking and
+  automatic lane following, enhancing vehicle safety. Yet, these current solutions can only help in
+  low-complexity driving situations. In this paper, we introduce a parallel autonomy, or shared
+  control, framework that computes safe trajectories for an automated vehicle, based on human
+  inputs. We minimize the deviation from the human inputs while ensuring safety via a set of
+  collision avoidance constraints. Our method achieves safe motion even in complex driving
+  scenarios, such as those commonly encountered in an urban setting. We introduce a receding horizon
+  planner formulated as nonlinear model predictive control (NMPC), which includes the analytic
+  descriptions of road boundaries and the configuration and future uncertainties of other road
+  participants. The NMPC operates over both steering and acceleration simultaneously. We introduce a
+  nonslip model suitable for handling complex environments with dynamic obstacles, and a nonlinear
+  combined slip vehicle model including normal load transfer capable of handling static
+  environments. We validate the proposed approach in two complex driving scenarios. First, in an
+  urban environment that includes a left-turn across traffic and passing on a busy street. And
+  second, under snow conditions on a race track with sharp turns and under complex dynamic
+  constraints. We evaluate the performance of the method with various human driving styles. We
+  consequently observe that the method successfully avoids collisions and generates motions with
+  minimal intervention for parallel autonomy. We note that the method can also be applied to
+  generate safe motion for fully autonomous vehicles.
+bibtex: ""

@@ -1,0 +1,28 @@
+title: Multi-robot Task Assignment for Aerial Tracking with Viewpoint Constraints
+authors:
+  - A. Ray
+  - A. Pierson
+  - H. Zhu
+  - J. Alonso-Mora
+  - D. Rus
+date: 2021-10-01
+type: conference
+venue: Proc. IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [scene-reasoning-team]
+collections: []
+funding: []
+topics: [task planning, multi-robot]
+image: ""
+note: ""
+links:
+  - arxiv: https://arxiv.org/abs/2205.15483
+  - pdf: /assets/files/publications/21-ray-iros.pdf
+abstract: >-
+  We address the problem of assigning a team of drones to autonomously capture a set desired shots
+  of a dynamic target in the presence of obstacles. We present a two-stage planning pipeline that
+  generates offline an assignment of drone to shots and locally optimizes online the viewpoint.
+  Given desired shot parameters, the high-level planner uses a visibility heuristic to predict good
+  times for capturing each shot and uses an Integer Linear Program to compute drone assignments. An
+  online Model Predictive Control algorithm uses the assignments as reference to capture the shots.
+  The algorithm is validated in hardware with a pair of drones and a remote controlled car.
+bibtex: ""

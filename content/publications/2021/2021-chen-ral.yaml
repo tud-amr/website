@@ -1,0 +1,36 @@
+title: Integrated Task Assignment and Path Planning for Capacitated Multi-Agent Pickup and Delivery
+authors:
+  - Z. Chen
+  - J. Alonso-Mora
+  - X. Bai
+  - D. D. Harabor
+  - P. J. Stuckey
+date: 2021-03-01
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [ara, harmony]
+collections: []
+funding: []
+topics: [motion planning, task planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/abstract/document/9410352
+  - pdf: /assets/files/publications/21-chen-ral.pdf
+  - code: https://github.com/nobodyczcz/MCA-RMCA
+abstract: >-
+  Multi-agent Pickup and Delivery (MAPD) is a challenging industrial problem where a team of robots
+  is tasked with transporting a set of tasks, each from an initial location and each to a specified
+  target location. Appearing in the context of automated warehouse logistics and automated mail
+  sortation, MAPD requires first deciding which robot is assigned what task (i.e., Task Assignment
+  or TA) followed by a subsequent coordination problem where each robot must be assigned
+  collision-free paths so as to successfully complete its assignment (i.e., Multi-Agent Path Finding
+  or MAPF). Leading methods in this area solve MAPD sequentially: first assigning tasks, then
+  assigning paths. In this work we propose a new coupled method where task assignment choices are
+  informed by actual delivery costs instead of by lower-bound estimates. The main ingredients of our
+  approach are a marginal-cost assignment heuristic and a meta-heuristic improvement strategy based
+  on Large Neighbourhood Search. As a further contribution, we also consider a variant of the MAPD
+  problem where each robot can carry multiple tasks instead of just one. Numerical simulations show
+  that our approach yields efficient and timely solutions and we report significant improvement
+  compared with other recent methods from the literature.
+bibtex: ""

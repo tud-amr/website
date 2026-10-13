@@ -1,0 +1,31 @@
+title: Learning a Guidance Policy from Humans for Social Navigation
+authors:
+  - Luzia Knoedler
+  - Bruno Brito
+  - Michael Everett
+  - Jonathan P. How
+  - Javier Alonso-Mora
+date: 2022-05-01
+type: workshop
+venue: >-
+  Social Robot Navigation: Advances and Evaluation at IEEE International Conference on Robotics and
+  Automation (ICRA)
+projects: [harmony]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://harmony-eu.org/wp-content/uploads/2022/06/knoedler2022icra_ws.pdf
+  - pdf: /assets/files/publications/22_icra_seanavbench_knoedler.pdf
+abstract: >-
+  Autonomous mobile robots navigating among humans must not only consider safety and efficiency but
+  also move acceptably in the current social context. A hybrid deep reinforcement learning - model
+  predictive control (DRL-MPC) approach can account for the complex interactions among humans while
+  maintaining the collision avoidance guarantees and feasibility constraints inherent in the MPC
+  formulation. However, encoding socially acceptable behavior through a reward or cost function,
+  along with other objectives such as reaching the goal quickly, is challenging. Therefore, this
+  work proposes a new training strategy that combines supervised and reinforcement learning to
+  exploit human demonstration. Furthermore, it presents first results from real-world experiments.
+bibtex: ""

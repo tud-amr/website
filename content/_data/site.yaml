@@ -1,0 +1,13 @@
+# Site-wide settings, available in templates as `site.*`.
+title: AMR Lab
+description: >-
+  We are the Autonomous Multi-Robots Lab, at TU Delft. We are interested in the development
+  of algorithms for autonomous robots that can operate in complex and dynamic environments,
+  and in the application of these algorithms to real-world problems.
+url: https://autonomousrobots.nl
+contact_email: J.AlonsoMora@tudelft.nl
+author: Javier Alonso-Mora
+
+# Cookieless analytics (https://www.goatcounter.com). Empty = no analytics.
+# Set to the GoatCounter site code, e.g. "amr-lab" for https://amr-lab.goatcounter.com
+goatcounter: ""

@@ -1,0 +1,32 @@
+title: Chance-constrained Collision Avoidance for MAVs in dynamic environments
+authors:
+  - H. Zhu
+  - J. Alonso-Mora
+date: 2019-01-01
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [veni]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8613928
+  - pdf: /assets/files/publications/19-zhu-RAL.pdf
+  - code: https://github.com/tud-amr/mrca-mav
+  - video: https://youtu.be/P7SUFEKUP9Q
+abstract: >-
+  Safe autonomous navigation of microair vehicles in cluttered dynamic environments is challenging
+  due to the uncertainties arising from robot localization, sensing, and motion disturbances. This
+  letter presents a probabilistic collision avoidance method for navigation among other robots and
+  moving obstacles, such as humans. The approach explicitly considers the collision probability
+  between each robot and obstacle and formulates a chance constrained nonlinear model predictive
+  control problem (CCNMPC). A tight bound for approximation of collision probability is developed,
+  which makes the CCNMPC formulation tractable and solvable in real time. For multirobot
+  coordination, we describe three approaches, one distributed without communication (constant
+  velocity assumption), one distributed with communication (of previous plans), and one centralized
+  (sequential planning). We evaluate the proposed method in experiments with two quadrotors sharing
+  the space with two humans and verify the multirobot coordination strategy in simulation with up to
+  sixteen quadrotors.
+bibtex: ""

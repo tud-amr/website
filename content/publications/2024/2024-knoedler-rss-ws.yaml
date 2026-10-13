@@ -1,0 +1,31 @@
+title: Interaction-Aware Autonomous Navigation among Pedestrians using Social Forces Response Dynamics
+authors:
+  - Luzia Knoedler
+  - Nils Wilde
+  - Javier Alonso-Mora
+date: 2024-07-15
+type: workshop
+venue: "Robotics: Science and Systems (RSS), Workshop on Unsolved Problems in Social Robot Navigation"
+projects: [harmony]
+collections: []
+funding: []
+topics: [social navigation, collision avoidance]
+image: /assets/images/papers/sofiia/SoFIIA.png
+note: ""
+links:
+  - pdf: /assets/files/publications/24-knoedler-rss-ws.pdf
+abstract: >-
+  Ignoring the interactions between agents during motion planning in multi-agent environments can
+  result in overly conservative or opaque navigation behaviors, and in dense crowds, it may lead to
+  the so-called Freezing robot problem. Although coupled planning can mitigate these issues, it
+  typically incurs high computational costs, especially as the number of agents increases. To
+  enhance interaction while limiting the computational complexity, we formulate the interactions as
+  an underactuated system and propose to leverage the Social Forces Model (SFM) as the pedestrians'
+  response dynamics. The SFM is a well-established model widely used for describing pedestrian
+  behaviors. Unlike deep learning models that require extensive training data, SFM offers
+  interpretability and adaptability across various environments. We use Model Predictive Path
+  Integral Control to solve the optimization problem, demonstrating that by accounting for
+  interactions, the robot can effectively leverage the behavior of other agents. Additionally, we
+  show that when combined with a specific cost function, the robot is able to plan motions that
+  decrease its impact on surrounding pedestrians.
+bibtex: ""

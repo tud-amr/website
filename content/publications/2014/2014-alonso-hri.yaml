@@ -1,0 +1,23 @@
+title: "Human - Robot Swarm Interaction for entertainment: From animation display to gesture based control"
+authors:
+  - J. Alonso-Mora
+  - R. Siegwart
+  - P. Beardsley
+date: 2014-03-01
+type: conference
+venue: ACM/IEEE Int. Conf. on Human-Robot Interaction (HRI)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning, perception]
+image: ""
+note: Best video Award 2nd Prize
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8542599
+  - pdf: /assets/files/publications/14-alonso-HRI.pdf
+  - video: https://youtu.be/AM2rLmna9nA
+abstract: >-
+  This work shows experimental results with three systems that take real-time user input to direct a
+  robot swarm formed by tens of small robots. These are: real-time drawing, gesture based
+  interaction with an RGB-D sensor and control via a hand-held tablet computer.
+bibtex: ""

@@ -1,0 +1,32 @@
+title: Social behavior for autonomous vehicles
+authors:
+  - W. Schwarting
+  - A. Pearson
+  - J. Alonso-Mora
+  - S. Karaman
+  - D. Rus
+date: 2019-11-01
+type: journal
+venue: Proceedings of the National Academy of Sciences USA (PNAS)
+projects: []
+collections: []
+funding: [nwo]
+topics: [transportation, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://www.pnas.org/content/early/2019/11/21/1820676116
+  - pdf: /assets/files/publications/19-schwarting-pnas.pdf
+  - pdf-supplemental: /assets/files/publications/19-schwarting-pnas-si.pdf
+  - video: https://youtu.be/Pt8SfrUKF6I
+abstract: >-
+  We present a framework that integrates social psychology tools into controller design for
+  autonomous vehicles. Our key insight utilizes Social Value Orientation (SVO), quantifying an
+  agent’s degree of selfishness or altruism, which allows us to better predict driver behavior. We
+  model interactions between human and autonomous agents with game theory and the principle of best
+  response. Our unified algorithm estimates driver SVOs and incorporates their predicted
+  trajectories into the autonomous vehicle’s control while respecting safety constraints. We study
+  common-yet-difficult traffic scenarios: highway merging and unprotected left turns. Incorporating
+  SVO reduces error in predictions by 25%, validated on 92 human driving merges. Furthermore, we
+  find that merging drivers are more competitive than nonmerging drivers.
+bibtex: ""

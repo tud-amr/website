@@ -1,0 +1,35 @@
+title: Collision Avoidance for Aerial Vehicles in Multi-Agent Scenarios
+authors:
+  - J. Alonso-Mora
+  - T. Naegeli
+  - R. Siegwart
+  - P. Beardsley
+date: 2015-06-01
+type: journal
+venue: Autonomous Robots, vol. 39, no. 1, pp. 101–121
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s10514-015-9429-0
+  - pdf: /assets/files/publications/15-alonsomora-AURO.pdf
+  - video: https://youtu.be/seMRMa82FzA
+abstract: >-
+  This article describes an investigation of local motion planning, or collision avoidance, for a
+  set of decision-making agents navigating in 3D space. The method is applicable to agents which are
+  heterogeneous in size, dynamics and aggressiveness. It builds on the concept of velocity obstacles
+  (VO), which characterizes the set of trajectories that lead to a collision between interacting
+  agents. Motion continuity constraints are satisfied by using a trajectory tracking controller and
+  constraining the set of available local trajectories in an optimization. Collision-free motion is
+  obtained by selecting a feasible trajectory from the VO’s complement, where reciprocity can also
+  be encoded. Three algorithms for local motion planning are presented—(1) a centralized convex
+  optimization in which a joint quadratic cost function is minimized subject to linear and quadratic
+  constraints, (2) a distributed convex optimization derived from (1), and (3) a centralized
+  non-convex optimization with binary variables in which the global optimum can be found, albeit at
+  higher computational cost. A complete system integration is described and results are presented in
+  experiments with up to four physical quadrotors flying in close proximity, and in experiments with
+  two quadrotors avoiding a human.
+bibtex: ""

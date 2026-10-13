@@ -1,0 +1,37 @@
+title: Online and offline learning of player objectives from partial observations in dynamic games
+authors:
+  - L. Peters
+  - V. Rubies-Royo
+  - C. J. Tomlin
+  - L. Ferranti
+  - J. Alonso-Mora
+  - C. Stachniss
+  - D. Fridovich-Keil
+date: 2023-06-01
+type: journal
+venue: The International Journal of Robotics Research (IJRR)
+projects: [game-theoretic-mp]
+collections: []
+funding: []
+topics: [perception, multi-robot]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/peters2023ijrr.pdf
+  - web: https://lasse-peters.net/pub/online-inverse-games/
+abstract: >-
+  Robots deployed to the real world must be able to interact with other agents in their environment.
+  Dynamic game theory provides a powerful mathematical framework for modeling scenarios in which
+  agents have individual objectives and interactions evolve over time. However, a key limitation of
+  such techniques is that they require a priori knowledge of all players’ objectives. In this work,
+  we address this issue by proposing a novel method for learning players’ objectives in continuous
+  dynamic games from noise-corrupted, partial state observations. Our approach learns objectives by
+  coupling the estimation of unknown cost parameters of each player with inference of unobserved
+  states and inputs through Nash equilibrium constraints. By coupling past state estimates with
+  future state predictions, our approach is amenable to simultaneous online learning and prediction
+  in receding horizon fashion. We demonstrate our method in several simulated traffic scenarios in
+  which we recover players’ preferences, for, e.g. desired travel speed and collision-avoidance
+  behavior. Results show that our method reliably estimates game-theoretic models from
+  noise-corrupted data that closely matches ground-truth objectives, consistently outperforming
+  state-of-the-art approaches.
+bibtex: ""

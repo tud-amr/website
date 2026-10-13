@@ -1,0 +1,32 @@
+title: Online Trajectory Planning and Control of a MAV Payload System in Dynamic Environments
+authors:
+  - N. D. Potdar
+  - G. C. H. D. de Croon
+  - J. Alonso-Mora
+date: 2020-06-01
+type: journal
+venue: Springer Autonomous Robots
+projects: [veni]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s10514-020-09919-8
+  - pdf: /assets/files/publications/20-potdar.pdf
+  - video: https://youtu.be/9C7O34W1w8Y
+abstract: >-
+  Micro Aerial Vehicles (MAVs) can be used for aerial transportation in remote and urban spaces
+  where portability can be exploited to reach previously inaccessible and inhospitable spaces.
+  Current approaches for path planning of MAV swung payload system either compute conservative
+  minimal-swing trajectories or pre-generate agile collision-free trajectories. However, these
+  approaches have failed to address the prospect of online re-planning in uncertain and dynamic
+  environments, which is a prerequisite for real-world deployability. This paper describes an online
+  method for agile and closed-loop local trajectory planning and control that relies on Non-Linear
+  Model Predictive Control and that addresses the mentioned limitations of contemporary approaches.
+  We integrate the controller in a full system framework, and demonstrate the algorithm’s
+  effectiveness in simulation and in experimental studies. Results show the scalability and
+  adaptability of our method to various dynamic setups with repeatable performance over several
+  complex tasks that include flying through a narrow opening and avoiding moving humans.
+bibtex: ""

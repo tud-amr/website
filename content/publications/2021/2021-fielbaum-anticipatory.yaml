@@ -1,0 +1,43 @@
+title: Anticipatory routing methods for an on-demand ridepooling mobility system
+authors:
+  - A. Fielbaum
+  - M. Kronmueller
+  - J. Alonso-Mora
+date: 2021-09-01
+type: journal
+venue: Transportation
+projects: [airlab-ondemand, ridepooling]
+collections: []
+funding: [didi udian]
+topics: [transportation, task planning]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s11116-021-10232-1
+  - pdf: /assets/files/publications/2021_Fielbaum_Anticipatory.pdf
+abstract: >-
+  On-demand mobility systems in which passengers use the same vehicle simultaneously are a promising
+  transport mode, yet difficult to control. One of the most relevant challenges relates to the
+  spatial imbalances of the demand, which induce a mismatch between the position of the vehicles and
+  the origins of the emerging requests. Most ridepooling models face this problem through
+  rebalancing methods only, i.e., moving idle vehicles towards areas with high rejections rate,
+  which is done independently from routing and vehicle-to-orders assignments, so that vehicles
+  serving passengers (a large portion of the total fleet) remain unaffected. This paper introduces
+  two types of techniques for anticipatory routing that affect how vehicles are assigned to users
+  and how to route vehicles to serve such users, so that the whole operation of the system is
+  modified to reach more efficient states for future requests. Both techniques do not require any
+  assumption or exogenous knowledge about the future demand, as they depend only on current and
+  recent requests. Firstly, we introduce rewards that reduce the cost of an assignment between a
+  vehicle and a group of passengers if the vehicle gets routed towards a high-demand zone. Secondly,
+  we include a small set of artificial requests, whose request times are in the near future and
+  whose origins are sampled from a probability distribution that mimics observed generation rates.
+  These artificial requests are to be assigned together with the real requests. We propose, formally
+  discuss and experimentally evaluate several formulations for both approaches. We test these
+  techniques in combination with a state-of-the-art trip-vehicle assignment method, using a set of
+  real rides from Manhattan. Introducing rewards can diminish the rejection rate to about
+  nine-tenths of its original value. On the other hand, including future requests can reduce users’
+  traveling times by about one-fifth, but increasing rejections. Both methods increase the
+  vehicles-hour-traveled by about 10%. Spatial analysis reveals that vehicles are indeed moved
+  towards the most demanded areas, such that the reduction in rejections rate is achieved mostly
+  there.
+bibtex: ""

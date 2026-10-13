@@ -1,0 +1,43 @@
+title: Reactive mission and motion planning with deadlock resolution avoiding dynamic obstacles
+authors:
+  - J. Alonso-Mora
+  - J. A. DeCastro
+  - V. Raman
+  - D. Rus
+  - H. Kress-Gazit
+date: 2018-04-01
+type: journal
+venue: >-
+  Autonomous Robots, Special Issue on Online Decision Making in Multi-Robot Coordination, vol. 42,
+  no. 4, pp. 801–824
+projects: [postdoc-multi]
+collections: []
+funding: []
+topics: [motion planning, multi-robot, task planning]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s10514-017-9665-6
+  - pdf: /assets/files/publications/17-alonsomora-AURO-mission.pdf
+  - video: https://youtu.be/oF8T6ZRQng8
+abstract: >-
+  In the near future mobile robots, such as personal robots or mobile manipulators, will share the
+  workspace with other robots and humans. We present a method for mission and motion planning that
+  applies to small teams of robots performing a task in an environment with moving obstacles, such
+  as humans. Given a mission specification written in linear temporal logic, such as patrolling a
+  set of rooms, we synthesize an automaton from which the robots can extract valid strategies. This
+  centralized automaton is executed by the robots in the team at runtime, and in conjunction with a
+  distributed motion planner that guarantees avoidance of moving obstacles. Our contribution is a
+  correct-by-construction synthesis approach to multi-robot mission planning that guarantees
+  collision avoidance with respect to moving obstacles, guarantees satisfaction of the mission
+  specification and resolves encountered deadlocks, where a moving obstacle blocks the robot
+  temporally. Our method provides conditions under which deadlock will be avoided by identifying
+  environment behaviors that, when encountered at runtime, may prevent the robot team from achieving
+  its goals. In particular, (1) it identifies deadlock conditions; (2) it is able to check whether
+  they can be resolved; and (3) the robots implement the deadlock resolution policy locally in a
+  distributed manner. The approach is capable of synthesizing and executing plans even with a high
+  density of dynamic obstacles. In contrast to many existing approaches to mission and motion
+  planning, it is scalable with the number of moving obstacles. We demonstrate the approach in
+  physical experiments with walking humanoids moving in 2D environments and in simulation with
+  aerial vehicles (quadrotors) navigating in 2D and 3D environments.
+bibtex: ""

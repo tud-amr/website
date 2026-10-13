@@ -1,0 +1,32 @@
+title: Sampling-based Model Predictive Control Leveraging Parallelizable Physics Simulations
+authors:
+  - Corrado Pezzato
+  - Chadi Salmi
+  - Elia Trevisan
+  - Max Spahn
+  - Javier Alonso-Mora
+  - Carlos Hernández Corbato
+date: 2025-01-20
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [trilogy, airlab-manipulation]
+collections: []
+funding: []
+topics: [motion planning]
+image: /assets/images/papers/isaac_mppi/main_idea.png
+note: ""
+links:
+  - web: /paper_websites/isaac-mppi
+abstract: >-
+  We present a method for sampling-based model predictive control that makes use of a generic
+  physics simulator as the dynamical model. In particular, we propose a Model Predictive Path
+  Integral controller (MPPI), that uses the GPU-parallelizable IsaacGym simulator to compute the
+  forward dynamics of a problem. By doing so, we eliminate the need for manual encoding of robot
+  dynamics and interactions among objects and allow one to effortlessly solve complex navigation and
+  contact-rich tasks. Since no explicit dynamic modeling is required, the method is easily
+  extendable to different objects and robots. We demonstrate the effectiveness of this method in
+  several simulated and real-world settings, among which mobile navigation with collision avoidance,
+  non-prehensile manipulation, and whole-body control for high-dimensional configuration spaces.
+  This method is a powerful and accessible tool to solve a large variety of contact-rich motion
+  planning tasks.
+bibtex: ""

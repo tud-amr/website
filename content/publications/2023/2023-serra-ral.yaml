@@ -1,0 +1,33 @@
+title: Active Classification of Moving Targets with Learned Control Policies
+authors:
+  - A. Serra-Gomez
+  - E. Montijano
+  - W. Boehmer
+  - J. Alonso-Mora
+date: 2023-04-01
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [scene-reasoning-team]
+collections: []
+funding: []
+topics: [perception, motion planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/23-serra-ral.pdf
+abstract: >-
+  WIn this paper, we consider the problem where a drone has to collect semantic information to
+  classify multiple moving targets. In particular, we address the challenge of computing control
+  inputs that move the drone to informative viewpoints, position and orientation, when the
+  information is extracted using a “black-box” classifier, e.g., a deep learning neural network.
+  These algorithms typically lack of analytical relationships between the viewpoints and their
+  associated out- puts, preventing their use in information-gathering schemes. To fill this gap, we
+  propose a novel attention-based architecture, trained via Reinforcement Learning (RL), that
+  outputs the next viewpoint for the drone favoring the acquisition of evidence from as many
+  unclassified targets as possible while reasoning about their movement, orientation, and
+  occlusions. Then, we use a low-level MPC controller to move the drone to the desired viewpoint
+  taking into account its actual dynamics. We show that our approach not only outperforms a variety
+  of baselines but also generalizes to scenarios unseen during training. Additionally, we show that
+  the network scales to large numbers of targets and generalizes well to different movement dynamics
+  of the targets.
+bibtex: ""

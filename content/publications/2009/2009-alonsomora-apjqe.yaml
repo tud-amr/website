@@ -1,0 +1,34 @@
+title: >-
+  Numerical model for polymer electrolyte membrane fuel cells with experimental application and
+  validation
+authors:
+  - J. Alonso-Mora
+  - A. Husar
+  - M. Serra
+  - J. Riera
+date: 2009-01-01
+type: journal
+venue: Asia Pacific Journal of Chemical Engineering, vol. 4, no. 1, pp. 55-67
+projects: []
+collections: []
+funding: []
+topics: []
+image: ""
+note: ""
+links:
+  - publisher: https://onlinelibrary.wiley.com/doi/abs/10.1002/apj.195
+  - pdf: /assets/files/publications/09-alonsomora-apjqe.pdf
+abstract: >-
+  The aim of this paper is to present a simple 3D computational model of a polymer electrolyte
+  membrane fuel cell (PEMFC) that simulates over time the heat distribution, energy, and mass
+  balance of the reactant gas flows in the fuel cell including pressure drop, humidity, and liquid
+  water. Although this theoretical model can be adapted to any type of PEMFC, for verification of
+  the model and to present different analysis it has been adapted to a single cell test fixture. The
+  model parameters were adjusted through a series of experimental tests and the model was
+  experimentally validated for a well-defined range of operating conditions: H2/air O2 as reactants,
+  flow rates of 0.5–1.5 SLPM, dew points and cell temperatures of 30–80 °C, currents 0–5 A and
+  with/without water condensation. The model is especially suited for the analysis of liquid water
+  condensation in the reactant channels. A key finding is that the critical current at which liquid
+  water is formed is determined at different flows, temperatures, and humidity. Copyright © 2008
+  Curtin University of Technology and John Wiley & Sons, Ltd.
+bibtex: ""

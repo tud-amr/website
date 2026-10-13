@@ -1,0 +1,30 @@
+title: Routing of Heterogeneous Fleets for Flash Deliveries via Vehicle Group Assignment
+authors:
+  - M. Kronmueller
+  - A. Fielbaum
+  - J. Alonso-Mora
+date: 2022-10-01
+type: conference
+venue: Proc. 2022 IEEE - Int. Conf. on Intelligent Transportation (ITSC)
+projects: [airlab-ondemand]
+collections: []
+funding: []
+topics: [task planning, transportation, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/9922062
+  - pdf: /assets/files/publications/22_kronmueller_ITSC.pdf
+abstract: >-
+  This paper presents a novel approach to route heterogeneous fleets for flash delivery operations.
+  Flash deliveries offer to serve customers’ wishes in minutes. We investigate a scenario that
+  allows to pick up orders at multiple depots with a heterogeneous vehicle fleet leveraging
+  different modes of transportation. We propose the Heterogeneous Vehicle Group Assignment (HVGA)
+  method, which, given a problem state, identifies potential pick-up locations, calculates potential
+  trips for all modes of transportation and last chooses from the set of potential trips.
+  Experiments to analyze the proposed method are executed using a fleet featuring two modes of
+  transportation, trucks and drones. We compare to a state-of-the-art method. Results show that HVGA
+  is able to serve more orders while requiring less total traveled distance. Further, the effects of
+  the fleet size and fleet composition between drones and trucks are examined by simulating three
+  hours of a flash delivery operation in the city center of Amsterdam.
+bibtex: ""

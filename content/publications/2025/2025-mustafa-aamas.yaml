@@ -1,0 +1,38 @@
+title: Predictability Awareness For Efficient and Robust Multi-Agent Coordination
+authors:
+  - Roman Chiva Gil
+  - Daniel Jarne Ornia*
+  - Khaled A. Mustafa*
+  - Javier Alonso-Mora
+date: 2025-05-18
+type: conference
+venue: 24th International Conference on Autonomous Agents and Multiagent Systems (AAMAS)
+projects: [nwa-act]
+collections: []
+funding: []
+topics: [motion planning]
+image: /assets/images/papers/25-mustafa-aamas/aamas.png
+note: ""
+links:
+  - web: https://romanchiva.github.io/PAProjectPage/
+  - PDF: /assets/files/publications/25-mustafa-aamas.pdf
+abstract: >-
+  To safely and efficiently solve motion planning problems in multiagent settings, most approaches
+  attempt to solve a joint optimization that explicitly accounts for the responses triggered in
+  other agents. This often results in solutions with an exponential computational complexity, making
+  these methods intractable for complex scenarios with many agents. While sequential
+  predict-and-plan approaches are more scalable, they tend to perform poorly in highly interactive
+  environments. This paper proposes a method to improve the interactive capabilities of sequential
+  predict-and-plan methods in multi-agent navigation problems by introducing predictability as an
+  optimization objective. We interpret predictability throughnthe use of general prediction models,
+  by allowing agents to predict themselves and estimate how they align with these external
+  predictions. We formally introduce this behavior through the freeenergy of the system, which
+  reduces (under appropriate bounds) to the Kullback-Leibler divergence between plan and prediction,
+  and use this as a penalty for unpredictable trajectories. The proposed interpretation of
+  predictability allows agents to more robustly leverage prediction models, and fosters a ‘soft
+  social convention' that accelerates agreement on coordination strategies without the need of
+  explicit high level control or communication. We show how this predictability-aware planning leads
+  to lower-cost trajectories and reduces planning effort in a set of multi-robot problems, including
+  autonomous driving experiments with human driver data, where we show that the benefits of
+  considering predictability apply even when only the ego-agent uses this strategy.
+bibtex: ""

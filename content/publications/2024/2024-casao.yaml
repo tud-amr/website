@@ -1,0 +1,38 @@
+title: Distributed multi-target tracking and active perception with mobile camera networks
+authors:
+  - Sara Casao
+  - Alvaro Serra-Gomez
+  - Ana C. Murillo
+  - Wendelin Böhmer
+  - Javier Alonso-Mora
+  - Eduardo Montijano
+date: 2024-01-30
+type: journal
+venue: S.I. Collaborative Mobile Smart Cameras, Computer Vision and Image Understanding
+projects: [scene-reasoning-team]
+collections: []
+funding: []
+topics: [motion planning, multi-robot, task planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/24-casao.pdf
+abstract: >-
+  Smart cameras are an essential component in surveillance and monitoring applications, and they
+  have been typically deployed in networks of fixed camera locations. The addition of mobile
+  cameras, mounted on robots, can overcome some of the limitations of static networks such as blind
+  spots or back-lightning, allowing the system to gather the best information at each time by active
+  positioning. This work presents a hybrid camera system, with static and mobile cameras, where all
+  the cameras collaborate to observe people moving freely in the environment and efficiently
+  visualize certain attributes from each person. Our solution combines a multi-camera distributed
+  tracking system, to localize with precision all the people, with a control scheme that moves the
+  mobile cameras to the best viewpoints for a specific classification task. The main contribution of
+  this paper is a novel framework that exploits the synergies that result from the cooperation of
+  the tracking and the control modules, obtaining a system closer to the real-world application and
+  capable of high-level scene understanding. The static camera network provides global awareness of
+  the control scheme to move the robots. In exchange, the mobile cameras onboard the robots provide
+  enhanced information about the people on the scene. We perform a thorough analysis of the people
+  monitoring application performance under different conditions thanks to the use of a
+  photo-realistic simulation environment. Our experiments demonstrate the benefits of collaborative
+  mobile cameras with respect to static or individual camera setups.
+bibtex: ""

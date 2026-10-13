@@ -1,0 +1,13 @@
+# Informal groups of publications, used by `collections:` in a publication file
+# and by `related: collections:` on a paper website. Add one entry to create a group.
+# Real, funded projects are not listed here: they have a page in content/projects/.
+#
+# <id>:
+#   title: what the group is
+#   description: optional, one line
+
+saraypapers:
+  title: Saray Bakker's papers
+
+explicit-representations:
+  title: Explicit representations

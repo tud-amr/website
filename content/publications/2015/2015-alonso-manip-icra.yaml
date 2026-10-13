@@ -1,0 +1,29 @@
+title: Local motion planning for collaborative manipulation of deformable objects in dynamic environments
+authors:
+  - J. Alonso-Mora
+  - R. Knepper
+  - R. Siegwart
+  - D. Rus
+date: 2015-05-01
+type: conference
+venue: Proc. of the IEEE Int. Conf. Robotics and Automation (ICRA)
+projects: [postdoc-multi]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/7139967
+  - pdf: /assets/files/publications/15-alonso-manip-icra.pdf
+  - video: https://youtu.be/kxRu426UVdM
+abstract: >-
+  This paper presents a formalism that exploits deformability during manipulation of soft objects by
+  robot teams. A hybrid centralized/distributed approach restricts centralized planning to
+  high-level global guidance of the object for consensus. Low-level control is thus delegated to the
+  individual manipulator robots, which retain manipulation and collision avoidance guarantees by
+  passing forces to one another through the object. A distributed receding horizon planner provides
+  local control, formulated as a convex optimization problem in velocity space and incorporating
+  constraints for both collision avoidance and shape maintenance. We demonstrate teams of mobile
+  manipulators autonomously carrying various deformable objects.
+bibtex: ""

@@ -1,0 +1,31 @@
+title: "If you are late, everyone is late: late passenger arrival and ride-pooling systems' performance"
+authors:
+  - R. Kucharski
+  - A. Fielbaum
+  - J. Alonso-Mora
+  - O. Cats
+date: 2020-10-01
+type: journal
+venue: "Transportmetrica A: Transport Science"
+projects: [ridepooling]
+collections: []
+funding: [didi udian]
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://www.tandfonline.com/doi/full/10.1080/23249935.2020.1829170
+  - pdf: /assets/files/publications/20-Fielbaum-Transportmetrica.pdf
+abstract: >-
+  Sharing rides in on-demand systems allow passengers to reduce their fares and service providers to
+  increase revenue, though at the cost of adding uncertainty to the system. Notably, the uncertainty
+  of ride-pooling systems stems not only from travel times but also from unique features of sharing,
+  such as the dependency on other passengers' arrival time at their pick up points. In this work, we
+  theoretically and experimentally analyse how late arrivals at pick up locations impact shared
+  rides' performance. We find that the total delay is equally distributed among sharing passengers.
+  However, delay composition gradually shifts from on-board delay only for the first passenger to
+  waiting delay at the origin for the last passenger. Sadly, trips with more passengers are more
+  adversely impacted. Strategic behaviour analysis reveals Nash equilibria that might emerge. We
+  analyse the system-wide effects and find that when lateness increases passengers refrain from
+  sharing and eventually opt-out.
+bibtex: ""

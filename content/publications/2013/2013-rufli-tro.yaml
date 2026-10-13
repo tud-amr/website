@@ -1,0 +1,35 @@
+title: Reciprocal Collision Avoidance with Motion Continuity Constraints
+authors:
+  - M. Rufli
+  - J. Alonso-Mora
+  - R. Siegwart
+date: 2013-08-01
+type: journal
+venue: IEEE Transactions on Robotics, vol. 29, no. 4, pp. 899-912
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/6515630
+  - pdf: /assets/files/publications/13-rufli-tro.pdf
+  - video: https://youtu.be/seMRMa82FzA
+abstract: >-
+  This paper addresses decentralized motion planning among a homogeneous set of feedback-controlled,
+  decision-making agents. It introduces the continuous control obstacle ( C n -CO), which describes
+  the set of C n -continuous control sequences (and thus trajectories) that lead to a collision
+  between interacting agents. By selecting a feasible trajectory from C n -CO's complement, a
+  collision-free motion is obtained. The approach represents an extension to the reciprocal velocity
+  obstacle (RVO, ORCA) collision-avoidance methods so that trajectory segments verify C n continuity
+  rather than piecewise linearity. This allows the large class of robots capable of tracking C n
+  -continuous trajectories to employ it for partial motion planning directly-rather than as a mere
+  tool for collision checking. This paper further establishes that both the original velocity
+  obstacle method and several of its recently developed reciprocal extensions (which treat specific
+  robot physiologies only) correspond to particular instances of C n -CO. In addition to the
+  described extension in trajectory continuity, C n -CO thus represents a unification of existing
+  RVO theory. Finally, the presented method is validated in simulation-and a parameter study reveals
+  under which environmental and control conditions C n -CO with admits significantly improved
+  navigation performance compared with inflated approaches based on ORCA.
+bibtex: ""

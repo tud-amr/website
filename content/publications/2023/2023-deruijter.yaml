@@ -1,0 +1,31 @@
+title: >-
+  Ride-pooling adoption, efficiency and level of service under alternative demand, behavioural and
+  pricing settings
+authors:
+  - A. de Ruijter
+  - O. Cats
+  - J. Alonso-Mora
+  - S. Hoogendoorn
+date: 2023-04-01
+type: journal
+venue: Transportation Planning and Technology
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [transportation]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/23_deRuijter.pdf
+abstract: >-
+  Previous studies into the potential benefits of ride pooling failed to account for the trade-off
+  that users likely make when considering a shared ride. We address this shortcoming by formulating
+  user net benefit stemming from pooling as a compensatory function where the additional travel time
+  and on-board discomfort need to be compensated by the price discount for a traveller to choose a
+  pooled ride over a private ride. The proposed formulation is embedded in a method for matching
+  travel requests and vehicles. We conduct a series of experiments investigating how the potential
+  of ride-pooling services depends on demand characteristics, user preferences and the pricing
+  policy adopted by the service provider. Our results suggest that the total vehicle mileage savings
+  found by previous studies is only attainable when users are very willing to share their ride (i.e.
+  attach low premium to private rides) and are offered a 50% discount for doing so.
+bibtex: ""

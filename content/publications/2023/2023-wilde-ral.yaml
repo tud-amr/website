@@ -1,0 +1,35 @@
+title: Optimizing Task Waiting Times in Dynamic Vehicle Routing
+authors:
+  - A. Botros
+  - B. Gilhuly
+  - N. Wilde
+  - A. Sadeghi
+  - J. Alonso-Mora
+  - S. L Smith
+date: 2023-07-01
+type: journal
+venue: IEEE Robotics and Automation Letters (RA-L)
+projects: [harmony]
+collections: []
+funding: []
+topics: [task planning, multi-robot]
+image: /assets/images/papers/mrta/DVRP.png
+note: ""
+links:
+  - pdf: /assets/files/publications/23-wilde-ral.pdf
+abstract: >-
+  We study the problem of deploying a fleet of mobile robots to service tasks that arrive
+  stochastically over time and at random locations in an environment. This is known as the Dynamic
+  Vehicle Routing Problem (DVRP) and requires robots to allocate incoming tasks among themselves and
+  find an optimal sequence for each robot. State-of-the-art approaches only consider average wait
+  times and focus on high-load scenarios where the arrival rate of tasks approaches the limit of
+  what can be handled by the robots while keeping the queue of unserviced tasks bounded, i.e.,
+  stable. To ensure stability, these approaches repeatedly compute minimum distance tours over a set
+  of newly arrived tasks. This letter is aimed at addressing the missing policies for moderate-load
+  scenarios, where quality of service can be improved by prioritizing long-waiting tasks. We
+  introduce a novel DVRP policy based on a cost function that takes the p-norm over accumulated wait
+  times and show it guarantees stability even in high-load scenarios. We demonstrate that the
+  proposed policy outperforms the state-of-the-art in both mean and 95th percentile wait times in
+  moderate-load scenarios through simulation experiments in the Euclidean plane as well as using
+  real-world data for city scale service requests.
+bibtex: ""

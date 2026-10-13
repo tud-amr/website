@@ -1,0 +1,34 @@
+title: "Foresight: Remote Sensing For Autonomous Vehicles Using a Small Unmanned Aerial Vehicle"
+authors:
+  - A. Wallar
+  - B. Araki
+  - R. Chang
+  - J. Alonso-Mora
+  - D. Rus
+date: 2017-09-01
+type: conference
+venue: Proc. of the Conf. on Field and Service Robotics (FSR)
+projects: [postdoc-mp]
+collections: []
+funding: []
+topics: [motion planning, transportation, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://www.semanticscholar.org/paper/Foresight%3A-Remote-Sensing-for-Autonomous-Vehicles-a-Wallar-Araki/4a0c1ee0a0e321ce2f8cd63b5a40c2138cf8cff7
+  - pdf: /assets/files/publications/17-wallar-FSR.pdf
+  - video: https://youtu.be/gmpjYLksUx8
+abstract: >-
+  A large number of traffic accidents, especially those involving vulnerable road users such as
+  pedestrians and cyclists, are due to blind spots for the driver, for example when a vehicle takes
+  a turn with poor visibility or when a pedestrian crosses from behind a parked vehicle. In these
+  accidents, the consequences for the vulnerable road users are dramatic. Autonomous cars have the
+  potential to drastically reduce traffic accidents thanks to high-performance sensing and
+  reasoning. However, their perception capabilities are still limited to the field of view of their
+  sensors. We propose to extend the perception capabilities of a vehicle, autonomous or
+  human-driven, with a small Unmanned Aerial Vehicle (UAV) capable of taking off from the car,
+  flying around corners to gather additional data from blind spots and landing back on the car after
+  a mission. We present a holistic framework to detect blind spots in the map that is built by the
+  car, plan an informative path for the drone, and detect potential threats occluded to the car. We
+  have tested our approach with an autonomous car equipped with a drone.
+bibtex: ""

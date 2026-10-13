@@ -1,0 +1,29 @@
+title: Towards a geographically even level of service in on-demand ridepooling
+authors:
+  - P. Schuller
+  - A. Fielbaum
+  - J. Alonso-Mora
+date: 2021-09-01
+type: conference
+venue: Proc. 2021 IEEE - Int. Conf. on Intelligent Transportation (ITSC)
+projects: [ridepooling]
+collections: []
+funding: [didi udian]
+topics: [transportation, task planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/9564910
+  - pdf: /assets/files/publications/21-Fielbaum-ITSC.pdf
+abstract: >-
+  On-demand ridepooling systems usually need to decide which requests to serve, when the number of
+  vehicles is not enough to transport them all with waiting times that are acceptable by the users.
+  When doing so, they tend to provide uneven service rates, concentrating rejections in some zones
+  within the operation area. In this paper, we propose two techniques that modify the objective
+  function governing the assignment of users to vehicles, to prioritize requests originated at zones
+  that present a relatively large rejection rate. The goal is to diminish the Gini Index of the
+  rejections' rate, which is a well established way to measure inequality in economics. We test
+  these techniques over an artificial small network and a real-life case in Manhattan, and we show
+  that they are able to reduce the Gini Index of the rejection rates. Moreover, the overall
+  rejection rate can be simultaneously reduced, thanks to utilizing the vehicles more efficiently.
+bibtex: ""

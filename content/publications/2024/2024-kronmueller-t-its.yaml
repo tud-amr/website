@@ -1,0 +1,26 @@
+title: Reducing the Minimal Fleet Size by Delaying Individual Tasks
+authors:
+  - Maximilian Kronmueller
+  - Andres Fielbaum
+  - Javier Alonso-Mora
+date: 2024-03-06
+type: journal
+venue: IEEE Transactions on Intelligent Transportation Systems
+projects: [airlab-ondemand]
+collections: []
+funding: []
+topics: [transportation, task planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/24_Kronmueller_T-ITS.pdf
+  - publisher: https://ieeexplore.ieee.org/abstract/document/10462002
+abstract: >-
+  This work formally defines the problem of fleet sizing with delays (FSD), where the option of
+  delaying individual tasks within fleet sizing is considered. We prove that the FSD problem is
+  NP-hard and solve a formulation of the FSD problem as a mixed integer linear problem (MILP). We
+  then analyze the proposed method in detail in an abstract case and validate it in a case study of
+  taxi rides in Manhattan. We show that fleet sizes can be decreased significantly and that the
+  trade-off space of the number of required vehicles to execution time and added delay can be
+  enlarged.
+bibtex: ""

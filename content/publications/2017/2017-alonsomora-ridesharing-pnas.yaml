@@ -1,0 +1,31 @@
+title: On-demand High-capacity Ride-sharing via Dynamic Trip-Vehicle Assignment
+authors:
+  - J. Alonso-Mora
+  - S. Samaranayake
+  - A. Wallar
+  - E. Frazzoli
+  - D. Rus
+date: 2017-01-01
+type: journal
+venue: Proceedings of the National Academy of Sciences of the USA (PNAS), vol. 114, no. 3, pp. 462-467
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: http://www.pnas.org/cgi/doi/10.1073/pnas.1611675114
+  - pdf: /assets/files/publications/17-alonsomora-ridesharing-pnas.pdf
+  - pdf-supplemental-method: /assets/files/publications/17-alonsomora-ridesharing-pnas-supplemental-method.pdf
+  - video: https://youtu.be/xHWrRci0H54
+abstract: >-
+  Ride-sharing services can provide not only a very personalized mobility experience but also ensure
+  efficiency and sustainability via large-scale ride pooling. Large-scale ride-sharing requires
+  mathematical models and algorithms that can match large groups of riders to a fleet of shared
+  vehicles in real time, a task not fully addressed by current solutions. We present a highly
+  scalable anytime optimal algorithm and experimentally validate its performance using New York City
+  taxi data and a shared vehicle fleet with passenger capacities of up to ten. Our results show that
+  2,000 vehicles (15% of the taxi fleet) of capacity 10 or 3,000 of capacity 4 can serve 98% of the
+  demand within a mean waiting time of 2.8 min and mean trip delay of 3.5 min.
+bibtex: ""

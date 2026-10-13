@@ -1,0 +1,19 @@
+title: Optimal Control and Optimization Methods for Multi-robot Systems
+authors:
+  - J. Alonso-Mora
+  - K. Savla
+  - D. Rus
+date: 2015-07-01
+type: workshop
+venue: Tutorial on Multi-Robot Systems at Robotics Science and Systems (RSS)
+projects: [postdoc-multi]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://www.multirobotsystems.org/sites/default/files/slides/2015_RSS_MRS_Alonso-Mora.pdf
+  - pdf: /assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf
+abstract: ""
+bibtex: ""

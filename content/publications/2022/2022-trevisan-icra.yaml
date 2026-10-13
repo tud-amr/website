@@ -1,0 +1,35 @@
+title: Regulations Aware Motion Planning for Autonomous Surface Vessels in Urban Canals
+authors:
+  - J. de Vries
+  - E. Trevisan
+  - J. van der Toorn
+  - T. Das
+  - B. Brito
+  - J. Alonso-Mora
+date: 2022-05-01
+type: conference
+venue: Proc. IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [trilogy]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://doi.org/10.1109/ICRA46639.2022.9811608
+  - pdf: /assets/files/publications/22_trevisan_icra.pdf
+  - video: https://youtu.be/Yq0XDarHX18
+abstract: >-
+  In unstructured urban canals, regulation-aware interactions with other vessels are essential for
+  collision avoidance and social compliance. In this paper, we propose a regulations aware motion
+  planning framework for Autonomous Surface Vessels (ASVs) that accounts for dynamic and static
+  obstacles. Our method builds upon local model predictive contouring control (LMPCC) to generate
+  motion plans satisfying kino-dynamic and collision constraints in real-time while including
+  regulation awareness. To incorporate regulations in the planning stage, we propose a cost function
+  encouraging compliance with rules describing interactions with other vessels similar to COLlision
+  avoidance REGulations at sea (COLREGs). These regulations are essential to make an ASV behave in a
+  predictable and socially compliant manner with regard to other vessels. We compare the framework
+  against baseline methods and show more effective regulation-compliance avoidance of moving
+  obstacles with our motion planner. Additionally, we present experimental results in an outdoor
+  environment.
+bibtex: ""
