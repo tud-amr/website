@@ -1,14 +1,14 @@
 {%- assign d = include.project.data -%}
-<article class="card card-link">
+<article class="tile tile-link">
   {%- if d.cover_image contains '.mp4' %}
-  <video class="card-media" src="{% include fix_link.html link=d.cover_image %}" muted autoplay loop playsinline aria-label="Video of the thesis"></video>
+  <video class="tile-media" src="{% include fix_link.html link=d.cover_image %}" muted autoplay loop playsinline aria-label="Video of the thesis"></video>
   {%- else %}
-  <img class="card-media" src="{% include fix_link.html link=d.cover_image %}" alt="" width="250" height="250">
+  <img class="tile-media" src="{% include fix_link.html link=d.cover_image %}" alt="" width="250" height="250">
   {%- endif %}
-  <div class="card-body">
-    <h3 class="card-title"><a href="{{ include.project.url }}">{{ d.title }}</a></h3>
-    <p class="card-meta">{% for person in d.authors %}{{ person.name }}{% unless forloop.last %}, {% endunless %}{% endfor %} | {{ d.end_date | date: "%B %Y" }}</p>
-    <p class="card-text clamp">{{ d.description }}</p>
-    <span class="card-more">See details and results <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  <div class="tile-body">
+    <h3 class="tile-title"><a href="{{ include.project.url }}">{{ d.title }}</a></h3>
+    <p class="tile-meta">{% for person in d.authors %}{{ person.name }}{% unless forloop.last %}, {% endunless %}{% endfor %} | {{ d.end_date | date: "%B %Y" }}</p>
+    <p class="tile-text clamp">{{ d.description }}</p>
+    <span class="tile-more">See details and results <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
   </div>
 </article>

@@ -34,7 +34,7 @@ images_carousel:
 {%- unless current_type == "" %}</div>{% endunless %}
 {%- assign current_type = robot.data.type %}
 <h3 class="capitalize">{{ current_type }}s</h3>
-<div class="card-list">
+<div class="tile-list">
 {%- endif %}
 {% include robot_card.html robot=robot %}
 {%- endfor %}

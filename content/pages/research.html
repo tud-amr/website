@@ -25,7 +25,7 @@ permalink: /research/
 </section>
 {%- endfor %}
 
-<div class="card-list" data-area-list>
+<div class="tile-list" data-area-list>
   {%- for project in ongoing %}
   <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% include project_card.html project=project %}</div>
   {%- endfor %}

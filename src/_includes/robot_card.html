@@ -1,13 +1,13 @@
 {%- assign d = include.robot.data -%}
-<article class="card">
+<article class="tile">
   {%- if d.image contains '.mp4' %}
-  <video class="card-media" src="{% include fix_link.html link=d.image %}" muted autoplay loop playsinline aria-label="Video of {{ d.name }}"></video>
+  <video class="tile-media" src="{% include fix_link.html link=d.image %}" muted autoplay loop playsinline aria-label="Video of {{ d.name }}"></video>
   {%- else %}
-  <img class="card-media" src="{% include fix_link.html link=d.image %}" alt="{{ d.name }}">
+  <img class="tile-media" src="{% include fix_link.html link=d.image %}" alt="{{ d.name }}">
   {%- endif %}
-  <div class="card-body">
-    <h3 class="card-title">{{ d.name }}</h3>
-    <p class="card-meta">{{ d.subtitle }}</p>
-    <div class="card-text">{{ include.robot.content }}</div>
+  <div class="tile-body">
+    <h3 class="tile-title">{{ d.name }}</h3>
+    <p class="tile-meta">{{ d.subtitle }}</p>
+    <div class="tile-text">{{ include.robot.content }}</div>
   </div>
 </article>

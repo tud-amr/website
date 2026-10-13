@@ -10,7 +10,7 @@ projects: [interact]
 collections: []
 funding: []
 topics: [task planning, multi-robot systems]
-image: assets/images/msc_projects/25_JakobBichler_sadcher_MRTA/opening_image1x1.png
+image: /assets/images/msc_projects/25_JakobBichler_sadcher_MRTA/opening_image1x1.png
 note: ""
 links:
   - code: https://github.com/jakbichler

@@ -217,6 +217,7 @@ function checkFields(file, data, schema, errors) {
 // Every string that points at a local file (/assets/...) must exist.
 function checkLocalFiles(file, value, errors) {
   if (typeof value === 'string') {
+    if (/^(\.\/)?assets\//.test(value)) errors.push(`${file}: "${value}" needs a leading slash: /${value.replace(/^\.\//, '')}`);
     if (value.startsWith('/assets/')) {
       const target = path.join(ROOT, decodeURI(value.split(/[?#]/)[0]));
       if (!fs.existsSync(target)) errors.push(`${file}: file not found: ${value}`);

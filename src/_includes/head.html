@@ -3,6 +3,7 @@
 {%- assign page_description = description | default: site.description | strip_html | normalize_whitespace | truncate: 200 -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ page_description | escape }}">
 {%- if hidden %}

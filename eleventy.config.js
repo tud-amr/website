@@ -9,6 +9,7 @@ import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import { validateContent } from './src/lib/content.mjs';
 import { imageTransform } from './src/lib/images.mjs';
 import { mediaTransform } from './src/lib/media.mjs';
+import { writeIconCss } from './src/lib/icons.mjs';
 
 export default function (eleventyConfig) {
   // ---- Content check: the build stops with a clear list of problems -------------------------
@@ -18,6 +19,8 @@ export default function (eleventyConfig) {
       throw new Error(`Content check failed with ${errors.length} problem(s):\n  - ${errors.join('\n  - ')}\n`);
     }
   });
+
+  eleventyConfig.on('eleventy.after', ({ dir }) => { writeIconCss(dir.output); });
 
   // ---- Templates ------------------------------------------------------------------------------
   // Liquid set up to behave like Jekyll's, so existing content keeps working:
@@ -65,7 +68,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('year', (d) => (d ? String(new Date(d).getUTCFullYear()) : ''));
 
   // ---- Collections ----------------------------------------------------------------------------
-  const folder = (name) => (api) => api.getFilteredByGlob(`content/${name}/*.{md,html}`);
+  // Ordered by file name, as Jekyll did (Eleventy's default order uses file dates, which differ per clone).
+  const folder = (name) => (api) => api.getFilteredByGlob(`content/${name}/*.{md,html}`)
+    .sort((a, b) => a.inputPath.localeCompare(b.inputPath));
   const byDateDesc = (key) => (items) => items.sort((a, b) => new Date(b.data[key] || 0) - new Date(a.data[key] || 0));
   eleventyConfig.addCollection('projects', folder('projects'));
   eleventyConfig.addCollection('paperWebsites', (api) => byDateDesc('release_date')(folder('paper-websites')(api)));
@@ -98,7 +103,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ '.cache/img': 'assets/img' });
   // Fonts and libraries are served from this site, not from Google or a CDN.
   eleventyConfig.addPassthroughCopy({
-    'node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2': 'assets/vendor/bootstrap-icons',
+    'node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2': 'assets/vendor/bootstrap-icons/bootstrap-icons.woff2',
     'node_modules/katex/dist/katex.min.css': 'assets/vendor/katex/katex.min.css',
     'node_modules/katex/dist/katex.min.js': 'assets/vendor/katex/katex.min.js',
     'node_modules/katex/dist/contrib/auto-render.min.js': 'assets/vendor/katex/auto-render.min.js',

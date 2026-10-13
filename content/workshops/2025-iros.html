@@ -227,6 +227,13 @@ time: 8:50-13:00 AM
                 flex-direction: column;  /* Stack images vertically on mobile */
             }
         }
+        /* Phone widths (added in the Eleventy port so the page does not scroll sideways) */
+        @media (max-width: 600px) {
+            *, *::before, *::after { box-sizing: border-box; }
+            img { max-width: 100%; height: auto; }
+            a { overflow-wrap: anywhere; }
+            #ack div { flex-wrap: wrap; }
+        }
     </style>
     <script>
         function toggleBio(id) {

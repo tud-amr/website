@@ -1,11 +1,11 @@
 {%- assign d = include.project.data -%}
-<article class="card card-link">
-  <img class="card-media" src="{% include fix_link.html link=d.image %}" alt="" width="267" height="230">
-  <div class="card-body">
-    <h3 class="card-title"><a href="{{ include.project.url }}">{{ d.title }}</a></h3>
-    <p class="card-meta">{{ d.date | date: "%B %Y" }}{% if d.end_date %} – {{ d.end_date | date: "%B %Y" }} | Finished{% endif %}</p>
-    <p class="card-meta"><strong>Funding:</strong> {{ d.fundings }}</p>
-    <p class="card-text">{{ d.description }}</p>
-    <span class="card-more">Continue reading <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+<article class="tile tile-link">
+  <img class="tile-media" src="{% include fix_link.html link=d.image %}" alt="" width="267" height="230">
+  <div class="tile-body">
+    <h3 class="tile-title"><a href="{{ include.project.url }}">{{ d.title }}</a></h3>
+    <p class="tile-meta">{{ d.date | date: "%B %Y" }}{% if d.end_date %} – {{ d.end_date | date: "%B %Y" }} | Finished{% endif %}</p>
+    <p class="tile-meta"><strong>Funding:</strong> {{ d.fundings }}</p>
+    <p class="tile-text">{{ d.description }}</p>
+    <span class="tile-more">Continue reading <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
   </div>
 </article>
