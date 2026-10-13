@@ -51,7 +51,9 @@ related:
   projects: []
   collections: [saraypapers]
   papers: []
-# LaTeX shortcuts used in this page's equations (rendered with KaTeX).
+# This page uses numbered equations with \label and \eqref, which need MathJax instead of KaTeX.
+math_engine: mathjax
+# LaTeX shortcuts used in this page's equations.
 math_macros:
   '\norm': '\left\lVert #1 \right\rVert'
   '\vec': '\boldsymbol'
@@ -202,7 +204,7 @@ As a result, since both possible cases lead to a contradiction for $\f \neq 0$, 
 <h4 id=proof>Discussion</h4>
 <div>
 Let's take a closer look at the implications of the assumptions on $\vec{M}_{\mathcal{L}_{e}}$. 
-For a fabric describing collision avoidance, two cases exist as the Spec describing the fabric must be boundary conforming<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[2]</sup></span>: (1) The metric $\vec{M}_{\mathcal{L}_{e}}$ is finite along the Eigen-directions parallel with the boundary's tangent space but goes to infinite along directions orthogonal to the tangent space. (2) The metric $\vec{M}_{\mathcal{L}_{e}}$ is a finite matrix along all trajectories, implying that $\vec{M}_{\mathcal{L}_{e}}$ is also finite in the limit when $t\rightarrow \infty$. Observing the assumption on $\vec{M}_{\mathcal{L}_{e}}$ in the \ac{cpm} that the metric is bounded in a finite region and strictly positive definite everywhere, only fabrics can be designed following the second case. This implies that in the limit we ensure convergence to the zero set of the forcing policy $\f^{\mathcal{C}}_{\theta}(\q, \qdot)$, but collision avoidance is not guaranteed as barrier-like functions going to infinity on the boundary, cannot be used to construct $\vec{M}_{\mathcal{L}_e}$
+For a fabric describing collision avoidance, two cases exist as the Spec describing the fabric must be boundary conforming<span class="citation" onclick="document.getElementById('ratliff2020optimization').scrollIntoView();"><sup>[2]</sup></span>: (1) The metric $\vec{M}_{\mathcal{L}_{e}}$ is finite along the Eigen-directions parallel with the boundary's tangent space but goes to infinite along directions orthogonal to the tangent space. (2) The metric $\vec{M}_{\mathcal{L}_{e}}$ is a finite matrix along all trajectories, implying that $\vec{M}_{\mathcal{L}_{e}}$ is also finite in the limit when $t\rightarrow \infty$. Observing the assumption on $\vec{M}_{\mathcal{L}_{e}}$ in the CPM that the metric is bounded in a finite region and strictly positive definite everywhere, only fabrics can be designed following the second case. This implies that in the limit we ensure convergence to the zero set of the forcing policy $\f^{\mathcal{C}}_{\theta}(\q, \qdot)$, but collision avoidance is not guaranteed as barrier-like functions going to infinity on the boundary, cannot be used to construct $\vec{M}_{\mathcal{L}_e}$
 <br><br>
 The metric $\vec{M}_{\mathcal{L}_e}$ is additionally assumed to not vanish in the limit $\qdot \rightarrow \vec{0}$. In practice, numerical instability of the fraction $\frac{\qdot \qdot^{\top}}{\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot}$ is avoided by replacing the denominator by $\qdot^{\top}\vec{M}_{\mathcal{L}_e}\qdot + \epsilon$ with $\epsilon>0$.
 </div>

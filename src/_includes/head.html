@@ -26,11 +26,31 @@
 <link rel="preload" href="/assets/site/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/site/css/site.css">
 <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/icons.css">
-{%- if math %}
+{%- if math and math_engine == "mathjax" %}
 <script>
-  // KaTeX renders $...$ and $$...$$; a page can define its own LaTeX shortcuts in `math_macros`.
+  // MathJax: for pages written for it (numbered equations, \label and \eqref). Shortcuts from `math_macros`.
+  window.MathJax = {
+    tex: {
+      tags: 'ams',
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      macros: Object.fromEntries(Object.entries({% if math_macros %}{{ math_macros | jsonify }}{% else %}{}{% endif %}).map(([name, body]) => {
+        const args = Math.max(0, ...[...body.matchAll(/#(\d)/g)].map((m) => Number(m[1])));
+        return [name.replace(/^\\/, ''), args ? [body, args] : body];
+      })),
+    },
+    options: { enableMenu: false },
+  };
+</script>
+<script defer src="/assets/vendor/mathjax/tex-chtml.js"></script>
+{%- elsif math %}
+<script>
+  // KaTeX renders $...$, $$...$$ and LaTeX environments; a page can define its own shortcuts in `math_macros`.
   window.mathOptions = {
-    delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false}],
+    delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false},
+      {left: '\\begin{equation}', right: '\\end{equation}', display: true}, {left: '\\begin{equation*}', right: '\\end{equation*}', display: true},
+      {left: '\\begin{align}', right: '\\end{align}', display: true}, {left: '\\begin{align*}', right: '\\end{align*}', display: true}],
     macros: {% if math_macros %}{{ math_macros | jsonify }}{% else %}{}{% endif %}
   };
 </script>

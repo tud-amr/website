@@ -70,7 +70,7 @@ const person = t.object({ name: t.text, url: t.string, superscript: t.string }, 
 // `optional` fields may be left out. `strict` types reject unknown fields, to catch typos.
 
 const PAGE_FIELDS = {
-  layout: t.string, permalink: t.string, sitemap: t.bool, hidden: t.bool, math: t.bool,
+  layout: t.string, permalink: t.string, sitemap: t.bool, hidden: t.bool, math: t.bool, math_engine: t.oneOf('katex', 'mathjax'),
   math_macros: (v) => (v && typeof v === 'object' && Object.values(v).every((x) => typeof x === 'string') ? null : "must be a list of shortcuts like '\\q': '\\vec{q}'"),
   redirect_from: t.list(), redirect_to: t.string, eleventyExcludeFromCollections: t.bool,
 };

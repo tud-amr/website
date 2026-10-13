@@ -108,6 +108,10 @@ export default function (eleventyConfig) {
     'node_modules/katex/dist/katex.min.js': 'assets/vendor/katex/katex.min.js',
     'node_modules/katex/dist/contrib/auto-render.min.js': 'assets/vendor/katex/auto-render.min.js',
     'node_modules/katex/dist/fonts/*.woff2': 'assets/vendor/katex/fonts',
+    // MathJax, only for pages that set `math_engine: mathjax` (equation numbers, \label, \eqref).
+    'node_modules/mathjax/es5/tex-chtml.js': 'assets/vendor/mathjax/tex-chtml.js',
+    'node_modules/mathjax/es5/output/chtml/fonts/woff-v2': 'assets/vendor/mathjax/output/chtml/fonts/woff-v2',
+    'node_modules/mathjax/es5/input/tex/extensions': 'assets/vendor/mathjax/input/tex/extensions',
   });
   eleventyConfig.addWatchTarget('content/publications/');
   eleventyConfig.addWatchTarget('src/');

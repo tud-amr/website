@@ -2,7 +2,7 @@
 permalink: /
 layout: default
 ---
-{%- assign youtube = socials | where: "name", "Youtube" | first -%}
+{%- assign youtube_channel = socials | where: "name", "Youtube" | first -%}
 {%- assign github = socials | where: "name", "Github" | first -%}
 
 <section class="hero">
@@ -31,7 +31,7 @@ layout: default
   <div class="highlights-text">
     <h2>Research</h2>
     <p>Our group's research is applied mainly to the following fields:</p>
-    <ul class="tags">
+    <ul class="area-list">
       {%- for area in collections.researchAreas %}
       <li><a href="/research/?area={{ area.data.area_id }}">{{ area.data.title }}</a></li>
       {%- endfor %}
@@ -39,11 +39,11 @@ layout: default
     <p>Watch demos and paper videos on our YouTube playlist, or find our code on <a href="{{ github.url }}">GitHub</a>.</p>
     <div class="button-row">
       <a class="btn btn-primary" href="/research/">See all research</a>
-      <a class="btn btn-outline" href="{{ youtube.url }}"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube channel</a>
+      <a class="btn btn-outline" href="{{ youtube_channel.url }}"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube channel</a>
     </div>
   </div>
   <div class="highlights-video">
-    <iframe src="https://www.youtube.com/embed/videoseries?list=PLOksz-MTFhN2T4gYQlLHR2lGCdC0BDkJw&rel=0" title="AMR Lab YouTube playlist" data-poster="/assets/images/robots/new_lab_pic_1.png" data-caption="Play our latest videos" allowfullscreen></iframe>
+    <iframe src="{{ youtube.embed }}" title="{{ youtube.title | default: 'AMR Lab YouTube playlist' | escape }}"{% if youtube.thumbnail %} data-poster="{{ youtube.thumbnail }}"{% endif %} data-caption="{{ youtube.title | default: 'Play our latest videos' | escape }}" allowfullscreen></iframe>
   </div>
 </section>
 

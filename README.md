@@ -145,6 +145,8 @@ Notes per type:
   math_macros:
     '\qdot': '\dot{\boldsymbol{q}}'
   ```
+  Math is drawn with KaTeX (fast, small). A page that needs numbered equations with `\label`/`\eqref`
+  can switch to MathJax with `math_engine: mathjax` in its header (see `pumafabrics-details`).
 
 ## Images, videos and files
 

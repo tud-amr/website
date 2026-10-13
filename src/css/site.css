@@ -260,7 +260,7 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
 .people-grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
 @media (min-width: 900px) { .people-grid { grid-template-columns: 1fr 1fr; gap: 1.25rem 1.5rem; } }
 .person { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
-.person-photo { flex: 0 0 auto; width: 96px; height: 96px; object-fit: cover; border-radius: 50%; background: var(--surface); box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--accent-line); }
+.person-photo { flex: 0 0 auto; width: 96px; height: 96px; object-fit: cover; border-radius: var(--radius-sm); background: var(--surface); }
 .person-body { min-width: 0; flex: 1; }
 .person-name { margin: 0; font-size: 1.1rem; }
 .person-role { margin: 0.1rem 0 0.4rem; color: var(--muted); font-size: 0.85rem; }
@@ -269,13 +269,15 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
 .person-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 @media (min-width: 576px) { .person-photo { width: 120px; height: 120px; } }
 
-.person-lead { flex-direction: column; gap: 1.25rem; padding: 1.5rem; background: var(--surface); margin-bottom: 1rem; }
-.person-lead .person-photo { width: 180px; height: 180px; border-radius: var(--radius); box-shadow: none; }
+.person-lead { display: block; padding: 1.5rem; background: var(--surface); margin-bottom: 1rem; }
+/* The photo starts level with the name and the bio wraps around it. */
+.person-lead .person-photo { float: left; width: 120px; height: 150px; margin: 0.3rem 1.25rem 0.75rem 0; border-radius: var(--radius-sm); }
 .person-lead .person-name { font-size: 1.4rem; }
-.person-lead .person-bio { font-size: 1rem; max-width: var(--measure); }
+.person-lead .person-bio { font-size: 1rem; }
+.person-lead .person-links { clear: both; padding-top: 0.25rem; }
 @media (min-width: 768px) {
-  .person-lead { flex-direction: row; }
-  .person-lead .person-photo { width: 220px; height: 260px; }
+  .person-lead .person-photo { width: 200px; height: 240px; margin-right: 1.75rem; }
+  .person-lead .person-links { clear: none; }
 }
 .panel { margin-top: 0.75rem; padding: 1rem 1.25rem; border-left: 3px solid var(--accent-line); background: #fff; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; max-width: var(--measure); }
 .panel > :last-child { margin-bottom: 0; }
@@ -313,6 +315,8 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
 /* Wide things inside content scroll on their own instead of widening the page. */
 .prose table, .paper-body table, .project-content table { display: block; max-width: 100%; overflow-x: auto; }
 .katex-display { overflow-x: auto; overflow-y: hidden; padding-block: 0.25rem; }
+mjx-container[display='true'] { max-width: 100%; min-width: 0 !important; /* MathJax sets an inline min-width on numbered equations */ overflow-x: auto; overflow-y: hidden; padding-block: 0.25rem; }
+mjx-container:not([display='true']) { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
 .paper-body video, .prose video, .project-content video { height: auto; }
 .pdf-embed { display: block; width: 100%; height: min(80vh, 1100px); margin-top: 1rem; border: 1px solid var(--border); border-radius: var(--radius); }
 
@@ -325,6 +329,9 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
 @media (min-width: 992px) { .hero { grid-template-columns: 5fr 7fr; gap: 2.5rem; } }
 .highlights { display: grid; gap: 1.75rem; align-items: center; padding-block: 2.25rem; border-bottom: 1px solid var(--border); }
 .highlights h2, .news h2 { margin-top: 0; }
+.area-list { margin: 0 0 1.25rem; padding: 0; list-style: none; }
+.area-list li { position: relative; padding: 0.2rem 0 0.2rem 1.1rem; }
+.area-list li::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 6px; height: 6px; border-radius: 1px; background: var(--accent); }
 @media (min-width: 992px) { .highlights { grid-template-columns: 2fr 3fr; gap: 2.5rem; } }
 .news { padding-top: 2.25rem; }
 
@@ -336,14 +343,15 @@ ul.timeline > li::before {
   content: ''; position: absolute; left: -2.15rem; top: 0.3rem; width: 18px; height: 18px;
   border: 3px solid var(--accent); border-radius: 50%; background: #fff;
 }
-ul.timeline > li:first-child::before { background: var(--accent); }
+.news > ul.timeline > li:first-child::before { background: var(--accent); }
 ul.timeline > li > p { margin-bottom: 0.25rem; }
 .timeline-date { display: block; color: var(--muted); font-size: 0.85rem; font-variant-numeric: tabular-nums; }
 .timeline-title { display: block; margin: 0.05rem 0 0.2rem; color: var(--ink); font-family: var(--font-heading); font-weight: 600; font-size: 1.05rem; }
-.more { margin-left: 2.25rem; }
-.more > summary { display: inline-flex; list-style: none; }
+/* The older news continue the same timeline: same left edge, only the button is indented. */
+.more > summary { display: inline-flex; margin-left: 2.25rem; list-style: none; }
 .more > summary::-webkit-details-marker { display: none; }
 .more[open] > summary { margin-bottom: 1.25rem; }
+.more > .timeline { margin-top: 0; }
 
 /* Research */
 .filter-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }

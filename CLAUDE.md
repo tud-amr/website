@@ -49,6 +49,7 @@ Playwright's Chromium: use the Docker form if `npx playwright` is not set up.
 - Local paths start with `/assets/` (leading slash) and are written as they are. Do not use the old Jekyll
   helpers (`{% include fix_link.html %}`, `| relative_url`, `{% include x.html a=b %}`); validation rejects them.
 - Math: KaTeX, on by default for paper and MSc pages; page-specific LaTeX shortcuts go in `math_macros`.
+  Pages with `\label`/`\eqref` and numbered equations set `math_engine: mathjax`.
 - Keep media small: images under ~2 MB, videos ideally under 5 MB. The repo is already >2 GB and the
   published site is around GitHub Pages' 1 GB guideline; say so if a user adds large files.
 - Do not edit generated or recorded files: `_site/`, `.cache/`, `tests/baseline/*` (only regenerate the
