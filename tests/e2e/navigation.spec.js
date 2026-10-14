@@ -117,3 +117,13 @@ for (const path of ['/', '/projects/harmony.html']) {
     expect(Math.abs(after.height - before.height)).toBeLessThan(2);
   });
 }
+
+test('logos keep their set heights (header 40 px, funding logos as written)', async ({ page }) => {
+  await page.goto('/projects/trilogy.html');
+  const h = (sel) => page.locator(sel).first().evaluate((e) => Math.round(e.getBoundingClientRect().height));
+  expect(await h('.nav-brand img')).toBe(40);
+  expect(await h('.footer-logos img')).toBe(34);
+  const logos = await page.locator('.project-content .d-flex.flex-wrap img[height="60"]').evaluateAll((els) => els.map((e) => Math.round(e.getBoundingClientRect().height)));
+  expect(logos.length).toBeGreaterThan(3);
+  for (const height of logos) expect(height).toBe(60);
+});
