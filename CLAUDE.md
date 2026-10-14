@@ -81,8 +81,11 @@ sentences. The newest four show on the home page.
 The file name becomes `/paper_websites/<file>.html`. Content may use the Bootstrap-style classes listed in
 section 13 of `src/css/site.css` (`row`, `col-md-6`, `ratio ratio-16x9`, `d-flex`, `img-fluid`, ...).
 
-**Add a collection**: two lines in `content/_data/paper_collections.yaml` (`<id>:` and `title:`), then list
-the id in each paper's `collections:`.
+**Add a collection**: a collection groups papers that do not share a funded project (one person's line of
+work, a cross-project topic); it has no page, but gives a shareable list (`/publications/?collection=<id>`)
+and can fill a paper website's related publications (`related: collections: [<id>]`). Use `projects:`
+instead when a real project page exists. To create one: two lines in `content/_data/paper_collections.yaml`
+(`<id>:` and `title:`), then list the id in each paper's `collections:`.
 
 **Add a page**: a file in `content/pages/` with `title` and `permalink: /name/`; add it to
 `content/_data/navigation.yaml` if it should be in the menu.

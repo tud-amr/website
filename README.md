@@ -81,7 +81,7 @@ look the same.
 | `type` | `journal`, `conference`, `workshop`, `thesis` or `other`. Sets the J/C/W/T/O number. |
 | `venue` | Journal or conference name, without the year. |
 | `projects` | IDs of the lab projects the paper belongs to, e.g. `[interact, trilogy]`. These are the `project_id` of a file in `content/projects/`. The paper then shows on that project's page. |
-| `collections` | Informal groups, e.g. a person's line of work, listed in `content/_data/paper_collections.yaml`. A collection can be shared as `/publications/?collection=<id>` and shown on paper websites. |
+| `collections` | Optional groups of papers that are not projects, e.g. one person's line of work, from `content/_data/paper_collections.yaml`. See [Collections](#collections-groups-of-papers-that-are-not-projects) below. |
 | `funding` | Funding sources, as free text, e.g. `[nwo]`. |
 | `topics` | Topics, e.g. `[motion planning, multi-robot]`. |
 | `image` | Optional picture or `.mp4` shown next to the paper (square works best). |
@@ -92,11 +92,29 @@ look the same.
 
 PDFs go in `assets/files/publications/`, named like `25-degroot-ijrr.pdf`.
 
-**Create a collection** by adding two lines to `content/_data/paper_collections.yaml`:
+### Collections: groups of papers that are not projects
+
+A **collection** is a named group of papers that you choose yourself, for example one person's line of
+work (`saraypapers`) or a topic that runs across several projects (`explicit-representations`).
+
+- **Projects** are the lab's funded projects. Each has its own page (`content/projects/`), and its
+  papers are listed there automatically.
+- **Collections** are lighter: they have no page of their own and need no funding or description. Use
+  one when you want to group papers that do not share a project.
+
+A collection is used in two places:
+
+1. **A shareable list of papers**: `https://autonomousrobots.nl/publications/?collection=<id>` shows only
+   the papers in that collection, e.g. to link from a CV, a talk or a paper website.
+2. **Related publications on a paper website**: `related: collections: [<id>]` in the paper website's
+   header lists every paper of the collection at the bottom of the page.
+
+To create one, add two lines to `content/_data/paper_collections.yaml`, then put the id in the
+`collections:` field of each paper that belongs to it (a paper can be in several collections):
 
 ```yaml
 my-group-id:
-  title: Shown as the filter name
+  title: Shown above the list, e.g. "Learning-based motion planning"
 ```
 
 ## Add other content

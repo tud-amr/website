@@ -1,9 +1,16 @@
-# Informal groups of publications, used by `collections:` in a publication file
-# and by `related: collections:` on a paper website. Add one entry to create a group.
-# Real, funded projects are not listed here: they have a page in content/projects/.
+# Collections: named groups of papers that you choose yourself, e.g. one person's line of work or a
+# topic that runs across several projects. (Funded projects are not listed here: they have their own
+# page in content/projects/ and use the `projects:` field instead.)
 #
-# <id>:
-#   title: what the group is
+# A collection is used for:
+#   - a shareable list of its papers:  https://autonomousrobots.nl/publications/?collection=<id>
+#   - "Related publications" on a paper website:  related: collections: [<id>]
+#
+# To create one, add an entry below, then put the id in the `collections:` field of each paper
+# (content/publications/<year>/*.yaml). A paper can be in several collections.
+#
+# <id>:                      lowercase, words joined with -, used in links and paper files
+#   title: what the group is  shown above the filtered list
 #   description: optional, one line
 
 saraypapers:
