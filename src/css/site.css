@@ -66,8 +66,8 @@
   color-scheme: dark;
 }
 
-/* Areas written by authors (paper, project and MSc pages) stay light in the dark theme: their
-   figures often have transparent backgrounds and some pages bring their own colours. */
+/* Areas written by authors (paper websites and MSc pages) stay light in the dark theme: their
+   figures often have transparent backgrounds and several pages bring their own colours. */
 .keep-light {
   --accent: #d107a9;          /* AMR magenta, from the logo */
   --accent-dark: #9e0580;
@@ -645,6 +645,11 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 /* Dark theme details --------------------------------------------------------------------------- */
 /* Publication thumbnails are often figures with transparent backgrounds. */
 :root[data-theme='dark'] .pub-media img { background: var(--figure-bg); }
+/* Project pages follow the dark theme; their PNG figures and partner logos often have transparent
+   backgrounds, so they get a light backing. (Photos are JPEG and need none.) */
+:root[data-theme='dark'] :is(.project-intro, .project-content) :is(img[src$='.png'], img[src$='.svg'], img[src$='.gif']) {
+  padding: 0.35rem; border-radius: var(--radius-sm); background: var(--figure-bg);
+}
 /* The TU Delft logo is black text: show it in white. */
 :root[data-theme='dark'] img[src*='TUDelft_logo'] { filter: brightness(0) invert(1); }
 

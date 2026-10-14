@@ -57,7 +57,7 @@ Playwright's Chromium: use the Docker form if `npx playwright` is not set up.
 - Match the surrounding code style; the CSS is plain CSS in `src/css/site.css`, JS is `src/js/site.js`.
 - Colours: use the CSS variables (`var(--text)`, `var(--card)`, ...), never hard-coded colours, so the dark
   theme keeps working. Look at visible changes in both themes (`npm run shots -- <paths> --dark`).
-  Author-written areas (paper/project/MSc pages) have class `keep-light` and stay light.
+  Paper websites and MSc pages have class `keep-light` and stay light; project pages follow the theme.
 
 ## Recipes
 

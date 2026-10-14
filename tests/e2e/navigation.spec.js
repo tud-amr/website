@@ -94,3 +94,12 @@ test('paper pages keep their content light in the dark theme', async ({ page }) 
   const bg = await page.locator('article.paper').evaluate((e) => getComputedStyle(e).backgroundColor);
   expect(bg).toBe('rgb(255, 255, 255)');
 });
+
+test('project pages follow the dark theme, with a light backing behind PNG figures', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('theme', 'dark'));
+  await page.goto('/projects/harmony.html');
+  const bg = await page.locator('article.project').evaluate((e) => getComputedStyle(e).color);
+  expect(bg).not.toBe('rgb(43, 40, 48)'); // not the light theme's text colour
+  const png = page.locator(".project-content img[src$='.png']").first();
+  expect(await png.evaluate((e) => getComputedStyle(e).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
+});
