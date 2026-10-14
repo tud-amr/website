@@ -243,8 +243,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .pub-authors, .pub-venue { color: var(--text); }
 .pub-note { color: var(--accent-dark); font-weight: 500; }
 .pub-actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.pub-panel { margin-top: 0.6rem; padding: 0.85rem 1rem; border-left: 3px solid var(--accent-line); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; background: var(--surface); font-size: 0.95rem; max-width: var(--measure); }
-.pub-bibtex { white-space: pre-wrap; max-width: none; }
+.pub-panel { margin-top: 0.6rem; padding: 0.85rem 1rem; border-left: 3px solid var(--accent-line); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; background: var(--surface); font-size: 0.95rem; }
+.pub-bibtex { white-space: pre-wrap; }
 .pub-media { flex: 0 0 auto; display: none; }
 .pub-media img { height: 85px; width: auto; max-width: 160px; object-fit: contain; border-radius: var(--radius-sm); }
 .pub-media video { height: 110px; width: auto; max-width: 200px; object-fit: contain; border-radius: var(--radius-sm); }
@@ -279,7 +279,7 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
   .person-lead .person-photo { width: 200px; height: 240px; margin-right: 1.75rem; }
   .person-lead .person-links { clear: none; }
 }
-.panel { margin-top: 0.75rem; padding: 1rem 1.25rem; border-left: 3px solid var(--accent-line); background: #fff; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; max-width: var(--measure); }
+.panel { margin-top: 0.75rem; padding: 1rem 1.25rem; border-left: 3px solid var(--accent-line); background: #fff; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
 .panel > :last-child { margin-bottom: 0; }
 
 .past-people { display: grid; gap: 0.25rem 2rem; margin: 0 0 1rem; padding: 0; list-style: none; }
@@ -325,6 +325,9 @@ mjx-container:not([display='true']) { display: inline-block; max-width: 100%; ov
 .hero { display: grid; gap: 1.75rem; align-items: center; padding-block: 0.5rem 2.25rem; border-bottom: 1px solid var(--border); }
 .hero-image { width: 100%; height: auto; border-radius: var(--radius); }
 .hero-title { margin-top: 0; font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); }
+/* One line beside the photo on desktop screens (the text column is about 600 px wide). */
+@media (min-width: 992px) { .hero-title { font-size: 1.55rem; } }
+@media (min-width: 1200px) { .hero-title { font-size: 1.65rem; } }
 .accent { color: var(--accent); font-weight: 700; }
 @media (min-width: 992px) { .hero { grid-template-columns: 5fr 7fr; gap: 2.5rem; } }
 .highlights { display: grid; gap: 1.75rem; align-items: center; padding-block: 2.25rem; border-bottom: 1px solid var(--border); }
