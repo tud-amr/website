@@ -1,1 +1,1 @@
-{ "layout": "page", "math": true, "permalink": "/msc_projects_available/{{ page.fileSlug }}.html" }
+{"layout": "page", "math": true, "permalink": "/msc_projects_available/{{ page.fileSlug }}.html", "keep_light": true}

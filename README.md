@@ -222,7 +222,10 @@ eleventy.config.js       build configuration
 ```
 
 The look is one stylesheet, `src/css/site.css`, and one script, `src/js/site.js`; there is no CSS
-framework. Paper pages written for the old Bootstrap site keep working: the stylesheet includes the
+framework. Colours are variables at the top of the stylesheet, with a second set for the **dark theme**
+that visitors can switch on in the header (light is the default; the choice is remembered per browser).
+Paper, project and MSc pages keep their content light in the dark theme, because their figures often
+have transparent backgrounds. Check both themes with `npm run shots -- /page/ --dark`. Paper pages written for the old Bootstrap site keep working: the stylesheet includes the
 Bootstrap classes they use.
 
 ## Deployment and analytics

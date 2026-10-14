@@ -7,9 +7,10 @@ import { TEMPLATE_PAGES, stayLocal } from './helpers.js';
 // The publications page has ~190 entries; axe needs more than the default minute on a busy machine.
 test.setTimeout(120_000);
 
-for (const path of TEMPLATE_PAGES) {
-  test(`${path} has no serious accessibility problems`, async ({ page }) => {
+for (const theme of ['light', 'dark']) for (const path of TEMPLATE_PAGES) {
+  test(`${path} (${theme} theme) has no serious accessibility problems`, async ({ page }) => {
     await stayLocal(page);
+    if (theme === 'dark') await page.addInitScript(() => localStorage.setItem('theme', 'dark'));
     await page.goto(path);
     const { violations } = await new AxeBuilder({ page }).analyze();
     const serious = violations.filter((v) => v.impact === 'serious' || v.impact === 'critical');

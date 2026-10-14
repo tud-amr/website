@@ -17,6 +17,24 @@
   document.addEventListener('click', (e) => dropdowns.forEach((d) => { if (!d.contains(e.target)) d.open = false; }));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dropdowns.forEach((d) => { d.open = false; }); });
 
+  // ---- Light/dark theme switch -----------------------------------------------------------------
+  // Light is the default for everyone; the choice is remembered in this browser only.
+  const themeButton = document.querySelector('.theme-toggle');
+  if (themeButton) {
+    const root = document.documentElement;
+    const show = () => {
+      const dark = root.dataset.theme === 'dark';
+      themeButton.setAttribute('aria-pressed', String(dark));
+    };
+    themeButton.addEventListener('click', () => {
+      const dark = root.dataset.theme !== 'dark';
+      if (dark) root.dataset.theme = 'dark'; else delete root.dataset.theme;
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) { /* private browsing */ }
+      show();
+    });
+    show();
+  }
+
   // ---- Abstract and cite toggles on publications -------------------------------------------------
   document.addEventListener('click', (e) => {
     const button = e.target.closest('.pub-toggle');

@@ -73,3 +73,24 @@ test('home page shows the 4 latest publications with pictures, linking to them',
   await expect(page.locator(`[id="${href.split('#')[1]}"]`)).toBeInViewport();
   await expect(page).toHaveURL(new RegExp(`${href}$`));
 });
+
+test('light theme by default; the switch turns dark on and is remembered', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('.theme-toggle')).toHaveAttribute('aria-pressed', 'false');
+  await page.click('.theme-toggle');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('.theme-toggle')).toHaveAttribute('aria-pressed', 'true');
+  await page.goto('/publications/');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await page.click('.theme-toggle');
+  await page.reload();
+  await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark');
+});
+
+test('paper pages keep their content light in the dark theme', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('theme', 'dark'));
+  await page.goto('/paper_websites/codi.html');
+  const bg = await page.locator('article.paper').evaluate((e) => getComputedStyle(e).backgroundColor);
+  expect(bg).toBe('rgb(255, 255, 255)');
+});

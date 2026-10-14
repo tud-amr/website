@@ -10,23 +10,95 @@
 :root {
   --accent: #d107a9;          /* AMR magenta, from the logo */
   --accent-dark: #9e0580;
+  --accent-hover: #9e0580;    /* background of a hovered magenta button */
+  --accent-text: #d107a9;     /* magenta used as text */
   --link: #b80694;            /* text links: the magenta, deep enough for 4.5:1 contrast on every background */
   --accent-tint: #fbe8f6;
   --accent-line: #efb3e1;
   --ink: #1e1b22;
   --text: #2b2830;
   --muted: #5e5966;
+  --nav-text: #4a4650;
   --bg: #fff;
   --surface: #f7f5f8;
+  --card: #fff;
+  --figure-bg: #fff;          /* behind figures, which often have transparent backgrounds */
   --border: #e6e1e8;
-  --dark: #1e1b22;
+  --input-border: #d6d0da;
+  --hover: rgb(0 0 0 / 0.045);
+  --rule: #000;               /* the thick line under the header and above the footer */
+  --dark: #1e1b22;            /* dark buttons */
+  --dark-hover: #000;
+  --on-dark: #fff;
+  --shadow: 0 1px 2px rgb(30 27 34 / 0.06), 0 4px 14px rgb(30 27 34 / 0.05);
+  color-scheme: light;
   --radius: 10px;
   --radius-sm: 6px;
-  --shadow: 0 1px 2px rgb(30 27 34 / 0.06), 0 4px 14px rgb(30 27 34 / 0.05);
   --font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-heading: 'Montserrat', var(--font);
   --container: 1120px;
   --gutter: 1rem;
+}
+
+/* Dark theme: only when the visitor switches it on (the choice is remembered; see site.js). */
+:root[data-theme='dark'] {
+  --accent-dark: #f39ddf;
+  --accent-text: #f27fd9;
+  --link: #f27fd9;
+  --accent-tint: #3a1532;
+  --accent-line: #7a2f69;
+  --ink: #f3f0f6;
+  --text: #dcd7e1;
+  --muted: #a9a3b1;
+  --nav-text: #c9c4cf;
+  --bg: #141217;
+  --surface: #1d1a22;
+  --card: #1b1920;
+  --figure-bg: #f4f2f6;
+  --border: #343039;
+  --input-border: #4a4552;
+  --hover: rgb(255 255 255 / 0.07);
+  --rule: #e9e5ee;
+  --dark: #f3f0f6;
+  --dark-hover: #fff;
+  --on-dark: #141217;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 14px rgb(0 0 0 / 0.3);
+  color-scheme: dark;
+}
+
+/* Areas written by authors (paper, project and MSc pages) stay light in the dark theme: their
+   figures often have transparent backgrounds and some pages bring their own colours. */
+.keep-light {
+  --accent: #d107a9;          /* AMR magenta, from the logo */
+  --accent-dark: #9e0580;
+  --accent-hover: #9e0580;    /* background of a hovered magenta button */
+  --accent-text: #d107a9;     /* magenta used as text */
+  --link: #b80694;            /* text links: the magenta, deep enough for 4.5:1 contrast on every background */
+  --accent-tint: #fbe8f6;
+  --accent-line: #efb3e1;
+  --ink: #1e1b22;
+  --text: #2b2830;
+  --muted: #5e5966;
+  --nav-text: #4a4650;
+  --bg: #fff;
+  --surface: #f7f5f8;
+  --card: #fff;
+  --figure-bg: #fff;          /* behind figures, which often have transparent backgrounds */
+  --border: #e6e1e8;
+  --input-border: #d6d0da;
+  --hover: rgb(0 0 0 / 0.045);
+  --rule: #000;               /* the thick line under the header and above the footer */
+  --dark: #1e1b22;            /* dark buttons */
+  --dark-hover: #000;
+  --on-dark: #fff;
+  --shadow: 0 1px 2px rgb(30 27 34 / 0.06), 0 4px 14px rgb(30 27 34 / 0.05);
+  color-scheme: light;
+}
+:root[data-theme='dark'] .keep-light {
+  padding: 1.5rem clamp(1rem, 3vw, 2rem);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
 }
 
 /* 2. Fonts (self-hosted, latin subset) -------------------------------------------------------- */
@@ -98,18 +170,18 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .section-title { margin-top: 2.5rem; }
 
 /* 5. Header and footer ----------------------------------------------------------------------- */
-.site-header { background: var(--surface); border-bottom: 2px solid #000; }
-.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 2rem; min-height: 4.25rem; padding-block: 0.6rem; }
+.site-header { background: var(--surface); border-bottom: 2px solid var(--rule); }
+.nav { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem; min-height: 4.25rem; padding-block: 0.6rem; }
 .nav-brand { display: inline-flex; margin-right: auto; }
 .nav-brand img { height: 40px; width: auto; }
 .nav-menu { display: flex; flex: 1; align-items: center; gap: 1rem; }
 .nav-links { display: flex; flex-wrap: wrap; gap: 0.15rem; margin: 0 auto 0 0; padding: 0; list-style: none; }
 .nav-link {
   position: relative; display: block; padding: 0.5rem 0.65rem; border-radius: var(--radius-sm);
-  color: #4a4650; text-decoration: none; cursor: pointer; font-weight: 500; font-size: 0.95rem;
+  color: var(--nav-text); text-decoration: none; cursor: pointer; font-weight: 500; font-size: 0.95rem;
 }
-.nav-link:hover { color: #000; background: rgb(0 0 0 / 0.045); text-decoration: none; }
-.nav-link.is-active { color: #000; }
+.nav-link:hover { color: var(--ink); background: var(--hover); text-decoration: none; }
+.nav-link.is-active { color: var(--ink); }
 .nav-link.is-active::after { content: ''; position: absolute; left: 0.65rem; right: 0.65rem; bottom: 0.15rem; height: 2px; border-radius: 2px; background: var(--accent); }
 .nav-dropdown { position: relative; }
 .nav-dropdown summary { list-style: none; }
@@ -120,13 +192,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .nav-partner img { height: 38px; width: auto; transform: translateY(-3px); }
 .nav-toggle { display: none; }
 
-@media (min-width: 768px) {
+/* The header switches to the folding menu below 1120 px (the full menu needs about that much), so tablets get one row too. */
+@media (min-width: 1120px) {
   .nav-dropdown ul {
     position: absolute; z-index: 20; top: calc(100% + 0.35rem); left: 0; min-width: 11rem;
-    background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 30px rgb(30 27 34 / 0.12);
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: 0 10px 30px rgb(30 27 34 / 0.12);
   }
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1119.98px) {
   .nav { gap: 0.5rem; }
   .nav-menu { flex-basis: 100%; flex-direction: column; align-items: stretch; padding-top: 0.5rem; border-top: 1px solid var(--border); }
   .nav-links { flex-direction: column; margin: 0; }
@@ -136,7 +209,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   /* With JavaScript the menu folds behind a button; without it, the menu stays open. */
   .js .nav-toggle {
     display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
-    width: 2.75rem; height: 2.5rem; padding: 0 0.65rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer;
+    width: 2.75rem; height: 2.5rem; padding: 0 0.65rem; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm); cursor: pointer;
   }
   .js .nav-toggle span { display: block; width: 100%; height: 2px; background: var(--ink); border-radius: 1px; transition: transform 0.2s, opacity 0.2s; }
   .js .nav-toggle[aria-expanded='true'] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -145,7 +218,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
   .js .nav-menu:not(.is-open) { display: none; }
 }
 
-.site-footer { margin-top: auto; background: var(--surface); border-top: 2px solid #000; font-size: 0.92rem; }
+.site-footer { margin-top: auto; background: var(--surface); border-top: 2px solid var(--rule); font-size: 0.92rem; }
 .footer-grid { display: grid; gap: 2rem; padding-block: 2.25rem 1.75rem; }
 .footer-logos { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 2rem; }
 .footer-logos img { height: 34px; width: auto; }
@@ -176,15 +249,15 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .btn-sm { padding: 0.2rem 0.65rem; font-size: 0.82rem; font-weight: 400; border-radius: var(--radius-sm); white-space: nowrap; }
 .btn-lg { padding: 0.65rem 1.5rem; font-size: 1.05rem; }
 .btn-primary { background: var(--accent); color: #fff; }
-.btn-primary:hover { background: var(--accent-dark); color: #fff; }
-.btn-dark { background: var(--dark); color: #fff; }
-.btn-dark:hover { background: #000; color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); color: #fff; }
+.btn-dark { background: var(--dark); color: var(--on-dark); }
+.btn-dark:hover { background: var(--dark-hover); color: var(--on-dark); }
 .btn-light { background: var(--surface); color: var(--text); border-color: var(--border); }
 .btn-light:hover, .btn-light[aria-expanded='true'] { background: var(--accent-tint); border-color: var(--accent-line); color: var(--ink); }
-.btn-outline, .btn-outline-primary { border-color: var(--accent); color: var(--accent); background: #fff; }
+.btn-outline, .btn-outline-primary { border-color: var(--accent); color: var(--accent-text); background: var(--card); }
 .btn-outline:hover, .btn-outline.is-active, .btn-outline-primary:hover { background: var(--accent); color: #fff; }
-.btn-outline-dark { border-color: var(--dark); color: var(--dark); background: #fff; }
-.btn-outline-dark:hover { background: var(--dark); color: #fff; }
+.btn-outline-dark { border-color: var(--dark); color: var(--dark); background: var(--card); }
+.btn-outline-dark:hover { background: var(--dark); color: var(--on-dark); }
 .btn.is-disabled { opacity: 0.55; cursor: default; }
 .button-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
 .button-row-center { justify-content: center; }
@@ -195,7 +268,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0 0 1.25rem; padding: 0; list-style: none; }
 .tags a {
   display: inline-block; padding: 0.3rem 0.8rem; border: 1px solid var(--accent-line); border-radius: 999px;
-  background: #fff; color: var(--accent-dark); font-size: 0.9rem; text-decoration: none;
+  background: var(--card); color: var(--accent-dark); font-size: 0.9rem; text-decoration: none;
 }
 .tags a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
 
@@ -203,9 +276,10 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tile-list { display: grid; gap: 1.25rem; margin-bottom: 2rem; }
 .tile {
   position: relative; display: flex; flex-direction: column; overflow: hidden;
-  border: 1px solid var(--border); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow);
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow);
 }
 .tile-figure { display: grid; place-items: center; aspect-ratio: 4 / 3; max-height: 260px; padding: 1rem; background: var(--surface); }
+:root[data-theme='dark'] .tile-figure { background: var(--figure-bg); }
 .tile-media { width: 100%; height: 100%; object-fit: contain; }
 .tile-body { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.1rem 1.25rem 1.25rem; min-width: 0; }
 .tile-title { margin: 0; font-size: 1.15rem; }
@@ -213,7 +287,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .tile-meta { margin: 0; color: var(--muted); font-size: 0.875rem; }
 .tile-text { margin: 0.25rem 0 0; }
 .tile-text > :last-child { margin-bottom: 0; }
-.tile-more { margin-top: auto; padding-top: 0.35rem; color: var(--accent); font-weight: 500; font-size: 0.95rem; }
+.tile-more { margin-top: auto; padding-top: 0.35rem; color: var(--accent-text); font-weight: 500; font-size: 0.95rem; }
 .tile-link { transition: border-color 0.15s, box-shadow 0.15s; }
 .tile-link:hover { border-color: var(--accent-line); box-shadow: 0 6px 22px rgb(209 7 169 / 0.12); }
 .tile-link:hover .tile-more { color: var(--accent-dark); }
@@ -231,7 +305,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 /* 8. Publications ---------------------------------------------------------------------------- */
 .pub-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.75rem; padding: 0.75rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
 .pub-filters input, .pub-filters select {
-  min-height: 2.6rem; padding: 0.45rem 0.8rem; border: 1px solid #d6d0da; border-radius: var(--radius-sm); background-color: #fff;
+  min-height: 2.6rem; padding: 0.45rem 0.8rem; border: 1px solid var(--input-border); border-radius: var(--radius-sm); background-color: var(--card);
 }
 .pub-filters input:focus, .pub-filters select:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-tint); }
 .pub-filters input { flex: 1 1 18rem; min-width: 0; }
@@ -247,7 +321,7 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .pub:target { margin-inline: -0.75rem; padding-inline: 0.75rem; border-radius: var(--radius-sm); background: var(--accent-tint); scroll-margin-top: 1rem; }
 .pub-body { flex: 1 1 auto; min-width: 0; }
 .pub-citation { margin-bottom: 0.45rem; line-height: 1.55; }
-.pub-number { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+.pub-number { color: var(--accent-text); font-weight: 700; font-variant-numeric: tabular-nums; }
 .pub-title { font-weight: 600; color: var(--ink); }
 .pub-authors, .pub-venue { color: var(--text); }
 .pub-note { color: var(--accent-dark); font-weight: 500; }
@@ -269,7 +343,7 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
 .people-grid { display: grid; gap: 1rem; margin-bottom: 1rem; }
 /* Two columns of equal cards: every row is as tall as the tallest card, and the links sit at the bottom. */
 @media (min-width: 900px) { .people-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; gap: 1.25rem 1.5rem; } }
-.person { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+.person { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
 .person-photo { flex: 0 0 auto; width: 96px; height: 96px; object-fit: cover; border-radius: var(--radius-sm); background: var(--surface); }
 .person-body { min-width: 0; flex: 1; align-self: stretch; display: flex; flex-direction: column; }
 .person-name { margin: 0; font-size: 1.1rem; }
@@ -290,7 +364,7 @@ html:not(.js) .pub-panel[hidden] { display: block !important; }
   .person-lead .person-photo { width: 200px; height: 240px; margin-right: 1.75rem; }
   .person-lead .person-links { clear: none; }
 }
-.panel { margin-top: 0.75rem; padding: 1rem 1.25rem; border-left: 3px solid var(--accent-line); background: #fff; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.panel { margin-top: 0.75rem; padding: 1rem 1.25rem; border-left: 3px solid var(--accent-line); background: var(--card); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
 .panel > :last-child { margin-bottom: 0; }
 
 .past-people { margin: 0 0 1rem; padding: 0; list-style: none; }
@@ -342,7 +416,7 @@ mjx-container:not([display='true']) { display: inline-block; max-width: 100%; ov
 /* One line beside the photo on desktop screens (the text column is about 600 px wide). */
 @media (min-width: 992px) { .hero-title { font-size: 1.55rem; } }
 @media (min-width: 1200px) { .hero-title { font-size: 1.65rem; } }
-.accent { color: var(--accent); font-weight: 700; }
+.accent { color: var(--accent-text); font-weight: 700; }
 @media (min-width: 992px) { .hero { grid-template-columns: 4fr 7fr; gap: 2.25rem; } }
 .highlights { display: grid; gap: 1.5rem; align-items: center; padding-block: 1.5rem; border-bottom: 1px solid var(--border); }
 .highlights-text > p { margin-bottom: 0.75rem; }
@@ -365,7 +439,7 @@ mjx-container:not([display='true']) { display: inline-block; max-width: 100%; ov
 .latest-pub-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
 @media (min-width: 768px) { .latest-pub-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; } }
 .latest-pub { position: relative; display: flex; flex-direction: column; gap: 0.3rem; }
-.latest-thumb { width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: contain; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: #fff; transition: border-color 0.15s; }
+.latest-thumb { width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: contain; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--figure-bg); transition: border-color 0.15s; }
 /* Titles take exactly two lines, so the venue lines up under every card. */
 .latest-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: calc(2 * 1.35em); color: var(--ink); font-weight: 600; font-size: 0.92rem; line-height: 1.35; text-decoration: none; }
 .latest-title::after { content: ''; position: absolute; inset: 0; }
@@ -381,7 +455,7 @@ ul.timeline::before { content: ''; position: absolute; left: 0.6rem; top: 0.5rem
 ul.timeline > li { position: relative; padding: 0.15rem 0 1.4rem; }
 ul.timeline > li::before {
   content: ''; position: absolute; left: -2.15rem; top: 0.3rem; width: 18px; height: 18px;
-  border: 3px solid var(--accent); border-radius: 50%; background: #fff;
+  border: 3px solid var(--accent); border-radius: 50%; background: var(--bg);
 }
 .news > ul.timeline > li:first-child::before { background: var(--accent); }
 ul.timeline > li > p { margin-bottom: 0.25rem; }
@@ -408,7 +482,7 @@ ul.timeline > li > p { margin-bottom: 0.25rem; }
 .carousel-slide img { width: 100%; height: 100%; object-fit: cover; }
 .carousel-btn {
   position: absolute; top: 50%; translate: 0 -50%; display: grid; place-items: center; width: 2.75rem; height: 2.75rem;
-  border: 0; border-radius: 50%; background: rgb(255 255 255 / 0.9); color: var(--ink); font-size: 1.15rem; cursor: pointer;
+  border: 0; border-radius: 50%; background: rgb(255 255 255 / 0.9); color: #1e1b22; font-size: 1.15rem; cursor: pointer;
   box-shadow: 0 2px 10px rgb(0 0 0 / 0.25);
 }
 .carousel-btn:hover { background: #fff; color: var(--accent); }
@@ -422,7 +496,7 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 
 /* Events */
 .event-list { display: grid; gap: 1rem; margin: 0 0 2rem; padding: 0; list-style: none; }
-.event { position: relative; display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; }
+.event { position: relative; display: flex; gap: 1.25rem; align-items: flex-start; padding: 1.1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); }
 .event:hover { border-color: var(--accent-line); }
 .event-date { flex: 0 0 4.25rem; padding: 0.4rem 0; border-radius: var(--radius-sm); background: var(--accent); color: #fff; text-align: center; line-height: 1.1; }
 .event-past .event-date { background: var(--surface); color: var(--ink); border: 1px solid var(--border); }
@@ -477,7 +551,7 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 /* 12. Utilities ------------------------------------------------------------------------------ */
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .muted, .text-muted, .text-body-secondary { color: var(--muted) !important; }
-.amr-color { color: var(--accent); }
+.amr-color { color: var(--accent-text); }
 .center, .text-center { text-align: center !important; }
 .capitalize, .text-capitalize { text-transform: capitalize; }
 .plain { list-style: none; padding: 0; }
@@ -558,7 +632,7 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 /* Metrics page (content/stats.liquid) */
 .stat-row { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1rem 0 2rem; }
 .stat { flex: 1 1 14rem; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-soft); }
-.stat-value { display: block; font-size: 2rem; font-weight: 600; color: var(--accent); }
+.stat-value { display: block; font-size: 2rem; font-weight: 600; color: var(--accent-text); }
 .stat-label { color: var(--muted); }
 .bars { display: flex; align-items: flex-end; gap: 3px; height: 160px; padding: 0.5rem 0 1.5rem; border-bottom: 1px solid var(--border); }
 .bar { position: relative; flex: 1 1 0; height: max(var(--h), 2px); background: var(--accent); border-radius: 2px 2px 0 0; }
@@ -567,3 +641,32 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 .stat-tables { display: grid; gap: 0 2rem; }
 @media (min-width: 992px) { .stat-tables { grid-template-columns: 1fr 1fr; } }
 .stat-tables .table { display: table; }
+
+/* Dark theme details --------------------------------------------------------------------------- */
+/* Publication thumbnails are often figures with transparent backgrounds. */
+:root[data-theme='dark'] .pub-media img { background: var(--figure-bg); }
+/* The TU Delft logo is black text: show it in white. */
+:root[data-theme='dark'] img[src*='TUDelft_logo'] { filter: brightness(0) invert(1); }
+
+/* Theme switch in the header */
+.theme-toggle {
+  display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem; padding: 0;
+  border: 1px solid var(--border); border-radius: 50%; background: var(--card); color: var(--ink);
+  font-size: 1.05rem; cursor: pointer;
+}
+.theme-toggle:hover { color: var(--accent-text); border-color: var(--accent-line); }
+.theme-toggle .bi-sun { display: none; }
+:root[data-theme='dark'] .theme-toggle .bi-sun { display: inline-block; }
+:root[data-theme='dark'] .theme-toggle .bi-moon { display: none; }
+
+/* Order in the header: logo, menu, theme switch (desktop); logo, theme switch, menu button (phones). */
+.nav-brand { order: 0; }
+.nav-menu { order: 1; }
+.theme-toggle { order: 2; }
+.nav-toggle { order: 3; }
+@media (max-width: 1119.98px) {
+  .theme-toggle { order: 1; }
+  .nav-toggle { order: 2; }
+  .nav-menu { order: 3; }
+}
+html:not(.js) .theme-toggle { display: none; }
