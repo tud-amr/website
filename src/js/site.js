@@ -96,7 +96,7 @@
     const groups = [...document.querySelectorAll('[data-year-group]')];
     const status = document.querySelector('[data-pub-status]');
     const empty = document.querySelector('[data-pub-empty]');
-    const fields = ['q', 'year', 'type', 'project', 'collection'];
+    const fields = ['q', 'year', 'type', 'collection'];
     const input = (name) => form.elements[name];
 
     const read = () => Object.fromEntries(fields.map((f) => [f, input(f).value.trim()]));
@@ -109,7 +109,6 @@
         const match = terms.every((t) => d.search.includes(t))
           && (!f.year || d.year === f.year)
           && (!f.type || d.type === f.type)
-          && (!f.project || d.projects.split(' ').includes(f.project))
           && (!f.collection || d.collections.split(' ').includes(f.collection));
         item.hidden = !match;
         if (match) shown++;

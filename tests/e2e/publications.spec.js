@@ -29,7 +29,7 @@ test('search filters while typing, searches abstracts, and is kept in the URL', 
   await expect(visible(page)).not.toHaveCount(0);
 });
 
-test('year, type and project filters combine and are kept in the URL', async ({ page }) => {
+test('year and type filters combine and are kept in the URL', async ({ page }) => {
   await page.goto('/publications/');
   await page.selectOption('#pub-year', '2024');
   await page.selectOption('#pub-type', 'journal');
@@ -39,10 +39,6 @@ test('year, type and project filters combine and are kept in the URL', async ({ 
     expect(type).toBe('journal');
   }
   await expect(page.locator('[data-year-group]:visible')).toHaveCount(1);
-  await page.selectOption('#pub-project', 'interact');
-  for (const projects of await visible(page).evaluateAll((els) => els.map((e) => e.dataset.projects))) {
-    expect(projects.split(' ')).toContain('interact');
-  }
 });
 
 test('a shared URL opens with the same filters', async ({ page }) => {

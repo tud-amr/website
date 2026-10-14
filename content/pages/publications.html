@@ -5,7 +5,7 @@ permalink: /publications/
 {%- comment -%}
   Every publication is in the page (so it works without JavaScript and search engines see it).
   The search box and filters hide what does not match and keep the choice in the URL:
-    /publications/?q=mpc&year=2025&type=journal&project=interact&collection=saraypapers
+    /publications/?q=mpc&year=2025&type=journal&collection=saraypapers
   Old links of the form /publications/#<search>#<year> are converted on load.
 {%- endcomment -%}
 
@@ -24,16 +24,6 @@ permalink: /publications/
     <option value="">All types</option>
     {%- for type in publications.types %}
     <option value="{{ type }}">{{ type | capitalize }}</option>
-    {%- endfor %}
-  </select>
-  <label class="visually-hidden" for="pub-project">Project</label>
-  <select id="pub-project" name="project">
-    <option value="">All projects</option>
-    {%- assign projects_by_title = collections.projects | sort_data: "title" %}
-    {%- for project in projects_by_title %}
-    {%- if publications.byProject[project.data.project_id] %}
-    <option value="{{ project.data.project_id }}">{{ project.data.title }}</option>
-    {%- endif %}
     {%- endfor %}
   </select>
   <input type="hidden" name="collection" value="">
