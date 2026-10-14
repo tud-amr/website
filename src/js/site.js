@@ -17,6 +17,24 @@
   document.addEventListener('click', (e) => dropdowns.forEach((d) => { if (!d.contains(e.target)) d.open = false; }));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') dropdowns.forEach((d) => { d.open = false; }); });
 
+  // ---- Light/dark theme switch -----------------------------------------------------------------
+  // Light is the default for everyone; the choice is remembered in this browser only.
+  const themeButton = document.querySelector('.theme-toggle');
+  if (themeButton) {
+    const root = document.documentElement;
+    const show = () => {
+      const dark = root.dataset.theme === 'dark';
+      themeButton.setAttribute('aria-pressed', String(dark));
+    };
+    themeButton.addEventListener('click', () => {
+      const dark = root.dataset.theme !== 'dark';
+      if (dark) root.dataset.theme = 'dark'; else delete root.dataset.theme;
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) { /* private browsing */ }
+      show();
+    });
+    show();
+  }
+
   // ---- Abstract and cite toggles on publications -------------------------------------------------
   document.addEventListener('click', (e) => {
     const button = e.target.closest('.pub-toggle');
@@ -51,7 +69,13 @@
     iframe.title = facade.getAttribute('aria-label') || 'YouTube video';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
-    for (const attr of ['class', 'style', 'width', 'height']) if (facade.dataset[attr]) iframe.setAttribute(attr, facade.dataset[attr]);
+    for (const attr of ['class', 'width', 'height']) if (facade.dataset[attr]) iframe.setAttribute(attr, facade.dataset[attr]);
+    // The player takes exactly the preview's place: inside a ratio box the box sizes it (CSS);
+    // elsewhere it gets the preview's width and shape instead of the browser's 300x150 default.
+    if (!facade.parentElement.classList.contains('ratio')) {
+      iframe.classList.add('yt-player');
+      iframe.style.cssText = facade.getAttribute('style') || '';
+    }
     facade.replaceWith(iframe);
   });
 

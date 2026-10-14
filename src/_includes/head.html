@@ -3,7 +3,11 @@
 {%- assign page_description = description | default: site.description | strip_html | normalize_whitespace | truncate: 200 -%}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>document.documentElement.classList.add('js')</script>
+<script>
+  document.documentElement.classList.add('js');
+  // Light theme by default; dark only if this visitor chose it before (set by the switch in the header).
+  try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+</script>
 <title>{{ full_title }}</title>
 <meta name="description" content="{{ page_description | escape }}">
 {%- if hidden %}

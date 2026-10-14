@@ -4,6 +4,7 @@
 //   npm run shots -- --key                        the main pages of each kind
 //   npm run shots -- --all                        every page in the sitemap
 //   npm run shots -- /people/ --widths=390        only phone width
+//   npm run shots -- /people/ --dark              in the dark theme (files end in -dark.png)
 // Images go to .shots/<page>@<width>.png (full page). Needs Playwright's Chromium
 // (use `docker compose run --rm test npm run shots -- ...` if it is not installed).
 import fs from 'node:fs';
@@ -17,6 +18,7 @@ const KEY_PAGES = ['/', '/research/', '/people/', '/publications/', '/robots/', 
 const args = process.argv.slice(2);
 const widthsArg = args.find((a) => a.startsWith('--widths='));
 const widths = widthsArg ? widthsArg.split('=')[1].split(',').map(Number) : [390, 768, 1280];
+const dark = args.includes('--dark');
 let pages = args.filter((a) => a.startsWith('/'));
 if (args.includes('--key')) pages.push(...KEY_PAGES);
 if (args.includes('--all')) {
@@ -37,6 +39,7 @@ const slug = (p) => p.replace(/^\/|\/$/g, '').replace(/[/.]/g, '_') || 'home';
 for (const page of pages) {
   for (const width of widths) {
     const context = await browser.newContext({ viewport: { width, height: 900 } });
+    if (dark) await context.addInitScript(() => localStorage.setItem('theme', 'dark'));
     const tab = await context.newPage();
     await tab.goto(`http://localhost:${port}${page}`, { waitUntil: 'load', timeout: 60000 }).catch(() => {});
     // Scroll through the page so lazy-loaded images appear in the screenshot.
@@ -45,7 +48,7 @@ for (const page of pages) {
       window.scrollTo(0, 0);
     });
     await tab.waitForTimeout(800);
-    const file = `.shots/${slug(page)}@${width}.png`;
+    const file = `.shots/${slug(page)}@${width}${dark ? '-dark' : ''}.png`;
     await tab.screenshot({ path: file, fullPage: true });
     const sideways = await tab.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
     console.log(`${file}${sideways ? '  (scrolls sideways!)' : ''}`);

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<article class="page">
+<article class="page{% if keep_light %} keep-light{% endif %}">
   {%- if title and title != "none" %}
   <header class="page-header">
     <h1 class="page-title">{{ title }}</h1>

@@ -73,3 +73,57 @@ test('home page shows the 4 latest publications with pictures, linking to them',
   await expect(page.locator(`[id="${href.split('#')[1]}"]`)).toBeInViewport();
   await expect(page).toHaveURL(new RegExp(`${href}$`));
 });
+
+test('light theme by default; the switch turns dark on and is remembered', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('.theme-toggle')).toHaveAttribute('aria-pressed', 'false');
+  await page.click('.theme-toggle');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await expect(page.locator('.theme-toggle')).toHaveAttribute('aria-pressed', 'true');
+  await page.goto('/publications/');
+  await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+  await page.click('.theme-toggle');
+  await page.reload();
+  await expect(page.locator('html')).not.toHaveAttribute('data-theme', 'dark');
+});
+
+test('paper pages keep their content light in the dark theme', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('theme', 'dark'));
+  await page.goto('/paper_websites/codi.html');
+  const bg = await page.locator('article.paper').evaluate((e) => getComputedStyle(e).backgroundColor);
+  expect(bg).toBe('rgb(255, 255, 255)');
+});
+
+test('project pages follow the dark theme, with a light backing behind PNG figures', async ({ page }) => {
+  await page.addInitScript(() => localStorage.setItem('theme', 'dark'));
+  await page.goto('/projects/harmony.html');
+  const bg = await page.locator('article.project').evaluate((e) => getComputedStyle(e).color);
+  expect(bg).not.toBe('rgb(43, 40, 48)'); // not the light theme's text colour
+  const figure = page.locator('.project-content img[data-transparent]').first();
+  expect(await figure.evaluate((e) => getComputedStyle(e).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
+});
+
+for (const path of ['/', '/projects/harmony.html']) {
+  test(`YouTube player on ${path} keeps the size of its preview`, async ({ page }) => {
+    await page.route(/youtube-nocookie|ytimg/, (route) => route.fulfill({ status: 200, contentType: 'text/html', body: '' }));
+    await page.goto(path);
+    const facade = page.locator('.yt-facade').first();
+    await facade.scrollIntoViewIfNeeded();
+    const before = await facade.boundingBox();
+    await facade.click();
+    const after = await page.locator('iframe[src*="youtube-nocookie"]').first().boundingBox();
+    expect(Math.abs(after.width - before.width)).toBeLessThan(2);
+    expect(Math.abs(after.height - before.height)).toBeLessThan(2);
+  });
+}
+
+test('logos keep their set heights (header 40 px, funding logos as written)', async ({ page }) => {
+  await page.goto('/projects/trilogy.html');
+  const h = (sel) => page.locator(sel).first().evaluate((e) => Math.round(e.getBoundingClientRect().height));
+  expect(await h('.nav-brand img')).toBe(40);
+  expect(await h('.footer-logos img')).toBe(34);
+  const logos = await page.locator('.project-content .d-flex.flex-wrap img[height="60"]').evaluateAll((els) => els.map((e) => Math.round(e.getBoundingClientRect().height)));
+  expect(logos.length).toBeGreaterThan(3);
+  for (const height of logos) expect(height).toBe(60);
+});
