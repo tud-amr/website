@@ -80,7 +80,7 @@ export const SCHEMAS = {
     strict: true,
     required: {
       title: t.text, authors: t.list(t.text), date: t.date,
-      type: t.oneOf('journal', 'conference', 'workshop', 'thesis', 'other'), venue: t.string,
+      type: t.oneOf('journal', 'conference', 'workshop', 'thesis', 'other', 'preprint'), venue: t.string,
       projects: t.list(t.text), collections: t.list(t.text), funding: t.list(t.text), topics: t.list(t.text),
       image: t.string, note: t.string, links: t.list(t.namedLink), abstract: t.string, bibtex: t.string,
     },

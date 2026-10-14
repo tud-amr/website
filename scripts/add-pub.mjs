@@ -71,6 +71,8 @@ const month = /^\d+$/.test(monthField) ? Number(monthField) : MONTHS.indexOf(mon
 const venue = clean(fields.journal || fields.booktitle || fields.school || fields.publisher || fields.howpublished);
 let type = { article: 'journal', inproceedings: 'conference', conference: 'conference', phdthesis: 'thesis', mastersthesis: 'thesis' }[entryType] || 'other';
 if (/workshop/i.test(venue)) type = 'workshop';
+// An arXiv entry with no journal or conference is a preprint (not accepted yet).
+if (entryType === 'misc' && (fields.eprint || /arxiv/i.test(venue)) && !fields.journal && !fields.booktitle) type = 'preprint';
 
 const links = [];
 for (const pdf of option('pdf')) links.push({ pdf });
@@ -92,7 +94,7 @@ const text = [
   `title: ${q(clean(fields.title))}`,
   `authors:\n${authors.map((a) => `  - ${a}`).join('\n')}`,
   `date: ${year}-${String(month).padStart(2, '0')}-01`,
-  `type: ${type}${type === 'other' ? '                  # check: journal | conference | workshop | thesis | other' : ''}`,
+  `type: ${type}${type === 'other' ? '                  # check: journal | conference | workshop | thesis | other | preprint' : ''}`,
   `venue: ${q(venue)}`,
   `projects: ${flow(option('project'))}`,
   `collections: ${flow(option('collection'))}`,

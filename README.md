@@ -78,7 +78,7 @@ look the same.
 | `title` | The paper title. |
 | `authors` | One author per line, as they should appear. |
 | `date` | `YYYY-MM-DD`. Only the year is shown; use any day if unsure. The file must be in that year's folder. |
-| `type` | `journal`, `conference`, `workshop`, `thesis` or `other`. Sets the J/C/W/T/O number. |
+| `type` | `journal`, `conference`, `workshop`, `thesis`, `other`, or `preprint` for a paper that is not accepted yet (e.g. on arXiv and under review; change the type once it is accepted). Sets the J/C/W/T/O/P number. |
 | `venue` | Journal or conference name, without the year. |
 | `projects` | IDs of the lab projects the paper belongs to, e.g. `[interact, trilogy]`. These are the `project_id` of a file in `content/projects/`. The paper then shows on that project's page. |
 | `collections` | Optional groups of papers that are not projects, e.g. one person's line of work, from `content/_data/paper_collections.yaml`. See [Collections](#collections-groups-of-papers-that-are-not-projects) below. |

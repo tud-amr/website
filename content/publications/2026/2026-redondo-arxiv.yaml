@@ -4,7 +4,7 @@ authors:
   - Andreu Matoses Gimenez
   - Javier Alonso-Mora
 date: 2026-10-01
-type: other            # preprint under review; change to conference once accepted
+type: preprint         # under review; change to conference once accepted
 venue: arXiv preprint
 projects: [interact]
 collections: []

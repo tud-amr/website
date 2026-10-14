@@ -7,8 +7,9 @@
 //   publications.latestWithImage  the 4 newest papers with a picture, for the home page
 import { loadPublications } from '../../src/lib/content.mjs';
 
-const PREFIX = { journal: 'J', conference: 'C', workshop: 'W', thesis: 'T', other: 'O' };
-const TYPE_ORDER = ['journal', 'conference', 'workshop', 'thesis', 'other'];
+const PREFIX = { journal: 'J', conference: 'C', workshop: 'W', thesis: 'T', other: 'O', preprint: 'P' };
+// Within a year; preprints (not yet peer reviewed) come last.
+const TYPE_ORDER = ['journal', 'conference', 'workshop', 'thesis', 'other', 'preprint'];
 
 export default function () {
   const all = loadPublications().filter((p) => !p.__error);
@@ -36,7 +37,7 @@ export default function () {
     for (const id of p.collections) (byCollection[id] ||= []).push(p);
     byId[p.id] = p;
   }
-  // Within a year: journals, then conferences, workshops, theses and others, each newest first.
+  // Within a year: journals, then conferences, workshops, theses, others and preprints, each newest first.
   for (const g of byYear) {
     g.items.sort((a, b) => TYPE_ORDER.indexOf(a.type) - TYPE_ORDER.indexOf(b.type) || new Date(b.date) - new Date(a.date));
   }

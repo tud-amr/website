@@ -6,7 +6,7 @@ authors:
   - First Author
   - Second Author
 date: 2026-01-01         # YYYY-MM-DD; any day if unknown
-type: conference         # journal | conference | workshop | thesis | other
+type: conference         # journal | conference | workshop | thesis | other | preprint (not yet accepted)
 venue: ""                # without the year, e.g. IEEE International Conference on Robotics and Automation (ICRA)
 projects: []             # project IDs from content/projects/ (the project_id field)
 collections: []          # optional groups that are not projects (e.g. a person's line of work); see content/_data/paper_collections.yaml

@@ -62,7 +62,8 @@ Playwright's Chromium: use the Docker form if `npx playwright` is not set up.
 1. Get BibTeX (from the user, or `curl -LH "Accept: application/x-bibtex" https://doi.org/<doi>`; for arXiv,
    `https://arxiv.org/bibtex/<id>`).
 2. `npm run add-pub -- paper.bib --project <project_id> [--collection <id>] [--pdf /assets/files/publications/<yy>-<author>-<venue>.pdf]`
-3. Open the new file in `content/publications/<year>/`: fix `type` (journal/conference/workshop/thesis/other),
+3. Open the new file in `content/publications/<year>/`: fix `type` (journal/conference/workshop/thesis/other, or
+   `preprint` while not accepted yet, e.g. arXiv + under review; switch it when accepted),
    `venue` (no year), add `links` (pdf, publisher, arxiv, web, code, video), `topics`, `note`, `image`.
    Copy the PDF into `assets/files/publications/` if the user gave one.
 4. `npm run validate`, then the full checks. The paper appears on /publications/ and on each listed project page.
