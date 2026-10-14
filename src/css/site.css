@@ -141,7 +141,9 @@ a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 0
 a:hover { color: var(--accent-dark); text-decoration-thickness: 2px; }
 img, svg, video, canvas, iframe { vertical-align: middle; }
 img, video { max-width: 100%; }
-img { height: auto; }
+/* An image keeps its proportions when it shrinks, except when it only sets a height (e.g. a row of
+   funding logos with height="60"): then that height is kept, as on the old site. */
+img:not([height]), img[width][height] { height: auto; }
 hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--border); }
 small, .small { font-size: 0.875em; }
 sup, sub { font-size: 0.75em; line-height: 0; }
