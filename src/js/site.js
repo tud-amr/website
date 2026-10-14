@@ -69,7 +69,13 @@
     iframe.title = facade.getAttribute('aria-label') || 'YouTube video';
     iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
     iframe.allowFullscreen = true;
-    for (const attr of ['class', 'style', 'width', 'height']) if (facade.dataset[attr]) iframe.setAttribute(attr, facade.dataset[attr]);
+    for (const attr of ['class', 'width', 'height']) if (facade.dataset[attr]) iframe.setAttribute(attr, facade.dataset[attr]);
+    // The player takes exactly the preview's place: inside a ratio box the box sizes it (CSS);
+    // elsewhere it gets the preview's width and shape instead of the browser's 300x150 default.
+    if (!facade.parentElement.classList.contains('ratio')) {
+      iframe.classList.add('yt-player');
+      iframe.style.cssText = facade.getAttribute('style') || '';
+    }
     facade.replaceWith(iframe);
   });
 

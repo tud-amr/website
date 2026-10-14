@@ -65,6 +65,15 @@ function resize(file, thumbnail) {
   return pending.get(key);
 }
 
+// Images with see-through pixels (PNG/WebP/GIF figures and logos) are marked data-transparent, so the
+// dark theme can put a light backing behind exactly those and leave photos alone.
+const opaque = new Map();
+function isTransparent(file) {
+  if (!/\.(png|webp|gif)$/i.test(file)) return Promise.resolve(false);
+  if (!opaque.has(file)) opaque.set(file, sharp(file).stats().then((s) => !s.isOpaque).catch(() => false));
+  return opaque.get(file);
+}
+
 export async function imageTransform(content) {
   if (!(this.page.outputPath || '').endsWith('.html')) return content;
   const tags = content.match(/<img\b[^>]*>/gi);
@@ -75,9 +84,11 @@ export async function imageTransform(content) {
     if (!attr(tag, 'loading')) out = setAttr(out, 'loading', 'lazy');
     if (!attr(tag, 'decoding')) out = setAttr(out, 'decoding', 'async');
     const src = attr(tag, 'src');
-    if (!src || !src.startsWith('/assets/') || !RESIZABLE.test(src.split(/[?#]/)[0]) || attr(tag, 'srcset')) return [tag, out];
+    if (!src || !src.startsWith('/assets/')) return [tag, out];
     const file = path.join('.', decodeURI(src.split(/[?#]/)[0]));
     if (!fs.existsSync(file)) return [tag, out];
+    if (await isTransparent(file)) out = setAttr(out, 'data-transparent', '');
+    if (!RESIZABLE.test(file) || attr(tag, 'srcset')) return [tag, out];
     try {
       const files = await resize(file, /\bdata-thumbnail\b/.test(tag));
       out = setAttr(out, 'srcset', files.map((f) => `${f.url} ${f.width}w`).join(', '));

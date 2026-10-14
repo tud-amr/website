@@ -279,7 +279,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   border: 1px solid var(--border); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow);
 }
 .tile-figure { display: grid; place-items: center; aspect-ratio: 4 / 3; max-height: 260px; padding: 1rem; background: var(--surface); }
-:root[data-theme='dark'] .tile-figure { background: var(--figure-bg); }
 .tile-media { width: 100%; height: 100%; object-fit: contain; }
 .tile-body { display: flex; flex-direction: column; gap: 0.35rem; padding: 1.1rem 1.25rem 1.25rem; min-width: 0; }
 .tile-title { margin: 0; font-size: 1.15rem; }
@@ -439,7 +438,7 @@ mjx-container:not([display='true']) { display: inline-block; max-width: 100%; ov
 .latest-pub-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
 @media (min-width: 768px) { .latest-pub-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; } }
 .latest-pub { position: relative; display: flex; flex-direction: column; gap: 0.3rem; }
-.latest-thumb { width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: contain; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--figure-bg); transition: border-color 0.15s; }
+.latest-thumb { width: 100%; aspect-ratio: 16 / 10; height: auto; object-fit: contain; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--card); transition: border-color 0.15s; }
 /* Titles take exactly two lines, so the venue lines up under every card. */
 .latest-title { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: calc(2 * 1.35em); color: var(--ink); font-weight: 600; font-size: 0.92rem; line-height: 1.35; text-decoration: none; }
 .latest-title::after { content: ''; position: absolute; inset: 0; }
@@ -539,7 +538,9 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 
 /* Click-to-play YouTube embeds (see src/js/site.js). */
 .yt-facade { position: relative; display: grid; place-items: center; width: 100%; aspect-ratio: 16 / 9; padding: 0; border: 0; overflow: hidden; cursor: pointer; background: var(--dark); border-radius: var(--radius); }
-.ratio > .yt-facade { position: absolute; inset: 0; height: 100%; aspect-ratio: auto; }
+/* Inside a ratio box the box sets the size, for the preview and for the player that replaces it. */
+.ratio > .yt-facade { position: absolute; inset: 0; height: 100%; max-width: none !important; aspect-ratio: auto !important; }
+.yt-player { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; border-radius: var(--radius); }
 .yt-facade img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
 .yt-facade::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgb(0 0 0 / 0.05), rgb(0 0 0 / 0.45)); }
 .yt-facade .yt-play { position: relative; z-index: 2; width: 68px; height: 48px; border-radius: 12px; background: #e00; transition: transform 0.15s; }
@@ -643,13 +644,10 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 .stat-tables .table { display: table; }
 
 /* Dark theme details --------------------------------------------------------------------------- */
-/* Publication thumbnails are often figures with transparent backgrounds. */
-:root[data-theme='dark'] .pub-media img { background: var(--figure-bg); }
-/* Project pages follow the dark theme; their PNG figures and partner logos often have transparent
-   backgrounds, so they get a light backing. (Photos are JPEG and need none.) */
-:root[data-theme='dark'] :is(.project-intro, .project-content) :is(img[src$='.png'], img[src$='.svg'], img[src$='.gif']) {
-  padding: 0.35rem; border-radius: var(--radius-sm); background: var(--figure-bg);
-}
+/* Images with see-through pixels (marked data-transparent at build time: figures with black lines,
+   logos) get a light backing in the dark theme; photos and the boxes around them stay dark. */
+:root[data-theme='dark'] img[data-transparent] { border-radius: var(--radius-sm); background: var(--figure-bg); }
+:root[data-theme='dark'] :is(.project-intro, .project-content) img[data-transparent] { padding: 0.35rem; }
 /* The TU Delft logo is black text: show it in white. */
 :root[data-theme='dark'] img[src*='TUDelft_logo'] { filter: brightness(0) invert(1); }
 

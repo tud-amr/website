@@ -100,6 +100,20 @@ test('project pages follow the dark theme, with a light backing behind PNG figur
   await page.goto('/projects/harmony.html');
   const bg = await page.locator('article.project').evaluate((e) => getComputedStyle(e).color);
   expect(bg).not.toBe('rgb(43, 40, 48)'); // not the light theme's text colour
-  const png = page.locator(".project-content img[src$='.png']").first();
-  expect(await png.evaluate((e) => getComputedStyle(e).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
+  const figure = page.locator('.project-content img[data-transparent]').first();
+  expect(await figure.evaluate((e) => getComputedStyle(e).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
 });
+
+for (const path of ['/', '/projects/harmony.html']) {
+  test(`YouTube player on ${path} keeps the size of its preview`, async ({ page }) => {
+    await page.route(/youtube-nocookie|ytimg/, (route) => route.fulfill({ status: 200, contentType: 'text/html', body: '' }));
+    await page.goto(path);
+    const facade = page.locator('.yt-facade').first();
+    await facade.scrollIntoViewIfNeeded();
+    const before = await facade.boundingBox();
+    await facade.click();
+    const after = await page.locator('iframe[src*="youtube-nocookie"]').first().boundingBox();
+    expect(Math.abs(after.width - before.width)).toBeLessThan(2);
+    expect(Math.abs(after.height - before.height)).toBeLessThan(2);
+  });
+}
