@@ -27,7 +27,6 @@
   --font-heading: 'Montserrat', var(--font);
   --container: 1120px;
   --gutter: 1rem;
-  --measure: 72ch;
 }
 
 /* 2. Fonts (self-hosted, latin subset) -------------------------------------------------------- */
@@ -96,9 +95,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .page-header { margin-bottom: 1.75rem; }
 .page-title { margin: 0.25rem 0 0; }
 .page-subtitle { font-size: 1.15rem; color: var(--muted); margin: 0.35rem 0 0; }
-/* Running text stays readable on wide screens. */
-.page-content > p, .page-content > ul:not([class]), .page-content > ol:not([class]), .page-content > blockquote,
-.area-intro p, .lead-text { max-width: var(--measure); }
 .section-title { margin-top: 2.5rem; }
 
 /* 5. Header and footer ----------------------------------------------------------------------- */
@@ -339,7 +335,7 @@ mjx-container:not([display='true']) { display: inline-block; max-width: 100%; ov
 .news { padding-top: 2.25rem; }
 
 /* News and talks timeline: the lab's magenta dots. */
-ul.timeline { position: relative; list-style: none; margin: 0 0 1rem; padding-left: 2.25rem; max-width: 52rem; }
+ul.timeline { position: relative; list-style: none; margin: 0 0 1rem; padding-left: 2.25rem; }
 ul.timeline::before { content: ''; position: absolute; left: 0.6rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: var(--accent-line); }
 ul.timeline > li { position: relative; padding: 0.15rem 0 1.4rem; }
 ul.timeline > li::before {
