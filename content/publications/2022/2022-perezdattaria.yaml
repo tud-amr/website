@@ -1,0 +1,39 @@
+title: Visually-Guided Motion Planning for Autonomous Driving from Interactive Demonstrations
+authors:
+  - R. Perez-Dattari
+  - B. Brito
+  - O. de Groot
+  - J. Kober
+  - J. Alonso-Mora
+date: 2022-11-01
+type: journal
+venue: IFAC Engineering Applications of Artificial Intelligence Journal
+projects: [veni, nwa-act]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://www.sciencedirect.com/science/article/pii/S0952197622003323
+  - pdf: /assets/files/publications/22-perezdattaria.pdf
+  - code: https://github.com/rperezdattari/Social-MPCC
+  - video: https://www.youtube.com/watch?v=UmbrTs14BnU
+abstract: >-
+  The successful integration of autonomous robots in real-world environments strongly depends on
+  their ability to reason from context and take socially acceptable actions. Current autonomous
+  navigation systems mainly rely on geometric information and hard-coded rules to induce safe and
+  socially compliant behaviors. Yet, in unstructured urban scenarios these approaches can become
+  costly and suboptimal. In this paper, we introduce a motion planning framework consisting of two
+  components: a data-driven policy that uses visual inputs and human feedback to generate socially
+  compliant driving behaviors (encoded by high-level decision variables), and a local trajectory
+  optimization method that executes these behaviors (ensuring safety). In particular, we employ
+  Interactive Imitation Learning to jointly train the policy with the local planner, a Model
+  Predictive Controller (MPC), which results in safe and human-like driving behaviors. Our approach
+  is validated in realistic simulated urban scenarios. Qualitative results show the similarity of
+  the learned behaviors with human driving. Furthermore, navigation performance is substantially
+  improved in terms of safety, i.e., number of collisions, as compared to prior trajectory
+  optimization frameworks, and in terms of data-efficiency as compared to prior learning-based
+  frameworks, broadening the operational domain of MPC to more realistic autonomous driving
+  scenarios.
+bibtex: ""

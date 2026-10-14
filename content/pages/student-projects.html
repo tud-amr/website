@@ -1,0 +1,66 @@
+---
+title: Master Projects
+permalink: /student-projects/
+---
+
+<p>
+    Every year we offer several MSc projects in multi-robot motion planning and control, navigation in dynamic
+    environments, human-swarm interaction and automated mobility-on-demand. Here is the overview information from the
+    <a href="/assets/files/student_projects/Brochure_thesis_jam.pdf">MSc Robotics booklet</a>. 
+    Below you can find the available projects.
+</p>
+
+<div class="table-scroll">
+    <table class="table table-cards">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Direct Supervisor</th>
+                <th>Full Proposal</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%- for project in collections.mscAvailable %}
+            {%- if project.data.display %}
+            <tr>
+                <td>{{ project.data.title }}</td>
+                <td data-label="Supervisor">
+                    {%- for supervisor in project.data.direct_supervisors %}
+                    {%- if supervisor.url %}<a href="{{ supervisor.url }}">{{ supervisor.name }}</a>{% else %}{{ supervisor.name }}{% endif %}<br>
+                    {%- endfor %}
+                </td>
+                <td data-label="Proposal">
+                    {%- if project.data.proposal_document %}
+                    <a href="{{ project.data.proposal_document }}">Proposal (PDF)</a>
+                    {%- else %}
+                    <a href="{{ project.url }}">Proposal</a>
+                    {%- endif %}
+                </td>
+            </tr>
+            {%- endif %}
+            {%- endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <p>You can find some of the finished Msc projects with their respective websites <a
+            href="/msc_projects_finished/">here</a>.</p>
+</div>
+
+<div class="msc-application">
+    <h2>To Apply</h2>
+
+    <p>Students interested in a MSc project should contact the direct supervisor and provide the following information:
+    </p>
+
+    <ul>
+        <li>Why are you interested in this project? What would you like to achieve?</li>
+        <li>What is your experience relevant to this project? This could be past projects, past courses; theoretical
+            knowledge or practical experience, related to constrained optimization, planning and/or robotics.</li>
+        <li>When would you like to start and which courses will you have left by then?</li>
+        <li>Is your motivation to do algorithmic work or applied research?</li>
+        <li>Your transcript of record with past courses, including which master & track you are following.</li>
+        <li>Available day/times to meet within one/two weeks.</li>
+    </ul>
+</div>

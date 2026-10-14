@@ -1,0 +1,33 @@
+# Local preview and checks without installing Node. Run from the repo root.
+#
+#   docker compose up                    live preview at http://localhost:8080
+#   docker compose run --rm test         validate, build and run every check (same as CI)
+#   docker compose run --rm test npm run shots -- /publications/
+#                                        phone/tablet/desktop screenshots into .shots/
+#
+# Containers run as your user (UID/GID default to 1000), so files they create stay yours.
+services:
+  site:
+    image: node:22-bookworm-slim
+    user: "${UID:-1000}:${GID:-1000}"
+    working_dir: /site
+    environment:
+      - HOME=/tmp
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/site
+    command: sh -c "npm ci --no-audit --no-fund && npm run dev"
+
+  test:
+    image: mcr.microsoft.com/playwright:v1.48.0-noble
+    user: "${UID:-1000}:${GID:-1000}"
+    working_dir: /site
+    ipc: host
+    environment:
+      - HOME=/tmp
+      - CI=${CI:-}
+    volumes:
+      - .:/site
+    entrypoint: ["sh", "-c", "npm ci --no-audit --no-fund >/dev/null && exec \"$@\"", "--"]
+    command: ["npm", "test"]

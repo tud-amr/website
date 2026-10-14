@@ -1,0 +1,41 @@
+title: A Parallel Autonomy Research Platform
+authors:
+  - F. Naser
+  - D. Dorhout
+  - S. Proulx
+  - S. D. Pendleton
+  - H. Andersen
+  - W. Schwarting
+  - L. Paull
+  - J. Alonso-Mora
+  - M. H. Ang Jr.
+  - S. Karaman
+  - R. Tedrake
+  - J. Leonard
+  - D. Rus
+date: 2017-06-01
+type: conference
+venue: Proc. of the IEEE Symposium on Intelligent Vehicles (IV)
+projects: [postdoc-mp]
+collections: []
+funding: []
+topics: [motion planning, transportation, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/7995835
+  - pdf: /assets/files/publications/17-naser-car-iv.pdf
+  - video: https://youtu.be/GMZallctwAU
+abstract: >-
+  We present the development of a full-scale “parallel autonomy” research platform including
+  software and hardware. In the parallel autonomy paradigm, the control of the vehicle is shared;
+  the human is still in control of the vehicle, but the autonomy system is always running in the
+  background to prevent accidents. Our holistic approach includes: (1) a drive-by-wire conversion
+  method only based on reverse engineering mounting of relatively inexpensive sensors onto the
+  vehicle implementation of a localization and mapping system, (4) obstacle detection and (5) a
+  shared controller as well as (6) integration with an advanced autonomy simulation system (Drake)
+  for rapid development and testing. The system can operate in three modes: (a) manual driving, (b)
+  full autonomy, where the system is in complete control of the vehicle and (c) parallel autonomy,
+  where the shared controller is implemented. We present results from extensive testing of a
+  full-scale vehicle on closed tracks that demonstrate these capabilities.
+bibtex: ""

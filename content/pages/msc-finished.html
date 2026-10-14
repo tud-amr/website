@@ -1,0 +1,25 @@
+---
+title: "Master's Thesis Projects"
+permalink: /msc_projects_finished/
+---
+
+<p>
+    This page contains a list of the Master's Thesis Projects that have been finished in the group. The list is
+    sorted by year. Note that the list is not complete, as it is up to the student to create a website for their project.
+</p>
+<p>
+    If you are interested in doing a Master's Thesis Project with us, please check <a href="/student-projects/">Master's Thesis Proposals</a>.
+</p>
+
+{%- assign current_year = "" %}
+{%- for project in collections.mscFinished %}
+{%- assign year = project.data.end_date | date: "%Y" %}
+{%- if year != current_year %}
+{%- unless current_year == "" %}</div>{% endunless %}
+{%- assign current_year = year %}
+<h2 class="year-title">{{ year }}</h2>
+<div class="tile-list">
+{%- endif %}
+{% render 'msc_card.html', project: project %}
+{%- endfor %}
+</div>

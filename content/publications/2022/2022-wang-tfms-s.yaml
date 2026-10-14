@@ -1,0 +1,20 @@
+title: Reachability-based confidence-aware probabilistic collision detection in highway driving
+authors:
+  - X. Wang
+  - Z. Li
+  - J. Alonso-Mora
+  - M. Wang
+date: 2022-01-01
+type: conference
+venue: 4th Symposium on Management of Future motorway and urban Traffic Systems (MFTS), Dresden, Germany
+projects: [safe-up]
+collections: []
+funding: []
+topics: [motion planning, transportation]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/22-Wang-tfms-s.pdf
+  - slides: /assets/files/publications/22-Wang-tfms.pdf
+abstract: "Links: [pdf], [slides],"
+bibtex: ""

@@ -1,0 +1,8 @@
+# Old URLs that no longer have a page of their own, and where they now point.
+# (Pages that moved list their old URLs in `redirect_from` in their own front matter instead.)
+- from: /2023/12/19/welcome-to-jekyll/
+  to: /
+- from: /readme/
+  to: https://github.com/tud-amr/website#readme
+- from: /msc_projects_finished/msc-project-template.html
+  to: /msc_projects_finished/

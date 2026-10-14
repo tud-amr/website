@@ -1,0 +1,27 @@
+---
+title: "Paper Websites"
+permalink: /paper_websites/
+---
+
+<p>
+    This page contains a list of some of the websites of the papers published by the group. The list is sorted by year, and only contains the
+    papers that have a website using the group's website template. Note that the list is not complete, as it is up to the authors to create a
+    website for their paper and they may choose to host it themselves. For a more complete list, check directly the <a href="/publications/">Publications</a>.
+</p>
+
+{%- assign papers = collections.paperWebsites | where_exp: "paper", "paper.data.hidden != true" %}
+{%- assign current_year = "" %}
+{%- for paper in papers %}
+{%- assign year = paper.data.release_date | date: "%Y" %}
+{%- if year != current_year %}
+{%- unless current_year == "" %}</ul>{% endunless %}
+{%- assign current_year = year %}
+<h2 class="year-title">{{ year }}</h2>
+<ul class="paper-website-list">
+{%- endif %}
+  <li class="paper-website-item">
+    <h3><a href="{{ paper.url }}">{{ paper.data.title }}</a></h3>
+    <p>{% for person in paper.data.authors %}{{ person.name }}{% unless forloop.last %}, {% endunless %}{% endfor %} | {{ paper.data.release_date | date: "%B %Y" }}</p>
+  </li>
+{%- endfor %}
+</ul>

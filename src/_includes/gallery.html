@@ -1,0 +1,14 @@
+{%- comment -%}
+  Images (and .mp4 videos) in a grid. Usage in content:
+    {% assign image_list = "/assets/images/a.png,/assets/images/b.mp4" | split: "," %}
+    {% render 'gallery.html', images: image_list, n_columns: 3 %}
+{%- endcomment -%}
+<div class="gallery" style="--columns: {{ n_columns | default: 3 }}">
+  {%- for image in images %}
+  {%- if image contains '.mp4' %}
+  <video src="{{ image }}" controls muted loop playsinline></video>
+  {%- else %}
+  <img src="{{ image }}" alt="">
+  {%- endif %}
+  {%- endfor %}
+</div>

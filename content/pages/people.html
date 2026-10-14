@@ -1,0 +1,71 @@
+---
+title: Our Team Members
+permalink: /people/
+---
+{%- comment -%}
+  Current members are grouped by `type`; anyone with a `left_date` is listed under past members.
+{%- endcomment -%}
+{%- assign people_by_join = collections.people | sort_data: "joined_date" -%}
+{%- assign people_by_leave = collections.people | where_exp: "p", "p.data.left_date != nil" | sort_data: "left_date" | reverse -%}
+
+{%- for person in people_by_join %}
+{%- assign d = person.data %}
+{%- if d.type == "professor" and d.left_date == nil %}
+<article class="person person-lead">
+  <img class="person-photo" src="{{ d.image }}" alt="" width="220" height="260">
+  <div class="person-body">
+    <h2 class="person-name">{{ d.name }}</h2>
+    <p class="person-role">{{ d.title }} | Since {{ d.joined_date | date: "%Y" }}</p>
+    <div class="person-bio">{{ d.short_bio | markdownify }}</div>
+    <div class="person-links">
+      {%- for link in d.links %}
+      <a class="btn btn-sm btn-light" href="{{ link.url }}">{{ link.name }}</a>
+      {%- endfor %}
+      <button class="btn btn-sm btn-light pub-toggle" type="button" aria-expanded="false" aria-controls="bio-{{ d.name | slugify }}"><i class="bi bi-chevron-right" aria-hidden="true"></i> Full bio</button>
+    </div>
+    <div class="panel" id="bio-{{ d.name | slugify }}" hidden>{{ person.content }}</div>
+  </div>
+</article>
+{%- endif %}
+{%- endfor %}
+
+{%- assign groups = "post-doc:Post-docs,phd-candidate:PhD candidates,engineer:Research engineers" | split: "," %}
+{%- for group in groups %}
+{%- assign parts = group | split: ":" %}
+{%- assign members = people_by_join | where_exp: "p", "p.data.type == parts[0]" | where_exp: "p", "p.data.left_date == nil" %}
+{%- if members.size > 0 %}
+<h2>{{ parts[1] }}</h2>
+<div class="people-grid">
+  {%- for person in members %}
+  {% render 'person_card.html', person: person %}
+  {%- endfor %}
+</div>
+{%- endif %}
+{%- endfor %}
+
+<h2 class="section-title">Past members</h2>
+<ul class="past-people">
+  {%- for person in people_by_leave %}
+  {%- if person.data.type != "phd-visitor" and person.data.type != "engineer" %}
+  {% render 'past_person.html', person: person %}
+  {%- endif %}
+  {%- endfor %}
+</ul>
+
+<h3>Past visitors</h3>
+<ul class="past-people">
+  {%- for person in people_by_leave %}
+  {%- if person.data.type == "phd-visitor" %}
+  {% render 'past_person.html', person: person %}
+  {%- endif %}
+  {%- endfor %}
+</ul>
+
+<h3>Past research engineers</h3>
+<ul class="past-people">
+  {%- for person in people_by_leave %}
+  {%- if person.data.type == "engineer" %}
+  {% render 'past_person.html', person: person %}
+  {%- endif %}
+  {%- endfor %}
+</ul>

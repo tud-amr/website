@@ -1,0 +1,55 @@
+# Builds the site and runs every check on each pull request.
+# A failing step blocks the merge. The same checks run locally with
+# `docker compose run --rm test` (or `npm test` with Node installed).
+name: Build and check
+
+on:
+  pull_request:
+  push:
+    branches: [eleventy-update]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    container:
+      image: mcr.microsoft.com/playwright:v1.48.0-noble
+      options: --ipc=host
+    steps:
+      - uses: actions/checkout@v4
+
+      # Resized images are slow to generate; keep them between runs.
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: eleventy-cache-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: eleventy-cache-${{ hashFiles('package-lock.json') }}-
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Validate, build and test
+        run: npm test
+
+      - name: Phone, tablet and desktop screenshots of key pages
+        if: always()
+        run: npm run shots -- --key || true
+
+      - name: Report published size
+        if: always()
+        run: node scripts/site-size.mjs
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: check-report
+          path: |
+            playwright-report/
+            test-results/
+            .shots/
+          retention-days: 14
+          if-no-files-found: ignore

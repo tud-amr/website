@@ -1,0 +1,53 @@
+---
+title: Website visitors
+layout: page
+hidden: true
+sitemap: false
+eleventyExcludeFromCollections: true
+---
+{%- comment -%}
+  Hidden metrics page: reachable only through its secret address, not indexed, not in the sitemap.
+  Numbers come from GoatCounter (cookieless, no personal data) and are refreshed daily by the
+  deploy workflow. See README.md, "Analytics".
+{%- endcomment -%}
+<p class="muted">Updated {{ stats.generated }}. Counts are page views from <a href="https://www.goatcounter.com">GoatCounter</a>; no cookies or personal data are collected.</p>
+
+<div class="stat-row">
+  <div class="stat"><span class="stat-value">{{ stats.last30 }}</span><span class="stat-label">page views, last 30 days</span></div>
+  <div class="stat"><span class="stat-value">{{ stats.last365 }}</span><span class="stat-label">page views, last 12 months</span></div>
+</div>
+
+<h2>Per day, last 30 days</h2>
+<div class="bars" role="img" aria-label="Page views per day over the last 30 days">
+  {%- for d in stats.daily %}
+  <div class="bar" style="--h: {{ d.height }}%" title="{{ d.day }}: {{ d.count }}"><span class="visually-hidden">{{ d.day }}: {{ d.count }}</span></div>
+  {%- endfor %}
+</div>
+
+<h2>Per month, last 12 months</h2>
+<div class="bars bars-wide" role="img" aria-label="Page views per month over the last 12 months">
+  {%- for d in stats.monthly %}
+  <div class="bar" style="--h: {{ d.height }}%" title="{{ d.day }}: {{ d.count }}"><span class="bar-label">{{ d.day | slice: 5, 2 }}</span></div>
+  {%- endfor %}
+</div>
+
+{%- assign tables = "pages:Most viewed pages,toprefs:Where visitors came from,locations:Countries,browsers:Browsers,systems:Operating systems,sizes:Screen sizes" | split: "," %}
+<div class="stat-tables">
+{%- for t in tables %}
+  {%- assign parts = t | split: ":" %}
+  {%- assign rows = stats[parts[0]] %}
+  <section>
+    <h2>{{ parts[1] }}</h2>
+    <table class="table">
+      <thead><tr><th>{% if parts[0] == "pages" %}Page{% else %}Name{% endif %}</th><th>Views</th><th>%</th></tr></thead>
+      <tbody>
+        {%- for r in rows %}
+        <tr><td>{% if parts[0] == "pages" %}<a href="{{ r.path }}">{{ r.title | default: r.path }}</a>{% else %}{{ r.name }}{% endif %}</td><td>{{ r.count }}</td><td>{{ r.percent }}</td></tr>
+        {%- else %}
+        <tr><td colspan="3" class="muted">No data yet.</td></tr>
+        {%- endfor %}
+      </tbody>
+    </table>
+  </section>
+{%- endfor %}
+</div>

@@ -1,0 +1,30 @@
+title: Multi-Robot Local Motion Planning Using Dynamic Optimization Fabrics
+authors:
+  - Saray Bakker
+  - Luzia Knoedler
+  - Max Spahn
+  - Wendelin Boehmer
+  - Javier Alonso-Mora
+date: 2023-12-01
+type: conference
+venue: Proc. IEEE International Symposium on Multi-Robot and Multi-Agent Systems
+projects: [harmony, interact, airlab-manipulation]
+collections: [saraypapers]
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/23_bakker_mrs.pdf
+  - code: https://github.com/tud-amr/multi-robot-fabrics/
+  - video: https://www.youtube.com/watch?v=jaJBrSecDcM
+abstract: >-
+  In this paper, we address the problem of real-time motion planning for multiple robotic
+  manipulators that operate in close proximity. We build upon the concept of dynamic fabrics and
+  extend them to multi-robot systems, referred to as Multi-Robot Dynamic Fabrics (MRDF). This
+  geometric method enables a very high planning frequency for high-dimensional systems at the
+  expense of being reactive and prone to deadlocks. To detect and resolve deadlocks, we propose
+  Rollout Fabrics where MRDF are forward simulated in a decentralized manner. We validate the
+  methods in simulated close-proximity pick-and-place scenarios with multiple manipulators, showing
+  high success rates and real-time performance.
+bibtex: ""

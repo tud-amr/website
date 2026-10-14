@@ -1,0 +1,31 @@
+title: Limited benefit of Sharing Information in Multi-Agent Iterative Learning Control
+authors:
+  - A. Schoellig
+  - J. Alonso-Mora
+  - R. D'Andrea
+date: 2012-05-01
+type: journal
+venue: Asian Journal of Control, vol. 14, no. 3, pp. 613-623
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [multi-robot, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://onlinelibrary.wiley.com/doi/10.1002/asjc.398
+  - pdf: /assets/files/publications/12-Schoellig-ajc.pdf
+abstract: >-
+  This paper studies iterative learning control (ILC) in a multi-agent framework, wherein a group of
+  agents simultaneously and repeatedly perform the same task. Assuming similarity between the
+  agents, we investigate whether exchanging information between the agents improves an individual's
+  learning performance. That is, does an individual agent benefit from the experience of the other
+  agents? We consider the multi-agent iterative learning problem as a two-step process of: first,
+  estimating the repetitive disturbance of each agent; and second, correcting for it. We present a
+  comparison of an agent's disturbance estimate in the case of (I) independent estimation, where
+  each agent has access only to its own measurement, and (II) joint estimation, where information of
+  all agents is globally accessible. When the agents are identical and noise comes from measurement
+  only, joint estimation yields a noticeable improvement in performance. However, when process noise
+  is encountered or when the agents have an individual disturbance component, the benefit of joint
+  estimation is negligible.
+bibtex: ""

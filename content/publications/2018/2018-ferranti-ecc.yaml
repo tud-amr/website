@@ -1,0 +1,33 @@
+title: Coordination of Multiple Vessels Via Distributed Nonlinear Model Predictive Control
+authors:
+  - L. Ferranti
+  - R. R. Negenborn
+  - T. Keviczky
+  - J. Alonso-Mora
+date: 2018-06-01
+type: conference
+venue: Proc. European Control Conference (ECC)
+projects: [veni]
+collections: []
+funding: []
+topics: [motion planning, transportation, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8550178
+  - pdf: /assets/files/publications/18-ferranti-ECC.pdf
+  - video: https://youtu.be/draP8lQMxmc
+abstract: >-
+  This work presents a method for multi-robot trajectory planning and coordination based on
+  nonlinear model predictive control (NMPC). In contrast to centralized approaches, we consider the
+  distributed case where each robot has an on-board computation unit to solve a local NMPC problem
+  and can communicate with other robots in its neighborhood. We show that, thanks to tailored
+  interactions (i.e., interactions designed according to a nonconvex alternating direction method of
+  multipliers, or ADMM, scheme), the proposed solution is equivalent to solving the centralized
+  control problem. With some communication exchange, required by the ADMM scheme at given
+  synchronization steps, the safety of the robots is preserved, that is, collisions with neighboring
+  robots are avoided and the robots stay within the bounds of the environment. In this work, we
+  tested the proposed method to coordinate three autonomous vessels at a canal intersection.
+  Nevertheless, the proposed approach is general and can be applied to different applications and
+  robot models.
+bibtex: ""

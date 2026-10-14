@@ -1,0 +1,30 @@
+title: Pixelbots 2014
+authors:
+  - T. Digumarti
+  - J. Alonso-Mora
+  - R. Siegwart
+  - P. Beardsley
+date: 2016-01-01
+type: conference
+venue: Proc. ACM SIGGRAPH 2016 Art Gallery (SIGGRAPH '16), ACM, New York, NY, USA, 366-367
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://dl.acm.org/doi/10.1145/2897843.2915197
+  - pdf: /assets/files/publications/16-digumarti.pdf
+  - video: https://youtu.be/4-3rkrqvO14
+abstract: >-
+  In today's digital media landscape, we are constantly surrounded by displays, from the LCDs found
+  on the phones in our pockets to the ubiquitous screens that greet us whenever we enter a store,
+  airport, taxicab, doctor's office, or educational institution. This plethora of displays both
+  allures us and contributes to the media's saturation of our lives. The truth remains that we are
+  never far from the next form of information display. Disney Research's Pixelbots takes this truth
+  as an inevitability and brings the display into a kinetic form, breaking the screen out of the
+  confines of a rectangular or oval experience. Billed as "Pixels with Personality," the Pixelbots'
+  enticing presence rests on our ability to project human qualities onto objects that move as we do
+  in physical space.
+bibtex: ""

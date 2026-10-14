@@ -1,0 +1,32 @@
+title: Learning scalable and efficient communication policies for multi-robot collision avoidance
+authors:
+  - Álvaro Serra-Gómez
+  - Hai Zhu
+  - Bruno Brito
+  - Wendelin Böhmer
+  - Javier Alonso-Mora
+date: 2023-08-19
+type: journal
+venue: Autonomous Robots 47, 1275-1297
+projects: [scene-reasoning-team]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s10514-023-10127-3
+  - pdf: /assets/files/publications/23-serra-auro.pdf
+abstract: >-
+  Decentralized multi-robot systems typically perform coordinated motion planning by constantly
+  broadcasting their intentions to avoid collisions. However, the risk of collision between robots
+  varies as they move and communication may not always be needed. This paper presents an efficient
+  communication method that addresses the problem of “when” and “with whom” to communicate in
+  multi-robot collision avoidance scenarios. In this approach, each robot learns to reason about
+  other robots' states and considers the risk of future collisions before asking for the trajectory
+  plans of other robots. We introduce a new neural architecture for the learned communication policy
+  which allows our method to be scalable. We evaluate and verify the proposed communication strategy
+  in simulation with up to twelve quadrotors, and present results on the zero-shot
+  generalization/robustness capabilities of the policy in different scenarios. We demonstrate that
+  our policy (learned in a simulated environment) can be successfully transferred to real robots.
+bibtex: ""

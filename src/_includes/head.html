@@ -1,0 +1,64 @@
+{%- assign page_title = title | default: site.title -%}
+{%- if title and title != "none" %}{% capture full_title %}{{ title | strip_html }} | {{ site.title }}{% endcapture %}{% else %}{% assign full_title = site.title %}{% endif -%}
+{%- assign page_description = description | default: site.description | strip_html | normalize_whitespace | truncate: 200 -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>{{ full_title }}</title>
+<meta name="description" content="{{ page_description | escape }}">
+{%- if hidden %}
+<meta name="robots" content="noindex, nofollow">
+{%- endif %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ page_title | strip_html | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+{%- assign share_image = image | default: cover_image -%}
+{%- if share_image and share_image contains '.mp4' -%}{%- assign share_image = nil -%}{%- endif -%}
+{%- if share_image %}
+<meta property="og:image" content="{% if share_image contains '://' %}{{ share_image }}{% else %}{{ share_image | absolute_url }}{% endif %}">
+{%- endif %}
+<meta name="twitter:card" content="summary">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }} news" href="/feed.xml">
+<link rel="icon" href="/assets/images/favicon.png">
+<link rel="preload" href="/assets/site/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site/css/site.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap-icons/icons.css">
+{%- if math and math_engine == "mathjax" %}
+<script>
+  // MathJax: for pages written for it (numbered equations, \label and \eqref). Shortcuts from `math_macros`.
+  window.MathJax = {
+    tex: {
+      tags: 'ams',
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      macros: Object.fromEntries(Object.entries({% if math_macros %}{{ math_macros | jsonify }}{% else %}{}{% endif %}).map(([name, body]) => {
+        const args = Math.max(0, ...[...body.matchAll(/#(\d)/g)].map((m) => Number(m[1])));
+        return [name.replace(/^\\/, ''), args ? [body, args] : body];
+      })),
+    },
+    options: { enableMenu: false },
+  };
+</script>
+<script defer src="/assets/vendor/mathjax/tex-chtml.js"></script>
+{%- elsif math %}
+<script>
+  // KaTeX renders $...$, $$...$$ and LaTeX environments; a page can define its own shortcuts in `math_macros`.
+  window.mathOptions = {
+    delimiters: [{left: '$$', right: '$$', display: true}, {left: '\\[', right: '\\]', display: true}, {left: '$', right: '$', display: false}, {left: '\\(', right: '\\)', display: false},
+      {left: '\\begin{equation}', right: '\\end{equation}', display: true}, {left: '\\begin{equation*}', right: '\\end{equation*}', display: true},
+      {left: '\\begin{align}', right: '\\end{align}', display: true}, {left: '\\begin{align*}', right: '\\end{align*}', display: true}],
+    macros: {% if math_macros %}{{ math_macros | jsonify }}{% else %}{}{% endif %}
+  };
+</script>
+<link rel="stylesheet" href="/assets/vendor/katex/katex.min.css">
+<script defer src="/assets/vendor/katex/katex.min.js"></script>
+<script defer src="/assets/vendor/katex/auto-render.min.js" onload="renderMathInElement(document.querySelector('main'), window.mathOptions)"></script>
+{%- endif %}
+{%- if site.goatcounter != "" and eleventy.env.runMode == "build" %}
+<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{%- endif %}
+<script defer src="/assets/site/js/site.js"></script>

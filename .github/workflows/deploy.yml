@@ -1,0 +1,71 @@
+# Builds the site from `main` and publishes it to GitHub Pages (autonomousrobots.nl).
+# Also runs daily, so the hidden metrics page shows fresh numbers.
+#
+# One-time setup in the repository settings (see README.md, "Deployment"):
+#   Settings > Pages > Source: "GitHub Actions"
+#   Optional, for analytics: variable GOATCOUNTER_SITE, secrets GOATCOUNTER_TOKEN and STATS_PATH
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: .cache/img
+          key: images-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
+          restore-keys: images-${{ hashFiles('package-lock.json') }}-
+      - run: npm ci --no-audit --no-fund
+
+      - name: Fetch analytics for the metrics page
+        env:
+          GOATCOUNTER_SITE: ${{ vars.GOATCOUNTER_SITE }}
+          GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
+        run: node scripts/fetch-stats.mjs
+
+      - name: Validate and build
+        env:
+          STATS_PATH: ${{ secrets.STATS_PATH }}
+        run: npm run validate && npm run build
+
+      - name: Check URLs and links
+        run: npm run check:urls && npm run check:links
+
+      - name: Report published size
+        run: node scripts/site-size.mjs
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

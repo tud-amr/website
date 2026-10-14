@@ -1,0 +1,40 @@
+title: "Unreliability in ridesharing systems: Measuring changes in users' times due to new requests"
+authors:
+  - A. Fielbaum
+  - J. Alonso-Mora
+date: 2020-12-01
+type: journal
+venue: "Transportation Research Part C: Emerging Technologies"
+projects: [ridepooling]
+collections: []
+funding: [didi udian]
+topics: [transportation, task planning]
+image: ""
+note: ""
+links:
+  - publisher: https://www.sciencedirect.com/science/article/pii/S0968090X2030735X
+  - pdf: /assets/files/publications/20-Fielbaum-TRC.pdf
+abstract: >-
+  On-demand systems in which several users can ride simultaneously the same vehicle have great
+  potential to improve mobility while reducing congestion. Nevertheless, they have a significant
+  drawback: the actual realization of a trip depends on the other users with whom it is shared, as
+  they might impose extra detours that increase the waiting time and the total delay; even the
+  chance of being rejected by the system depends on which travelers are using the system at the same
+  time. In this paper we propose a general description of the sources of unreliability that emerge
+  in ridesharing systems and we introduce several measures. The proposed measures are related to two
+  sources of unreliability induced by how requests and vehicles are being assigned, namely how
+  users’ times change within a single trip and between different realizations of the same trip. We
+  then analyze both sources using a state-of-the-art routing and assignment method, and a New York
+  City test case. Regarding same trip unreliability, in our experiments for different fixed fleet
+  compositions and when reassignment is not restricted, we find that more than one third of the
+  requests that are not immediately rejected face some change, and the magnitude of these changes is
+  relevant: when a user faces an increase in her waiting time, this extra time is comparable to the
+  average waiting time of the whole system, and the same happens with total delay. Algorithmic
+  changes to reduce this uncertainty induce a trade-off with respect to the overall quality of
+  service. For instance, not allowing for reassignments may increase the number of rejected
+  requests. Concerning the unreliability between different trips, we find that the same
+  origin-destination request can be rejected or served depending on the state of the fleet. And when
+  it is served the waiting times and total delay are rarely equal, which remains true for different
+  fleet sizes. Furthermore, the largest variations are faced by trips beginning at high-demand
+  areas.
+bibtex: ""

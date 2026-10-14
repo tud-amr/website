@@ -1,0 +1,21 @@
+title: Vision-Based Localization for Multiple Robots with Absolute and Relative Measurements
+authors:
+  - P. Gohl
+  - J. Alonso-Mora
+  - R. Siegwart
+  - P. Beardsley
+date: 2012-09-01
+type: workshop
+venue: tech report
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://homepages.laas.fr/afranchi/events/icra2014mrs/w/Home_files/2014ICRA_MRS_Grieder.pdf
+  - pdf: /assets/files/publications/13-gohl.pdf
+  - video: https://youtu.be/Z-0Y5rqbtEI
+abstract: ""
+bibtex: ""

@@ -1,0 +1,11 @@
+{%- assign d = project.data -%}
+<article class="tile tile-link">
+  <div class="tile-figure"><img class="tile-media" src="{{ d.image }}" alt="" width="300" height="225"></div>
+  <div class="tile-body">
+    <h3 class="tile-title"><a href="{{ project.url }}">{{ d.title }}</a></h3>
+    <p class="tile-meta">{{ d.date | date: "%B %Y" }}{% if d.end_date %} – {{ d.end_date | date: "%B %Y" }} <span class="tag-finished">Finished</span>{% endif %}</p>
+    <p class="tile-text">{{ d.description }}</p>
+    <p class="tile-meta"><strong>Funding:</strong> {{ d.fundings }}</p>
+    <span class="tile-more">Continue reading <i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+  </div>
+</article>

@@ -1,0 +1,92 @@
+---
+permalink: /
+layout: default
+---
+{%- assign youtube_channel = socials | where: "name", "YouTube" | first -%}
+{%- assign github = socials | where: "name", "GitHub" | first -%}
+
+<section class="hero">
+  <img class="hero-image" src="/assets/images/cover_pic_4x3.jpg" width="1200" height="900" alt="The members of the Autonomous Multi-Robots Lab with their robots" fetchpriority="high" loading="eager">
+  <div class="hero-text">
+    <h1 class="hero-title">We are the <span class="accent">Autonomous Multi-Robots Lab</span>!</h1>
+    <p>
+      Our main research interests are in navigation, motion planning, learning, and control of autonomous mobile
+      robots, and teams thereof, that interact with other robots and humans in dynamic and uncertain environments.
+    </p>
+    <p>
+      We contribute novel methods and solutions in the areas of motion planning, dynamic vehicle routing,
+      multi-robot coordination, multi-robot learning, task assignment, active perception, formation control,
+      collision avoidance and human-swarm interaction. Building towards the smart industries and cities of the future,
+      we apply these techniques in various fields, including autonomous cars, automated factories, aerial vehicles,
+      autonomous vessels, mobile manipulation and intelligent transportation systems with ride-sharing.
+    </p>
+    <p>
+      You can also read more about some of our research in this
+      <a href="https://www.tudelft.nl/en/stories/articles/obstacles-no-problem-for-smart-robots">TU Delft story</a>.
+    </p>
+  </div>
+</section>
+
+<section class="highlights">
+  <div class="highlights-text">
+    <h2>Research</h2>
+    <p>Our group's research is applied mainly to the following fields:</p>
+    <ul class="area-list">
+      {%- for area in collections.researchAreas %}
+      <li><a href="/research/?area={{ area.data.area_id }}">{{ area.data.title }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p>Watch demos and paper videos on our YouTube playlist, or find our code on <a href="{{ github.url }}">GitHub</a>.</p>
+    <div class="button-row">
+      <a class="btn btn-primary" href="/research/">See all research</a>
+      <a class="btn btn-outline" href="{{ youtube_channel.url }}"><i class="bi bi-youtube" aria-hidden="true"></i> YouTube channel</a>
+    </div>
+  </div>
+  <div class="highlights-video">
+    <iframe src="{{ youtube.embed }}" title="{{ youtube.title | default: 'AMR Lab YouTube playlist' | escape }}"{% if youtube.thumbnail %} data-poster="{{ youtube.thumbnail }}"{% endif %} data-caption="{{ youtube.title | default: 'Play our latest videos' | escape }}" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section class="latest-pubs">
+  <div class="section-head">
+    <h2>Latest publications</h2>
+    <a href="/publications/">See all publications</a>
+  </div>
+  <ul class="latest-pub-list">
+    {%- for p in publications.latestWithImage %}
+    <li class="latest-pub">
+      <img class="latest-thumb" src="{{ p.image }}" alt="" width="240" height="180">
+      <a class="latest-title" href="/publications/#{{ p.id }}" title="{{ p.title | escape }}">{{ p.title }}</a>
+      <span class="latest-meta">{{ p.venue | split: "(" | last | split: ")" | first }}, {{ p.year }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+{%- assign news_total = collections.news | size %}
+<section class="news">
+  <h2>Latest news</h2>
+  <ul class="timeline">
+    {%- for item in collections.news limit: 4 %}
+    <li>
+      <span class="timeline-date">{{ item.data.date | date: "%B %Y" }}</span>
+      <span class="timeline-title">{{ item.data.title }}</span>
+      {{ item.content }}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- if news_total > 4 %}
+  <details class="more">
+    <summary class="btn btn-light"><i class="bi bi-chevron-right" aria-hidden="true"></i> Show all news ({{ news_total }})</summary>
+    <ul class="timeline">
+      {%- for item in collections.news offset: 4 %}
+      <li>
+        <span class="timeline-date">{{ item.data.date | date: "%B %Y" }}</span>
+        <span class="timeline-title">{{ item.data.title }}</span>
+        {{ item.content }}
+      </li>
+      {%- endfor %}
+    </ul>
+  </details>
+  {%- endif %}
+</section>

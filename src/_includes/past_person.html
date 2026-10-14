@@ -1,0 +1,9 @@
+{%- assign d = person.data -%}
+<li>
+  <span class="past-name">{{ d.name }} <span class="past-years">{{ d.joined_date | date: "%Y" }}–{{ d.left_date | date: "%Y" }}</span></span>
+  <span class="past-role">{{ d.title }}{% assign bio = person.content | strip_html | strip %}{% if bio != "" %}: {{ bio }}{% endif %}</span>
+  {%- if d.now_at %}<span class="past-now">Now: {{ d.now_at }}</span>{% endif %}
+  {%- if d.links %}
+  <span class="past-links">{% for link in d.links %}<a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}</span>
+  {%- endif %}
+</li>

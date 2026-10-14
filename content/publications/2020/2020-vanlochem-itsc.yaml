@@ -1,0 +1,33 @@
+title: Anticipatory Vehicle Routing for Same-Day Pick-up and Delivery using Historical Data Clustering
+authors:
+  - J. van Lochem
+  - M. Kronmueller
+  - P. van 't Hof
+  - J. Alonso-Mora
+date: 2020-09-01
+type: conference
+venue: Proc. IEEE Int. Conf. on Intelligent Transportation Systems (ITSC)
+projects: [airlab-ondemand, ara]
+collections: []
+funding: []
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/abstract/document/9294424
+  - pdf: /assets/files/publications/20-vanLochem-ITSC.pdf
+  - video: https://youtu.be/WJ5i-X34idk
+abstract: >-
+  In this paper we address the problem of same-day pick-up and delivery where a set of tasks are
+  known a priori and a set of tasks are revealed during operation. The vehicle routes are
+  precomputed based on the known and predicted requests and adjusted online as new requests are
+  revealed. We propose a novel anticipatory insertion method which incorporates a set of predicted
+  requests to beneficially adjust the routes of a fleet of vehicles in real-time. Requests are
+  predicted based on historical data, which is clustered in advance. We exploit inherent patterns of
+  the demand, which are captured by historical data and include them in a dynamic vehicle routing
+  solver based on heuristics and adaptive large neighborhood search. The proposed method is
+  evaluated using numerical simulations on a variety of real-world problems with up to 1655 requests
+  per day. Their degree of dynamism ranges from 0.70 to 0.93. These instances represent dynamic
+  multi-depot pickup and delivery problems with time windows. The method has shown to require less
+  driven kilometers than comparable methods.
+bibtex: ""

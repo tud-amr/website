@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <section class="footer-lab" aria-label="About the lab">
+      <div class="footer-logos">
+        <a href="/"><img src="/assets/images/amr_logos/logo_amr_big_text.svg" alt="Autonomous Multi-Robots Lab" width="140" height="36" loading="lazy"></a>
+        <a href="https://www.tudelft.nl/en/me/about/departments/cognitive-robotics-cor/"><img src="/assets/images/delft_logos/TUDelft_logo_rgb_and_CoR.svg" alt="TU Delft, Cognitive Robotics" width="150" height="31" loading="lazy"></a>
+      </div>
+      <p>Part of the Department of <a href="https://www.tudelft.nl/en/me/about/departments/cognitive-robotics-cor/">Cognitive Robotics</a>, Faculty of Mechanical Engineering, TU Delft.</p>
+    </section>
+    <nav class="footer-links" aria-label="Footer">
+      <h2>Pages</h2>
+      <ul>
+        {%- for item in navigation %}
+        {%- if item.subpages %}{% for sub in item.subpages %}
+        <li><a href="{{ sub.link }}">{{ sub.name }}</a></li>
+        {%- endfor %}{% else %}
+        <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {%- endif %}
+        {%- endfor %}
+      </ul>
+    </nav>
+    <section class="footer-links" aria-label="Follow and contact">
+      <h2>Follow and contact</h2>
+      <ul>
+        {%- for social in socials %}
+        <li><a href="{{ social.url }}">{% if social.icon %}<i class="{{ social.icon }}" aria-hidden="true"></i> {% endif %}{{ social.name }}</a></li>
+        {%- endfor %}
+        <li><a href="/feed.xml"><i class="bi bi-rss" aria-hidden="true"></i> News feed</a></li>
+      </ul>
+    </section>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {{ "now" | date: "%Y" }} {{ site.author }}, Autonomous Multi-Robots Lab, TU Delft</p>
+      <p><a href="https://github.com/tud-amr/website">Website source on GitHub</a></p>
+    </div>
+  </div>
+</footer>

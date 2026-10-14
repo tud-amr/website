@@ -1,0 +1,29 @@
+title: Economies and diseconomies of scale in on-demand ridepooling systems
+authors:
+  - A. Fielbaum
+  - A. Tirachini
+  - J. Alonso-Mora
+date: 2023-05-01
+type: journal
+venue: Economics of Transportation
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [transportation]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/23-fielbaum-eco.pdf
+abstract: >-
+  We analyse the sources of economies and diseconomies of scale in On-Demand Ridepooling (ODRP),
+  disen- tangling three effects: when demand grows, average costs are reduced due to i) a larger
+  fleet that diminishes waiting and walking times (Mohring Effect), and ii) matching users with more
+  similar routes (Better-matching Effect). A counter-balance force (Extra-detour Effect), occurs
+  when iii) the number of passengers per vehicle in- creases and users face longer detours. At low
+  demand levels, there is little sharing and the Mohring effect pre- vails; as demand grows, more
+  passengers per vehicle push for the Extra-detour Effect to dominate; eventually, vehicles run at
+  capacity, and the Better-matching Effect prevails. The last two effects are specific to ODRP as
+  the routes are not fixed but adapted online. Our simulations show that considering both users’ and
+  operators’ costs, scale economies prevail, and that ODRP with human-driven vehicles and walks
+  allowed has total costs similar to door-to-door systems with driverless vehicles.
+bibtex: ""

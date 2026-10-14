@@ -1,0 +1,35 @@
+title: Dynamic Risk-Aware MPPI for Mobile Robots in Crowds via Efficient Monte Carlo Approximations
+authors:
+  - Elia Trevisan
+  - Khaled A. Mustafa
+  - Godert Notten
+  - Xinwei Wang
+  - Javier Alonso-Mora
+date: 2025-10-18
+type: conference
+venue: IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [trilogy, nwa-act]
+collections: []
+funding: []
+topics: [motion planning]
+image: /assets/images/papers/dra-mppi/icon.png
+note: ""
+links:
+  - web: /paper_websites/dra-mppi
+  - pdf: /assets/files/publications/25-trevisan-iros-dra-mppi.pdf
+abstract: >-
+  Deploying mobile robots safely among humans requires the motion planner to account for the
+  uncertainty in the other agents' predicted trajectories. This remains challenging in traditional
+  approaches, especially with arbitrarily shaped predictions and real-time constraints. To address
+  these challenges, we propose a Dynamic Risk-Aware Model Predictive Path Integral control
+  (DRA-MPPI), a motion planner that incorporates uncertain future motions modelled with potentially
+  non-Gaussian stochastic predictions. By leveraging MPPI's gradient-free nature, we propose a
+  method that efficiently approximates the joint Collision Probability (CP) among multiple dynamic
+  obstacles for several hundred sampled trajectories in real-time via a Monte Carlo (MC) approach.
+  This enables the rejection of samples exceeding a predefined CP threshold or the integration of CP
+  as a weighted objective within the navigation cost function. Consequently, DRA-MPPI mitigates the
+  freezing robot problem while enhancing safety. Real-world and simulated experiments with multiple
+  dynamic obstacles demonstrate DRA-MPPI's superior performance compared to state-of-the-art
+  approaches, including Scenario-based Model Predictive Control (S-MPC), Frenét planner, and vanilla
+  MPPI.
+bibtex: ""

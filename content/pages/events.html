@@ -1,0 +1,47 @@
+---
+title: Events
+permalink: /events/
+redirect_from:
+  - /workshops/
+---
+{%- comment -%}
+  Workshops and events from content/workshops/, split into upcoming and past by date.
+  The site is rebuilt daily, so an event moves to "Past" the day after it happens.
+{%- endcomment -%}
+{%- assign today = "now" | date: "%Y-%m-%d" %}
+{%- assign upcoming = "" | split: "" %}
+{%- assign past = "" | split: "" %}
+{%- for event in collections.workshops %}
+{%- assign day = event.data.date | iso_date %}
+{%- if day >= today %}{% assign upcoming = upcoming | push: event %}{% else %}{% assign past = past | push: event %}{% endif %}
+{%- endfor %}
+
+{%- if upcoming.size > 0 %}
+<h2>Upcoming</h2>
+<ul class="event-list">
+  {%- for event in upcoming reversed %}
+  <li class="event">
+    <span class="event-date"><span class="event-day">{{ event.data.date | date: "%-d" }}</span><span class="event-month">{{ event.data.date | date: "%b %Y" }}</span></span>
+    <div>
+      <h3 class="event-title"><a href="{{ event.url }}">{{ event.data.title }}</a></h3>
+      <p class="event-meta">{{ event.data.venue }}</p>
+      <p class="event-meta">{{ event.data.time }} | {{ event.data.location }}</p>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif %}
+
+<h2>{% if upcoming.size > 0 %}Past{% else %}Past events{% endif %}</h2>
+<ul class="event-list">
+  {%- for event in past %}
+  <li class="event event-past">
+    <span class="event-date"><span class="event-day">{{ event.data.date | date: "%-d" }}</span><span class="event-month">{{ event.data.date | date: "%b %Y" }}</span></span>
+    <div>
+      <h3 class="event-title"><a href="{{ event.url }}">{{ event.data.title }}</a></h3>
+      <p class="event-meta">{{ event.data.venue }}</p>
+      <p class="event-meta">{{ event.data.time }} | {{ event.data.location }}</p>
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

@@ -1,0 +1,30 @@
+title: A message-passing algorithm for multi-agent trajectory planning
+authors:
+  - J. Bento
+  - N. Derbinsky
+  - J. Alonso-Mora
+  - J. Yedidia
+date: 2013-12-01
+type: conference
+venue: Advances in Neural Information Processing Systems (NIPS)
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - arxiv: https://arxiv.org/abs/1311.4527
+  - pdf: /assets/files/publications/13-bento.pdf
+  - video: https://youtu.be/J8Z-7NaadK4
+  - appendix: /assets/files/publications/13-bento-appendix.pdf
+abstract: >-
+  We describe a novel approach for computing collision-free \emph{global} trajectories for p agents
+  with specified initial and final configurations, based on an improved version of the alternating
+  direction method of multipliers (ADMM). Compared with existing methods, our approach is naturally
+  parallelizable and allows for incorporating different cost functionals with only minor
+  adjustments. We apply our method to classical challenging instances and observe that its
+  computational requirements scale well with p for several cost functionals. We also show that a
+  specialization of our algorithm can be used for {\em local} motion planning by solving the problem
+  of joint optimization in velocity space.
+bibtex: ""

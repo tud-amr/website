@@ -1,0 +1,29 @@
+title: Object and Animation Display with Multiple Aerial Vehicles
+authors:
+  - J. Alonso-Mora
+  - M. Schoch
+  - A. Breitenmoser
+  - R. Siegwart
+  - P. Beardsley
+date: 2012-10-01
+type: conference
+venue: Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/6385551
+  - pdf: /assets/files/publications/12-alonsomora-iros.pdf
+  - video: https://youtu.be/f7y7n6n__38
+abstract: >-
+  This paper presents a fully automated method to display objects and animations in 3D with a group
+  of aerial vehicles. The system input is a single object or an animation (sequence of objects)
+  created by an artist. The first stage is to generate physical goal configurations and robot colors
+  to represent the objects with the available number of robots. The run-time system includes
+  algorithms for goal assignment, path planning and local reciprocal collision avoidance that
+  guarantee smooth, fast and oscillation-free motion. The presented algorithms are tested in
+  simulations and verified with real quadrotor helicopters and scale to large robot swarms.
+bibtex: ""

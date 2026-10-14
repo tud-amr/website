@@ -1,0 +1,29 @@
+title: "B-UAVC: Buffered Uncertainty-Aware Voronoi Cells for Probabilistic Multi-Robot Collision Avoidance"
+authors:
+  - H. Zhu
+  - J. Alonso-Mora
+date: 2019-08-01
+type: conference
+venue: Proc. 2nd IEEE International Symposium on Multi-Robot and Multi-Agent Systems (MRS'19)
+projects: [veni, scene-reasoning-team]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8901092
+  - pdf: /assets/files/publications/19-zhu-mrs.pdf
+  - video: https://youtu.be/vVEiaKDqCU0
+abstract: >-
+  This paper presents B-UAVC, a distributed collision avoidance method for multi-robot systems that
+  accounts for uncertainties in robot localization. In particular, Buffered Uncertainty-Aware
+  Voronoi Cells (B-UAVC) are employed to compute regions where the robots can safely navigate. By
+  computing a set of chance constraints, which guarantee that the robot remains within its B-UAVC,
+  the method can be applied to non-holonomic robots. A local trajectory for each robot is then
+  computed by introducing these chance constraints in a receding horizon model predictive
+  controller. The method guarantees, under the assumption of normally distributed position
+  uncertainty, that the collision probability between the robots remains below a specified
+  threshold. We evaluate the proposed method with a team of quadrotors in simulations and in real
+  experiments.
+bibtex: ""

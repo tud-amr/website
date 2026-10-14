@@ -1,0 +1,57 @@
+---
+title: Our Robots and Installations
+permalink: /robots/
+images_carousel:
+- image_path: /assets/images/robots/new_lab_pic_3.png
+  alt: Lab members in the Mobile Robotics Lab arena
+- image_path: /assets/images/robots/lab_arena_drones_payload.jpg
+  alt: Three drones carrying a load together in the arena
+- image_path: /assets/images/robots/lab_arena_mobile_manipulators.jpg
+  alt: Two mobile manipulators reaching towards a table with cups in the arena
+- image_path: /assets/images/robots/lab_arena_drone_racing.jpg
+  alt: Drones racing through gates in the arena, with their flight paths drawn in
+- image_path: /assets/images/robots/lab_arena_top_view_mppi.jpg
+  alt: The arena seen from above, with the paths a robot's MPPI planner considers drawn in
+- image_path: /assets/images/robots/new_lab_pic_1.png
+  alt: Ground robots in the lab
+- image_path: /assets/images/robots/new_lab_pic_4.png
+  alt: The lab with its motion-capture frame
+---
+
+<h2>The Lab</h2>
+<p>
+    The new lab, Mobile Robotics Lab, at CoR is located at the ground floor in the F-wing of the Mechanical Engineering building at TU Delft.
+</p>
+
+<div class="carousel" data-carousel>
+  <div class="carousel-track" tabindex="0" role="region" aria-label="Photos of the lab (use the arrow keys to browse)">
+    {%- for image in images_carousel %}
+    <figure class="carousel-slide"><img src="{{ image.image_path }}" alt="{{ image.alt | default: 'Photo of the lab' }} (photo {{ forloop.index }} of {{ images_carousel.size }})"{% if forloop.first %} loading="eager"{% endif %}></figure>
+    {%- endfor %}
+  </div>
+  <button class="carousel-btn carousel-prev" type="button" aria-label="Previous photo"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+  <button class="carousel-btn carousel-next" type="button" aria-label="Next photo"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+  <div class="carousel-dots"></div>
+</div>
+
+<p>
+    The Mobile Robotics Lab is a state-of-the-art facility designed to push the boundaries of robotics research and development. The lab consist of a 13x7 m aerial 
+    and terrestrial robot arena, and a lot of robots. The arena is equipped with a Vicon motion tracking system, a cutting-edge technology that can track objects with sub-millimeter accuracy. 
+    This high-precision system allows us to monitor and analyze the intricate movements of robots and other objects, providing valuable data for our research. 
+    In addition, the lab also consists of a high-end video recording system. This advanced setup enables us to capture high-quality videos, including slow-motion footage of fast-moving objects.
+    The combination of top-tier technology and innovative research makes the lab a leading hub for cognitive robotics.
+</p>
+
+<h2>Robots</h2>
+{%- assign robots_sorted = collections.robots | sort_data: "type" %}
+{%- assign current_type = "" %}
+{%- for robot in robots_sorted %}
+{%- if robot.data.type != current_type %}
+{%- unless current_type == "" %}</div>{% endunless %}
+{%- assign current_type = robot.data.type %}
+<h3 class="capitalize">{{ current_type }}s</h3>
+<div class="tile-list">
+{%- endif %}
+{% render 'robot_card.html', robot: robot %}
+{%- endfor %}
+</div>

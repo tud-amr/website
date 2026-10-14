@@ -1,0 +1,35 @@
+title: Group-based Distributed Auction Algorithms for Multi-Robot Task Assignment
+authors:
+  - Xiaoshan Bai
+  - Andres Fielbaum
+  - Maximilian Kronmuller
+  - Luzia Knoedler
+  - Javier Alonso-Mora
+date: 2023-04-01
+type: journal
+venue: IEEE Transactions on Automation Science and Engineering (T-ASE)
+projects: [airlab-ondemand, harmony, ara]
+collections: []
+funding: [nsf china, horizon]
+topics: [task planning, multi-robot, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/9781631
+  - pdf: /assets/files/publications/22_Bai_TASE.pdf
+abstract: >-
+  This paper studies the multi-robot task assignment problem in which a fleet of dispersed robots
+  needs to efficiently transport a set of dynamically appearing packages from their initial
+  locations to corresponding destinations within prescribed time-windows. Each robot can carry
+  multiple packages simultaneously within its capacity. Given a sufficiently large robot fleet, the
+  objective is to minimize the robots' total travel time to transport the packages within their
+  respective time-window constraints. The problem is shown to be NP-hard, and we design two
+  group-based distributed auction algorithms to solve this task assignment problem. Guided by the
+  auction algorithms, robots first distributively calculate feasible package groups that they can
+  serve, and then communicate to find an assignment of package groups. We quantify the potential of
+  the algorithms with respect to the number of employed robots and the capacity of the robots by
+  considering the robots' total travel time to transport all packages. Simulation results show that
+  the designed algorithms are competitive compared with an exact centralized Integer Linear Program
+  representation solved with the commercial solver Gurobi, and superior to popular greedy algorithms
+  and a heuristic distributed task allocation method.
+bibtex: ""

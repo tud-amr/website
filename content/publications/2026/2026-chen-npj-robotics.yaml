@@ -1,0 +1,35 @@
+title: Automatic Personalized Limbed Robot Design from Media Inputs
+authors:
+  - Gang Chen
+  - Moji Shi
+  - Yu Xing
+  - Marija Popovic
+  - Javier Alonso-Mora
+  - Lei Zhang
+  - Jiangmiao Pang
+date: 2026-06-09
+type: journal
+venue: npj Robotics
+projects: [secure]
+collections: []
+funding: []
+topics: [automatic robot design]
+image: /assets/images/papers/26-chen-npj-robotics/cover.png
+note: ""
+links:
+  - pdf: /assets/files/publications/26-chen-npj-robotics.pdf
+  - code: https://github.com/g-ch/anything2robot
+abstract: >-
+  Designing limbed robots is a complex, multidisciplinary task that typically requires substantial
+  effort from experienced engineers. In this paper, we present a novel automatic robot design
+  framework based on Decomposition-Optimization-Assembling (DOA) to address this challenge. Our
+  framework enables non-experts to create personalized limbed robot designs from media inputs, such
+  as text and images, within minutes to a few hours. Our system leverages recent advances in
+  generative AI and 3D printing to produce designs that match the descriptions provided in the input
+  media. The output consists of selected motors and 3D-printable mechanical components that can be
+  assembled into a limbed robot. To handle the large design space and intricate details in
+  fabrication and assembly, we formulate and solve a series of optimization problems involving
+  actuators, geometry, and structural density. We validate the proposed system by designing and
+  fabricating a centaur robot based on an image input. Furthermore, we demonstrate the system's
+  versatility and effectiveness through the generation of a wide variety of limbed robot designs.
+bibtex: ""

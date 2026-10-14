@@ -1,357 +1,232 @@
----
-title: none
-permalink: /readme/
----
+# AMR Lab website
 
-# AMR Website Readme
+The website of the Autonomous Multi-Robots Lab (AMR) at TU Delft: **https://autonomousrobots.nl**
 
-The website: https://autonomousrobots.nl/
+It is a static site built with [Eleventy](https://www.11ty.dev/) from plain files: YAML for publications,
+Markdown or HTML with a short header (front matter) for everything else. Pushing to `main` publishes it
+automatically through GitHub Actions; the change is live a few minutes later (see the **Actions** tab).
 
-A new website for our Autonomous Multi-Robot Lab (AMR) at TU Delft. The webiste is built using Jekyll, [Boostrap 5 css](https://getbootstrap.com/docs/5.3/getting-started/introduction/) and hosted on GitHub Pages. It builds automatically when a commit is pushed to the `main` branch. **It takes some minutes** to build and for the changes to be reflected on the website. Check the build progress in actions (github repo).
+**Using an AI agent?** [`CLAUDE.md`](CLAUDE.md) has step-by-step instructions written for agents.
 
-> [!NOTE]  
-> Any file for projects, etc. can be either .md, or .html, just choose the most convenient and maintain the same frontmatter.
+- [Preview the site on your computer](#preview-the-site-on-your-computer)
+- [Check your change](#check-your-change)
+- [Add a publication](#add-a-publication)
+- [Add other content](#add-other-content): people, projects, paper websites, news, research areas, robots, MSc projects, events, talks
+- [Images, videos and files](#images-videos-and-files)
+- [Pages, menu and old URLs](#pages-menu-and-old-urls)
+- [How the site is organised](#how-the-site-is-organised)
+- [Deployment and analytics](#deployment-and-analytics)
 
-> [!NOTE]  
-> The website is still under development. If you find any bugs or have any suggestions, please open an issue or submit a pull request.
+## Preview the site on your computer
 
-- [AMR Website Readme](#amr-website-readme)
-  - [How to preview the website locally](#how-to-preview-the-website-locally)
-  - [How to add a new publication](#how-to-add-a-new-publication)
-  - [Adding a New Project](#adding-a-new-project)
-  - [Adding a New Person](#adding-a-new-person)
-  - [Adding a New Research Area](#adding-a-new-research-area)
-  - [Adding a New News Item](#adding-a-new-news-item)
-  - [Adding a New Robot](#adding-a-new-robot)
-  - [Adding a New MSc project](#adding-a-new-msc-project)
-    - [Finished MSc projects (template for students)](#finished-msc-projects-template-for-students)
-  - [Adding to Vacancies or Education](#adding-to-vacancies-or-education)
-  - [(Rare) Adding a New Page](#rare-adding-a-new-page)
-  - [Some utilities](#some-utilities)
-    - [Linking local files and images in your content](#linking-local-files-and-images-in-your-content)
-      - [The easy way](#the-easy-way)
-      - [The manual way](#the-manual-way)
-  - [TO DO](#to-do)
+You need [Docker](https://docs.docker.com/get-docker/). From the repository folder:
 
-## How to preview the website locally
-
-We set up a GitHub action that builds the website upon pushing to the `main` branch. However, if you want to preview the website locally before pushing, you can do so by following these steps:
-
-1. Clone this repository
-
-2. Install build dependencies
-    - [Docker](https://docs.docker.com/get-docker/)
-    - [Docker Compose](https://docs.docker.com/compose/install/)
-
-3. Run the following command in the root directory of the repository:
-
-    ```bash
-    docker compose up
-    ```
-
-This will launch the website at `http://localhost:4000` with live-reload enabled. Hence, you should be able to make changes to any file and they should appear automatically on your local instance upon saving that file.
-
-## How to add a new publication
-
-Each publication in the `_data/publications.json` file is represented as a JSON object. Juts add yours (at the top for example, they then order by date) and commit. It has the following fields:
-
-- `title`: The title of the publication. This should be a string.
-
-- `authors`: An array of strings, where each string is the name of an author of the publication.
-
-- `date`: The date of the publication in "YYYY-MM-DD" format. If you don't know the day or month, just put any (e.g 2023-01-01).
-
-- `type`: The type of the publication (available: *"journal", "conference", "workshop", "thesis", "other"*.).
-
-- `venue`: The venue where the publication was published (e.g., the name of a journal or conference). Do not put the year.
-
-- `links`: A dictionary, where each object represents a link related to the publication. Each link object should have a name (e.g., "web":, "PDF": ) and the associated URL.
-
-- `note`: Any additional notes about the publication (e.g. "Nominated for best bets paper award"). This field is optional. is added after the date in the publication entry.
-
-- `image`: (OPTIONAL) The path (or url) to an image file that represents the publication. This image is displayed on the publication's card on the website. **RECOMMENDED: The image should be square (same width and height)**. If you don't have an image, don't add this field.
-
-- `belongs_to_projects`: An array of strings, where each string is the id of a project that the publication is associated with. The publication will then display in that project's page. If the publication is not associated with any project, use "note": null. Project ids are defined in each `_projects/` entry. Currently: *"airlab-manipulation", "airlab-ondemand", "drones-emergency", "game-theoretic-mp", "ridepooling", "scene-reasoning-team", "safevru", "harmony", "interact", "trilogy".*
-
-- `abstract`: The abstract of the publication, as a long string.
-
-Here's an example of what a publication object might look like:
-
-```json
-{
-    {
-        "title": "Learning to Play Trajectory Games Against Opponents with Unknown Objectives",
-        "authors": [
-            "X. Liu",
-            "L. Peters",
-            "J. Alonso-Mora"
-        ],
-        "date": "2023-04-01",
-        "type": "journal",
-        "venue": "Proceedings of IEEE Robotics and Automation Letters (RA-L)",
-        "links": [
-            {
-                "web": "https://xinjie-liu.github.io/projects/game/"
-            },
-            {
-                "PDF": "/assets/files/publications/liu2022ral.pdf"
-            },
-            {
-                "video": "https://www.youtube.com/watch?v=f0KJuCC1Xyo"
-            }
-        ],
-        "image": "/assets/images/publications/liu2022ral.png",
-        "note": null,
-        "belongs_to_projects": ["game-theoretic-mp", "interact"],
-        "abstract": "Abstract: Many autonomous agents, such a..."
-    },
-}
+```bash
+docker compose up
 ```
 
-## Adding a New Project
+Open http://localhost:8080. The page reloads by itself when you save a file. Stop with `Ctrl+C`.
 
-To add a new project to the website, you need to create a new Markdown file in the `_projects/` directory. The easiest is just to copy another project and change the data for yours.The file should start with a YAML frontmatter block that looks like this:
+If you have Node.js 22 or newer installed, `npm install` once and then `npm run dev` does the same without Docker.
+
+## Check your change
+
+Every pull request is checked automatically, and the result shows on the pull request. To run the same
+checks on your computer before pushing:
+
+```bash
+docker compose run --rm test        # or, with Node installed: npm test
+```
+
+This checks, in order:
+
+1. **Content**: every file has the fields it needs, IDs point at things that exist, and local files exist.
+   Errors name the file and the problem, e.g. `content/people/x.md: \`joined_date\` is required`.
+2. **Build**: the site builds.
+3. **URLs**: every page and file the old site had is still there (people link to them from papers and slides).
+4. **Links**: every link inside the site works.
+5. **Browser tests**: search and filters, menus, no page wider than a phone screen, page weight limits,
+   accessibility of the main pages.
+
+To see what a page looks like on a phone, tablet and desktop:
+
+```bash
+docker compose run --rm test npm run shots -- /publications/ /people/
+```
+
+The screenshots land in `.shots/`. Use `--key` for the main pages, or `--all` for every page.
+
+## Add a publication
+
+Each paper is one file: `content/publications/<year>/<year>-<first author>-<venue>.yaml`,
+for example `content/publications/2025/2025-degroot-ijrr.yaml`.
+
+**From BibTeX** (easiest):
+
+```bash
+docker compose run --rm test npm run add-pub -- paper.bib --project interact --pdf /assets/files/publications/25-degroot-ijrr.pdf
+```
+
+To get BibTeX from a DOI: `curl -LH "Accept: application/x-bibtex" https://doi.org/<doi>`.
+
+**By hand**: copy [`content/publications/_template.yaml`](content/publications/_template.yaml) or any
+existing paper, and change the values. Keep every field, even when empty (`[]` or `""`), so all files
+look the same.
+
+| Field | What to write |
+| --- | --- |
+| `title` | The paper title. |
+| `authors` | One author per line, as they should appear. |
+| `date` | `YYYY-MM-DD`. Only the year is shown; use any day if unsure. The file must be in that year's folder. |
+| `type` | `journal`, `conference`, `workshop`, `thesis` or `other`. Sets the J/C/W/T/O number. |
+| `venue` | Journal or conference name, without the year. |
+| `projects` | IDs of the lab projects the paper belongs to, e.g. `[interact, trilogy]`. These are the `project_id` of a file in `content/projects/`. The paper then shows on that project's page. |
+| `collections` | Informal groups, e.g. a person's line of work, listed in `content/_data/paper_collections.yaml`. A collection can be shared as `/publications/?collection=<id>` and shown on paper websites. |
+| `funding` | Funding sources, as free text, e.g. `[nwo]`. |
+| `topics` | Topics, e.g. `[motion planning, multi-robot]`. |
+| `image` | Optional picture or `.mp4` shown next to the paper (square works best). |
+| `note` | Optional, e.g. `Best Paper Award`. |
+| `links` | One per line, `- <button text>: <url>`, e.g. `- pdf: /assets/files/publications/25-degroot-ijrr.pdf`. |
+| `abstract` | The abstract. Long text can continue on the next lines after `abstract: >-`. |
+| `bibtex` | Optional. When filled in, the paper gets a "cite" button. |
+
+PDFs go in `assets/files/publications/`, named like `25-degroot-ijrr.pdf`.
+
+**Create a collection** by adding two lines to `content/_data/paper_collections.yaml`:
 
 ```yaml
----
-title: "INTERACT: Intuitive Interaction for Robots among Humans"
-project_id: interact
-belongs_to_areas: [social-robots, mobile-manipulation]
-date: 2023-01-01
-# end_date: 2028-01-01 # end date if ended, approximated if not sure.
-description: >-
-  In this project, interactions of mobile robots and humans is key...
-image: /assets/images/projects/interact/INTERACT_picture.png
-links:
-    - name: Project Website
-      url: "https://..."
-    - name: "Github: multi-agent fabrics"
-      url: "https://github.com/tud-amr/multi-robot-fabrics"
-fundings: This project is funded the ERC Starting Grant project "Intuitive Interaction for Humans among Robots (INTERACT)". 
-people:
-    - name: Saray Bakker 
-    - name: Andreu Matoses Gimenez
-    - name: Dr. Clarence Chen
-    - name: Prof. Javier Alonso-Mora
-      extra_info: Autonomous Multi-Robot Lab (AMR) TU Delft
-    - name: Prof. Wendelin Bohmer 
-      extra_info: Key collaborator.
----
-# Here you put the main body of the page, in markdown. You can also mix in html, or change this .md to .html
-## About the Project...
+my-group-id:
+  title: Shown as the filter name
 ```
 
-Here's what each field means:
+## Add other content
 
-- `title`: The title of the project.
+Copy an existing file in the same folder and change it. The header between the `---` lines holds the
+fields; below it goes the text, in Markdown (or HTML).
 
-- `project_id`: A unique identifier for the project. This is used by publications to associate themselves with this project. Currently available: *"autonomous-vehicles", "entertainment", "flying-robots", "mobile-manipulation", "social-robots", "transportation"*
+| What | Folder | Shows up on | Required fields |
+| --- | --- | --- | --- |
+| Person | `content/people/` | People | `name`, `title`, `type`, `joined_date` |
+| Project | `content/projects/` | Research, and its own page `/projects/<file>.html` | `title`, `project_id`, `belongs_to_areas`, `date`, `description`, `image`, `fundings`, `people` |
+| Paper website | `content/paper-websites/` | `/paper_websites/<file>.html` | `title`, `authors`, `affiliations`, `release_date`, `links` |
+| News | `content/news/` | Home page | `title`, `date` |
+| Research area | `content/research-areas/` | Research filter and home page | `title`, `subtitle`, `area_id` |
+| Robot | `content/robots/` | Robots | `name`, `subtitle`, `type`, `image`, `used_in_projects` |
+| Available MSc project | `content/msc-available/` | Education > MSc projects | `title`, `direct_supervisors`, `display` |
+| Finished MSc project | `content/msc-finished/` | Master's thesis projects, and its own page | `title`, `authors`, `affiliations`, `end_date`, `description`, `cover_image` |
+| Event or workshop | `content/workshops/` | Events | `title`, `venue`, `location`, `date`, `time` |
+| Recorded talk | `content/talks/` | Education | `title`, `date`, `speaker`, `recording` |
 
-- `belongs_to_areas`: A list of area IDs that this project belongs to.
+Notes per type:
 
-- `date`: The start date of the project. This is used for display purposes and for ordering projects on the website.
+- **People**: `type` is `professor`, `post-doc`, `phd-candidate`, `engineer` or `phd-visitor`. Use a square
+  `image`. Add `left_date` when someone leaves: they move to *Past members* (add `now_at` if you like).
+- **Projects**: `belongs_to_areas` uses the `area_id` of research areas. Add `end_date` when it ends.
+  Publications appear on the project page by listing its `project_id` in their `projects`.
+- **Paper websites**: `links` are the buttons under the title (`name`, `url`, optional `icon` from
+  [Bootstrap Icons](https://icons.getbootstrap.com/), e.g. `bi-github`; leave out `url` for "coming soon").
+  List related papers at the bottom with:
+  ```yaml
+  related:
+    projects: [trilogy]          # all papers of these projects
+    collections: [saraypapers]   # all papers in these collections
+    papers: [2025-degroot-ijrr]  # these papers (file names without .yaml)
+  ```
+  Add `hidden: true` to keep a page out of the paper-websites list and search engines.
+- **Available MSc projects**: give `proposal_document` (a PDF in `assets/files/student_projects/`) or write
+  the proposal below the header. `display: false` hides it from the table.
+- **Finished MSc projects**: copy an existing one in `content/msc-finished/`. To send visitors to a paper
+  website instead, add `redirect_to: /paper_websites/<name>`.
+- **Events**: most workshop pages are complete, standalone HTML documents with their own styles. Add
+  `layout: page` to use the normal site layout instead.
+- Math works on paper websites and MSc pages (`math: true` turns it on elsewhere): `$x^2$` inline, `$$x^2$$`
+  on its own line. Define LaTeX shortcuts for a page in its header:
+  ```yaml
+  math_macros:
+    '\qdot': '\dot{\boldsymbol{q}}'
+  ```
+  Math is drawn with KaTeX (fast, small). A page that needs numbered equations with `\label`/`\eqref`
+  can switch to MathJax with `math_engine: mathjax` in its header (see `pumafabrics-details`).
 
-- `end_date`: (optional, just comment or remove if not applicable) The end date of the project. This is used for display purposes.
+## Images, videos and files
 
-- `description`: A description of the project. This is displayed on the project's card on the website.
+Put files in `assets/` and link them with a path starting with `/assets/`:
 
-- `image`: The path (or url) to an image file that represents the project. This image is displayed on the project's card on the website.
+- images: `assets/images/<section>/<name>/`, e.g. `assets/images/papers/codi/`
+- PDFs: `assets/files/publications/` or `assets/files/student_projects/`
 
-- `links`: A list of links related to the project. Each link should have a `name` and a `url`.
-
-- `fundings`: Information about the project's funding sources.
-
-- `people`: A list of people involved in the project. Each person should have a `name`, and can optionally have `extra_info` about their role or affiliation.
-
-## Adding a New Person
-
-To add a new person to the website, you need to create a new Markdown file in the `_people/` directory. The easiest is just to copy another person and change the data for yours.The file should start with a YAML frontmatter block that looks like this:
-
-```yaml
----
-name: Andreu Matoses Gimenez
-title: PhD Candidate
-type: phd-candidate
-joined_date: 2023-06-01
-image: https://andreumatoses.github.io/images/profile.jpg
-preferred_link: https://andreumatoses.github.io/
-links:
-    - name: Website
-      url: "https://andreumatoses.github.io/"
-    - name: Google Scholar
-      url: "https://scholar.google.com/citations?user=JydqDdEAAAAJ&hl=en&inst=6173373803492361994&oi=ao"
-    - name: Contact
-      url: "https://www.tudelft.nl/staff/j.alonsomora/"
----
-```
-
-Here's what each field means:
-
-- `name`: The person's name.
-
-- `title`: The title that shows below the person's name on the website.
-
-- `type`: The person's role in the team (e.g., *"post-doc", "phd-candidate", "professor", "engineer"*).
-
-- `joined_date`: The date when the person joined the team.
-
-- `left_date`: (optional, comment if not) The date when the person left the team. If you add a left date, the member will be moved to the past members section and the image field will not be used.
-
-- `image`: The URL or path to an image file that represents the person. This image is displayed on the person's card on the website. **IMPORTANT: The image should be square (same width and height)**.
-
-- `preferred_link`: The URL that you want to be linked from the person's name (in projects, authors). This field is optional. (hasn't been implemented yet)
-
-- `links`: A list of links related to the person. Each link should have a `name` and a `url`.
-
-## Adding a New Research Area
-
-Straight forward, just add a new file in the `_areas/` directory. The file should start with a YAML frontmatter block that looks like this:
-
-```yaml
----
-title: Social Robots
-subtitle: Among Humans | Motion Planners | Interaction | Social Preferences
-area_id: social-robots # You add this ID in the project's front matter to associate it with this research area.
-# image: # Currently not used. Didn't see the use.
----
-The vision of ground robots seamlessly ...
-```
-
-## Adding a New News Item
-
-Straight forward, just add a new file in the `_news/` directory. The file should start with a YAML frontmatter block, followed by the content, that looks like this:
-
-```yaml
----
-title: Workshop on Human Multi-Robot Interaction at IROS 2023
-date: 2023-09-01
----
-We are co-organizing the Workshop on Human Multi-Robot Interaction at IROS 2023. ... 
-```
-
-## Adding a New Robot
-
-Straight forward, just add a new file in the `_robots/` directory. The file should start with a YAML frontmatter block that looks like this:
-
-```yaml
----
-name: Jackal   
-subtitle: Differential-drive robotic research platform from Clearpath with custom perception pipeline.
-type: ground robot # The type of robot: ground robot, flying robot, manipulator, mobile manipulator
-image: /assets/images/robots/jackal.jpg
-used_in_projects: [harmony, drones-emergency, ridepooling, scene-reasoning-team] # List of project IDs, separated by commas.
----
-
-Hi! I am Jackal...
-```
-
-## Adding a New MSc project
-
-A new master thesis proposal can be added in the folder `/_msc_projects_available`. The file should start with a YAML frontmatter block that looks like this:
-
-```yaml
-title: MSc Project Example about the development of a new algorithm for the planning and control 
-direct_supervisors: 
-    - name: John Doe
-      url: "/" #Optional, remove if not
-# If you want to use this webiste as the proposal document, comment the proposal_document, just write in the body of the document with markdown
-proposal_document: /assets/files/student_projects/Brochure_thesis_jam.pdf
-display: true # Do you want to display this project in the table? (true/false)
----
-```
-
-You may add more than one supervisor, and optionally a link so your name is clickable. The boolean `display` is to decide if the project is displayed in the available master thesis table.
-
-The proposal document can be a path to a pdf, or you can comment the variable and can write the proposal in the body of the document with markdown. You may use latex style math in the body if the document , such as $ \alpha = \beta $.
-
-### Finished MSc projects (template for students) 
-When a student finishes, they can create a small website for the project, which will also help prospect students to see what their colleagues have done, and for us to keep track. The template is modeled after the typical website you would see for papers nowadays. The html/.md file can be added in `/_msc_projects_finished`.
-
-The template to give to students is [here](https://github.com/tud-amr/msc_thesis_website_template). An example of how it looks is [here](https://andreumatoses.github.io/amr-website-new/msc_projects_finished/) 
-
-## Adding to Vacancies or Education
-
-Directly edit the corresponding markdown file in the root directory. Should be very straightforward.
-
-## (Rare) Adding a New Page
-
-To add a new page, first create a new Markdown file in the root directory. The file should start with a YAML frontmatter block that looks like this:
-
-```yaml
----
-title: Vacancies
-permalink: /vacancies/
----
-```
-
-By default it will use the page layout, which contains a title and a content section (plus all the basic components such as navbar, footer, etc..). If you want to use a different layout, you can specify it in the frontmatter block. 
-
-Then to make the page accessible from the navbar, you need to add it to the `_data/navbar.yml` file. Just add a new entry to the list, with the title and the URL (the same as the `permalink` in the frontmatter block).
-
-## Some utilities
-
-### Linking local files and images in your content
-
-#### The easy way
-
-You can use the following liquid tag to use the `include` fix_link.html, which will append whatever is necessary to the link. For example:
+In Markdown or HTML:
 
 ```html
-<a href="{% include fix_link.html link='/assets/files/student_projects/Brochure_thesis_jam.pdf' %}">
-
-<img class="img-fluid" src="{% include fix_link.html link='/assets/images/msc_projects/msc_project_template/hackathon-team.jpg' %}" alt="Image 1">
-
-<img class="img-fluid" src="{% include fix_link.html link=image_variable.link %}" alt="Image 1">
-```
-Additionally, if you want to add a grid of images that distibues equally `n_columns`, you can use the following liquid tag:
-
-```md
-{% include gallery.html images=image_list n_columns=3 %}
+<img src="/assets/images/papers/codi/front-figure.jpg" alt="What the image shows">
+<a href="/assets/files/publications/25-degroot-ijrr.pdf">PDF</a>
 ```
 
-Where image_list is an array of image links, and n_columns is the number of columns you want to distribute the images. The image_list can be defined in the front matter of the file (cleaner), or in the liquid tag itself with this trick.
+Write paths as they are, starting with `/assets/`. The old `fix_link` include and `relative_url` filter are
+no longer needed; the content check points them out if they appear.
 
-```md
-{% assign image_list = "/assets/images/msc_projects/msc_project_template/hackathon-team.jpg,/assets/images/msc_projects/msc_project_template/hackathon-team.jpg,/assets/images/msc_projects/msc_project_template/hackathon-team.jpg"  | split: ',' %}
+What the build does for you:
+
+- **Images** (PNG, JPEG, WebP) get smaller WebP copies in several sizes, and the browser picks the right one.
+  Images below the first screen load only when scrolled to. Still, keep originals reasonable: under 2 MB
+  and at most about 2000 px wide.
+- **Videos** with `autoplay` play only while visible on screen. Keep them short and compressed
+  (H.264 MP4, ideally under 5 MB). The repository is already large; every file stays in its history.
+- **YouTube** embeds (`<iframe src="https://www.youtube.com/embed/...">`) become a click-to-play preview
+  that loads YouTube only when clicked, from the privacy-friendly `youtube-nocookie.com`.
+
+A grid of images: `{% render 'gallery.html', images: image_list, n_columns: 3 %}`, with
+`{% assign image_list = "/assets/images/a.jpg,/assets/images/b.mp4" | split: "," %}` before it.
+
+## Pages, menu and old URLs
+
+- Top-level pages are in `content/pages/`. Each has a `permalink` (its URL) in the header.
+- The menu is `content/_data/navigation.yaml`.
+- Footer links are `content/_data/socials.yaml`; site title and contact are `content/_data/site.yaml`.
+- **Never break an old URL**: papers and slides link to them. When moving a page, list its old address
+  in the new page's header (`redirect_from: [/old/path.html]`). For an old URL with no page any more,
+  add it to `content/_data/redirects.yaml`. The URL check will tell you if something went missing.
+
+## How the site is organised
+
+```
+content/                 everything you edit
+  publications/<year>/   one YAML file per paper (+ _template.yaml)
+  people/ projects/ paper-websites/ news/ research-areas/ robots/
+  msc-available/ msc-finished/ workshops/ talks/
+  pages/                 home, research, publications, people, ... (their URL is in `permalink`)
+  _data/                 site settings, menu, collections, patents, redirects
+assets/                  images, videos, PDFs (URLs never change)
+src/                     site code: layouts, includes, CSS, JavaScript, build helpers
+scripts/                 checks, screenshots, add-pub, migration and baseline tools
+tests/                   browser tests (e2e/) and the record of the old site (baseline/)
+eleventy.config.js       build configuration
 ```
 
-#### The manual way
+The look is one stylesheet, `src/css/site.css`, and one script, `src/js/site.js`; there is no CSS
+framework. Paper pages written for the old Bootstrap site keep working: the stylesheet includes the
+Bootstrap classes they use.
 
-Github pages makes it a bit annoying to link to local (without the http://...) files and images. The easiest way is to put them in the `assets/...` directory. Then you can link to them using the `site.baseurl` variable to append to the path. For example, to link to the file `assets/files/publications/liu2022ral.pdf`, you can use the following markdown:
+## Deployment and analytics
 
-```markdown
-[Link to the PDF]({{ '/assets/files/publications/23-wilde-ral.pdf' | relative_url}})
-```
-[Link to the PDF]({{ '/assets/files/publications/23-wilde-ral.pdf' | relative_url}})
+`.github/workflows/deploy.yml` builds and publishes `main` to GitHub Pages, and rebuilds daily.
+`.github/workflows/ci.yml` checks pull requests; `.github/workflows/links.yml` checks external links
+weekly and opens an issue when some are broken.
 
-Images are the same (put the html in the markdown file as is), just append the `relative_url` variable:
+One-time repository settings (by an admin):
 
-```markdown
-<div class="image-div mb-3 d-flex justify-content-center">
-    <img src="{{ '/assets/images/cover_pic_4x3.png' | relative_url}}" class="img-fluid" width="600" alt="lab">
-</div>
-```
-<div class="image-div mb-3 d-flex justify-content-center">
-    <img src="{{ '/assets/images/cover_pic_4x3.png' | relative_url}}" class="img-fluid" width="600" alt="lab">
-</div>
+1. **Settings > Pages > Build and deployment > Source: GitHub Actions.** The custom domain
+   `autonomousrobots.nl` stays as it is.
+2. **Analytics (optional).** The site uses [GoatCounter](https://www.goatcounter.com): no cookies, no
+   personal data, so no consent banner is needed. Create a free account, then set
+   `goatcounter: <your code>` in `content/_data/site.yaml`.
+3. **Metrics page for the lab (optional).** A page with visitor numbers, at a secret address, so people do
+   not need a GoatCounter account. In GoatCounter, create an API key that can read statistics. In
+   **Settings > Secrets and variables > Actions**, add:
+   - variable `GOATCOUNTER_SITE`: your GoatCounter code;
+   - secret `GOATCOUNTER_TOKEN`: the API key;
+   - secret `STATS_PATH`: a hard-to-guess path, e.g. `stats-7f3k9q2m`.
 
-## TO DO
-
-- [x] Add new MSc projects in the table. Additionally, maybe create a better layout to find the table. Ask if for each new proposal, we should have a .md file or just add it to the table and link a pdf.
-- [x] Fix the pictures of the robots in group/robots page to the newer ones. Also, make them centered when they are in phone mode. 
-- [ ] Add images to the news items.
-- [ ] Maybe add a way to create websites for the papers easily, similar to the ones for finished master thesis
-- [x] Add images of the lab on the robot page, probably a carousel of images would be better 
-- [x] Add a small menu in the research page to go direclty to each area. IN the index, link the areas to the proper area place in the page.
-- [ ] Add link in the index for github, and maybe a github page for repos
-- [x] Add funding source , title, date, for each project entry.
-- [x] Make javier entry in people like the other, with collapse long bio.
-- [ ] add visitor tab in people page
-- [x] order the publications, within the same year, first the journal, then the conferences, then the workshops, then the thesis, then the others.
-- [ ] Add a way to filter by project tags in the publications page.
-- [ ] IN the publications: Journals says: In.., For conferences: In Proc of...
-- [x] Reduce white space between publication entries in the publication page. Make buttons smaller.
-- [x] Make the old link /education_projects redirect to the education page (as students have this old link) jekyll-redirect-from plugin
-- [x] Table for available projects: Filed: Title, Direct supervisor, 
-- [x] Move the link to brochure of master student projects tot he master thesis
-- [ ] Make the projects sort by area, no duplicates
+   After the next deploy, the page is at `https://autonomousrobots.nl/<STATS_PATH>/`, updated daily. It
+   is not linked, not in the sitemap and asks search engines not to index it. Anyone with the link can
+   see it, so share it only within the lab.

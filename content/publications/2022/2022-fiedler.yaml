@@ -1,0 +1,36 @@
+title: "Large-scale online ridesharing: the effect of assignment optimality on system performance"
+authors:
+  - David Fiedler
+  - Michal Čertický
+  - Javier Alonso-Mora
+  - Michal Pěchouček
+  - Michal Cap
+date: 2022-12-04
+type: journal
+venue: Journal of Intelligent Transportation Systems
+projects: [ridepooling]
+collections: []
+funding: []
+topics: [transportation, task planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/22-fiedler.pdf
+abstract: >-
+  Mobility-on-demand (MoD) systems consist of a fleet of shared vehicles that can be hailed for
+  one-way point-to-point trips. The total distance driven by the vehicles and the fleet size can be
+  reduced by employing ridesharing, i.e., by assigning multiple passengers to one vehicle. However,
+  finding the optimal passenger-vehicle assignment in an MoD system is a hard combinatorial problem.
+  In this work, we demonstrate how the VGA method, a recently proposed systematic method for
+  ridesharing, can be used to compute the optimal passenger-vehicle assignments and corresponding
+  vehicle routes in a massive-scale MoD system. In contrast to existing works, we solve all
+  passenger-vehicle assignment problems to optimality, regularly dealing with instances containing
+  thousands of vehicles and passengers. Moreover, to examine the impact of using optimal ridesharing
+  assignments, we compare the performance of an MoD system that uses optimal assignments against an
+  MoD system that uses assignments computed using insertion heuristic and against an MoD system that
+  uses no ridesharing. We found that the system that uses optimal ridesharing assignments subject to
+  the maximum travel delay of 4 minutes reduces the vehicle distance driven by 57% compared to an
+  MoD system without ridesharing. Furthermore, we found that the optimal assignments result in a 20%
+  reduction in vehicle distance driven and 5% lower average passenger travel delay compared to a
+  system that uses insertion heuristic.
+bibtex: ""

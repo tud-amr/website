@@ -1,0 +1,32 @@
+title: Independent vs. Joint Estimation in Multi-Agent Iterative Learning Control
+authors:
+  - A. Schoellig
+  - J. Alonso-Mora
+  - R. D'Andrea
+date: 2010-12-01
+type: conference
+venue: Proc. of the Conf. on Decision and Control (CDC)
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/5717888
+  - pdf: /assets/files/publications/10-schollig-cdc.pdf
+abstract: >-
+  This paper studies iterative learning control (ILC) in a multi-agent framework, wherein a group of
+  agents simultaneously and repeatedly perform the same task. The agents improve their performance
+  by using the knowledge gained from previous executions. Assuming similarity between the agents, we
+  investigate whether exchanging information between the agents improves an individual's learning
+  performance. That is, does an individual agent benefit from the experience of the other agents? We
+  consider the multi-agent iterative learning problem as a two-step process of: first, estimating
+  the repetitive disturbance of each agent; and second, correcting for it. We present a comparison
+  of an agent's disturbance estimate in the case of (I) independent estimation, where each agent has
+  access only to its own measurement, and (II) joint estimation, where information of all agents is
+  globally accessible. We analytically derive an upper bound of the performance improvement due to
+  joint estimation. Results are obtained for two limiting cases: (i) pure process noise, and (ii)
+  pure measurement noise. The benefits of information sharing are negligible in (i). For (ii), a
+  performance improvement is observed when a high similarity between the agents is guaranteed.
+bibtex: ""

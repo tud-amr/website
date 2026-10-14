@@ -1,0 +1,37 @@
+title: >-
+  Decentralized Probabilistic Multi-Robot Collision Avoidance Using Buffered Uncertainty-Aware
+  Voronoi Cells
+authors:
+  - H. Zhu
+  - B. Brito
+  - J. Alonso-Mora
+date: 2022-01-01
+type: journal
+venue: Autonomous Robots (AURO)
+projects: [veni, scene-reasoning-team]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s10514-021-10029-2
+  - pdf: /assets/files/publications/22_zhu_auro.pdf
+  - code: https://github.com/tud-amr/mrca_vc
+  - video: https://youtu.be/5F3fjjgwCSs
+abstract: >-
+  In this paper, we present a decentralized and communication-free collision avoidance approach for
+  multi-robot systems that accounts for both robot localization and sensing uncertainties. The
+  approach relies on the computation of an uncertainty-aware safe region for each robot to navigate
+  among other robots and static obstacles in the environment, under the assumption of
+  Gaussian-distributed uncertainty. In particular, at each time step, we construct a
+  chance-constrained buffered uncertainty-aware Voronoi cell (B-UAVC) for each robot given a
+  specified collision probability threshold. Probabilistic collision avoidance is achieved by
+  constraining the motion of each robot to be within its corresponding B-UAVC, i.e. the collision
+  probability between the robots and obstacles remains below the specified threshold. The proposed
+  approach is decentralized, communication-free, scalable with the number of robots and robust to
+  robots’ localization and sensing uncertainties. We applied the approach to single-integrator,
+  double-integrator, differential-drive robots, and robots with general nonlinear dynamics.
+  Extensive simulations and experiments with a team of ground vehicles, quadrotors, and
+  heterogeneous robot teams are performed to analyze and validate the proposed approach.
+bibtex: ""

@@ -1,0 +1,38 @@
+{
+  "name": "amr-website",
+  "private": true,
+  "description": "Website of the Autonomous Multi-Robots Lab (AMR), TU Delft: https://autonomousrobots.nl",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "eleventy --serve --port=8080",
+    "build": "eleventy",
+    "validate": "node scripts/validate.mjs",
+    "check:urls": "node scripts/check-urls.mjs",
+    "check:links": "node scripts/check-links.mjs",
+    "test:e2e": "playwright test",
+    "test": "npm run validate && npm run build && npm run check:urls && npm run check:links && npm run test:e2e",
+    "check": "npm test",
+    "shots": "node scripts/shots.mjs",
+    "add-pub": "node scripts/add-pub.mjs",
+    "compare-text": "node scripts/compare-text.mjs"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "3.1.2",
+    "@11ty/eleventy-img": "6.0.4",
+    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.0",
+    "bootstrap-icons": "1.11.3",
+    "gray-matter": "4.0.3",
+    "js-yaml": "4.1.0",
+    "katex": "0.16.11",
+    "markdown-it": "14.1.0",
+    "mathjax": "3.2.2",
+    "sharp": "0.33.5"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.0",
+    "@playwright/test": "1.48.0"
+  }
+}

@@ -1,0 +1,29 @@
+title: Multi-Robot System for Artistic Pattern Formation
+authors:
+  - J. Alonso-Mora
+  - A. Breitenmoser
+  - M. Rufli
+  - R. Siegwart
+  - P. Beardsley
+date: 2011-05-01
+type: conference
+venue: Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/5980269
+  - pdf: /assets/files/publications/11-alonsomora.pdf
+  - video: https://youtu.be/giPxyQ9do-E
+abstract: >-
+  This paper describes work on multi-robot pattern formation. Arbitrary target patterns are
+  represented with an optimal robot deployment, using a method that is independent of the number of
+  robots. Furthermore, the trajectories are visually appealing in the sense of being smooth,
+  oscillation free, and showing fast convergence. A distributed controller guarantees collision free
+  trajectories while taking into account the kinematics of differentially driven robots.
+  Experimental results are provided for a representative set of patterns, for a swarm of up to ten
+  physical robots, and for fifty virtual robots in simulation.
+bibtex: ""

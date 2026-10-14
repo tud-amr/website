@@ -1,0 +1,36 @@
+title: "With Whom to Communicate: Learning Efficient Communication for Multi-Robot Collision Avoidance"
+authors:
+  - A. Serra-Gomez
+  - B. Brito
+  - H. Zhu
+  - J. J. Chung
+  - J. Alonso-Mora
+date: 2020-10-01
+type: conference
+venue: Proc. IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [scene-reasoning-team]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - arxiv: https://arxiv.org/abs/2009.12106
+  - pdf: /assets/files/publications/20-serra-iros.pdf
+  - video: https://youtu.be/5emyHVOwHd4
+abstract: >-
+  Decentralized multi-robot systems typically perform coordinated motion planning by constantly
+  broadcasting their intentions as a means to cope with the lack of a central system coordinating
+  the efforts of all robots. Especially in complex dynamic environments, the coordination boost
+  allowed by communication is critical to avoid collisions between cooperating robots. However, the
+  risk of collision between a pair of robots fluctuates through their motion and communication is
+  not always needed. Additionally, constant communication makes much of the still valuable
+  information shared in previous time steps redundant. This paper presents an efficient
+  communication method that solves the problem of "when" and with "whom" to communicate in
+  multi-robot collision avoidance scenarios. In this approach, every robot learns to reason about
+  other robots' states and considers the risk of future collisions before asking for the trajectory
+  plans of other robots. We evaluate and verify the proposed communication strategy in simulation
+  with four quadrotors and compare it with three baseline strategies: non-communicating,
+  broadcasting and a distance-based method broadcasting information with quadrotors within a
+  predefined distance.
+bibtex: ""

@@ -1,0 +1,28 @@
+title: Viewpoint and Trajectory Optimization for Animation Display with a Large Group of Aerial Vehicles
+authors:
+  - M. Schoch
+  - J. Alonso-Mora
+  - R. Siegwart
+  - P. Beardsley
+date: 2014-06-01
+type: conference
+venue: Proc. of the IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/6907548
+  - pdf: /assets/files/publications/14-schoch.pdf
+  - video: https://youtu.be/f7y7n6n__38
+abstract: >-
+  This paper presents a method to optimize the position and trajectory of each aerial vehicle within
+  a large group that displays objects and animations in 3D space. The input is a single object or an
+  animation created by an artist. In a first step, goal positions for the given number of vehicles
+  and representing the object are optimized with respect to a known viewpoint. For displaying an
+  animation, an optimal trajectory satisfying the dynamic constraints of each vehicle is computed
+  using B-splines. Finally, a trajectory following controller is described, which provides the
+  preferred velocity, later optimized to be collision-free with respect to all neighboring vehicles.
+bibtex: ""

@@ -1,0 +1,33 @@
+title: >-
+  Sampling-Based MPC Using a GPU-parallelizable Physics Simulator as Dynamic Model: an Open Source
+  Implementation with IsaacGym
+authors:
+  - C. Pezzato
+  - C. Salmi
+  - E. Trevisan
+  - J. Alonso-Mora
+  - C. Hernandez Corbato
+date: 2023-05-01
+type: workshop
+venue: Embracing Contacts Workshop at IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [trilogy, airlab-manipulation]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/23_trevisan_embrace_contacts_workshop.pdf
+  - code: https://github.com/tud-airlab/mppi-isaac
+  - publisher: https://openreview.net/forum?id=fvfZKL1hCx
+abstract: >-
+  We present a method for solving finite horizon optimal control problems using a generic physics
+  simulator as the dynamical model. In particular, we present an open-source implementation of a
+  model predictive path integral controller (MPPI), that uses the GPU-parallelizable IsaacGym
+  simulator as the dynamical model to compute the forward dynamics of the system. This allows one to
+  effortlessly solve complex contact-rich tasks such as for example, non-prehensile manipulation of
+  a variety of objects, or picking with a mobile manipulator. Since there is no explicit dynamic
+  modeling required from a user, the repository is easily extendable to different objects and
+  robots, as we show in the experiments section. This makes this method a powerful and accessible
+  tool to solve a large variety of contact-rich tasks.
+bibtex: ""

@@ -1,0 +1,36 @@
+title: On-demand Grocery Delivery From Multiple Local Stores With Autonomous Robots
+authors:
+  - M. Kronmueller
+  - A. Fielbaum
+  - J. Alonso-Mora
+date: 2021-11-01
+type: conference
+venue: Proc. 3rd IEEE International Symposium on Multi-Robot and Multi-Agent Systems (MRS'21)
+projects: [airlab-ondemand]
+collections: []
+funding: []
+topics: [task planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/9620599
+  - pdf: /assets/files/publications/21_Kronmueller_MRS.pdf
+  - video: https://www.youtube.com/watch?v=fNu-LFNYqJ8&t=2611s
+abstract: >-
+  The advances in the area of autonomous delivery robots combined with customers' desire for fast
+  delivery, bare potential for same-day delivery operations, specifically with small time windows
+  between ordering and delivery. Most same-day deliveries are operated using a single depot and with
+  vehicles' routes planned and fixed when leaving the depot. In this paper, we relax these two
+  assumptions and focus on on-demand grocery delivery using a fleet of autonomous vehicles or
+  robots. The problem features the opportunity to pick up goods at multiple local stores or depots,
+  for example, supermarkets within the city, and allows robots to perform depot returns prior to
+  being empty, if beneficial. This allows for more agile planning and on average shorter distance to
+  the next depot. We propose a novel dynamic method for the same-day delivery problem, where we aim
+  to deliver orders as fast as possible, minimally within the same day. In each time step (every few
+  seconds or minutes) the following is executed: For each order potential pick-up locations are
+  identified and feasible trips, i.e., sequences to pick up goods and deliver orders, are
+  calculated. To assign trips to robots an integer-linear program is solved. We simulate one day of
+  service in a city under different conditions with up to 30 autonomous robots, 30 depots and 10,500
+  orders. Results underpin the advantages of the proposed method and show its versatility with
+  respect to different situations.
+bibtex: ""

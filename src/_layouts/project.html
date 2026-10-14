@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="page-header">
+    <h1 class="page-title">{{ title }}</h1>
+    {%- if subtitle %}<p class="page-subtitle">{{ subtitle }}</p>{% endif %}
+  </header>
+  <div class="project-intro">
+    <img class="project-image" src="{{ image }}" alt="" width="500" height="300">
+    <aside class="project-info">
+      {%- if people %}
+      <h2>People</h2>
+      <ul class="plain">
+        {%- for person in people %}
+        <li>{{ person.name }}{% if person.extra_info %} <span class="muted">– {{ person.extra_info }}</span>{% endif %}</li>
+        {%- endfor %}
+      </ul>
+      {%- endif %}
+      {%- if fundings %}
+      <h2>Funding</h2>
+      <p>{{ fundings }}</p>
+      {%- endif %}
+      {%- if links %}
+      <h2>More links</h2>
+      <div class="button-row">
+        {%- for link in links %}
+        <a class="btn btn-sm btn-dark" href="{{ link.url }}">{{ link.name }}</a>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </aside>
+  </div>
+  <div class="project-content prose">
+{{ content }}
+  </div>
+  {%- assign related = publications.byProject[project_id] %}
+  {%- if related %}
+  <section class="related">
+    <h2 id="related-publications">Related Publications</h2>
+    {%- for p in related %}
+    {% render 'publication.html', publication: p %}
+    {%- endfor %}
+  </section>
+  {%- endif %}
+</article>

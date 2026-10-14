@@ -1,0 +1,35 @@
+title: Learning Social Homologies for Navigation
+authors:
+  - Diego Martinez-Baselga
+  - Oscar de Groot
+  - Luzia Knoedler
+  - Luis Riazuelo
+  - Javier Alonso-Mora
+  - Luis Montano
+date: 2024-07-15
+type: workshop
+venue: "Robotics: Science and Systems (RSS), Workshop on Unsolved Problems in Social Robot Navigation"
+projects: [harmony]
+collections: []
+funding: []
+topics: [social navigation, collision avoidance]
+image: /assets/images/papers/shine_ws/shine_cover_image.png
+note: ""
+links:
+  - pdf: /assets/files/publications/24-martinez-baselga-rss-ws.pdf
+abstract: >-
+  Navigating mobile robots in social environments remains a challenging task due to the intricacies
+  of human-robot interactions. Most of the motion planners designed for crowded and dynamic
+  environments focus on reaching the goal while avoiding collisions or local social interactions,
+  but do not explicitly consider the high-level navigation behavior (avoiding through the left or
+  right side, letting others pass or passing before others, etc.). In this work, we present a novel
+  motion planner that incorporates topology distinct paths representing diverse navigation
+  strategies around humans. The planner uses a deep neural network model trained on real-world human
+  motion data to estimate how well a topology classes imitate the human behavior. Then, selects the
+  best topology class using it, ensuring socially intelligent and contextually aware navigation. Our
+  system refines the chosen path through an optimization-based local planner in real time, ensuring
+  adherence to desired social behaviors. We evaluate the prediction accuracy of the network with
+  real-world data and the navigation capabilities in both simulation and a realworld platform. Our
+  method demonstrates socially desirable behaviors, smooth and remarkable performance compared to
+  other planners.
+bibtex: ""

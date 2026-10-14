@@ -1,0 +1,30 @@
+title: Multi-robot navigation in formation via sequential convex programming
+authors:
+  - J. Alonso-Mora
+  - S. Baker
+  - D. Rus
+date: 2015-09-01
+type: conference
+venue: Proc. of the IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [postdoc-multi]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/7354037
+  - pdf: /assets/files/publications/15-alonso-iros.pdf
+  - video: https://youtu.be/MNvh03xYDIs
+abstract: >-
+  This paper presents a method for navigating a team of robots in formation in 2D and 3D
+  environments with static and dynamic obstacles. The method is local and computes the optimal
+  parameters for the formation within a neighborhood of the robots, allowing for reconfigurations,
+  when required, by considering a set of target formations. The method consists of first computing
+  the largest collision-free convex polytope in a neighborhood of the robots, followed by a
+  constrained optimization via sequential convex programming where the optimal parameters for the
+  formation are obtained. The robots navigate towards the target collision-free formation with
+  individual local planners that account for their dynamics. The approach is efficient and scalable
+  with the number of robots and performed well in simulations with a large team of quadrators and in
+  experiments with two mobile manipulators carrying a rigid object.
+bibtex: ""

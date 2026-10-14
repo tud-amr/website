@@ -1,0 +1,36 @@
+title: Cooperative Collision Avoidance for Nonholonomic Robots
+authors:
+  - J. Alonso-Mora
+  - P. Beardsley
+  - R. Siegwart
+date: 2018-04-01
+type: journal
+venue: IEEE Transactions on Robotics, vol. 34, no. 2, pp. 404-420
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/abstract/document/8322444
+  - pdf: /assets/files/publications/18-alonsomora-TRO.pdf
+  - video: https://youtu.be/WqSW3Soi0vM
+abstract: >-
+  In this paper, we present a method, namely € CCA, for collision avoidance in dynamic environments
+  among interacting agents, such as other robots or humans. Given a preferred motion by a global
+  planner or driver, the method computes a collision-free local motion for a short time horizon,
+  which respects the actuator constraints and allows for smooth and safe control. The method builds
+  on the concept of reciprocal velocity obstacles and extends it to respect the kinodynamic
+  constraints of the robot and account for a grid-based map representation of the environment. The
+  method is best suited for large multirobot settings, including heterogeneous teams of robots, in
+  which computational complexity is of paramount importance and the robots interact with one
+  another. In particular, we consider a set of motion primitives for the robot and solve an
+  optimization in the space of control velocities with additional constraints. Additionally, we
+  propose a cooperative approach to compute safe velocity partitions in the distributed case. We
+  describe several instances of the method for distributed and centralized operation and formulated
+  both as convex and nonconvex optimizations. We compare the different variants and describe the
+  benefits and tradeoffs both theoretically and in extensive experiments with various robotic
+  platforms: robotic wheelchairs, robotic boats, humanoid robots, small unicycle robots, and
+  simulated cars.
+bibtex: ""

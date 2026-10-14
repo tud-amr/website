@@ -1,0 +1,37 @@
+title: Compositional and Contract-based Verification for Autonomous Driving on Road Networks
+authors:
+  - L. Liebenwein
+  - W. Schwarting
+  - C.-I. Vasile
+  - J. DeCastro
+  - J. Alonso-Mora
+  - S. Karaman
+  - D. Rus
+date: 2017-12-01
+type: conference
+venue: Proc. of the Int. Symp. on Robotics Research (ISRR)
+projects: [postdoc-mp]
+collections: []
+funding: []
+topics: [transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://people.csail.mit.edu/lucasl/files/slides/isrr18_safety_standards_slides.pdf
+  - pdf: /assets/files/publications/17-Liebenwein.pdf
+  - video: https://www.youtube.com/watch?v=gYcIK4oVtVM
+abstract: >-
+  Recent advances in autonomous driving have raised the problem of safety to the forefront and
+  incentivized research into establishing safety guarantees. In this paper, we propose a safety
+  verification framework as a safety standard for driving controllers with full or shared autonomy
+  based on compositional and contract-based principles. Our framework enables us to synthesize
+  safety guarantees over entire road networks by first building a library of locally verified
+  models, and then composing local models together to verify the entire network. Composition is
+  achieved using assume- guarantee contracts that are synthesized concurrently during verification.
+  Thus, we can reuse local models within and across networks, add additional models to cover local
+  road geometries without re-verifying the entire library, and perform all com- putations in a
+  parallel and distributed way, which enables computational tractability. Furthermore, we employ
+  controller contracts such that any controller satisfying them can be certified safe. We
+  demonstrate the practical effectiveness of our framework by certifying controllers over parts of
+  the Manhattan road network.
+bibtex: ""

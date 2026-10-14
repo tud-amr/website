@@ -1,0 +1,35 @@
+title: "The Impact of Ridesharing in Mobility-on-Demand Systems: Simulation Case Study in Prague"
+authors:
+  - D. Fiedler
+  - M. Certicky
+  - J. Alonso-Mora
+  - M. Cap
+date: 2018-11-01
+type: conference
+venue: Proc. IEEE Int. Conf. on Intelligent Transportation Systems (ITSC)
+projects: [ridepooling]
+collections: []
+funding: [ams institute]
+topics: [task planning, transportation]
+image: ""
+note: ""
+links:
+  - publisher: https://ieeexplore.ieee.org/document/8569451
+  - pdf: /assets/files/publications/18-fiedler-itsc.pdf
+abstract: >-
+  In densely populated-cities, the use of private cars for personal transportation is unsustainable,
+  due to high parking and road capacity requirements. The mobility-on-demand systems have been
+  proposed as an alternative to a private car. Such systems consist of a fleet of vehicles that the
+  user of the system can hail for one-way point-to-point trips. These systems employ large-scale
+  vehicle sharing, i.e., one vehicle can be used by several people during one day and consequently,
+  the fleet size and the parking space requirements can be reduced, but, at the cost of a
+  non-negligible increase in vehicles miles driven in the system. The miles driven in the system can
+  be reduced by ridesharing, where several people traveling in a similar direction are matched and
+  travel in one vehicle. We quantify the potential of ridesharing in a hypothetical
+  mobility-on-demand system designed to serve all trips that are currently realized by private car
+  in the city of Prague. Our results show that by employing a ridesharing strategy that guarantees
+  travel time prolongation of no more than 10 minutes, the average occupancy of a vehicle will
+  increase to 2.7 passengers. Consequently, the number of vehicle miles traveled will decrease to
+  35% of the amount in the MoD system without ridesharing and to 60% of the amount in the present
+  state.
+bibtex: ""

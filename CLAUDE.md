@@ -1,84 +1,111 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Instructions for AI agents editing the AMR Lab website (https://autonomousrobots.nl). Humans: see README.md.
 
-## Overview
+## What this is
 
-Jekyll-based website for the Autonomous Multi-Robot Lab (AMR) at TU Delft, hosted at [autonomousrobots.nl](https://autonomousrobots.nl). Deployed automatically via GitHub Actions on every push to `main` (takes a few minutes to reflect).
+A static site built with Eleventy 3 (Liquid templates, no CSS framework). Lab members add papers,
+people, projects and pages; most requests are content edits, not code changes. `main` deploys to
+GitHub Pages automatically via `.github/workflows/deploy.yml`.
 
-## Local Development
+## Commands
 
-Requires Docker and Docker Compose. Run from the repo root:
+Node may not be installed; everything also runs in Docker. Prefer the Docker form if `node` is missing.
 
-```bash
-docker compose up
+| Task | With Node | With Docker |
+| --- | --- | --- |
+| Check content only (fast) | `npm run validate` | `docker compose run --rm test npm run validate` |
+| Build | `npm run build` | `docker compose run --rm test npm run build` |
+| All checks (same as CI) | `npm test` | `docker compose run --rm test` |
+| Live preview at :8080 | `npm run dev` | `docker compose up` |
+| Screenshots (phone/tablet/desktop) | `npm run shots -- /people/` | `docker compose run --rm test npm run shots -- /people/` |
+| New publication from BibTeX | `npm run add-pub -- x.bib --project <id>` | `docker compose run --rm test npm run add-pub -- x.bib` |
+
+`npm test` = validate, build, URL check, internal link check, Playwright tests. Browser tests need
+Playwright's Chromium: use the Docker form if `npx playwright` is not set up.
+
+## Before you finish any change
+
+1. Run `npm run validate` after every content edit; fix every error it prints (they name the file and field).
+2. Run the full checks (`npm test` or `docker compose run --rm test`). Do not commit with failures.
+3. For anything visible, take screenshots of the affected pages (`npm run shots -- <paths>`) and look at
+   them at 390 px and 1280 px. Check nothing overflows sideways on the phone width.
+4. Tell the user which files you changed and what the checks said.
+
+## Rules
+
+- **Never break an existing URL.** Pages, `/assets/...` files and the old filter links
+  (`/publications/#query#year`, `/research/#area`) are linked from papers and slides. Do not rename or move
+  files under `assets/` or content files that produce pages. If a page must move, add `redirect_from`
+  to it; for a removed page, add an entry to `content/_data/redirects.yaml`. `npm run check:urls`
+  compares against `tests/baseline/files.txt`.
+- **Publications keep every field**, in the order of `content/publications/_template.yaml`, with empty
+  values as `[]` or `""` (never `null`, never omitted). Lab members copy existing files as templates.
+- **IDs must exist**: `projects:` uses `project_id` values from `content/projects/`; `collections:` uses
+  keys of `content/_data/paper_collections.yaml`; `belongs_to_areas:` uses `area_id` from
+  `content/research-areas/`. Funding sources go in `funding:`, not `projects:`.
+- **Do not lose metadata.** When cleaning up data, keep values (move them to the right field, or keep a
+  YAML comment saying what was there before).
+- Local paths start with `/assets/` (leading slash) and are written as they are. Do not use the old Jekyll
+  helpers (`{% include fix_link.html %}`, `| relative_url`, `{% include x.html a=b %}`); validation rejects them.
+- Math: KaTeX, on by default for paper and MSc pages; page-specific LaTeX shortcuts go in `math_macros`.
+  Pages with `\label`/`\eqref` and numbered equations set `math_engine: mathjax`.
+- Keep media small: images under ~2 MB, videos ideally under 5 MB. The repo is already >2 GB and the
+  published site is around GitHub Pages' 1 GB guideline; say so if a user adds large files.
+- Do not edit generated or recorded files: `_site/`, `.cache/`, `tests/baseline/*` (only regenerate the
+  baseline on purpose with `scripts/baseline/run.sh`).
+- Match the surrounding code style; the CSS is plain CSS in `src/css/site.css`, JS is `src/js/site.js`.
+
+## Recipes
+
+**Add a publication** (most common request)
+1. Get BibTeX (from the user, or `curl -LH "Accept: application/x-bibtex" https://doi.org/<doi>`; for arXiv,
+   `https://arxiv.org/bibtex/<id>`).
+2. `npm run add-pub -- paper.bib --project <project_id> [--collection <id>] [--pdf /assets/files/publications/<yy>-<author>-<venue>.pdf]`
+3. Open the new file in `content/publications/<year>/`: fix `type` (journal/conference/workshop/thesis/other),
+   `venue` (no year), add `links` (pdf, publisher, arxiv, web, code, video), `topics`, `note`, `image`.
+   Copy the PDF into `assets/files/publications/` if the user gave one.
+4. `npm run validate`, then the full checks. The paper appears on /publications/ and on each listed project page.
+
+**Add a person**: copy a file in `content/people/` (same `type`), change `name`, `title`, `type`,
+`joined_date`, `image` (square, in `assets/images/people/`), `links`; the body is a one-line bio.
+**Someone left**: add `left_date: YYYY-MM-DD` (and optionally `now_at:`); do not delete the file.
+
+**Add a project**: copy a file in `content/projects/`; give it a new `project_id` that no other project
+uses, and `belongs_to_areas`; the file name becomes the URL `/projects/<file>.html`.
+
+**Add a news item**: `content/news/YYYY-MM-DD-short-title.md` with `title` and `date`; body in Markdown, 1–3
+sentences. The newest four show on the home page.
+
+**Add a paper website**: copy a file in `content/paper-websites/`; set `related:` to show related papers.
+The file name becomes `/paper_websites/<file>.html`. Content may use the Bootstrap-style classes listed in
+section 13 of `src/css/site.css` (`row`, `col-md-6`, `ratio ratio-16x9`, `d-flex`, `img-fluid`, ...).
+
+**Add a collection**: two lines in `content/_data/paper_collections.yaml` (`<id>:` and `title:`), then list
+the id in each paper's `collections:`.
+
+**Add a page**: a file in `content/pages/` with `title` and `permalink: /name/`; add it to
+`content/_data/navigation.yaml` if it should be in the menu.
+
+## Where things are
+
+```
+content/publications/<year>/*.yaml   papers (data only; loaded by content/_data/publications.js)
+content/<type>/*.md|html            people, projects, paper-websites, news, research-areas, robots,
+                                    msc-available, msc-finished, workshops, talks
+content/<type>/<type>.11tydata.json URL pattern and layout for each folder
+content/pages/                      top-level pages
+content/_data/                      site.yaml, navigation.yaml, socials.yaml, paper_collections.yaml,
+                                    patents.yaml, redirects.yaml, publications.js, stats.js
+src/_layouts/, src/_includes/       Liquid templates; reusable pieces via {% render 'x.html', a: b %}
+src/css/site.css, src/js/site.js    all styling and behaviour
+src/lib/content.mjs                 content schemas and validation (edit when adding a field)
+src/lib/images.mjs, media.mjs       responsive images, lazy videos, YouTube previews
+eleventy.config.js                  filters, collections, transforms
+scripts/                            validate, check-urls, check-links, shots, add-pub, site-size,
+                                    fetch-stats, lib/serve.mjs, migrate/, baseline/
+tests/e2e/                          Playwright tests; tests/baseline/ is the record of the old site
 ```
 
-Serves at `http://localhost:4000` with live-reload. Changes to files (except `_config.yml`) are reflected without restarting.
-
-## Site Architecture
-
-The site uses Jekyll with no theme — all layouts and styling are custom (Bootstrap 5 + SCSS in `assets/css/style.scss`).
-
-**Collections** (defined in `_config.yml`) are the primary content model:
-
-| Directory | Collection | Generates pages? |
-|---|---|---|
-| `_projects/` | projects | yes |
-| `_paper_websites/` | paper_websites | yes |
-| `_msc_projects_finished/` | msc_projects_finished | yes |
-| `_msc_projects_available/` | msc_projects_available | yes |
-| `_workshops/` | workshops | yes |
-| `_people/` | people | no (rendered inline) |
-| `_news/` | news | no |
-| `_robots/` | robots | no |
-| `_research_areas/` | research_areas | no |
-
-**Publications** are not a collection — they live in `_data/publications.json` and are rendered via Liquid templates wherever needed.
-
-**Layouts** (`_layouts/`) define page structure. Default for each collection is set in `_config.yml` defaults:
-- `_projects/` → `project.html`
-- `_paper_websites/` → `paper.html` (with MathJax)
-- `_msc_projects_finished/` → `paper_msc.html` (with MathJax)
-- `_msc_projects_available/` → `page.html` (with MathJax)
-
-## Adding Content
-
-### Publications (`_data/publications.json`)
-Add a JSON object at the top of the array. Key fields:
-- `title`, `authors` (array), `date` (YYYY-MM-DD), `type` (journal/conference/workshop/thesis/other), `venue`
-- `links`: array of `{"name": url}` objects (e.g., `{"PDF": "/assets/..."}`, `{"web": "https://..."}`)
-- `belongs_to_projects`: array of project IDs — links this publication to project pages
-- `image` (optional, square recommended), `note` (optional), `abstract`
-
-### Paper Websites (`_paper_websites/`)
-Frontmatter fields: `title`, `authors` (with `name`, `url`, `superscript`), `affiliations`, `release_date`, `links` (with `name`, `icon` from Bootstrap Icons, `url`), `related_project_id`. Body is HTML/Markdown mixed. Use `{% include fix_link.html link='...' %}` for local asset paths.
-
-### Projects (`_projects/`)
-Key frontmatter: `title`, `project_id` (used by publications to link here), `belongs_to_areas` (array of area IDs), `date`, `description`, `image`, `links`, `fundings`, `people`.
-
-### People (`_people/`)
-Key frontmatter: `name`, `title`, `type` (phd-candidate/post-doc/professor/engineer), `joined_date`, `image` (square), `links`. Add `left_date` to move someone to past members.
-
-### Other content types
-- **News**: `_news/` — frontmatter: `title`, `date`; body is Markdown
-- **MSc available projects**: `_msc_projects_available/` — frontmatter: `title`, `direct_supervisors` (with `name`, optional `url`), `proposal_document` (PDF path or omit to write body), `display` (bool)
-- **Research areas**: `_research_areas/` — frontmatter: `title`, `subtitle`, `area_id`
-- **Robots**: `_robots/` — frontmatter: `name`, `subtitle`, `type`, `image`, `used_in_projects`
-
-### Linking local assets
-Use the `fix_link` include to handle baseurl automatically:
-```html
-<img src="{% include fix_link.html link='/assets/images/...' %}">
-<a href="{% include fix_link.html link='/assets/files/...' %}">
-```
-Or use Liquid's `relative_url` filter: `{{ '/assets/...' | relative_url }}`.
-
-### Image gallery helper
-```md
-{% include gallery.html images=image_list n_columns=3 %}
-```
-
-## Navigation
-
-Add new pages to `_data/navigation.yml` to include them in the navbar.
+Adding a new front-matter field to a content type means adding it to the schema in
+`src/lib/content.mjs`, otherwise validation may reject it (publications reject unknown fields).

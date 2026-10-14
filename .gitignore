@@ -3,5 +3,10 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-tests
+tests/baseline/screenshots/
 .DS_Store
+node_modules/
+.cache/
+.shots/
+test-results/
+playwright-report/

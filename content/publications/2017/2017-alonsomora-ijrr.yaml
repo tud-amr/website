@@ -1,0 +1,40 @@
+title: >-
+  Multi-robot Formation Control and Object Transport in Dynamic Environments via Constrained
+  Optimization
+authors:
+  - J. Alonso-Mora
+  - S. Baker
+  - D. Rus
+date: 2017-08-01
+type: journal
+venue: The International Journal of Robotics Research, Vol 36, Issue 9, pp. 1000-1021
+projects: [postdoc-multi]
+collections: []
+funding: []
+topics: [motion planning, multi-robot]
+image: ""
+note: ""
+links:
+  - publisher: https://journals.sagepub.com/doi/10.1177/0278364917719333
+  - pdf: /assets/files/publications/17-alonsomora-IJRR.pdf
+  - video: https://youtu.be/sDNqdEPA7pE
+abstract: >-
+  We present a constrained optimization method for multi-robot formation control in dynamic
+  environments, where the robots adjust the parameters of the formation, such as size and
+  three-dimensional orientation, to avoid collisions with static and moving obstacles, and to make
+  progress towards their goal. We describe two variants of the algorithm, one for local motion
+  planning and one for global path planning. The local planner first computes a large obstacle-free
+  convex region in a neighborhood of the robots, embedded in position-time space. Then, the
+  parameters of the formation are optimized therein by solving a constrained optimization, via
+  sequential convex programming. The robots navigate towards the optimized formation with individual
+  controllers that account for their dynamics. The idea is extended to global path planning by
+  sampling convex regions in free position space and connecting them if a transition in formation is
+  possible - computed via the constrained optimization. The path of lowest cost to the goal is then
+  found via graph search. The method applies to ground and aerial vehicles navigating in two- and
+  three-dimensional environments among static and dynamic obstacles, allows for reconfiguration, and
+  is efficient and scalable with the number of robots. In particular, we consider two applications,
+  a team of aerial vehicles navigating in formation, and a small team of mobile manipulators that
+  collaboratively carry an object. The approach is verified in experiments with a team of three
+  mobile manipulators and in simulations with a team of up to sixteen Micro Air Vehicles
+  (quadrotors).
+bibtex: ""

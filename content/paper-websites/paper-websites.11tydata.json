@@ -1,0 +1,1 @@
+{ "layout": "paper", "math": true, "permalink": "/paper_websites/{{ page.fileSlug }}.html" }

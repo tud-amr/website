@@ -1,0 +1,28 @@
+title: Multi-robot Control and Interaction with a Hand-held Tablet
+authors:
+  - R. Grieder
+  - J. Alonso-Mora
+  - C. Bloeglinger
+  - R. Siegwart
+  - P. Beardsley
+date: 2014-06-01
+type: workshop
+venue: >-
+  Workshop Crossing the Reality Gap: Control, Human Interaction and Cloud Technology for Multi- and
+  Many- Robot Systems at the IEEE Int. Conf. on Robotics and Automation (ICRA)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - web: https://homepages.laas.fr/afranchi/events/icra2014mrs/w/Home_files/2014ICRA_MRS_Grieder.pdf
+  - pdf: /assets/files/publications/15_RSS_MRS_Alonso-Mora.pdf
+  - video: https://www.youtube.com/watch?v=WxbN0NyzEO0
+abstract: >-
+  Real-time interaction with a group of robots is shown with a hand-held tablet, which tracks the
+  robots and computes collision-free trajectories. Efficient algorithms are described and
+  experiments are performed in scenarios with changing illumination. Augmented reality and a
+  multi-player setup are also described.
+bibtex: ""

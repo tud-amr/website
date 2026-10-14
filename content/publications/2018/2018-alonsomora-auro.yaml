@@ -1,0 +1,39 @@
+title: Distributed Formation Control in Dynamic Environments
+authors:
+  - J. Alonso-Mora
+  - E. Montijano
+  - T. Naegeli
+  - O. Hilliges
+  - M. Schwager
+  - D. Rus
+date: 2018-01-01
+type: journal
+venue: Autonomous Robots
+projects: [veni]
+collections: []
+funding: []
+topics: [multi-robot, motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/article/10.1007/s10514-018-9783-9
+  - pdf: /assets/files/publications/18-alonsomora-AURO.pdf
+  - video: https://youtu.be/khzM54Qk1QQ
+abstract: >-
+  This paper presents a distributed method for formation control of a homogeneous team of aerial or
+  ground mobile robots navigating in environments with static and dynamic obstacles. Each robot in
+  the team has a finite communication and visibility radius and shares information with its
+  neighbors to coordinate. Our approach leverages both constrained optimization and multi-robot
+  consensus to compute the parameters of the multi-robot formation. This ensures that the robots
+  make progress and avoid collisions with static and moving obstacles. In particular, via
+  distributed consensus, the robots compute (a) the convex hull of the robot positions, (b) the
+  desired direction of movement and (c) a large convex region embedded in the four dimensional
+  position-time free space. The robots then compute, via sequential convex programming, the locally
+  optimal parameters for the formation to remain within the convex neighborhood of the robots. The
+  method allows for reconfiguration. Each robot then navigates towards its assigned position in the
+  target collision-free formation via an individual controller that accounts for its dynamics. This
+  approach is efficient and scalable with the number of robots. We present an extensive evaluation
+  of the communication requirements and verify the method in simulations with up to sixteen
+  quadrotors. Lastly, we present experiments with four real quadrotors flying in formation in an
+  environment with one moving human.
+bibtex: ""

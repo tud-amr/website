@@ -1,0 +1,31 @@
+title: Towards Estimation and Correction of Wind Effects on a Quadrotor UAV
+authors:
+  - F. Schiano
+  - J. Alonso-Mora
+  - K. Rudin
+  - P. Beardsley
+  - R. Siegwart
+  - B. Siciliano
+date: 2014-08-01
+type: conference
+venue: Proc. of the Int. Micro Air Vehicle Conference and Competition
+projects: [phd-mp]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - publisher: https://repository.tudelft.nl/islandora/object/uuid%3A2e865132-8a33-4115-84df-a02407d02d27
+  - pdf: /assets/files/publications/14-schiano.pdf
+  - video: https://youtu.be/jA7MuDNpBjM
+abstract: >-
+  In this paper the problem of estimation and correction of wind effects on a quadrotor UAV, without
+  using wind sensors, is discussed. A large body of research addresses the effects of wind on a
+  quadrotor, however most of them consider it only as a disturbance in their control loop and, for
+  this reason, they solved the problem compensating for the wind with a powerful controller. The
+  main part of this paper is related to the modeling of wind on a quadrotor and to the wind tunnel
+  tests performed at the IFD wind tunnel of ETH Zurich. The approach presented can be used as a
+  starting point for future works. The results obtained in the wind tunnel are really promising for
+  the formulation of a complete aerodynamic model of the quadrotor that has been missing until now.
+bibtex: ""

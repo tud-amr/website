@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.redirects
+  size: 1
+  alias: redirect
+permalink: "{% if redirect.from contains '.html' %}{{ redirect.from }}{% else %}{{ redirect.from | append: '/' | replace: '//', '/' }}index.html{% endif %}"
+eleventyExcludeFromCollections: true
+---
+{% render 'redirect.html', to: redirect.to %}

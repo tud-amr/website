@@ -1,0 +1,35 @@
+---
+title: Research
+permalink: /research/
+---
+{%- comment -%}
+  Ongoing projects first (newest start first), then finished ones (most recently finished first).
+  The area buttons filter the list; the choice is kept in the URL as ?area=<area_id>.
+  Old links of the form /research/#<area_id> still work.
+{%- endcomment -%}
+{%- assign ongoing = collections.projects | where_exp: "p", "p.data.end_date == nil" | sort_data: "date" | reverse -%}
+{%- assign finished = collections.projects | where_exp: "p", "p.data.end_date != nil" | sort_data: "end_date" | reverse -%}
+
+<div class="filter-buttons" role="group" aria-label="Filter projects by research area" data-area-filter>
+  <a class="btn btn-outline is-active" href="/research/" data-area="all" aria-current="true">All</a>
+  {%- for area in collections.researchAreas %}
+  <a class="btn btn-outline" href="/research/?area={{ area.data.area_id }}" data-area="{{ area.data.area_id }}">{{ area.data.title }}</a>
+  {%- endfor %}
+</div>
+
+{%- for area in collections.researchAreas %}
+<section class="area-intro" data-area-intro="{{ area.data.area_id }}" hidden>
+  <h2 id="{{ area.data.title }}">{{ area.data.title }}</h2>
+  <p class="muted">{{ area.data.subtitle }}</p>
+  {{ area.content }}
+</section>
+{%- endfor %}
+
+<div class="tile-list" data-area-list>
+  {%- for project in ongoing %}
+  <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% render 'project_card.html', project: project %}</div>
+  {%- endfor %}
+  {%- for project in finished %}
+  <div data-areas="{{ project.data.belongs_to_areas | join: ' ' }}">{% render 'project_card.html', project: project %}</div>
+  {%- endfor %}
+</div>

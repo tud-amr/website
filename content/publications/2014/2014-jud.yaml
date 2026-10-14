@@ -1,0 +1,29 @@
+title: Customized Sensing for Robot Swarms
+authors:
+  - D. Jud
+  - J. Alonso-Mora
+  - J. Rehder
+  - R. Siegwart
+  - P. Beardsley
+date: 2014-06-01
+type: conference
+venue: Proc. of the Int. Symposium on Experimental Robotics
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, perception]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/14-jud.pdf
+  - publisher: https://link.springer.com/chapter/10.1007/978-3-319-23778-7_34
+  - pdf: /assets/files/publications/14-jud.pdf
+  - video: https://youtu.be/MrbHmLkOajY
+abstract: >-
+  This paper describes a novel and compact design for an omni-directional stereo camera. A key goal
+  of the work is to investigate the use of rapid prototyping to make the mirrors for the device, by
+  3D printing the mirror shape and chroming the surface. The target application is in robot swarms,
+  and we discuss how the ability to create a customized omni-camera enables sensing to become an
+  integrated part of system design, avoiding the constraints that arise when using commercial
+  sensors.
+bibtex: ""

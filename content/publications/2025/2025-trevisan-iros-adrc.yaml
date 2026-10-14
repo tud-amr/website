@@ -1,0 +1,31 @@
+title: >-
+  Active Disturbance Rejection Control (ADRC) for Trajectory Tracking of a Seagoing USV: Design,
+  Simulation, and Field Experiments
+authors:
+  - Jelmer van der Saag
+  - Elia Trevisan
+  - Wouter Falkena
+  - Javier Alonso-Mora
+date: 2025-10-17
+type: conference
+venue: IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)
+projects: [trilogy]
+collections: []
+funding: []
+topics: [motion planning]
+image: /assets/images/papers/adrc-demcon/icon.png
+note: ""
+links:
+  - web: /paper_websites/adrc-demcon
+  - pdf: /assets/files/publications/25-trevisan-iros-adrc.pdf
+abstract: >-
+  Unmanned Surface Vessels (USVs) face significant control challenges due to uncertain environmental
+  disturbances like waves and currents. This paper proposes a trajectory tracking controller based
+  on Active Disturbance Rejection Control (ADRC) implemented on the DUS V2500. A custom simulation
+  incorporating realistic waves and current disturbances is developed to validate the controller's
+  performance, supported by further validation through field tests in the harbour of Scheveningen,
+  the Netherlands, and at sea. Simulation results demonstrate that ADRC significantly reduces
+  cross-track error across all tested conditions compared to a baseline PID controller but increases
+  control effort and energy consumption. Field trials confirm these findings while revealing a
+  further increase in energy consumption during sea trials compared to the baseline.
+bibtex: ""

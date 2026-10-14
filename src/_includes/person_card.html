@@ -1,0 +1,16 @@
+{%- assign d = person.data -%}
+<article class="person">
+  {%- if d.image %}<img class="person-photo" src="{{ d.image }}" alt="" width="120" height="120" loading="lazy">{% endif %}
+  <div class="person-body">
+    <h3 class="person-name">{{ d.name }}</h3>
+    <p class="person-role">{{ d.title }} | Since {{ d.joined_date | date: "%Y" }}</p>
+    <div class="person-bio">{{ person.content }}</div>
+    {%- if d.links %}
+    <div class="person-links">
+      {%- for link in d.links %}
+      <a class="btn btn-sm btn-light" href="{{ link.url }}">{{ link.name }}</a>
+      {%- endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</article>

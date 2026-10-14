@@ -1,0 +1,56 @@
+---
+title: Publications
+permalink: /publications/
+---
+{%- comment -%}
+  Every publication is in the page (so it works without JavaScript and search engines see it).
+  The search box and filters hide what does not match and keep the choice in the URL:
+    /publications/?q=mpc&year=2025&type=journal&collection=saraypapers
+  Old links of the form /publications/#<search>#<year> are converted on load.
+{%- endcomment -%}
+
+<form class="pub-filters" role="search" data-pub-filters onsubmit="return false">
+  <label class="visually-hidden" for="pub-q">Search publications</label>
+  <input id="pub-q" name="q" type="search" placeholder="Search: author, title, venue, abstract…" autocomplete="off">
+  <label class="visually-hidden" for="pub-year">Year</label>
+  <select id="pub-year" name="year">
+    <option value="">All years</option>
+    {%- for group in publications.byYear %}
+    <option value="{{ group.year }}">{{ group.year }}</option>
+    {%- endfor %}
+  </select>
+  <label class="visually-hidden" for="pub-type">Type</label>
+  <select id="pub-type" name="type">
+    <option value="">All types</option>
+    {%- for type in publications.types %}
+    <option value="{{ type }}">{{ type | capitalize }}</option>
+    {%- endfor %}
+  </select>
+  <input type="hidden" name="collection" value="">
+</form>
+<p class="pub-status" aria-live="polite" data-pub-status>
+  {%- for c in paper_collections %}<span hidden data-collection-title="{{ c[0] }}">{{ c[1].title }}</span>{% endfor -%}
+</p>
+
+<p class="pub-websites">You can find the papers with dedicated websites <a href="/paper_websites/">here</a>.</p>
+
+<div class="pub-list" data-pub-list>
+  {%- for group in publications.byYear %}
+  <section class="pub-year" data-year-group="{{ group.year }}">
+    <h2 class="pub-year-title">{{ group.year }}</h2>
+    {%- for p in group.items %}
+    {% render 'publication.html', publication: p, numbered: true %}
+    {%- endfor %}
+  </section>
+  {%- endfor %}
+  <p class="pub-empty" data-pub-empty hidden>No publications match. <a href="/publications/">Show all</a>.</p>
+</div>
+
+<section class="patents">
+  <h2>Patents</h2>
+  <ul class="plain">
+    {%- for patent in patents %}
+    <li><span class="pub-number">{{ patent.id }}.</span> {{ patent.text }}</li>
+    {%- endfor %}
+  </ul>
+</section>

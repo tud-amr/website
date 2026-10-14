@@ -1,0 +1,36 @@
+title: Reachability-based confidence-aware probabilistic collision detection in highway driving
+authors:
+  - Xinwei Wang
+  - Zirui Li
+  - Javier Alonso-Mora
+  - Meng Wang
+date: 2024-02-29
+type: journal
+venue: S.I. Safety for Intelligent and Connected Vehicles, Engineering
+projects: [safe-up]
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/24-Wang-engineering.pdf
+abstract: >-
+  Risk assessment is a crucial component of collision warning and avoidance systems for intelligent
+  vehicles. Reachability-based formal approaches have been developed to ensure driving safety to
+  accurately detect potential vehicle collisions. However, they suffer from over-conservatism,
+  potentially resulting in false–positive risk events in complicated real-world applications. In
+  this paper, we combine two reachability analysis techniques, a backward reachable set (BRS) and a
+  stochastic forward reachable set (FRS), and propose an integrated probabilistic
+  collision–detection framework for highway driving. Within this framework, we can first use a BRS
+  to formally check whether a two-vehicle interaction is safe; otherwise, a prediction-based
+  stochastic FRS is employed to estimate the collision probability at each future time step. Thus,
+  the framework can not only identify non-risky events with guaranteed safety but also provide
+  accurate collision risk estimation in safety-critical events. To construct the stochastic FRS, we
+  develop a neural network-based acceleration model for surrounding vehicles and further incorporate
+  a confidence-aware dynamic belief to improve the prediction accuracy. Extensive experiments were
+  conducted to validate the performance of the acceleration prediction model based on naturalistic
+  highway driving data. The efficiency and effectiveness of the framework with infused confidence
+  beliefs were tested in both naturalistic and simulated highway scenarios. The proposed risk
+  assessment framework is promising for real-world applications.
+bibtex: ""

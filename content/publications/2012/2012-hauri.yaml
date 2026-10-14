@@ -1,0 +1,38 @@
+title: Multi-Robot Formation Control via a Real-Time Drawing Interface
+authors:
+  - S. Hauri
+  - J. Alonso-Mora
+  - A. Breitenmoser
+  - R. Siegwart
+  - P. Beardsley
+date: 2012-07-01
+type: conference
+venue: Proc. of the 8th Int. Conf. on Field and Service Robots (FSR)
+projects: [phd-pixelbots]
+collections: []
+funding: []
+topics: [multi-robot, motion planning, perception]
+image: ""
+note: ""
+links:
+  - publisher: https://link.springer.com/chapter/10.1007/978-3-642-40686-7_12
+  - pdf: /assets/files/publications/12-hauri.pdf
+  - video: https://youtu.be/AM2rLmna9nA
+abstract: >-
+  This paper describes a system that takes real-time user input to direct a robot swarm. The user
+  interface is via drawing, and the user can create a single drawing or an animation to be
+  represented by robots. For example, the drawn input could be a stick figure, with the robots
+  automatically adopting a physical configuration to represent the figure. Or the input could be an
+  animation of a walking stick figure, with the robots moving to represent the dynamic deforming
+  figure. Each robot has a controllable RGB LED so that the swarm can represent color drawings. The
+  computation of robot position, robot motion, and robot color is automatic, including scaling to
+  the available number of robots. The work is in the field of entertainment robotics for play and
+  making robot art, motivated by the fact that a swarm of mobile robots is now affordable as a
+  consumer product. The technical contribution of the paper is three-fold. Firstly the paper
+  presents shaped flocking, a novel algorithm to control multiple robots—this extends existing
+  flocking methods so that robot behavior is driven by both flocking forces and forces arising from
+  a target shape. Secondly the new work is compared with an alternative approach from the existing
+  literature, and the experimental results include a comparative analysis of both algorithms with
+  metrics to compare performance. Thirdly, the paper describes a working real-time system with
+  results for a physical swarm of 60 differential-drive robots.
+bibtex: ""

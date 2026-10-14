@@ -1,0 +1,35 @@
+title: Reinforcement Learning from Simulation to Real World Autonomous Driving using Digital Twin
+authors:
+  - K. L. Voogd
+  - J. P. Allamaa
+  - J. Alonso-Mora
+  - T. Son
+date: 2023-07-01
+type: conference
+venue: IFAC World Congress
+projects: []
+collections: []
+funding: []
+topics: [motion planning]
+image: ""
+note: ""
+links:
+  - pdf: /assets/files/publications/23-voogd-ifac.pdf
+abstract: >-
+  Reinforcement learning (RL) is a promising solution for autonomous vehicles to deal with complex
+  and uncertain traffic environments. The RL training process is however expensive, unsafe, and
+  time-consuming. Algorithms are often developed first in simulation and then transferred to the
+  real-world, leading to a common sim2real challenge where performance decreases when the domain
+  changes. In this paper, we propose a transfer learning process to minimize the gap by exploiting
+  digital twin technology, relying on a systematic and simultaneous combination of virtual and real
+  world data coming from vehicle dynamics and traffic scenarios. The model and testing environment
+  is evolved from model, hardware to vehicle in the loop and proving ground testing stages, similar
+  to standard development cycle in the automotive industry. In particular, we also integrate other
+  transfer learning techniques such as domain randomization and adaptation in each stage. The
+  simulation and real data are gradually incorporated to accelerate and make the transfer learning
+  process more robust. The proposed RL methodology is applied to develop a path-following steering
+  controller for an autonomous electric vehicle. After learning and deploying the real-time RL
+  control policy on the vehicle, we obtained satisfactory and safe control performance already from
+  the first deployment, demonstrating the advantages of the proposed digital twin based learning
+  process.
+bibtex: ""
