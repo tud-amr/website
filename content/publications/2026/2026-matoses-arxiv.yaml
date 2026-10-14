@@ -12,7 +12,7 @@ collections: []
 funding: []
 topics: [task planning, imitation learning]
 image: /assets/images/papers/26-matoses-arxiv/cover.jpg
-note: Under review at ICRA 2027
+note: Under review
 links:
   - web: https://andreumatoses.github.io/flow-skill-wm/
   - pdf: https://arxiv.org/pdf/2610.04767
@@ -43,6 +43,5 @@ bibtex: |
     eprint        = {2610.04767},
     archiveprefix = {arXiv},
     primaryclass  = {cs.RO},
-    url           = {https://arxiv.org/abs/2610.04767},
-    note          = {Submitted to the IEEE International Conference on Robotics and Automation (ICRA) 2027}
+    url           = {https://arxiv.org/abs/2610.04767}
   }
