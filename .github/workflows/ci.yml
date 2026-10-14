@@ -21,10 +21,10 @@ jobs:
       image: mcr.microsoft.com/playwright:v1.48.0-noble
       options: --ipc=host
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # Resized images are slow to generate; keep them between runs.
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: .cache
           key: eleventy-cache-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
@@ -43,7 +43,7 @@ jobs:
         if: always()
         run: node scripts/site-size.mjs
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: always()
         with:
           name: check-report
