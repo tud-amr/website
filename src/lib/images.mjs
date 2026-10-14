@@ -35,6 +35,7 @@ function sizesFor(tag) {
   if (/\bdata-thumbnail\b/.test(tag)) return '160px';
   if (/\btile-media\b/.test(cls)) return '(min-width: 768px) 300px, 100vw';
   if (/\bperson-photo\b/.test(cls)) return '250px';
+  if (/\blatest-thumb\b/.test(cls)) return '(min-width: 768px) 260px, 50vw';
   if (/\bhero-image\b/.test(cls)) return '(min-width: 992px) 460px, 100vw';
   const width = Number(attr(tag, 'width'));
   if (width > 0 && width < 1120) return `(max-width: ${width}px) 100vw, ${width}px`;

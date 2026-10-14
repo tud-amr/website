@@ -4,6 +4,7 @@
 //   publications.byProject     { project_id: [...] }, newest first
 //   publications.byCollection  { collection_id: [...] }, newest first
 //   publications.byId          { file name: publication }
+//   publications.latestWithImage  the 4 newest papers with a picture, for the home page
 import { loadPublications } from '../../src/lib/content.mjs';
 
 const PREFIX = { journal: 'J', conference: 'C', workshop: 'W', thesis: 'T', other: 'O' };
@@ -39,5 +40,7 @@ export default function () {
   for (const g of byYear) {
     g.items.sort((a, b) => TYPE_ORDER.indexOf(a.type) - TYPE_ORDER.indexOf(b.type) || new Date(b.date) - new Date(a.date));
   }
-  return { all, byYear, byProject, byCollection, byId, types: TYPE_ORDER.filter((t) => all.some((p) => p.type === t)) };
+  // For the home page: the newest papers that have a picture (not a video).
+  const latestWithImage = all.filter((p) => p.image && !/\.mp4$/i.test(p.image)).slice(0, 4);
+  return { all, byYear, byProject, byCollection, byId, latestWithImage, types: TYPE_ORDER.filter((t) => all.some((p) => p.type === t)) };
 }

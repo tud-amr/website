@@ -47,6 +47,22 @@ layout: default
   </div>
 </section>
 
+<section class="latest-pubs">
+  <div class="section-head">
+    <h2>Latest publications</h2>
+    <a href="/publications/">See all publications</a>
+  </div>
+  <ul class="latest-pub-list">
+    {%- for p in publications.latestWithImage %}
+    <li class="latest-pub">
+      <img class="latest-thumb" src="{{ p.image }}" alt="" width="240" height="180">
+      <a class="latest-title" href="/publications/#{{ p.id }}">{{ p.title }}</a>
+      <span class="latest-meta">{{ p.venue | split: "(" | last | split: ")" | first }}, {{ p.year }}</span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
 {%- assign news_total = collections.news | size %}
 <section class="news">
   <h2>Latest news</h2>

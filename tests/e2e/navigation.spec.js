@@ -62,3 +62,14 @@ test('"Show all news" reveals the older news', async ({ page }) => {
   await page.click('.more summary');
   await expect(older.first()).toBeVisible();
 });
+
+test('home page shows the 4 latest publications with pictures, linking to them', async ({ page }) => {
+  await page.goto('/');
+  const cards = page.locator('.latest-pub');
+  await expect(cards).toHaveCount(4);
+  const href = await cards.first().locator('a').getAttribute('href');
+  expect(href).toMatch(/^\/publications\/#\d{4}-/);
+  await cards.first().locator('a').click();
+  await expect(page.locator(`[id="${href.split('#')[1]}"]`)).toBeInViewport();
+  await expect(page).toHaveURL(new RegExp(`${href}$`));
+});

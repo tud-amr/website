@@ -142,7 +142,9 @@
       const params = new URLSearchParams();
       for (const [k, v] of Object.entries(read())) if (v) params.set(k, v);
       const query = params.toString();
-      history.replaceState(null, '', location.pathname + (query ? `?${query}` : ''));
+      // Keep a link to one paper (/publications/#2025-degroot-ijrr); drop old #search#year hashes.
+      const hash = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1))) ? location.hash : '';
+      history.replaceState(null, '', location.pathname + (query ? `?${query}` : '') + hash);
     };
 
     const load = () => {
@@ -160,6 +162,8 @@
         el.value = value;
       }
       update();
+      const target = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) target.scrollIntoView();
     };
 
     let timer;

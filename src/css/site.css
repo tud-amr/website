@@ -243,6 +243,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .pub-year-title { margin: 2rem 0 0.75rem; padding-bottom: 0.35rem; border-bottom: 2px solid var(--ink); font-size: 1.5rem; }
 .pub { display: flex; gap: 1.25rem; padding: 0.85rem 0; border-bottom: 1px solid var(--border); }
 .pub:last-child { border-bottom: 0; }
+/* A paper opened from a link like /publications/#2025-degroot-ijrr is highlighted. */
+.pub:target { margin-inline: -0.75rem; padding-inline: 0.75rem; border-radius: var(--radius-sm); background: var(--accent-tint); scroll-margin-top: 1rem; }
 .pub-body { flex: 1 1 auto; min-width: 0; }
 .pub-citation { margin-bottom: 0.45rem; line-height: 1.55; }
 .pub-number { color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -330,21 +332,43 @@ mjx-container:not([display='true']) { display: inline-block; max-width: 100%; ov
 
 /* 11. Components ----------------------------------------------------------------------------- */
 /* Home */
-.hero { display: grid; gap: 1.75rem; align-items: center; padding-block: 0.5rem 2.25rem; border-bottom: 1px solid var(--border); }
+.hero { display: grid; gap: 1.75rem; align-items: center; padding-block: 0 1.5rem; border-bottom: 1px solid var(--border); }
+.hero-text p { margin-bottom: 0.6rem; }
+@media (min-width: 992px) { .hero-text p { font-size: 0.95rem; line-height: 1.55; } .highlights-text > p { font-size: 0.95rem; } }
+.site-main:has(> .container > .hero) { padding-top: 1rem; }
+.hero-text p:last-child { margin-bottom: 0; }
 .hero-image { width: 100%; height: auto; border-radius: var(--radius); }
 .hero-title { margin-top: 0; font-size: clamp(1.5rem, 1.25rem + 1vw, 2rem); }
 /* One line beside the photo on desktop screens (the text column is about 600 px wide). */
 @media (min-width: 992px) { .hero-title { font-size: 1.55rem; } }
 @media (min-width: 1200px) { .hero-title { font-size: 1.65rem; } }
 .accent { color: var(--accent); font-weight: 700; }
-@media (min-width: 992px) { .hero { grid-template-columns: 5fr 7fr; gap: 2.5rem; } }
-.highlights { display: grid; gap: 1.75rem; align-items: center; padding-block: 2.25rem; border-bottom: 1px solid var(--border); }
+@media (min-width: 992px) { .hero { grid-template-columns: 4fr 7fr; gap: 2.25rem; } }
+.highlights { display: grid; gap: 1.5rem; align-items: center; padding-block: 1.5rem; border-bottom: 1px solid var(--border); }
+.highlights-text > p { margin-bottom: 0.75rem; }
 .highlights h2, .news h2 { margin-top: 0; }
-.area-list { margin: 0 0 1.25rem; padding: 0; list-style: none; }
+.area-list { margin: 0 0 0.9rem; padding: 0; list-style: none; columns: 2; column-gap: 1.5rem; }
+.area-list li { break-inside: avoid; }
 .area-list li { position: relative; padding: 0.2rem 0 0.2rem 1.1rem; }
 .area-list li::before { content: ''; position: absolute; left: 0; top: 0.75em; width: 6px; height: 6px; border-radius: 1px; background: var(--accent); }
-@media (min-width: 992px) { .highlights { grid-template-columns: 2fr 3fr; gap: 2.5rem; } }
-.news { padding-top: 2.25rem; }
+@media (min-width: 992px) { .highlights { grid-template-columns: 1fr 1fr; gap: 2.25rem; } }
+.news { padding-top: 2rem; }
+
+/* Latest publications strip */
+.latest-pubs { padding-block: 1.75rem; border-bottom: 1px solid var(--border); }
+.section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1rem; margin-bottom: 1rem; }
+.section-head h2 { margin: 0; }
+.latest-pub-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 768px) { .latest-pub-list { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.25rem; } }
+.latest-pub { position: relative; display: flex; flex-direction: column; gap: 0.35rem; }
+.latest-thumb { width: 100%; aspect-ratio: 4 / 3; height: auto; object-fit: contain; padding: 0.5rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: #fff; transition: border-color 0.15s; }
+.latest-title { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; color: var(--ink); font-weight: 600; font-size: 0.92rem; line-height: 1.35; text-decoration: none; }
+.latest-title::after { content: ''; position: absolute; inset: 0; }
+.latest-meta { color: var(--muted); font-size: 0.82rem; }
+.latest-pub:hover .latest-thumb { border-color: var(--accent-line); }
+.latest-pub:hover .latest-title { color: var(--link); }
+.latest-pub:focus-within { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: var(--radius-sm); }
+.latest-title:focus-visible { outline: none; }
 
 /* News and talks timeline: the lab's magenta dots. */
 ul.timeline { position: relative; list-style: none; margin: 0 0 1rem; padding-left: 2.25rem; }
@@ -441,7 +465,7 @@ html:not(.js) .carousel-btn, html:not(.js) .carousel-dots { display: none; }
 .yt-facade::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgb(0 0 0 / 0.05), rgb(0 0 0 / 0.45)); }
 .yt-facade .yt-play { position: relative; z-index: 2; width: 68px; height: 48px; border-radius: 12px; background: #e00; transition: transform 0.15s; }
 .yt-facade .yt-play::after { content: ''; position: absolute; left: 27px; top: 14px; border-style: solid; border-width: 10px 0 10px 17px; border-color: transparent transparent transparent #fff; }
-.yt-facade .yt-caption { position: absolute; left: 1rem; bottom: 0.85rem; z-index: 2; color: #fff; font-weight: 500; text-shadow: 0 1px 3px rgb(0 0 0 / 0.6); }
+.yt-facade .yt-caption { position: absolute; left: 1rem; right: 1rem; bottom: 0.85rem; z-index: 2; overflow: hidden; color: #fff; font-weight: 500; text-align: left; text-overflow: ellipsis; white-space: nowrap; text-shadow: 0 1px 3px rgb(0 0 0 / 0.6); }
 .yt-facade:hover .yt-play { transform: scale(1.08); }
 .yt-facade:hover img { transform: scale(1.02); }
 
