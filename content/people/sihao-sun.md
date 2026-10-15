@@ -1,6 +1,6 @@
 ---
 name: Sihao Sun
-title: Postdoc researcher # The title that shows below your name.
+title: NWO-Veni researcher # The title that shows below your name.
 type: post-doc # phd-candidate, post-doc, phd-visitor, professor, engineer. These are used for filtering and grouping people.
 joined_date: 2024-01-15
 # left_date: 2023-09-30 # Optional, if you add a left date the member will be moved to the past members section
@@ -14,4 +14,4 @@ links: # Optional, links to other stuff
 ---
 
 <!-- Here add your interests or small paragraph. Keep it brief -->
-Aerial manipulation, Multi-robot systems, Optimization-based control, Incremental nonlinear control.
+PI of NWO-Veni project "Accurate Aerial Manipulation". His interests: Aerial manipulation, Multi-robot systems, Optimization-based control, Learning-based control.
