@@ -3,6 +3,7 @@ title: "Game-Theoretic Motion Planning for Multi-Agent Interaction"
 project_id: game-theoretic-mp # ID of the project, used by publications to display in this project.
 belongs_to_areas: [autonomous-vehicles, social-robots] # List of area IDs, separated by commas.
 date: 2021-06-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2025-31-12
 description: >- # >- this means to ignore newlines until next field. This is the project description, displayed in the project's card"
    This project brings tools from the field of dynamic game theory to robotic motion planning. This combination enables new motion-planning algorithms that allow a robot to strategically interact with other agents while accounting for their unknown—potentially malicious—intents. 
 image: /assets/images/projects/gtmotion_planning.svg
