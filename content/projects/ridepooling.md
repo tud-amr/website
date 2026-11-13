@@ -3,7 +3,7 @@ title: "Future transport systems: On-Demand Ridepooling "
 project_id: ridepooling # ID of the project, used by publications to display in this project.
 belongs_to_areas: [transportation] # List of area IDs, separated by commas.
 date: 2017-01-01 # started date, approximated if not sure. Just for display purposes and ordering
-# end_date: 2024-01-01 # end date if ended, approximated if not sure.
+end_date: 2024-01-01 # end date if ended, approximated if not sure.
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   Routing and analysis of on-demand ridepooling systems, and integration into public transport. 
 image: /assets/images/projects/on_demand_taxis.jpg
