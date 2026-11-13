@@ -3,6 +3,7 @@ title: "Autonomous Drones for Emergency Responders"
 project_id: drones-emergency # ID of the project, used by publications to display in this project.
 belongs_to_areas: [flying-robots] # List of area IDs, separated by commas.
 date: 2020-09-01 # started date, approximated if not sure. Just for display purposes and ordering
+end_date: 2025-05-01
 description: >- # >- this means to ignore newlines until next field. This is the short project description, displayed in the project's card"
   How can autonomous drones support operations of emergency responders such as the police?
   This project targets scenarios such as search and rescue or reconnaissance in large, unknown and potentially hazardous environments, where it can be difficult or even dangerous for policemen to operate and fulfil the task.
