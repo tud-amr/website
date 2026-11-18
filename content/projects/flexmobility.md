@@ -25,6 +25,7 @@ people: # If you put your name in the same way you have it in your _people entry
 ## About the Project
 
 Urban transportation systems face increasing challenges related to traffic congestion, environmental sustainability, and the growing diversity of mobility needs. Traditional fixed-route public transport provides efficient and cost-effective services in high-demand areas, but its predefined routes and schedules limit its flexibility. In contrast, On-Demand Ridepooling (ODRP) offers a more flexible mobility solution by dynamically assigning vehicles and adapting routes to passenger requests. But large-scale operations can increase traffic and operational costs. Moreover, when mode choice is included in the analysis, it becomes uncertain whether ODRP is to increase or decrease congestion since users may shift from mass transit alternatives to ODRP.
+
 This project aims to design and optimize integrated public transport networks that combine the efficiency of fixed-route services with the flexibility of on-demand mobility. Fixed-route transit can serve high-demand corridors efficiently, while ODRP provides flexible services for dispersed demand. Such integration could make public transport more attractive, encouraging greater use and reducing reliance on private vehicles. By considering both operational efficiency and passenger preferences, the project seeks to improve service quality and accessibility while minimizing operational costs and environmental impacts.
 
 ## Funding & Partners
